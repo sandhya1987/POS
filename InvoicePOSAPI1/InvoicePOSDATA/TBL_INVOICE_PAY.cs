@@ -47,5 +47,7 @@ namespace InvoicePOSDATA
         public string STATUS { get; set; }
         public Nullable<decimal> SALES_RETURN_AMOUNT { get; set; }
         public string EMPLOYEE_ID { get; set; }
+        public Nullable<long> CASH_REGISTERID { get; set; }
+        public Nullable<long> COMANY_ID { get; set; }
     }
 }

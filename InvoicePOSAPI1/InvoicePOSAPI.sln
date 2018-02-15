@@ -1,9 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicePOSAPI", "InvoicePOSAPI\InvoicePOSAPI.csproj", "{C99BA383-083D-4A5A-8E87-9675BAE1E475}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AFAF830D-E2E0-43F8-9D95-A087CC51C9E2} = {AFAF830D-E2E0-43F8-9D95-A087CC51C9E2}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicePOSDATA", "InvoicePOSDATA\InvoicePOSDATA.csproj", "{AFAF830D-E2E0-43F8-9D95-A087CC51C9E2}"
 EndProject

@@ -48,6 +48,7 @@ namespace InvoicePOSDATA
         public DbSet<TBL_CUSTOMER_SHIPPING_ADDRESS> TBL_CUSTOMER_SHIPPING_ADDRESS { get; set; }
         public DbSet<TBL_DEPARTMENT> TBL_DEPARTMENT { get; set; }
         public DbSet<TBL_DESIGNATION> TBL_DESIGNATION { get; set; }
+        public DbSet<TBL_EMAIL_SETTINGS> TBL_EMAIL_SETTINGS { get; set; }
         public DbSet<TBL_EMPLOYEE> TBL_EMPLOYEE { get; set; }
         public DbSet<TBL_ESTIMATE1> TBL_ESTIMATE1 { get; set; }
         public DbSet<TBL_FINANCIAL> TBL_FINANCIAL { get; set; }
@@ -72,6 +73,7 @@ namespace InvoicePOSDATA
         public DbSet<TBL_RECEIVE_ITEM> TBL_RECEIVE_ITEM { get; set; }
         public DbSet<TBL_RECEIVE_ITEM_ITEMS> TBL_RECEIVE_ITEM_ITEMS { get; set; }
         public DbSet<TBL_RECEIVE_PAYMENT> TBL_RECEIVE_PAYMENT { get; set; }
+        public DbSet<TBL_REPORT> TBL_REPORT { get; set; }
         public DbSet<TBL_REPORT_ADD> TBL_REPORT_ADD { get; set; }
         public DbSet<TBL_REPORT_GROUP> TBL_REPORT_GROUP { get; set; }
         public DbSet<TBL_SALE_ITEM> TBL_SALE_ITEM { get; set; }
@@ -82,6 +84,7 @@ namespace InvoicePOSDATA
         public DbSet<tbl_supppaydetails> tbl_supppaydetails { get; set; }
         public DbSet<TBL_TAX> TBL_TAX { get; set; }
         public DbSet<TBL_TRANSFER> TBL_TRANSFER { get; set; }
+        public DbSet<TBL_TRANSFER_CASH> TBL_TRANSFER_CASH { get; set; }
         public DbSet<TBL_UNIT_MEASURING> TBL_UNIT_MEASURING { get; set; }
         public DbSet<TBL_USER> TBL_USER { get; set; }
         public DbSet<TBL_VENDORS> TBL_VENDORS { get; set; }

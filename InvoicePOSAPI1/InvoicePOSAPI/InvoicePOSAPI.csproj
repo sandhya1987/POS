@@ -157,6 +157,7 @@
     <Compile Include="Controllers\CustomerGroupAPIController.cs" />
     <Compile Include="Controllers\DepartmentAPIController.cs" />
     <Compile Include="Controllers\DesignationListAPIController.cs" />
+    <Compile Include="Controllers\EmailSettingsAPIController.cs" />
     <Compile Include="Controllers\EmployeeAPIController.cs" />
     <Compile Include="Controllers\EstimateAPIController.cs" />
     <Compile Include="Controllers\GodownAPIController.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\DesignationModel.cs" />
+    <Compile Include="Models\EmailSettingsModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\EstimateModel.cs" />
     <Compile Include="Models\GodownModel.cs" />
