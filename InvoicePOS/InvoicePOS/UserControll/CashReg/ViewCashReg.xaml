@@ -1,0 +1,25 @@
+﻿<Window x:Class="InvoicePOS.UserControll.CashReg.ViewCashReg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  WindowStartupLocation="CenterScreen"
+        Title="ViewCashReg" Height="546.418" Width="645.522">
+    <Grid Margin="0,0,710,0" >
+        <Grid Margin="0,0,-619,0">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="24" Margin="39,46,0,0" TextWrapping="Wrap" Text="Business Location :" VerticalAlignment="Top" Width="100"/>
+            <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="15" Margin="10,90,0,0" TextWrapping="Wrap" Text="Cash Register Number :" VerticalAlignment="Top" Width="129"/>
+            <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="15" Margin="25,122,0,0" TextWrapping="Wrap" Text="Cash Register Name :" VerticalAlignment="Top" Width="114"/>
+            <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="15" Margin="25,157,0,0" TextWrapping="Wrap" Text="Cash Register Prefix :" VerticalAlignment="Top" Width="115"/>
+            <TextBox x:Name="textBox" IsReadOnly="True" Text="{Binding SelectedItem.BUSINESS_LOCATION}" Height="27" Margin="161,43,201,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+            <TextBox x:Name="CASH_REG_NO" IsReadOnly="True"  Text="{Binding SelectedItem.CASH_REG_NO}" Height="30" Margin="161,75,201,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+            <TextBox x:Name="CASH_REG_NAME" IsReadOnly="True" Text="{Binding SelectedItem.CASH_REG_NAME}" Height="31" Margin="161,110,201,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+            <TextBox x:Name="CASH_REG_PREFIX" IsReadOnly="True" Text="{Binding SelectedItem.CASH_REG_PREFIX}" Height="30" Margin="161,146,201,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+
+            <CheckBox x:Name="checkBox"    Content="Associate Cash Register with this Login" Margin="161,195,201,0" Height="29" VerticalAlignment="Top"/>
+            <TextBlock x:Name="textBlock_Copy3" Margin="57,229,480,0" TextWrapping="Wrap" Text="For Login :" Height="22" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBox_Copy3" IsReadOnly="True"  Text="{Binding SelectedItem.LOGIN}" Margin="161,229,201,0" TextWrapping="Wrap" Height="35" VerticalAlignment="Top"/>
+            <CheckBox x:Name="checkBox_Copy"  Content="Is Main Cash Register" IsChecked="{Binding SelectedItem.IS_MAIN_CASH,UpdateSourceTrigger=PropertyChanged}"  Margin="161,291,209,0" Height="24" VerticalAlignment="Top"/>
+            <CheckBox x:Name="checkBox_Copy1" IsChecked="{Binding SelectedItem.ISADGUSTMENT,UpdateSourceTrigger=PropertyChanged}" Content="Is Adjustment Cash Register" Margin="158,320,209,0" Height="19" VerticalAlignment="Top"/>
+            <Button Content="Cancel" HorizontalAlignment="Left" Command="{Binding Cancel}"  VerticalAlignment="Top" Width="75" Height="45" Margin="500,461,0,0"/>
+
+        </Grid>
+        </Grid>
+</Window>

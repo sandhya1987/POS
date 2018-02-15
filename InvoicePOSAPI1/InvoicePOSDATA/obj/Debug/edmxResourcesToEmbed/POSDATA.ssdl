@@ -1,0 +1,1722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NEW_POSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AUTHORIZATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ACTION_CREATE" Type="bit" />
+    <Property Name="EDIT" Type="bit" />
+    <Property Name="ACTION_DELETE" Type="bit" />
+    <Property Name="ACTION_VIEW" Type="bit" />
+    <Property Name="VERIFICATION" Type="bit" />
+    <Property Name="NOTIFICATION" Type="bit" />
+    <Property Name="MESSAGE" Type="bit" />
+    <Property Name="APPROVE" Type="bit" />
+    <Property Name="MAILBACK" Type="bit" />
+    <Property Name="ROLE_ID" Type="bigint" Nullable="false" />
+    <Property Name="MODULE_ID" Type="bigint" Nullable="false" />
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MODIFIED_DATE" Type="datetime" />
+    <Property Name="EXPT_TO_EXCEL" Type="bit" />
+    <Property Name="IMORT_TO_EXCEL" Type="bit" />
+    <Property Name="Company_Id" Type="bigint" />
+    <Property Name="User_Id" Type="bigint" />
+  </EntityType>
+  <EntityType Name="MODULE">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="MODULE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="MODIFIED_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_CODE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AUTO_GENERATE_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="DEFINE_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AUTO_GENERATE_CODE_FOR_PRODUCT" Type="varchar" MaxLength="50" />
+    <Property Name="DEFINE_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_CODE_FOR_LOYALTY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AUTO_GENERATE_CODE_FOR_LOYALTY" Type="varchar" MaxLength="50" />
+    <Property Name="DEFINE_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_CODE_FOR_PRODUCT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AUTO_GENERATE_CODE_FOR_PRODUCT" Type="varchar" MaxLength="50" />
+    <Property Name="DEFINE_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_INVOICE_NO">
+    <Key>
+      <PropertyRef Name="INVOICE_NO_ID" />
+    </Key>
+    <Property Name="INVOICE_NO_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVOICE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_BANK">
+    <Key>
+      <PropertyRef Name="BANK_ID" />
+    </Key>
+    <Property Name="BANK_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="BANK_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="IFSC_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETED" Type="bit" />
+    <Property Name="ADDRESS_1" Type="varchar" MaxLength="500" />
+    <Property Name="ADDRESS_2" Type="varchar" MaxLength="500" />
+    <Property Name="CITY" Type="varchar" MaxLength="500" />
+    <Property Name="STATE" Type="varchar" MaxLength="500" />
+    <Property Name="PIN_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="PHONE_NUMBER" Type="varchar" MaxLength="500" />
+    <Property Name="MOBILE_NUMBER" Type="varchar" MaxLength="500" />
+    <Property Name="FAX_NUMBER" Type="varchar" MaxLength="500" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="500" />
+    <Property Name="WEBSITE" Type="varchar" MaxLength="500" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="BANK_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTRY" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_BANK_ACCOUNT">
+    <Key>
+      <PropertyRef Name="BANK_ACCOUNT_ID" />
+    </Key>
+    <Property Name="BANK_ACCOUNT_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BANK_ID" Type="bigint" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="BRANCH_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="ACCOUNT_DESCRIPTION" Type="varchar" MaxLength="50" />
+    <Property Name="ACCOUNT_SEARCH_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="ACCOUNT_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="PRINTING_FORMAT" Type="varchar" MaxLength="50" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_BUSINESS_LOCATION">
+    <Key>
+      <PropertyRef Name="BUSINESS_LOCATION_ID" />
+    </Key>
+    <Property Name="BUSINESS_LOCATION_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="SHOP_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="PREFIX_DOCUMENT" Type="varchar" MaxLength="100" />
+    <Property Name="DOCUMENT_NO" Type="varchar" MaxLength="50" />
+    <Property Name="TIN_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="BUSS_ADDRESS_1" Type="varchar" MaxLength="200" />
+    <Property Name="BUSS_ADDRESS_2" Type="varchar" MaxLength="200" />
+    <Property Name="CITY" Type="varchar" MaxLength="50" />
+    <Property Name="STATE" Type="varchar" MaxLength="50" />
+    <Property Name="COUNTRY" Type="varchar" MaxLength="50" />
+    <Property Name="PIN" Type="varchar" MaxLength="50" />
+    <Property Name="PHONE_NO" Type="varchar" MaxLength="12" />
+    <Property Name="MOBILE_NO" Type="varchar" MaxLength="20" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+    <Property Name="WEBSITE" Type="varchar" MaxLength="200" />
+    <Property Name="COMPANY" Type="varchar" MaxLength="50" />
+    <Property Name="PRINTER_SETTING" Type="varchar" MaxLength="50" />
+    <Property Name="SMS_SETTING" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL_SETTING" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL_TEMPLATE_SETTING" Type="varchar" MaxLength="50" />
+    <Property Name="SCEOND_RECEIPT_PRINTER" Type="varchar" MaxLength="50" />
+    <Property Name="SCEOND_RECEIPT_PRINT_FORMATE" Type="varchar" MaxLength="50" />
+    <Property Name="NUMBER_OF_SECOND_RECEIPT_PRINT" Type="varchar" MaxLength="50" />
+    <Property Name="GODOWN_TO_KEEP" Type="varchar" MaxLength="50" />
+    <Property Name="IS_ENABLE_EMAIL" Type="bit" />
+    <Property Name="IS_SCEOND_RECEIPT_PRINTER" Type="bit" />
+    <Property Name="IS_SECOND_DIFF_PRINT" Type="bit" />
+    <Property Name="IS_ASK_TO_PRIENT_EVERYTIME" Type="bit" />
+    <Property Name="IS_DELETE_INVOICE_SPECIFIED_GODOWN" Type="bit" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="IMAGE" Type="varchar" MaxLength="50" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_CASH_REG">
+    <Key>
+      <PropertyRef Name="CASH_REG_ID" />
+    </Key>
+    <Property Name="CASH_REG_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CASH_REG" Type="varchar" MaxLength="50" />
+    <Property Name="CASH_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="INVOICE_ID" Type="bigint" />
+    <Property Name="CASH_REG_DATE" Type="datetime" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_CATAGORY">
+    <Key>
+      <PropertyRef Name="CATAGORY_ID" />
+    </Key>
+    <Property Name="CATAGORY_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CATAGORY_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="BAR_CODE_PREFIX" Type="varchar" MaxLength="50" />
+    <Property Name="CATAGORY_DEC" Type="varchar" MaxLength="50" />
+    <Property Name="DISPLAY_INDEX" Type="varchar" MaxLength="50" />
+    <Property Name="IS_NOT_PROTAL" Type="bit" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_CHEQUE">
+    <Key>
+      <PropertyRef Name="CHEQUE_ID" />
+    </Key>
+    <Property Name="CHEQUE_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVOICE_ID" Type="bigint" />
+    <Property Name="CHEQUE_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="CHEQUE_BRANCH" Type="varchar" MaxLength="50" />
+    <Property Name="CHEQUE_DATE" Type="datetime" />
+    <Property Name="CHEQUE_BANK_AC" Type="bigint" />
+    <Property Name="CHAEQE_BANK_AC_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_COMPANY">
+    <Key>
+      <PropertyRef Name="COMAPNY_ID" />
+    </Key>
+    <Property Name="COMAPNY_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_NAME" Type="varchar" MaxLength="500" />
+    <Property Name="SHOPNAME" Type="varchar" MaxLength="500" />
+    <Property Name="PREFIX" Type="varchar" MaxLength="50" />
+    <Property Name="PREFIX_NUM" Type="varchar" MaxLength="50" />
+    <Property Name="TIN_NUMBER" Type="varchar" MaxLength="100" />
+    <Property Name="ADDRESS_1" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS_2" Type="varchar" MaxLength="50" />
+    <Property Name="CITY" Type="varchar" MaxLength="50" />
+    <Property Name="STATE" Type="varchar" MaxLength="100" />
+    <Property Name="COUNTRY" Type="varchar" MaxLength="100" />
+    <Property Name="PHONE_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="MOBILE_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="100" />
+    <Property Name="WEBSITE" Type="varchar" MaxLength="100" />
+    <Property Name="IS_WARNED_FOR_NEGATIVE_STOCK" Type="bit" />
+    <Property Name="IS_WARNED_FOR_LESS_SALES_PRICE" Type="bit" />
+    <Property Name="TAX_PRINTED_DESCRIPTION" Type="varchar" MaxLength="50" />
+    <Property Name="FIRST_DAY_OF_FINANCIAL_YEAR" Type="smallint" />
+    <Property Name="FIRST_MONTH_OF_FINANCIAL_YEAR" Type="smallint" />
+    <Property Name="BANK_ID" Type="bigint" />
+    <Property Name="DEFAULT_TAX_RATE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PIN" Type="varchar" MaxLength="50" />
+    <Property Name="IMAGE_PATH" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUSTOMER_ID" />
+    </Key>
+    <Property Name="CUSTOMER_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FIRST_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="LAST_NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="CUSTOMER_NUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="CATEGORY_ID" Type="int" Nullable="false" />
+    <Property Name="SAMEBILLINGANDSHIPPING_ADDRESS" Type="bit" />
+    <Property Name="NOTES" Type="varchar" MaxLength="1000" />
+    <Property Name="VAT_NUMBER" Type="nvarchar" MaxLength="40" />
+    <Property Name="CST_NUMBER" Type="nvarchar" MaxLength="40" />
+    <Property Name="IS_ACTIVE" Type="bit" Nullable="false" />
+    <Property Name="DEFAULT_CREIT_LIMIT" Type="bit" />
+    <Property Name="CUSTOMER_GROUP" Type="varchar" MaxLength="50" />
+    <Property Name="LOYALTY_NO" Type="varchar" MaxLength="50" />
+    <Property Name="REFERRED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="SEARCH_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="IS_ENROLLED_FOR_LOYALITY" Type="bit" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="OPENING_BALANCE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TIN_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="PAN_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="bigint" />
+    <Property Name="IMAGE_PATH" Type="varchar" MaxLength="500" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_CUSTOMER_BILLING_ADDRESS">
+    <Key>
+      <PropertyRef Name="BILLING_ADRESS_ID" />
+    </Key>
+    <Property Name="BILLING_ADRESS_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CUSTOMER_ID" Type="int" />
+    <Property Name="BILLING_TO_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="ADDRESS_1" Type="varchar" MaxLength="300" />
+    <Property Name="ADDRESS_2" Type="varchar" MaxLength="200" />
+    <Property Name="CITY" Type="varchar" MaxLength="100" />
+    <Property Name="STATE" Type="varchar" MaxLength="100" />
+    <Property Name="COUNTRY" Type="varchar" MaxLength="100" />
+    <Property Name="MOBILE" Type="nvarchar" MaxLength="14" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="40" />
+    <Property Name="TELEPHONE" Type="nvarchar" MaxLength="20" />
+    <Property Name="PIN" Type="varchar" MaxLength="50" />
+    <Property Name="POSTAL_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_CUSTOMER_GROUP">
+    <Key>
+      <PropertyRef Name="CUSTOMER_GROUP_ID" />
+    </Key>
+    <Property Name="CUSTOMER_GROUP_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="100" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_CUSTOMER_SHIPPING_ADDRESS">
+    <Key>
+      <PropertyRef Name="SHIPPING_ADRESS_ID" />
+    </Key>
+    <Property Name="SHIPPING_ADRESS_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CUSTOMER_ID" Type="int" />
+    <Property Name="SHIPPING_TO_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="ADDRESS_1" Type="varchar" MaxLength="300" />
+    <Property Name="ADDRESS_2" Type="varchar" MaxLength="200" />
+    <Property Name="CITY" Type="varchar" MaxLength="100" />
+    <Property Name="STATE" Type="varchar" MaxLength="100" />
+    <Property Name="POSTAL_CODE" Type="varchar" MaxLength="10" />
+    <Property Name="COUNTRY" Type="varchar" MaxLength="100" />
+    <Property Name="MOBILE" Type="nvarchar" MaxLength="14" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="40" />
+    <Property Name="TELEPHONE" Type="nvarchar" MaxLength="20" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_DEPARTMENT">
+    <Key>
+      <PropertyRef Name="DEPARTMENT_ID" />
+    </Key>
+    <Property Name="DEPARTMENT_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DEPARTMENT_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COMPANY_ID" Type="bigint" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="datetime" Nullable="false" />
+    <Property Name="CREATED_BY" Type="bigint" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="SORT_INDEX" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_DESIGNATION">
+    <Key>
+      <PropertyRef Name="DESIGNATION_ID" />
+    </Key>
+    <Property Name="DESIGNATION_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESIGNATION_NAME" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COMPANY_ID" Type="bigint" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="datetime" Nullable="false" />
+    <Property Name="CREATED_BY" Type="bigint" />
+    <Property Name="STATUS" Type="bit" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="SORT_INDEX" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EMPLOYEE_ID" />
+    </Key>
+    <Property Name="EMPLOYEE_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EMPLOYEE_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="FIRST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="MIDDLE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SEARCH_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="DOB" Type="date" />
+    <Property Name="MARITAL_STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="GENDER" Type="varchar" MaxLength="50" />
+    <Property Name="DATE_OF_JOIN" Type="date" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="DEPARTMENT" Type="varchar" MaxLength="50" />
+    <Property Name="EMPLOYEE_DESIGNATION" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS_1" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS_2" Type="varchar" MaxLength="50" />
+    <Property Name="CITY" Type="varchar" MaxLength="50" />
+    <Property Name="STATE" Type="varchar" MaxLength="50" />
+    <Property Name="TELEPHONE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="FAX_NO" Type="varchar" MaxLength="50" />
+    <Property Name="MOBILE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="WEBSITE" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="IS_REQUEST_VAI_SMS" Type="bit" />
+    <Property Name="IS_APPROVE_ACCESS_VAI_SMS" Type="bit" />
+    <Property Name="IS_NOT_AN_EMPLOYEE" Type="bit" />
+    <Property Name="IS_APPOINTMENT" Type="bit" />
+    <Property Name="IS_ATTACHED_INVOICE" Type="bit" />
+    <Property Name="WORKING_SHIFT" Type="varchar" MaxLength="50" />
+    <Property Name="MAX_SPOT_DISCOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IMAGE" Type="varchar" MaxLength="100" />
+    <Property Name="SALES_PERCENT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMMISSION_QUICK_POSITION" Type="varchar" MaxLength="50" />
+    <Property Name="PIN_NO" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETE" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_ESTIMATE1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ESTIMATE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_ID" Type="int" />
+    <Property Name="ITEM_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="50" />
+    <Property Name="CURRENT_QTY" Type="int" />
+    <Property Name="MEASURING_UNIT" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_PRICE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DISCOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_WITH_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ESTIMATE_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TBL_FINANCIAL">
+    <Key>
+      <PropertyRef Name="FINANCIAL_ID" />
+    </Key>
+    <Property Name="FINANCIAL_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVOICE_ID" Type="bigint" />
+    <Property Name="FINANCIAL_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FINANCIAL_CREDIT_AC" Type="bigint" />
+    <Property Name="FINANCIAL_CREDIT_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_GODOWN">
+    <Key>
+      <PropertyRef Name="GODOWN_ID" />
+    </Key>
+    <Property Name="GODOWN_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GODOWN_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="GOSOWN_DESCRIPTION" Type="varchar" MaxLength="500" />
+    <Property Name="IS_ACTIVE" Type="bit" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="IS_DEFAULT_GODOWN" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_HOLD_INVOICE">
+    <Key>
+      <PropertyRef Name="INVOICE_ID" />
+    </Key>
+    <Property Name="INVOICE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVOICE_NO" Type="nvarchar" MaxLength="100" />
+    <Property Name="INVOICE_DATE" Type="datetime" />
+    <Property Name="CUSTOMER" Type="nvarchar" MaxLength="50" />
+    <Property Name="AVAILABLE_CREDIT_LIMIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CUSTOMER_EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="CUSTOMER_MOBILE_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="TOTAL_AMOUNT" Type="int" />
+    <Property Name="QUANTITY_TOTAL" Type="int" />
+    <Property Name="NUMBER_OF_ITEM" Type="int" />
+    <Property Name="DISCOUNT_INCLUDED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_INCLUDED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RECEIVE_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RETURNABLE_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMMISION_EXPENSE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IS_GOODS_DELIVERED" Type="bit" />
+    <Property Name="IS_PRINT" Type="bit" />
+    <Property Name="IS_SAVE_RETURNABLE_AMOUNT" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="TOTAL_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BUSSINESS_LOCATION_ID" Type="bigint" />
+    <Property Name="BUSSINESS_LOCATION_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="IS_ACTIVE" Type="bit" />
+    <Property Name="STATUS" Type="nvarchar" MaxLength="50" />
+    <Property Name="SALES_RETURN_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_INVOICE">
+    <Key>
+      <PropertyRef Name="INVOICE_ID" />
+    </Key>
+    <Property Name="INVOICE_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVOICE_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="INVOICE_STATUS_ID" Type="int" />
+    <Property Name="INVOICE_DATE" Type="datetime" />
+    <Property Name="INVOICE_DUE_DATE" Type="datetime" />
+    <Property Name="INVOICE_CUSTOMER_ID" Type="bigint" />
+    <Property Name="INVOICE_COURIER_ID" Type="bigint" />
+    <Property Name="INVOICE_COURIER_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="INVOICE_PAYMENT_ID" Type="bigint" />
+    <Property Name="INVOICE_PO_NUMBER" Type="int" />
+    <Property Name="INVOICE_TAX" Type="float" />
+    <Property Name="INVOICE_TAX2" Type="float" />
+    <Property Name="IS_PRINT_DUE_DATE" Type="datetime" />
+    <Property Name="FREQUENCY_TYPE_ID" Type="int" />
+    <Property Name="IS_RECCURANCE_INVOICE" Type="bit" />
+    <Property Name="INTERVAL" Type="int" />
+    <Property Name="NEXT_INVOICE_DATE" Type="datetime" />
+    <Property Name="FINAL_INVOICE_DATE" Type="datetime" />
+    <Property Name="IS_RECUR_UNTIL_VOIDED" Type="bit" />
+    <Property Name="GENERATE_NEW_INVOICE" Type="int" />
+    <Property Name="IS_QUOTE" Type="bit" />
+    <Property Name="VALID_UNTIL" Type="datetime" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_INVOICE_PAY">
+    <Key>
+      <PropertyRef Name="INVOICE_ID" />
+    </Key>
+    <Property Name="INVOICE_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVOICE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="INVOICE_DATE" Type="datetime" />
+    <Property Name="CUSTOMER" Type="varchar" MaxLength="50" />
+    <Property Name="CUSTOMER_ID" Type="int" />
+    <Property Name="AVAILABLE_CREDIT_LIMIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_EXECUTIVE" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_EXECUTIVE_ID" Type="bigint" />
+    <Property Name="CUSTOMER_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="CUSTOMER_MOBILE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="BEFORE_ROUNDOFF" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ROUNDOFF_AMOUNT" Type="int" />
+    <Property Name="TOTAL_AMOUNT" Type="int" />
+    <Property Name="QUANTITY_TOTAL" Type="int" />
+    <Property Name="NUMBER_OF_ITEM" Type="int" />
+    <Property Name="DISCOUNT_INCLUDED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_INCLUDED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RECIVED_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RETURNABLE_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMMISION_EXPENSE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="varchar" MaxLength="50" />
+    <Property Name="IS_GOODS_DELIVERED" Type="bit" />
+    <Property Name="IS_PRINT" Type="bit" />
+    <Property Name="IS_SAVE_RETURNABLE_AMOUNT" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="TOTAL_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="bigint" />
+    <Property Name="BUSINESS_LOCATION_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="IS_ACTIVE" Type="bit" />
+    <Property Name="STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_RETURN_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_ITEM_LOCATION">
+    <Key>
+      <PropertyRef Name="LOCATION_ID" />
+    </Key>
+    <Property Name="LOCATION_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="GOWDOWN_ID" Type="bigint" />
+    <Property Name="ITEM_LOCATION_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SORT_INDEX" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_ITEMS">
+    <Key>
+      <PropertyRef Name="ITEM_ID" />
+    </Key>
+    <Property Name="ITEM_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ITEM_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="ITEM_DESCRIPTION" Type="varchar" MaxLength="500" />
+    <Property Name="ITEM_PRICE" Type="float" />
+    <Property Name="ITEM_INVOICE_ID" Type="int" />
+    <Property Name="ITEM_PRODUCT_ID" Type="int" />
+    <Property Name="KEYWORD" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESSORIES_KEYWORD" Type="varchar" MaxLength="50" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="50" />
+    <Property Name="CATAGORY_ID" Type="bigint" />
+    <Property Name="SERCH_CODE" Type="nchar" MaxLength="10" />
+    <Property Name="PURCHASE_UNIT" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_UNIT" Type="varchar" MaxLength="50" />
+    <Property Name="PURCHASE_UNIT_PRICE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_PRICE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MRP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="int" />
+    <Property Name="OPN_QNT" Type="int" />
+    <Property Name="CATEGORY_NAME" Type="varchar" MaxLength="35" />
+    <Property Name="DISPLAY_INDEX" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_UNIQUE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_GROUP_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="REGIONAL_LANGUAGE" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_PRICE_BEFOR_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MODIFICATION_DATE" Type="datetime" />
+    <Property Name="CATAGORY" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="ITEM_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="WEIGHT_OF_PAPER" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_PLASTIC" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_FOAM" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_CARDBOARD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IMAGE_PATH" Type="varchar" MaxLength="100" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="TAX_COLLECTED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_PAID" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_COLLECTED_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_PAID_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SALE_UNIT_ID" Type="int" />
+    <Property Name="PURCHAGE_UNIT_ID" Type="int" />
+    <Property Name="GODOWN_ID" Type="int" />
+    <Property Name="BUSS_LOC_ID" Type="int" />
+    <Property Name="TAX_PAID_ID" Type="int" />
+    <Property Name="TAX_COLLECTED_ID" Type="int" />
+    <Property Name="IS_ACIVE" Type="bit" />
+    <Property Name="INCLUDE_TAX" Type="bit" />
+    <Property Name="ITEM_LOCATION_NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_ITEMS_ATTRIBUTE">
+    <Key>
+      <PropertyRef Name="ATTRIBUTE_ID" />
+    </Key>
+    <Property Name="ATTRIBUTE_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ITEM_ID" Type="bigint" />
+    <Property Name="IS_ACTIVE" Type="bit" />
+    <Property Name="NOT_FOR_SALE" Type="bit" />
+    <Property Name="IS_PURCHASED" Type="bit" />
+    <Property Name="IS_SERVICE" Type="bit" />
+    <Property Name="IS_GIFT_CARD" Type="bit" />
+    <Property Name="ONLY_ONLINE_SHOP" Type="bit" />
+    <Property Name="NOT_FOR_ONLINE_SHOP" Type="bit" />
+    <Property Name="ALLOW_PURCHASE_ON_ESHOP" Type="bit" />
+    <Property Name="INCLUDE_TAX" Type="bit" />
+    <Property Name="IS_SORTABLE_ITEM" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_LOYALTY">
+    <Key>
+      <PropertyRef Name="LOYALTY_ID" />
+    </Key>
+    <Property Name="LOYALTY_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SETTINGSNAME" Type="varchar" MaxLength="50" />
+    <Property Name="WEIGHTAGE" Type="varchar" MaxLength="50" />
+    <Property Name="FROMDATE" Type="datetime" />
+    <Property Name="TODATE" Type="datetime" />
+    <Property Name="CUSTOMERGROUP" Type="varchar" MaxLength="50" />
+    <Property Name="COLLECTION" Type="varchar" MaxLength="50" />
+    <Property Name="ISACTIVE" Type="bit" />
+    <Property Name="ISDEFAULT" Type="bit" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="InvoiceExceeding" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FlatPoints" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_LOYALTY_Exceedings">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LOYALTY_ID" Type="bigint" />
+    <Property Name="InvoiveExceeding" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Flatpoints" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Company_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_NEWCASHREGISTER">
+    <Key>
+      <PropertyRef Name="CASH_REGISTERID" />
+    </Key>
+    <Property Name="CASH_REGISTERID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="100" />
+    <Property Name="CASH_REG_NO" Type="bigint" />
+    <Property Name="CASH_REG_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="CASH_REG_PREFIX" Type="varchar" MaxLength="100" />
+    <Property Name="IS_ADGUSTMENT" Type="bit" />
+    <Property Name="LOGIN" Type="varchar" MaxLength="50" />
+    <Property Name="IS_MAIN_CASH" Type="bit" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="CASH_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_OPENING_BALANCE">
+    <Key>
+      <PropertyRef Name="OPENING_BALANCE_ID" />
+    </Key>
+    <Property Name="OPENING_BALANCE_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="BAL_TYPE_ID" Type="bigint" />
+    <Property Name="OPENING_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CLOSING_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SYSTEM_DATE" Type="datetime" />
+    <Property Name="CUSTOMER_ID" Type="bigint" />
+    <Property Name="BAL_TYPE_VALUE" Type="varchar" MaxLength="50" />
+    <Property Name="CURRENT_OPENING_BALANCE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="credit_Limits" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_OPENING_STOCK">
+    <Key>
+      <PropertyRef Name="OPENING_STOCK_ID" />
+    </Key>
+    <Property Name="OPENING_STOCK_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="ITEM_ID" Type="bigint" />
+    <Property Name="BUSINESS_LOC_ID" Type="bigint" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="OPRNING_BAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CLOSING_BAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="GODOWN" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="OPN_QNT" Type="int" />
+    <Property Name="BUSSINESS_LOCATION" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_ORDER">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ITEM_ID" Type="bigint" />
+    <Property Name="ORDER_QUANTITY" Type="int" />
+    <Property Name="DISCOUNT" Type="float" />
+    <Property Name="ODER_COST" Type="float" />
+    <Property Name="IS_DISCOUNT_IN_PERCENTAGE" Type="bit" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_PAYMENT">
+    <Key>
+      <PropertyRef Name="PAYMENT_ID" />
+    </Key>
+    <Property Name="PAYMENT_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAYMENT_TYPE_ID" Type="int" />
+    <Property Name="PAYMENT_INVOICE_ID" Type="bigint" />
+    <Property Name="PAYMENT_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PAYMENT_DATE" Type="datetime" />
+    <Property Name="REFERENCE_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="PAYMENT_NOTES" Type="varchar" MaxLength="500" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_PO">
+    <Key>
+      <PropertyRef Name="PO_ID" />
+    </Key>
+    <Property Name="PO_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PO_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="DELIVERY_DATE" Type="datetime" />
+    <Property Name="IS_SEND_MAIL" Type="bit" />
+    <Property Name="BAR_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SEARCH_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="DELIVER_ID" Type="varchar" MaxLength="50" />
+    <Property Name="SUPPLIER_ID" Type="varchar" MaxLength="50" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="varchar" MaxLength="50" />
+    <Property Name="DELIVER_TO" Type="varchar" MaxLength="50" />
+    <Property Name="SUPPLIER_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="TERMS" Type="varchar" MaxLength="50" />
+    <Property Name="TOTAL_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="PO_DATE" Type="datetime" />
+    <Property Name="BUSSINESS_ID" Type="bigint" />
+    <Property Name="ITEM_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="SEARCH_STOCK" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_PO_ITEMS">
+    <Key>
+      <PropertyRef Name="PO_ID" />
+    </Key>
+    <Property Name="PO_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PO_ITEM_ID" Type="int" />
+    <Property Name="PO_NUMBER" Type="bigint" />
+    <Property Name="PO_DISCOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PO_TOTAL_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PO_QTY" Type="int" />
+    <Property Name="PO_TAX" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_PO_PAYMENT">
+    <Key>
+      <PropertyRef Name="PO_ID" />
+    </Key>
+    <Property Name="PO_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PO_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="DELIVERY_DATE" Type="datetime" />
+    <Property Name="IS_SEND_MAIL" Type="bit" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="varchar" MaxLength="50" />
+    <Property Name="DELIVER_ID" Type="varchar" MaxLength="50" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="DELIVER_TO" Type="varchar" MaxLength="50" />
+    <Property Name="SUPPLIER_ID" Type="varchar" MaxLength="50" />
+    <Property Name="SUPPLIER_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SUPPLIER_MAIL" Type="varchar" MaxLength="50" />
+    <Property Name="TERMS" Type="varchar" MaxLength="50" />
+    <Property Name="TOTAL_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="PO_DATE" Type="datetime" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="PO_STATUS" Type="varchar" MaxLength="50" />
+    <Property Name="PO_TYPE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_PURCHASE_ORDERS">
+    <Key>
+      <PropertyRef Name="PO_ID" />
+    </Key>
+    <Property Name="PO_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PO_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="bigint" />
+    <Property Name="DELIVERY_DATE" Type="datetime" />
+    <Property Name="SUPPLIER_ID" Type="bigint" />
+    <Property Name="DELIVERY_TO" Type="varchar" MaxLength="50" />
+    <Property Name="BAR_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_ID" Type="bigint" />
+    <Property Name="SEARCH_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="SEARCH_WITH_STOCK" Type="varchar" MaxLength="50" />
+    <Property Name="TERMAS_AND_CONDITIONS" Type="varchar" MaxLength="200" />
+    <Property Name="TOTAL_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_RECEIVE_ITEM">
+    <Key>
+      <PropertyRef Name="NEWRECEIVE_ID" />
+    </Key>
+    <Property Name="NEWRECEIVE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="SELECT_BUSINESS_LOCATION_ID" Type="bigint" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="SEARCH_CODE" Type="varchar" MaxLength="100" />
+    <Property Name="SUPPLIER_INVOICE_NO" Type="varchar" MaxLength="100" />
+    <Property Name="RECEIVE_DATE" Type="date" />
+    <Property Name="RECEIVED_ITEM_ON_DATE" Type="date" />
+    <Property Name="PO_NUMBER_ID" Type="bigint" />
+    <Property Name="SUPPLIER_ID" Type="bigint" />
+    <Property Name="PAYMENT_TERMS" Type="int" />
+    <Property Name="GODOWN_ID" Type="bigint" />
+    <Property Name="RECEIVING_EMPLOYEE" Type="varchar" MaxLength="100" />
+    <Property Name="DISCOUNT_FLAT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DISCOUNT_PERCENT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ADDTIONAL_CHARGES" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SUB_TOTAL_BEFORETAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_TAX_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SUB_TOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ROUND_OFF_ADJUSTMENTAMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="USE_SUPPLIER_ADVANCE_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="GRAND_TOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="varchar" MaxLength="200" />
+    <Property Name="IS_REC_WITH_PO" Type="bit" />
+    <Property Name="FILTER_HIERARCHY" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="PO_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="SUPPLIER" Type="varchar" MaxLength="50" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="GODOWN" Type="varchar" MaxLength="50" />
+    <Property Name="DISCOUNT_BEFOR_TAX" Type="bit" />
+    <Property Name="AUTO_SAVE_IN_DRAFT" Type="bit" />
+    <Property Name="FOCUS_LAST_ADD_ITEM" Type="bit" />
+    <Property Name="ITEM_ENTRY_TEMPLATE" Type="bit" />
+    <Property Name="PAY_IN_CASH" Type="bit" />
+    <Property Name="APPLY_FPR_EFFECTVE_PRICE" Type="bit" />
+    <Property Name="INVOICE_DIS_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RECEIVED_ITEM_ENTRY_NO" Type="varchar" MaxLength="50" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="SUPPLIER_INVOICE_DATE" Type="datetime" />
+    <Property Name="Item_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="TBL_RECEIVE_ITEM_ITEMS">
+    <Key>
+      <PropertyRef Name="RCV_ID" />
+    </Key>
+    <Property Name="RCV_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RCV_ITEM_ID" Type="int" />
+    <Property Name="RCV_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RCV_QTY" Type="int" />
+    <Property Name="RCV_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RCV_ITEM_ENTRY_ID" Type="bigint" />
+    <Property Name="RCV_DISCOUNT" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_RECEIVE_PAYMENT">
+    <Key>
+      <PropertyRef Name="RECEIVE_PAYMENT_ID" />
+    </Key>
+    <Property Name="RECEIVE_PAYMENT_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RECEIVE_PAY_NO" Type="varchar" MaxLength="50" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="bigint" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="CUSTOMER_ID" Type="bigint" />
+    <Property Name="CUSTOMER" Type="varchar" MaxLength="50" />
+    <Property Name="CUSTOMER_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="IS_EMAIL_SEND" Type="bit" />
+    <Property Name="CUSTOMER_CONTACT_NO" Type="varchar" MaxLength="50" />
+    <Property Name="OTHER_PAY_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CURRENT_PAY_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_SELECTED_PAY_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_REC_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RETURNABLE_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_REPORT_ADD">
+    <Key>
+      <PropertyRef Name="REPORT_ID" />
+    </Key>
+    <Property Name="REPORT_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="100" />
+    <Property Name="REPORT_GROUP_ID" Type="bigint" />
+    <Property Name="SEARCH_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="REPORT_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_REPORT_GROUP">
+    <Key>
+      <PropertyRef Name="REPORT_GRP_ID" />
+    </Key>
+    <Property Name="REPORT_GRP_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GROUP_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="250" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="REPORT_ID" Type="bigint" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="CREATED_BY" Type="bigint" />
+    <Property Name="SGROUP_CODE" Type="bigint" />
+    <Property Name="REPORT_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_SALE_ITEM">
+    <Key>
+      <PropertyRef Name="SALE_ID" />
+    </Key>
+    <Property Name="SALE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SALE_ITEM_ID" Type="int" />
+    <Property Name="INVOICE_ID" Type="int" />
+    <Property Name="ITEM_DISCOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ITEM_TOTAL_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SALE_QTY" Type="int" />
+    <Property Name="ITEM_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="STATUS" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_SALES_RETURN">
+    <Key>
+      <PropertyRef Name="SALES_RETURN_ID" />
+    </Key>
+    <Property Name="SALES_RETURN_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_RETURN_NO" Type="varchar" MaxLength="50" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="IS_WITHOUT_INVOICE" Type="bit" />
+    <Property Name="RETURN_DATE" Type="datetime" />
+    <Property Name="GODOWN" Type="varchar" MaxLength="50" />
+    <Property Name="CUSTOMER_ID" Type="bigint" />
+    <Property Name="OUTSTANDING_BALANCE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="INVOICE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="REFERENCE_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FREIGHT_CHARGE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PACKING_CHARGE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ROUND_OFF_AMOUNT" Type="int" />
+    <Property Name="GRAND_TOTAL" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SUBSIDY_AMOUN" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CUS_PENDING_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NOTES" Type="varchar" MaxLength="100" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="SEARCH_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_EXECUTIVE" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_STOCK_TRANSFER">
+    <Key>
+      <PropertyRef Name="STOCK_TRANSFER_ID" />
+    </Key>
+    <Property Name="STOCK_TRANSFER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="STOCK_TRANSFER_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="IS_SEND" Type="bit" />
+    <Property Name="ITEM_ID" Type="bigint" Nullable="false" />
+    <Property Name="TRANS_QUANTITY" Type="int" Nullable="false" />
+    <Property Name="SEARCH_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="50" />
+    <Property Name="TOTAL_STOCK_QNT" Type="int" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="FROM_GODOWN" Type="varchar" MaxLength="50" />
+    <Property Name="TO_GODOW" Type="varchar" MaxLength="50" />
+    <Property Name="RECEIVED_BY" Type="varchar" MaxLength="50" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="FROM_GODOWN_ID" Type="bigint" />
+    <Property Name="TO_GODOWN_ID" Type="bigint" />
+    <Property Name="RECEIVED_BY_ID" Type="bigint" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="bigint" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="IS_NEGATIVE_STOCK_MESSAGE" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_SUPP_PAYMENT">
+    <Key>
+      <PropertyRef Name="SUPP_PAYMENT" />
+    </Key>
+    <Property Name="SUPP_PAYMENT" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUPP_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="SUPP_SMS" Type="varchar" MaxLength="50" />
+    <Property Name="IS_SEND_EMAIL" Type="bit" />
+    <Property Name="IS_SEND_SMS" Type="bit" />
+    <Property Name="CURRENT_ADV_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_RIE_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PAYMENT_DATE" Type="datetime" />
+    <Property Name="CURRENT_PAYABLE_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_PANDING" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SELECTED_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AFTE_PAYMENT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CASH_REG_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="CHEQUE_BANK_BRANCH" Type="varchar" MaxLength="50" />
+    <Property Name="CHEQUE_BANK_AC" Type="varchar" MaxLength="50" />
+    <Property Name="CHEQUE_DATE" Type="datetime" />
+    <Property Name="TRANSFER_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TRANSFER_BANK_BRANCH" Type="varchar" MaxLength="50" />
+    <Property Name="TRANSFER_BANK_AC" Type="bigint" />
+    <Property Name="TRANSFER_DATE" Type="datetime" />
+    <Property Name="FINANCAL_AMT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FINACIAL_AC" Type="bigint" />
+    <Property Name="DISCOUNT_FLAT" Type="int" />
+    <Property Name="DISCOUNT_PERCENT" Type="int" />
+    <Property Name="TOTAL_PAYMENT_MODES" Type="int" />
+    <Property Name="CURRENT_PAYMENT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="varchar" MaxLength="100" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="CASH_REG" Type="varchar" MaxLength="50" />
+    <Property Name="SUPP" Type="varchar" MaxLength="50" />
+    <Property Name="BUSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="PAYMENT_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="SUPP_ID" Type="bigint" />
+    <Property Name="CASH_REG_ID" Type="bigint" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="IS_PRINT_CHECK" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="SuppPayNo" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBL_SUPPLIER">
+    <Key>
+      <PropertyRef Name="SUPPLIER_ID" />
+    </Key>
+    <Property Name="SUPPLIER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SUPPLIER_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="SUPPLIER_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SEARCH_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="VAT_NO" Type="varchar" MaxLength="50" />
+    <Property Name="CST_NO" Type="varchar" MaxLength="50" />
+    <Property Name="TIN_NO" Type="varchar" MaxLength="50" />
+    <Property Name="PAN_NO" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS_1" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS_2" Type="varchar" MaxLength="50" />
+    <Property Name="CITY" Type="varchar" MaxLength="50" />
+    <Property Name="STATE" Type="varchar" MaxLength="50" />
+    <Property Name="ZIP_CODE" Type="varchar" MaxLength="50" />
+    <Property Name="OPENING_BALANCE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IS_PREFERRED_SUPPLIER" Type="bit" />
+    <Property Name="IS_ACTIVE" Type="bit" />
+    <Property Name="PAYMENT_SETTLED" Type="int" />
+    <Property Name="IMAGE_PATH" Type="varchar" MaxLength="100" />
+    <Property Name="CONTACT_FRIST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACT_LAST_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACT_TELEPHONE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACT_FAX_NO" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACT_MOBILE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACT_WEBSITE" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACT_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="tbl_supppaydetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supp_ID" Type="bigint" />
+    <Property Name="payduedate" Type="datetime" />
+    <Property Name="noofday" Type="bigint" />
+    <Property Name="totalamount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="pendingamoun" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="adjustedamount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="suppinvdate" Type="datetime" />
+    <Property Name="recitementryno" Type="nvarchar(max)" />
+    <Property Name="goodsecno" Type="nvarchar(max)" />
+    <Property Name="suppinv" Type="nvarchar(max)" />
+    <Property Name="totaltax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="DOU" Type="datetime" />
+    <Property Name="Delete" Type="bit" />
+  </EntityType>
+  <EntityType Name="TBL_TAX">
+    <Key>
+      <PropertyRef Name="TAX_ID" />
+    </Key>
+    <Property Name="TAX_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TAX_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_VALUE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="IS_SEPARATE" Type="bit" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="COMPANY" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TBL_TRANSFER">
+    <Key>
+      <PropertyRef Name="BANK_TRANSFER_ID" />
+    </Key>
+    <Property Name="BANK_TRANSFER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="INVOICE_ID" Type="bigint" />
+    <Property Name="TRANSFER_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TRANSFER_BANK_AC" Type="bigint" />
+    <Property Name="TRANSFER_BRANCH" Type="varchar" MaxLength="50" />
+    <Property Name="TRANSFER_BANK_ID" Type="bigint" />
+    <Property Name="TRANSFER_DATE" Type="datetime" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_UNIT_MEASURING">
+    <Key>
+      <PropertyRef Name="UNIT_ID" />
+    </Key>
+    <Property Name="UNIT_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MEASURING_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SHORT_INDAX" Type="varchar" MaxLength="50" />
+    <Property Name="IMAGE_PATH" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="USER_ID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TBL_USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COMPANY_ID" Type="bigint" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="datetime" Nullable="false" />
+    <Property Name="LOGIN_TIME" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="MAC_ADDRESS" Type="nvarchar" MaxLength="50" />
+    <Property Name="ROLE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBL_VENDORS">
+    <Key>
+      <PropertyRef Name="VENDOR_ID" />
+    </Key>
+    <Property Name="VENDOR_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COMPANY_ID" Type="bigint" />
+    <Property Name="CONTACT_NAME" Type="varchar" MaxLength="300" />
+    <Property Name="ADDRESS_1" Type="varchar" MaxLength="500" />
+    <Property Name="ADDRESS_2" Type="varchar" MaxLength="500" />
+    <Property Name="CITY" Type="varchar" MaxLength="100" />
+    <Property Name="STATE" Type="varchar" MaxLength="100" />
+    <Property Name="POSTAL" Type="varchar" MaxLength="10" />
+    <Property Name="PHONE_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="EAX_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="EMAIL_ADDRESS" Type="varchar" MaxLength="100" />
+    <Property Name="WEB_SITE" Type="varchar" MaxLength="100" />
+    <Property Name="CREDIT_LIMIT" Type="float" />
+    <Property Name="SUPPLIER_CODE" Type="nvarchar" MaxLength="15" />
+    <Property Name="VAT_NUMBER" Type="nvarchar" MaxLength="20" />
+    <Property Name="CST_NUMBER" Type="nvarchar" MaxLength="20" />
+    <Property Name="IS_ACTIVE" Type="bit" />
+    <Property Name="IS_PREFERRED" Type="bit" />
+    <Property Name="PAYMENT_DAYS" Type="int" />
+    <Property Name="LAST_NAME" Type="varchar" MaxLength="250" />
+    <Property Name="TELEPHONE_NUMBER" Type="nvarchar" MaxLength="20" />
+    <Property Name="IMAGE_PATH" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tmp_invoice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="Items" Type="varchar" MaxLength="50" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="Total_Amt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Tax_Desc" Type="varchar" MaxLength="50" />
+    <Property Name="Taxable_Amt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Vat/Tax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Priceinwords" Type="varchar" MaxLength="100" />
+    <Property Name="Inv_No" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'NEW_POS.dbo.MODULE_RIGHTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="MODULE_RIGHTS">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="MODULE_ID" Type="int" Nullable="false" />
+    <Property Name="ACTION_CREATE" Type="bit" />
+    <Property Name="EDIT" Type="bit" />
+    <Property Name="ACTION_DELETE" Type="bit" />
+    <Property Name="ACTION_VIEW" Type="bit" />
+    <Property Name="VERIFICATION" Type="bit" />
+    <Property Name="NOTIFICATION" Type="bit" />
+    <Property Name="MESSAGE" Type="bit" />
+    <Property Name="APPROVE" Type="bit" />
+    <Property Name="ROLE_ID" Type="bigint" />
+    <Property Name="MAILBACK" Type="bit" />
+    <Property Name="ID" Type="bigint" />
+    <Property Name="MODIFIED_DATE" Type="datetime" />
+    <Property Name="User_Id" Type="bigint" />
+    <Property Name="Company_Id" Type="bigint" />
+    <Property Name="IMORT_TO_EXCEL" Type="bit" />
+    <Property Name="EXPT_TO_EXCEL" Type="bit" />
+    <Property Name="EMPLOYEE_ID" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'NEW_POS.dbo.VIEW_GROUP_SUBGROUP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW_GROUP_SUBGROUP">
+    <Key>
+      <PropertyRef Name="ParentId" />
+    </Key>
+    <Property Name="REPORT_GRP_ID" Type="bigint" />
+    <Property Name="GroupName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ParentId" Type="bigint" Nullable="false" />
+    <Property Name="REPORT_ID" Type="bigint" />
+    <Property Name="Child" Type="bigint" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'NEW_POS.dbo.VIEW_INVOICE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEW_INVOICE">
+    <Key>
+      <PropertyRef Name="INVOICE_ID" />
+    </Key>
+    <Property Name="INVOICE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="INVOICE_DATE" Type="datetime" />
+    <Property Name="CUSTOMER" Type="varchar" MaxLength="50" />
+    <Property Name="CUSTOMER_ID" Type="int" />
+    <Property Name="AVAILABLE_CREDIT_LIMIT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_EXECUTIVE" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_EXECUTIVE_ID" Type="bigint" />
+    <Property Name="CUSTOMER_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="CUSTOMER_MOBILE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="BEFORE_ROUNDOFF" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ROUNDOFF_AMOUNT" Type="int" />
+    <Property Name="TOTAL_AMOUNT" Type="int" />
+    <Property Name="QUANTITY_TOTAL" Type="int" />
+    <Property Name="NUMBER_OF_ITEM" Type="int" />
+    <Property Name="DISCOUNT_INCLUDED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_INCLUDED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RECIVED_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RETURNABLE_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMMISION_EXPENSE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="varchar" MaxLength="50" />
+    <Property Name="IS_GOODS_DELIVERED" Type="bit" />
+    <Property Name="IS_PRINT" Type="bit" />
+    <Property Name="IS_SAVE_RETURNABLE_AMOUNT" Type="bit" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="TRANSFER_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_NO" Type="varchar" MaxLength="50" />
+    <Property Name="CHEQUE_BRANCH" Type="varchar" MaxLength="50" />
+    <Property Name="CASH_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FINANCIAL_AMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="FINANCIAL_CREDIT_AC" Type="bigint" />
+    <Property Name="FINANCIAL_CREDIT_ID" Type="bigint" />
+    <Property Name="CASH_REG_DATE" Type="datetime" />
+    <Property Name="CASH_REG" Type="varchar" MaxLength="50" />
+    <Property Name="CHEQUE_DATE" Type="datetime" />
+    <Property Name="CHEQUE_BANK_AC" Type="bigint" />
+    <Property Name="CHAEQE_BANK_AC_ID" Type="bigint" />
+    <Property Name="TRANSFER_DATE" Type="datetime" />
+    <Property Name="TRANSFER_BANK_ID" Type="bigint" />
+    <Property Name="TRANSFER_BRANCH" Type="varchar" MaxLength="50" />
+    <Property Name="TRANSFER_BANK_AC" Type="bigint" />
+    <Property Name="INVOICE_ID" Type="bigint" Nullable="false" />
+    <Property Name="TOTAL_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="bigint" />
+    <Property Name="BUSINESS_LOCATION_NAME" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'NEW_POS.dbo.View_ITEM_ATTRIBUTE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_ITEM_ATTRIBUTE">
+    <Key>
+      <PropertyRef Name="OPENING_STOCK_ID" />
+    </Key>
+    <Property Name="ITEM_ID" Type="int" />
+    <Property Name="ITEM_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="ITEM_DESCRIPTION" Type="varchar" MaxLength="500" />
+    <Property Name="ITEM_PRICE" Type="float" />
+    <Property Name="ITEM_PRODUCT_ID" Type="int" />
+    <Property Name="ITEM_INVOICE_ID" Type="int" />
+    <Property Name="KEYWORD" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESSORIES_KEYWORD" Type="varchar" MaxLength="50" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="50" />
+    <Property Name="GODOWN_ID" Type="int" />
+    <Property Name="CATAGORY_ID" Type="bigint" />
+    <Property Name="SERCH_CODE" Type="nchar" MaxLength="10" />
+    <Property Name="TAX_PAID" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_COLLECTED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PURCHASE_UNIT" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_UNIT" Type="varchar" MaxLength="50" />
+    <Property Name="PURCHASE_UNIT_PRICE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_PRICE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MRP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="int" />
+    <Property Name="OPN_QNT" Type="int" />
+    <Property Name="CATEGORY_NAME" Type="varchar" MaxLength="35" />
+    <Property Name="DISPLAY_INDEX" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_UNIQUE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_GROUP_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="REGIONAL_LANGUAGE" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_PRICE_BEFOR_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MODIFICATION_DATE" Type="datetime" />
+    <Property Name="CATAGORY" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="ITEM_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="WEIGHT_OF_PAPER" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_PLASTIC" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_FOAM" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_CARDBOARD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IMAGE_PATH" Type="varchar" MaxLength="100" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="GODOWN" Type="varchar" MaxLength="50" />
+    <Property Name="COMPANY_NAME" Type="varchar" MaxLength="500" />
+    <Property Name="BUSSINESS_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="OPENING_STOCK_ID" Type="bigint" Nullable="false" />
+    <Property Name="TAX_PAID_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_COLLECTED_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_COLLECTED_ID" Type="int" />
+    <Property Name="TAX_PAID_ID" Type="int" />
+    <Property Name="BUSS_LOC_ID" Type="int" />
+    <Property Name="Expr1" Type="int" />
+    <Property Name="PURCHAGE_UNIT_ID" Type="int" />
+    <Property Name="SALE_UNIT_ID" Type="int" />
+    <Property Name="IS_ACIVE" Type="bit" />
+    <Property Name="INCLUDE_TAX" Type="bit" />
+    <Property Name="TAX_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_VALUE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ITEM_LOCATION_NAME" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'NEW_POS.dbo.View_STOCK_SEARCH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_STOCK_SEARCH">
+    <Key>
+      <PropertyRef Name="ITEM_ID" />
+      <PropertyRef Name="TRANS_QUANTITY" />
+    </Key>
+    <Property Name="ITEM_ID" Type="int" Nullable="false" />
+    <Property Name="ITEM_NAME" Type="varchar" MaxLength="100" />
+    <Property Name="ITEM_DESCRIPTION" Type="varchar" MaxLength="500" />
+    <Property Name="ITEM_PRICE" Type="float" />
+    <Property Name="ITEM_INVOICE_ID" Type="int" />
+    <Property Name="ITEM_PRODUCT_ID" Type="int" />
+    <Property Name="KEYWORD" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESSORIES_KEYWORD" Type="varchar" MaxLength="50" />
+    <Property Name="BARCODE" Type="varchar" MaxLength="50" />
+    <Property Name="CATAGORY_ID" Type="bigint" />
+    <Property Name="SERCH_CODE" Type="nchar" MaxLength="10" />
+    <Property Name="PURCHASE_UNIT" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_UNIT" Type="varchar" MaxLength="50" />
+    <Property Name="PURCHASE_UNIT_PRICE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_PRICE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MRP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="int" />
+    <Property Name="OPN_QNT" Type="int" />
+    <Property Name="CATEGORY_NAME" Type="varchar" MaxLength="35" />
+    <Property Name="DISPLAY_INDEX" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_UNIQUE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="ITEM_GROUP_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="REGIONAL_LANGUAGE" Type="varchar" MaxLength="50" />
+    <Property Name="SALES_PRICE_BEFOR_TAX" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MODIFICATION_DATE" Type="datetime" />
+    <Property Name="CATAGORY" Type="varchar" MaxLength="50" />
+    <Property Name="IS_DELETE" Type="bit" />
+    <Property Name="ITEM_LOCATION" Type="varchar" MaxLength="50" />
+    <Property Name="WEIGHT_OF_PAPER" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_PLASTIC" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_FOAM" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_CARDBOARD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IMAGE_PATH" Type="varchar" MaxLength="100" />
+    <Property Name="USER_ID" Type="bigint" />
+    <Property Name="TAX_COLLECTED" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_PAID" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_COLLECTED_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="TAX_PAID_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="SALE_UNIT_ID" Type="int" />
+    <Property Name="PURCHAGE_UNIT_ID" Type="int" />
+    <Property Name="GODOWN_ID" Type="int" />
+    <Property Name="BUSS_LOC_ID" Type="int" />
+    <Property Name="TAX_PAID_ID" Type="int" />
+    <Property Name="TAX_COLLECTED_ID" Type="int" />
+    <Property Name="IS_ACIVE" Type="bit" />
+    <Property Name="INCLUDE_TAX" Type="bit" />
+    <Property Name="TRANS_QUANTITY" Type="int" Nullable="false" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="IS_SEND" Type="bit" />
+    <Property Name="RECEIVED_BY_ID" Type="bigint" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="STOCK_TRANSFER_NUMBER" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'NEW_POS.dbo.VW_EMP_ACCESS_MODULE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_EMP_ACCESS_MODULE">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="MODULE_ID" Type="int" Nullable="false" />
+    <Property Name="ACTION_CREATE" Type="bit" />
+    <Property Name="EDIT" Type="bit" />
+    <Property Name="ACTION_DELETE" Type="bit" />
+    <Property Name="ACTION_VIEW" Type="bit" />
+    <Property Name="VERIFICATION" Type="bit" />
+    <Property Name="NOTIFICATION" Type="bit" />
+    <Property Name="MESSAGE" Type="bit" />
+    <Property Name="APPROVE" Type="bit" />
+    <Property Name="ROLE_ID" Type="bigint" />
+    <Property Name="MAILBACK" Type="bit" />
+    <Property Name="ID" Type="bigint" />
+    <Property Name="MODIFIED_DATE" Type="datetime" />
+    <Property Name="User_Id" Type="bigint" />
+    <Property Name="Company_Id" Type="bigint" />
+    <Property Name="IMORT_TO_EXCEL" Type="bit" />
+    <Property Name="EXPT_TO_EXCEL" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'NEW_POS.dbo.VW_EMP_MODULE_ACCESS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_EMP_MODULE_ACCESS">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="MODULE_ID" Type="int" Nullable="false" />
+    <Property Name="ACTION_CREATE" Type="bit" />
+    <Property Name="EDIT" Type="bit" />
+    <Property Name="ACTION_DELETE" Type="bit" />
+    <Property Name="ACTION_VIEW" Type="bit" />
+    <Property Name="VERIFICATION" Type="bit" />
+    <Property Name="NOTIFICATION" Type="bit" />
+    <Property Name="MESSAGE" Type="bit" />
+    <Property Name="APPROVE" Type="bit" />
+    <Property Name="ROLE_ID" Type="bigint" />
+    <Property Name="MAILBACK" Type="bit" />
+    <Property Name="ID" Type="bigint" />
+    <Property Name="MODIFIED_DATE" Type="datetime" />
+    <Property Name="User_Id" Type="bigint" />
+    <Property Name="Company_Id" Type="bigint" />
+    <Property Name="IMORT_TO_EXCEL" Type="bit" />
+    <Property Name="EXPT_TO_EXCEL" Type="bit" />
+  </EntityType>
+  <Function Name="SP_All_Invoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="NEW_POSModelStoreContainer">
+    <EntitySet Name="AUTHORIZATION" EntityType="Self.AUTHORIZATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODULE" EntityType="Self.MODULE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AUTO_GENERATE_CODE" EntityType="Self.TBL_AUTO_GENERATE_CODE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER" EntityType="Self.TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AUTO_GENERATE_CODE_FOR_LOYALTY" EntityType="Self.TBL_AUTO_GENERATE_CODE_FOR_LOYALTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AUTO_GENERATE_CODE_FOR_PRODUCT" EntityType="Self.TBL_AUTO_GENERATE_CODE_FOR_PRODUCT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_AUTO_GENERATE_INVOICE_NO" EntityType="Self.TBL_AUTO_GENERATE_INVOICE_NO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_BANK" EntityType="Self.TBL_BANK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_BANK_ACCOUNT" EntityType="Self.TBL_BANK_ACCOUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_BUSINESS_LOCATION" EntityType="Self.TBL_BUSINESS_LOCATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CASH_REG" EntityType="Self.TBL_CASH_REG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CATAGORY" EntityType="Self.TBL_CATAGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CHEQUE" EntityType="Self.TBL_CHEQUE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_COMPANY" EntityType="Self.TBL_COMPANY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CUSTOMER" EntityType="Self.TBL_CUSTOMER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CUSTOMER_BILLING_ADDRESS" EntityType="Self.TBL_CUSTOMER_BILLING_ADDRESS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CUSTOMER_GROUP" EntityType="Self.TBL_CUSTOMER_GROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_CUSTOMER_SHIPPING_ADDRESS" EntityType="Self.TBL_CUSTOMER_SHIPPING_ADDRESS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_DEPARTMENT" EntityType="Self.TBL_DEPARTMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_DESIGNATION" EntityType="Self.TBL_DESIGNATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_EMPLOYEE" EntityType="Self.TBL_EMPLOYEE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ESTIMATE1" EntityType="Self.TBL_ESTIMATE1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_FINANCIAL" EntityType="Self.TBL_FINANCIAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_GODOWN" EntityType="Self.TBL_GODOWN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_HOLD_INVOICE" EntityType="Self.TBL_HOLD_INVOICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_INVOICE" EntityType="Self.TBL_INVOICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_INVOICE_PAY" EntityType="Self.TBL_INVOICE_PAY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ITEM_LOCATION" EntityType="Self.TBL_ITEM_LOCATION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ITEMS" EntityType="Self.TBL_ITEMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ITEMS_ATTRIBUTE" EntityType="Self.TBL_ITEMS_ATTRIBUTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_LOYALTY" EntityType="Self.TBL_LOYALTY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_LOYALTY_Exceedings" EntityType="Self.TBL_LOYALTY_Exceedings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_NEWCASHREGISTER" EntityType="Self.TBL_NEWCASHREGISTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_OPENING_BALANCE" EntityType="Self.TBL_OPENING_BALANCE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_OPENING_STOCK" EntityType="Self.TBL_OPENING_STOCK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_ORDER" EntityType="Self.TBL_ORDER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_PAYMENT" EntityType="Self.TBL_PAYMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_PO" EntityType="Self.TBL_PO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_PO_ITEMS" EntityType="Self.TBL_PO_ITEMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_PO_PAYMENT" EntityType="Self.TBL_PO_PAYMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_PURCHASE_ORDERS" EntityType="Self.TBL_PURCHASE_ORDERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_RECEIVE_ITEM" EntityType="Self.TBL_RECEIVE_ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_RECEIVE_ITEM_ITEMS" EntityType="Self.TBL_RECEIVE_ITEM_ITEMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_RECEIVE_PAYMENT" EntityType="Self.TBL_RECEIVE_PAYMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_REPORT_ADD" EntityType="Self.TBL_REPORT_ADD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_REPORT_GROUP" EntityType="Self.TBL_REPORT_GROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_SALE_ITEM" EntityType="Self.TBL_SALE_ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_SALES_RETURN" EntityType="Self.TBL_SALES_RETURN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_STOCK_TRANSFER" EntityType="Self.TBL_STOCK_TRANSFER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_SUPP_PAYMENT" EntityType="Self.TBL_SUPP_PAYMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_SUPPLIER" EntityType="Self.TBL_SUPPLIER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_supppaydetails" EntityType="Self.tbl_supppaydetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TAX" EntityType="Self.TBL_TAX" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_TRANSFER" EntityType="Self.TBL_TRANSFER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_UNIT_MEASURING" EntityType="Self.TBL_UNIT_MEASURING" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_USER" EntityType="Self.TBL_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_VENDORS" EntityType="Self.TBL_VENDORS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tmp_invoice" EntityType="Self.tmp_invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MODULE_RIGHTS" EntityType="Self.MODULE_RIGHTS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[MODULE_RIGHTS].[MODULE_NAME] AS [MODULE_NAME], 
+[MODULE_RIGHTS].[MODULE_ID] AS [MODULE_ID], 
+[MODULE_RIGHTS].[ACTION_CREATE] AS [ACTION_CREATE], 
+[MODULE_RIGHTS].[EDIT] AS [EDIT], 
+[MODULE_RIGHTS].[ACTION_DELETE] AS [ACTION_DELETE], 
+[MODULE_RIGHTS].[ACTION_VIEW] AS [ACTION_VIEW], 
+[MODULE_RIGHTS].[VERIFICATION] AS [VERIFICATION], 
+[MODULE_RIGHTS].[NOTIFICATION] AS [NOTIFICATION], 
+[MODULE_RIGHTS].[MESSAGE] AS [MESSAGE], 
+[MODULE_RIGHTS].[APPROVE] AS [APPROVE], 
+[MODULE_RIGHTS].[ROLE_ID] AS [ROLE_ID], 
+[MODULE_RIGHTS].[MAILBACK] AS [MAILBACK], 
+[MODULE_RIGHTS].[ID] AS [ID], 
+[MODULE_RIGHTS].[MODIFIED_DATE] AS [MODIFIED_DATE], 
+[MODULE_RIGHTS].[User_Id] AS [User_Id], 
+[MODULE_RIGHTS].[Company_Id] AS [Company_Id], 
+[MODULE_RIGHTS].[IMORT_TO_EXCEL] AS [IMORT_TO_EXCEL], 
+[MODULE_RIGHTS].[EXPT_TO_EXCEL] AS [EXPT_TO_EXCEL], 
+[MODULE_RIGHTS].[EMPLOYEE_ID] AS [EMPLOYEE_ID]
+FROM [dbo].[MODULE_RIGHTS] AS [MODULE_RIGHTS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW_GROUP_SUBGROUP" EntityType="Self.VIEW_GROUP_SUBGROUP" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[VIEW_GROUP_SUBGROUP].[REPORT_GRP_ID] AS [REPORT_GRP_ID], 
+[VIEW_GROUP_SUBGROUP].[GroupName] AS [GroupName], 
+[VIEW_GROUP_SUBGROUP].[ParentId] AS [ParentId], 
+[VIEW_GROUP_SUBGROUP].[REPORT_ID] AS [REPORT_ID], 
+[VIEW_GROUP_SUBGROUP].[Child] AS [Child]
+FROM [dbo].[VIEW_GROUP_SUBGROUP] AS [VIEW_GROUP_SUBGROUP]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VIEW_INVOICE" EntityType="Self.VIEW_INVOICE" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[VIEW_INVOICE].[INVOICE_NO] AS [INVOICE_NO], 
+[VIEW_INVOICE].[INVOICE_DATE] AS [INVOICE_DATE], 
+[VIEW_INVOICE].[CUSTOMER] AS [CUSTOMER], 
+[VIEW_INVOICE].[CUSTOMER_ID] AS [CUSTOMER_ID], 
+[VIEW_INVOICE].[AVAILABLE_CREDIT_LIMIT] AS [AVAILABLE_CREDIT_LIMIT], 
+[VIEW_INVOICE].[SALES_EXECUTIVE] AS [SALES_EXECUTIVE], 
+[VIEW_INVOICE].[SALES_EXECUTIVE_ID] AS [SALES_EXECUTIVE_ID], 
+[VIEW_INVOICE].[CUSTOMER_EMAIL] AS [CUSTOMER_EMAIL], 
+[VIEW_INVOICE].[CUSTOMER_MOBILE_NO] AS [CUSTOMER_MOBILE_NO], 
+[VIEW_INVOICE].[BEFORE_ROUNDOFF] AS [BEFORE_ROUNDOFF], 
+[VIEW_INVOICE].[ROUNDOFF_AMOUNT] AS [ROUNDOFF_AMOUNT], 
+[VIEW_INVOICE].[TOTAL_AMOUNT] AS [TOTAL_AMOUNT], 
+[VIEW_INVOICE].[QUANTITY_TOTAL] AS [QUANTITY_TOTAL], 
+[VIEW_INVOICE].[NUMBER_OF_ITEM] AS [NUMBER_OF_ITEM], 
+[VIEW_INVOICE].[DISCOUNT_INCLUDED] AS [DISCOUNT_INCLUDED], 
+[VIEW_INVOICE].[TAX_INCLUDED] AS [TAX_INCLUDED], 
+[VIEW_INVOICE].[RECIVED_AMOUNT] AS [RECIVED_AMOUNT], 
+[VIEW_INVOICE].[RETURNABLE_AMOUNT] AS [RETURNABLE_AMOUNT], 
+[VIEW_INVOICE].[COMMISION_EXPENSE] AS [COMMISION_EXPENSE], 
+[VIEW_INVOICE].[PENDING_AMOUNT] AS [PENDING_AMOUNT], 
+[VIEW_INVOICE].[NOTE] AS [NOTE], 
+[VIEW_INVOICE].[IS_GOODS_DELIVERED] AS [IS_GOODS_DELIVERED], 
+[VIEW_INVOICE].[IS_PRINT] AS [IS_PRINT], 
+[VIEW_INVOICE].[IS_SAVE_RETURNABLE_AMOUNT] AS [IS_SAVE_RETURNABLE_AMOUNT], 
+[VIEW_INVOICE].[USER_ID] AS [USER_ID], 
+[VIEW_INVOICE].[TRANSFER_AMOUNT] AS [TRANSFER_AMOUNT], 
+[VIEW_INVOICE].[CHEQUE_AMOUNT] AS [CHEQUE_AMOUNT], 
+[VIEW_INVOICE].[CHEQUE_NO] AS [CHEQUE_NO], 
+[VIEW_INVOICE].[CHEQUE_BRANCH] AS [CHEQUE_BRANCH], 
+[VIEW_INVOICE].[CASH_AMOUNT] AS [CASH_AMOUNT], 
+[VIEW_INVOICE].[FINANCIAL_AMOUNT] AS [FINANCIAL_AMOUNT], 
+[VIEW_INVOICE].[FINANCIAL_CREDIT_AC] AS [FINANCIAL_CREDIT_AC], 
+[VIEW_INVOICE].[FINANCIAL_CREDIT_ID] AS [FINANCIAL_CREDIT_ID], 
+[VIEW_INVOICE].[CASH_REG_DATE] AS [CASH_REG_DATE], 
+[VIEW_INVOICE].[CASH_REG] AS [CASH_REG], 
+[VIEW_INVOICE].[CHEQUE_DATE] AS [CHEQUE_DATE], 
+[VIEW_INVOICE].[CHEQUE_BANK_AC] AS [CHEQUE_BANK_AC], 
+[VIEW_INVOICE].[CHAEQE_BANK_AC_ID] AS [CHAEQE_BANK_AC_ID], 
+[VIEW_INVOICE].[TRANSFER_DATE] AS [TRANSFER_DATE], 
+[VIEW_INVOICE].[TRANSFER_BANK_ID] AS [TRANSFER_BANK_ID], 
+[VIEW_INVOICE].[TRANSFER_BRANCH] AS [TRANSFER_BRANCH], 
+[VIEW_INVOICE].[TRANSFER_BANK_AC] AS [TRANSFER_BANK_AC], 
+[VIEW_INVOICE].[INVOICE_ID] AS [INVOICE_ID], 
+[VIEW_INVOICE].[TOTAL_TAX] AS [TOTAL_TAX], 
+[VIEW_INVOICE].[BUSINESS_LOCATION_ID] AS [BUSINESS_LOCATION_ID], 
+[VIEW_INVOICE].[BUSINESS_LOCATION_NAME] AS [BUSINESS_LOCATION_NAME]
+FROM [dbo].[VIEW_INVOICE] AS [VIEW_INVOICE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_ITEM_ATTRIBUTE" EntityType="Self.View_ITEM_ATTRIBUTE" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[View_ITEM_ATTRIBUTE].[ITEM_ID] AS [ITEM_ID], 
+[View_ITEM_ATTRIBUTE].[ITEM_NAME] AS [ITEM_NAME], 
+[View_ITEM_ATTRIBUTE].[ITEM_DESCRIPTION] AS [ITEM_DESCRIPTION], 
+[View_ITEM_ATTRIBUTE].[ITEM_PRICE] AS [ITEM_PRICE], 
+[View_ITEM_ATTRIBUTE].[ITEM_PRODUCT_ID] AS [ITEM_PRODUCT_ID], 
+[View_ITEM_ATTRIBUTE].[ITEM_INVOICE_ID] AS [ITEM_INVOICE_ID], 
+[View_ITEM_ATTRIBUTE].[KEYWORD] AS [KEYWORD], 
+[View_ITEM_ATTRIBUTE].[ACCESSORIES_KEYWORD] AS [ACCESSORIES_KEYWORD], 
+[View_ITEM_ATTRIBUTE].[BARCODE] AS [BARCODE], 
+[View_ITEM_ATTRIBUTE].[GODOWN_ID] AS [GODOWN_ID], 
+[View_ITEM_ATTRIBUTE].[CATAGORY_ID] AS [CATAGORY_ID], 
+[View_ITEM_ATTRIBUTE].[SERCH_CODE] AS [SERCH_CODE], 
+[View_ITEM_ATTRIBUTE].[TAX_PAID] AS [TAX_PAID], 
+[View_ITEM_ATTRIBUTE].[TAX_COLLECTED] AS [TAX_COLLECTED], 
+[View_ITEM_ATTRIBUTE].[PURCHASE_UNIT] AS [PURCHASE_UNIT], 
+[View_ITEM_ATTRIBUTE].[SALES_UNIT] AS [SALES_UNIT], 
+[View_ITEM_ATTRIBUTE].[PURCHASE_UNIT_PRICE] AS [PURCHASE_UNIT_PRICE], 
+[View_ITEM_ATTRIBUTE].[SALES_PRICE] AS [SALES_PRICE], 
+[View_ITEM_ATTRIBUTE].[MRP] AS [MRP], 
+[View_ITEM_ATTRIBUTE].[COMPANY_ID] AS [COMPANY_ID], 
+[View_ITEM_ATTRIBUTE].[OPN_QNT] AS [OPN_QNT], 
+[View_ITEM_ATTRIBUTE].[CATEGORY_NAME] AS [CATEGORY_NAME], 
+[View_ITEM_ATTRIBUTE].[DISPLAY_INDEX] AS [DISPLAY_INDEX], 
+[View_ITEM_ATTRIBUTE].[ITEM_UNIQUE_NAME] AS [ITEM_UNIQUE_NAME], 
+[View_ITEM_ATTRIBUTE].[ITEM_GROUP_NAME] AS [ITEM_GROUP_NAME], 
+[View_ITEM_ATTRIBUTE].[REGIONAL_LANGUAGE] AS [REGIONAL_LANGUAGE], 
+[View_ITEM_ATTRIBUTE].[SALES_PRICE_BEFOR_TAX] AS [SALES_PRICE_BEFOR_TAX], 
+[View_ITEM_ATTRIBUTE].[MODIFICATION_DATE] AS [MODIFICATION_DATE], 
+[View_ITEM_ATTRIBUTE].[CATAGORY] AS [CATAGORY], 
+[View_ITEM_ATTRIBUTE].[IS_DELETE] AS [IS_DELETE], 
+[View_ITEM_ATTRIBUTE].[ITEM_LOCATION] AS [ITEM_LOCATION], 
+[View_ITEM_ATTRIBUTE].[WEIGHT_OF_PAPER] AS [WEIGHT_OF_PAPER], 
+[View_ITEM_ATTRIBUTE].[WEIGHT_OF_PLASTIC] AS [WEIGHT_OF_PLASTIC], 
+[View_ITEM_ATTRIBUTE].[WEIGHT_OF_FOAM] AS [WEIGHT_OF_FOAM], 
+[View_ITEM_ATTRIBUTE].[WEIGHT_OF_CARDBOARD] AS [WEIGHT_OF_CARDBOARD], 
+[View_ITEM_ATTRIBUTE].[IMAGE_PATH] AS [IMAGE_PATH], 
+[View_ITEM_ATTRIBUTE].[DATE] AS [DATE], 
+[View_ITEM_ATTRIBUTE].[GODOWN] AS [GODOWN], 
+[View_ITEM_ATTRIBUTE].[COMPANY_NAME] AS [COMPANY_NAME], 
+[View_ITEM_ATTRIBUTE].[BUSSINESS_LOCATION] AS [BUSSINESS_LOCATION], 
+[View_ITEM_ATTRIBUTE].[OPENING_STOCK_ID] AS [OPENING_STOCK_ID], 
+[View_ITEM_ATTRIBUTE].[TAX_PAID_NAME] AS [TAX_PAID_NAME], 
+[View_ITEM_ATTRIBUTE].[TAX_COLLECTED_NAME] AS [TAX_COLLECTED_NAME], 
+[View_ITEM_ATTRIBUTE].[TAX_COLLECTED_ID] AS [TAX_COLLECTED_ID], 
+[View_ITEM_ATTRIBUTE].[TAX_PAID_ID] AS [TAX_PAID_ID], 
+[View_ITEM_ATTRIBUTE].[BUSS_LOC_ID] AS [BUSS_LOC_ID], 
+[View_ITEM_ATTRIBUTE].[Expr1] AS [Expr1], 
+[View_ITEM_ATTRIBUTE].[PURCHAGE_UNIT_ID] AS [PURCHAGE_UNIT_ID], 
+[View_ITEM_ATTRIBUTE].[SALE_UNIT_ID] AS [SALE_UNIT_ID], 
+[View_ITEM_ATTRIBUTE].[IS_ACIVE] AS [IS_ACIVE], 
+[View_ITEM_ATTRIBUTE].[INCLUDE_TAX] AS [INCLUDE_TAX], 
+[View_ITEM_ATTRIBUTE].[TAX_NAME] AS [TAX_NAME], 
+[View_ITEM_ATTRIBUTE].[TAX_VALUE] AS [TAX_VALUE], 
+[View_ITEM_ATTRIBUTE].[ITEM_LOCATION_NAME] AS [ITEM_LOCATION_NAME]
+FROM [dbo].[View_ITEM_ATTRIBUTE] AS [View_ITEM_ATTRIBUTE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_STOCK_SEARCH" EntityType="Self.View_STOCK_SEARCH" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[View_STOCK_SEARCH].[ITEM_ID] AS [ITEM_ID], 
+[View_STOCK_SEARCH].[ITEM_NAME] AS [ITEM_NAME], 
+[View_STOCK_SEARCH].[ITEM_DESCRIPTION] AS [ITEM_DESCRIPTION], 
+[View_STOCK_SEARCH].[ITEM_PRICE] AS [ITEM_PRICE], 
+[View_STOCK_SEARCH].[ITEM_INVOICE_ID] AS [ITEM_INVOICE_ID], 
+[View_STOCK_SEARCH].[ITEM_PRODUCT_ID] AS [ITEM_PRODUCT_ID], 
+[View_STOCK_SEARCH].[KEYWORD] AS [KEYWORD], 
+[View_STOCK_SEARCH].[ACCESSORIES_KEYWORD] AS [ACCESSORIES_KEYWORD], 
+[View_STOCK_SEARCH].[BARCODE] AS [BARCODE], 
+[View_STOCK_SEARCH].[CATAGORY_ID] AS [CATAGORY_ID], 
+[View_STOCK_SEARCH].[SERCH_CODE] AS [SERCH_CODE], 
+[View_STOCK_SEARCH].[PURCHASE_UNIT] AS [PURCHASE_UNIT], 
+[View_STOCK_SEARCH].[SALES_UNIT] AS [SALES_UNIT], 
+[View_STOCK_SEARCH].[PURCHASE_UNIT_PRICE] AS [PURCHASE_UNIT_PRICE], 
+[View_STOCK_SEARCH].[SALES_PRICE] AS [SALES_PRICE], 
+[View_STOCK_SEARCH].[MRP] AS [MRP], 
+[View_STOCK_SEARCH].[COMPANY_ID] AS [COMPANY_ID], 
+[View_STOCK_SEARCH].[OPN_QNT] AS [OPN_QNT], 
+[View_STOCK_SEARCH].[CATEGORY_NAME] AS [CATEGORY_NAME], 
+[View_STOCK_SEARCH].[DISPLAY_INDEX] AS [DISPLAY_INDEX], 
+[View_STOCK_SEARCH].[ITEM_UNIQUE_NAME] AS [ITEM_UNIQUE_NAME], 
+[View_STOCK_SEARCH].[ITEM_GROUP_NAME] AS [ITEM_GROUP_NAME], 
+[View_STOCK_SEARCH].[REGIONAL_LANGUAGE] AS [REGIONAL_LANGUAGE], 
+[View_STOCK_SEARCH].[SALES_PRICE_BEFOR_TAX] AS [SALES_PRICE_BEFOR_TAX], 
+[View_STOCK_SEARCH].[MODIFICATION_DATE] AS [MODIFICATION_DATE], 
+[View_STOCK_SEARCH].[CATAGORY] AS [CATAGORY], 
+[View_STOCK_SEARCH].[IS_DELETE] AS [IS_DELETE], 
+[View_STOCK_SEARCH].[ITEM_LOCATION] AS [ITEM_LOCATION], 
+[View_STOCK_SEARCH].[WEIGHT_OF_PAPER] AS [WEIGHT_OF_PAPER], 
+[View_STOCK_SEARCH].[WEIGHT_OF_PLASTIC] AS [WEIGHT_OF_PLASTIC], 
+[View_STOCK_SEARCH].[WEIGHT_OF_FOAM] AS [WEIGHT_OF_FOAM], 
+[View_STOCK_SEARCH].[WEIGHT_OF_CARDBOARD] AS [WEIGHT_OF_CARDBOARD], 
+[View_STOCK_SEARCH].[IMAGE_PATH] AS [IMAGE_PATH], 
+[View_STOCK_SEARCH].[USER_ID] AS [USER_ID], 
+[View_STOCK_SEARCH].[TAX_COLLECTED] AS [TAX_COLLECTED], 
+[View_STOCK_SEARCH].[TAX_PAID] AS [TAX_PAID], 
+[View_STOCK_SEARCH].[TAX_COLLECTED_NAME] AS [TAX_COLLECTED_NAME], 
+[View_STOCK_SEARCH].[TAX_PAID_NAME] AS [TAX_PAID_NAME], 
+[View_STOCK_SEARCH].[SALE_UNIT_ID] AS [SALE_UNIT_ID], 
+[View_STOCK_SEARCH].[PURCHAGE_UNIT_ID] AS [PURCHAGE_UNIT_ID], 
+[View_STOCK_SEARCH].[GODOWN_ID] AS [GODOWN_ID], 
+[View_STOCK_SEARCH].[BUSS_LOC_ID] AS [BUSS_LOC_ID], 
+[View_STOCK_SEARCH].[TAX_PAID_ID] AS [TAX_PAID_ID], 
+[View_STOCK_SEARCH].[TAX_COLLECTED_ID] AS [TAX_COLLECTED_ID], 
+[View_STOCK_SEARCH].[IS_ACIVE] AS [IS_ACIVE], 
+[View_STOCK_SEARCH].[INCLUDE_TAX] AS [INCLUDE_TAX], 
+[View_STOCK_SEARCH].[TRANS_QUANTITY] AS [TRANS_QUANTITY], 
+[View_STOCK_SEARCH].[EMAIL] AS [EMAIL], 
+[View_STOCK_SEARCH].[IS_SEND] AS [IS_SEND], 
+[View_STOCK_SEARCH].[RECEIVED_BY_ID] AS [RECEIVED_BY_ID], 
+[View_STOCK_SEARCH].[DATE] AS [DATE], 
+[View_STOCK_SEARCH].[STOCK_TRANSFER_NUMBER] AS [STOCK_TRANSFER_NUMBER]
+FROM [dbo].[View_STOCK_SEARCH] AS [View_STOCK_SEARCH]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_EMP_ACCESS_MODULE" EntityType="Self.VW_EMP_ACCESS_MODULE" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[VW_EMP_ACCESS_MODULE].[MODULE_NAME] AS [MODULE_NAME], 
+[VW_EMP_ACCESS_MODULE].[MODULE_ID] AS [MODULE_ID], 
+[VW_EMP_ACCESS_MODULE].[ACTION_CREATE] AS [ACTION_CREATE], 
+[VW_EMP_ACCESS_MODULE].[EDIT] AS [EDIT], 
+[VW_EMP_ACCESS_MODULE].[ACTION_DELETE] AS [ACTION_DELETE], 
+[VW_EMP_ACCESS_MODULE].[ACTION_VIEW] AS [ACTION_VIEW], 
+[VW_EMP_ACCESS_MODULE].[VERIFICATION] AS [VERIFICATION], 
+[VW_EMP_ACCESS_MODULE].[NOTIFICATION] AS [NOTIFICATION], 
+[VW_EMP_ACCESS_MODULE].[MESSAGE] AS [MESSAGE], 
+[VW_EMP_ACCESS_MODULE].[APPROVE] AS [APPROVE], 
+[VW_EMP_ACCESS_MODULE].[ROLE_ID] AS [ROLE_ID], 
+[VW_EMP_ACCESS_MODULE].[MAILBACK] AS [MAILBACK], 
+[VW_EMP_ACCESS_MODULE].[ID] AS [ID], 
+[VW_EMP_ACCESS_MODULE].[MODIFIED_DATE] AS [MODIFIED_DATE], 
+[VW_EMP_ACCESS_MODULE].[User_Id] AS [User_Id], 
+[VW_EMP_ACCESS_MODULE].[Company_Id] AS [Company_Id], 
+[VW_EMP_ACCESS_MODULE].[IMORT_TO_EXCEL] AS [IMORT_TO_EXCEL], 
+[VW_EMP_ACCESS_MODULE].[EXPT_TO_EXCEL] AS [EXPT_TO_EXCEL]
+FROM [dbo].[VW_EMP_ACCESS_MODULE] AS [VW_EMP_ACCESS_MODULE]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VW_EMP_MODULE_ACCESS" EntityType="Self.VW_EMP_MODULE_ACCESS" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[VW_EMP_MODULE_ACCESS].[MODULE_NAME] AS [MODULE_NAME], 
+[VW_EMP_MODULE_ACCESS].[MODULE_ID] AS [MODULE_ID], 
+[VW_EMP_MODULE_ACCESS].[ACTION_CREATE] AS [ACTION_CREATE], 
+[VW_EMP_MODULE_ACCESS].[EDIT] AS [EDIT], 
+[VW_EMP_MODULE_ACCESS].[ACTION_DELETE] AS [ACTION_DELETE], 
+[VW_EMP_MODULE_ACCESS].[ACTION_VIEW] AS [ACTION_VIEW], 
+[VW_EMP_MODULE_ACCESS].[VERIFICATION] AS [VERIFICATION], 
+[VW_EMP_MODULE_ACCESS].[NOTIFICATION] AS [NOTIFICATION], 
+[VW_EMP_MODULE_ACCESS].[MESSAGE] AS [MESSAGE], 
+[VW_EMP_MODULE_ACCESS].[APPROVE] AS [APPROVE], 
+[VW_EMP_MODULE_ACCESS].[ROLE_ID] AS [ROLE_ID], 
+[VW_EMP_MODULE_ACCESS].[MAILBACK] AS [MAILBACK], 
+[VW_EMP_MODULE_ACCESS].[ID] AS [ID], 
+[VW_EMP_MODULE_ACCESS].[MODIFIED_DATE] AS [MODIFIED_DATE], 
+[VW_EMP_MODULE_ACCESS].[User_Id] AS [User_Id], 
+[VW_EMP_MODULE_ACCESS].[Company_Id] AS [Company_Id], 
+[VW_EMP_MODULE_ACCESS].[IMORT_TO_EXCEL] AS [IMORT_TO_EXCEL], 
+[VW_EMP_MODULE_ACCESS].[EXPT_TO_EXCEL] AS [EXPT_TO_EXCEL]
+FROM [dbo].[VW_EMP_MODULE_ACCESS] AS [VW_EMP_MODULE_ACCESS]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

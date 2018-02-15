@@ -1,0 +1,138 @@
+﻿<UserControl x:Class="InvoicePOS.UserControll.Bank.BankList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="630" Width="1170">
+    <Grid >
+        <Border Background="#90000000" Margin="0,0,10,10">
+            <Grid Background="#ffffffff">
+                <Grid Height="47" VerticalAlignment="Top" Margin="0,10,109,0">
+                    <TextBox x:Name="textBox" Text="{Binding SEARCH_BRANCH}" Margin="10,0,0,7" TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom" Width="205" HorizontalAlignment="Left"/>
+                    <Button Command="{Binding SearchCategoryClick}"    Margin="220,10,0,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="89" HorizontalAlignment="Left"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
+                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding BankAdd}"    Margin="0,11,180,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="96" HorizontalAlignment="Right"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                            <Label Content="Add Bank" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding BankAccountAdd}"    Margin="0,11,281,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="110" HorizontalAlignment="Right"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                            <Label Content="Add Account" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding EditBank}"  Margin="0,10,105,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding ViewBank}"    Margin="0,11,28,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
+                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding DeleteBank}"  Margin="0,10,-52,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                        </DockPanel>
+                    </Button>
+
+
+
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="446" Margin="474,119,0,0" VerticalAlignment="Top" Width="634">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="54*"/>
+                        <ColumnDefinition Width="263*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=selectedBank}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1"   AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd"  TextBlock.TextAlignment="Center" Margin="-4,-44,4,54" Grid.ColumnSpan="2">
+                        <DataGrid.Style>
+                            <Style TargetType="DataGrid">
+                                <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                                <Setter Property="RowBackground" Value="#f9f9f9"/>
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+
+                            </Style>
+                        </DataGrid.Style>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#ffffff" />
+                                        <Setter Property="FontWeight" Value="Normal" />
+                                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                                        <Setter Property="Background" Value="Red" />
+
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn    Header="Sl No" Binding="{Binding SLNO}" Width="130"/>
+                            <DataGridTextColumn    Header="Address 1" Binding="{Binding ADDRESS_1}" Width="130"/>
+                            <DataGridTextColumn    Header="Address 2" Binding="{Binding ADDRESS_2}" Width="130"/>
+                            <DataGridTextColumn    Header="city" Binding="{Binding CITY}" Width="130"/>
+                            <DataGridTextColumn    Header="state" Binding="{Binding STATE}" Width="100"/>
+                            <DataGridTextColumn    Header="Account Created Date" Binding="{Binding BankName}" Width="150"/>
+                            <!--<DataGridTextColumn    Header="Bank Code" Binding="{Binding BankName}" Width="150"/>-->
+                            <!--<DataGridTextColumn    Header="Bank ID" Binding="{Binding BANK_ID}" Width="150"/>
+                            <DataGridTextColumn    Header="pin" Binding="{Binding PIN_CODE}" Width="150"/>-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+                <Grid Margin="0,119,0,0" HorizontalAlignment="Left" Width="409">
+                    <DataGrid ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGridAc}" SelectedItem="{Binding Path=selectedBankAC}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid2"   AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd"  TextBlock.TextAlignment="Center" Margin="10,-46,10,110">
+                        <DataGrid.Style>
+                            <Style TargetType="DataGrid">
+                                <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                                <Setter Property="RowBackground" Value="#f9f9f9"/>
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+
+                            </Style>
+                        </DataGrid.Style>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#ffffff" />
+                                        <Setter Property="FontWeight" Value="Normal" />
+                                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                                        <Setter Property="Background" Value="Red" />
+
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn    Header="Sl No" Binding="{Binding SLNO}" Width="130"/>
+                            <DataGridTextColumn    Header="Branch Name" Binding="{Binding BRANCH_NAME}" Width="130"/>
+                            <DataGridTextColumn    Header="Bank Account No" Binding="{Binding ACCOUNT_NUMBER}" Width="130"/>
+                            <DataGridTextColumn    Header="Search Code" Binding="{Binding ACCOUNT_SEARCH_CODE}" Width="130"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+                
+            </Grid>
+        </Border>
+        
+
+
+    </Grid>
+</UserControl>

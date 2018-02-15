@@ -1,0 +1,123 @@
+﻿<Window x:Class="InvoicePOS.UserControll.Item.NewReceivedItemEntry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NewReceivedItemEntry" Height="921" Width="1014">
+    <Grid>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="25,59,0,0" TextWrapping="Wrap" Text="Select Business Locaion :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,289,0,0" TextWrapping="Wrap" Text="Supplier Invoice Date :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,250,0,0" TextWrapping="Wrap" Text="Supplier Invoice Number :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="44,215,0,0" TextWrapping="Wrap" Text="Search :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,180,0,0" TextWrapping="Wrap" Text="Item Name :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,150,0,0" TextWrapping="Wrap" Text="Barcode :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,120,0,0" TextWrapping="Wrap" Text="Filter Hierachy :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,84,0,0" TextWrapping="Wrap" Text="Received Item Entry Number :" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="185,57,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="175,285,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,245,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,210,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,177,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,147,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="170,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="390,104,0,0" TextWrapping="Wrap" Text="Receive Items On Date :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="425,135,0,0" TextWrapping="Wrap" Text="PO Number :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="445,165,0,0" TextWrapping="Wrap" Text="Supplier :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="430,199,0,0" TextWrapping="Wrap" Text="Payment Terms :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="449,229,0,0" TextWrapping="Wrap" Text="Godown :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="435,60,0,0" TextWrapping="Wrap" Text="Date :" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="540,102,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="540,130,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="540,162,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="540,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="540,227,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <DataGrid  SelectionMode="Extended"   RowHeight="35" Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1" IsReadOnly="True"   AutoGenerateColumns="False" ItemsSource="{Binding Path=ListGridItemPurchase ,Mode=TwoWay, AsyncState=true,  NotifyOnTargetUpdated=True,NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"   Name="dataGrid1" Margin="0,325,6,386"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" ColumnWidth="*" EnableRowVirtualization="false" EnableColumnVirtualization="false" CanUserAddRows="False" CanUserReorderColumns="False">
+            <DataGrid.Style>
+                <Style TargetType="DataGrid">
+                    <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                    <Setter Property="RowBackground" Value="#f9f9f9"/>
+                    <Setter Property="BorderBrush" Value="#dddddd"/>
+                    <Setter Property="FontWeight" Value="Normal"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                </Style>
+            </DataGrid.Style>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#ffffff" />
+                            <Setter Property="FontWeight" Value="Normal" />
+                            <Setter Property="BorderBrush" Value="#dddddd"/>
+
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn    Header="S No :" Binding="{Binding BUSINESS_LOC}" Width="200" />
+                <DataGridTextColumn    Header="Image :" Binding="{Binding RECEIVE_ITEM_ENTRY_NO}" Width="250"/>
+                <DataGridTextColumn    Header="Barcode :" Binding="{Binding RECEIVE_ITEM_ENTRY_DATE}" Width="250"/>
+                <DataGridTextColumn    Header="Item Name :" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
+                <DataGridTextColumn    Header="Received paid Qty/Weight :" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
+                <DataGridTextColumn    Header="Measuring Unit :" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
+                <DataGridTextColumn    Header="Item Unit Price Before Tax :" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
+                <DataGridTextColumn    Header="Item Level Discount Percent :" Binding="{Binding GODOWN}" Width="250"/>
+                <DataGridTextColumn    Header="Ivoice Level Discount Percent :" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
+                <DataGridTextColumn    Header="Subtotal Before Tax :" Binding="{Binding PAYMENT_STATUS}" Width="250"/>
+                <DataGridTextColumn    Header="Tax Name:" Binding="{Binding Total}" Width="250"/>
+                <DataGridTextColumn    Header="Total Tax Amount:" Binding="{Binding TotalTax}" Width="250"/>
+                <DataGridTextColumn    Header="Tax Percent :" Binding="{Binding SUPPLIER_INVOICE_NO}" Width="250"/>
+                <DataGridTextColumn    Header="Total Tax Amount :" Binding="{Binding DATE}" Width="250"/>
+                <DataGridTextColumn    Header="Item Unit Price After Tax :" Binding="{Binding }" Width="250"/>
+                <DataGridTextColumn    Header="Sub Total After Tax :" Binding="{Binding }" Width="250"/>
+                <DataGridTextColumn    Header="Effective Rate Per Unit :" Binding="{Binding }" Width="250"/>
+                <DataGridTextColumn    Header="Sales Price :" Binding="{Binding }" Width="250"/>
+                <DataGridTextColumn    Header="MRP :" Binding="{Binding }" Width="250"/>
+                <DataGridTextColumn    Header="Sales Price Markup Percent :" Binding="{Binding }" Width="250"/>
+                <DataGridTextColumn    Header="Sales Price Margin Percent :" Binding="{Binding }" Width="250"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <TextBlock HorizontalAlignment="Left" Margin="735,549,0,0" TextWrapping="Wrap" Text="Sub Total Before Tax :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="783,575,0,0" TextWrapping="Wrap" Text="Total Tax Amount :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="786,609,0,0" TextWrapping="Wrap" Text="Sub Total :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="788,644,0,0" TextWrapping="Wrap" Text="Round Off Adjustment Amount :" VerticalAlignment="Top" RenderTransformOrigin="0.2,1.875"/>
+        <TextBlock HorizontalAlignment="Left" Margin="790,684,0,0" TextWrapping="Wrap" Text="Total Amount :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="792,720,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="860,545,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="860,572,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="865,605,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="865,642,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="865,680,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="865,712,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="765,805,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="865,802,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="535,545,0,0" VerticalAlignment="Top" Height="20" Width="113"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="395,540,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-1.208,0.217"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="333,584,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="335,615,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="450,582,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="450,617,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="600,585,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
+        <TextBlock HorizontalAlignment="Left" Margin="340,655,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="455,655,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="340,694,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="455,699,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="340,750,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="1.3,-0.312"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="435,750,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="590,754,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="45,550,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.6,2.812"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="125,550,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="260,545,0,0" VerticalAlignment="Top" Width="40" Height="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,600,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="-0.3,0"/>
+        <TextBox HorizontalAlignment="Left" Height="85" Margin="115,585,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="245,593,0,0" VerticalAlignment="Top" Width="65" Height="77"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="285,853,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="400,855,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="515,855,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="640,855,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="765,855,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="890,855,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Margin="545,60,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

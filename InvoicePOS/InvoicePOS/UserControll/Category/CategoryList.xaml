@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="InvoicePOS.UserControll.Category.CategoryList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1050">
+    <Grid Margin="0,0,0,45" >
+        <Border Background="#90000000">
+            <Grid Background="#ffffffff">
+                <Grid Height="47" VerticalAlignment="Top" Margin="0,9,61,0">
+                    <TextBox x:Name="textBox" Text="{Binding SEARCH_CATAGORY}" Margin="15,0,0,10" TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="205"/>
+                    <Button Command="{Binding SearchCategoryClick}"    Margin="225,7,0,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="89" HorizontalAlignment="Left"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
+                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding AddCategoryClick}"    Margin="0,10,182,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding EditCatagory}"  Margin="0,10,107,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding ViewCategoryClick}"    Margin="0,11,30,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
+                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding DeleteCatagory}"  Margin="0,10,-50,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                        </DockPanel>
+                    </Button>
+
+
+
+                </Grid>
+                <Grid Height="438" Margin="6,75,0,0" VerticalAlignment="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="325*"/>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="63*"/>
+                        <ColumnDefinition Width="64*"/>
+                        <ColumnDefinition Width="16*"/>
+                        <ColumnDefinition Width="248*"/>
+                        <ColumnDefinition Width="298*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="221"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <DataGrid ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectedCatagory}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" Margin="10,-5,10,0" VerticalAlignment="Top" Height="418"   AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd"  TextBlock.TextAlignment="Center" Grid.RowSpan="2" Grid.ColumnSpan="7" MouseDoubleClick="grdCategory_MouseDoubleClick">
+                        <DataGrid.Style>
+                            <Style TargetType="DataGrid">
+                                <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                                <Setter Property="RowBackground" Value="#f9f9f9"/>
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+
+                            </Style>
+                        </DataGrid.Style>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#ffffff" />
+                                        <Setter Property="FontWeight" Value="Normal" />
+                                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                                        <Setter Property="Background" Value="Red" />
+
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn  TextBlock.Foreground="Red"   Header="Sl No" Binding="{Binding SLNO}" Width="200"/>
+                            <DataGridTextColumn    Header="Name" Binding="{Binding CATAGORY_NAME}" Width="200"/>
+                            <DataGridTextColumn    Header="Description" Binding="{Binding CATAGORY_DEC}" Width="200"/>
+                            <DataGridTextColumn    Header="Barcode Prefix" IsReadOnly="{Binding BAR_CODE_PREFIX}" Width="100"/>
+                            <DataGridTextColumn    Header="Not for Portal" Binding="{Binding IS_NOT_PROTAL}" Width="200"/>
+                            <DataGridTextColumn    Header="Display Index" Binding="{Binding DISPLAY_INDEX}" Width="200"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

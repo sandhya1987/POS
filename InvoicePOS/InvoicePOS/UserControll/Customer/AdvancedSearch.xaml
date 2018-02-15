@@ -1,0 +1,23 @@
+﻿<Window x:Class="InvoicePOS.UserControll.Customer.AdvancedSearch" WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Advanced Search" Height="393.609" Width="348.165">
+    <Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="198" Margin="0,118,0,0" Stroke="Black" VerticalAlignment="Top" Width="340">
+            
+            
+            
+        </Rectangle>
+        <RadioButton Content="Or" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="And" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="Comparison Operator :" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="146,70,0,0" VerticalAlignment="Top" Width="147"/>
+        <TextBlock HorizontalAlignment="Left" Margin="11,97,0,0" TextWrapping="Wrap" Text="Column To Search" VerticalAlignment="Top"/>
+        <CheckBox Content="Customer Code" HorizontalAlignment="Left" Margin="11,118,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Name" HorizontalAlignment="Left" Margin="11,134,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Search Code" HorizontalAlignment="Left" Margin="11,149,0,0" VerticalAlignment="Top"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="177,332,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="257,332,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

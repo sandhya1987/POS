@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="InvoicePOS.UserControll.SuppPayment.SuppPayList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignWidth="1050" Height="820">
+    <Grid Margin="0,0,0,45" >
+        <Border Background="#90000000">
+            <Grid Background="#ffffff">
+                <Button Command="{Binding SuppPayList_Click}"   Margin="0,20,250,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                        <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    </DockPanel>
+                </Button>
+                <Button Command="{Binding SuppPayView_Click}"   Margin="0,21,94,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}"  HorizontalAlignment="Right"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
+                        <!--<Image Source="/InvoicePOS;component/Images/view-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
+                        <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    </DockPanel>
+                </Button>
+                <Button Command="{Binding DeleteSuppPayment}"   Margin="0,21,11,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                        <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    </DockPanel>
+                </Button>
+                <Button Command="{Binding EditSupplier}"   Margin="0,20,172,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                        <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    </DockPanel>
+                </Button>
+                <Grid    VerticalAlignment="Top" >
+                    <DataGrid  SelectionMode="Single" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectedItem}"  RowHeight="28"  FontSize="12" Cursor="Hand"  BorderBrush="#dddddd" GridLinesVisibility="Horizontal" BorderThickness="1" IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" Margin="10,74,10,-69" VerticalAlignment="Top" Height="400"   AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" MouseDoubleClick="Win_grdSupppay_MouseDoubleClick" >
+                        <DataGrid.Style>
+                            <Style TargetType="DataGrid">
+                                <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                                <Setter Property="RowBackground" Value="#f9f9f9"/>
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                            </Style>
+                        </DataGrid.Style>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#ffffff" />
+                                        <Setter Property="FontWeight" Value="Normal" />
+                                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                                        <Setter Property="Background" Value="Red" />
+                                        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+
+                        <DataGrid.Columns>
+
+                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl.No" Binding="{Binding SLNO}"  />
+                            <DataGridTextColumn     Width="150" MaxWidth="155" Header="Supp Payment No" Binding="{Binding PAYMENT_NUMBER}"  />
+                            <DataGridTextColumn   Width="200" Header="Date"  Binding="{Binding PAYMENT_DATE}"/>
+                            <DataGridTextColumn   Width="200" Header="Creator"  Binding="{Binding Creator}"/>
+                            <DataGridTextColumn   Width="200" Header="Paid Amount"  Binding="{Binding TOTAL_PANDING}"/>
+                            <DataGridTextColumn   Width="200" Header="Name"  Binding="{Binding SUPP}"/>
+                            <DataGridTextColumn   Width="200" Header="Payment Mode"  Binding="{Binding Payment_Mode}"/>
+                            <DataGridTextColumn   Width="200" Header="Note"  Binding="{Binding NOTE}"/>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+                <!--<Button Content="AddPayment"   HorizontalAlignment="Left" Margin="135,22,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>-->
+                
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

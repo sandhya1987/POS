@@ -1,0 +1,282 @@
+﻿<Window x:Class="InvoicePOS.UserControll.SuppPayment.SuppPayAdd"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  WindowStartupLocation="CenterScreen"
+             mc:Ignorable="d" Width="1082.925" Height="684.254" 
+            Title="Supplier Add Payment" >
+    <Window.InputBindings>
+        <KeyBinding Key="Enter" Command="{Binding CreatVisible}"/>
+        <KeyBinding Key="Escape" Command="{Binding Cancel}"/>
+    </Window.InputBindings>
+    <Grid Margin="0,0,83,45" >
+        <Border Background="#90000000" Margin="0,0,-90,-60">
+            <Grid Background="WhiteSmoke" Margin="0,0,0,10" HorizontalAlignment="Right" Width="1082">
+                <!--<TextBox HorizontalAlignment="Left" Height="23" Text="{Binding SelectedItem.NOTE}" Margin="139,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Command="{Binding Path=InsertSuppPayment, UpdateSourceTrigger=PropertyChanged}" Margin="198,167,0,0" VerticalAlignment="Top" Width="75"/>-->
+
+                <GroupBox x:Name="groupBox" Header="Supllier Payment Number" Height="52" Margin="11.683,4,17,0" VerticalAlignment="Top" Width="Auto" d:LayoutOverrides="Width">
+                    <Grid Margin="0,0,-2,0">
+                        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="25" Margin="3,7.04,0,0" TextWrapping="Wrap" Text="Select Business Location :" VerticalAlignment="Top" Width="155"/>
+                        <TextBox x:Name="textBox" IsReadOnly="True" Text="{Binding SelectedItem.BUSINESS_LOCATION,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Margin="151,4.04,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Button x:Name="button" Content="--" Command="{Binding Path=BusinessLocationClick}" HorizontalAlignment="Left" Height="25" Margin="299,4,0,0" VerticalAlignment="Top" Width="33"/>
+                        <TextBlock x:Name="textBlock_Copy" Height="25" Margin="381,7.04,0,0" TextWrapping="Wrap" Text="Payment Number :" VerticalAlignment="Top" HorizontalAlignment="Left" Width="113"/>
+
+                        <TextBlock x:Name="textBlock_Copy1" Height="25" Margin="0,7,144,-2" TextWrapping="Wrap" Text="Date :" VerticalAlignment="Top" HorizontalAlignment="Right" Width="47"/>
+                        <Label x:Name="label_Copy" Content="30/11/2016" Margin="910,3,0,0" HorizontalAlignment="Left" Width="74" Height="25" VerticalAlignment="Top"/>
+                        <TextBox x:Name="textBox_Copy" IsReadOnly="{Binding IsViewMode}"  Text="{Binding PAYMENT_NUMBER,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="25" Margin="481,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+                        <Button  Content="{Binding ButtonText}"  Command="{Binding SupMyCode, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Margin="637,11,0,0" VerticalAlignment="Top" Width="104"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox x:Name="groupBox1" Header="Supplier Info" Height="110" Margin="10,60,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1030">
+                    <Grid>
+                        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="Select the Supplier :" VerticalAlignment="Top" Width="125" Margin="32,6,0,0"/>
+                        <TextBox x:Name="textBox1" IsReadOnly="True" Text="{Binding SUPP,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="26" Margin="149,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                        <Button x:Name="button1" Content="--" Command="{Binding Path=SupplierListClick,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="26" Margin="316,3,0,0" VerticalAlignment="Top" Width="26"/>
+                        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Current Advance Amount :" Width="151" Margin="2,33,0,0" Height="17.04" VerticalAlignment="Top"/>
+                        <Label x:Name="label1"  HorizontalAlignment="Left" Margin="149,30,0,0" Width="80" Height="24" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Total RIE Pending Amount :" Width="151" Margin="3,51,0,20.04"/>
+                        <Label x:Name="label1_Copy"  HorizontalAlignment="Left" Margin="150,48,0,0" Width="80" Height="24.09" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="textBlock1_Copy2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Other Pending Amount :" Width="151" Margin="4,69,0,0" Height="14.09" VerticalAlignment="Top"/>
+                        <Label x:Name="label1_Copy1"  HorizontalAlignment="Left" Margin="151,0,0,-4.05" Width="80" Height="25.09" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="textBlock1_Copy3" HorizontalAlignment="Right" Height="25" TextWrapping="Wrap" Text="Supplier Email :" VerticalAlignment="Top" Width="89" Margin="0,13,330,0"/>
+                        <TextBox x:Name="SUPP_EMAIL" Text="{Binding SelectedItem.SUPP_EMAIL,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Height="26" Margin="0,8,161,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+                        <TextBlock x:Name="textBlock1_Copy4" HorizontalAlignment="Right" TextWrapping="Wrap" Text="Supplier Sms :" Width="89" Margin="0,43,329,23.04"/>
+                        <TextBox x:Name="SUPP_SMS" Text="{Binding SelectedItem.SUPP_SMS,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Margin="0,39,160,0" TextWrapping="Wrap" Width="165" Height="25" VerticalAlignment="Top"/>
+                        <CheckBox x:Name="IS_SEND_SMS" IsChecked="{Binding IS_SEND_SMS,UpdateSourceTrigger=PropertyChanged}" Content="Send Email To Supplier" HorizontalAlignment="Right" Height="20" Margin="0,38,2,0" VerticalAlignment="Top" Width="153" RenderTransformOrigin="0.503,1.3"/>
+                        <CheckBox x:Name="IS_SEND_EMAIL" IsChecked="{Binding IS_SEND_EMAIL,UpdateSourceTrigger=PropertyChanged}" Content="Send Email To Sms" HorizontalAlignment="Right" Height="20" Margin="0,13,0,0" VerticalAlignment="Top" Width="153" d:LayoutOverrides="VerticalAlignment"/>
+                        <CheckBox x:Name="checkBox_Copy1" IsChecked="{Binding SelectedItem.INCLUDE_TAX,UpdateSourceTrigger=PropertyChanged}" Content="Show Pending Cheques" HorizontalAlignment="Right" Height="20" Margin="0,59.09,2,0" VerticalAlignment="Top" Width="153"/>
+                        <Button x:Name="button1_Copy" Content="--" Command="{Binding SupplierListClick}" HorizontalAlignment="Left" Height="26" Margin="336,329,0,-267" VerticalAlignment="Top" Width="26" RenderTransformOrigin="3.304,1.038"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox x:Name="groupBox2" Header="Receive Item Entry Info" Margin="10,167,0,0" Height="143" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1040">
+                    <Grid HorizontalAlignment="Left" Width="1028">
+
+                        <DataGrid  SelectionMode="Single" IsReadOnly="True" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid1,Mode=TwoWay ,AsyncState=true,NotifyOnSourceUpdated=True}" SelectedItem="{Binding Path=SelectedItem.getAllSupplier,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  AutoGenerateColumns="False"     Name="dataGrid1" Margin="0,10" VerticalAlignment="Stretch"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" HorizontalAlignment="Left" TextBlock.TextAlignment="Center" Width="1028" RenderTransformOrigin="0.5,0.5">
+                            <DataGrid.Style>
+                                <Style TargetType="DataGrid">
+                                    <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                                    <Setter Property="RowBackground" Value="#f9f9f9"/>
+                                    <Setter Property="BorderBrush" Value="#dddddd"/>
+                                    <Setter Property="FontWeight" Value="Normal"/>
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                    <Setter Property="FontWeight" Value="Normal"/>
+                                </Style>
+                            </DataGrid.Style>
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#4cbf64" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
+
+                            <DataGrid.Columns>
+
+                                <DataGridTemplateColumn >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate  >
+                                            <CheckBox IsChecked="{Binding ischecck}" Content="Add" x:Name="TestCheckBox"  Click="chkDiscontinue_Click"
+                              />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <!--<DataGridCheckBoxColumn   Binding="{Binding ischecck}"></DataGridCheckBoxColumn>-->
+                                <DataGridTextColumn     Width="100" MaxWidth="155" Header="Payment&#xa;Due Date" Binding="{Binding Barcode}"  />
+                                <DataGridTextColumn   Width="80" Header="No Of&#xa;Days Due" Binding="{Binding PAYMENT_TERMS}"/>
+                                <DataGridTextColumn  Width="80" Header="Total&#xa;Amount" Binding="{Binding TOTAL_AMT}"/>
+                                <DataGridTextColumn  Width="80" Header="Pending&#xa;Amount" Binding="{Binding PENDING_AMT}"/>
+                                <DataGridTextColumn  Width="80" Header="Adjusted&#xa;Amount" Binding="{Binding ROUND_OFF_ADJUSTMENTAMT}"/>
+                                <DataGridHyperlinkColumn Binding="{Binding TOTAL_AMT}" Header="Adjust Balance"  Width="100" >
+                                    <DataGridHyperlinkColumn.ElementStyle>
+                                        <Style TargetType="TextBlock" >
+                                            <Setter Property="Tag" Value="{Binding TOTAL_AMT}" />
+                                            <EventSetter  Event="Hyperlink.Click" Handler="Hyperlink_Click"  />
+                                        </Style>
+                                    </DataGridHyperlinkColumn.ElementStyle>
+                                </DataGridHyperlinkColumn>
+                                <DataGridTextColumn  Width="80" Header="Supp Inv&#xa;Date" Binding="{Binding SUPPLIER_DATE,StringFormat=\{0:c\}}"/>
+                                <DataGridTextColumn    Width="80" Header="Rec Item&#xa;Entry No" Binding="{Binding RECEIVED_ITEM_ENTRY_NO,StringFormat=\{0:c\}}"/>
+                                <DataGridTextColumn    Width="80" Header="Goods Rec&#xa;Date" Binding="{Binding RECEIVED_ITEM_ON_DATE,StringFormat=\{0:c\}}"/>
+                                <DataGridTextColumn    Width="95" Header="Supp Inv &#xa;No" Binding="{Binding SUPPLIER_INVOICE_NO,StringFormat=\{0:c\}}"/>
+                                <DataGridTextColumn    Width="95" Header="Total Tax&#xa;Amount" Binding="{Binding Contact Name,StringFormat=\{0:c\}}"/>
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </GroupBox>
+                <GroupBox x:Name="groupBox3" Header="" Margin="10,347,32,0" VerticalAlignment="Top" Height="231"  >
+                    <Grid Margin="0,-3,-2,18" HorizontalAlignment="Left" Width="1030">
+
+                        <TextBlock x:Name="textBlock2_Copy2" Margin="0,0,166,102" TextWrapping="Wrap" Text="Total Of All Payment Mode :" Height="36" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="100"/>
+                        <TextBox x:Name="TOTAL_PAYMENT_MODES" Text="{Binding SelectedItem.TOTAL_PAYMENT_MODES,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" Margin="0,0,6,108" TextWrapping="Wrap" HorizontalAlignment="Right" Width="150" Height="29" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="textBlock2_Copy3" Margin="0,0,155,63" TextWrapping="Wrap" Text="Advance Amount in Current Payment :" Height="36" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="115"/>
+                        <TextBox x:Name="CURRENT_PAYMENT" Text="{Binding CURRENT_PAYMENT}" Margin="0,0,5,66" TextWrapping="Wrap" HorizontalAlignment="Right" Width="150" Height="29" VerticalAlignment="Bottom"/>
+                        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="24" Margin="8,0,0,4" TextWrapping="Wrap" Text="Note :" VerticalAlignment="Bottom" Width="38"/>
+                        <TextBox x:Name="NOTE" Text="{Binding NOTE}" Height="37" Margin="46,0,365,-7" TextWrapping="Wrap" VerticalAlignment="Bottom" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+         ScrollViewer.VerticalScrollBarVisibility="Auto"
+         ScrollViewer.CanContentScroll="True"/>
+                        <Button x:Name="button2" Content="Pick&#xa;Message" HorizontalAlignment="Right" Height="37" Margin="0,0,281,-7" VerticalAlignment="Bottom" Width="72"/>
+                        <TabControl x:Name="tabControl" Margin="4,1,281,35">
+                            <TabItem Header="Cash">
+                                <Grid Background="#ffffff" Margin="0,0,0,-1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="57*"/>
+                                        <ColumnDefinition Width="662*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <GroupBox x:Name="groupBox4" Header="" Grid.ColumnSpan="2" >
+                                        <Grid Margin="0,0,-12,-12" >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="117*"/>
+                                                <RowDefinition/>
+                                            </Grid.RowDefinitions>
+                                            <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="25" Margin="10,6,0,0" TextWrapping="Wrap" Text="Select Cash Register :" VerticalAlignment="Top" Width="122"/>
+                                            <TextBox x:Name="CASH_REG" Text="{Binding CASH_REG}" HorizontalAlignment="Left"   Margin="132,8,0,0" TextWrapping="Wrap" Width="180" Height="22" VerticalAlignment="Top"/>
+                                            <TextBlock x:Name="textBlock4_Copy" HorizontalAlignment="Left" Margin="73,43,0,0" TextWrapping="Wrap" Text="Amount :" Width="60" Height="14" VerticalAlignment="Top"/>
+                                            <TextBox x:Name="CASH_REG_AMT" Text="{Binding CASH_REG_AMT}" HorizontalAlignment="Left" Margin="133,35,0,0" TextWrapping="Wrap" Width="180" Height="22" VerticalAlignment="Top" TextChanged="CASH_REG_AMT_TextChanged"/>
+                                            <!--<Button x:Name="button3" Content="Upload" HorizontalAlignment="Left" Margin="317,35.13,0,0" Width="64" Height="23.702" VerticalAlignment="Top"/>-->
+                                        </Grid>
+                                    </GroupBox>
+
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="Cheque">
+                                <Grid Background="#ffffff">
+                                    <GroupBox x:Name="groupBox5" Header="GroupBox" Margin="4.18,-2.91,10,0" Height="100.04" VerticalAlignment="Top">
+                                        <Grid>
+                                            <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="19" Margin="57.53,7.09,0,0" TextWrapping="Wrap" Text="Amount :" VerticalAlignment="Top" Width="73.24"/>
+                                            <TextBox x:Name="CHEQUE_AMT" Text="{Binding CHEQUE_AMT}" HorizontalAlignment="Left" Margin="116.82,7.09,0,0" TextWrapping="Wrap" Width="135" Height="19" VerticalAlignment="Top"/>
+                                            <TextBlock x:Name="textBlock5_Copy" HorizontalAlignment="Left" Margin="41.04,31.34,0,26.74" TextWrapping="Wrap" Text="Cheque No :" Width="73.24"/>
+                                            <TextBox x:Name="CHEQUE_NO" Text="{Binding CHEQUE_NO}" HorizontalAlignment="Left" Margin="116.82,30.62,0,27.46" TextWrapping="Wrap" Width="135"/>
+                                            <TextBlock x:Name="textBlock5_Copy1" HorizontalAlignment="Left" Margin="1.27,0,0,3.46" TextWrapping="Wrap" Text="Select Bank AC :" Width="110.55" Height="19" VerticalAlignment="Bottom"/>
+                                            <TextBox x:Name="CHEQUE_BANK_AC" IsReadOnly="True" Text="{Binding CHEQUE_BANK_AC}" HorizontalAlignment="Left" Margin="116.82,0,0,3.46" TextWrapping="Wrap" Width="135" Height="19" VerticalAlignment="Bottom"/>
+                                            <TextBlock x:Name="textBlock5_Copy2" Margin="261.23,12.91,321.04,0" TextWrapping="Wrap" Text="Select Bank Branch :" Height="19" VerticalAlignment="Top"/>
+                                            <TextBox x:Name="CHEQUE_BANK_BRANCH" IsReadOnly="True" Text="{Binding CHEQUE_BANK_BRANCH}" Margin="0,13,181,0" TextWrapping="Wrap" HorizontalAlignment="Right" Width="135" Height="24" VerticalAlignment="Top"/>
+                                            <TextBlock x:Name="textBlock5_Copy3" Margin="293,45,321,13" TextWrapping="Wrap" Text="Cheque Date :"/>
+                                            <TextBlock x:Name="textBlock5_Copy4" Margin="0,43,91,15" TextWrapping="Wrap" Text="Cheque Printer :" HorizontalAlignment="Right" Width="86"/>
+                                            <Button x:Name="button5" Content="--" Command="{Binding ChequeBankACClick}" HorizontalAlignment="Left" Height="20" Margin="255,0,0,4" VerticalAlignment="Bottom" Width="33"/>
+                                            <ComboBox x:Name="comboBox" Margin="0,41,10,12" HorizontalAlignment="Right" Width="76"/>
+                                            <Button x:Name="button5_Copy" Command="{Binding ChequeBankBranchClick}" Content="--" HorizontalAlignment="Right" Margin="0,12,150,0" Width="29" Height="26" VerticalAlignment="Top"/>
+                                            <DatePicker Margin="0,43,196,10" SelectedDate="{Binding CHEQUE_DATE}" HorizontalAlignment="Right" Width="120"/>
+
+                                        </Grid>
+                                    </GroupBox>
+                                    <CheckBox x:Name="checkBox1" IsChecked="{Binding IS_PRINT_CHECK,UpdateSourceTrigger=PropertyChanged}" Content="Print Check" HorizontalAlignment="Right" Margin="0,28,16,81" Width="118"/>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="Bank Transfer">
+                                <Grid Background="#ffffff">
+                                    <GroupBox x:Name="groupBox6" Header="GroupBox" Margin="5,-2,10,2">
+                                        <Grid>
+                                            <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Height="24" Margin="65,8,0,0" TextWrapping="Wrap" Text="Amount :" VerticalAlignment="Top" Width="75"/>
+                                            <TextBox x:Name="TRANSFER_AMT" Text="{Binding TRANSFER_AMT}" HorizontalAlignment="Left" Height="19" Margin="128,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                                            <TextBlock x:Name="textBlock6_Copy" Margin="0,10,222,0" TextWrapping="Wrap" Text="Select Bank Account :" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="115"/>
+                                            <TextBlock x:Name="textBlock6_Copy1" HorizontalAlignment="Left" Margin="10,0,0,12.08" TextWrapping="Wrap" Text="Select Bank Branch :" Width="112" Height="24" VerticalAlignment="Bottom"/>
+                                            <TextBox x:Name="TRANSFER_BANK_AC" IsReadOnly="True" Text="{Binding TRANSFER_BANK_AC}" Margin="496,8,52,0" TextWrapping="Wrap" Height="26" VerticalAlignment="Top"/>
+                                            <TextBox x:Name="TRANSFER_BANK_BRANCH" IsReadOnly="True" Text="{Binding TRANSFER_BANK_BRANCH}" HorizontalAlignment="Left" Margin="128,0,0,12" TextWrapping="Wrap" Width="160" Height="23" VerticalAlignment="Bottom"/>
+                                            <TextBlock x:Name="textBlock6_Copy2" Margin="0,0,223,11" TextWrapping="Wrap" Text="Transfer Date :" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="115"/>
+                                            <Button x:Name="button6" Command="{Binding BankBranchClick}" Content="--" Height="25" Margin="289,0,391,10" VerticalAlignment="Bottom"/>
+                                            <Button x:Name="button6_Copy" Command="{Binding BankACClick}" Content="--" Height="26" Margin="0,8,28,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="24"/>
+                                            <DatePicker Margin="0,0,76,14.08" SelectedDate="{Binding TRANSFER_DATE}" HorizontalAlignment="Right" Width="136" Height="24" VerticalAlignment="Bottom"/>
+
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="Financial Account">
+                                <Grid Background="#ffffff">
+                                    <GroupBox x:Name="groupBox7" Header="GroupBox" Margin="5,-3,15,3">
+                                        <Grid>
+                                            <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Margin="131,10,0,0" TextWrapping="Wrap" Text="Amount :" Width="75" Height="19" VerticalAlignment="Top"/>
+                                            <TextBlock x:Name="textBlock7_Copy" HorizontalAlignment="Left" Margin="12,0,0,16.08" TextWrapping="Wrap" Text="Select Credit Financial Account :" Width="175" Height="19" VerticalAlignment="Bottom"/>
+                                            <TextBox x:Name="FINANCAL_AMT" Text="{Binding FINANCAL_AMT}" Height="24" Margin="206,9,301,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                                            <TextBox x:Name="FINACIAL_AC" IsReadOnly="True" Text="{Binding FINACIAL_AC}" Margin="207,0,300,13" TextWrapping="Wrap" Height="24" VerticalAlignment="Bottom"/>
+                                            <Button x:Name="button7" Command="{Binding FinancialACClick}" Content="--" Margin="0,0,271,12" HorizontalAlignment="Right" Width="27" Height="25" VerticalAlignment="Bottom"/>
+
+
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="Discount">
+                                <Grid Background="#ffffff">
+                                    <GroupBox x:Name="groupBox8" Header="GroupBox" Margin="4,-4,10,4">
+                                        <Grid>
+                                            <RadioButton x:Name="radioButton" Content="Discount Flat" HorizontalAlignment="Left" Height="14" Margin="72,10,0,0" VerticalAlignment="Top" Width="115"/>
+                                            <RadioButton x:Name="radioButton_Copy" Content="Discount Percent(%)" HorizontalAlignment="Left" Margin="72,0,0,24.08" Width="125" Height="14" VerticalAlignment="Bottom"/>
+                                            <TextBox x:Name="DISCOUNT_FLAT" Text="{Binding DISCOUNT_FLAT}" Height="24" Margin="209,8,329,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                                            <TextBox x:Name="DISCOUNT_PERCENT" Text="{Binding DISCOUNT_PERCENT}" Margin="210,37,328,16.08" TextWrapping="Wrap"/>
+
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="Credit Notes">
+                                <Grid Background="#ffffff">
+                                    <GroupBox x:Name="groupBox9" Header="GroupBox" Margin="3,-4,0,4">
+                                        <Grid>
+                                            <DataGrid  SelectionMode="Single"  RowHeight="35"  FontSize="14" Cursor="Hand"  BorderBrush="Transparent" GridLinesVisibility="Horizontal" BorderThickness="1" IsReadOnly="True" AutoGenerateColumns="False" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}"    Name="dataGrid"  AlternationCount="2" Height="77.08" VerticalAlignment="Top" HorizontalAlignment="Left" Width="704">
+                                                <DataGrid.Style>
+                                                    <Style TargetType="DataGrid">
+                                                        <Setter Property="AlternatingRowBackground" Value="#89cbea"/>
+                                                        <Setter Property="RowBackground" Value="#afdaee"/>
+                                                    </Style>
+                                                </DataGrid.Style>
+                                                <DataGrid.RowStyle>
+                                                    <Style TargetType="DataGridRow">
+                                                        <Style.Triggers>
+                                                            <Trigger Property="IsSelected" Value="True">
+                                                                <Setter Property="Background" Value="#4cbf64" />
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </DataGrid.RowStyle>
+
+                                                <DataGrid.Columns>
+
+                                                    <DataGridTextColumn   TextBlock.Foreground="Red"  Width="80" MaxWidth="300" Header="Date" Binding="{Binding SrNo.}"  />
+                                                    <DataGridTextColumn     Width="300" MaxWidth="1000" Header="Number" Binding="{Binding Barcode}"  />
+                                                    <DataGridTextColumn   Width="200" Header="Available Amount" Binding="{Binding Customer Name}"/>
+                                                    <DataGridTextColumn   Width="200" Header="Use Amount" Binding="{Binding Customer Name}"/>
+
+
+
+                                                    <!--<DataGridTextColumn Width="100" Header="TOTAL" Binding="{Binding total,StringFormat=\{0:c\}}"/>-->
+
+                                                </DataGrid.Columns>
+                                            </DataGrid>
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+                            </TabItem>
+                        </TabControl>
+
+                    </Grid>
+                </GroupBox>
+                <Button x:Name="button4" Content="Save"  Visibility="{Binding CreatVisible}" Command="{Binding Path=InsertSuppPayment, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Height="42" Margin="0,596,197,0" VerticalAlignment="Top" Width="60"/>
+                <Button x:Name="Update" Content="update" Visibility="{Binding UpdVisible}" Command="{Binding Path=UpdateSuppPayment, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Height="42" Margin="0,596,134,0" VerticalAlignment="Top" Width="54"/>
+                <Button x:Name="button4_Copy1" Content="Cancel" Command="{Binding Path=Cancel, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Height="42" Margin="0,596,65,0" VerticalAlignment="Top" Width="63"/>
+                <Grid HorizontalAlignment="Left" Height="37" Margin="47,310,0,0" VerticalAlignment="Top" Width="993">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="392*"/>
+                        <ColumnDefinition Width="601*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:Name="textBlock2" Height="29" TextWrapping="Wrap" Text="Total Pending :" VerticalAlignment="Top" HorizontalAlignment="Left" Width="87" Margin="51,1,0,0"/>
+                    <TextBox x:Name="TOTAL_PANDING" Text="{Binding SelectedItem.TOTAL_PANDING,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" Height="29" TextWrapping="Wrap"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" Margin="143,1,0,0"/>
+
+                    <TextBox x:Name="SELECTED_AMT" Text="{Binding SelectedItem.SELECTED_AMT,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" Height="29" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150" Margin="0,1,260,0" Grid.Column="1"/>
+                    <TextBlock x:Name="textBlock2_Copy1" Height="36"  TextWrapping="Wrap" Text="Pending in Select Payable Amount :" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100" Margin="0,1,155,0" Grid.Column="1"/>
+                    <TextBox x:Name="PENDING_AFTE_PAYMENT" Text="{Binding SelectedItem.PENDING_AFTE_PAYMENT,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" Height="29"  TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150" Margin="0,-2,5,0" Grid.Column="1"/>
+                    <TextBlock x:Name="textBlock2_Copy" Height="29" TextWrapping="Wrap" Text="Selected Amount :" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" Margin="64.556,1,0,0" Grid.Column="1"/>
+
+                </Grid>
+                <Button x:Name="button4_Copy" Content="Select ALL" Command="{Binding UpdAMT, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" Height="22" Margin="0,438,650,0" VerticalAlignment="Top" Width="77"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

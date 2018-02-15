@@ -1,0 +1,395 @@
+﻿<Window x:Class="InvoicePOS.Views.WelCome.WelComePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"        
+         xmlns:v="clr-namespace:InvoicePOS.UserControll.Item"
+        xmlns:v1="clr-namespace:InvoicePOS.UserControll.Customer"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="WelComePage" Height="729.658" Width="1055" WindowState="Maximized">
+    <Window.InputBindings>
+        <KeyBinding Key="Escape" Command="{Binding BackMain}"/>
+    </Window.InputBindings>
+    <Grid>
+        <Grid Margin="2,0,-2,0">
+           
+               
+           
+            <Rectangle Fill="#f6f7f9" Height="99" Stroke="#f6f7f9" VerticalAlignment="Top"/>
+            <Button HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="90" Height="90"  BorderThickness="0" Style="{StaticResource ButtonImage}">
+                <DockPanel HorizontalAlignment="Stretch" >
+                    <Image Source="../../Images/dashboard-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
+                    <Label Content="Dashboard" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button HorizontalAlignment="Left" Margin="103,6,0,0" VerticalAlignment="Top" Width="90" Height="90" Style="{StaticResource ButtonImage}">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/setting-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
+                    <Label Content="Setting" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <!--Command="{Binding Customer}"-->
+            <Button Name="Customer"  Command="{Binding CustomerListClick}"   HorizontalAlignment="Left" Margin="198,5,0,0" VerticalAlignment="Top" Width="90" Height="90" Style="{StaticResource ButtonImage}">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/customers-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
+                    <Label Content="Customers" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <!--<Button Name="btnHelloWorld" Content="Hello World" Margin="29,10,944,634" Click="btnInvoice_Click">
+               
+            </Button>-->
+            <!--Command="{Binding ItemList}"-->
+            <Button Name="Product" Command="{Binding Path=ItemList,UpdateSourceTrigger=PropertyChanged }"   HorizontalAlignment="Left" Margin="293,5,0,0" VerticalAlignment="Top" Width="90" Height="90" Style="{StaticResource ButtonImage}">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/product-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
+                    <Label Content="Product" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button HorizontalAlignment="Left" Name="Vendor" Command="{Binding SupplierListClick}"  Margin="395,5,0,0" VerticalAlignment="Top" Width="90" Height="90" Style="{StaticResource ButtonImage}" >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/vendor-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
+                    <Label Content="Vendor" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button HorizontalAlignment="Left" Name="POrder" Command="{Binding POListClick}" Margin="490,5,0,0" VerticalAlignment="Top" Width="90" Height="90" Style="{StaticResource ButtonImage}" >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/pos-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
+                    <Label Content="   PO" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button Name="Invoice" Margin="585,5,0,0" VerticalAlignment="Top" Command="{Binding InvoiceListClick}" Height="90" Style="{StaticResource ButtonImage}" HorizontalAlignment="Left" Width="90">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/invoices-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
+                    <Label Content="Invoice" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button  Content="Company" VerticalAlignment="Top" Command="{Binding CompanyClick}" Height="37" Style="{StaticResource ButtonImage}" Margin="0,59,143,0" Foreground="White" Background="#01ac4a" HorizontalAlignment="Right" Width="139" FontWeight="Bold">
+                <!-- <DockPanel HorizontalAlignment="Stretch">
+                  <Image Source="/InvoicePOS;component/Images/invoices-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="29"/>
+                    <Label Content="Company" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>-->
+            </Button>
+            <Button Name="RInvoice" Margin="680,5,0,0" VerticalAlignment="Top" Height="90" Style="{StaticResource ButtonImage}" Command="{Binding ClickInvoice}" HorizontalAlignment="Left" Width="95">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/invoices-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
+                    <Label Content="Retail Invoice" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Path Data="M0,75 L1042,75" Fill="#FFF4F4F5" Height="1" Margin="0,98,-1,0" Stretch="Fill" Stroke="#dde8ee" VerticalAlignment="Top"/>
+            <Path Data="M188,75 L188,669.00758" Fill="#FFF4F4F5" HorizontalAlignment="Right" Margin="0,99,237.344,-8" Stretch="Fill" Stroke="#dde8ee" Width="1"/>
+
+            <!--<Button Click="Button_Click_1"  HorizontalAlignment="Left" Margin="242,5,0,0" VerticalAlignment="Top" Width="70" Height="70" Style="{StaticResource ButtonImage}">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/product-color.png" Stretch="Uniform" DockPanel.Dock="Top" Width="38" Height="38"/>
+                    <Label Content="Product" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>-->
+            <!--<Button Click="Button_Click_1"  HorizontalAlignment="Left" Margin="247,5,0,0" VerticalAlignment="Top" Width="70" Height="70" Style="{StaticResource ButtonImage}">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/product-color.png" Stretch="Uniform" DockPanel.Dock="Top" Width="38" Height="38"/>
+                    <Label Content="Product" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>-->
+            <!--<Button HorizontalAlignment="Left"  Margin="317,5,0,0" VerticalAlignment="Top" Width="60" Height="70" Style="{StaticResource ButtonImage}" Click="Button_Click_3">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/vendor-color.png" Stretch="Uniform" DockPanel.Dock="Top" Width="38" Height="38"/>
+                    <Label Content="Vendor" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button HorizontalAlignment="Left"  Margin="322,5,0,0" VerticalAlignment="Top" Width="60" Height="70" Style="{StaticResource ButtonImage}" Click="Button_Click_3">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/vendor-color.png" Stretch="Uniform" DockPanel.Dock="Top" Width="38" Height="38"/>
+                    <Label Content="Vendor" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button HorizontalAlignment="Left" Margin="387,5,0,0" VerticalAlignment="Top" Width="55" Height="70" Style="{StaticResource ButtonImage}" Click="Button_Click_4">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/pos-color.png" Stretch="Uniform" DockPanel.Dock="Top" Width="38" Height="38"/>
+                    <Label Content="PO'S" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button HorizontalAlignment="Left" Margin="392,5,0,0" VerticalAlignment="Top" Width="55" Height="70" Style="{StaticResource ButtonImage}" Click="Button_Click_4">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/pos-color.png" Stretch="Uniform" DockPanel.Dock="Top" Width="38" Height="38"/>
+                    <Label Content="PO'S" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button Margin="442,5,0,0" VerticalAlignment="Top" Height="70" Style="{StaticResource ButtonImage}" HorizontalAlignment="Left" Width="60">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/invoice-color.png" Stretch="Uniform" DockPanel.Dock="Top" Width="38" Height="38"/>
+                    <Label Content="Invoice" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>
+            <Button Margin="447,5,0,0" VerticalAlignment="Top" Height="70" Style="{StaticResource ButtonImage}" HorizontalAlignment="Left" Width="60">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/invoice-color.png" Stretch="Uniform" DockPanel.Dock="Top" Width="38" Height="38"/>
+                    <Label Content="Invoice" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
+                </DockPanel>
+            </Button>-->
+
+        </Grid>
+
+
+
+
+
+
+
+        <!--<Grid>
+            <Button Content="Item" Width="46" Command="{Binding ItemList}" Height="28" Margin="461,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+
+        </Grid>-->
+        <!--<Grid>
+            <Button Content=" Receive Items" Width="92" Command="{Binding RecvItems}" Height="30" Margin="513,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        </Grid>-->
+        <!--<Grid>
+            <Button Content="Stock" Width="46" Command="{Binding AddStock}" Height="28" Margin="618,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+
+        </Grid>-->
+        <!--<Grid>
+            <Button Content="Customer" Command="{Binding Customer}"  HorizontalAlignment="Left" Margin="683,10,0,0" VerticalAlignment="Top" Width="48" Height="29"/>
+        </Grid>-->
+        <!--<Grid>
+            <Button Content="Cash Reg" Command="{Binding CASH_REG}"  HorizontalAlignment="Left" Margin="470,52,0,0" VerticalAlignment="Top" Width="48" Height="29"/>
+        </Grid>-->
+        <!--<Grid>
+            <Button Content="Sales Return" HorizontalAlignment="Left" Margin="626,51,0,0" VerticalAlignment="Top" Width="53" Height="21"/>
+        </Grid>-->
+        <!--<Grid>
+            <Button  Command="{Binding SUPPLIER}" Style="{StaticResource paysupplier}" RenderTransformOrigin="-0.963,0.535" Height="30" Margin="541,47,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <ToolTipService.ToolTip >
+                    <ToolTip Content="Pay Suppliers"   
+        HorizontalOffset="6" VerticalOffset="15"/>
+                </ToolTipService.ToolTip>
+
+            </Button>
+        </Grid>-->
+        <!--<Grid Margin="-23,-10,23,10">
+            <Button Content="Supplier" Command="{Binding SUPPLIER}" HorizontalAlignment="Left" Margin="551,59,0,0" VerticalAlignment="Top" Width="58" Height="34"/>
+        </Grid>-->
+        <Grid>
+            <Button x:Name="button" Content="Go Back To &#xa;Main Screen" Command="{Binding Path=BackMain,UpdateSourceTrigger=PropertyChanged }" Foreground="White" Background="#2db6e2" HorizontalAlignment="Right" Height="45" Margin="0,14,191,0" VerticalAlignment="Top" Width="87" />
+            <Button x:Name="button_Copy" Content="Backup &#xA;Database" HorizontalAlignment="Right" Height="45" Margin="0,14,98,0" Background="#0e6aab" Foreground="White" VerticalAlignment="Top" Width="88"/>
+            <Button x:Name="button_Copy1" Content="Restore &#xA;Database" HorizontalAlignment="Right" Height="45" Background="#ff9900" Foreground="Black" Margin="0,14,7,0" VerticalAlignment="Top" Width="86"/>
+            <Button Command="{Binding LogOut}" Style="{StaticResource shutdownButton}" Margin="0,62,8,606" HorizontalAlignment="Right">
+
+            </Button>
+        </Grid>
+
+        <Grid Margin="815,90,0,0">
+            <Rectangle Fill="#f6f7f9" HorizontalAlignment="Right" Margin="-5,20,0,-9" Stroke="#dde8ee" StrokeThickness="0" Width="237"/>
+            <TextBox x:Name="textbox" HorizontalAlignment="Right" Height="30" Margin="0,20,47,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="175"/>
+            <Button Command="{Binding SearchCategoryClick}"    Margin="0,20,10,0" Height="30" VerticalAlignment="Top"  Background="#0e6aab" HorizontalAlignment="Right" Width="32"  >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
+                </DockPanel>
+            </Button>
+            <Grid Visibility="{Binding FristVisible}" Margin="33,53.658,29,0">
+                <Button Name="Stock" Command="{Binding Path=ManageStock,UpdateSourceTrigger=PropertyChanged }"   Margin="0,13,85,0" VerticalAlignment="Top" Height="75" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/stock-transition.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Stock" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Subpay" Command="{Binding Path=SuppPyment,UpdateSourceTrigger=PropertyChanged }"   Margin="0,12,0,0" VerticalAlignment="Top" Height="75" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/pay-supplier.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Sup. Pay" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="RecItem" Command="{Binding Path=RecvItems,UpdateSourceTrigger=PropertyChanged }"    Margin="0,89,85,0" VerticalAlignment="Top" Height="75" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/receive-item.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Rcv. item" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="SalesReturn" Command="{Binding Path=SalesReturn,UpdateSourceTrigger=PropertyChanged }"  Margin="0,89,0,0" VerticalAlignment="Top" Height="75" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/sales_return.png" Stretch="Uniform" DockPanel.Dock="Top" Width="55" Height="45"/>
+                        <Label Content="Sale Return" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="cashReg" Command="{Binding Path=CASH_REG,UpdateSourceTrigger=PropertyChanged }"   Margin="0,165,85,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"   >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/cash-reg2.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Cash Reg" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Employee1" Command="{Binding Path=EmployeeList,UpdateSourceTrigger=PropertyChanged }"   Margin="0,164,0,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/employee-icon.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Employee" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="payrecived" Command="{Binding Path=RecvPaymentClick,UpdateSourceTrigger=PropertyChanged }"  Margin="0,241,85,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/payment-receive.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Paymt Rec." DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="BussLocation" Command="{Binding LocationClick, UpdateSourceTrigger=PropertyChanged}"  Margin="0,240,0,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/business-location.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Buss. Loc." DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Godown" Command="{Binding GodownListClick, UpdateSourceTrigger=PropertyChanged}"   Margin="0,317,85,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"   >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/godown.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Godown" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="ItemLocation" Command="{Binding ItemLocationClick, UpdateSourceTrigger=PropertyChanged}"   Margin="0,316,0,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/item-location.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Item Loc." DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="catagory" Command="{Binding CategoryListClick, UpdateSourceTrigger=PropertyChanged}"   Margin="0,394,85,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/category.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Category" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Unit" Command="{Binding UnitClick, UpdateSourceTrigger=PropertyChanged}"   Margin="0,394,0,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/unit.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Unit" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="stockLeger" Command="{Binding StockLedgerList, UpdateSourceTrigger=PropertyChanged}"   Margin="0,473,84,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/stock-ledger.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Stock Ledger" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+
+
+
+                <Button Name="dailySales" Command="{Binding DailySales, UpdateSourceTrigger=PropertyChanged}"   Margin="0,472,0,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/daily-sales.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="DailySales" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+            </Grid>
+            <Grid Visibility="{Binding SecondVisible}" Margin="31,54,26,0" Height="554" VerticalAlignment="Top">
+                <Button Name="Report" Command="{Binding ReportList, UpdateSourceTrigger=PropertyChanged}"   Margin="0,10,85,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85" BorderThickness="0"  Background="#f6f7f9" Foreground="#f6f7f9"  BorderBrush="{x:Null}" >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/report.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Report" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Loyalty" Command="{Binding Loyalty, UpdateSourceTrigger=PropertyChanged}"   Margin="0,89,-2,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"   >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/loyalty-icons.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Loyalty" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="bank" Command="{Binding BankDetailsList, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top" Margin="0,10,-1,0"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/bank.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Bank" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Tax" Command="{Binding TaxManage, UpdateSourceTrigger=PropertyChanged}"   Margin="0,89,85,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/tax.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Tax" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Access" Command="{Binding Path=ACCESSRIDE,UpdateSourceTrigger=PropertyChanged }"   Margin="0,165,85,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"   >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/cash-reg2.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Access Rights" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Designation" Command="{Binding Path=DesignationList,UpdateSourceTrigger=PropertyChanged }"   Margin="0,164,0,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/employee-icon.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Designation" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Deperment" Command="{Binding Path=DepartmentClick,UpdateSourceTrigger=PropertyChanged }"  Margin="0,241,85,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/payment-receive.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Department" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+                <Button Name="Estimate" Command="{Binding Path=EstimateClick,UpdateSourceTrigger=PropertyChanged }"  Margin="0,241,-1,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/payment-receive.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Estimate" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
+            </Grid>
+            <Button Command="{Binding NextPage, UpdateSourceTrigger=PropertyChanged}"   Margin="0,331,0,0" Style="{StaticResource ButtonImageLeft}" Height="26" VerticalAlignment="Top" HorizontalAlignment="Right" Width="24"  >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/arrow1.png" Stretch="Uniform" DockPanel.Dock="Top" Width="18" Height="19"/>
+
+                </DockPanel>
+            </Button>
+
+            <Button Command="{Binding PreVious, UpdateSourceTrigger=PropertyChanged}"   Margin="0,329,204,0" Style="{StaticResource ButtonImageLeft}" Height="31" VerticalAlignment="Top" HorizontalAlignment="Right" Width="23"  >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/arrow.png" Stretch="Uniform" DockPanel.Dock="Top" Width="14" Height="24"/>
+
+                </DockPanel>
+            </Button>
+
+        </Grid>
+        <!--<Button  Margin="3" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="../../Images/pay_supplier.png"   />
+                </Button.Background>
+            </Button>-->
+        <!--<Grid Margin="10,140,712,83">
+            <Image Source="../../Images/stock-transition.png" Width="80" Height="70" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock12"  Margin="0,85,0,0" TextWrapping="Wrap" Text="Stock" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            <Image Source="../../Images/rcv_payment.png" Width="80" Height="70" Margin="122,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock13"  Margin="112,85,0,0" TextWrapping="Wrap" Text="Rcv Payment" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+
+                <Button>
+                    <Grid>
+                        <Grid.Background>
+                            <ImageBrush ImageSource="../../Images/pay_supplier.png"/>
+                        </Grid.Background>
+                    </Grid>
+                </Button>
+
+
+                <Image Source="../../Images/pay_supplier.png" Width="80" Height="70" Margin="220,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock14"  Margin="220,85,0,0" TextWrapping="Wrap" Text="Pay Supplier" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            
+            
+            <Image Source="../../Images/shop-icon.png" Width="80" Height="70" Margin="10,119,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock15"  Margin="0,194,0,0" TextWrapping="Wrap" Text="Shop" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            <Image Source="../../Images/sales_return.png" Width="80" Height="70" Margin="112,119,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock16"  Margin="95,194,0,0" TextWrapping="Wrap" Text="Sell return" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            <Image Source="../../Images/stock-transition2.png" Width="80" Height="70" Margin="220,119,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock17"  Margin="210,194,0,0" TextWrapping="Wrap" Text="Stock Tran.." VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            <Image Source="../../Images/purchase-icon.png" Width="80" Height="70" Margin="15,232,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock18"  Margin="5,302,0,0" TextWrapping="Wrap" Text="Purchase" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            <Image Source="../../Images/go-down.png" Width="80" Height="70" Margin="112,232,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock19"  Margin="95,302,0,0" TextWrapping="Wrap" Text="Godowns" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            <Image Source="../../Images/item-location.png" Width="80" Height="70" Margin="220,227,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock120"  Margin="210,302,0,0" TextWrapping="Wrap" Text="Item Location" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            <Image Source="../../Images/categories.png" Width="80" Height="70" Margin="10,337,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock21"  Margin="0,422,0,0" TextWrapping="Wrap" Text="Categories" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            <Image Source="../../Images/loyalty-points.png" Width="80" Height="70" Margin="112,337,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock22"  Margin="90,422,0,0" TextWrapping="Wrap" Text="Loyalty" VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+            <Image Source="../../Images/tax-manager.png" Width="80" Height="70" Margin="220,337,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <TextBlock x:Name="textBlock23"  Margin="200,422,0,0" TextWrapping="Wrap" Text="Tax Mang.." VerticalAlignment="Top" Style="{StaticResource labeltextitemicon}"/>
+        </Grid>-->
+        <!--<Grid x:Name="modalGrid" >-->
+        <Grid x:Name="modalGrid" ShowGridLines="True" Margin="2,103,247,-13">
+        </Grid>
+
+
+        <!--<Grid ShowGridLines="True" Margin="335,124,10,31">
+            <Rectangle Fill="#FFF4F4F5" Margin="10,10,10,0" Stroke="Black" Height="495" VerticalAlignment="Top">
+                <Grid Name="MyStack">
+                </Grid>
+            </Rectangle>
+        </Grid>-->
+    </Grid>
+</Window>

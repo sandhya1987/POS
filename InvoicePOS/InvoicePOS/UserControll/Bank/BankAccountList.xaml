@@ -1,0 +1,56 @@
+﻿<Window x:Class="InvoicePOS.UserControll.Bank.BankAccountList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  Title="Bank Account"
+             mc:Ignorable="d"  WindowStartupLocation="CenterScreen"
+             Height="600" Width="400">
+    <Window.InputBindings>
+        <KeyBinding Key="Enter" Command="{Binding CreatVisible}"/>
+        <KeyBinding Key="Enter" Command="{Binding UpdVisible}"/>
+    </Window.InputBindings>
+    <Grid>
+        <Grid Margin="0,10,0,437">
+            <TextBlock HorizontalAlignment="Left" Margin="36,12,0,0" TextWrapping="Wrap" Text="Bank Code:" VerticalAlignment="Top" Width="74" Height="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="36,46,0,0" TextWrapping="Wrap" Text="Bank Name:" VerticalAlignment="Top" Width="74" Height="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="36,74,0,0" TextWrapping="Wrap" Text="IFCE Code:" VerticalAlignment="Top" Width="58" Height="24"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Text="{Binding selectedBank.BANK_CODE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" Margin="140,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Text="{Binding selectedBank.IFSC_CODE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" Margin="140,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Text="{Binding selectedBank.BANK_NAME,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" Margin="140,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+
+        </Grid>
+        <GroupBox Header="Address" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Width="382" Height="381">
+            <Grid Margin="0,0,-2,0">
+                <TextBlock HorizontalAlignment="Left" Margin="13,10,0,0" TextWrapping="Wrap" Text="Address Line1:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="13,41,0,0" TextWrapping="Wrap" Text="Address Line2:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="64,71,0,0" TextWrapping="Wrap" Text="City:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="57,100,0,0" TextWrapping="Wrap" Text="State:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="43,133,0,0" TextWrapping="Wrap" Text="Country:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="43,169,0,0" TextWrapping="Wrap" Text="Pin Code:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="13,205,0,0" TextWrapping="Wrap" Text="Phone Number:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="10,241,0,0" TextWrapping="Wrap" Text="Mobile Number:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="26,273,0,0" TextWrapping="Wrap" Text="Fax Number:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="58,302,0,0" TextWrapping="Wrap" Text="E mail:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="46,333,0,0" TextWrapping="Wrap" Text="Web Site:" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,7,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.ADDRESS_1,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,38,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.ADDRESS_2,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,69,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.CITY,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,100,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.STATE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,132,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.COUNTRY,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,166,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.PIN_CODE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,202,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.PHONE_NUMBER,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,237,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.MOBILE_NUMBER,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,269,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.FAX_NUMBER,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,299,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.EMAIL,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="128,329,0,0" TextWrapping="Wrap" Text="{Binding selectedBank.WEBSITE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="190"/>
+
+            </Grid>
+        </GroupBox>
+        <Grid Margin="0,505,0,0">
+            <Button Content="Save"  Visibility="{Binding CreatVisible}" Command="{Binding Path=InsertBank,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" Margin="184,21,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button Content="Update" Visibility="{Binding UpdVisible}" Command="{Binding Path=UpdateBank, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="184,21,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button Content="Cancel" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="277,21,0,0" VerticalAlignment="Top" Width="75"/>
+
+        </Grid>
+        </Grid>
+</Window>

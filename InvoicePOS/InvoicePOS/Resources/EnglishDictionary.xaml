@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                    
+                     xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="Close">Close</system:String>
+    <system:String x:Key="Cancel">Cancel</system:String>
+    <system:String x:Key="Ok">Ok</system:String>
+    <system:String x:Key="Item Name">Item Name</system:String>
+    <system:String x:Key="Location">Location</system:String>
+    <system:String x:Key="Invoice">Invoice No:</system:String>
+    <system:String x:Key="Search Code">Search Code</system:String>
+    <system:String x:Key="Bar Code">Bar Code</system:String>
+    <system:String x:Key="Search with Stock">Search with Stock</system:String>
+    <system:String x:Key="Date">Date</system:String>
+    <system:String x:Key="Pay Now">Pay Now</system:String>
+    <system:String x:Key="Estimate">Estimate</system:String>
+    <system:String x:Key="Save Print Estimate">Save Print Estimate</system:String>
+    <system:String x:Key="Customer">Customer</system:String>
+    <system:String x:Key="Sales executive">Sales executive</system:String>
+    <system:String x:Key="Discount Included">Discount Included</system:String>
+    <system:String x:Key="Quantity Total">Quantity Total</system:String>
+    <system:String x:Key="Vat Amt">Vat Amt</system:String>
+    <system:String x:Key="Net Amt">Net Amt</system:String>
+    <system:String x:Key="Gross Amount">Gross Amount</system:String>
+    <system:String x:Key="Change Cash Register">Change Cash Register</system:String>
+    <system:String x:Key="Add Cash Register">Add Cash Register</system:String>
+    <system:String x:Key="Cash Register Amount">Cash Register Amount</system:String>
+    <system:String x:Key="Change Price Item">Change Price Item</system:String>
+    <system:String x:Key="Change Business Location">Change Business Location</system:String>
+    
+    <system:String x:Key="Change quantity">Change quantity</system:String>
+    <system:String x:Key="Show stock">Show stock</system:String>
+    <system:String x:Key="Pick held invoice">Pick held invoice</system:String>
+    <system:String x:Key="Show Tax Details">Show Tax Details</system:String>
+    <system:String x:Key="Hide Tax Details">Hide Tax Details</system:String>
+    <system:String x:Key="Remove item">Remove item</system:String>
+    <system:String x:Key="Hold invoice">Hold invoice</system:String>
+    <system:String x:Key="Cancel Invoice">Cancel Invoice</system:String>
+    <system:String x:Key="Show offer Details">Show offer Details</system:String>
+    <system:String x:Key="Set Up">Set Up</system:String>
+    <system:String x:Key="Express Pay">Express Pay</system:String>
+    <system:String x:Key="Item Total">Item Total</system:String>
+</ResourceDictionary>

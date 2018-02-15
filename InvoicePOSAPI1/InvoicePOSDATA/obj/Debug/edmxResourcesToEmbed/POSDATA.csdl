@@ -1,0 +1,1519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NEW_POSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="POSEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="SP_All_Invoice" ReturnType="Collection(NEW_POSModel.SP_All_Invoice_Result)" />
+    <EntitySet Name="AUTHORIZATIONs" EntityType="NEW_POSModel.AUTHORIZATION" />
+    <EntitySet Name="MODULEs" EntityType="NEW_POSModel.MODULE" />
+    <EntitySet Name="TBL_AUTO_GENERATE_CODE" EntityType="NEW_POSModel.TBL_AUTO_GENERATE_CODE" />
+    <EntitySet Name="TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER" EntityType="NEW_POSModel.TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER" />
+    <EntitySet Name="TBL_AUTO_GENERATE_CODE_FOR_LOYALTY" EntityType="NEW_POSModel.TBL_AUTO_GENERATE_CODE_FOR_LOYALTY" />
+    <EntitySet Name="TBL_AUTO_GENERATE_CODE_FOR_PRODUCT" EntityType="NEW_POSModel.TBL_AUTO_GENERATE_CODE_FOR_PRODUCT" />
+    <EntitySet Name="TBL_AUTO_GENERATE_INVOICE_NO" EntityType="NEW_POSModel.TBL_AUTO_GENERATE_INVOICE_NO" />
+    <EntitySet Name="TBL_BANK" EntityType="NEW_POSModel.TBL_BANK" />
+    <EntitySet Name="TBL_BANK_ACCOUNT" EntityType="NEW_POSModel.TBL_BANK_ACCOUNT" />
+    <EntitySet Name="TBL_BUSINESS_LOCATION" EntityType="NEW_POSModel.TBL_BUSINESS_LOCATION" />
+    <EntitySet Name="TBL_CASH_REG" EntityType="NEW_POSModel.TBL_CASH_REG" />
+    <EntitySet Name="TBL_CATAGORY" EntityType="NEW_POSModel.TBL_CATAGORY" />
+    <EntitySet Name="TBL_CHEQUE" EntityType="NEW_POSModel.TBL_CHEQUE" />
+    <EntitySet Name="TBL_COMPANY" EntityType="NEW_POSModel.TBL_COMPANY" />
+    <EntitySet Name="TBL_CUSTOMER" EntityType="NEW_POSModel.TBL_CUSTOMER" />
+    <EntitySet Name="TBL_CUSTOMER_BILLING_ADDRESS" EntityType="NEW_POSModel.TBL_CUSTOMER_BILLING_ADDRESS" />
+    <EntitySet Name="TBL_CUSTOMER_GROUP" EntityType="NEW_POSModel.TBL_CUSTOMER_GROUP" />
+    <EntitySet Name="TBL_CUSTOMER_SHIPPING_ADDRESS" EntityType="NEW_POSModel.TBL_CUSTOMER_SHIPPING_ADDRESS" />
+    <EntitySet Name="TBL_DEPARTMENT" EntityType="NEW_POSModel.TBL_DEPARTMENT" />
+    <EntitySet Name="TBL_DESIGNATION" EntityType="NEW_POSModel.TBL_DESIGNATION" />
+    <EntitySet Name="TBL_EMPLOYEE" EntityType="NEW_POSModel.TBL_EMPLOYEE" />
+    <EntitySet Name="TBL_ESTIMATE1" EntityType="NEW_POSModel.TBL_ESTIMATE1" />
+    <EntitySet Name="TBL_FINANCIAL" EntityType="NEW_POSModel.TBL_FINANCIAL" />
+    <EntitySet Name="TBL_GODOWN" EntityType="NEW_POSModel.TBL_GODOWN" />
+    <EntitySet Name="TBL_HOLD_INVOICE" EntityType="NEW_POSModel.TBL_HOLD_INVOICE" />
+    <EntitySet Name="TBL_INVOICE" EntityType="NEW_POSModel.TBL_INVOICE" />
+    <EntitySet Name="TBL_INVOICE_PAY" EntityType="NEW_POSModel.TBL_INVOICE_PAY" />
+    <EntitySet Name="TBL_ITEM_LOCATION" EntityType="NEW_POSModel.TBL_ITEM_LOCATION" />
+    <EntitySet Name="TBL_ITEMS" EntityType="NEW_POSModel.TBL_ITEMS" />
+    <EntitySet Name="TBL_ITEMS_ATTRIBUTE" EntityType="NEW_POSModel.TBL_ITEMS_ATTRIBUTE" />
+    <EntitySet Name="TBL_LOYALTY" EntityType="NEW_POSModel.TBL_LOYALTY" />
+    <EntitySet Name="TBL_LOYALTY_Exceedings" EntityType="NEW_POSModel.TBL_LOYALTY_Exceedings" />
+    <EntitySet Name="TBL_NEWCASHREGISTER" EntityType="NEW_POSModel.TBL_NEWCASHREGISTER" />
+    <EntitySet Name="TBL_OPENING_BALANCE" EntityType="NEW_POSModel.TBL_OPENING_BALANCE" />
+    <EntitySet Name="TBL_OPENING_STOCK" EntityType="NEW_POSModel.TBL_OPENING_STOCK" />
+    <EntitySet Name="TBL_ORDER" EntityType="NEW_POSModel.TBL_ORDER" />
+    <EntitySet Name="TBL_PAYMENT" EntityType="NEW_POSModel.TBL_PAYMENT" />
+    <EntitySet Name="TBL_PO" EntityType="NEW_POSModel.TBL_PO" />
+    <EntitySet Name="TBL_PO_ITEMS" EntityType="NEW_POSModel.TBL_PO_ITEMS" />
+    <EntitySet Name="TBL_PO_PAYMENT" EntityType="NEW_POSModel.TBL_PO_PAYMENT" />
+    <EntitySet Name="TBL_PURCHASE_ORDERS" EntityType="NEW_POSModel.TBL_PURCHASE_ORDERS" />
+    <EntitySet Name="TBL_RECEIVE_ITEM" EntityType="NEW_POSModel.TBL_RECEIVE_ITEM" />
+    <EntitySet Name="TBL_RECEIVE_ITEM_ITEMS" EntityType="NEW_POSModel.TBL_RECEIVE_ITEM_ITEMS" />
+    <EntitySet Name="TBL_RECEIVE_PAYMENT" EntityType="NEW_POSModel.TBL_RECEIVE_PAYMENT" />
+    <EntitySet Name="TBL_REPORT_ADD" EntityType="NEW_POSModel.TBL_REPORT_ADD" />
+    <EntitySet Name="TBL_REPORT_GROUP" EntityType="NEW_POSModel.TBL_REPORT_GROUP" />
+    <EntitySet Name="TBL_SALE_ITEM" EntityType="NEW_POSModel.TBL_SALE_ITEM" />
+    <EntitySet Name="TBL_SALES_RETURN" EntityType="NEW_POSModel.TBL_SALES_RETURN" />
+    <EntitySet Name="TBL_STOCK_TRANSFER" EntityType="NEW_POSModel.TBL_STOCK_TRANSFER" />
+    <EntitySet Name="TBL_SUPP_PAYMENT" EntityType="NEW_POSModel.TBL_SUPP_PAYMENT" />
+    <EntitySet Name="TBL_SUPPLIER" EntityType="NEW_POSModel.TBL_SUPPLIER" />
+    <EntitySet Name="tbl_supppaydetails" EntityType="NEW_POSModel.tbl_supppaydetails" />
+    <EntitySet Name="TBL_TAX" EntityType="NEW_POSModel.TBL_TAX" />
+    <EntitySet Name="TBL_TRANSFER" EntityType="NEW_POSModel.TBL_TRANSFER" />
+    <EntitySet Name="TBL_UNIT_MEASURING" EntityType="NEW_POSModel.TBL_UNIT_MEASURING" />
+    <EntitySet Name="TBL_USER" EntityType="NEW_POSModel.TBL_USER" />
+    <EntitySet Name="TBL_VENDORS" EntityType="NEW_POSModel.TBL_VENDORS" />
+    <EntitySet Name="tmp_invoice" EntityType="NEW_POSModel.tmp_invoice" />
+    <EntitySet Name="MODULE_RIGHTS" EntityType="NEW_POSModel.MODULE_RIGHTS" />
+    <EntitySet Name="VIEW_GROUP_SUBGROUP" EntityType="NEW_POSModel.VIEW_GROUP_SUBGROUP" />
+    <EntitySet Name="VIEW_INVOICE" EntityType="NEW_POSModel.VIEW_INVOICE" />
+    <EntitySet Name="View_ITEM_ATTRIBUTE" EntityType="NEW_POSModel.View_ITEM_ATTRIBUTE" />
+    <EntitySet Name="View_STOCK_SEARCH" EntityType="NEW_POSModel.View_STOCK_SEARCH" />
+    <EntitySet Name="VW_EMP_ACCESS_MODULE" EntityType="NEW_POSModel.VW_EMP_ACCESS_MODULE" />
+    <EntitySet Name="VW_EMP_MODULE_ACCESS" EntityType="NEW_POSModel.VW_EMP_MODULE_ACCESS" />
+  </EntityContainer>
+  <ComplexType Name="SP_All_Invoice_Result">
+    <Property Type="String" Name="INVOICE_NO" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="INVOICE_DATE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CUSTOMER" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="CUSTOMER_ID" Nullable="true" />
+    <Property Type="Decimal" Name="AVAILABLE_CREDIT_LIMIT" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="SALES_EXECUTIVE" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="SALES_EXECUTIVE_ID" Nullable="true" />
+    <Property Type="String" Name="CUSTOMER_EMAIL" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CUSTOMER_MOBILE_NO" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="BEFORE_ROUNDOFF" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="ROUNDOFF_AMOUNT" Nullable="true" />
+    <Property Type="Int32" Name="TOTAL_AMOUNT" Nullable="true" />
+    <Property Type="Int32" Name="QUANTITY_TOTAL" Nullable="true" />
+    <Property Type="Int32" Name="NUMBER_OF_ITEM" Nullable="true" />
+    <Property Type="Decimal" Name="DISCOUNT_INCLUDED" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TAX_INCLUDED" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RECIVED_AMOUNT" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="RETURNABLE_AMOUNT" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="COMMISION_EXPENSE" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PENDING_AMOUNT" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="NOTE" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="IS_GOODS_DELIVERED" Nullable="true" />
+    <Property Type="Boolean" Name="IS_PRINT" Nullable="true" />
+    <Property Type="Boolean" Name="IS_SAVE_RETURNABLE_AMOUNT" Nullable="true" />
+    <Property Type="Int64" Name="USER_ID" Nullable="true" />
+    <Property Type="Decimal" Name="TRANSFER_AMOUNT" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CHEQUE_AMOUNT" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="CHEQUE_NO" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CHEQUE_BRANCH" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="CASH_AMOUNT" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="FINANCIAL_AMOUNT" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int64" Name="FINANCIAL_CREDIT_AC" Nullable="true" />
+    <Property Type="Int64" Name="FINANCIAL_CREDIT_ID" Nullable="true" />
+    <Property Type="DateTime" Name="CASH_REG_DATE" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CASH_REG" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CHEQUE_DATE" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="CHEQUE_BANK_AC" Nullable="true" />
+    <Property Type="Int64" Name="CHAEQE_BANK_AC_ID" Nullable="true" />
+    <Property Type="DateTime" Name="TRANSFER_DATE" Nullable="true" Precision="23" />
+    <Property Type="Int64" Name="TRANSFER_BANK_ID" Nullable="true" />
+    <Property Type="String" Name="TRANSFER_BRANCH" Nullable="true" MaxLength="50" />
+    <Property Type="Int64" Name="TRANSFER_BANK_AC" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="AUTHORIZATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ACTION_CREATE" Type="Boolean" />
+    <Property Name="EDIT" Type="Boolean" />
+    <Property Name="ACTION_DELETE" Type="Boolean" />
+    <Property Name="ACTION_VIEW" Type="Boolean" />
+    <Property Name="VERIFICATION" Type="Boolean" />
+    <Property Name="NOTIFICATION" Type="Boolean" />
+    <Property Name="MESSAGE" Type="Boolean" />
+    <Property Name="APPROVE" Type="Boolean" />
+    <Property Name="MAILBACK" Type="Boolean" />
+    <Property Name="ROLE_ID" Type="Int64" Nullable="false" />
+    <Property Name="MODULE_ID" Type="Int64" Nullable="false" />
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="EXPT_TO_EXCEL" Type="Boolean" />
+    <Property Name="IMORT_TO_EXCEL" Type="Boolean" />
+    <Property Name="Company_Id" Type="Int64" />
+    <Property Name="User_Id" Type="Int64" />
+  </EntityType>
+  <EntityType Name="MODULE">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODULE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_CODE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AUTO_GENERATE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DEFINE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AUTO_GENERATE_CODE_FOR_PRODUCT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DEFINE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_CODE_FOR_LOYALTY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AUTO_GENERATE_CODE_FOR_LOYALTY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DEFINE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_CODE_FOR_PRODUCT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AUTO_GENERATE_CODE_FOR_PRODUCT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DEFINE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_AUTO_GENERATE_INVOICE_NO">
+    <Key>
+      <PropertyRef Name="INVOICE_NO_ID" />
+    </Key>
+    <Property Name="INVOICE_NO_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INVOICE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_BANK">
+    <Key>
+      <PropertyRef Name="BANK_ID" />
+    </Key>
+    <Property Name="BANK_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="BANK_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IFSC_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETED" Type="Boolean" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="STATE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PIN_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE_NUMBER" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE_NUMBER" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FAX_NUMBER" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="WEBSITE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="STATUS" Type="Boolean" />
+    <Property Name="BANK_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBL_BANK_ACCOUNT">
+    <Key>
+      <PropertyRef Name="BANK_ACCOUNT_ID" />
+    </Key>
+    <Property Name="BANK_ACCOUNT_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BANK_ID" Type="Int64" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="BRANCH_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACCOUNT_DESCRIPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACCOUNT_SEARCH_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACCOUNT_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="PRINTING_FORMAT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_BUSINESS_LOCATION">
+    <Key>
+      <PropertyRef Name="BUSINESS_LOCATION_ID" />
+    </Key>
+    <Property Name="BUSINESS_LOCATION_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="SHOP_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PREFIX_DOCUMENT" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DOCUMENT_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIN_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSS_ADDRESS_1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BUSS_ADDRESS_2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="WEBSITE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRINTER_SETTING" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SMS_SETTING" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL_SETTING" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL_TEMPLATE_SETTING" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SCEOND_RECEIPT_PRINTER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SCEOND_RECEIPT_PRINT_FORMATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NUMBER_OF_SECOND_RECEIPT_PRINT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GODOWN_TO_KEEP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ENABLE_EMAIL" Type="Boolean" />
+    <Property Name="IS_SCEOND_RECEIPT_PRINTER" Type="Boolean" />
+    <Property Name="IS_SECOND_DIFF_PRINT" Type="Boolean" />
+    <Property Name="IS_ASK_TO_PRIENT_EVERYTIME" Type="Boolean" />
+    <Property Name="IS_DELETE_INVOICE_SPECIFIED_GODOWN" Type="Boolean" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="IMAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_CASH_REG">
+    <Key>
+      <PropertyRef Name="CASH_REG_ID" />
+    </Key>
+    <Property Name="CASH_REG_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CASH_REG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CASH_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="INVOICE_ID" Type="Int64" />
+    <Property Name="CASH_REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_CATAGORY">
+    <Key>
+      <PropertyRef Name="CATAGORY_ID" />
+    </Key>
+    <Property Name="CATAGORY_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CATAGORY_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BAR_CODE_PREFIX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CATAGORY_DEC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DISPLAY_INDEX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_NOT_PROTAL" Type="Boolean" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_CHEQUE">
+    <Key>
+      <PropertyRef Name="CHEQUE_ID" />
+    </Key>
+    <Property Name="CHEQUE_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INVOICE_ID" Type="Int64" />
+    <Property Name="CHEQUE_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHEQUE_BRANCH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHEQUE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CHEQUE_BANK_AC" Type="Int64" />
+    <Property Name="CHAEQE_BANK_AC_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_COMPANY">
+    <Key>
+      <PropertyRef Name="COMAPNY_ID" />
+    </Key>
+    <Property Name="COMAPNY_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANY_NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SHOPNAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="PREFIX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PREFIX_NUM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIN_NUMBER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="WEBSITE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IS_WARNED_FOR_NEGATIVE_STOCK" Type="Boolean" />
+    <Property Name="IS_WARNED_FOR_LESS_SALES_PRICE" Type="Boolean" />
+    <Property Name="TAX_PRINTED_DESCRIPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIRST_DAY_OF_FINANCIAL_YEAR" Type="Int16" />
+    <Property Name="FIRST_MONTH_OF_FINANCIAL_YEAR" Type="Int16" />
+    <Property Name="BANK_ID" Type="Int64" />
+    <Property Name="DEFAULT_TAX_RATE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBL_CUSTOMER">
+    <Key>
+      <PropertyRef Name="CUSTOMER_ID" />
+    </Key>
+    <Property Name="CUSTOMER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FIRST_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CATEGORY_ID" Type="Int32" Nullable="false" />
+    <Property Name="SAMEBILLINGANDSHIPPING_ADDRESS" Type="Boolean" />
+    <Property Name="NOTES" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="VAT_NUMBER" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CST_NUMBER" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="IS_ACTIVE" Type="Boolean" Nullable="false" />
+    <Property Name="DEFAULT_CREIT_LIMIT" Type="Boolean" />
+    <Property Name="CUSTOMER_GROUP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LOYALTY_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REFERRED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SEARCH_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="IS_ENROLLED_FOR_LOYALITY" Type="Boolean" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="OPENING_BALANCE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TIN_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAN_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="Int64" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_CUSTOMER_BILLING_ADDRESS">
+    <Key>
+      <PropertyRef Name="BILLING_ADRESS_ID" />
+    </Key>
+    <Property Name="BILLING_ADRESS_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CUSTOMER_ID" Type="Int32" />
+    <Property Name="BILLING_TO_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TELEPHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="POSTAL_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_CUSTOMER_GROUP">
+    <Key>
+      <PropertyRef Name="CUSTOMER_GROUP_ID" />
+    </Key>
+    <Property Name="CUSTOMER_GROUP_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_CUSTOMER_SHIPPING_ADDRESS">
+    <Key>
+      <PropertyRef Name="SHIPPING_ADRESS_ID" />
+    </Key>
+    <Property Name="SHIPPING_ADRESS_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CUSTOMER_ID" Type="Int32" />
+    <Property Name="SHIPPING_TO_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="POSTAL_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="COUNTRY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="TELEPHONE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_DEPARTMENT">
+    <Key>
+      <PropertyRef Name="DEPARTMENT_ID" />
+    </Key>
+    <Property Name="DEPARTMENT_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DEPARTMENT_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COMPANY_ID" Type="Int64" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CREATED_BY" Type="Int64" />
+    <Property Name="STATUS" Type="Boolean" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="SORT_INDEX" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_DESIGNATION">
+    <Key>
+      <PropertyRef Name="DESIGNATION_ID" />
+    </Key>
+    <Property Name="DESIGNATION_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESIGNATION_NAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COMPANY_ID" Type="Int64" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CREATED_BY" Type="Int64" />
+    <Property Name="STATUS" Type="Boolean" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="SORT_INDEX" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EMPLOYEE_ID" />
+    </Key>
+    <Property Name="EMPLOYEE_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EMPLOYEE_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIRST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MIDDLE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SEARCH_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="0" />
+    <Property Name="MARITAL_STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GENDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_OF_JOIN" Type="DateTime" Precision="0" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DEPARTMENT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMPLOYEE_DESIGNATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPHONE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FAX_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MOBILE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WEBSITE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="IS_REQUEST_VAI_SMS" Type="Boolean" />
+    <Property Name="IS_APPROVE_ACCESS_VAI_SMS" Type="Boolean" />
+    <Property Name="IS_NOT_AN_EMPLOYEE" Type="Boolean" />
+    <Property Name="IS_APPOINTMENT" Type="Boolean" />
+    <Property Name="IS_ATTACHED_INVOICE" Type="Boolean" />
+    <Property Name="WORKING_SHIFT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MAX_SPOT_DISCOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IMAGE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_PERCENT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMMISSION_QUICK_POSITION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PIN_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TBL_ESTIMATE1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ESTIMATE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_ID" Type="Int32" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CURRENT_QTY" Type="Int32" />
+    <Property Name="MEASURING_UNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DISCOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_WITH_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ESTIMATE_DATE" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TBL_FINANCIAL">
+    <Key>
+      <PropertyRef Name="FINANCIAL_ID" />
+    </Key>
+    <Property Name="FINANCIAL_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INVOICE_ID" Type="Int64" />
+    <Property Name="FINANCIAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FINANCIAL_CREDIT_AC" Type="Int64" />
+    <Property Name="FINANCIAL_CREDIT_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_GODOWN">
+    <Key>
+      <PropertyRef Name="GODOWN_ID" />
+    </Key>
+    <Property Name="GODOWN_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GODOWN_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GOSOWN_DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="IS_DEFAULT_GODOWN" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_HOLD_INVOICE">
+    <Key>
+      <PropertyRef Name="INVOICE_ID" />
+    </Key>
+    <Property Name="INVOICE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INVOICE_NO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="INVOICE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CUSTOMER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AVAILABLE_CREDIT_LIMIT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CUSTOMER_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CUSTOMER_MOBILE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TOTAL_AMOUNT" Type="Int32" />
+    <Property Name="QUANTITY_TOTAL" Type="Int32" />
+    <Property Name="NUMBER_OF_ITEM" Type="Int32" />
+    <Property Name="DISCOUNT_INCLUDED" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_INCLUDED" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RECEIVE_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RETURNABLE_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMMISION_EXPENSE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IS_GOODS_DELIVERED" Type="Boolean" />
+    <Property Name="IS_PRINT" Type="Boolean" />
+    <Property Name="IS_SAVE_RETURNABLE_AMOUNT" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="TOTAL_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BUSSINESS_LOCATION_ID" Type="Int64" />
+    <Property Name="BUSSINESS_LOCATION_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IS_ACTIVE" Type="Boolean" />
+    <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SALES_RETURN_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_INVOICE">
+    <Key>
+      <PropertyRef Name="INVOICE_ID" />
+    </Key>
+    <Property Name="INVOICE_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INVOICE_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INVOICE_STATUS_ID" Type="Int32" />
+    <Property Name="INVOICE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="INVOICE_DUE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="INVOICE_CUSTOMER_ID" Type="Int64" />
+    <Property Name="INVOICE_COURIER_ID" Type="Int64" />
+    <Property Name="INVOICE_COURIER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="INVOICE_PAYMENT_ID" Type="Int64" />
+    <Property Name="INVOICE_PO_NUMBER" Type="Int32" />
+    <Property Name="INVOICE_TAX" Type="Double" />
+    <Property Name="INVOICE_TAX2" Type="Double" />
+    <Property Name="IS_PRINT_DUE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="FREQUENCY_TYPE_ID" Type="Int32" />
+    <Property Name="IS_RECCURANCE_INVOICE" Type="Boolean" />
+    <Property Name="INTERVAL" Type="Int32" />
+    <Property Name="NEXT_INVOICE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="FINAL_INVOICE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IS_RECUR_UNTIL_VOIDED" Type="Boolean" />
+    <Property Name="GENERATE_NEW_INVOICE" Type="Int32" />
+    <Property Name="IS_QUOTE" Type="Boolean" />
+    <Property Name="VALID_UNTIL" Type="DateTime" Precision="3" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_INVOICE_PAY">
+    <Key>
+      <PropertyRef Name="INVOICE_ID" />
+    </Key>
+    <Property Name="INVOICE_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INVOICE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INVOICE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CUSTOMER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTOMER_ID" Type="Int32" />
+    <Property Name="AVAILABLE_CREDIT_LIMIT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_EXECUTIVE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_EXECUTIVE_ID" Type="Int64" />
+    <Property Name="CUSTOMER_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTOMER_MOBILE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BEFORE_ROUNDOFF" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ROUNDOFF_AMOUNT" Type="Int32" />
+    <Property Name="TOTAL_AMOUNT" Type="Int32" />
+    <Property Name="QUANTITY_TOTAL" Type="Int32" />
+    <Property Name="NUMBER_OF_ITEM" Type="Int32" />
+    <Property Name="DISCOUNT_INCLUDED" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_INCLUDED" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RECIVED_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RETURNABLE_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMMISION_EXPENSE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_GOODS_DELIVERED" Type="Boolean" />
+    <Property Name="IS_PRINT" Type="Boolean" />
+    <Property Name="IS_SAVE_RETURNABLE_AMOUNT" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="TOTAL_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="Int64" />
+    <Property Name="BUSINESS_LOCATION_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ACTIVE" Type="Boolean" />
+    <Property Name="STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_RETURN_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_ITEM_LOCATION">
+    <Key>
+      <PropertyRef Name="LOCATION_ID" />
+    </Key>
+    <Property Name="LOCATION_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="GOWDOWN_ID" Type="Int64" />
+    <Property Name="ITEM_LOCATION_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SORT_INDEX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_ITEMS">
+    <Key>
+      <PropertyRef Name="ITEM_ID" />
+    </Key>
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_PRICE" Type="Double" />
+    <Property Name="ITEM_INVOICE_ID" Type="Int32" />
+    <Property Name="ITEM_PRODUCT_ID" Type="Int32" />
+    <Property Name="KEYWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACCESSORIES_KEYWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CATAGORY_ID" Type="Int64" />
+    <Property Name="SERCH_CODE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PURCHASE_UNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_UNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PURCHASE_UNIT_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MRP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="Int32" />
+    <Property Name="OPN_QNT" Type="Int32" />
+    <Property Name="CATEGORY_NAME" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="DISPLAY_INDEX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_UNIQUE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_GROUP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REGIONAL_LANGUAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_PRICE_BEFOR_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MODIFICATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CATAGORY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="ITEM_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WEIGHT_OF_PAPER" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_PLASTIC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_FOAM" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_CARDBOARD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="TAX_COLLECTED" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_PAID" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_COLLECTED_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_PAID_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALE_UNIT_ID" Type="Int32" />
+    <Property Name="PURCHAGE_UNIT_ID" Type="Int32" />
+    <Property Name="GODOWN_ID" Type="Int32" />
+    <Property Name="BUSS_LOC_ID" Type="Int32" />
+    <Property Name="TAX_PAID_ID" Type="Int32" />
+    <Property Name="TAX_COLLECTED_ID" Type="Int32" />
+    <Property Name="IS_ACIVE" Type="Boolean" />
+    <Property Name="INCLUDE_TAX" Type="Boolean" />
+    <Property Name="ITEM_LOCATION_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBL_ITEMS_ATTRIBUTE">
+    <Key>
+      <PropertyRef Name="ATTRIBUTE_ID" />
+    </Key>
+    <Property Name="ATTRIBUTE_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ITEM_ID" Type="Int64" />
+    <Property Name="IS_ACTIVE" Type="Boolean" />
+    <Property Name="NOT_FOR_SALE" Type="Boolean" />
+    <Property Name="IS_PURCHASED" Type="Boolean" />
+    <Property Name="IS_SERVICE" Type="Boolean" />
+    <Property Name="IS_GIFT_CARD" Type="Boolean" />
+    <Property Name="ONLY_ONLINE_SHOP" Type="Boolean" />
+    <Property Name="NOT_FOR_ONLINE_SHOP" Type="Boolean" />
+    <Property Name="ALLOW_PURCHASE_ON_ESHOP" Type="Boolean" />
+    <Property Name="INCLUDE_TAX" Type="Boolean" />
+    <Property Name="IS_SORTABLE_ITEM" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_LOYALTY">
+    <Key>
+      <PropertyRef Name="LOYALTY_ID" />
+    </Key>
+    <Property Name="LOYALTY_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SETTINGSNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WEIGHTAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FROMDATE" Type="DateTime" Precision="3" />
+    <Property Name="TODATE" Type="DateTime" Precision="3" />
+    <Property Name="CUSTOMERGROUP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COLLECTION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ISACTIVE" Type="Boolean" />
+    <Property Name="ISDEFAULT" Type="Boolean" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="InvoiceExceeding" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FlatPoints" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_LOYALTY_Exceedings">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LOYALTY_ID" Type="Int64" />
+    <Property Name="InvoiveExceeding" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Flatpoints" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Company_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_NEWCASHREGISTER">
+    <Key>
+      <PropertyRef Name="CASH_REGISTERID" />
+    </Key>
+    <Property Name="CASH_REGISTERID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CASH_REG_NO" Type="Int64" />
+    <Property Name="CASH_REG_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CASH_REG_PREFIX" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IS_ADGUSTMENT" Type="Boolean" />
+    <Property Name="LOGIN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_MAIN_CASH" Type="Boolean" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="CASH_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_OPENING_BALANCE">
+    <Key>
+      <PropertyRef Name="OPENING_BALANCE_ID" />
+    </Key>
+    <Property Name="OPENING_BALANCE_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="BAL_TYPE_ID" Type="Int64" />
+    <Property Name="OPENING_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CLOSING_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SYSTEM_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CUSTOMER_ID" Type="Int64" />
+    <Property Name="BAL_TYPE_VALUE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CURRENT_OPENING_BALANCE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="credit_Limits" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_OPENING_STOCK">
+    <Key>
+      <PropertyRef Name="OPENING_STOCK_ID" />
+    </Key>
+    <Property Name="OPENING_STOCK_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="ITEM_ID" Type="Int64" />
+    <Property Name="BUSINESS_LOC_ID" Type="Int64" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="OPRNING_BAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CLOSING_BAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GODOWN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPN_QNT" Type="Int32" />
+    <Property Name="BUSSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBL_ORDER">
+    <Key>
+      <PropertyRef Name="ORDER_ID" />
+    </Key>
+    <Property Name="ORDER_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ITEM_ID" Type="Int64" />
+    <Property Name="ORDER_QUANTITY" Type="Int32" />
+    <Property Name="DISCOUNT" Type="Double" />
+    <Property Name="ODER_COST" Type="Double" />
+    <Property Name="IS_DISCOUNT_IN_PERCENTAGE" Type="Boolean" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_PAYMENT">
+    <Key>
+      <PropertyRef Name="PAYMENT_ID" />
+    </Key>
+    <Property Name="PAYMENT_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PAYMENT_TYPE_ID" Type="Int32" />
+    <Property Name="PAYMENT_INVOICE_ID" Type="Int64" />
+    <Property Name="PAYMENT_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PAYMENT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="REFERENCE_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAYMENT_NOTES" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_PO">
+    <Key>
+      <PropertyRef Name="PO_ID" />
+    </Key>
+    <Property Name="PO_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PO_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DELIVERY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IS_SEND_MAIL" Type="Boolean" />
+    <Property Name="BAR_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SEARCH_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="DELIVER_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPPLIER_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DELIVER_TO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPPLIER_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TERMS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTAL_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="PO_DATE" Type="DateTime" Precision="3" />
+    <Property Name="BUSSINESS_ID" Type="Int64" />
+    <Property Name="ITEM_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="SEARCH_STOCK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBL_PO_ITEMS">
+    <Key>
+      <PropertyRef Name="PO_ID" />
+    </Key>
+    <Property Name="PO_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PO_ITEM_ID" Type="Int32" />
+    <Property Name="PO_NUMBER" Type="Int64" />
+    <Property Name="PO_DISCOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PO_TOTAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PO_QTY" Type="Int32" />
+    <Property Name="PO_TAX" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_PO_PAYMENT">
+    <Key>
+      <PropertyRef Name="PO_ID" />
+    </Key>
+    <Property Name="PO_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PO_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DELIVERY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="IS_SEND_MAIL" Type="Boolean" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DELIVER_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DELIVER_TO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPPLIER_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPPLIER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPPLIER_MAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TERMS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTAL_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="PO_DATE" Type="DateTime" Precision="3" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="PO_STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PO_TYPE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBL_PURCHASE_ORDERS">
+    <Key>
+      <PropertyRef Name="PO_ID" />
+    </Key>
+    <Property Name="PO_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PO_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="Int64" />
+    <Property Name="DELIVERY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="SUPPLIER_ID" Type="Int64" />
+    <Property Name="DELIVERY_TO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BAR_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_ID" Type="Int64" />
+    <Property Name="SEARCH_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SEARCH_WITH_STOCK" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TERMAS_AND_CONDITIONS" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TOTAL_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_RECEIVE_ITEM">
+    <Key>
+      <PropertyRef Name="NEWRECEIVE_ID" />
+    </Key>
+    <Property Name="NEWRECEIVE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="SELECT_BUSINESS_LOCATION_ID" Type="Int64" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SEARCH_CODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SUPPLIER_INVOICE_NO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="RECEIVE_DATE" Type="DateTime" Precision="0" />
+    <Property Name="RECEIVED_ITEM_ON_DATE" Type="DateTime" Precision="0" />
+    <Property Name="PO_NUMBER_ID" Type="Int64" />
+    <Property Name="SUPPLIER_ID" Type="Int64" />
+    <Property Name="PAYMENT_TERMS" Type="Int32" />
+    <Property Name="GODOWN_ID" Type="Int64" />
+    <Property Name="RECEIVING_EMPLOYEE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DISCOUNT_FLAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DISCOUNT_PERCENT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ADDTIONAL_CHARGES" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SUB_TOTAL_BEFORETAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_TAX_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SUB_TOTAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ROUND_OFF_ADJUSTMENTAMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="USE_SUPPLIER_ADVANCE_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="GRAND_TOTAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IS_REC_WITH_PO" Type="Boolean" />
+    <Property Name="FILTER_HIERARCHY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="PO_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPPLIER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GODOWN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DISCOUNT_BEFOR_TAX" Type="Boolean" />
+    <Property Name="AUTO_SAVE_IN_DRAFT" Type="Boolean" />
+    <Property Name="FOCUS_LAST_ADD_ITEM" Type="Boolean" />
+    <Property Name="ITEM_ENTRY_TEMPLATE" Type="Boolean" />
+    <Property Name="PAY_IN_CASH" Type="Boolean" />
+    <Property Name="APPLY_FPR_EFFECTVE_PRICE" Type="Boolean" />
+    <Property Name="INVOICE_DIS_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RECEIVED_ITEM_ENTRY_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="SUPPLIER_INVOICE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="Item_Id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TBL_RECEIVE_ITEM_ITEMS">
+    <Key>
+      <PropertyRef Name="RCV_ID" />
+    </Key>
+    <Property Name="RCV_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RCV_ITEM_ID" Type="Int32" />
+    <Property Name="RCV_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RCV_QTY" Type="Int32" />
+    <Property Name="RCV_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RCV_ITEM_ENTRY_ID" Type="Int64" />
+    <Property Name="RCV_DISCOUNT" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="TBL_RECEIVE_PAYMENT">
+    <Key>
+      <PropertyRef Name="RECEIVE_PAYMENT_ID" />
+    </Key>
+    <Property Name="RECEIVE_PAYMENT_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RECEIVE_PAY_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="Int64" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="CUSTOMER_ID" Type="Int64" />
+    <Property Name="CUSTOMER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTOMER_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_EMAIL_SEND" Type="Boolean" />
+    <Property Name="CUSTOMER_CONTACT_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OTHER_PAY_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CURRENT_PAY_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_SELECTED_PAY_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_REC_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RETURNABLE_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_REPORT_ADD">
+    <Key>
+      <PropertyRef Name="REPORT_ID" />
+    </Key>
+    <Property Name="REPORT_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="REPORT_GROUP_ID" Type="Int64" />
+    <Property Name="SEARCH_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REPORT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_REPORT_GROUP">
+    <Key>
+      <PropertyRef Name="REPORT_GRP_ID" />
+    </Key>
+    <Property Name="REPORT_GRP_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GROUP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="REPORT_ID" Type="Int64" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="CREATED_BY" Type="Int64" />
+    <Property Name="SGROUP_CODE" Type="Int64" />
+    <Property Name="REPORT_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_SALE_ITEM">
+    <Key>
+      <PropertyRef Name="SALE_ID" />
+    </Key>
+    <Property Name="SALE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SALE_ITEM_ID" Type="Int32" />
+    <Property Name="INVOICE_ID" Type="Int32" />
+    <Property Name="ITEM_DISCOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ITEM_TOTAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SALE_QTY" Type="Int32" />
+    <Property Name="ITEM_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="STATUS" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TBL_SALES_RETURN">
+    <Key>
+      <PropertyRef Name="SALES_RETURN_ID" />
+    </Key>
+    <Property Name="SALES_RETURN_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_RETURN_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_WITHOUT_INVOICE" Type="Boolean" />
+    <Property Name="RETURN_DATE" Type="DateTime" Precision="3" />
+    <Property Name="GODOWN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTOMER_ID" Type="Int64" />
+    <Property Name="OUTSTANDING_BALANCE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="INVOICE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REFERENCE_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FREIGHT_CHARGE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PACKING_CHARGE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ROUND_OFF_AMOUNT" Type="Int32" />
+    <Property Name="GRAND_TOTAL" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SUBSIDY_AMOUN" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CUS_PENDING_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOTES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="SEARCH_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_EXECUTIVE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_STOCK_TRANSFER">
+    <Key>
+      <PropertyRef Name="STOCK_TRANSFER_ID" />
+    </Key>
+    <Property Name="STOCK_TRANSFER_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STOCK_TRANSFER_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_SEND" Type="Boolean" />
+    <Property Name="ITEM_ID" Type="Int64" Nullable="false" />
+    <Property Name="TRANS_QUANTITY" Type="Int32" Nullable="false" />
+    <Property Name="SEARCH_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TOTAL_STOCK_QNT" Type="Int32" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="FROM_GODOWN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TO_GODOW" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RECEIVED_BY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FROM_GODOWN_ID" Type="Int64" />
+    <Property Name="TO_GODOWN_ID" Type="Int64" />
+    <Property Name="RECEIVED_BY_ID" Type="Int64" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="Int64" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="IS_NEGATIVE_STOCK_MESSAGE" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_SUPP_PAYMENT">
+    <Key>
+      <PropertyRef Name="SUPP_PAYMENT" />
+    </Key>
+    <Property Name="SUPP_PAYMENT" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUPP_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPP_SMS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_SEND_EMAIL" Type="Boolean" />
+    <Property Name="IS_SEND_SMS" Type="Boolean" />
+    <Property Name="CURRENT_ADV_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_RIE_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PAYMENT_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CURRENT_PAYABLE_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TOTAL_PANDING" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SELECTED_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AFTE_PAYMENT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CASH_REG_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHEQUE_BANK_BRANCH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHEQUE_BANK_AC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHEQUE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="TRANSFER_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TRANSFER_BANK_BRANCH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TRANSFER_BANK_AC" Type="Int64" />
+    <Property Name="TRANSFER_DATE" Type="DateTime" Precision="3" />
+    <Property Name="FINANCAL_AMT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FINACIAL_AC" Type="Int64" />
+    <Property Name="DISCOUNT_FLAT" Type="Int32" />
+    <Property Name="DISCOUNT_PERCENT" Type="Int32" />
+    <Property Name="TOTAL_PAYMENT_MODES" Type="Int32" />
+    <Property Name="CURRENT_PAYMENT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="CASH_REG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BUSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAYMENT_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPP_ID" Type="Int64" />
+    <Property Name="CASH_REG_ID" Type="Int64" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="IS_PRINT_CHECK" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="SuppPayNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBL_SUPPLIER">
+    <Key>
+      <PropertyRef Name="SUPPLIER_ID" />
+    </Key>
+    <Property Name="SUPPLIER_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUPPLIER_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SUPPLIER_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SEARCH_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VAT_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CST_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TIN_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PAN_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="STATE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ZIP_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPENING_BALANCE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IS_PREFERRED_SUPPLIER" Type="Boolean" />
+    <Property Name="IS_ACTIVE" Type="Boolean" />
+    <Property Name="PAYMENT_SETTLED" Type="Int32" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_FRIST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_LAST_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_TELEPHONE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_FAX_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_MOBILE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_WEBSITE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CONTACT_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="tbl_supppaydetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Supp_ID" Type="Int64" />
+    <Property Name="payduedate" Type="DateTime" Precision="3" />
+    <Property Name="noofday" Type="Int64" />
+    <Property Name="totalamount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="pendingamoun" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="adjustedamount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="suppinvdate" Type="DateTime" Precision="3" />
+    <Property Name="recitementryno" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="goodsecno" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="suppinv" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="totaltax" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="DOU" Type="DateTime" Precision="3" />
+    <Property Name="Delete" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="TBL_TAX">
+    <Key>
+      <PropertyRef Name="TAX_ID" />
+    </Key>
+    <Property Name="TAX_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TAX_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_VALUE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="IS_SEPARATE" Type="Boolean" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="COMPANY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TBL_TRANSFER">
+    <Key>
+      <PropertyRef Name="BANK_TRANSFER_ID" />
+    </Key>
+    <Property Name="BANK_TRANSFER_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="INVOICE_ID" Type="Int64" />
+    <Property Name="TRANSFER_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TRANSFER_BANK_AC" Type="Int64" />
+    <Property Name="TRANSFER_BRANCH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TRANSFER_BANK_ID" Type="Int64" />
+    <Property Name="TRANSFER_DATE" Type="DateTime" Precision="3" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_UNIT_MEASURING">
+    <Key>
+      <PropertyRef Name="UNIT_ID" />
+    </Key>
+    <Property Name="UNIT_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MEASURING_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SHORT_INDAX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="USER_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="TBL_USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COMPANY_ID" Type="Int64" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LOGIN_TIME" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="MAC_ADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ROLE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TBL_VENDORS">
+    <Key>
+      <PropertyRef Name="VENDOR_ID" />
+    </Key>
+    <Property Name="VENDOR_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COMPANY_ID" Type="Int64" />
+    <Property Name="CONTACT_NAME" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ADDRESS_2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CITY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="STATE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="POSTAL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PHONE_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EAX_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL_ADDRESS" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="WEB_SITE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CREDIT_LIMIT" Type="Double" />
+    <Property Name="SUPPLIER_CODE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="VAT_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CST_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IS_ACTIVE" Type="Boolean" />
+    <Property Name="IS_PREFERRED" Type="Boolean" />
+    <Property Name="PAYMENT_DAYS" Type="Int32" />
+    <Property Name="LAST_NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TELEPHONE_NUMBER" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tmp_invoice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="Time" Type="DateTime" Precision="3" />
+    <Property Name="Items" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="Total_Amt" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Tax_Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Taxable_Amt" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Vat_Tax" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Priceinwords" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Inv_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MODULE_RIGHTS">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODULE_ID" Type="Int32" Nullable="false" />
+    <Property Name="ACTION_CREATE" Type="Boolean" />
+    <Property Name="EDIT" Type="Boolean" />
+    <Property Name="ACTION_DELETE" Type="Boolean" />
+    <Property Name="ACTION_VIEW" Type="Boolean" />
+    <Property Name="VERIFICATION" Type="Boolean" />
+    <Property Name="NOTIFICATION" Type="Boolean" />
+    <Property Name="MESSAGE" Type="Boolean" />
+    <Property Name="APPROVE" Type="Boolean" />
+    <Property Name="ROLE_ID" Type="Int64" />
+    <Property Name="MAILBACK" Type="Boolean" />
+    <Property Name="ID" Type="Int64" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="User_Id" Type="Int64" />
+    <Property Name="Company_Id" Type="Int64" />
+    <Property Name="IMORT_TO_EXCEL" Type="Boolean" />
+    <Property Name="EXPT_TO_EXCEL" Type="Boolean" />
+    <Property Name="EMPLOYEE_ID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="VIEW_GROUP_SUBGROUP">
+    <Key>
+      <PropertyRef Name="ParentId" />
+    </Key>
+    <Property Name="REPORT_GRP_ID" Type="Int64" />
+    <Property Name="GroupName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Int64" Nullable="false" />
+    <Property Name="REPORT_ID" Type="Int64" />
+    <Property Name="Child" Type="Int64" />
+  </EntityType>
+  <EntityType Name="VIEW_INVOICE">
+    <Key>
+      <PropertyRef Name="INVOICE_ID" />
+    </Key>
+    <Property Name="INVOICE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="INVOICE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CUSTOMER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTOMER_ID" Type="Int32" />
+    <Property Name="AVAILABLE_CREDIT_LIMIT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_EXECUTIVE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_EXECUTIVE_ID" Type="Int64" />
+    <Property Name="CUSTOMER_EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CUSTOMER_MOBILE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BEFORE_ROUNDOFF" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ROUNDOFF_AMOUNT" Type="Int32" />
+    <Property Name="TOTAL_AMOUNT" Type="Int32" />
+    <Property Name="QUANTITY_TOTAL" Type="Int32" />
+    <Property Name="NUMBER_OF_ITEM" Type="Int32" />
+    <Property Name="DISCOUNT_INCLUDED" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_INCLUDED" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RECIVED_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="RETURNABLE_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMMISION_EXPENSE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PENDING_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_GOODS_DELIVERED" Type="Boolean" />
+    <Property Name="IS_PRINT" Type="Boolean" />
+    <Property Name="IS_SAVE_RETURNABLE_AMOUNT" Type="Boolean" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="TRANSFER_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CHEQUE_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHEQUE_BRANCH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CASH_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FINANCIAL_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="FINANCIAL_CREDIT_AC" Type="Int64" />
+    <Property Name="FINANCIAL_CREDIT_ID" Type="Int64" />
+    <Property Name="CASH_REG_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CASH_REG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CHEQUE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CHEQUE_BANK_AC" Type="Int64" />
+    <Property Name="CHAEQE_BANK_AC_ID" Type="Int64" />
+    <Property Name="TRANSFER_DATE" Type="DateTime" Precision="3" />
+    <Property Name="TRANSFER_BANK_ID" Type="Int64" />
+    <Property Name="TRANSFER_BRANCH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TRANSFER_BANK_AC" Type="Int64" />
+    <Property Name="INVOICE_ID" Type="Int64" Nullable="false" />
+    <Property Name="TOTAL_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BUSINESS_LOCATION_ID" Type="Int64" />
+    <Property Name="BUSINESS_LOCATION_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_ITEM_ATTRIBUTE">
+    <Key>
+      <PropertyRef Name="OPENING_STOCK_ID" />
+    </Key>
+    <Property Name="ITEM_ID" Type="Int32" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_PRICE" Type="Double" />
+    <Property Name="ITEM_PRODUCT_ID" Type="Int32" />
+    <Property Name="ITEM_INVOICE_ID" Type="Int32" />
+    <Property Name="KEYWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACCESSORIES_KEYWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GODOWN_ID" Type="Int32" />
+    <Property Name="CATAGORY_ID" Type="Int64" />
+    <Property Name="SERCH_CODE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TAX_PAID" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_COLLECTED" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PURCHASE_UNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_UNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PURCHASE_UNIT_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MRP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="Int32" />
+    <Property Name="OPN_QNT" Type="Int32" />
+    <Property Name="CATEGORY_NAME" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="DISPLAY_INDEX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_UNIQUE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_GROUP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REGIONAL_LANGUAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_PRICE_BEFOR_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MODIFICATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CATAGORY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="ITEM_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WEIGHT_OF_PAPER" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_PLASTIC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_FOAM" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_CARDBOARD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="GODOWN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="COMPANY_NAME" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="BUSSINESS_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OPENING_STOCK_ID" Type="Int64" Nullable="false" />
+    <Property Name="TAX_PAID_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_COLLECTED_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_COLLECTED_ID" Type="Int32" />
+    <Property Name="TAX_PAID_ID" Type="Int32" />
+    <Property Name="BUSS_LOC_ID" Type="Int32" />
+    <Property Name="Expr1" Type="Int32" />
+    <Property Name="PURCHAGE_UNIT_ID" Type="Int32" />
+    <Property Name="SALE_UNIT_ID" Type="Int32" />
+    <Property Name="IS_ACIVE" Type="Boolean" />
+    <Property Name="INCLUDE_TAX" Type="Boolean" />
+    <Property Name="TAX_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_VALUE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ITEM_LOCATION_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="View_STOCK_SEARCH">
+    <Key>
+      <PropertyRef Name="ITEM_ID" />
+      <PropertyRef Name="TRANS_QUANTITY" />
+    </Key>
+    <Property Name="ITEM_ID" Type="Int32" Nullable="false" />
+    <Property Name="ITEM_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_DESCRIPTION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_PRICE" Type="Double" />
+    <Property Name="ITEM_INVOICE_ID" Type="Int32" />
+    <Property Name="ITEM_PRODUCT_ID" Type="Int32" />
+    <Property Name="KEYWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ACCESSORIES_KEYWORD" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CATAGORY_ID" Type="Int64" />
+    <Property Name="SERCH_CODE" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="PURCHASE_UNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_UNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PURCHASE_UNIT_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SALES_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MRP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COMPANY_ID" Type="Int32" />
+    <Property Name="OPN_QNT" Type="Int32" />
+    <Property Name="CATEGORY_NAME" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="DISPLAY_INDEX" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_UNIQUE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ITEM_GROUP_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="REGIONAL_LANGUAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALES_PRICE_BEFOR_TAX" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MODIFICATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CATAGORY" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_DELETE" Type="Boolean" />
+    <Property Name="ITEM_LOCATION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WEIGHT_OF_PAPER" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_PLASTIC" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_FOAM" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WEIGHT_OF_CARDBOARD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IMAGE_PATH" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="USER_ID" Type="Int64" />
+    <Property Name="TAX_COLLECTED" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_PAID" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TAX_COLLECTED_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TAX_PAID_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SALE_UNIT_ID" Type="Int32" />
+    <Property Name="PURCHAGE_UNIT_ID" Type="Int32" />
+    <Property Name="GODOWN_ID" Type="Int32" />
+    <Property Name="BUSS_LOC_ID" Type="Int32" />
+    <Property Name="TAX_PAID_ID" Type="Int32" />
+    <Property Name="TAX_COLLECTED_ID" Type="Int32" />
+    <Property Name="IS_ACIVE" Type="Boolean" />
+    <Property Name="INCLUDE_TAX" Type="Boolean" />
+    <Property Name="TRANS_QUANTITY" Type="Int32" Nullable="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IS_SEND" Type="Boolean" />
+    <Property Name="RECEIVED_BY_ID" Type="Int64" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="STOCK_TRANSFER_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VW_EMP_ACCESS_MODULE">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODULE_ID" Type="Int32" Nullable="false" />
+    <Property Name="ACTION_CREATE" Type="Boolean" />
+    <Property Name="EDIT" Type="Boolean" />
+    <Property Name="ACTION_DELETE" Type="Boolean" />
+    <Property Name="ACTION_VIEW" Type="Boolean" />
+    <Property Name="VERIFICATION" Type="Boolean" />
+    <Property Name="NOTIFICATION" Type="Boolean" />
+    <Property Name="MESSAGE" Type="Boolean" />
+    <Property Name="APPROVE" Type="Boolean" />
+    <Property Name="ROLE_ID" Type="Int64" />
+    <Property Name="MAILBACK" Type="Boolean" />
+    <Property Name="ID" Type="Int64" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="User_Id" Type="Int64" />
+    <Property Name="Company_Id" Type="Int64" />
+    <Property Name="IMORT_TO_EXCEL" Type="Boolean" />
+    <Property Name="EXPT_TO_EXCEL" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="VW_EMP_MODULE_ACCESS">
+    <Key>
+      <PropertyRef Name="MODULE_ID" />
+    </Key>
+    <Property Name="MODULE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MODULE_ID" Type="Int32" Nullable="false" />
+    <Property Name="ACTION_CREATE" Type="Boolean" />
+    <Property Name="EDIT" Type="Boolean" />
+    <Property Name="ACTION_DELETE" Type="Boolean" />
+    <Property Name="ACTION_VIEW" Type="Boolean" />
+    <Property Name="VERIFICATION" Type="Boolean" />
+    <Property Name="NOTIFICATION" Type="Boolean" />
+    <Property Name="MESSAGE" Type="Boolean" />
+    <Property Name="APPROVE" Type="Boolean" />
+    <Property Name="ROLE_ID" Type="Int64" />
+    <Property Name="MAILBACK" Type="Boolean" />
+    <Property Name="ID" Type="Int64" />
+    <Property Name="MODIFIED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="User_Id" Type="Int64" />
+    <Property Name="Company_Id" Type="Int64" />
+    <Property Name="IMORT_TO_EXCEL" Type="Boolean" />
+    <Property Name="EXPT_TO_EXCEL" Type="Boolean" />
+  </EntityType>
+</Schema>

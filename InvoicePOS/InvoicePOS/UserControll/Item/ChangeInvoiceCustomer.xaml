@@ -1,0 +1,15 @@
+﻿<Window x:Class="InvoicePOS.UserControll.Item.ChangeInvoiceCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ChangeInvoiceCustomer" Height="161" Width="454">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="25,19,0,0" TextWrapping="Wrap" Text="Invoice Number :" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="145,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,59,0,0" TextWrapping="Wrap" Text="Customer :" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="148,57,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Content="..." Command="{Binding CustomerList}" HorizontalAlignment="Left" Margin="280,55,0,0" VerticalAlignment="Top" Width="35" Height="25"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="225,100,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="330,100,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

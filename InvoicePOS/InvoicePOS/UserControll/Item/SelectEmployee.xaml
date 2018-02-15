@@ -1,0 +1,51 @@
+﻿<Window x:Class="InvoicePOS.UserControll.Item.SelectEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SelectEmployee" Height="371" Width="664">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            
+        </Grid.ColumnDefinitions>
+        <DataGrid  SelectionMode="Extended"   RowHeight="35" Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1" IsReadOnly="True"   AutoGenerateColumns="False" ItemsSource="{Binding Path=_ListGrid,Mode=TwoWay, AsyncState=true,  NotifyOnTargetUpdated=True,NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedEmployee,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"   Name="dataGrid1" Margin="15,80,11,111"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" ColumnWidth="*" EnableRowVirtualization="false" EnableColumnVirtualization="false" CanUserAddRows="False" CanUserReorderColumns="False" RenderTransformOrigin="0.5,0.5">
+            <DataGrid.Style>
+                <Style TargetType="DataGrid">
+                    <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                    <Setter Property="RowBackground" Value="#f9f9f9"/>
+                    <Setter Property="BorderBrush" Value="#dddddd"/>
+                    <Setter Property="FontWeight" Value="Normal"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                </Style>
+            </DataGrid.Style>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#ffffff" />
+                            <Setter Property="FontWeight" Value="Normal" />
+                            <Setter Property="BorderBrush" Value="#dddddd"/>
+
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn    Header="Employee Code" Binding="{Binding EMPLOYEE_CODE}" Width="200" />
+                <DataGridTextColumn    Header="Name" Binding="{Binding FIRST_NAME}" Width="250"/>
+                <DataGridTextColumn    Header="Search Code" Binding="{Binding SEARCH_CODE}" Width="250"/>
+                <DataGridTextColumn    Header="Joining Date" Binding="{Binding DATE_OF_JOIN}" Width="250"/>
+                <DataGridTextColumn    Header="Department" Binding="{Binding DEPARTMENT}" Width="250"/>
+                <DataGridTextColumn    Header="Designation" Binding="{Binding EMPLOYEE_DESIGNATION}" Width="250"/>
+                <DataGridTextColumn    Header="Location Name" Binding="{Binding BUSINESS_LOCATION}" Width="250"/>
+                <DataGridTextColumn    Header="Is Active" Binding="{Binding PURCHASE_UNIT_PRICE}" Width="250"/>
+                <DataGridTextColumn    Header="Commision Quick Position" Binding="{Binding COMMISSION_QUICK_POSITION}" Width="250"/>
+                <DataGridTextColumn    Header="Can Have Appointment" Binding="{Binding IS_APPOINTMENT}" Width="250"/>
+                <DataGridTextColumn    Header="Work Shift Name" Binding="{Binding WORKING_SHIFT}" Width="250"/>
+               
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button Content="OK" Command="{Binding SelectOk}" HorizontalAlignment="Left" Margin="380,280,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="530,280,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>

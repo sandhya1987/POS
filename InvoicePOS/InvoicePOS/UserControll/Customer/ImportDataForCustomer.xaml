@@ -1,0 +1,42 @@
+﻿<Window x:Class="InvoicePOS.UserControll.Customer.ImportDataForCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ImportDataForCustomer" Height="466" Width="599">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="31,80,0,0" TextWrapping="Wrap" Text="Select File :" VerticalAlignment="Top"/>
+        <TextBox Text="{Binding ExcelPath}" HorizontalAlignment="Left" Height="23" Margin="115,75,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="305"/>
+        <Button  Content="Start Import" HorizontalAlignment="Left" Margin="430,68,0,0" VerticalAlignment="Top" Width="95" Command="{Binding UploadItems}" Height="32" RenderTransformOrigin="0.474,0.219"/>
+        <!--<Button Content="Start Import" HorizontalAlignment="Left" Margin="485,105,0,0" VerticalAlignment="Top" Width="85" Height="37"/>-->
+        <Grid Margin="-5,-41,5,-14">
+            <DataGrid Margin="36,162,55,80" x:Name="datagrid"  AutoGenerateColumns="True" IsReadOnly="True" HorizontalAlignment="Center" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectedItem}" VerticalAlignment="Center" Height="249" Width="500">
+                <DataGrid.Style>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                        <Setter Property="RowBackground" Value="#f9f9f9"/>
+                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                    </Style>
+                </DataGrid.Style>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#ffffff" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+
+            </DataGrid>
+        </Grid>
+    </Grid>
+</Window>

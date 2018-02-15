@@ -1,0 +1,81 @@
+﻿<Window x:Class="InvoicePOS.Views.Main.Discount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Discount" Height="756" Width="443.98">
+    <Window.InputBindings>
+        <KeyBinding Key="Enter" Command="{Binding ButDiscount}"/>
+    </Window.InputBindings>
+    <Grid Margin="0,0,0,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="245*"/>
+            <RowDefinition Height="66*"/>
+            <RowDefinition Height="215*"/>
+            <RowDefinition Height="420*"/>
+        </Grid.RowDefinitions>
+        <RadioButton Content="" IsChecked="{Binding DisCountInvoiceBill, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Command="{Binding InvoiceChecked}" HorizontalAlignment="Left" Margin="25,0,0,167" Width="16" Height="16" VerticalAlignment="Bottom" />
+        <TextBlock HorizontalAlignment="Left" Margin="50,5,0,0" TextWrapping="Wrap" Text="Add Spot Discount for Total Invoice Bill Amount" VerticalAlignment="Top" Height="16" Width="253"/>
+        <GroupBox  Header="Invoice Amount" IsEnabled="{Binding TotalInvoiceBill}" HorizontalAlignment="Left" Margin="30,20,0,0" VerticalAlignment="Top" Width="382" Height="220" Grid.RowSpan="3">
+        <Grid Margin="-5,5,3,8">
+            <TextBlock HorizontalAlignment="Left" Margin="53,-3,0,0" TextWrapping="Wrap" Text="Discount Amount :" VerticalAlignment="Top"/>
+            <!--<TextBox HorizontalAlignment="Left" Height="23" Margin="194,77,0,0" TextWrapping="Wrap" Text="{Binding dfsdfs}" VerticalAlignment="Top" Width="163"/>-->
+            <TextBox HorizontalAlignment="Left" IsEnabled="{Binding DiscountAmtIsEnabel}" Text="{Binding DisAmt,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="23" Margin="199,-6,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="163"/>
+            <!--<TextBlock HorizontalAlignment="Left" Margin="69,77,0,0" TextWrapping="Wrap" Text="Amount Before Tax :" VerticalAlignment="Top"/>-->
+            <TextBlock HorizontalAlignment="Left" Margin="40,99,0,0" TextWrapping="Wrap" Text="Amount After Tax :" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="44,128,0,0" TextWrapping="Wrap" Text="Total Discount Amount :" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="49,164,0,0" TextWrapping="Wrap" Text="New Invoice Amount :" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="199,104,0,0" TextWrapping="Wrap" Text="{Binding GROSSAMT}" VerticalAlignment="Top" Width="163"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="201,131,0,0" TextWrapping="Wrap" Text="{Binding TotalDisAmt}" VerticalAlignment="Top" Width="163"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="204,166,0,0" TextWrapping="Wrap" Text="{Binding DisNewAmount}" VerticalAlignment="Top" Width="163"/>
+            
+            <TextBlock HorizontalAlignment="Left" Margin="44,19,0,0" TextWrapping="Wrap" Text="Discount Percentage(%) :" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" IsEnabled="{Binding DiscountPerIsEnable}" Height="23" Margin="201,19,0,0" TextWrapping="Wrap" Text="{Binding DisPer,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="163"/>
+            <RadioButton Content="" IsChecked="{Binding DiscountAmt, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Left" Margin="27,-3,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="" IsChecked="{Binding DisCountPer, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Left" Margin="23,19,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="Apply Discount After Tax" HorizontalAlignment="Left" Margin="29,48,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="Apply Discount Before Tax" HorizontalAlignment="Left" Margin="204,49,0,0" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="37,78,0,0" TextWrapping="Wrap" Text="Discount Percentage:" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="26" Margin="199,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160"/>
+
+            </Grid>
+    </GroupBox>
+        <GroupBox Name="InvoiceSelectAmount" Header="Item Discount" IsEnabled="False" HorizontalAlignment="Left" Margin="33,23,0,0" VerticalAlignment="Top" Width="382" Height="370" Grid.Row="2" Grid.RowSpan="2">
+            <Grid Margin="-8,5,-7,18">
+                <TextBlock HorizontalAlignment="Left" Margin="50,38,0,0" TextWrapping="Wrap" Text="Discount Amount :" VerticalAlignment="Top"/>
+                <!--<TextBox HorizontalAlignment="Left" Height="23" Margin="194,77,0,0" TextWrapping="Wrap" Text="{Binding dfsdfs}" VerticalAlignment="Top" Width="163"/>-->
+                <TextBox HorizontalAlignment="Left" IsEnabled="{Binding DiscountAmtIsEnabel}" Text="{Binding DisAmt,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Height="23" Margin="199,36,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="163"/>
+                <!--<TextBlock HorizontalAlignment="Left" Margin="69,77,0,0" TextWrapping="Wrap" Text="Amount Before Tax :" VerticalAlignment="Top"/>-->
+                <TextBlock HorizontalAlignment="Left" Margin="32,159,0,0" TextWrapping="Wrap" Text="Current Item Sales Price :" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="24,274,0,0" TextWrapping="Wrap" Text="Discount Amount After Tax:" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="29,304,0,0" TextWrapping="Wrap" Text="New Item Total Sales Price:" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="206,156,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.SALES_PRICE}" VerticalAlignment="Top" Width="158"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="209,274,0,0" TextWrapping="Wrap" Text="{Binding TotalDisAmt}" VerticalAlignment="Top" Width="160"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="209,301,0,0" TextWrapping="Wrap" Text="{Binding DisNewAmount}" VerticalAlignment="Top" Width="160"/>
+               
+                <TextBlock HorizontalAlignment="Left" Margin="49,64,0,0" TextWrapping="Wrap" Text="Discount Percentage(%) :" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" IsEnabled="{Binding DiscountPerIsEnable}" Height="23" Margin="199,64,0,0" TextWrapping="Wrap" Text="{Binding DisPer,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="163"/>
+                <RadioButton Content="" IsChecked="{Binding DiscountAmt, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Left" Margin="24,38,0,0" VerticalAlignment="Top"/>
+                <RadioButton Content="" IsChecked="{Binding DisCountPer, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Left" Margin="24,64,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="Apply Discount After Tax" HorizontalAlignment="Left" Margin="26,93,0,0" VerticalAlignment="Top"/>
+                <CheckBox Content="Apply Discount Before Tax" HorizontalAlignment="Left" Margin="204,94,0,0" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="31,129,0,0" TextWrapping="Wrap" Text="Current Item Basic Price:" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="26" Margin="204,124,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.PURCHASE_UNIT_PRICE}" VerticalAlignment="Top" Width="160"/>
+                <TextBlock HorizontalAlignment="Left" Margin="41,-1,0,0" TextWrapping="Wrap" Text="Barcode" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="217,0,0,302" TextWrapping="Wrap" Text="{Binding SelectedItem.BARCODE}" VerticalAlignment="Bottom"/>
+                <TextBlock HorizontalAlignment="Left" Margin="38,18,0,0" TextWrapping="Wrap" Text="Item Name" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="199,31,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.ITEM_NAME}" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="33,189,0,0" TextWrapping="Wrap" Text="Current Item Quantity" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="204,186,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Current_Qty}" VerticalAlignment="Top" Width="165"/>
+                <TextBlock HorizontalAlignment="Left" Margin="37,219,0,0" TextWrapping="Wrap" Text="Discount Percentage:" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="209,216,0,0" TextWrapping="Wrap" Text="{Binding Disper}" VerticalAlignment="Top" Width="160"/>
+                <TextBlock HorizontalAlignment="Left" Margin="19,249,0,0" TextWrapping="Wrap" Text="Total Item Sales Price After Tax" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="209,246,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.TOTAL}" VerticalAlignment="Top" Width="160"/>
+
+            </Grid>
+        </GroupBox>
+        <RadioButton Content="Add Spot Discount for Selected Amount" IsChecked="{Binding DisCountPerSelectAmount, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Left" Margin="30,6,0,0" VerticalAlignment="Top" Grid.Row="2" Height="16" Width="228"/>
+        <TextBlock HorizontalAlignment="Left" Margin="38,230,0,0" TextWrapping="Wrap" Text="Reason for Discount" VerticalAlignment="Top" Grid.Row="3" RenderTransformOrigin="0.488,0.94" Height="16" Width="107"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="37,249,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="378" Grid.Row="3"/>
+        <Button Content="Ok" Command="{Binding DiscountOk}" HorizontalAlignment="Left" Margin="225,292,0,0" VerticalAlignment="Top" Width="75" Grid.Row="3" Height="22"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="315,292,0,0" VerticalAlignment="Top" Width="75" Grid.Row="3" Height="22"/>
+    </Grid>
+</Window>

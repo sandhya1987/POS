@@ -1,0 +1,16 @@
+﻿<Window x:Class="InvoicePOS.UserControll.GoDown.ViewGoDown"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
+        Title="ViewGoDown" Height="342.857" Width="549.248">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="52,29,0,0" TextWrapping="Wrap" Text="GoDown Name" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Text="{Binding SelectedGosown.GODOWN_NAME,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" Height="24" Margin="154,29,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="281"/>
+        <CheckBox Content="Is Active" IsChecked="{Binding SelectedGosown.IS_ACTIVE,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="154,132,0,0" VerticalAlignment="Top"/>
+        <!--<Button Content="Save"  Visibility="{Binding CreatVisible}" HorizontalAlignment="Left" Margin="123,230,0,0" VerticalAlignment="Top" Width="75" Height="38" Command="{Binding Path=InsertGodown,UpdateSourceTrigger=PropertyChanged }"/>
+        <Button Content="Update" Visibility="{Binding UpdVisible}"  HorizontalAlignment="Left" Margin="123,230,0,0" VerticalAlignment="Top" Width="75" Height="38" Command="{Binding Path=UpdateGodown,UpdateSourceTrigger=PropertyChanged }"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="232,230,0,0" VerticalAlignment="Top" Width="75" Height="38" Command="{Binding Path=CancelGodown,UpdateSourceTrigger=PropertyChanged }"/>-->
+        <TextBlock HorizontalAlignment="Left" Margin="52,59,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="69" Margin="154,58,0,0" TextWrapping="Wrap" Text="{Binding SelectedGosown.GOSOWN_DESCRIPTION,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="281"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="232,230,0,0" VerticalAlignment="Top" Width="75" Height="38" Command="{Binding Path=CancelGodown,UpdateSourceTrigger=PropertyChanged }"/>
+    </Grid>
+</Window>

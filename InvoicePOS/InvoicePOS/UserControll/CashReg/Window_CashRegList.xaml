@@ -1,0 +1,99 @@
+﻿<Window x:Class="InvoicePOS.UserControll.CashReg.Window_CashRegList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InvoicePOS.UserControll.CashReg"
+        mc:Ignorable="d"
+        Title="Window_CashRegList" Height="427" Width="1564.765">
+    <Grid Background="#ffffff" Margin="10,10,657,-11">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="107*"/>
+            <RowDefinition Height="28*"/>
+        </Grid.RowDefinitions>
+        <Grid  VerticalAlignment="Top" Margin="644,0,-644,0" >
+            <TextBox x:Name="textBox" Text="{Binding SEARCH_PO}" Margin="463,0,0,-10" TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom" Width="205" HorizontalAlignment="Left"/>
+            <Button Command="{Binding SearchItem}"    Margin="680,21,0,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="75" HorizontalAlignment="Left"  >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
+                    <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                </DockPanel>
+            </Button>
+            <Button Command="{Binding AddCashReg}"    Margin="0,21,396,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                    <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                </DockPanel>
+            </Button>
+            <Button Command="{Binding  EditCashReg}"  Margin="0,21,321,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                    <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                </DockPanel>
+            </Button>
+            <Button Command="{Binding ViewCashReg}"    Margin="0,21,246,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
+                    <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                </DockPanel>
+            </Button>
+            <Button Command="{Binding DeleteCashReg}"  Margin="0,21,164,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                    <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                </DockPanel>
+            </Button>
+
+            <Button Command="{Binding TransferCashReg}"    Margin="0,21,10,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="149" HorizontalAlignment="Right"  >
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                    <Label Content="Transfer CashReg" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                </DockPanel>
+            </Button>
+
+        </Grid>
+        <DataGrid  SelectionMode="Single" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectedItem}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" Margin="10,78,-647,0" VerticalAlignment="Top"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" TextBlock.TextAlignment="Center" Height="227" MouseDoubleClick="Win_CashRegList_MouseDoubleClick">
+            <!--<DataGrid  SelectionMode="Single" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectedItem}"  RowHeight="35"  FontSize="14" Cursor="Hand"  BorderBrush="Transparent" GridLinesVisibility="Horizontal" BorderThickness="1" IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Height="454" Width="1028"  AlternationCount="2">-->
+            <DataGrid.Style>
+                <Style TargetType="DataGrid">
+                    <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                    <Setter Property="RowBackground" Value="#f9f9f9"/>
+                    <Setter Property="BorderBrush" Value="#dddddd"/>
+                    <Setter Property="FontWeight" Value="Normal"/>
+                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="FontWeight" Value="Normal"/>
+                </Style>
+            </DataGrid.Style>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#4cbf64" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding SLNO}"  />
+                <DataGridTextColumn   Width="75" MaxWidth="300" Header="Location Name" Binding="{Binding BUSINESS_LOCATION}"  />
+                <DataGridTextColumn     Width="150" MaxWidth="155" Header="Register Number" Binding="{Binding CASH_REG_NO}"  />
+                <DataGridTextColumn   Width="200" Header="Register Name"  Binding="{Binding CASH_REG_NAME}"/>
+                <DataGridTextColumn   Width="200" Header="Is main Cash Register"  Binding="{Binding IS_MAIN_CASH}"/>
+                <DataGridTextColumn   Width="200" Header="Cash Amount"  Binding="{Binding CASH_AMOUNT}"/>
+                <DataGridTextColumn   Width="200" Header="Is In Use"  Binding="{Binding CUSTOMER_GROUP}"/>
+                <DataGridTextColumn   Width="200" Header="Is Adjustment Cash Register"  Binding="{Binding ISADGUSTMENT}"/>
+                <DataGridTextColumn   Width="200" Header="Perfix"  Binding="{Binding CASH_REG_PREFIX}"/>
+                <DataGridTextColumn   Width="200" Header="Login"  Binding="{Binding LOGIN}"/>
+                <DataGridTextColumn   Width="200" Header="Is limited Item"  Binding="{Binding SHIPPING_MOBILE_NO}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="button" Command="{Binding SelectOk}" Content="OK" HorizontalAlignment="Left" Margin="1193,17,-378,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="30" Click="button_Click"/>
+        <Button x:Name="button1" Content="Cancel" HorizontalAlignment="Left" Margin="1304,17,-489,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Height="30"/>
+
+
+    </Grid>
+</Window>

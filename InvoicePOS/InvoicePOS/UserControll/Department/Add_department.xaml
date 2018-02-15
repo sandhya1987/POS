@@ -1,0 +1,25 @@
+﻿<Window x:Class="InvoicePOS.UserControll.Department.Add_department"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowStartupLocation="CenterScreen"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add_department" Height="567.866" Width="410.977">
+    <Window.InputBindings>
+        <KeyBinding Key="Enter" Command="{Binding CreatVisible}"/>
+        <KeyBinding Key="Enter" Command="{Binding UpdVisible}"/>
+        <KeyBinding Key="Escape" Command="{Binding Cancel}"/>
+    </Window.InputBindings>
+    <Grid Margin="0,0,0,-4">
+        <Label Content="Department :" HorizontalAlignment="Left" Margin="25,34,0,0" VerticalAlignment="Top" Width="145"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="27,65,0,0" TextWrapping="Wrap" Text="{Binding DEPARTMENT_NAME,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="220" />
+        <Label Content="Sort Index :" HorizontalAlignment="Left" Margin="25,103,0,0" VerticalAlignment="Top" Width="145"/>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="27,134,0,0" TextWrapping="Wrap" Text="{Binding SortIndex,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="220"/>
+        <Label Content="Add Photo" HorizontalAlignment="Left" Margin="27,172,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content="Remove Photo" HorizontalAlignment="Left" Margin="282,172,0,0" VerticalAlignment="Top" Width="91"/>
+        <Button Content="Save" Visibility="{Binding CreatVisible}" Command="{Binding InsertDepartment}" HorizontalAlignment="Left" Margin="185,496,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="OK"  Visibility="{Binding UpdVisible}" Command="{Binding UpdateDepartment}" HorizontalAlignment="Left" Margin="185,496,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="299,496,0,0" VerticalAlignment="Top" Width="75"/>
+        <Grid HorizontalAlignment="Left" Height="279" Margin="25,203,0,0" VerticalAlignment="Top" Width="350" Background="#ddd">
+
+        </Grid>
+
+    </Grid>
+</Window>

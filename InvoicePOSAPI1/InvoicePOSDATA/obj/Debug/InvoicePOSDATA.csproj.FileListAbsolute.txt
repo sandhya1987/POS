@@ -1,0 +1,1226 @@
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\13.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\13.12.2016\New folder (21)\New folder (2)\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\13.12.2016\New folder (21)\New folder (2)\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\13.12.2016\New folder (21)\New folder (2)\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\14.12.216_suvendu\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\15.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\15.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\15.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\16.12.20162\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\21.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\MSDeveloper\Desktop\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\22.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\26.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\28.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\MSDeveloper\AppData\Roaming\Skype\My Skype Received Files\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\MSDeveloper\AppData\Roaming\Skype\My Skype Received Files\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\MSDeveloper\AppData\Roaming\Skype\My Skype Received Files\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\30.12.2016\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\02.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\03.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\04.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\05.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\06.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoicePOS\09.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoicePOS\09.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoicePOS\09.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\10.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\12.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\12.01.2017_update\12.01.2017_update\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\14.01.2017\14.01.2017\14.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\20.01.2017\19.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\21.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\22.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\25.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\30.01.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\11.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\DOTNET-3\Desktop\14.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\16.02.2017\16.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoicePOS\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\18.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\New\21.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\28.02.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoicePOS\01.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\Desktop\02.03.2017\InvoicePOSAPI\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\06.03.207\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\10.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\17.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\24.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\25.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\27.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\27.03.20171\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\31.03.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\DOTNET-3\Desktop\03.04.2017\29.03.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\AppData\Roaming\Skype\My Skype Received Files\04.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\07.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\Desktop\14.04.2017_new\14.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update\17.04.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\02.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\02.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\02.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\02.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\02.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\02.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\02.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\02.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\02.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\New folder\04.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\08.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\New folder (3)\09.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\13.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\16.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\17.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\17.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\17.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\17.05.2017_Update\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\30.05.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\Suvendu\Desktop\02.06.2017\01.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\07.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\08.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\Sourin\Invoice_Pos\09.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\19.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\20.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\20.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\20.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\21.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\22.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\23.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\27.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\27.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\27.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\28.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\28.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\28.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\29.06.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\29.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\29.06.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\3.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\3.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\3.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\4.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\hpp\Desktop\InvoiceApi\Update 25.04.2017\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\dotnet\Desktop\6.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\dotnet\Desktop\10.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\dotnet\Desktop\10.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\10.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\12.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\dotnet\Desktop\12.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\12.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\13.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\dotnet\Desktop\13.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\13.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\17.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\dotnet\Desktop\17.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\17.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\18.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\18.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\18.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\19.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\20.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\20.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\20.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\21.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\21.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\21.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\22.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\22.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\22.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\24.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\24.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\24.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\25.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\25.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\25.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\26.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\26.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\26.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\27.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\27.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\27.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\28.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\28.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\28.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\29.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\29.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\29.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\31.07.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\31.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\31.07.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\1.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\1.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\1.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\3.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\3.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\3.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\3.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\3.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\3.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\8.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\8.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\8.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\8.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\8.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\8.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\10.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\11.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\11.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\11.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\12.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\12.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\12.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\14.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\14.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\14.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\16.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\16.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\16.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\17.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\17.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\17.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Samsung\Desktop\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Samsung\Desktop\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Samsung\Desktop\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\dotnet\Desktop\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Samsung\Desktop\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Samsung\Desktop\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Samsung\Desktop\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\18.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\dotnet\Desktop\18.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\18.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\InvoiceApi\Update 25.04.2017\23.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\InvoiceApi\Update 25.04.2017\24.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\24.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\24.08.2017\18.08.2017\18.08.2017\18.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\Update 25.04.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\Update 25.04.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\Update 25.04.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\InvoiceApi\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\InvoiceApi\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\InvoiceApi\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Samsung\Desktop\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Samsung\Desktop\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Samsung\Desktop\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\InvoiceApiNew\29.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\InvoiceApiNew\30.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\InvoiceApiNew\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Samsung\Desktop\31.08.2017\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Samsung\Desktop\31.08.2017\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Samsung\Desktop\31.08.2017\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\31.08.2017\31.08.2017\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\31.08.2017\31.08.2017\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\31.08.2017\31.08.2017\31.08.2017\25.08.2017\25.08.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\04.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\04.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\04.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\InvoiceApiNew\05.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\InvoiceApiNew\06.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\06.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\06.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Samsung\Desktop\07.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Samsung\Desktop\07.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Samsung\Desktop\07.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\InvoiceApiNew\08.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\InvoiceApiNew\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\Samsung\Desktop\09.09.2017\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Samsung\Desktop\09.09.2017\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Samsung\Desktop\09.09.2017\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\11.09.2017\11.09.2017\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\11.09.2017\11.09.2017\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\11.09.2017\11.09.2017\09.09.2017\08.09.2017\07.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\hpp\Desktop\12.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\hpp\Desktop\12.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\hpp\Desktop\12.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\hpp\Desktop\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+C:\Users\dotnet\Desktop\13.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\InvoiceApiNew\15.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\15.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\15.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\19.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\19.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\19.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\20.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\20.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\20.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\InvoiceApiNew\21.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\InvoiceApiNew\23.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\23.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\23.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+C:\Users\Samsung\Desktop\24.09.2017\23.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+C:\Users\Samsung\Desktop\24.09.2017\23.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+C:\Users\Samsung\Desktop\24.09.2017\23.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\24.09.2017\24.09.2017\23.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\24.09.2017\24.09.2017\23.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\24.09.2017\24.09.2017\23.09.2017\13.09.2017\12.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\InvoiceApiNew\26.09.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\InvoiceApiNew\03.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\InvoiceApiNew\04.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\04.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\04.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\05.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\05.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\05.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\InvoiceApiNew\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\InvoiceApiNew\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\InvoiceApiNew\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\06.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\abhishek\06.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\abhishek\06.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\10.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\abhishek\10.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\abhishek\10.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+G:\abhishek\10.10.2017 updated\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\New folder\11.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\New folder\11.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\New folder\11.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\11.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\abhishek\11.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\abhishek\11.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+G:\abhishek\12.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\New folder\12.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\abhishek\13.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\New folder\13.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\New folder\13.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\New folder\13.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+G:\abhishek\14.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\New folder\14.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\New folder\14.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\New folder\14.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+G:\abhishek\16.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\New folder\16.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\New folder\16.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\New folder\16.10.2017 update\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+G:\abhishek\17.10.2017\06.10.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+G:\annwesha\06.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\annwesha\06.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+G:\annwesha\06.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+G:\annwesha\06.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+G:\annwesha\06.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+G:\annwesha\06.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+G:\annwesha\06.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+G:\annwesha\06.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\annwesha\06.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\annwesha\07.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+G:\annwesha\08.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\annwesha\08.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\annwesha\08.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+G:\annwesha\09.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\annwesha\12.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\annwesha\12.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\annwesha\12.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\annwesha\12.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\annwesha\12.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\annwesha\12.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\annwesha\12.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\annwesha\12.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\annwesha\12.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+E:\annwesha\18.12.2017\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\annwesha\04.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\annwesha\08.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\annwesha\13.01.2018\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\tanima\18.1.2018_POS\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe.config
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.exe
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\InvoicePOSDATA.pdb
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.dll
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\bin\Debug\EntityFramework.xml
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csprojResolveAssemblyReference.cache
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.Properties.Resources.resources
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.csproj.GenerateResource.Cache
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.exe
+D:\_GIT_T\POS\InvoicePOSAPI1\InvoicePOSDATA\obj\Debug\InvoicePOSDATA.pdb

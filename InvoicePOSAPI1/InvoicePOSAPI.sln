@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicePOSAPI", "InvoicePOSAPI\InvoicePOSAPI.csproj", "{C99BA383-083D-4A5A-8E87-9675BAE1E475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoicePOSDATA", "InvoicePOSDATA\InvoicePOSDATA.csproj", "{AFAF830D-E2E0-43F8-9D95-A087CC51C9E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C99BA383-083D-4A5A-8E87-9675BAE1E475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C99BA383-083D-4A5A-8E87-9675BAE1E475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C99BA383-083D-4A5A-8E87-9675BAE1E475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C99BA383-083D-4A5A-8E87-9675BAE1E475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFAF830D-E2E0-43F8-9D95-A087CC51C9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFAF830D-E2E0-43F8-9D95-A087CC51C9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFAF830D-E2E0-43F8-9D95-A087CC51C9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFAF830D-E2E0-43F8-9D95-A087CC51C9E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

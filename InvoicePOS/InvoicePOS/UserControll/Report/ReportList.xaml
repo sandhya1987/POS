@@ -1,0 +1,136 @@
+﻿<UserControl x:Class="InvoicePOS.UserControll.Report.ReportList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="700" Width="1120">
+    <Grid Margin="0,0,2,0" >
+        <Border Background="#ffffff" Margin="0,0,0,10">
+            <Grid Background="#ffffff">
+                <Grid HorizontalAlignment="Left" Height="494" Margin="0,10,0,0" VerticalAlignment="Top" Width="288">
+
+
+                    <TreeView x:Name="tv" ItemsSource="{Binding ListGrid}">
+                        <TreeView.ItemContainerStyle>
+                         
+                            <Style TargetType="{x:Type TreeViewItem}">
+                                <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                                <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="FontSize" Value="14"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="FontWeight" Value="Bold" />
+                                        <Setter Property="FontSize" Value="12"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TreeView.ItemContainerStyle>
+
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Children,UpdateSourceTrigger=PropertyChanged}">
+                                <TextBlock Text="{Binding GROUP_NAME}" />
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                    </TreeView>
+                </Grid>
+                <Grid HorizontalAlignment="Left" Height="55" Margin="553,10,0,0" VerticalAlignment="Top" Width="278"/>
+                <Button Command="{Binding ReportAddClick}"    Margin="0,17,530,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                        <Label Content="New" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    </DockPanel>
+                </Button>
+                <!--<Button x:Name="button" Command="{Binding ReportAddClick}" Content="New Report" HorizontalAlignment="Left" Margin="507,18,0,0" VerticalAlignment="Top" Width="84" Height="30"/>-->
+                <!--<Button x:Name="button_Copy" Content="Edit Report" HorizontalAlignment="Left" Margin="601,20,0,0" VerticalAlignment="Top" Width="75" Height="30"/>-->
+                <!--<Button x:Name="button_Copy1" Content="Delete" HorizontalAlignment="Left" Margin="688,20,0,0" VerticalAlignment="Top" Width="75" Height="30"/>-->
+                <Button VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" Margin="0,17,360,0" >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                        <Label Content="Delete Group" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                    </DockPanel>
+                </Button>
+                <Button Command="{Binding ReportGroupClick}"    Margin="0,17,252,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="100" HorizontalAlignment="Right"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                        <Label Content="New Group" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    </DockPanel>
+                </Button>
+                <!--<Button x:Name="button_Copy2" Command="{Binding ReportGroupClick}" Content="New Group" HorizontalAlignment="Left" Margin="774,19,0,0" VerticalAlignment="Top" Width="82" Height="30"/>-->
+                <Button   VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right"  Width="80" Margin="0,17,444,0" >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                        <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                    </DockPanel>
+                </Button>
+                <!--<Button x:Name="button_Copy3" Content="Edit Group" HorizontalAlignment="Left" Margin="901,20,0,0" VerticalAlignment="Top" Width="75" Height="30"/>-->
+                <Button   VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right"  Width="110" Margin="0,17,134,0">
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                        <Label Content="Edit Group" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                    </DockPanel>
+                </Button>
+
+                <Button VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" Width="120" Margin="0,17,7,0" >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                        <Label Content="Delete Group" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                    </DockPanel>
+                </Button>
+                <!--<Button x:Name="button_Copy4" Content="Delete Group" HorizontalAlignment="Left" Margin="1001,20,0,0" VerticalAlignment="Top" Width="99" Height="30"/>-->
+                <Grid Height="285" Margin="295,117,74,0" VerticalAlignment="Top">
+                    <!--MouseDoubleClick="{Binding Doubleclick}"-->
+                    <DataGrid  SelectionMode="Single"   ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectReportAdd}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" VerticalAlignment="Stretch"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" TextBlock.TextAlignment="Center" Margin="10,-14,-69,24" >
+                        <DataGrid.Style>
+                            <Style TargetType="DataGrid">
+                                <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                                <Setter Property="RowBackground" Value="#f9f9f9"/>
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                            </Style>
+                        </DataGrid.Style>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#ffffff" />
+                                        <Setter Property="FontWeight" Value="Normal" />
+                                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                                        <Setter Property="Background" Value="Red" />
+                                        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="75" MaxWidth="300" Header="Sl.No" TextBlock.Foreground="Red" Binding="{Binding SLNO}"  FontFamily="Verdana"  TextBlock.TextAlignment="Center" SortDirection="Ascending" CanUserSort="False" />
+                            <DataGridTextColumn Width="150" MaxWidth="155" Header="Search keyword" Binding="{Binding SEARCH_KEYWORD}"  />
+                            <DataGridTextColumn Width="150" MaxWidth="155" Header="Name" Binding="{Binding REPORT_NAME}"  />
+                            <DataGridTextColumn Width="200" Header="Description"  Binding="{Binding DESCRIPTION}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+                <Grid HorizontalAlignment="Left"   VerticalAlignment="Top" >
+                    <!--<CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBox_Copy" Content="CheckBox" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <CheckBox x:Name="checkBox_Copy1" Content="CheckBox" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+
+                    <CheckBox x:Name="checkBox_Copy3" Content="CheckBox" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top"/>-->
+                    <!--<Button x:Name="button_Copy5" Content="Search" HorizontalAlignment="Left" Margin="1041,74,-848,-62" VerticalAlignment="Top" Width="58" Height="30" Style="{StaticResource GreenButtonright}"/>-->
+                    <Button Command="{Binding SearchCustomer}"     VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="85" HorizontalAlignment="Left" Margin="1027,62,-851,-50"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
+                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="29" Margin="844,62,-754,-49" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171" Style="{StaticResource numberdisplayTextbox}"/>
+                    <Button x:Name="button_Copy6" Content="Ok" HorizontalAlignment="Left" Margin="1019,423,-850,-421" VerticalAlignment="Top" Command="{Binding PrintSetup}" Width="82" Height="40" Style="{StaticResource GreenButtonright}"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

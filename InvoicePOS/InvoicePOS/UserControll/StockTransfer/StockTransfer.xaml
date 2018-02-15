@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="InvoicePOS.UserControll.StockTransfer.StockTransfer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="1050">
+    <Grid Margin="0,0,83,45" >
+        <Border Background="#90000000" Margin="0,0,-87,0">
+            <Grid Background="#ffffffff">
+            <Grid HorizontalAlignment="Left" Height="75" Margin="10,0,0,0" VerticalAlignment="Top" Width="1034">
+                    <Button Command="{Binding AddStockTransferClick}"   Margin="0,10,368,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right" Height="39"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                        <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    </DockPanel>
+                </Button>
+                <Button   Margin="0,10,141,0" Command="{Binding DeleteStockTranfer}" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right" Height="37"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/Delete-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                        <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    </DockPanel>
+                </Button>
+                    <Button   Margin="0,10,294,0" Command="{Binding EditStockTra}" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right" Height="37"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/Delete-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button   Margin="0,10,215,0" Command="{Binding ViewStockTra}" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right" Height="39"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/Delete-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding TransferRequestClick}"   Margin="0,10,10,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="126" HorizontalAlignment="Right" Height="39"  >
+                    <DockPanel HorizontalAlignment="Stretch" Width="138" Height="20">
+                        <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
+                        <Label Content="Transfer request" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" Width="126" Height="30" Margin="0,0,0,-10" />
+                    </DockPanel>
+                </Button>
+            </Grid>
+            <Grid HorizontalAlignment="Left" Height="574" Margin="0,80,0,0" VerticalAlignment="Top" Width="800">
+                    <DataGrid HorizontalAlignment="Center" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectedStockTransfer}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" VerticalAlignment="Top" Height="519" Width="470"   AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd"  TextBlock.TextAlignment="Center">
+                        <DataGrid.Style>
+                        <Style TargetType="DataGrid">
+                            <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                            <Setter Property="RowBackground" Value="#f9f9f9"/>
+                            <Setter Property="BorderBrush" Value="#dddddd"/>
+                            <Setter Property="FontWeight" Value="Normal"/>
+                            <Setter Property="BorderThickness" Value="1"/>
+
+                        </Style>
+                    </DataGrid.Style>
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#ffffff" />
+                                    <Setter Property="FontWeight" Value="Normal" />
+                                    <Setter Property="BorderBrush" Value="#dddddd"/>
+                                    <Setter Property="Background" Value="Red" />
+
+
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
+
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn x:Name="Number"    TextBlock.Foreground="Red"   Header="Sl.No" Binding="{Binding SLNO}" Width="100" FontFamily="Verdana"  />
+                        <DataGridTextColumn    Header="From Godown" Binding="{Binding TO_GODOWN}" Width="100" />
+                        <DataGridTextColumn    Header="To Godown" Binding="{Binding TO_GODOWN}" Width="100"/>
+                        <DataGridTextColumn    Header="Employee" Binding="{Binding RECEIVED_BY}" Width="100"/>
+                        <!--<DataGridTextColumn    Header="Transfer Type" Binding="{Binding TransferType}" Width="130"/>-->
+                        <DataGridTextColumn    Header="Date" Binding="{Binding DATE}" Width="70"/>
+                        <!--<DataGridTextColumn    Header="Docket Number" Binding="{Binding STOCK_TRANSFER_NUMBER}" Width="100"/>-->
+                        <!--<DataGridTextColumn    Header="Transporter Name" Binding="{Binding TransporterName}" Width="100"/>-->
+
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+            <CheckBox Content="Show Only Stock Correction" HorizontalAlignment="Left" Margin="43,52,0,0" VerticalAlignment="Top"/>
+            <CheckBox Content="Show Only Transfer Request" HorizontalAlignment="Left" Margin="42,31,0,0" VerticalAlignment="Top"/>
+            <CheckBox Content="Show Only Stock Transfer" HorizontalAlignment="Left" Margin="42,10,0,0" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="820,52,0,0" TextWrapping="Wrap" Text="{Binding SEARCH_TRANSFER}" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Search" HorizontalAlignment="Left" Margin="945,52,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>
+</Border>
+    </Grid>
+</UserControl>

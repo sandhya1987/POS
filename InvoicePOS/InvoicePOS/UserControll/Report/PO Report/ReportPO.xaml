@@ -1,0 +1,68 @@
+﻿<Window x:Class="InvoicePOS.UserControll.Report.PO_Report.ReportPO"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InvoicePOS.UserControll.Report.PO_Report"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="ReportPO" Height="633.272" Width="808.647">
+    <Grid Background="White" Name="grid11">
+
+       
+
+        <DataGrid  SelectionMode="Single" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectedPO}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" Margin="10,178,7,0" VerticalAlignment="Top"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" TextBlock.TextAlignment="Center" Height="400" >
+            <DataGrid.Style>
+                <Style TargetType="DataGrid">
+                    <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                    <Setter Property="RowBackground" Value="#f9f9f9"/>
+                    <Setter Property="BorderBrush" Value="#dddddd"/>
+                    <Setter Property="FontWeight" Value="Normal"/>
+                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="FontWeight" Value="Normal"/>
+                </Style>
+            </DataGrid.Style>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#ffffff" />
+                            <Setter Property="FontWeight" Value="Normal" />
+                            <Setter Property="BorderBrush" Value="#dddddd"/>
+                            <Setter Property="Background" Value="Red" />
+                            <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+
+            <DataGrid.Columns>
+                <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl No" Binding="{Binding SLNO}" FontFamily="Verdana"  TextBlock.TextAlignment="Center" />
+                <DataGridTextColumn     Width="75" MaxWidth="300" Header="PONumber" Binding="{Binding PO_NUMBER}" FontFamily="Verdana"  TextBlock.TextAlignment="Center" />
+                <DataGridTextColumn     Width="150" MaxWidth="155" Header="POStatus" Binding="{Binding BARCODE}"  />
+                <DataGridTextColumn   Width="200" Header="POType"  Binding="{Binding ITEM_NAME}"/>
+                <DataGridTextColumn   Width="200" Header="PODate"  Binding="{Binding DELIVERY_DATE}"/>
+                <DataGridTextColumn   Width="200" Header="Supplier By"  Binding="{Binding SUPPLIER}"/>
+                <DataGridTextColumn   Width="200" Header="Create By"  Binding="{Binding SALES_PRICE,StringFormat=\{0:c\}}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" Name="textBlock1" Text="---------------------------------------------------------------" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="20" HorizontalAlignment="Center" Margin="48,33,541,0" Name="textBlock2" Text=" POS SALESPERSON RESULTS REPORT" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="10,53,0,0" Name="textBlock3" Text="---------------------------------------------------------------" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="11,76,0,0" Name="textBlock4" Text=" Sales from" VerticalAlignment="Top" />
+
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="10,104,0,0" Name="textBlock7" Text="Salesperson" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="17,127,0,0" Name="textBlock8" Text="Store" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="9,150,0,0" Name="textBlock9" Text=" Report run" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="88,76,0,0" Name="textBlock10" Text="05/01/2014" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="160,313,0,0" Name="textBlock13" Text="*" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="160,127,0,0" Name="textBlock14" Text="5002" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="130,150,0,0" Name="textBlock15" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat=\{0:dd/MM/yyyy hh:mm tt\}}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="224,76,0,0" Name="textBlock16" Text="06/01/2014" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="175,76,0,0" Name="textBlock17" Text="To" VerticalAlignment="Top" />
+
+    </Grid>
+</Window>

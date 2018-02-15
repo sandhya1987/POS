@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="InvoicePOS.UserControll.StockLedger.StockLedgerList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="750" d:DesignWidth="1050">
+    <Grid Margin="0,0,0,45" >
+        <Border Background="#90000000">
+            <Grid Background="#ffffffff" Margin="0,0,0,-10">
+                <Grid HorizontalAlignment="Left" Height="149" VerticalAlignment="Top" Width="1050">
+                    <CheckBox Content="Correction Transaction" IsChecked="{Binding IS_ACTIVE}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.556,1.996" Margin="440,20,0,0"/>
+                    <CheckBox Content="Is Active" IsChecked="{Binding IS_ACTIVE}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.556,1.996" Margin="440,40,0,0"/>
+                    <CheckBox Content="Stock Transfer Transaction" IsChecked="{Binding IS_ACTIVE}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.556,1.996" Margin="440,60,0,0"/>
+                    <TextBox x:Name="comapany" HorizontalAlignment="Left" Height="23" Margin="139,12,0,0" TextWrapping="Wrap" Text="{Binding comapany,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+
+
+                    <TextBox Name="Godown" HorizontalAlignment="Left" Height="23" Margin="139,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="Item" HorizontalAlignment="Left" Height="23" Margin="139,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="13,19,0,0" TextWrapping="Wrap" Text="Company" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="13,45,0,0" TextWrapping="Wrap" Text="Godown" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="13,70,0,0" TextWrapping="Wrap" Text="Item" VerticalAlignment="Top" Height="41"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="13,95,0,0" TextWrapping="Wrap" Text="From Date" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="280,98,0,0" TextWrapping="Wrap" Text="To Date" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="13,123,0,0" TextWrapping="Wrap" Text="Opening Stock" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="openingstock" HorizontalAlignment="Left" Margin="119,123,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="253,126,0,0" TextWrapping="Wrap" Text="Closing Stock" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="350,129,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="629,19,0,0" TextWrapping="Wrap" Text=" Stock in " VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="629,45,0,0" TextWrapping="Wrap" Text=" Stock Out" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="629,73,0,0" TextWrapping="Wrap" Text=" Total Transaction" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="stockin" HorizontalAlignment="Left" Margin="774,12,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="stockout" HorizontalAlignment="Left" Margin="774,40,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="totaltransaction" HorizontalAlignment="Left" Margin="774,73,0,0" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Top"/>
+                    <Button Content="--" HorizontalAlignment="Left" Command="{Binding GodownClick}" Margin="262,38,0,0" VerticalAlignment="Top" Width="26"/>
+                    <Button Content="--" HorizontalAlignment="Left" Command="{Binding ItemListClick}" Margin="263,66,0,0" VerticalAlignment="Top" Width="26"/>
+                    <Button Content="--" HorizontalAlignment="Left" Command="{Binding ComapnyClick}" Margin="264,13,0,0" VerticalAlignment="Top" Width="26"/>
+                    <Button Content="view details" HorizontalAlignment="Left" Command="{Binding getdetails}" Margin="493,99,0,0" VerticalAlignment="Top" Width="87"/>
+                    <DatePicker x:Name="fromdate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="139,97,0,0" Width="127"/>
+                    <DatePicker x:Name="todate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="333,97,0,0" Width="130"/>
+                </Grid>
+
+                <DataGrid  SelectionMode="Single" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid1,Mode=TwoWay}" SelectedItem="{Binding Path=SelectedStock,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  RowHeight="28"  FontSize="12" Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1" IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" Margin="10,156,10,0" VerticalAlignment="Top" Height="400"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" >
+                    <DataGrid.Style>
+                        <Style TargetType="DataGrid">
+                            <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                            <Setter Property="RowBackground" Value="#f9f9f9"/>
+                            <Setter Property="BorderBrush" Value="#dddddd"/>
+                            <Setter Property="FontWeight" Value="Normal"/>
+                            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="FontWeight" Value="Normal"/>
+                        </Style>
+                    </DataGrid.Style>
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#ffffff" />
+                                    <Setter Property="FontWeight" Value="Normal" />
+                                    <Setter Property="BorderBrush" Value="#dddddd"/>
+                                    <Setter Property="Background" Value="Red" />
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.RowStyle>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn    x:Name="sl" TextBlock.Foreground="Red"   Header="Sl.No" Binding="{Binding SlNo}" Width="50" FontFamily="Verdana"  />
+                        <DataGridTextColumn    Header="Date" Binding="{Binding DATE}" Width="100" />
+                        <DataGridTextColumn    Header="Stock In" Binding="{Binding stockin}" Width="100"/>
+                        <DataGridTextColumn    Header="Stock Out" Binding="{Binding stockout}" Width="100"/>
+                        <DataGridTextColumn    Header="Narration" Binding="{Binding NARRATION}" Width="130"/>
+                        <DataGridTextColumn    Header="Document Type" Binding="{Binding DOCUMENTTYPE}" Width="150"/>
+                        <DataGridTextColumn    Header="Document Name" Binding="{Binding DOCUMENTAME}" Width="150"/>
+                        <DataGridTextColumn    Header="Company" Binding="{Binding COMPANY}" Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+               
+
+            </Grid>
+        </Border>
+       
+    </Grid>
+</UserControl>

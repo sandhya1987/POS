@@ -1,0 +1,224 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" x:Class="InvoicePOS.Views.Customer.CustomerAdd"
+        Title="Add Customer" Height="700" Width="1050">
+    <Window.InputBindings>
+        <KeyBinding Key="Enter" Command="{Binding LogInClick}"/>
+    </Window.InputBindings>
+    <Grid>
+        <Grid>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" TextWrapping="Wrap" Text="Customer Code :" VerticalAlignment="Top" Width="95"/>
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="25" Margin="115,10,0,0" TextWrapping="Wrap" Text="C00001" VerticalAlignment="Top" Width="205"/>
+            <Button x:Name="button" Content="Define My Own Code" Height="25" Margin="335,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="195"/>
+        </Grid>
+        <!-- customer details start here-->
+        <Grid>
+            <GroupBox x:Name="groupBox" Header="Customer Details" HorizontalAlignment="Left" Margin="10,40,0,0" Width="355" Height="225" VerticalAlignment="Top" Style="{StaticResource groupheadcustomer}">
+                <Grid Margin="0,11,0,-11">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="29*"/>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="279*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left"  Margin="10,-3.33,-46,192" TextWrapping="Wrap" Text="First name :" VerticalAlignment="Bottom" Style="{StaticResource customertextname}" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="firstname" HorizontalAlignment="Left"  Margin="49,-5.96,0,186" TextWrapping="Wrap" VerticalAlignment="Bottom" Style="{StaticResource customerdisplayTextbox}" Grid.Column="2"/>
+                    <TextBlock x:Name="textBlock1" HorizontalAlignment="Left"  Margin="10,0,-46,165" TextWrapping="Wrap" Text="Last name :" VerticalAlignment="Bottom" Style="{StaticResource customertextname}" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="lastname" HorizontalAlignment="Left"  Margin="49,0,0,159" TextWrapping="Wrap" VerticalAlignment="Bottom" Style="{StaticResource customerdisplayTextbox}" Grid.Column="2"/>
+                    <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Stretch"  Margin="10,0,-46,139" TextWrapping="Wrap" Text="Search Code :" VerticalAlignment="Bottom" Style="{StaticResource customertextname}" Grid.ColumnSpan="2" Width="Auto"/>
+                    <TextBox x:Name="search" HorizontalAlignment="Left"  Margin="49,0,0,132" TextWrapping="Wrap" VerticalAlignment="Bottom" Style="{StaticResource customerdisplayTextbox}" Grid.Column="2"/>
+                    <TextBlock x:Name="vat" HorizontalAlignment="Left"  Margin="10,0,-46,108" TextWrapping="Wrap" Text="Vat No :" VerticalAlignment="Bottom" Style="{StaticResource customertextname}" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name="vatno" HorizontalAlignment="Left"  Margin="49,0,0,101" TextWrapping="Wrap" VerticalAlignment="Bottom" Style="{StaticResource customerdisplayTextboxsmall}" Grid.Column="2" d:LayoutOverrides="HorizontalAlignment"/>
+                    <TextBlock x:Name="cst" HorizontalAlignment="Left"  Margin="135.73,0,0,106" TextWrapping="Wrap" Text="CST No :" VerticalAlignment="Bottom" Style="{StaticResource globaltextname}" Grid.Column="2" />
+                    <TextBox x:Name="cstno" HorizontalAlignment="Left"  Margin="189,0,0,101" TextWrapping="Wrap" VerticalAlignment="Bottom" Style="{StaticResource customerdisplayTextboxsmall}" Grid.Column="2"/>
+                    <CheckBox x:Name="checkBox" Content="Is Active" Height="19" Margin="48,0,60,74" VerticalAlignment="Bottom" Grid.Column="2" d:LayoutOverrides="VerticalAlignment" Style="{StaticResource checkboxname}" />
+
+                    <GroupBox x:Name="groupBox1" Header="Customer Display Name" Height="55" Margin="10,0,10,19" VerticalAlignment="Bottom" Grid.ColumnSpan="3">
+                        <Grid>
+                            <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="25" Margin="10,0,0,2.04" TextWrapping="Wrap" Text="Customer Name for Display :" VerticalAlignment="Bottom" Width="174" Style="{StaticResource globaltextname}"/>
+                        </Grid>
+                    </GroupBox>
+
+
+
+                </Grid>
+            </GroupBox>
+
+        </Grid>
+        <!--customer details end here-->
+
+        <!--customer loyality start here-->
+        <Grid>
+            <GroupBox x:Name="groupBox2" Header="Customer Loyality" HorizontalAlignment="Left" Margin="10,269,0,0" Width="355" Height="225" VerticalAlignment="Top" Style="{StaticResource groupheadcustomer}">
+                <Grid Height="202.04" VerticalAlignment="Top" Margin="0,-4,0,0">
+                    <CheckBox x:Name="checkBox1" Content="Is Enrolled for loyality Points" Height="28.04" Margin="10,10,69,0" VerticalAlignment="Top" Style="{StaticResource checkboxname}"/>
+                    <TextBlock VerticalAlignment="Top" Text="Loyalty Number :" TextWrapping="Wrap" x:Name="textBlock3" Margin="10,38.04,0,0"  HorizontalAlignment="Left" Style="{StaticResource customertextname}"/>
+                    <TextBox x:Name="textBox1" Margin="115,35.04,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" Style="{StaticResource customerdisplayTextbox}" Width="Auto"/>
+                    <Button x:Name="button1" Content="Auto-Generate Number" Margin="115,64.04,10,0" Height="25" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="textBlock4" Margin="8,96.09,0,80.95" TextWrapping="Wrap" Text="Enrollment Date :" HorizontalAlignment="Left" Style="{StaticResource customertextname}"/>
+                    <TextBlock x:Name="textBlock5"  Margin="8,0,0,71" TextWrapping="Wrap" Text="Loyalty Points :" VerticalAlignment="Bottom" HorizontalAlignment="Left" Style="{StaticResource customertextname}"/>
+                    <TextBlock x:Name="textBlock7" Height="19.95" Margin="117,0,81,65" TextWrapping="Wrap" Text="0.00" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="textBlock6" Margin="8,0,0,46" TextWrapping="Wrap" Text="Referred By :" VerticalAlignment="Bottom" HorizontalAlignment="Left" Style="{StaticResource customertextname}"/>
+                    <TextBox x:Name="textBox2"  Margin="115,0,10,39" TextWrapping="Wrap" VerticalAlignment="Bottom" Style="{StaticResource customerdisplayTextbox}" Width="Auto"/>
+                    <CheckBox x:Name="checkBox2" Content="Is Loyalty points to referre on &#xa;Every Invoice" Height="32" Margin="115,0,5,2" VerticalAlignment="Bottom"/>
+
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <!--customer loyality end here-->
+        <!--shipping & Billing  address Section start here-->
+        <Grid>
+            <TabControl x:Name="tabControl" Margin="380,48,317,0" Height="352" VerticalAlignment="Top">
+                <TabItem Header="Shipping Address">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="136*"/>
+                            <ColumnDefinition Width="14*"/>
+                            <ColumnDefinition Width="40*"/>
+                            <ColumnDefinition Width="145*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="textBlock8" HorizontalAlignment="Stretch" Height="20" Margin="10,3,30,0" TextWrapping="Wrap" Text="Address line 1 :" VerticalAlignment="Top"  Style="{StaticResource globaltextlabel}"/>
+                        <TextBox x:Name="textBox3"  Margin="10,19,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextbox}" Width="Auto" Grid.ColumnSpan="4"/>
+                        <TextBlock x:Name="textBlock10" HorizontalAlignment="Stretch" Height="26" Margin="10,45,30,0" TextWrapping="Wrap" Text="Address line 2 :" VerticalAlignment="Top" Style="{StaticResource globaltextlabel}"/>
+                        <TextBox x:Name="textBox4"  Margin="10,61,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextbox}" Width="Auto" Grid.ColumnSpan="4"/>
+                        <TextBlock x:Name="textBlock9" Height="22" Margin="10,84,0,0" TextWrapping="Wrap" Text="City :" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="textBlock11" Margin="10,127,26,0" TextWrapping="Wrap" Text="State" Height="16" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                        <TextBox x:Name="textBox5" Margin="10,147,12,0" TextWrapping="Wrap" Style="{StaticResource shippingTextbox}" Width="Auto"  VerticalAlignment="Top" Grid.ColumnSpan="4"/>
+                        <TextBlock x:Name="textBlock12" Height="29" Margin="10,170,26,0" TextWrapping="Wrap" Text="Zip Code :" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                        <TextBox x:Name="textBox7"  Margin="10,190,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextbox}" Grid.ColumnSpan="4" Width="Auto" />
+                        <TextBlock x:Name="textBlock13" Height="20" Margin="10,214,0,0" TextWrapping="Wrap" Text="Telephone Number :" VerticalAlignment="Top" Style="{StaticResource globaltextlabel}"/>
+                        <TextBox x:Name="textBox8"  Margin="10,236,26,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextboxsmall}" Grid.ColumnSpan="3"/>
+                        <TextBlock x:Name="textBlock13_Copy" Height="20" Margin="27,213,0,0" TextWrapping="Wrap" Text="Mobile Number :" VerticalAlignment="Top" Grid.Column="2" Style="{StaticResource globaltextlabel}" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox8_Copy"  Margin="27,236,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="2" Style="{StaticResource shippingTextboxsmall}" Grid.ColumnSpan="2"/>
+                        <TextBlock x:Name="textBlock14" Height="20" Margin="10,263,0,0" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Top" Style="{StaticResource globaltextlabel}"/>
+                        <TextBox x:Name="textBox7_Copy"  Margin="10,284,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextbox}"  Grid.ColumnSpan="4" Width="Auto"  />
+                        <TextBox x:Name="textBox5_Copy" Margin="10,103,12,0" TextWrapping="Wrap" Style="{StaticResource shippingTextbox}" Width="Auto"  VerticalAlignment="Top" Grid.ColumnSpan="4"/>
+
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Billing Address">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="121*"/>
+                            <ColumnDefinition Width="199*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="textBlock89" HorizontalAlignment="Stretch" Height="20" Margin="10,19,30,0" TextWrapping="Wrap" Text="Address line 1 :" VerticalAlignment="Top"  Style="{StaticResource globaltextlabel}" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox39"  Margin="10,36,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextbox}" Width="Auto" Grid.ColumnSpan="3"/>
+                        <TextBlock x:Name="textBlock109" HorizontalAlignment="Stretch" Height="26" Margin="10,61,30,0" TextWrapping="Wrap" Text="Address line 2 :" VerticalAlignment="Top" Style="{StaticResource globaltextlabel}" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox49"  Margin="10,77,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextbox}" Width="Auto" Grid.ColumnSpan="3"/>
+                        <TextBlock x:Name="textBlock99" Height="22" Margin="10,99,0,0" TextWrapping="Wrap" Text="City :" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                        <TextBlock x:Name="textBlock119" Margin="10,141,171,0" TextWrapping="Wrap" Text="State :" Height="16" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                        <TextBox x:Name="textBox59" Margin="10,161,12,0" TextWrapping="Wrap" Style="{StaticResource shippingTextbox}" Width="Auto"  VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                        <TextBlock x:Name="textBlock129" Height="29" Margin="10,185,171,0" TextWrapping="Wrap" Text="Zip Code :" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                        <TextBox x:Name="textBox79"  Margin="10,206,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextbox}" Grid.ColumnSpan="3" Width="Auto" />
+                        <TextBlock x:Name="textBlock139" Height="20" Margin="10,232,0,0" TextWrapping="Wrap" Text="Telephone Number :" VerticalAlignment="Top" Style="{StaticResource globaltextlabel}" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox89"  Margin="10,250,171,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextboxsmall}" Grid.ColumnSpan="3"/>
+                        <TextBlock x:Name="textBlock13_Copy9" Height="20" Margin="41,231,0,0" TextWrapping="Wrap" Text="Mobile Number :" VerticalAlignment="Top" Grid.Column="2" Style="{StaticResource globaltextlabel}"/>
+                        <TextBox x:Name="textBox8_Copy9"  Margin="41,250,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="2" Style="{StaticResource shippingTextboxsmall}"/>
+                        <TextBlock x:Name="textBlock149" Height="20" Margin="10,277,0,0" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Top" Style="{StaticResource globaltextlabel}" Grid.ColumnSpan="2"/>
+                        <TextBox x:Name="textBox7_Copy9"  Margin="10,294,12,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource shippingTextbox}"  Grid.ColumnSpan="3" Width="Auto"  />
+                        <TextBox x:Name="textBox5_Copy9" Margin="10,119,12,0" TextWrapping="Wrap" Style="{StaticResource shippingTextbox}" Width="Auto"  VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+                        <CheckBox x:Name="checkBox3" Content="Same as Shipping Address" Grid.Column="2" Height="19" Margin="0,4,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="167"/>
+
+
+                    </Grid>
+                </TabItem>
+
+
+            </TabControl>
+
+        </Grid>
+        <!--shipping & Billing  address Section end here-->
+        <!--credit limit start here-->
+        <Grid>
+            <GroupBox x:Name="groupBox3" Header="Credit Limit / FA" Height="95" Margin="380,400,317,0" VerticalAlignment="Top" Style="{StaticResource groupheadcustomer}">
+                <Grid>
+                    <CheckBox x:Name="checkBox4" Content="Use System default Credit Limit" Height="23.04" Margin="9,9,60,0" VerticalAlignment="Top" Style="{StaticResource checkboxname}"/>
+                    <TextBlock x:Name="textBlock16" Margin="9,30.04,0,0" TextWrapping="Wrap" Text="Credit Limit :" Height="25" VerticalAlignment="Top" Style="{StaticResource globaltextname}" Width="90"/>
+                    <TextBlock x:Name="textBlock16_Copy" Margin="104,30.04,10,0" TextWrapping="Wrap" Text="0" Height="25" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+                    <TextBlock x:Name="textBlock16_Copy1" Margin="9,50.04,0,0" TextWrapping="Wrap" Text="FA Balance :"  VerticalAlignment="Top" Style="{StaticResource globaltextname}" Width="90"/>
+                    <TextBlock x:Name="textBlock16_Copy2" Margin="104,50.04,10,-3" TextWrapping="Wrap" Text="0" Height="25" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+
+                </Grid>
+            </GroupBox>
+
+        </Grid>
+        <!--credit limit end here-->
+        <!-- add photo section start here-->
+        <Grid>
+            <GroupBox x:Name="groupBox4" Header="Add Customer Image" Margin="0,10,10,0" Height="390" VerticalAlignment="Top" HorizontalAlignment="Right" Width="292" Style="{StaticResource groupheadcustomer2}">
+
+                <Grid>
+                    <Button x:Name="button2_Copy" Content="Remove Image" Height="35" Margin="0,0,10,22" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="116"/>
+                    <Rectangle Fill="#FFF4F4F5" Margin="10,13,10,81" Stroke="Black"/>
+                    <Button x:Name="button2_Copy1" Content="Upload Image" Margin="10,311.04,0,0" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="116"/>
+                </Grid>
+
+            </GroupBox>
+
+        </Grid>
+        <!-- add photo section end here-->
+        <!-- customer group section start here-->
+        <Grid>
+            <GroupBox x:Name="groupBox5" Header="Customer Group" HorizontalAlignment="Right" Margin="0,400,10,0" Width="292" Height="50" VerticalAlignment="Top" Style="{StaticResource groupheadcustomer}">
+                <Grid>
+                    <TextBlock x:Name="textBlock15" Margin="4,5.04,0,-3" TextWrapping="Wrap" Text="Customer Group :" HorizontalAlignment="Left" Width="104" Style="{StaticResource globaltextname}"/>
+                    <TextBox x:Name="textBox6" Margin="109,1.04,41,1" TextWrapping="Wrap" Style="{StaticResource shippingTextboxsmall}"/>
+                    <Button x:Name="button2" Content="..." HorizontalAlignment="Right" Height="21" Margin="0,0,2,1" VerticalAlignment="Bottom" Width="35"/>
+                </Grid>
+            </GroupBox>
+
+
+        </Grid>
+        <!-- customer group section end here-->
+        <!-- financial Account section start here-->
+        <Grid>
+            <GroupBox x:Name="groupBox6" Header="Financial Account" HorizontalAlignment="Right" Margin="0,450,10,0" Width="292" Height="45" VerticalAlignment="Top" Style="{StaticResource groupheadcustomer}">
+                <Grid>
+                    <TextBlock x:Name="textBlock17" Margin="10,1,0,-3.96" TextWrapping="Wrap" Text="Opening Balance :" HorizontalAlignment="Left" Width="104" Style="{StaticResource  globaltextname}"/>
+                    <TextBlock x:Name="textBlock17_Copy" Margin="117,0,107,-3" TextWrapping="Wrap" Text="0.00 Cr"/>
+                    <Button x:Name="button3" Content="Change" HorizontalAlignment="Right" Width="96" Margin="0,-3,2,3"/>
+                </Grid>
+            </GroupBox>
+
+
+
+        </Grid>
+        <!-- financial Account section end here-->
+        <!--multiple tab section start here-->
+        <Grid>
+            <TabControl x:Name="tabControl1" Margin="10,501,10,39">
+                <TabItem Header="Invoices">
+                    <Grid Background="#f2f2f2">
+                        <Button x:Name="button5" Content="Add New Invoice" HorizontalAlignment="Left" Margin="10,13,0,0" Width="132" Height="28.04" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment"/>
+                        <Button x:Name="button5_Copy" Content="Edit Invoice" HorizontalAlignment="Left" Margin="10,51,0,0" Width="132" Height="28.04" VerticalAlignment="Top"/>
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Recurring invoices">
+                    <Grid Background="#f2f2f2"/>
+                </TabItem>
+                <TabItem Header="Payments">
+                    <Grid Background="#f2f2f2"/>
+                </TabItem>
+                <TabItem Header="Quotes">
+                    <Grid Background="#f2f2f2"/>
+                </TabItem>
+                <TabItem Header="Notes">
+                    <Grid Background="#f2f2f2"/>
+                </TabItem>
+            </TabControl>
+
+        </Grid>
+        <!--multiple tab section end here-->
+        <Grid>
+            <Button x:Name="button4" Content="Save" HorizontalAlignment="Right" Height="29" Margin="0,0,102,5" VerticalAlignment="Bottom" Width="75"/>
+            <Button x:Name="button4_Copy" Content="Cancel" HorizontalAlignment="Right" Height="29" Margin="0,0,10,5" VerticalAlignment="Bottom" Width="75"/>
+            <Button x:Name="button6" Content="Attachment" HorizontalAlignment="Left" Height="29" Margin="10,0,0,5" VerticalAlignment="Bottom" Width="120"/>
+        </Grid>
+    </Grid>
+</Window>

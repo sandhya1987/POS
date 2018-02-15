@@ -1,0 +1,21 @@
+﻿<Window x:Class="InvoicePOS.Views.Main.Taxdetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
+        Title="Tax Details" Height="231.298" Width="319.465">
+    <Grid>
+        <Grid>
+            <TextBlock HorizontalAlignment="Left" Margin="26,24,0,0" TextWrapping="Wrap" Text="Item Name :" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="39,54,0,0" TextWrapping="Wrap" Text="Barcode :" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="106,22,0,0" TextWrapping="Wrap" Text="{Binding ITEM_NAME}" VerticalAlignment="Top" Width="191"/>
+            <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="106,52,0,0" TextWrapping="Wrap" Text="{Binding BARCODE}" VerticalAlignment="Top" Width="191"/>
+            <TextBlock HorizontalAlignment="Left" Margin="31,88,0,0" TextWrapping="Wrap" Text="Tax Name :" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="20,115,0,0" TextWrapping="Wrap" Text="Tax Price(%) :" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="36,144,0,0" TextWrapping="Wrap" Text="Total Tax :" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="106,85,0,0" TextWrapping="Wrap" Text="{Binding TaxName}" VerticalAlignment="Top" Width="191"/>
+            <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="106,113,0,0" TextWrapping="Wrap" Text="{Binding TaxPrice}" VerticalAlignment="Top" Width="191"/>
+            <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="106,141,0,0" TextWrapping="Wrap" Text="{Binding TotalTax}" VerticalAlignment="Top" Width="191"/>
+            <Button Content="Close" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="226,170,0,0" VerticalAlignment="Top" Width="75"/>
+        </Grid>
+
+    </Grid>
+</Window>

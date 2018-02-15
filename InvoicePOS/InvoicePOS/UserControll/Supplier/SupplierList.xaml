@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="InvoicePOS.UserControll.Supplier.SupplierList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="1050" Height="757.313">
+    <Grid Margin="0,0,0,10" >
+        <Border Background="#90000000">
+            <Grid Background="#ffffff">
+                <Grid>
+                    <Grid VerticalAlignment="Top" Margin="10,115,-10,0"  >
+
+                        <DataGrid  SelectionMode="Single" Height="500" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectedSupplier}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" Margin="3,-31,17,0" VerticalAlignment="Top"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" TextBlock.TextAlignment="Center" MouseDoubleClick="grdItem_MouseDoubleClick">
+                            <DataGrid.Style>
+                                <Style TargetType="DataGrid">
+                                    <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                                    <Setter Property="RowBackground" Value="#f9f9f9"/>
+                                    <Setter Property="BorderBrush" Value="#dddddd"/>
+                                    <Setter Property="FontWeight" Value="Normal"/>
+                                    <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                    <Setter Property="FontWeight" Value="Normal"/>
+                                </Style>
+                            </DataGrid.Style>
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="#4cbf64" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
+
+                            <DataGrid.Columns>
+                                <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding SLNO}"  />
+                                <DataGridTextColumn    Width="75" MaxWidth="300" Header="Supplier Code" Binding="{Binding SUPPLIER_CODE}"  />
+                                <DataGridTextColumn     Width="150" MaxWidth="155" Header="Supplier Name" Binding="{Binding SUPPLIER_NAME}"  />
+                                <DataGridTextColumn   Width="200" Header="Search Code"  Binding="{Binding SEARCH_CODE}"/>
+                                <DataGridTextColumn   Width="200" Header="vat No"  Binding="{Binding VAT_NO}"/>
+                                <DataGridTextColumn   Width="200" Header="Cst No"  Binding="{Binding CST_NO}"/>
+                                <DataGridTextColumn   Width="200" Header="Tin No"  Binding="{Binding TIN_NO}"/>
+                                <DataGridTextColumn   Width="200" Header="Pan No"  Binding="{Binding PAN_NO}"/>
+                                <DataGridTextColumn   Width="200" Header="Adress 1"  Binding="{Binding ADDRESS_1}"/>
+                                <DataGridTextColumn   Width="200" Header="Address 2"  Binding="{Binding ADDRESS_2}"/>
+                                <DataGridTextColumn   Width="200" Header="City"  Binding="{Binding CITY}"/>
+                                <DataGridTextColumn   Width="200" Header="State"  Binding="{Binding STATE}"/>
+                                <DataGridTextColumn   Width="200" Header="Zip Code"  Binding="{Binding ZIP_CODE}"/>
+                                <DataGridTextColumn   Width="200" Header="Opening Balance"  Binding="{Binding OPENING_BALANCE}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+                <!--<Grid HorizontalAlignment="Left" VerticalAlignment="Top" Margin="455,25,0,0" Width="265">
+                    <Button Content="AddSupplier" Command="{Binding SuppPayAdd}"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="104" />
+                    <Button Content="EditSupplier" Command="{Binding EditSupplier}" HorizontalAlignment="Left" Margin="119,10,0,0" VerticalAlignment="Top" Width="75"/>
+                </Grid>-->
+                <Grid  VerticalAlignment="Top" Margin="0,35,0,0"  >
+                    <CheckBox Content="Show In Active Vendor only" IsChecked="{Binding IS_InACTIVESearch,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="11,-22,0,0" VerticalAlignment="Top" Height="19" Width="205"/>
+                    <TextBox x:Name="textBox" Text="{Binding SEARCH_SUPPLIER,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="11,0,0,37" TextWrapping="Wrap" Height="30" VerticalAlignment="Center" Width="205" HorizontalAlignment="Left" />
+                    <Button Command="{Binding SearchSupp}"    Margin="221,0,0,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="86" HorizontalAlignment="Left"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="18"/>
+                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding SuppPayAdd1}"    Margin="0,2,236,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding EditSupplier}"  Margin="0,2,162,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding ViewSupplier}"    Margin="0,2,87,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
+                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding DeleteSupp}"  Margin="0,2,5,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
+                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding ExcelClick}"    Margin="0,2,311,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                            <Label Content="Excel" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding UploadItemsClick}"    Margin="0,2,505,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="111" HorizontalAlignment="Right" Click="Button_Click_1"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                            <Label Content="Upload Items" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+                    <Button Command="{Binding ExcelImportClick}"    Margin="0,2,390,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="109" HorizontalAlignment="Right"  >
+                        <DockPanel HorizontalAlignment="Stretch">
+                            <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
+                            <Label Content="Import Items" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        </DockPanel>
+                    </Button>
+
+
+
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
