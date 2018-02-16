@@ -21,7 +21,7 @@ namespace InvoicePOS.Models
         public string CUSTOMER_MOBILE_NO { get; set; }
         public decimal BEFORE_ROUNDOFF { get; set; }
         public int ROUNDOFF_AMOUNT { get; set; }
-        public int TOTAL_AMOUNT { get; set; }
+        public decimal TOTAL_AMOUNT { get; set; }
         public int QUANTITY_TOTAL { get; set; }
         public int NUMBER_OF_ITEM { get; set; }
         public decimal DISCOUNT_INCLUDED { get; set; }

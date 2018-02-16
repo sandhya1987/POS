@@ -79,7 +79,7 @@
                         <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Height="25" Margin="10,6,0,0" TextWrapping="Wrap" Text="Select Cash Register :" VerticalAlignment="Top" Width="122"/>
                         <TextBox x:Name="CASH_REG_NAME" Text="{Binding CASH_REG}" HorizontalAlignment="Left" Margin="132,8,0,0" TextWrapping="Wrap" Width="180" Height="22" VerticalAlignment="Top"/>
                         <TextBlock x:Name="textBlock4_Copy" HorizontalAlignment="Left" Margin="68,45,0,0" TextWrapping="Wrap" Text="Amount :" Width="60" Height="14" VerticalAlignment="Top"/>
-                        <TextBox x:Name="CASH_REG_AMT" Text="{Binding CASH_AMOUNT,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Left" Margin="133,42,0,0" TextWrapping="Wrap" Width="180" Height="22" VerticalAlignment="Top"/>
+                        <TextBox  Text="{Binding CASH_AMOUNT,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" HorizontalAlignment="Left" Margin="133,42,0,0" TextWrapping="Wrap" Width="180" Height="22" VerticalAlignment="Top"/>
 
                     </Grid>
 
@@ -206,7 +206,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="0,128,0,0" TextWrapping="Wrap" Text="Total Commision Expense :" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="32,164,0,0" TextWrapping="Wrap" Text="Pending Amount :" FontSize="13" FontWeight="Bold" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="151,163,0,0" TextWrapping="Wrap" Text="{Binding PENDING_AMOUNT}" VerticalAlignment="Top" Width="155"/>
-            <TextBox Name="textbox" HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="150,36,0,0" TextWrapping="Wrap" Text="{Binding RECIVED_AMOUNT,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="161" />
+            <TextBox Name="textbox" HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="150,36,0,0" TextWrapping="Wrap" Text="{Binding CASH_AMOUNT,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="161" />
             <TextBox HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="150,83,0,0" TextWrapping="Wrap" Text="{ Binding RETURNABLE_AMOUNT,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="155"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="150,124,0,0" TextWrapping="Wrap" Text="{Binding COMMISION_EXPENSE}" VerticalAlignment="Top" Width="155"/>
             <TextBlock x:Name="ShowPendingAmtLbl" HorizontalAlignment="Left" Margin="32,200,0,0" TextWrapping="Wrap"  Visibility="Hidden" Text="Advanced Amount :" FontSize="13" FontWeight="Bold" VerticalAlignment="Top"/>
