@@ -1543,6 +1543,50 @@ namespace InvoicePOS.ViewModels
             }
 
         }
+         public ICommand _ViewLedgerVendor { get; set; }
+        public ICommand ViewLedgerVendor
+        {
+            get
+            {
+                if (_ViewLedgerVendor == null)
+                {
+                    _ViewLedgerVendor = new DelegateCommand(ViewLedgerVendor_Click);
+                }
+                return _ViewLedgerVendor;
+            }
+        }
+
+        public async void ViewLedgerVendor_Click()
+        {
+            InvoicePOS.UserControll.Supplier.SupplierViewLedger sh = new UserControll.Supplier.SupplierViewLedger);
+            if (SelectedSupplier != null)
+            {
+                InvoicePOS.UserControll.Supplier.ViewLedger.FAccount.Text = SelectedSupplier.SUPPLIER_NAME;
+                //InvoicePOS.UserControll.Customer.ViewLedger.CBalance.Text = SelectedSupplier.CLOSING_AMT.ToString();
+                InvoicePOS.UserControll.Supplier.ViewLedger.OBalance.Text = SelectedSupplier.OPENING_BALANCE.ToString();
+                //InvoicePOS.UserControll.Customer.ViewLedger.CreditLmt.Text = SelectedSupplier.credit_Limits.ToString();
+                //InvoicePOS.UserControll.Customer.ViewLedger.DebitLmt.Text = SelectedSupplier.DEFAULT_CREIT_LIMIT.ToString();
+            }
+            sh.Show();
+        }
+        public ICommand _BusinessListSupplier { get; set; }
+        public ICommand BusinessListSupplier
+        {
+            get
+            {
+                if (_BusinessListSupplier == null)
+                {
+                    _BusinessListSupplier = new DelegateCommand(BusinessListSupplier_Click);
+                }
+                return _BusinessListSupplier;
+            }
+        }
+        public async void BusinessListSupplier_Click()
+        {
+            Window_BusinessLocationList sh = new Window_BusinessLocationList();
+            sh.Show();
+       }
+
         public SupplierViewModel()
         {
             App.Current.Properties["IMG_HideShow"] = false;

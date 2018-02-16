@@ -40,6 +40,7 @@ using InvoicePOS.UserControll.DailySales;
 using InvoicePOS.UserControll.Employee;
 using InvoicePOS.UserControll.StockLedger;
 using InvoicePOS.Views.CashRegister;
+using InvoicePOS.UserControll.Customer;
 
 namespace InvoicePOS.ViewModels
 {
@@ -1346,6 +1347,14 @@ namespace InvoicePOS.ViewModels
             {
                 ChangeBussinessLocation.BussinessLocationName.Text = SelectedBusinessLoca.SHOP_NAME;
                 ChangeBussinessLocation.Address.Text = SelectedBusinessLoca.BUSS_ADDRESS_1;
+            }
+            if (App.Current.Properties["ChangeBusinessLocation"] != null && ViewLedger.BusinessList != null)
+            {
+                ViewLedger.BusinessList.Text = SelectedBusinessLoca.BUSS_ADDRESS_1;                
+            }
+            if (App.Current.Properties["ChangeBusinessLocation"] != null && ViewLedger.CompanyList != null)
+            {
+                ViewLedger.CompanyList.Text = SelectedBusinessLoca.COMPANY;
             }
             if (App.Current.Properties["BussLocListforCashAmount"] != null && CashRegisterAmountDetails.CashRegNo != null && CashRegisterAmountDetails.BusLocationName != null)
             {
