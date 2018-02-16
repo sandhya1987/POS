@@ -1431,7 +1431,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Resources.resx" />
     <EmbeddedResource Include="Resources\Settings.resx" />
     <None Include="app.config">
       <SubType>Designer</SubType>
