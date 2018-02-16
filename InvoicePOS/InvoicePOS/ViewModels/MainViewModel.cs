@@ -2202,12 +2202,13 @@ namespace InvoicePOS.ViewModels
                     {
                         AddListGrid = new ObservableCollection<ItemModel>();
                     }
-
+                    var dataList = App.Current.Properties["DataGridSearchBarcode"] as ObservableCollection<ItemModel>;
                     if (Select_BarCode != null && Select_BarCode != "")
                     {
+
                         //App.Current.Properties["ManualBarcode"] = Select_BarCode;
-                        //CASE_INSENSITIVE
                         //var itemToRemove = (from m in _ListGrid_Temp where m.BARCODE == Select_BarCode select m).ToList();
+                        //var itemToRemove = (from m in _ListGrid_Temp where m.BARCODE.ToUpper() == Select_BarCode.ToUpper() select m).ToList();
                         List<ItemModel> itemToRemove = new List<ItemModel>();
                         for (int i = 0; i < _ListGrid_Temp.Count; i++)
                         {
@@ -2220,6 +2221,7 @@ namespace InvoicePOS.ViewModels
                             }
                         }
                         ObservableCollection<ItemModel> myCollection = new ObservableCollection<ItemModel>(itemToRemove);
+
                         var Item1 = (from a in AddListGrid where a.BARCODE == Select_BarCode select a).FirstOrDefault();
 
                         int opqunt = 0;
@@ -2303,7 +2305,7 @@ namespace InvoicePOS.ViewModels
                                 x = x + 1;
                                 AddListGrid.Add(new ItemModel
                                 {
-                                    
+
                                     Discount = item.Discount,
                                     SLNO = x,
                                     ITEM_NAME = item.ITEM_NAME,
@@ -2337,7 +2339,7 @@ namespace InvoicePOS.ViewModels
                                     TaxName = item.TaxName,
                                     TaxValue = item.TaxValue,
                                     Total = ((decimal)(item.Current_Qty) * (item.SALES_PRICE)),
-                                    
+
                                 });
 
                             }
