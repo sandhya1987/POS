@@ -17,6 +17,9 @@ namespace InvoicePOSAPI.Controllers
         {
             try
             {
+                var row = from a in db.TBL_USER
+                          where a.ROLE == id && a.PASSWORD == password
+                          select a;
             var str = (from a in db.TBL_USER
                        where a.ROLE == id && a.PASSWORD == password
                        select new LogInModel

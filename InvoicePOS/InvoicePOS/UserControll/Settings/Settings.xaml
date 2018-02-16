@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="InvoicePOS.UserControll.Settings.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        Width="1050" Height="920">
+    <Grid>
+        <Button Name="Invoice" Command="{Binding Path=InvoiceClick,UpdateSourceTrigger=PropertyChanged }"   HorizontalAlignment="Left" Margin="100,50,0,0" VerticalAlignment="Top" Width="150" Height="40" Style="{StaticResource SettingButtonImage}">
+            <DockPanel Margin="0,0,0,0" HorizontalAlignment="Left" Width="146"  Height="30">
+                <Image Source="/InvoicePOS;component/Images/invoice.png" Margin="0,0,0,0" HorizontalAlignment="Left" Stretch="Uniform" DockPanel.Dock="Left" Width="30" Height="30"/>
+                <Label Content="Invoice" Width="100" Height="30" FontFamily="Verdana" FontSize="14" FontWeight="Bold" Foreground="White"></Label>
+            </DockPanel>
+        </Button>
+        <Button Name="Printer" Command="{Binding Path=PrinterClick,UpdateSourceTrigger=PropertyChanged }"   HorizontalAlignment="Left" Margin="300,50,0,0" VerticalAlignment="Top" Width="150" Height="40" Style="{StaticResource SettingButtonImage}">
+            <DockPanel Margin="0,0,0,0" HorizontalAlignment="Left" Width="146"  Height="30">
+                <Image Source="/InvoicePOS;component/Images/printer.png" Margin="0,0,0,0" HorizontalAlignment="Left" Stretch="Uniform" DockPanel.Dock="Left" Width="30" Height="30"/>
+                <Label Content="Printer" Width="100" Height="30" FontFamily="Verdana" FontSize="14" FontWeight="Bold" Foreground="White"></Label>
+            </DockPanel>
+        </Button>
+        <Button Name="Currency" Command="{Binding Path=CurrencyClick,UpdateSourceTrigger=PropertyChanged }"   HorizontalAlignment="Left" Margin="500,50,0,0" VerticalAlignment="Top" Width="150" Height="40" Style="{StaticResource SettingButtonImage}">
+            <DockPanel Margin="0,0,0,0" HorizontalAlignment="Left" Width="146"  Height="30">
+                <Image Source="/InvoicePOS;component/Images/currency.png" Margin="0,0,0,0" HorizontalAlignment="Left" Stretch="Uniform" DockPanel.Dock="Left" Width="30" Height="30"/>
+                <Label Content="Currency" Width="100" Height="30" FontFamily="Verdana" FontSize="14" FontWeight="Bold" Foreground="White"></Label>
+            </DockPanel>
+        </Button>
+        <Button Name="Email" Command="{Binding Path=EmailClick,UpdateSourceTrigger=PropertyChanged }"   HorizontalAlignment="Left" Margin="700,50,0,0" VerticalAlignment="Top" Width="150" Height="40" Style="{StaticResource SettingButtonImage}">
+            <DockPanel Margin="0,0,0,0" HorizontalAlignment="Left" Width="146"  Height="30">
+                <Image Source="/InvoicePOS;component/Images/email.png" Margin="0,0,0,0" HorizontalAlignment="Left" Stretch="Uniform" DockPanel.Dock="Left" Width="30" Height="30"/>
+                <Label Content="Email" Width="100" Height="30" FontFamily="Verdana" FontSize="14" FontWeight="Bold" Foreground="White"></Label>
+            </DockPanel>
+        </Button>
+    </Grid>
+</UserControl>

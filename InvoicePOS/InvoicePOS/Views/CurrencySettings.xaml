@@ -1,0 +1,135 @@
+﻿<Window x:Class="InvoicePOS.Views.CurrencySettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        Title="Currency Settings" Height="500" Width="640">
+    <Grid>
+        <Grid Margin="10,0,0,0" Height="420" Width="600" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <GroupBox Grid.Row="0" Grid.Column="0" Header="Number Format">
+                <Grid>
+                    <TextBlock Margin="10,10,0,0" Text="Number of Decimal Places:"></TextBlock>
+                    <TextBox Text="{Binding NumberFormatDecimalPlace,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="160,10,0,0" Height="20" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" PreviewTextInput="OnNumberFormatDecimalPlaceKeyDown"></TextBox>
+                    <RadioButton GroupName="NumberFormat" Margin="25,40,0,0" Content="##,##,##,##" IsChecked="{Binding NumberFormatRadio1,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></RadioButton>
+                    <TextBlock Margin="110,40,0,0" Text="{Binding NumberFormatRadio1Txt}"></TextBlock>
+                    <RadioButton  GroupName="NumberFormat" Margin="25,70,0,0" Content="###,###,##" IsChecked="{Binding NumberFormatRadio2,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></RadioButton>
+                    <TextBlock Margin="105,70,0,0" Text="{Binding NumberFormatRadio2Txt}"></TextBlock>
+                    <TextBlock Margin="50,95,0,0" Text="Sample :"></TextBlock>
+                    <TextBlock Margin="100,95,0,0" Text="{Binding NumberFormatTxt}"></TextBlock>
+                </Grid>
+            </GroupBox>
+            <GroupBox Grid.Row="0" Grid.Column="1" Header="Unit Price Format" Height="70" VerticalAlignment="Top">
+                <Grid>
+                    <TextBlock Margin="10,5,0,0" Text="Number of Decimal Places in Unit Price :"></TextBlock>
+                    <TextBox  Margin="230,5,0,0" Height="20" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding UnitPriceDecimalPlaces,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                    <TextBlock Margin="50,30,0,0" Text="Sample :"></TextBlock>
+                    <TextBlock Margin="100,30,0,0" Text="{Binding UnitPriceTxt}"></TextBlock>
+                </Grid>
+            </GroupBox>
+            <GroupBox Grid.Row="0" Grid.Column="1" Margin="0,70,0,0" Header="Quantity Format" Height="70" VerticalAlignment="Top">
+                <Grid>
+                    <TextBlock Margin="10,5,0,0" Text="Number of Decimal Places in Quantity :"></TextBlock>
+                    <TextBox  Margin="230,5,0,0" Height="20" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding QuantityDecimalPlaces,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                    <TextBlock Margin="50,30,0,0" Text="Sample :"></TextBlock>
+                    <TextBlock Margin="100,30,0,0" Text="{Binding QuantityTxt}"></TextBlock>
+                </Grid>
+            </GroupBox>
+            <GroupBox Grid.Row="1" Grid.ColumnSpan="2" Header="Currency" Height="280" VerticalAlignment="Top">
+                <Grid>
+                    <TextBlock Margin="25,10,0,0" Text="Currency Symbol with Normal Font :" ></TextBlock>
+                    <TextBox Margin="230,10,0,0" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding CurrencyNormalFontSymbol,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                    <TextBlock Margin="125,35,0,0" Text="Symbol Position :" ></TextBlock>
+                    <RadioButton GroupName="NormalSymbolPosition" Margin="230,35,0,0" Content="Left" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" IsChecked="{Binding NorrmalFontLeftRadio,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></RadioButton>
+                    <RadioButton GroupName="NormalSymbolPosition" Margin="280,35,0,0" Content="Right" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" IsChecked="{Binding NorrmalFontRightRadio,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></RadioButton>
+                    <TextBlock Margin="170,60,0,0" Text="Sample :" ></TextBlock>
+                    <TextBlock Margin="230,60,0,0"  Text="{Binding CurrencyNormalFontFormatTxt}" ></TextBlock>
+                    <TextBlock Margin="5,105,0,0" Text="Currency Symbol with Specialized Font :" ></TextBlock>
+                    <TextBox 
+                        Name="SpecialFontTextBox"
+                        Margin="230,100,0,0" 
+                        Height="30" 
+                        Width="120" 
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Left"  
+                        Text="{Binding CurrencySpecialFontSymbol,
+                        Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"
+                        FontFamily="{Binding fontFamily}"
+                        FontStyle="{Binding fontStyle}"
+                        FontSize="{Binding fontSize}"
+                        FontStretch="{Binding fontStretch}"
+                        FontWeight="{Binding fontWeight}"
+                        TextDecorations="{Binding txtDecorations}" >
+                        
+                    </TextBox>
+                    <TextBlock Margin="50,130,0,0" Text="Currency Symbol Font Settings :" ></TextBlock>
+                    <TextBlock Name="FontName" Margin="230,130,0,0" 
+                        Text="{Binding FontDesc}"
+                        FontFamily="{Binding fontFamily}"
+                        FontStyle="{Binding fontStyle}"
+                        FontSize="{Binding fontSize}"
+                        FontStretch="{Binding fontStretch}"
+                        FontWeight="{Binding fontWeight}"
+                        TextDecorations="{Binding txtDecorations}"
+                               Height="30"
+                               VerticalAlignment="Top"></TextBlock>
+                    <Button Margin="230,160,0,0" Click="OnFontChange" Style="{StaticResource OrdineryButton}" Content="Change Font" Height="25" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left"></Button>
+                    <TextBlock Margin="125,190,0,0" Text="Symbol Position :" ></TextBlock>
+                    <RadioButton GroupName="SpecialSymbolPosition" Margin="230,190,0,0" Content="Left" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" IsChecked="{Binding SpecialFontLeftRadio,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></RadioButton>
+                    <RadioButton GroupName="SpecialSymbolPosition" Margin="280,190,0,0" Content="Right" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" IsChecked="{Binding SpecialFontRightRadio,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></RadioButton>
+                    <TextBlock Margin="170,215,0,0" Text="Sample :" ></TextBlock>
+                    <StackPanel Margin="230,215,0,0" Orientation="Horizontal">
+                        <TextBlock 
+                            Name="CurrencySpecialFontSymbolLeft"
+                            Visibility="{Binding CurrencySpecialFontSymbolLeft}"
+                        
+                            Text="{Binding CurrencySpecialFontSymbol}"
+                            FontFamily="{Binding fontFamily}"
+                            FontStyle="{Binding fontStyle}"
+                            FontSize="{Binding fontSize}"
+                            FontStretch="{Binding fontStretch}"
+                            FontWeight="{Binding fontWeight}"
+                            TextDecorations="{Binding txtDecorations}"
+                            Height="30"
+                            VerticalAlignment="Top"
+                            >
+                        
+                        </TextBlock>
+                        <TextBlock 
+                       
+                            Text="{Binding CurrencySpecialFontFormatTxt}" 
+                             Height="30"
+                            VerticalAlignment="Top"
+                            >
+                        
+                        </TextBlock>
+                        <TextBlock 
+                            Name="CurrencySpecialFontSymbol"
+                            Text="{Binding CurrencySpecialFontSymbol}"
+                            FontFamily="{Binding fontFamily}"
+                            FontStyle="{Binding fontStyle}"
+                            FontSize="{Binding fontSize}"
+                            FontStretch="{Binding fontStretch}"
+                            FontWeight="{Binding fontWeight}"
+                            TextDecorations="{Binding txtDecorations}"
+                            Visibility="{Binding CurrencySpecialFontSymbolRight}"
+                            Height="30"
+                            VerticalAlignment="Top"></TextBlock>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+
+        </Grid>
+        <Grid Margin="0,420,0,0" Height="50" Width="600" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <Button Command="{Binding ApplyCurrencySettings}" Margin="420,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="Apply"></Button>
+            <Button Command="{Binding Cancel}" Margin="510,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="Cancel"></Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -2196,7 +2196,19 @@ namespace InvoicePOS.ViewModels
                     if (Select_BarCode != null && Select_BarCode != "")
                     {
                         //App.Current.Properties["ManualBarcode"] = Select_BarCode;
-                        var itemToRemove = (from m in _ListGrid_Temp where m.BARCODE == Select_BarCode select m).ToList();
+                        //CASE_INSENSITIVE
+                        //var itemToRemove = (from m in _ListGrid_Temp where m.BARCODE == Select_BarCode select m).ToList();
+                        List<ItemModel> itemToRemove = new List<ItemModel>();
+                        for (int i = 0; i < _ListGrid_Temp.Count; i++)
+                        {
+                            if (_ListGrid_Temp[i].BARCODE != null)
+                            {
+                                if (_ListGrid_Temp[i].BARCODE.ToUpper() == Select_BarCode.ToUpper())
+                                {
+                                    itemToRemove.Add(_ListGrid_Temp[i]);
+                                }
+                            }
+                        }
                         ObservableCollection<ItemModel> myCollection = new ObservableCollection<ItemModel>(itemToRemove);
                         var Item1 = (from a in AddListGrid where a.BARCODE == Select_BarCode select a).FirstOrDefault();
 

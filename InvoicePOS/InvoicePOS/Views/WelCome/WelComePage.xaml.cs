@@ -62,6 +62,8 @@ namespace InvoicePOS.Views.WelCome
         public static Button DepermentReff;
         public static Button RInvoiceReff;
         public static Button EstimateReff;
+        public static Button SettingsReff;
+        public static Button DashboardReff;
 
         public WelComePage()
         {
@@ -96,6 +98,8 @@ namespace InvoicePOS.Views.WelCome
             DepermentReff = Deperment;
             RInvoiceReff = RInvoice;
             EstimateReff = Estimate;
+            SettingsReff = Settings;
+            DashboardReff = Dashboard;
         }
 
         #region IMainWindow Members
@@ -106,7 +110,10 @@ namespace InvoicePOS.Views.WelCome
         void IModalService.NavigateTo(UserControl uc, BackNavigationEventHandler backFromDialog)
         {
             foreach (UIElement item in modalGrid.Children)
+            {
                 item.IsEnabled = false;
+                item.Visibility = System.Windows.Visibility.Collapsed;
+            }
             modalGrid.Children.Add(uc);
 
             _backFunctions.Push(backFromDialog);

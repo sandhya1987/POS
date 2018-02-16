@@ -36,6 +36,8 @@ using InvoicePOS.UserControll.Invoice;
 using InvoicePOS.UserControll.AccessRide;
 using InvoicePOS.UserControll.Designation;
 using InvoicePOS.UserControll.Department;
+using InvoicePOS.UserControll.Settings;
+using InvoicePOS.UserControll.DashBoard;
 using System.Windows.Media;
 using System.Collections.ObjectModel;
 using System.Net.Http;
@@ -226,7 +228,8 @@ namespace InvoicePOS.ViewModels.WelCome
             WelComePage.VenReff.Background = color3;
             WelComePage.POrdReff.Background = color4;
             WelComePage.ReptdReff.Background = Rcolor;
-
+            WelComePage.SettingsReff.Background = color;
+            WelComePage.DashboardReff.Background = color;
 
 
             ModalService.NavigateTo(new ReportList(), delegate(bool returnValue) { });
@@ -421,7 +424,8 @@ namespace InvoicePOS.ViewModels.WelCome
             WelComePage.VenReff.Background = color3;
             WelComePage.POrdReff.Background = color4;
             WelComePage.ReptdReff.Background = Rcolor;
-
+            WelComePage.SettingsReff.Background = Rcolor;
+            WelComePage.DashboardReff.Background = Rcolor;
 
 
 
@@ -483,6 +487,9 @@ namespace InvoicePOS.ViewModels.WelCome
             WelComePage.VenReff.Background = color3;
             WelComePage.POrdReff.Background = color4;
             WelComePage.ReptdReff.Background = Rcolor;
+            WelComePage.SettingsReff.Background = Rcolor;
+            WelComePage.DashboardReff.Background = Rcolor;
+
             ModalService.NavigateTo(new POList(), delegate(bool returnValue) { });
         }
 
@@ -560,6 +567,9 @@ namespace InvoicePOS.ViewModels.WelCome
             WelComePage.VenReff.Background = color3;
             WelComePage.POrdReff.Background = color;
             WelComePage.ReptdReff.Background = color;
+            WelComePage.SettingsReff.Background = color;
+            WelComePage.DashboardReff.Background = Rcolor;
+
             ModalService.NavigateTo(new SupplierList(), delegate(bool returnValue) { });
 
 
@@ -595,6 +605,8 @@ namespace InvoicePOS.ViewModels.WelCome
             WelComePage.InvoiceReff.Background = color;
             WelComePage.RInvoiceReff.Background = color;
             WelComePage.EstimateReff.Background = color;
+            WelComePage.SettingsReff.Background = color;
+            WelComePage.DashboardReff.Background = color;
         }
 
 
@@ -625,6 +637,9 @@ namespace InvoicePOS.ViewModels.WelCome
             WelComePage.VenReff.Background = color3;
             WelComePage.POrdReff.Background = color4;
             WelComePage.ReptdReff.Background = Rcolor;
+            WelComePage.SettingsReff.Background = Rcolor;
+            WelComePage.DashboardReff.Background = Rcolor;
+
             ModalService.NavigateTo(new CustomerList(), delegate(bool returnValue) { });
 
 
@@ -1005,6 +1020,74 @@ namespace InvoicePOS.ViewModels.WelCome
                 PropertyChanged(this, new PropertyChangedEventArgs(property));
             }
         }
+
+
+        private ICommand _Settings { get; set; }
+        public ICommand Settings
+        {
+            get
+            {
+                if (_Settings == null)
+                {
+                    _Settings = new DelegateCommand(Settings_Open);
+                }
+                return _Settings;
+            }
+
+        }
+
+        public void Settings_Open()
+        {
+            clear();
+            var color = (SolidColorBrush)(new BrushConverter().ConvertFrom("#f6f7f9"));
+            var color2 = (SolidColorBrush)(new BrushConverter().ConvertFrom("#f6f7f9"));
+            var color3 = (SolidColorBrush)(new BrushConverter().ConvertFrom("#f6f7f9"));
+            var color4 = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFFF0000"));
+            var Rcolor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#f6f7f9"));
+            WelComePage.ItemPRef.Background = color;
+            WelComePage.CustReff.Background = color2;
+            WelComePage.VenReff.Background = color3;
+            WelComePage.POrdReff.Background = color3;
+            WelComePage.ReptdReff.Background = Rcolor;
+            WelComePage.SettingsReff.Background = color4;
+            WelComePage.DashboardReff.Background = Rcolor;
+
+            ModalService.NavigateTo(new Settings(), delegate(bool returnValue) { });
+        }
+
+
+        private ICommand _Dashboard { get; set; }
+        public ICommand Dashboard
+        {
+            get
+            {
+                if (_Dashboard == null)
+                {
+                    _Dashboard = new DelegateCommand(Dashboard_Click);
+                }
+                return _Dashboard;
+            }
+
+        }
+
+        public void Dashboard_Click()
+        {
+            clear();
+            var Rcolor = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFFF0000"));
+            var color = (SolidColorBrush)(new BrushConverter().ConvertFrom("#f6f7f9"));
+
+            WelComePage.ItemPRef.Background = color;
+            WelComePage.CustReff.Background = color;
+            WelComePage.VenReff.Background = color;
+            WelComePage.POrdReff.Background = color;
+            WelComePage.ReptdReff.Background = color;
+            WelComePage.SettingsReff.Background = color;
+            WelComePage.DashboardReff.Background = Rcolor;
+
+            ModalService.NavigateTo(new Dashboard(), delegate(bool returnValue) { });
+        }
+
+
         private ICommand _DepartmentClick { get; set; }
         public ICommand DepartmentClick
         {

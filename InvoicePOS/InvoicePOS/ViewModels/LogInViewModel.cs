@@ -89,13 +89,14 @@ namespace InvoicePOS.ViewModels
         ObservableCollection<UserAccessModel> _ListGrid_Temp1 = new ObservableCollection<UserAccessModel>();
         public async void LogIn_Click()
         {
+            string enCryptedPassword = Cryptography.Encrypt(PASSWORD);
 
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GlobalData.gblApiAdress);
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             client.Timeout = new TimeSpan(500000000000);
-            HttpResponseMessage response = client.GetAsync("api/LogInAPI/GetUser?id=" + USERNAME + "&password=" + PASSWORD + "").Result;
+            HttpResponseMessage response = client.GetAsync("api/LogInAPI/GetUser?id=" + USERNAME + "&password=" + enCryptedPassword + "").Result;
             if (response.IsSuccessStatusCode)
             {
                 data = JsonConvert.DeserializeObject<LogInModel>(await response.Content.ReadAsStringAsync());

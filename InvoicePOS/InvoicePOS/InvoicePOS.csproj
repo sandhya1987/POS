@@ -90,6 +90,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -125,6 +126,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helpers\Cryptography.cs" />
+    <Compile Include="Helpers\FontFamilyListItem.cs" />
+    <Compile Include="Helpers\FontHelper.cs" />
+    <Compile Include="Helpers\FontSizeListItem.cs" />
+    <Compile Include="Helpers\NameDictionaryHelper.cs" />
+    <Compile Include="Helpers\PasswordBoxHelper.cs" />
+    <Compile Include="Helpers\TypefaceListItem.cs" />
+    <Compile Include="Helpers\TypographicFeatureListItem.cs" />
     <Compile Include="Helper\AsyncCommand .cs" />
     <Compile Include="Helper\Simple.cs" />
     <Compile Include="Helper\SimpleFolderConverter.cs" />
@@ -136,10 +145,12 @@
     <Compile Include="Models\CashRegModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\CompanyModel.cs" />
+    <Compile Include="Models\CurrencySettingsModel.cs" />
     <Compile Include="Models\CustomerGroupModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\DesignationModel.cs" />
+    <Compile Include="Models\EmailSettingsModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\EstimateModel.cs" />
     <Compile Include="Models\GetReceivePayment.cs" />
@@ -248,6 +259,9 @@
     </Compile>
     <Compile Include="UserControll\DailySales\DailySales.xaml.cs">
       <DependentUpon>DailySales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControll\DashBoard\Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControll\Department\Add_department.xaml.cs">
       <DependentUpon>Add_department.xaml</DependentUpon>
@@ -444,6 +458,9 @@
     <Compile Include="UserControll\SalesReturn\SalesReturnView.xaml.cs">
       <DependentUpon>SalesReturnView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControll\Settings\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControll\StockLedger\StockLedgerList.xaml.cs">
       <DependentUpon>StockLedgerList.xaml</DependentUpon>
     </Compile>
@@ -515,6 +532,7 @@
     <Compile Include="ViewModels\ChangQntViewModel.cs" />
     <Compile Include="ViewModels\ChildViewModel.cs" />
     <Compile Include="ViewModels\Company\CompanyCommand.cs" />
+    <Compile Include="ViewModels\CurrencySettingsViewModel.cs" />
     <Compile Include="ViewModels\CustomerGroupViewModel.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\Customer\CustomerCommand.cs" />
@@ -523,12 +541,14 @@
     <Compile Include="ViewModels\DepartmentList.cs" />
     <Compile Include="ViewModels\DepartmentViewModel.cs" />
     <Compile Include="ViewModels\DesignationViewModel.cs" />
+    <Compile Include="ViewModels\EmailSettingsViewModel.cs" />
     <Compile Include="ViewModels\EmployeeViewModel.cs" />
     <Compile Include="ViewModels\EstimateInvoiceViewModel.cs" />
     <Compile Include="ViewModels\EstimateViewModel.cs" />
     <Compile Include="ViewModels\FolderItem.cs" />
     <Compile Include="ViewModels\GodownViewModel.cs" />
     <Compile Include="ViewModels\HttpClient.cs" />
+    <Compile Include="ViewModels\InvoiceSettingsViewModel.cs" />
     <Compile Include="ViewModels\InvoiceViewModel.cs" />
     <Compile Include="ViewModels\ItemLocation.cs" />
     <Compile Include="ViewModels\Item\ItemCommand.cs" />
@@ -544,6 +564,7 @@
     <Compile Include="ViewModels\ReportViewModel.cs" />
     <Compile Include="ViewModels\SalesReturnViewModel.cs" />
     <Compile Include="ViewModels\SalesViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\ShowStockViewModel.cs" />
     <Compile Include="ViewModels\StockLedgerViewModel.cs" />
     <Compile Include="ViewModels\StockTransferViewModel.cs" />
@@ -605,6 +626,9 @@
     <Compile Include="Views\ChangeItem\ChangeItemPrice.xaml.cs">
       <DependentUpon>ChangeItemPrice.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CurrencySettings.xaml.cs">
+      <DependentUpon>CurrencySettings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Customer\Customer.xaml.cs">
       <DependentUpon>Customer.xaml</DependentUpon>
     </Compile>
@@ -622,6 +646,18 @@
     </Compile>
     <Compile Include="Views\Customer\Openingbalance.xaml.cs">
       <DependentUpon>Openingbalance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditEmailSettings.xaml.cs">
+      <DependentUpon>EditEmailSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmailSettingsManager.xaml.cs">
+      <DependentUpon>EmailSettingsManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FontChooser.xaml.cs">
+      <DependentUpon>FontChooser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InvoiceSettings.xaml.cs">
+      <DependentUpon>InvoiceSettings.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ItemNameAutoComplete.xaml.cs">
       <DependentUpon>ItemNameAutoComplete.xaml</DependentUpon>
@@ -658,6 +694,9 @@
     </Compile>
     <Compile Include="Views\Main\Taxdetails.xaml.cs">
       <DependentUpon>Taxdetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PrinterSettings.xaml.cs">
+      <DependentUpon>PrinterSettings.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Report\EstimateInvoice.xaml.cs" />
     <Compile Include="Views\SaleUnitAutoComplete.xaml.cs">
@@ -811,6 +850,10 @@
     <Page Include="UserControll\DailySales\DailySales.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControll\DashBoard\Dashboard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControll\Department\Add_department.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -1072,6 +1115,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControll\Settings\Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UserControll\StockLedger\StockLedgerList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -1249,6 +1296,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\CurrencySettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Customer\Customer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1270,6 +1321,22 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Customer\Openingbalance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EditEmailSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EmailSettingsManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FontChooser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\InvoiceSettings.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -1321,6 +1388,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PrinterSettings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\Report\EstimateInvoice.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -1360,6 +1431,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resources.resx" />
+    <EmbeddedResource Include="Resources\Settings.resx" />
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>

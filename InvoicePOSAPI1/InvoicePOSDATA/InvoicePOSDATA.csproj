@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AUTHORIZATION.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -62,225 +62,225 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MODULE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="MODULE_RIGHTS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="POSDATA.Context.cs">
+    <Compile Include="POSEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>POSDATA.Context.tt</DependentUpon>
+      <DependentUpon>POSEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="POSDATA.cs">
+    <Compile Include="POSEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="POSDATA.Designer.cs">
+    <Compile Include="POSEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>POSDATA.edmx</DependentUpon>
+      <DependentUpon>POSEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SP_All_Invoice_Result.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_AUTO_GENERATE_CODE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_AUTO_GENERATE_CODE_FOR_LOYALTY.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_AUTO_GENERATE_CODE_FOR_PRODUCT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_AUTO_GENERATE_INVOICE_NO.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_BANK.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_BANK_ACCOUNT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_BUSINESS_LOCATION.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CASH_REG.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CATAGORY.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CHEQUE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_COMPANY.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CUSTOMER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CUSTOMER_BILLING_ADDRESS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CUSTOMER_GROUP.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CUSTOMER_SHIPPING_ADDRESS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_DEPARTMENT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_DESIGNATION.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_EMAIL_SETTINGS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_EMPLOYEE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_ESTIMATE1.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_FINANCIAL.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_GODOWN.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_HOLD_INVOICE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_INVOICE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_INVOICE_PAY.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_ITEMS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_ITEMS_ATTRIBUTE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_ITEM_LOCATION.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_LOYALTY.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_LOYALTY_Exceedings.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_NEWCASHREGISTER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_OPENING_BALANCE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_OPENING_STOCK.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_ORDER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_PAYMENT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_PO.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_PO_ITEMS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_PO_PAYMENT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_PURCHASE_ORDERS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_RECEIVE_ITEM.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_RECEIVE_ITEM_ITEMS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_RECEIVE_PAYMENT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_REPORT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_REPORT_ADD.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_REPORT_GROUP.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_SALES_RETURN.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_SALE_ITEM.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_STOCK_TRANSFER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_SUPPLIER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_supppaydetails.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_SUPP_PAYMENT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_TAX.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_TRANSFER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_TRANSFER_CASH.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_UNIT_MEASURING.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_VENDORS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="tmp_invoice.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="VIEW_GROUP_SUBGROUP.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="VIEW_INVOICE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="View_ITEM_ATTRIBUTE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="View_STOCK_SEARCH.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="VW_EMP_ACCESS_MODULE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="VW_EMP_MODULE_ACCESS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
+      <DependentUpon>POSEntities.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -295,22 +295,22 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
     <None Include="packages.config" />
-    <EntityDeploy Include="POSDATA.edmx">
+    <EntityDeploy Include="POSEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>POSDATA.Designer.cs</LastGenOutput>
+      <LastGenOutput>POSEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="POSDATA.Context.tt">
+    <None Include="POSEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>POSDATA.edmx</DependentUpon>
-      <LastGenOutput>POSDATA.Context.cs</LastGenOutput>
+      <DependentUpon>POSEntities.edmx</DependentUpon>
+      <LastGenOutput>POSEntities.Context.cs</LastGenOutput>
     </None>
-    <None Include="POSDATA.edmx.diagram">
-      <DependentUpon>POSDATA.edmx</DependentUpon>
+    <None Include="POSEntities.edmx.diagram">
+      <DependentUpon>POSEntities.edmx</DependentUpon>
     </None>
-    <None Include="POSDATA.tt">
+    <None Include="POSEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>POSDATA.edmx</DependentUpon>
-      <LastGenOutput>POSDATA.cs</LastGenOutput>
+      <DependentUpon>POSEntities.edmx</DependentUpon>
+      <LastGenOutput>POSEntities.cs</LastGenOutput>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
