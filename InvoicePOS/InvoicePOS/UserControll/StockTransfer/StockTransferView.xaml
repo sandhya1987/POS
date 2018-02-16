@@ -80,7 +80,7 @@
 
                             <DataGridTextColumn  Width="130" Header="Sales &#xa;Measuring Unit" Binding="{Binding PURCHASE_UNIT}"/>
                             <!--<DataGridTextColumn Width="100" Header="TOTAL" Binding="{Binding total,StringFormat=\{0:c\}}"/>-->
-                            <DataGridTextColumn    Width="100" Header="Available &#xa;Quantity" Binding="{Binding OPN_QNT}"/>
+                            <DataGridTextColumn    Width="100" Header="Available &#xa;Quantity" Binding="{Binding FORMATTED_OPN_QNT}"/>
 
                         </DataGrid.Columns>
                     </DataGrid>

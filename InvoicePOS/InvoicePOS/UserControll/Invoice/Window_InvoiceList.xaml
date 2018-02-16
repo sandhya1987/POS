@@ -62,10 +62,10 @@
 
                         <DataGridTextColumn     Width="150" MaxWidth="120" Header="Inv Number" Binding="{Binding INVOICE_NO}"  />
                         <DataGridTextColumn   Width="150" Header="Invoice Date"  Binding="{Binding INVOICE_DATE}"/>
-                        <DataGridTextColumn   Width="150" Header="Grand Total"  Binding="{Binding TOTAL_AMOUNT}"/>
-                        <DataGridTextColumn   Width="150" Header="Tax Grand Total"  Binding="{Binding TOTAL_TAX}"/>
-                        <DataGridTextColumn   Width="150" Header="Total Item Quantity"  Binding="{Binding QUANTITY_TOTAL}"/>
-                        <DataGridTextColumn   Width="200" Header="Invoice Pending Amount"  Binding="{Binding PENDING_AMOUNT}"/>
+                        <DataGridTextColumn   Width="150" Header="Grand Total"  Binding="{Binding FORMATTED_TOTAL_AMOUNT}"/>
+                        <DataGridTextColumn   Width="150" Header="Tax Grand Total"  Binding="{Binding FORMATTED_TOTAL_TAX}"/>
+                        <DataGridTextColumn   Width="150" Header="Total Item Quantity"  Binding="{Binding FORMATTED_QUANTITY_TOTAL}"/>
+                        <DataGridTextColumn   Width="200" Header="Invoice Pending Amount"  Binding="{Binding FORMATTED_PENDING_AMOUNT}"/>
                         <DataGridTextColumn   Width="150" Header="Customer Name"  Binding="{Binding CUSTOMER}"/>
                         <DataGridTextColumn   Width="150" Header="Mobile Number"  Binding="{Binding CUSTOMER_MOBILE_NO}"/>
                         <DataGridTextColumn   Width="150" Header="Estimate Invoice Number"  Binding="{Binding INVOICE_NO}"/>

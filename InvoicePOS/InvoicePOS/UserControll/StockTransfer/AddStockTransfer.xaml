@@ -98,12 +98,12 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>-->
 
-                            <DataGridTextColumn  Width="100" IsReadOnly="False"  Header="Transferring &#xa;Qty/Weight" Binding="{Binding TRANS_QUANTITY}"/>
+                            <DataGridTextColumn  Width="100" IsReadOnly="False"  Header="Transferring &#xa;Qty/Weight" Binding="{Binding FORMATTED_TRANS_QUANTITY}"/>
 
 
                             <DataGridTextColumn  Width="130" IsReadOnly="True" Header="Sales &#xa;Measuring Unit" Binding="{Binding PURCHASE_UNIT}"/>
                             <!--<DataGridTextColumn Width="100" Header="TOTAL" Binding="{Binding total,StringFormat=\{0:c\}}"/>-->
-                            <DataGridTextColumn    Width="100" IsReadOnly="True" Header="Available &#xa;Quantity" Binding="{Binding OPN_QNT}"/>
+                            <DataGridTextColumn    Width="100" IsReadOnly="True" Header="Available &#xa;Quantity" Binding="{Binding FORMATTED_OPN_QNT}"/>
 
                         </DataGrid.Columns>
                     </DataGrid>

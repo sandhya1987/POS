@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
+
 
 namespace InvoicePOS.Models
 {
@@ -22,6 +24,16 @@ namespace InvoicePOS.Models
         public long ITEM_ID { get; set; }
         public bool IS_NEGATIVE_STOCK_MESSAGE { get; set; }
         public int TRANS_QUANTITY { get; set; }
+        public string FORMATTED_TRANS_QUANTITY
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = TRANS_QUANTITY;
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
         public int tnsquantity { get; set; }
         public string SEARCH_CODE { get; set; }
         public string ITEM_NAME { get; set; }
@@ -38,6 +50,16 @@ namespace InvoicePOS.Models
         public string BUSINESS_LOCATION { get; set; }
         public int CHNG_QNT { get; set; }
         public int? OPN_QNT { get; set; }
+        public string FORMATTED_OPN_QNT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = OPN_QNT ?? 0;
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
         public string PURCHASE_UNIT { get; set; }
         public int WeightQnt { get; set; }
         public int SLNO { get; set; }

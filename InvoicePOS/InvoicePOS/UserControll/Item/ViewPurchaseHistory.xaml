@@ -33,7 +33,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn    Header="Receive Item Date :" Binding="{Binding RECEIVEITEM_ON_DATE}" Width="200" />
                 <DataGridTextColumn    Header="Receive Item Entry Number :" Binding="{Binding RECEIVEITEMENTRYNO}" Width="250"/>
-                <DataGridTextColumn    Header="Unit Price :" Binding="{Binding PURCHASE_UNIT_PRICE}" Width="250"/>
+                <DataGridTextColumn    Header="Unit Price :" Binding="{Binding FORMATTED_PURCHASE_UNIT_PRICE}" Width="250"/>
                 <DataGridTextColumn    Header="Effective Rate Per Unit :" Binding="{Binding EFFECTIVE_RATE_PER_UNIT}" Width="250"/>
                 <DataGridTextColumn    Header="Supplier Name :" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
             </DataGrid.Columns>

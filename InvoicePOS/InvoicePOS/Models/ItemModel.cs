@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace InvoicePOS.Models
 {
@@ -101,6 +102,16 @@ namespace InvoicePOS.Models
         public string CUSTOMER_MOBILE { get; set; }
         public decimal TOTAL_SUM { get; set; }
         public int TOTAL_QTY { get; set; }
+        public string FORMATTED_TOTAL_QTY
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = TOTAL_QTY;
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
         public decimal EFFECTIVE_RATE_PER_UNIT { get; set; }
         public DateTime ESTIMATE_DATE { get; set; }
         
@@ -117,9 +128,46 @@ namespace InvoicePOS.Models
         public long CATAGORY_ID { get; set; }
         public string CATEGORY_NAME { get; set; }
         public int? OPN_QNT { get; set; }
+        public string FORMATTED_OPN_QNT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = OPN_QNT ?? 0;
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
         public int? Current_Qty { get; set; }
+        public string FORMATTED_CURRENT_QTY
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = Current_Qty ?? 0;
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
         public string SEARCH_CODE { get; set; }
         public decimal TAX_PAID { get; set; }
+        public string FORMATTED_TAX_PAID
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = TAX_PAID.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal TAX_COLLECTED { get; set; }
         public string SORT_INDEX1 { get; set; }
 
@@ -135,10 +183,79 @@ namespace InvoicePOS.Models
         public string SelectCollectTax { get; set; }
 
         public string PURCHASE_UNIT { get; set; }
+        public string FORMATTED_PURCHASE_UNIT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpDec = Convert.ToDecimal(PURCHASE_UNIT);
+                string tmp = tmpDec.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public string SALES_UNIT { get; set; }
         public decimal PURCHASE_UNIT_PRICE { get; set; }
+        public string FORMATTED_PURCHASE_UNIT_PRICE
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = PURCHASE_UNIT_PRICE.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal SALES_PRICE { get; set; }
+        public string FORMATTED_SALES_PRICE
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = SALES_PRICE.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal MRP { get; set; }
+        public string FORMATTED_MRP
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = MRP.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public long COMPANY_ID { get; set; }
         public string DISPLAY_INDEX { get; set; }
         public string REGIONAL_LANGUAGE { get; set; }
@@ -146,6 +263,23 @@ namespace InvoicePOS.Models
         public string ITEM_GROUP_NAME { get; set; }
         public decimal SALES_PRICE_BEFOR_TAX { get; set; }
         public decimal SALES_PRICE_BEFOR_TAX_QTY { get; set; }
+        public string FORMATTED_SALES_PRICE_BEFOR_TAX_QTY
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = SALES_PRICE_BEFOR_TAX_QTY.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public DateTime MODIFICATION_DATE { get; set; }
         public string IMAGE_PATH { get; set; }
         public string SEARCH_ITEM { get; set; }
@@ -174,12 +308,56 @@ namespace InvoicePOS.Models
 
 
         public decimal Total { get; set; }
+        public string FORMATTED_TOTAL
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = Total.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal Discount { get; set; }
+        public string FORMATTED_Discount
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = Discount.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal SALESPRICE { get; set; }
 
         public decimal NETAMT { get; set; }
         public decimal GROSSAMT { get; set; }
         public int? QUNT_TOTAL { get; set; }
+        public string FORMATTED_QUNT_TOTAL
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = QUNT_TOTAL ?? 0;
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
         public int TOTAL_ITEM { get; set; }
 
         public decimal WEIGHT_OF_PAPER { get; set; }
@@ -217,8 +395,44 @@ namespace InvoicePOS.Models
         public int UNIT_SALES_ID { get; set; }
 
         public decimal? TaxValue { get; set; }
+        public string FORMATTED_TaxValue
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpDec = TaxValue ?? 0;
+                string tmp = tmpDec.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public string TaxName { get; set; }
         public decimal? TotalTax { get; set; }
+        public string FORMATTED_TOTAL_TAX
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpDec = TotalTax ?? 0;
+                string tmp = tmpDec.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public string COMPANY { get; set; }
         public decimal RETURNABLE_AMOUNT { get; set; }
         public int SALE_ID { get; set; }
@@ -227,6 +441,24 @@ namespace InvoicePOS.Models
         public string SUPPLIER_NAME { get; set; }
         public ObservableCollection<ItemModel> getAllSTock = new ObservableCollection<ItemModel>();
         public decimal? SalePriceWithDiscount { get; set; }
+        public string FORMATTED_SALES_PRICE_WITH_DISCOUNT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpDec = SalePriceWithDiscount ?? 0;
+                string tmp = tmpDec.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         private string error = string.Empty;
         public string Error
         {
@@ -409,10 +641,78 @@ namespace InvoicePOS.Models
         public decimal DISCOUNT_PERCENT { get; set; }
         public decimal ADDTIONAL_CHARGES { get; set; }
         public decimal SUB_TOTAL_BEFORETAX { get; set; }
+        public string FORMATTED_SUB_TOTAL_BEFORETAX
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = SUB_TOTAL_BEFORETAX.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal TOTAL_TAX_AMT { get; set; }
+        public string FORMATTED_TOTAL_TAX_AMT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = TOTAL_TAX_AMT.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal SUB_TOTAL { get; set; }
+        public string FORMATTED_SUB_TOTAL
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = SUB_TOTAL.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal ROUND_OFF_ADJUSTMENTAMT { get; set; }
         public decimal TOTAL_AMT { get; set; }
+        public string FORMATTED_TOTAL_AMT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = TOTAL_AMT.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal USE_SUPPLIER_ADVANCE_AMT { get; set; }
         public decimal GRAND_TOTAL { get; set; }
         public string NOTE { get; set; }
@@ -432,13 +732,119 @@ namespace InvoicePOS.Models
         public bool ITEM_ENTRY_TEMPLATE { get; set; }
         public int SLNO { get; set; }
         public decimal PURCHASE_UNIT_PRICE { get; set; }
+        public string FORMATTED_PURCHASE_UNIT_PRICE
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = PURCHASE_UNIT_PRICE.ToString(CSM.UNIT_PRICE_FORMAT);
+                return tmp;
+            }
+        }
         public decimal MRP { get; set; }
+        public string FORMATTED_MRP
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = MRP.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal TAX_PAID { get; set; }
         public int? TOTAL_QTY { get; set; }
+        public string FORMATTED_TOTAL_QTY
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = TOTAL_QTY ?? 0;
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
         public decimal? SUB_TOTAL_AFTER_TAX { get; set; }
+        public string FORMATTED_SUB_TOTAL_AFTER_TAX
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpDec = SUB_TOTAL_AFTER_TAX ?? 0;
+                string tmp = tmpDec.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal? SUB_TOTAL_BEFORE_TAX { get; set; }
+        public string FORMATTED_SUB_TOTAL_BEFORE_TAX
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpDec = SUB_TOTAL_BEFORE_TAX ?? 0;
+                string tmp = tmpDec.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal PURCHASE_PRICE_BEFORE_TAX { get; set; }
+        public string FORMATTED_PURCHASE_PRICE_BEFORE_TAX
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = PURCHASE_PRICE_BEFORE_TAX.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal SALES_PRICE { get; set; }
+        public string FORMATTED_SALES_PRICE
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = SALES_PRICE.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public int? TOTPO_QNT { get; set; }
         public string PURCHASE_UNIT { get; set; }
         public string TaxName { get; set; }

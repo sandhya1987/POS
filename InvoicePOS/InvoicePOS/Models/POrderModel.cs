@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace InvoicePOS.Models
 {
@@ -41,13 +42,103 @@ namespace InvoicePOS.Models
         public int SLNO { get; set; }
         public string SearchStock { get; set; }
         public decimal PURCHASE_UNIT_PRICE { get; set; }
+        public string FORMATTED_PURCHASE_UNIT_PRICE
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = PURCHASE_UNIT_PRICE.ToString(CSM.UNIT_PRICE_FORMAT);
+                return tmp;
+            }
+        }
         public decimal TAX_PAID { get; set; }
+        public string FORMATTED_TAX_PAID
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = TAX_PAID.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal TAX_COLLECTED { get; set; }
         public decimal MRP { get; set; }
         public decimal? SUB_TOTAL_AFTER_TAX { get; set; }
+        public string FORMATTED_SUB_TOTAL_AFTER_TAX
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpDec = SUB_TOTAL_AFTER_TAX ?? 0;
+                string tmp = tmpDec.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal? SUB_TOTAL_BEFORE_TAX { get; set; }
+        public string FORMATTED_SUB_TOTAL_BEFORE_TAX
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpDec = SUB_TOTAL_BEFORE_TAX ?? 0;
+                string tmp = tmpDec.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal PURCHASE_PRICE_BEFORE_TAX { get; set; }
+        public string FORMATTED_PURCHASE_PRICE_BEFORE_TAX
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = PURCHASE_PRICE_BEFORE_TAX.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
+
         public int? TOTAL_QTY { get; set; }
+        public string FORMATTED_TOTAL_QTY
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = TOTAL_QTY ?? 0;
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
         public string TaxName { get; set; }
         public decimal? TaxValue { get; set; }
 

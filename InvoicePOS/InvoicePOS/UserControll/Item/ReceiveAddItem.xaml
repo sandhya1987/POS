@@ -180,16 +180,16 @@
                             <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="300" Header="SrNo." Binding="{Binding SLNO.}"  />
                             <DataGridTextColumn   Width="150" MaxWidth="155" Header="Barcode" Binding="{Binding BARCODE}"  />
                             <DataGridTextColumn   Width="200" Header="Item Name" Binding="{Binding ITEM_NAME}"/>
-                            <DataGridTextColumn   Width="100" Header="Total Quantity"  Binding="{Binding TOTAL_QTY}"/>
+                            <DataGridTextColumn   Width="100" Header="Total Quantity"  Binding="{Binding FORMATTED_TOTAL_QTY}"/>
                             <DataGridTextColumn   Width="200" Header="Measuring Unit" Binding="{Binding PURCHASE_UNIT}"/>
                                                     
                             <!--<DataGridTextColumn   Width="150" Header="Received Paid &#xa;Qty/Weight" Binding="{Binding TOTPO_QNT}"/>-->
-                            <DataGridTextColumn   Width="200" Header="Purchase Unit" Binding="{Binding PURCHASE_UNIT_PRICE}"/>
-                            <DataGridTextColumn   Width="200" Header="Purchase Price Before Tax" Binding="{Binding PURCHASE_PRICE_BEFORE_TAX,StringFormat=\{0:c\}}"/>
-                            <DataGridTextColumn   Width="200" Header="Sub Total After Tax" Binding="{Binding SUB_TOTAL_AFTER_TAX,StringFormat=\{0:c\} }"/>
-                            <DataGridTextColumn   Width="200" Header="Sub Total Before Tax" Binding="{Binding SUB_TOTAL_BEFORE_TAX,StringFormat=\{0:c\}}"/>
-                            <DataGridTextColumn    Width="95" Header="MRP" Binding="{Binding MRP,StringFormat=\{0:c\}}"/>
-                            <DataGridTextColumn    Width="95" Header="Sales &#xa;Price &#xa;Markup &#xa;Percent" Binding="{Binding SALES_PRICE,StringFormat=\{0:c\}}"/>
+                            <DataGridTextColumn   Width="200" Header="Purchase Unit" Binding="{Binding FORMATTED_PURCHASE_UNIT_PRICE}"/>
+                            <DataGridTextColumn   Width="200" Header="Purchase Price Before Tax" Binding="{Binding FORMATTED_PURCHASE_PRICE_BEFORE_TAX}"/>
+                            <DataGridTextColumn   Width="200" Header="Sub Total After Tax" Binding="{Binding FORMATTED_SUB_TOTAL_AFTER_TAX }"/>
+                            <DataGridTextColumn   Width="200" Header="Sub Total Before Tax" Binding="{Binding FORMATTED_SUB_TOTAL_BEFORE_TAX}"/>
+                            <DataGridTextColumn    Width="95" Header="MRP" Binding="{Binding FORMATTED_MRP}"/>
+                            <DataGridTextColumn    Width="95" Header="Sales &#xa;Price &#xa;Markup &#xa;Percent" Binding="{Binding FORMATTED_SALES_PRICE}"/>
                         </DataGrid.Columns>
                     </DataGrid>
 

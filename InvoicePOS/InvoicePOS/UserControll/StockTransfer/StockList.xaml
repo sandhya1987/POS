@@ -154,9 +154,9 @@
                                 <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
                                 <DataGridTextColumn    Header="BarCode" Binding="{Binding BARCODE}" Width="100" />
                                 <DataGridTextColumn    Header="Item Name" Binding="{Binding ITEM_NAME}" Width="100"/>
-                                <DataGridTextColumn    Header="Qty" Binding="{Binding OPN_QNT}" Width="100"/>
+                                <DataGridTextColumn    Header="Qty" Binding="{Binding FORMATTED_OPN_QNT}" Width="100"/>
                                 <DataGridTextColumn    Header="Measuring unit" Binding="{Binding SALES_UNIT}" Width="130"/>
-                                <DataGridTextColumn    Header="Tax" Binding="{Binding TAX_PAID,StringFormat=\{0:c\}}" Width="100"/>
+                                <DataGridTextColumn    Header="Tax" Binding="{Binding FORMATTED_TAX_PAID}" Width="100"/>
                                 <DataGridTextColumn    Header="Discount" Binding="{Binding Discount_PRICE,StringFormat=\{0:c\}}" Width="100"/>
                                 <DataGridTextColumn    Header="Total" Binding="{Binding total,StringFormat=\{0:c\}}" Width="100"/>
 

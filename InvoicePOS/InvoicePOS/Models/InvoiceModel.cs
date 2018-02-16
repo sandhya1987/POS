@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace InvoicePOS.Models
 {
@@ -83,20 +84,102 @@ namespace InvoicePOS.Models
         public string NUMBER_OF_ITEM { get; set; }
         public string NOTE { get; set; }
         public string TOTAL_AMOUNT { get; set; }
+        public string FORMATTED_TOTAL_AMOUNT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpTotalAmount = Convert.ToDecimal(TOTAL_AMOUNT);
+                string tmp = tmpTotalAmount.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public string TAX_INCLUDED { get; set; }
 
 
 
         public string ITEM_ID { get; set; }
         public string PENDING_AMOUNT { get; set; }
+        public string FORMATTED_PENDING_AMOUNT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpAmount = Convert.ToDecimal(PENDING_AMOUNT);
+                string tmp = tmpAmount.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public string QUANTITY_TOTAL { get; set; }
+        public string FORMATTED_QUANTITY_TOTAL
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = Convert.ToDecimal(QUANTITY_TOTAL);
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
         public string RECIVED_AMOUNT { get; set; }
         public string RETURNABLE_AMOUNT { get; set; }
+        public string FORMATTED_RETURNABLE_AMOUNT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpAmount = Convert.ToDecimal(RETURNABLE_AMOUNT);
+                string tmp = tmpAmount.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public string ROUNDOFF_AMOUNT { get; set; }
         public string SALES_EXECUTIVE { get; set; }
         public string SALES_EXECUTIVE_ID { get; set; }
         public DateTime INVOICE_DATE { get; set; }
         public decimal? TOTAL_TAX { get; set; }
+        public string FORMATTED_TOTAL_TAX
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpDec = TOTAL_TAX ?? 0;
+                string tmp = tmpDec.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public bool IS_ACTIVE { get; set; }
         public DateTime STARTDATE { get; set; }
         public DateTime ENDDATE { get; set; }

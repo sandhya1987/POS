@@ -50,7 +50,7 @@
                                 <DataGridTextColumn   TextBlock.Foreground="Red"  Width="175" MaxWidth="150" Header="Select For Payment" Binding="{Binding SELECT_PAYMENT}"  />
                                 <DataGridTextColumn     Width="150" MaxWidth="155" Header="Invoice Number" Binding="{Binding Invoice_Number}"  />
                                 <DataGridTextColumn   Width="100" Header="Invoice Date"  Binding="{Binding Invoice_Date}"/>
-                                <DataGridTextColumn   Width="100" Header="Pending Amount"  Binding="{Binding Pending_Amount}"/>
+                                <DataGridTextColumn   Width="100" Header="Pending Amount"  Binding="{Binding FORMATTED_PENDING_AMT}"/>
                                 <DataGridTextColumn   Width="100" Header="Adjusted Amount"  Binding="{Binding Adjusted_Amount,StringFormat=\{0:c\}}"/>
                                 <DataGridTextColumn   Width="100" Header="Penalty Amount"  Binding="{Binding Penalty_Amount,StringFormat=\{0:c\}}"/>
                                 <DataGridTextColumn   Width="150" Header=" Actual Penalty Amount"  Binding="{Binding Actual_Penalty_Amount}"/>

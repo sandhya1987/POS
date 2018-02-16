@@ -59,7 +59,7 @@
                 <DataGridTextColumn    Header="Supplier Name:" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
                 <DataGridTextColumn    Header="Payment Status:" Binding="{Binding PAYMENT_STATUS}" Width="250"/>
                 <DataGridTextColumn    Header="Grand Total:" Binding="{Binding Total}" Width="250"/>
-                <DataGridTextColumn    Header="Total Tax Amount:" Binding="{Binding TotalTax}" Width="250"/>
+                <DataGridTextColumn    Header="Total Tax Amount:" Binding="{Binding FORMATTED_TOTAL_TAX}" Width="250"/>
                 <DataGridTextColumn    Header="Supplier Invoice Number:" Binding="{Binding SUPPLIER_INVOICE_NO}" Width="250"/>
                 <DataGridTextColumn    Header="Supplier Invoice Date:" Binding="{Binding DATE}" Width="250"/>
             <DataGridTextColumn    Header="Created By:" Binding="{Binding }" Width="250"/>

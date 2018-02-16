@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace InvoicePOS.Models
 {
@@ -59,7 +60,41 @@ namespace InvoicePOS.Models
         public decimal CURRENT_PAY_AMT { get; set; }
         public decimal TOTAL_SELECTED_PAY_AMT { get; set; }
         public decimal PENDING_AMT { get; set; }
+        public string FORMATTED_PENDING_AMT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = PENDING_AMT.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal TOTAL_REC_AMT { get; set; }
+        public string FORMATTED_TOTAL_REC_AMT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = TOTAL_REC_AMT.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal RETURNABLE_AMT { get; set; }
         public int SLNO { get; set; }
         private string error = string.Empty;

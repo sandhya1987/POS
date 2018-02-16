@@ -45,17 +45,17 @@
                 <DataGridTextColumn    Header="Sl No :" Binding="{Binding SLNO}" Width="200" />
                 <DataGridTextColumn    Header="Barcode :" Binding="{Binding BARCODE}" Width="250"/>
                 <DataGridTextColumn    Header="Item Name :" Binding="{Binding ITEM_NAME}" Width="250"/>
-                <DataGridTextColumn    Header="Basic Price :" Binding="{Binding PURCHASE_UNIT}" Width="250"/>
-                <DataGridTextColumn    Header="Unit Tax Amount :" Binding="{Binding TaxValue}" Width="250"/>
+                <DataGridTextColumn    Header="Basic Price :" Binding="{Binding FORMATTED_PURCHASE_UNIT}" Width="250"/>
+                <DataGridTextColumn    Header="Unit Tax Amount :" Binding="{Binding FORMATTED_TaxValue}" Width="250"/>
                 <DataGridTextColumn    Header="Tax Type :" Binding="{Binding TaxName}" Width="250"/>
                 <DataGridTextColumn    Header="Tax Percent :" Binding="{Binding TaxValue}" Width="250"/>
-                <DataGridTextColumn    Header="Unit Price :" Binding="{Binding PURCHASE_UNIT_PRICE}" Width="250"/>
-                <DataGridTextColumn    Header=" Qty/Weight :" Binding="{Binding Current_Qty}" Width="250"/>
+                <DataGridTextColumn    Header="Unit Price :" Binding="{Binding FORMATTED_PURCHASE_UNIT_PRICE}" Width="250"/>
+                <DataGridTextColumn    Header=" Qty/Weight :" Binding="{Binding FORMATTED_CURRENT_QTY}" Width="250"/>
                 <DataGridTextColumn    Header="Measuring Unit:" Binding="{Binding SALES_UNIT}" Width="250"/>
-                <DataGridTextColumn    Header="Discount Amount :" Binding="{Binding Discount}" Width="250"/>
+                <DataGridTextColumn    Header="Discount Amount :" Binding="{Binding FORMATTED_Discount}" Width="250"/>
                 <DataGridTextColumn    Header="Spot Discount Reason :" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
-                <DataGridTextColumn    Header="Total :" Binding="{Binding Total}" Width="250"/>
-                <DataGridTextColumn    Header="Total Tax Amount :" Binding="{Binding TotalTax}" Width="250"/>
+                <DataGridTextColumn    Header="Total :" Binding="{Binding FORMATTED_TOTAL}" Width="250"/>
+                <DataGridTextColumn    Header="Total Tax Amount :" Binding="{Binding FORMATTED_TOTAL_TAX}" Width="250"/>
                 
             </DataGrid.Columns>
 
