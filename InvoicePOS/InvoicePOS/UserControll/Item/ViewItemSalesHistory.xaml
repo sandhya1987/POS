@@ -56,8 +56,8 @@
                 <DataGridTextColumn    Header="Customer Name:" Binding="{Binding CUSTOMER_NAME}" Width="250"/>
                 <DataGridTextColumn    Header="Mobile Number:" Binding="{Binding CUSTOMER_EMAIL}" Width="250"/>
                 <DataGridTextColumn    Header="Billing Mobile Number:" Binding="{Binding CUSTOMER_MOBILE}" Width="250"/>
-                <DataGridTextColumn    Header="Grand Total:" Binding="{Binding Total}" Width="250"/>
-                <DataGridTextColumn    Header="Total Item Qty:" Binding="{Binding QUNT_TOTAL}" Width="250"/>
+                <DataGridTextColumn    Header="Grand Total:" Binding="{Binding FORMATTED_TOTAL}" Width="250"/>
+                <DataGridTextColumn    Header="Total Item Qty:" Binding="{Binding FORMATTED_QUNT_TOTAL}" Width="250"/>
                 <DataGridTextColumn    Header="Invoice Status:" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
                 <DataGridTextColumn    Header="Payment Status:" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
                 <DataGridTextColumn    Header="Delivery Status:" Binding="{Binding SUPPLIER_NAME}" Width="250"/>

@@ -88,7 +88,7 @@
                         <!--<DataGridTextColumn Width="100" Header="TOTAL" Binding="{Binding total,StringFormat=\{0:c\}}"/>-->
                         <DataGridTextColumn    Width="150" Header="Godown Name" Binding="{Binding GODOWN}"/>
                         <DataGridTextColumn  Width="153" Header="Supplier Name" Binding="{Binding SUPPLIER}"/>
-                        <DataGridTextColumn  Width="153" Header="Total Tax Amount" Binding="{Binding TOTAL_TAX_AMT}"/>
+                    <DataGridTextColumn  Width="153" Header="Total Tax Amount" Binding="{Binding FORMATTED_TOTAL_TAX_AMT}"/>
                         <DataGridTextColumn  Width="153" Header="Supplier Invoice Number" Binding="{Binding SUPPLIER_INVOICE_NO}"/>
                         <DataGridTextColumn  Width="150" Header="Supplier Invoice Date" Binding="{Binding SUPPLIER_INVOICE_DATE}"/>
 

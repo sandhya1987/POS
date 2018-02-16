@@ -50,6 +50,16 @@ namespace InvoicePOS.ViewModels
         int x = 0;
         decimal sum = 0;
         int? qut = 0;
+
+        private CurrencySettingsModel _currencyFormat;
+        public CurrencySettingsModel currencyFormat
+        {
+            get
+            {
+                return (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+            }
+        }
+
         public ObservableCollection<ItemModel> ListGrid
         {
             get
@@ -3645,6 +3655,10 @@ namespace InvoicePOS.ViewModels
                 App.Current.Properties["AutoItemNameList"] = autoItemNameList;
 
             }
+
+            CurrencySettingsModel _CSM = new CurrencySettingsModel();
+            _CSM.LoadSettings();
+            Application.Current.Properties["CurrencySettings"] = _CSM;
 
         }
 

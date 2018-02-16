@@ -76,7 +76,7 @@
                             <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
                             <DataGridTextColumn    Width="175" MaxWidth="300" Header="Receive Payment No" Binding="{Binding RECEIVE_PAY_NO}"  />
                             <DataGridTextColumn     Width="150" Header="Date" Binding="{Binding Date}"  />
-                            <DataGridTextColumn   Width="150" Header="Amount"  Binding="{Binding TOTAL_REC_AMT}"/>
+                            <DataGridTextColumn   Width="150" Header="Amount"  Binding="{Binding FORMATTED_TOTAL_REC_AMT}"/>
                             <DataGridTextColumn   Width="150" Header="Customer"  Binding="{Binding CUSTOMER}"/>
                             <DataGridTextColumn   Width="150" Header="Finance Agency"  Binding="{Binding FinanceAgency}"/>
                             <DataGridTextColumn   Width="150" Header="Payment Mode"  Binding="{Binding PaymentMode}"/>

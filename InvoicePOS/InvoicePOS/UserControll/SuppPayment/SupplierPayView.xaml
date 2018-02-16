@@ -69,8 +69,8 @@
                                 <DataGridTextColumn   TextBlock.Foreground="Red"  Width="1050" MaxWidth="300" Header="Select For Payment" Binding="{Binding SrNo.}"  />
                                 <DataGridTextColumn     Width="100" MaxWidth="155" Header="Payment&#xa;Due Date" Binding="{Binding Barcode}"  />
                                 <DataGridTextColumn   Width="80" Header="No Of&#xa;Days Due" Binding="{Binding Customer Name}"/>
-                                <DataGridTextColumn  Width="80" Header="Total&#xa;Amount" Binding="{Binding SELECTED_AMT}"/>
-                                <DataGridTextColumn  Width="80" Header="Pending&#xa;Amount" Binding="{Binding TOTAL_PANDING}"/>
+                                <DataGridTextColumn  Width="80" Header="Total&#xa;Amount" Binding="{Binding FORMATTED_SELECTED_AMT}"/>
+                                <DataGridTextColumn  Width="80" Header="Pending&#xa;Amount" Binding="{Binding FORMATTED_TOTAL_PANDING}"/>
                                 <DataGridTextColumn  Width="80" Header="Adjusted&#xa;Amount" Binding="{Binding Phone,StringFormat=\{0:c\}}"/>
                                 <DataGridTextColumn  Width="80" Header="Supp Inv&#xa;Date" Binding="{Binding Email,StringFormat=\{0:c\}}"/>
                                 <DataGridTextColumn    Width="80" Header="Rec Item&#xa;Entry No" Binding="{Binding Contact Name,StringFormat=\{0:c\}}"/>

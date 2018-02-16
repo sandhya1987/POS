@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace InvoicePOS.Models
 {
@@ -189,7 +190,41 @@ namespace InvoicePOS.Models
         public DateTime PAYMENT_DATE { get; set; }
         public decimal CURRENT_PAYABLE_AMT { get; set; }
         public decimal TOTAL_PANDING { get; set; }
+        public string FORMATTED_TOTAL_PANDING
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = TOTAL_PANDING.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal SELECTED_AMT { get; set; }
+        public string FORMATTED_SELECTED_AMT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = SELECTED_AMT.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal PENDING_AFTE_PAYMENT { get; set; }
         public string CASH_REG { get; set; }
         public decimal CASH_REG_AMT { get; set; }

@@ -114,17 +114,17 @@
 
 
                             <!--<DataGridTextColumn   Width="200" Header="Total Qnt" Command="{Binding ImgLoad}" IsReadOnly="False"/>-->
-                            <DataGridTextColumn   Width="100" Header="Item Price Befor TAX"  Binding="{Binding PURCHASE_PRICE_BEFORE_TAX,StringFormat=\{0:c\}}"/>
+                            <DataGridTextColumn   Width="100" Header="Item Price Befor TAX"  Binding="{Binding FORMATTED_PURCHASE_PRICE_BEFORE_TAX}"/>
                             <!--<DataGridTextColumn   Width="200" Header="Item Price"  Binding="{Binding SALES_PRICE,StringFormat=\{0:c\}}"/>-->
                             <!--<DataGridTextColumn   Width="200" Header="Discount"  Binding="{Binding SALES_UNIT}"/>-->
-                            <DataGridTextColumn   Width="100" Header="Total Quantity"  Binding="{Binding TOTAL_QTY}"/>
+                            <DataGridTextColumn   Width="100" Header="Total Quantity"  Binding="{Binding FORMATTED_TOTAL_QTY}"/>
                             <!--<DataGridTextColumn   Width="200" Header="Item Price"  Binding="{Binding PURCHASE_UNIT}"/>-->
-                            <DataGridTextColumn   Width="100" Header="Sub Total Befor TAX"  Binding="{Binding SUB_TOTAL_BEFORE_TAX,StringFormat=\{0:c\}}"/>
+                            <DataGridTextColumn   Width="100" Header="Sub Total Befor TAX"  Binding="{Binding FORMATTED_SUB_TOTAL_BEFORE_TAX}"/>
                             <!--<DataGridTextColumn   Width="200" Header="Tax Name"  Binding="{Binding TAX_PAID_NAME}"/>-->
-                            <DataGridTextColumn   Width="100" Header="Tax Percent"  Binding="{Binding TAX_PAID}"/>
+                            <DataGridTextColumn   Width="100" Header="Tax Percent"  Binding="{Binding FORMATTED_TAX_PAID}"/>
                             <!--<DataGridTextColumn   Width="200" Header="Item Unit Price Afte Tax"  Binding="{Binding SUB_TOTAL_AFTER_TAX}"/>-->
-                            <DataGridTextColumn   Width="100" Header="Sub Total After Tax"  Binding="{Binding SUB_TOTAL_AFTER_TAX,StringFormat=\{0:c\}}"/>
-                            <DataGridTextColumn   Width="100" Header="Effective rate Per unit"  Binding="{Binding PURCHASE_UNIT_PRICE}"/>
+                            <DataGridTextColumn   Width="100" Header="Sub Total After Tax"  Binding="{Binding FORMATTED_SUB_TOTAL_AFTER_TAX}"/>
+                            <DataGridTextColumn   Width="100" Header="Effective rate Per unit"  Binding="{Binding FORMATTED_PURCHASE_UNIT_PRICE}"/>
                            
                         </DataGrid.Columns>
                         <DataGrid.InputBindings>

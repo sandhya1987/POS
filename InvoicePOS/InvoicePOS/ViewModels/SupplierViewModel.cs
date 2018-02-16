@@ -1,5 +1,6 @@
 ﻿using InvoicePOS.Helpers;
 using InvoicePOS.Models;
+using InvoicePOS.UserControll.Company;
 using InvoicePOS.UserControll.Item;
 using InvoicePOS.UserControll.PO;
 using InvoicePOS.UserControll.StockTransfer;
@@ -1558,12 +1559,12 @@ namespace InvoicePOS.ViewModels
 
         public async void ViewLedgerVendor_Click()
         {
-            InvoicePOS.UserControll.Supplier.SupplierViewLedger sh = new UserControll.Supplier.SupplierViewLedger);
+            InvoicePOS.UserControll.Supplier.SupplierViewLedger sh = new UserControll.Supplier.SupplierViewLedger();
             if (SelectedSupplier != null)
             {
-                InvoicePOS.UserControll.Supplier.ViewLedger.FAccount.Text = SelectedSupplier.SUPPLIER_NAME;
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.FAccount.Text = SelectedSupplier.SUPPLIER_NAME;
                 //InvoicePOS.UserControll.Customer.ViewLedger.CBalance.Text = SelectedSupplier.CLOSING_AMT.ToString();
-                InvoicePOS.UserControll.Supplier.ViewLedger.OBalance.Text = SelectedSupplier.OPENING_BALANCE.ToString();
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.OBalance.Text = SelectedSupplier.OPENING_BALANCE.ToString();
                 //InvoicePOS.UserControll.Customer.ViewLedger.CreditLmt.Text = SelectedSupplier.credit_Limits.ToString();
                 //InvoicePOS.UserControll.Customer.ViewLedger.DebitLmt.Text = SelectedSupplier.DEFAULT_CREIT_LIMIT.ToString();
             }

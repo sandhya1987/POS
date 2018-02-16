@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace InvoicePOS.Models
 {
@@ -30,8 +31,42 @@ namespace InvoicePOS.Models
         public decimal FREIGHT_CHARGE { get; set; }
         public decimal PACKING_CHARGE { get; set; }
         public decimal TOTAL_AMOUNT { get; set; }
+        public string FORMATTED_TOTAL_AMOUNT
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = TOTAL_AMOUNT.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public int ROUND_OFF_AMOUNT { get; set; }
         public decimal GRAND_TOTAL { get; set; }
+        public string FORMATTED_GRAND_TOTAL
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = GRAND_TOTAL.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public decimal SUBSIDY_AMOUN { get; set; }
         public decimal CUS_PENDING_AMOUNT { get; set; }
         public string NOTES { get; set; }
@@ -45,14 +80,58 @@ namespace InvoicePOS.Models
         public int SALE_ID { get; set; }
         public int SLNO { get; set; }
         public int? Current_Qty { get; set; }
+        public string FORMATTED_Current_Qty
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                decimal tmpdec = Current_Qty ?? 0;
+                string tmp = tmpdec.ToString(CSM.QUANTITY_FORMAT);
+                return tmp;
+            }
+        }
 
         public decimal TAX_COLLECTED { get; set; }
 
         public decimal MRP { get; set; }
+        public string FORMATTED_MRP
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = MRP.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public string SALES_UNIT { get; set; }
         public string PURCHASE_UNIT { get; set; }
 
         public decimal SALES_PRICE { get; set; }
+        public string FORMATTED_SALES_PRICE
+        {
+            get
+            {
+                CurrencySettingsModel CSM = (CurrencySettingsModel)Application.Current.Properties["CurrencySettings"];
+                string tmp = SALES_PRICE.ToString(CSM.NUMBER_FORMAT);
+                if (CSM.NORMAL_CURRENCY_SYMBOL_LEFT)
+                {
+                    tmp = CSM.NORMAL_CURRENCY_SYMBOL + tmp;
+                }
+                else
+                {
+                    tmp = tmp + CSM.NORMAL_CURRENCY_SYMBOL;
+                }
+                return tmp;
+            }
+        }
         public int TOTAL_QTY { get; set; }
         public int TOTAL_ITEM { get; set; }
         public int SALE_QTY { get; set; }

@@ -50,7 +50,7 @@
                 <DataGridTextColumn     Width="150" MaxWidth="155" Header="Sale Return No" Binding="{Binding SALES_RETURN_NO}"  />
                 <DataGridTextColumn   Width="200" Header="Date"  Binding="{Binding RETURN_DATE}"/>
                 <DataGridTextColumn   Width="200" Header="Invoice No"  Binding="{Binding INVOICE_NO}"/>
-                <DataGridTextColumn   Width="200" Header="Return Amount"  Binding="{Binding TOTAL_AMOUNT,StringFormat=\{0:c\}}"/>
+                <DataGridTextColumn   Width="200" Header="Return Amount"  Binding="{Binding FORMATTED_TOTAL_AMOUNT}"/>
                 <DataGridTextColumn   Width="200" Header="Customer Name"  Binding="{Binding CUSTOMER_ID}"/>
                 <!--<DataGridTextColumn   Width="200" Header="Customer Code"  Binding="{Binding PURCHASE_UNIT}"/>
                     <DataGridTextColumn   Width="200" Header="Mobile No"  Binding="{Binding MODIFIED_BY}"/>-->

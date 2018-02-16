@@ -76,13 +76,13 @@
                             <DataGridTextColumn     Width="150" MaxWidth="155" Header="Invoice Number" Binding="{Binding Invoice_Number}"  />
                             <DataGridTextColumn   Width="100" Header="Invoice Date"  Binding="{Binding Invoice_Date}"/>
                             <DataGridTextColumn   Width="100" Header="Number of Days Due"  />
-                            <DataGridTextColumn   Width="100" Header="Pending Amount"  Binding="{Binding Pending_Amount}"/>
+                            <DataGridTextColumn   Width="100" Header="Pending Amount"  Binding="{Binding FORMATTED_Pending_Amount}"/>
 
-                            <DataGridTextColumn   Width="100" Header="Adjusted Amount"  Binding="{Binding Adjusted_Amount,StringFormat=\{0:c\}}"/>
-                            <DataGridTextColumn   Width="100" Header="Penalty Amount"  Binding="{Binding Penalty_Amount,StringFormat=\{0:c\}}"/>
-                            <DataGridTextColumn   Width="150" Header=" Actual Penalty Amount"  Binding="{Binding Actual_Penalty_Amount}"/>
-                            <DataGridTextColumn   Width="200" Header=" Adjusted Penalty Amount"  Binding="{Binding Adjusted_Penalty_Amount}"/>
-                            <DataGridTextColumn   Width="200" Header="Adjust Balance"  Binding="{Binding Adjust_Balance}"/>
+                            <DataGridTextColumn   Width="100" Header="Adjusted Amount"  Binding="{Binding FORMATTED_Adjusted_Amount}"/>
+                            <DataGridTextColumn   Width="100" Header="Penalty Amount"  Binding="{Binding FORMATTED_Penalty_Amount}"/>
+                            <DataGridTextColumn   Width="150" Header=" Actual Penalty Amount"  Binding="{Binding FORMATTED_Actual_Penalty_Amount}"/>
+                            <DataGridTextColumn   Width="200" Header=" Adjusted Penalty Amount"  Binding="{Binding FORMATTED_Adjusted_Penalty_Amount}"/>
+                            <DataGridTextColumn   Width="200" Header="Adjust Balance"  Binding="{Binding FORMATTED_Adjust_Balance}"/>
 
                         </DataGrid.Columns>
 

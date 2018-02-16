@@ -64,10 +64,10 @@
                 <DataGridTextColumn     Width="150" MaxWidth="155" Header="BarCode" Binding="{Binding BARCODE}"  />
                 <DataGridTextColumn   Width="200" Header="Item Name"  Binding="{Binding ITEM_NAME}"/>
                 <DataGridTextColumn   Width="200" Header="Search Code"  Binding="{Binding SEARCH_CODE}"/>
-                <DataGridTextColumn   Width="200" Header="Sale Quantity"  Binding="{Binding Current_Qty}"/>
+                <DataGridTextColumn   Width="200" Header="Sale Quantity"  Binding="{Binding FORMATTED_Current_Qty}"/>
 
-                <DataGridTextColumn   Width="200" Header="MRP"  Binding="{Binding MRP, StringFormat=\{0:c\}}"/>
-                <DataGridTextColumn   Width="200" Header="Sales Price"  Binding="{Binding SALES_PRICE, StringFormat=\{0:c\}}"/>
+                <DataGridTextColumn   Width="200" Header="MRP"  Binding="{Binding FORMATTED_MRP}"/>
+                <DataGridTextColumn   Width="200" Header="Sales Price"  Binding="{Binding FORMATTED_SALES_PRICE}"/>
                 <!--<DataGridTextColumn   Width="200" Header="Current Quantity"  Binding="{Binding Current_Qty}"/>-->
                 <DataGridTextColumn   Width="200" Header="Sales Measuring Unit"  Binding="{Binding SALES_UNIT}"/>
                 <DataGridTextColumn   Width="200" Header="Purchase Measuring Unit"  Binding="{Binding PURCHASE_UNIT}"/>

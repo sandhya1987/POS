@@ -90,11 +90,11 @@
                             <DataGridTextColumn  Width="75" Header="Measuring &#xa;Unit" Binding="{Binding Category}"/>
                             <DataGridTextColumn  Width="95" Header="Item Level&#xa;Discount&#xa; Percent" Binding="{Binding DISCOUNT_PERCENT,StringFormat=\{0:c\}}"/>
                             <DataGridTextColumn    Width="95" Header="Invoice Level&#xa;Discount&#xa; Percent" Binding="{Binding INVOICE_DIS_AMT,StringFormat=\{0:c\}}"/>
-                            <DataGridTextColumn    Width="95" Header="Sub&#xa;Total&#xa;Before Tax" Binding="{Binding SUB_TOTAL_BEFORETAX,StringFormat=\{0:c\}}"/>
+                            <DataGridTextColumn    Width="95" Header="Sub&#xa;Total&#xa;Before Tax" Binding="{Binding FORMATTED_SUB_TOTAL_BEFORETAX}"/>
                             <DataGridTextColumn    Width="95" Header="Tax&#xa;Name" Binding="{Binding Contact Name,StringFormat=\{0:c\}}"/>
-                            <DataGridTextColumn    Width="95" Header="Total Tax&#xa;Amount" Binding="{Binding TOTAL_AMT,StringFormat=\{0:c\}}"/>
+                            <DataGridTextColumn    Width="95" Header="Total Tax&#xa;Amount" Binding="{Binding FORMATTED_TOTAL_AMT}"/>
                             <DataGridTextColumn    Width="95" Header="Item Unit &#xa;Price After&#xa;Tax" Binding="{Binding Contact Name,StringFormat=\{0:c\}}"/>
-                            <DataGridTextColumn    Width="95" Header="Sub Total&#xa;After Tax" Binding="{Binding SUB_TOTAL,StringFormat=\{0:c\}}"/>
+                            <DataGridTextColumn    Width="95" Header="Sub Total&#xa;After Tax" Binding="{Binding FORMATTED_SUB_TOTAL}"/>
                             <DataGridTextColumn    Width="95" Header="Effective&#xa;Rate Per Unit" Binding="{Binding Contact Name,StringFormat=\{0:c\}}"/>
                             <DataGridTextColumn    Width="95" Header="Sales&#xa;Price" Binding="{Binding Contact Name,StringFormat=\{0:c\}}"/>
                             <DataGridTextColumn    Width="95" Header="MRP" Binding="{Binding Contact Name,StringFormat=\{0:c\}}"/>

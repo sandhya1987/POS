@@ -88,9 +88,9 @@
                         <DataGridTextColumn   Width="200" Header="Item Name"  Binding="{Binding ITEM_NAME}"/>
                         <DataGridTextColumn   Width="200" Header="Search Code"  Binding="{Binding SEARCH_CODE}"/>
                         <DataGridTextColumn   Width="200" Header="Item Location"  Binding="{Binding ITEM_LOCATION}"/>
-                     
-                        <DataGridTextColumn   Width="200" Header="MRP"  Binding="{Binding MRP,StringFormat=\{0:c\}}"/>
-                        <DataGridTextColumn   Width="200" Header="Sales Price"  Binding="{Binding SALES_PRICE,StringFormat=\{0:c\}}"/>
+
+                        <DataGridTextColumn   Width="200" Header="MRP"  Binding="{Binding FORMATTED_MRP}"/>
+                        <DataGridTextColumn   Width="200" Header="Sales Price"  Binding="{Binding FORMATTED_SALES_PRICE}"/>
                         <DataGridTextColumn   Width="200" Header="Sales Measuring Unit"  Binding="{Binding SALES_UNIT}"/>
                         <DataGridTextColumn   Width="200" Header="Purchase Measuring Unit"  Binding="{Binding PURCHASE_UNIT}"/>
                         <DataGridTextColumn   Width="200" Header="Modified By"  Binding="{Binding MODIFIED_BY}"/>

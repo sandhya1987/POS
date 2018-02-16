@@ -35,7 +35,7 @@
             </DataGrid.RowStyle>
 
             <DataGrid.Columns>
-                <DataGridTextColumn    Header="Sales Price :" Binding="{Binding SALES_PRICE}" Width="200" />
+                <DataGridTextColumn    Header="Sales Price :" Binding="{Binding FORMATTED_SALES_PRICE}" Width="200" />
                 <DataGridTextColumn    Header="Invoice Date :" Binding="{Binding INVOICE_DATE}" Width="250"/>
                 
 
