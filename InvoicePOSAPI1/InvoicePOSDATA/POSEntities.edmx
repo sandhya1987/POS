@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="NEW_POSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="NEW_POSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="NEW_POSModelStoreContainer">
           <EntitySet Name="AUTHORIZATION" EntityType="NEW_POSModel.Store.AUTHORIZATION" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="MODULE" EntityType="NEW_POSModel.Store.MODULE" store:Type="Tables" Schema="dbo" />
@@ -1356,6 +1356,12 @@
           <Property Name="IS_PRINT_CHECK" Type="bit" />
           <Property Name="USER_ID" Type="bigint" />
           <Property Name="SuppPayNo" Type="nvarchar(max)" />
+          <Property Name="TRANSACTION_DATE" Type="datetime" />
+          <Property Name="CREDIT_AMOUNT" Type="decimal" />
+          <Property Name="DEBIT_AMOUNT" Type="decimal" />
+          <Property Name="NARRATION_TEXT" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOCUMENT_TYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="GST_NUMBER" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TBL_SUPPLIER">
           <Key>
@@ -1790,8 +1796,7 @@
           <Property Name="EXPT_TO_EXCEL" Type="bit" />
         </EntityType>
         <Function Name="SP_All_Invoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="NEW_POSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -2914,6 +2919,12 @@
           <Property Name="IS_PRINT_CHECK" Type="Boolean" />
           <Property Name="USER_ID" Type="Int64" />
           <Property Name="SuppPayNo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="DateTime" Name="TRANSACTION_DATE" Precision="3" />
+          <Property Type="Decimal" Name="CREDIT_AMOUNT" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="DEBIT_AMOUNT" Precision="18" Scale="0" />
+          <Property Type="String" Name="NARRATION_TEXT" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DOCUMENT_TYPE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GST_NUMBER" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TBL_SUPPLIER">
           <Key>
@@ -4433,6 +4444,12 @@
           <EntitySetMapping Name="TBL_SUPP_PAYMENT">
             <EntityTypeMapping TypeName="NEW_POSModel.TBL_SUPP_PAYMENT">
               <MappingFragment StoreEntitySet="TBL_SUPP_PAYMENT">
+                <ScalarProperty Name="GST_NUMBER" ColumnName="GST_NUMBER" />
+                <ScalarProperty Name="DOCUMENT_TYPE" ColumnName="DOCUMENT_TYPE" />
+                <ScalarProperty Name="NARRATION_TEXT" ColumnName="NARRATION_TEXT" />
+                <ScalarProperty Name="DEBIT_AMOUNT" ColumnName="DEBIT_AMOUNT" />
+                <ScalarProperty Name="CREDIT_AMOUNT" ColumnName="CREDIT_AMOUNT" />
+                <ScalarProperty Name="TRANSACTION_DATE" ColumnName="TRANSACTION_DATE" />
                 <ScalarProperty Name="SUPP_PAYMENT" ColumnName="SUPP_PAYMENT" />
                 <ScalarProperty Name="SUPP_EMAIL" ColumnName="SUPP_EMAIL" />
                 <ScalarProperty Name="SUPP_SMS" ColumnName="SUPP_SMS" />

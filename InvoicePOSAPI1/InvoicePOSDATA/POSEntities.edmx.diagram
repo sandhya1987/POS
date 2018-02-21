@@ -56,7 +56,7 @@
         <EntityTypeShape EntityType="NEW_POSModel.TBL_SALE_ITEM" Width="1.5" PointX="4.75" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NEW_POSModel.TBL_SALES_RETURN" Width="1.5" PointX="6.75" PointY="22.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NEW_POSModel.TBL_STOCK_TRANSFER" Width="1.5" PointX="22.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NEW_POSModel.TBL_SUPP_PAYMENT" Width="1.5" PointX="22.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NEW_POSModel.TBL_SUPP_PAYMENT" Width="1.875" PointX="22.75" PointY="14.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NEW_POSModel.TBL_SUPPLIER" Width="1.5" PointX="16.75" PointY="23.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NEW_POSModel.tbl_supppaydetails" Width="1.5" PointX="18.75" PointY="23.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NEW_POSModel.TBL_TAX" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />

@@ -40,7 +40,7 @@ namespace InvoicePOS.ViewModels
         SupplierModel _SPModel = new SupplierModel();
         public ICommand select { get; set; }
         SupplierModel[] data = null;
-
+        SuppPaymentModel[] data1 = null;
 
 
         private SupplierModel _SelectedSupplier;
@@ -619,6 +619,19 @@ namespace InvoicePOS.ViewModels
             {
                 this._ListGrid = value;
                 OnPropertyChanged("ListGrid");
+            }
+        }
+        public List<SuppPaymentModel> _ListGridViewLedger { get; set; }
+        public List<SuppPaymentModel> ListGridViewLedger
+        {
+            get
+            {
+                return _ListGridViewLedger;
+            }
+            set
+            {
+                this._ListGridViewLedger = value;
+                OnPropertyChanged("ListGridViewLedger");
             }
         }
 
@@ -1241,6 +1254,128 @@ namespace InvoicePOS.ViewModels
 
 
         }
+        private DateTime _FROM_DATE = DateTime.Now;
+        public DateTime FROM_DATE
+        {
+            get
+            {
+                return _FROM_DATE;
+            }
+            set
+            {
+                _FROM_DATE = value;
+                string str = _FROM_DATE.ToString("yyyy-MM-dd HH:mm");
+                string str1 = _FROM_DATE.ToString();
+                DateTime dt = DateTime.ParseExact(str, "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+
+                if (_FROM_DATE != value)
+                {
+                    _FROM_DATE = value;
+
+                    OnPropertyChanged("FROM_DATE");
+                }
+
+            }
+        }
+        private DateTime _TO_DATE = DateTime.Now;
+        public DateTime TO_DATE
+        {
+            get
+            {
+                return _TO_DATE;
+            }
+            set
+            {
+                if (_TO_DATE != value)
+                {
+                    _TO_DATE = value;
+                    OnPropertyChanged("TO_DATE");
+                }
+
+            }
+        }
+        public bool _ApplyDateRange_Search;
+        public bool ApplyDateRange_Search
+        {
+            get
+            {
+                return _ApplyDateRange_Search;
+            }
+            set
+            {
+                _ApplyDateRange_Search = value;
+                var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                if (_ApplyDateRange_Search == true)
+                {
+                    GetSupplierFilterSearch(comp);
+                }
+                else
+                {
+                    GetSupplierFilterSearch(comp);
+                }
+                OnPropertyChanged("ApplyDateRange_Search");
+            }
+        }
+
+        public async Task<ObservableCollection<SuppPaymentModel>> GetSupplierFilterSearch(long CompId)
+        {
+            List<SuppPaymentModel> _ListGrid_Temp = new List<SuppPaymentModel>();
+            SupplierDataFilter = new List<SuppPaymentModel>();
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            client.Timeout = new TimeSpan(500000000000);
+            HttpResponseMessage response = client.GetAsync("api/SuppPaymentAPI/GetSuppPayment?id=" + CompId + "").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                data1 = JsonConvert.DeserializeObject<SuppPaymentModel[]>(await response.Content.ReadAsStringAsync());
+                int x = 0;
+                for (int i = 0; i < data.Length; i++)
+                {
+                    x++;
+                    _ListGrid_Temp.Add(new SuppPaymentModel
+                    {
+                        SLNO = x,                        
+                        COMPANY_ID = data1[i].COMPANY_ID,
+                       PAYMENT_DATE = data1[i].PAYMENT_DATE,
+                       CREDIT_AMOUNT = data1[i].CREDIT_AMOUNT,
+                       DEBIT_AMOUNT = data1[i].DEBIT_AMOUNT,
+                       NARRATION_TEXT = data1[i].NARRATION_TEXT,
+                       DOCUMENT_TYPE = data1[i].DOCUMENT_TYPE,
+                       GST_NUMBER = data1[i].GST_NUMBER
+                    });
+                }
+                
+                if (ApplyDateRange_Search == true)
+                {
+
+                    var item1 = (from m in _ListGrid_Temp
+                                 where m.PAYMENT_DATE >= FROM_DATE && m.PAYMENT_DATE <= TO_DATE
+                                 select m).ToList();
+                    if (item1.Count > 0)
+                    {
+                        _ListGrid_Temp = item1;
+                    }
+                }
+            }
+            ListGridViewLedger = _ListGrid_Temp;
+            return new ObservableCollection<SuppPaymentModel>(_ListGrid_Temp);
+
+        }
+        private List<SuppPaymentModel> _SupplierDataFilter;
+        public List<SuppPaymentModel> SupplierDataFilter
+        {
+            get { return _SupplierDataFilter; }
+            set
+            {
+                if (_SupplierDataFilter != value)
+                {
+                    _SupplierDataFilter = value;
+                }
+            }
+        }
+
         public async Task<ObservableCollection<SupplierModel>> GetSupplier(long CompId)
         {
             List<SupplierModel> _ListGrid_Temp = new List<SupplierModel>();
@@ -1288,6 +1423,7 @@ namespace InvoicePOS.ViewModels
                         CONTACT_MOBILE_NO = data[i].CONTACT_MOBILE_NO,
                         CONTACT_WEBSITE = data[i].CONTACT_WEBSITE,
                         CONTACT_EMAIL = data[i].CONTACT_EMAIL,
+                        
                     });
                 }
                 if (SEARCH_SUPPLIER != "" && SEARCH_SUPPLIER != null)
@@ -1300,6 +1436,7 @@ namespace InvoicePOS.ViewModels
                     var InActiveSupp = (from m in _ListGrid_Temp where m.IS_ACTIVE == true select m).ToList();
                     _ListGrid_Temp = InActiveSupp;
                 }
+                
             }
             ListGrid = _ListGrid_Temp;
             return new ObservableCollection<SupplierModel>(_ListGrid_Temp);
@@ -1587,7 +1724,52 @@ namespace InvoicePOS.ViewModels
             Window_BusinessLocationList sh = new Window_BusinessLocationList();
             sh.Show();
        }
+        public ICommand _SelectOkBusiness { get; set; }
+        public ICommand SelectOkBusiness
+        {
+            get
+            {
+                if (_SelectOkBusiness == null)
+                {
+                    _SelectOkBusiness = new DelegateCommand(SelectOkBusiness_Ok);
+                }
+                return _SelectOkBusiness;
+            }
+        }
+        private BusinessLocationModel _SelectedBusinessLoca;
+        public BusinessLocationModel SelectedBusinessLoca
+        {
+            get { return _SelectedBusinessLoca; }
+            set
+            {
+                if (_SelectedBusinessLoca != value)
+                {
+                    _SelectedBusinessLoca = value;
+                    App.Current.Properties["LOC_ID_SUP"] = SelectedBusinessLoca.BUSINESS_LOCATION_ID;
+                    App.Current.Properties["BUSSINESS_LOC_SUP"] = SelectedBusinessLoca.BUSINESS_LOCATION;
+                    App.Current.Properties["BussLocList_SUP"] = SelectedBusinessLoca.BUSINESS_LOCATION;
+                    App.Current.Properties["BussLocName_SUP"] = SelectedBusinessLoca.BUSS_ADDRESS_1;
+                    OnPropertyChanged("_SelectedBusinessLoca");
+                }
 
+            }
+        }
+        public void SelectOkBusiness_Ok()
+        {
+
+            if (SelectedBusinessLoca.BUSINESS_LOCATION != null && InvoicePOS.UserControll.Supplier.SupplierViewLedger.BusinessList.Text == null)
+            {
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.BusinessList.Text = null;
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.BusinessList.Text = SelectedBusinessLoca.BUSINESS_LOCATION;
+
+            }
+            if (SelectedBusinessLoca.BUSINESS_LOCATION != null && InvoicePOS.UserControll.Supplier.SupplierViewLedger.CompanyList.Text == null)
+            {
+
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.CompanyList.Text = null;
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.CompanyList.Text = SelectedBusinessLoca.COMPANY;
+            }
+        }
         public SupplierViewModel()
         {
             App.Current.Properties["IMG_HideShow"] = false;
