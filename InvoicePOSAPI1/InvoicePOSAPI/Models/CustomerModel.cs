@@ -61,9 +61,12 @@ namespace InvoicePOSAPI.Models
         
     }
 
-    //public class Openingbalnce  
-    //{
-        
-
-    //}
+    public class TopCustomerModel
+    {
+        public int CUSTOMER_ID { get; set; }
+        public string CUSTOMER_CODE { get; set; }
+        public string CUSTOMER_NAME { get; set; }
+        public int TOTAL_NO_OF_INVOICE { get; set; }
+        public int? TOTAL_PURCHASE { get; set; }
+    }
 }

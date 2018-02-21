@@ -183,7 +183,7 @@ namespace InvoicePOS.Models
         public string SelectCollectTax { get; set; }
 
         public string PURCHASE_UNIT { get; set; }
-        public string FORMATTED_PURCHASE_UNIT
+       /* public string FORMATTED_PURCHASE_UNIT
         {
             get
             {
@@ -200,7 +200,7 @@ namespace InvoicePOS.Models
                 }
                 return tmp;
             }
-        }
+        }*/
         public string SALES_UNIT { get; set; }
         public decimal PURCHASE_UNIT_PRICE { get; set; }
         public string FORMATTED_PURCHASE_UNIT_PRICE
@@ -927,5 +927,22 @@ namespace InvoicePOS.Models
 
 
 
+    }
+
+
+    public class TopProductModel
+    {
+        public string ITEM_ID { get; set; }
+        public int? QUANTITY_SOLD { get; set; }
+
+        public string ITEM_NAME { get; set; }
+        public string ITEM_CODE { get; set; }
+        public int? AVAILABLE_QUANTITY { get; set; }
+    }
+
+    public class AvailableStockModel
+    {
+        public string BAR_CODE { get; set; }
+        public int? STOCK { get; set; }
     }
 }

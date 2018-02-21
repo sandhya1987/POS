@@ -874,6 +874,85 @@ namespace InvoicePOSAPI.Controllers
             var value = db.TBL_INVOICE_PAY.Where(m => m.INVOICE_ID == id).ToList();
             return Request.CreateResponse(HttpStatusCode.OK, value);
         }
-     
+
+
+
+        [HttpGet]
+        public HttpResponseMessage GetInvoiceCustomerDetails(int id)
+        {
+
+            var str = (from a in db.TBL_INVOICE_PAY
+                       join b in db.TBL_CUSTOMER on a.CUSTOMER_ID equals b.CUSTOMER_ID
+                       where a.INVOICE_ID == id
+                       select new DashBoardPendingInvoiceModel
+                       {
+                           INVOICE_NO = a.INVOICE_NO,
+                           INVOICE_DATE = a.INVOICE_DATE,
+                           CUSTOMER_FIRST_NAME = b.FIRST_NAME,
+                           CUSTOMER_LAST_NAME = b.LAST_NAME,
+                           CUSTOMER_NUMBER = b.CUSTOMER_NUMBER,
+                           TOTAL_AMOUNT = a.TOTAL_AMOUNT,
+                           PENDING_AMOUNT = a.PENDING_AMOUNT
+                       }).FirstOrDefault();
+            return Request.CreateResponse(HttpStatusCode.OK, str);
+        }
+
+        [HttpGet]
+        public HttpResponseMessage GetPendingInvoices(int id)
+        {
+            var str = (from a in db.TBL_INVOICE_PAY where a.PENDING_AMOUNT > 0 && a.COMANY_ID == id
+                       join b in db.TBL_CUSTOMER on a.CUSTOMER_ID equals b.CUSTOMER_ID
+                       select new DashBoardPendingInvoiceModel
+                       {
+                           INVOICE_NO = a.INVOICE_NO,
+                           INVOICE_DATE = a.INVOICE_DATE,
+                           CUSTOMER_FIRST_NAME = b.FIRST_NAME,
+                           CUSTOMER_LAST_NAME = b.LAST_NAME,
+                           CUSTOMER_NUMBER = b.CUSTOMER_NUMBER,
+                           TOTAL_AMOUNT = a.TOTAL_AMOUNT,
+                           PENDING_AMOUNT = a.PENDING_AMOUNT
+                       }).ToList();
+            return Request.CreateResponse(HttpStatusCode.OK, str);
+        }
+
+        [HttpGet]
+        public HttpResponseMessage GetPendingPayments(int id)
+        {
+            var str = (from a in db.TBL_INVOICE_PAY
+                       where a.PENDING_AMOUNT > 0 && a.COMANY_ID == id
+                       join b in db.TBL_CUSTOMER on a.CUSTOMER_ID equals b.CUSTOMER_ID
+                       select new DashBoardPendingInvoiceModel
+                       {
+                           INVOICE_NO = a.INVOICE_NO,
+                           INVOICE_DATE = a.INVOICE_DATE,
+                           CUSTOMER_FIRST_NAME = b.FIRST_NAME,
+                           CUSTOMER_LAST_NAME = b.LAST_NAME,
+                           CUSTOMER_NUMBER = b.CUSTOMER_NUMBER,
+                           TOTAL_AMOUNT = a.TOTAL_AMOUNT,
+                           PENDING_AMOUNT = a.PENDING_AMOUNT
+                       }).OrderByDescending(c=>c.PENDING_AMOUNT).ToList();
+            return Request.CreateResponse(HttpStatusCode.OK, str);
+        }
+        
+
+        [HttpGet]
+        public HttpResponseMessage GetRecentInvoices(int id)
+        {
+            DateTime FormDate = DateTime.Now.AddDays(-15);
+            var str = (from a in db.TBL_INVOICE_PAY
+                       join b in db.TBL_CUSTOMER on a.CUSTOMER_ID equals b.CUSTOMER_ID
+                       where a.COMANY_ID == id && a.INVOICE_DATE >= FormDate
+                       select new DashBoardPendingInvoiceModel
+                       {
+                           INVOICE_NO = a.INVOICE_NO,
+                           INVOICE_DATE = a.INVOICE_DATE,
+                           CUSTOMER_FIRST_NAME = b.FIRST_NAME,
+                           CUSTOMER_LAST_NAME = b.LAST_NAME,
+                           CUSTOMER_NUMBER = b.CUSTOMER_NUMBER,
+                           TOTAL_AMOUNT = a.TOTAL_AMOUNT,
+                           PENDING_AMOUNT = a.PENDING_AMOUNT
+                       }).OrderByDescending(c=>c.INVOICE_DATE).ToList();
+            return Request.CreateResponse(HttpStatusCode.OK, str);
+        }
     }
 }

@@ -207,5 +207,22 @@ namespace InvoicePOSAPI.Models
         public string SORT_INDEX1 { get; set; }
         public long LOCATION_ID { get; set; }
     }
+
+
+    public class TopProductModel
+    {
+        public string ITEM_ID { get; set; }
+        public int? QUANTITY_SOLD { get; set; }
+
+        public string ITEM_NAME { get; set; }
+        public string ITEM_CODE { get; set; }
+        public int? AVAILABLE_QUANTITY { get; set; }
+    }
+
+    public class AvailableStockModel
+    {
+        public string BAR_CODE { get; set; }
+        public int? STOCK { get; set; }
+    }
        
 }

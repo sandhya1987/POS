@@ -509,5 +509,21 @@ namespace InvoicePOSAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, value);
         }
 
+        [HttpGet]
+        public HttpResponseMessage GetPendingPurchseOrders(int id)
+        {
+            var str = (from a in db.TBL_PO_PAYMENT
+                       where a.COMPANY_ID == id && a.IS_DELETE == false && a.PO_STATUS == "Pending"
+                       select new PendingPOModel
+                       {
+                           SUPPLIER_CODE = a.SUPPLIER_ID,
+                           SUPPLIER_NAME = a.SUPPLIER_NAME,
+                            PO_AMOUNT = a.TOTAL_AMOUNT,
+                            PO_NUMBER = a.PO_NUMBER
+
+                       }).ToList();
+            return Request.CreateResponse(HttpStatusCode.OK, str);
+        }
+
     }
 }

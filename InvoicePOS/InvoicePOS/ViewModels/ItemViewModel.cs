@@ -294,7 +294,6 @@ namespace InvoicePOS.ViewModels
         }
 
 
-
         // bussLocation listion in Textbox
 
         public List<BusinessLocationModel> _ListGridBusniss { get; set; }

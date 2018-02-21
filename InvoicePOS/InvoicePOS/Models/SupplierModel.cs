@@ -321,4 +321,12 @@ namespace InvoicePOS.Models
             }
         }
     }
+
+    public class TopVendorModel
+    {
+        public string SUPPLIER_CODE { get; set; }
+        public string SUPPLIER_NAME { get; set; }
+        public int TOTAL_NO_OF_PURCHASEORDER { get; set; }
+        public decimal? TOTAL_PURCHASE { get; set; }
+    }
 }

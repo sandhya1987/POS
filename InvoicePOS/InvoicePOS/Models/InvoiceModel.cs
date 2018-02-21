@@ -67,6 +67,8 @@ namespace InvoicePOS.Models
         //public string CASH_REG { get; set; }
         public ObservableCollection<ItemModel> SelectedItem { get; set; }
     }
+    
+
     public class GetInvoiceModel
     {
         public long INVOICE_ID { get; set; }

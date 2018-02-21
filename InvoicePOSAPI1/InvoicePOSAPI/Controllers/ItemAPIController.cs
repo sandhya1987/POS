@@ -1881,5 +1881,55 @@ namespace InvoicePOSAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, "success");
         }
 
+
+
+
+        [HttpGet]
+        public HttpResponseMessage GetTopProducts(int id)
+        { 
+            
+            var str1 = (from x in(from T1 in db.TBL_ITEMS
+                       where T1.COMPANY_ID == id
+                       join T2 in db.TBL_SALE_ITEM on T1.ITEM_ID equals T2.SALE_ITEM_ID
+                       group new { T1, T2 } by new { T2.SALE_ITEM_ID } into g
+                       select new
+                       {
+                           ITEM_ID = g.Key.SALE_ITEM_ID,
+                           QUANTITY_SOLD = g.Sum(b => b.T2.SALE_QTY),
+                       })
+                       join SI in db.TBL_ITEMS on x.ITEM_ID equals SI.ITEM_ID
+                       select new
+                       {
+                           ITEM_ID = x.ITEM_ID,
+                           QUANTITY_SOLD = x.QUANTITY_SOLD,
+                           ITEM_NAME = SI.ITEM_NAME,
+                           ITEM_CODE = SI.ITEM_UNIQUE_NAME,
+                           AVAILABLE_QUANTITY = SI.OPN_QNT
+                       }).OrderByDescending(p => p.QUANTITY_SOLD);
+                       
+
+            return Request.CreateResponse(HttpStatusCode.OK, str1);
+
+
+        }
+
+        [HttpGet]
+        public HttpResponseMessage GetAvailableStock(int id)
+        {
+
+            var str1 = (from T1 in db.TBL_ITEMS
+                             where T1.COMPANY_ID == id
+                             group new { T1} by new { T1.BARCODE } into g
+                        select new AvailableStockModel
+                             {
+                                 BAR_CODE = g.Key.BARCODE,
+                                 STOCK = g.Sum(b => b.T1.OPN_QNT),
+                             }).OrderBy(p => p.STOCK).ToList();
+
+
+            return Request.CreateResponse(HttpStatusCode.OK, str1);
+
+
+        }
     }
 }

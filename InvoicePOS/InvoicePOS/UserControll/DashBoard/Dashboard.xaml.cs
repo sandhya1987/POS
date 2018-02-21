@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using InvoicePOS.ViewModels;
 
 namespace InvoicePOS.UserControll.DashBoard
 {
@@ -22,6 +23,36 @@ namespace InvoicePOS.UserControll.DashBoard
         public Dashboard()
         {
             InitializeComponent();
+            DashboardViewModel _DBVM = new DashboardViewModel();
+            this.DataContext = _DBVM;
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            TabItem selectedTab = e.AddedItems[0] as TabItem;  // Gets selected tab
+
+            string tabTitle = selectedTab.Header.ToString();
+            switch (tabTitle)
+            {
+                case "Pending Invoices":
+                    break;
+                case "Pending Payment":
+                    break;
+                case "Top Product":
+                    break;
+                case "Top Customer":
+                    break;
+                case "Recent Invoices":
+                    break;
+                case "Top Vendor":
+                    break;
+                case "Pending Purchase Order":
+                    break;
+                case "Stock List":
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

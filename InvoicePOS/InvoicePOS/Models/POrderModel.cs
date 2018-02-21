@@ -269,5 +269,11 @@ namespace InvoicePOS.Models
         public decimal? TaxValue { get; set; }
     }
 
-
+    public class PendingPOModel
+    {
+        public string PO_NUMBER { get; set; }
+        public string SUPPLIER_CODE { get; set; }
+        public string SUPPLIER_NAME { get; set; }
+        public decimal? PO_AMOUNT { get; set; }
+    }
 }
