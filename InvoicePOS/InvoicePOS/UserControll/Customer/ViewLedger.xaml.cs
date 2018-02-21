@@ -1,6 +1,7 @@
 ﻿using InvoicePOS.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Printing;
 using System.Text;
@@ -56,6 +57,9 @@ namespace InvoicePOS.UserControll.Customer
 
             textbox5.Text = "";
             CompanyList = textbox5;
+
+            
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -90,5 +94,6 @@ namespace InvoicePOS.UserControll.Customer
                     oldSize));
             }
         }
+
     }
 }

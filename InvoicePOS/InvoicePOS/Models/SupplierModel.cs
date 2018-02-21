@@ -190,6 +190,12 @@ namespace InvoicePOS.Models
         public DateTime PAYMENT_DATE { get; set; }
         public decimal CURRENT_PAYABLE_AMT { get; set; }
         public decimal TOTAL_PANDING { get; set; }
+        public DateTime TRANSACTION_DATE { get; set; }
+        public decimal CREDIT_AMOUNT { get; set; }
+        public decimal DEBIT_AMOUNT { get; set; }
+        public string NARRATION_TEXT { get; set; }
+        public string DOCUMENT_TYPE { get; set; }
+        public string GST_NUMBER { get; set; }
         public string FORMATTED_TOTAL_PANDING
         {
             get

@@ -34,6 +34,7 @@ using System.Data;
 using InvoicePOS.Views.Main;
 using System.Net;
 using System.Text.RegularExpressions;
+using System.Globalization;
 namespace InvoicePOS.ViewModels
 {
     public class CustomerViewModel : DependencyObject, INotifyPropertyChanged, IModalService
@@ -48,8 +49,26 @@ namespace InvoicePOS.ViewModels
         LoyaltyModel[] datal = null;
         CustomerGroupModel[] dataGroup = null;
         List<CustomerModel> _ListGrid_Temp = new List<CustomerModel>();
+
+        List<GetInvoiceModel> _ListGrid_ViewLedger = new List<GetInvoiceModel>();
+
         InvoiceModel invoview = new InvoiceModel();
         public List<CustomerModel> _ListGrid { get; set; }
+
+        public List<GetInvoiceModel> _ListGridViewLedger { get; set; }
+        public List<GetInvoiceModel> ListGridViewLedger
+        {
+            get
+            {
+                return _ListGridViewLedger;
+            }
+            set
+            {
+                this._ListGridViewLedger = value;
+                OnPropertyChanged("ListGridViewLedger");
+            }
+        }
+
         public List<CustomerModel> ListGrid
         {
             get
@@ -1563,6 +1582,147 @@ namespace InvoicePOS.ViewModels
             }
 
         }
+
+       
+        private DateTime _FROM_DATE = DateTime.Now;
+        public DateTime FROM_DATE
+        {
+            get
+            {
+                return _FROM_DATE;
+            }
+            set
+            {
+               _FROM_DATE = value;
+               string str = _FROM_DATE.ToString("yyyy-MM-dd HH:mm");
+               string str1 = _FROM_DATE.ToString();
+               DateTime dt = DateTime.ParseExact(str, "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+                
+                if (_FROM_DATE != value)
+                {
+                    _FROM_DATE = value;
+                   
+                    OnPropertyChanged("FROM_DATE");
+                }
+
+            }
+        }
+        private DateTime _TO_DATE = DateTime.Now;
+        public DateTime TO_DATE
+        {
+            get
+            {
+                return _TO_DATE;
+            }
+            set
+            {
+                if (_TO_DATE != value)
+                {
+                    _TO_DATE = value;
+                    OnPropertyChanged("TO_DATE");
+                }
+
+            }
+        }
+        public bool _ApplyDateRange_Search;
+        public bool ApplyDateRange_Search
+        {
+            get
+            {
+                return _ApplyDateRange_Search;
+            }
+            set
+            {
+                _ApplyDateRange_Search = value;
+                var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                if (_ApplyDateRange_Search == true)
+                {
+                    GetInvoice();
+                }
+                else
+                {
+                    GetInvoice();
+                }
+                OnPropertyChanged("ApplyDateRange_Search");
+            }
+        }
+        
+        public async void GetCustomerFilter()
+        {
+            var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            _ListGrid_Temp = new List<CustomerModel>();
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            client.Timeout = new TimeSpan(500000000000);
+            response = await client.GetAsync("api/CustomerAPI/GetCustomer?id=" + comp + "");
+            if (response.IsSuccessStatusCode)
+            {
+                data = JsonConvert.DeserializeObject<CustomerModel[]>(await response.Content.ReadAsStringAsync());
+                CustomerData = new List<CustomerModel>();
+                int x = 0;
+                
+                for (int i = 0; i < data.Length; i++)
+                {
+                    x++;
+                    var selectData = data.Where(m => m.FROM_DATE <= data[i].FROM_DATE && m.TO_DATE >= data[i].TO_DATE).ToList();                    
+                    _ListGrid_Temp.Add(new CustomerModel
+                    {
+                        SLNO = x,
+                        NAME = selectData[i].NAME,
+                        COMPANY_ID = selectData[i].COMPANY_ID,
+                        LAST_NAME = selectData[i].LAST_NAME,
+                        DISPLAY_CUS_LAST = selectData[i].LAST_NAME,
+                        SEARCH_CODE = selectData[i].SEARCH_CODE,
+                        VAT_NUMBER = selectData[i].VAT_NUMBER,
+                        CST_NUMBER = selectData[i].CST_NUMBER,
+                        LOYALTY_NO = selectData[i].LOYALTY_NO,
+                        CUSTOMER_ID = selectData[i].CUSTOMER_ID,
+                        BILLING_ADDRESS1 = selectData[i].BILLING_ADDRESS1,
+                        BILLING_ADDRESS2 = selectData[i].BILLING_ADDRESS2,
+                        BILLING_TO_NAME = selectData[i].BILLING_TO_NAME,
+                        IS_ENROLLED_FOR_LOYALITY = selectData[i].IS_ENROLLED_FOR_LOYALITY,
+                        CITY = selectData[i].CITY,
+                        COUNTRY = selectData[i].COUNTRY,
+                        CUSTOMER_GROUP = selectData[i].CUSTOMER_GROUP,
+                        CUSTOMER_NUMBER = selectData[i].CUSTOMER_NUMBER,
+                        DEFAULT_CREIT_LIMIT = selectData[i].DEFAULT_CREIT_LIMIT,
+                        EMAIL_ADDRESS = selectData[i].EMAIL_ADDRESS,
+                        IS_ACTIVE = selectData[i].IS_ACTIVE,
+                        MOBILE_NO = selectData[i].MOBILE_NO,
+                        NOTES = selectData[i].NAME,
+                        credit_Limits1 = selectData[i].credit_Limits1,
+                        TIN = selectData[i].TIN,
+                        PAN = selectData[i].PAN,
+                        BUSINESS_LOCATION = selectData[i].BUSINESS_LOCATION,
+                        BUSINESS_LOCATION_ID = selectData[i].BUSINESS_LOCATION_ID,
+
+
+                        OPENING_AMT = selectData[i].OPENING_AMT,
+                        CURRENT_OPENING_BALANCE = selectData[i].CURRENT_OPENING_BALANCE,
+                        POSTAL_CODE = selectData[i].POSTAL_CODE,
+                        REFERRED_BY = selectData[i].REFERRED_BY,
+                        IMAGE_PATH = selectData[i].IMAGE_PATH,
+                        // SAMEBILLINGANDSHIPPING_ADDRESS = data[i].SAMEBILLINGANDSHIPPING_ADDRESS,
+                        STATE = selectData[i].STATE,
+                        TELEPHON_NUMBER = selectData[i].TELEPHON_NUMBER,
+                        SHIPPING_ADDRESS1 = selectData[i].SHIPPING_ADDRESS1,
+                        SHIPPING_ADDRESS2 = selectData[i].SHIPPING_ADDRESS2,
+                        SHIPPING_CITY = selectData[i].SHIPPING_CITY,
+                        SHIPPING_COUNTRY = selectData[i].SHIPPING_COUNTRY,
+                        SHIPPING_EMAIL_ADDRESS = selectData[i].SHIPPING_EMAIL_ADDRESS,
+                        SHIPPING_MOBILE_NO = selectData[i].SHIPPING_MOBILE_NO,
+                        SHIPPING_TELEPHON_NUMBER = selectData[i].SHIPPING_TELEPHON_NUMBER,
+                        SHIPPING_POSTAL_CODE = selectData[i].SHIPPING_POSTAL_CODE,
+                        SHIPPING_STATE = selectData[i].SHIPPING_STATE,
+                        BAL_TYPE_VALUE = selectData[i].BAL_TYPE_VALUE,
+                        FULL_NAME = "" + selectData[i].NAME + " " + selectData[i].LAST_NAME + "",
+                    });
+
+                }
+            }
+        }
         public ICommand _CustomerOpeningBal;
         public ICommand CustomerOpeningBal
         {
@@ -2131,11 +2291,15 @@ namespace InvoicePOS.ViewModels
         public void SelectOkBusiness_Ok()
         {
 
-            if (SelectedBusinessLoca.BUSINESS_LOCATION != null)
+            if (SelectedBusinessLoca.BUSINESS_LOCATION != null && InvoicePOS.UserControll.Customer.ViewLedger.BusinessList.Text == null)
             {
                 InvoicePOS.UserControll.Customer.ViewLedger.BusinessList.Text = null;
                 InvoicePOS.UserControll.Customer.ViewLedger.BusinessList.Text = SelectedBusinessLoca.BUSINESS_LOCATION;
 
+            }
+            if (SelectedBusinessLoca.BUSINESS_LOCATION != null && InvoicePOS.UserControll.Customer.ViewLedger.CompanyList.Text == null)
+            {
+                
                 InvoicePOS.UserControll.Customer.ViewLedger.CompanyList.Text = null;
                 InvoicePOS.UserControll.Customer.ViewLedger.CompanyList.Text = SelectedBusinessLoca.COMPANY;
             }
@@ -2925,6 +3089,83 @@ namespace InvoicePOS.ViewModels
             }
         }
         List<CustomerAutoCompleteListModel> autoCustModelList = new List<CustomerAutoCompleteListModel>();
+         GetInvoiceModel[] datainvoice = null;
+         List<GetInvoiceModel> _ListGrid_Invoice = new List<GetInvoiceModel>();
+        public async Task GetInvoice()
+        {
+            var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response = client.GetAsync("api/InvoiceAPI/GetInvoice?id=" + comp + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    datainvoice = JsonConvert.DeserializeObject<GetInvoiceModel[]>(await response.Content.ReadAsStringAsync());
+                    int x = 0;
+                    for (int i = 0; i < datainvoice.Length; i++)
+                    {
+                        x++;
+                        _ListGrid_Invoice.Add(new GetInvoiceModel
+                        {
+                            INVOICE_ID = datainvoice[i].INVOICE_ID,
+                            AVAILABLE_CREDIT_LIMIT = datainvoice[i].AVAILABLE_CREDIT_LIMIT,
+                            BEFORE_ROUNDOFF = datainvoice[i].BEFORE_ROUNDOFF,
+                            COMMISION_EXPENSE = datainvoice[i].COMMISION_EXPENSE,
+                            CUSTOMER = datainvoice[i].CUSTOMER,
+                            CUSTOMER_EMAIL = datainvoice[i].CUSTOMER_EMAIL,
+                            CUSTOMER_ID = datainvoice[i].CUSTOMER_ID,
+                            CUSTOMER_MOBILE_NO = datainvoice[i].CUSTOMER_MOBILE_NO,
+                            INVOICE_NO = datainvoice[i].INVOICE_NO,
+                            ITEM_ID = datainvoice[i].ITEM_ID,
+                            NOTE = datainvoice[i].NOTE,
+                            NUMBER_OF_ITEM = datainvoice[i].NUMBER_OF_ITEM,
+                            PENDING_AMOUNT = datainvoice[i].PENDING_AMOUNT,
+                            QUANTITY_TOTAL = datainvoice[i].QUANTITY_TOTAL,
+                            RECIVED_AMOUNT = datainvoice[i].RECIVED_AMOUNT,
+                            RETURNABLE_AMOUNT = datainvoice[i].RETURNABLE_AMOUNT,
+                            ROUNDOFF_AMOUNT = datainvoice[i].ROUNDOFF_AMOUNT,
+                            SALES_EXECUTIVE = datainvoice[i].SALES_EXECUTIVE,
+                            SALES_EXECUTIVE_ID = datainvoice[i].SALES_EXECUTIVE_ID,
+                            INVOICE_DATE = datainvoice[i].INVOICE_DATE,
+                            TAX_INCLUDED = datainvoice[i].TAX_INCLUDED,
+                            TOTAL_AMOUNT = datainvoice[i].TOTAL_AMOUNT,
+                            TOTAL_TAX = datainvoice[i].TOTAL_TAX,
+                            DEBIT_AMOUNT = (Convert.ToDecimal(datainvoice[i].DEBIT_AMOUNT)),
+                            CREDIT_AMOUNT = (Convert.ToDecimal(datainvoice[i].CREDIT_AMOUNT)),
+                            TRANSACTION_DATE = datainvoice[i].INVOICE_DATE
+                        });
+                    }
+
+                    
+                    if (ApplyDateRange_Search == true)
+                    {
+
+                        var item1 = (from m in _ListGrid_Invoice
+                                    where m.INVOICE_DATE >= FROM_DATE && m.INVOICE_DATE <= TO_DATE
+                                         select m).ToList();
+                        if (item1.Count > 0)
+                        {
+                            _ListGrid_ViewLedger = item1;
+                        }
+                    }
+                    //if (IS_InACTIVESearch == true)
+                    //{
+                    //var InActiveSupp = (from m in _ListGrid_Invoice where m.IS_ACTIVE == true select m).ToList();
+                    //_ListGrid_Invoice = InActiveSupp;
+                    //}
+                    ListGridViewLedger = _ListGrid_ViewLedger;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
 
         public async Task GetCustomer(long Id)
         {
@@ -3021,6 +3262,7 @@ namespace InvoicePOS.ViewModels
                             _ListGrid_Temp = item1;
                         }
                     }
+                    
                     if (SEARCH_CUS != "" && SEARCH_CUS != null && IS_ACTIVESearch == true)
                     {
 

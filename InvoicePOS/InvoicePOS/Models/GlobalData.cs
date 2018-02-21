@@ -19,8 +19,8 @@ namespace InvoicePOS.Models
         //public static string gblApiAdress = "http://115.115.196.28:8081//";
         //public static string gblApiAdress = "http://10.10.10.108//";
         //public static string gblApiAdress = "http://localhost:1583//";
-        public static string gblApiAdress = "http://localhost:1593//";
-         //public static string gblApiAdress = "http://54.70.197.231";
+        //public static string gblApiAdress = "http://localhost:1596//";
+         public static string gblApiAdress = "http://54.70.197.231";
         public static int count;
         public static string gblSelectedAtrrBtn;
         public static string gblSearchColour;

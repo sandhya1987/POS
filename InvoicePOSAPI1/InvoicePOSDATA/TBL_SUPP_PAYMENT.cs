@@ -55,5 +55,11 @@ namespace InvoicePOSDATA
         public Nullable<bool> IS_PRINT_CHECK { get; set; }
         public Nullable<long> USER_ID { get; set; }
         public string SuppPayNo { get; set; }
+        public Nullable<System.DateTime> TRANSACTION_DATE { get; set; }
+        public Nullable<decimal> CREDIT_AMOUNT { get; set; }
+        public Nullable<decimal> DEBIT_AMOUNT { get; set; }
+        public string NARRATION_TEXT { get; set; }
+        public string DOCUMENT_TYPE { get; set; }
+        public string GST_NUMBER { get; set; }
     }
 }

@@ -41,6 +41,7 @@ using InvoicePOS.UserControll.Employee;
 using InvoicePOS.UserControll.StockLedger;
 using InvoicePOS.Views.CashRegister;
 using InvoicePOS.UserControll.Customer;
+using InvoicePOS.UserControll.Supplier;
 
 namespace InvoicePOS.ViewModels
 {
@@ -1350,11 +1351,23 @@ namespace InvoicePOS.ViewModels
             }
             if (App.Current.Properties["ChangeBusinessLocation"] != null && ViewLedger.BusinessList != null)
             {
-                ViewLedger.BusinessList.Text = SelectedBusinessLoca.BUSS_ADDRESS_1;                
+                ViewLedger.BusinessList.Text = SelectedBusinessLoca.BUSS_ADDRESS_1;
+                ViewLedger.CompanyList.Text = SelectedBusinessLoca.COMPANY;
             }
             if (App.Current.Properties["ChangeBusinessLocation"] != null && ViewLedger.CompanyList != null)
             {
                 ViewLedger.CompanyList.Text = SelectedBusinessLoca.COMPANY;
+                ViewLedger.BusinessList.Text = SelectedBusinessLoca.BUSS_ADDRESS_1;
+            }
+            if (App.Current.Properties["ChangeBusinessLocation"] != null && SupplierViewLedger.CompanyList != null)
+            {
+                SupplierViewLedger.CompanyList.Text = SelectedBusinessLoca.COMPANY;
+                SupplierViewLedger.BusinessList.Text = SelectedBusinessLoca.BUSS_ADDRESS_1;
+            }
+            if (App.Current.Properties["ChangeBusinessLocation"] != null && SupplierViewLedger.BusinessList != null)
+            {
+                SupplierViewLedger.BusinessList.Text = SelectedBusinessLoca.BUSS_ADDRESS_1;
+                SupplierViewLedger.CompanyList.Text = SelectedBusinessLoca.COMPANY;
             }
             if (App.Current.Properties["BussLocListforCashAmount"] != null && CashRegisterAmountDetails.CashRegNo != null && CashRegisterAmountDetails.BusLocationName != null)
             {

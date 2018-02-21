@@ -84,6 +84,9 @@ namespace InvoicePOS.Models
         public string NUMBER_OF_ITEM { get; set; }
         public string NOTE { get; set; }
         public string TOTAL_AMOUNT { get; set; }
+        public decimal DEBIT_AMOUNT { get; set; }
+        public decimal CREDIT_AMOUNT { get; set; }
+        public DateTime TRANSACTION_DATE { get; set; }
         public string FORMATTED_TOTAL_AMOUNT
         {
             get

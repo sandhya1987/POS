@@ -31,6 +31,10 @@ namespace InvoicePOS.Models
         public long BUSINESS_LOCATION_ID { get; set; }
         public string BUSINESS_LOCATION { get; set; }
 
+        public DateTime FROM_DATE { get; set; }
+        public DateTime TO_DATE { get; set; }
+        
+
         public bool IS_ACTIVE { get; set; }
         public string BILLING_TO_NAME { get; set; }
         public string BILLING_ADDRESS1 { get; set; }
