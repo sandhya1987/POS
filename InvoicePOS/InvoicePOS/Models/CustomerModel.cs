@@ -67,6 +67,9 @@ namespace InvoicePOS.Models
         public string DISPLAY_CUS_LAST { get; set; }
         public string FULL_NAME { get; set; }
 
+        public string FIRST_NAME { get; set; }
+        public decimal OPENING_BALANCE { get; set; }
+        
 
         public long OPENING_BALANCE_ID { get; set; }
         public DateTime DATE { get; set; }
