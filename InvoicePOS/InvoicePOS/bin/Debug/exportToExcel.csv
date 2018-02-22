@@ -1,0 +1,72 @@
+Sl.No,BarCode,Item Name,Search Code,MRP,Sales Price,Sales Measuring Unit,Purchase Measuring Unit,Modified By,Modification Date,Category Name,Display Index,Item Quantity,Item Group Name,Name in Regional Language
+1,Hello Brothers,MacBook,Mac123    ,600.00,550.00,Qty,KG,,11/17/2017 2:00:55 PM,Electronics,1,50,MacBook,Eng
+2,I-000029,gg,77        ,120.00,120.00,,,,11/23/2017 6:06:02 PM,,,0,gg,
+3,I-000031,kkkk,000       ,90.00,90.00,,,,06/29/2017 6:50:19 PM,,,26,kkkk,
+4,I-000035,Dogs,1234567   ,40.00,30.00,KG,KG,,07/08/2017 12:49:23 PM,Sourin,Dertyhy,0,Dogs,Englisk
+5,I-000039,jj,jj        ,70.00,68.00,,,,07/08/2017 4:07:02 PM,,gg,1,jj,j
+6,,sdfdsf,dsfsdf    ,300.00,250.00,,,,07/08/2017 4:10:47 PM,Sourin,dsfds,0,sdfdsf,sdfsdf
+7,,,saf       ,3000.00,200.00,KG,KG,,07/08/2017 4:16:30 PM,Sourin,dsf,0,sadads,sdf
+8,I-000042,SAFFDF,SAFDA     ,340.00,230.00,KG,KG,,07/08/2017 5:17:04 PM,Sourin,DSF,23,SAFFDF,AD
+9,I-000043,JJJJ,55        ,230.00,220.00,,,,07/08/2017 5:25:25 PM,,5,2,JJJJ,55
+10,I-000100,ASDSAD,SADDSFDSF ,560.00,450.00,KG,KG,,07/08/2017 5:46:41 PM,Sourin,SAD,12,ASDSAD,SAD
+11,I-000044,KK,YY        ,110.00,20.00,,,,07/08/2017 5:51:55 PM,Sourin,JJ,2,KK,UU
+12,I-000050,,hhhh      ,600.00,100.00,,,,07/17/2017 6:30:19 AM,,,3,aaa,
+13,I-000051,hhhh,ss        ,10000.00,5000.00,,,,07/20/2017 7:37:00 AM,,,5,hhhh,
+14,,,kk        ,15000.00,100.00,,,,07/20/2017 8:37:32 AM,,,9,gggdf,
+15,I-000053,,hh        ,1400.00,150.00,,,,07/20/2017 9:17:15 AM,,,10,fffjjjjjj,
+16,I-000054,gg,ggggg     ,1000.00,150.00,,,,07/20/2017 9:20:24 AM,,,21,gg,
+17,I-000055,loppa,oo        ,400000.00,1500.00,,,,07/20/2017 9:37:59 AM,,,14,loppa,
+18,I-000056,nnbbvvv,mm        ,1550.00,150.00,,,,07/22/2017 5:34:56 AM,,,4,nnbbvvv,
+19,I-000057,gggg,ttt       ,1440.00,150.00,,,,07/22/2017 5:43:57 AM,,,8,gggg,
+20,I-000058,,bbbvc     ,555.00,55.00,,,,07/22/2017 7:41:56 AM,,,7,ff,
+21,I-000059,fghjk,ppopp     ,1120.00,112.00,,,,07/24/2017 11:36:08 AM,,,5,fghjk,
+22,I-000060,erty,fffddd    ,12300.00,123.00,,,,07/24/2017 2:35:14 PM,Electrical,,4,erty,
+23,I-000060,erty,fffddd    ,12300.00,123.00,,,,07/24/2017 2:35:14 PM,Electrical,,4,erty,
+24,I-000061,wq,cccc      ,4000.00,10.00,,,,07/24/2017 6:19:18 PM,Candle,,5,wq,
+25,I-000062,ccccccc,qwesd     ,2000.00,150.00,,,,07/25/2017 12:31:07 PM,Electrical,,5,ccccccc,
+26,I-000063,dhrubdhrubaItem,asertgbn  ,600000.00,150.00,,,,07/25/2017 12:35:07 PM,Electronics,,2,dhrubdhrubaItem,
+27,I-000064,plmnb,cccdddff  ,1000.00,10.00,,,,07/25/2017 12:58:06 PM,Electrical,,5,plmnb,
+28,I-000065,cdshnjkl,yyyyyiiii ,1120.00,12.00,,,,07/25/2017 1:21:52 PM,,,5,cdshnjkl,
+29,I-000066,retyw,vvvv      ,120.00,12.00,,,,07/25/2017 2:35:13 PM,,,4,retyw,
+30,I-000067,kolipuytrrr,asqwerfcv ,110.00,10.00,,,,07/25/2017 2:38:52 PM,,,5,kolipuytrrr,
+31,I-000067,kolipuytrrr,asqwerfcv ,110.00,10.00,,,,07/25/2017 2:38:53 PM,,,5,kolipuytrrr,
+32,I-000069,yhnbgt,ccxxss    ,500.00,10.00,,,,07/25/2017 3:30:16 PM,,,5,yhnbgt,
+33,I-000070,zzxxaass,asxcvb    ,44.00,1.00,,,,07/25/2017 3:58:27 PM,,,4,zzxxaass,
+34,I-000072,lkjhgg,bbbbbgggg ,110.00,10.00,,,,07/25/2017 4:34:52 PM,,,8,lkjhgg,
+35,I-000073,zzssddccbb,uuiiyytt  ,345.00,4.00,,,,07/25/2017 4:40:35 PM,,,6,zzssddccbb,
+36,I-000074,aswerfvcdff,fghty     ,2340.00,2.00,,,,07/25/2017 4:57:26 PM,,,5,aswerfvcdff,
+37,I-000075,xcvcx,jklkj     ,4440.00,20.00,,,,07/25/2017 6:20:36 PM,,,6,xcvcx,
+38,I-000076,mxhecc,wupl      ,1110.00,10.00,,,,07/25/2017 6:25:56 PM,30019,,4,mxhecc,
+39,I-000077,fgopppp,sghjkl    ,4560.00,20.00,,,,07/25/2017 6:43:59 PM,,,5,fgopppp,
+40,I-000078,wertyuiop,tgbh      ,1230.00,10.00,,,,07/25/2017 6:59:39 PM,,,6,wertyuiop,
+41,I-000079,aaaaaaddddd,xsdfgr    ,500.00,50.00,,,,07/25/2017 7:19:42 PM,,,4,aaaaaaddddd,
+42,I-000080,uuuuu,ajyt      ,2340.00,20.00,,,,07/25/2017 7:26:32 PM,,,7,uuuuu,
+43,I-000081,gghhjjkk,bdlop     ,560.00,40.00,,,,07/26/2017 11:09:27 AM,Electrical,,8,gghhjjkk,
+44,I-000082,ujm,gaj       ,100.00,10.00,,,,07/26/2017 12:45:31 PM,Candle,,8,ujm,
+45,I-000083,fffnnnn,vbopw     ,200.00,20.00,,,,07/26/2017 12:58:49 PM,Sourin,,4,fffnnnn,
+46,I-000084,cclllddqq,iznq      ,340.00,30.00,,,,07/26/2017 1:07:31 PM,New Catagory,,9,cclllddqq,
+47,I-000085,tbgf,zjda      ,22230.00,20.00,,,,07/26/2017 1:18:28 PM,Electrical,,5,tbgf,
+48,I-000086,ffkkss,kxqw      ,120.00,10.00,,,,07/26/2017 1:28:49 PM,Electrical,,5,ffkkss,
+49,I-000087,hy nnnn,alfs      ,500.00,10.00,,,,07/26/2017 1:42:04 PM,Electrical,,5,hy nnnn,
+50,I-000088,kkkkkkkk,xlwb      ,120.00,10.00,,,,07/26/2017 1:55:09 PM,Electrical,,8,kkkkkkkk,
+51,I-000089,alkjh,qdno      ,110.00,10.00,,,,07/26/2017 4:49:39 PM,Electrical,,2,alkjh,
+52,I-000090,rvdq,zuqm      ,2340.00,10.00,,,,07/26/2017 5:07:36 PM,Electrical,,7,rvdq,
+53,I-000091,qprn,clq       ,100.00,10.00,,,,07/26/2017 6:45:16 PM,,,24,qprn,
+54,I-000093,dfwer,vqof      ,450.00,30.00,,,,07/26/2017 7:35:51 PM,Electrical,,3,dfwer,
+55,I-000094,kk,oomm      ,700.00,500.00,,,,08/16/2017 7:28:32 AM,,,10,kk,
+56,I-000095,l,99        ,700.00,206.99,,,,08/17/2017 5:58:28 AM,Sourin,,7,l,
+57,I-000096,purse,ssP       ,900.00,800.00,,,,08/17/2017 6:22:11 AM,,PP,9,purse,OO
+58,I-000097,dress aroma,7         ,130.00,120.00,,,,08/24/2017 1:29:38 AM,,2,2,dress aroma,eng
+59,I-000098,toy,mmm       ,300.00,248.00,,,,08/24/2017 1:34:18 AM,,,2,toy,
+60,I-000101,kkkkk,996       ,990.00,700.00,,,,09/08/2017 11:24:17 AM,,,2,kkkkk,
+61,I-000102,pan,jk        ,400.00,300.00,,,,09/08/2017 11:41:39 AM,,oo,2,pan,
+62,I-000103,uu,8         ,400.00,200.00,,,,09/08/2017 11:46:46 AM,Sourin,,2,uu,jj
+63,I-000104,ff,zaz       ,5000.00,4000.00,Liter,Liter,,09/08/2017 11:56:54 AM,Sourin,,2,ff,
+64,I-000105,gg,9         ,110.00,80.00,,,,09/08/2017 1:33:18 PM,,,3,gg,
+65,I-000106,BB,XA        ,220.00,200.00,,,,09/08/2017 2:20:37 PM,,,2,BB,
+66,I-000108,test,test      ,3500.00,3000.00,,,,10/18/2017 12:13:39 PM,,,2,test,english
+67,I-000109,jwellary,test123   ,1200.00,1200.00,,,,11/06/2017 3:06:32 PM,,,10,jwellary,English
+68,I-000111,ItemTest1,ItemTest1 ,4440.00,3330.00,,,,11/17/2017 12:09:05 AM,,,3,ItemTest1,
+69,I-000112,test,test10    ,9990.00,8890.00,,,,11/19/2017 11:35:40 PM,,,1,test,
+70,I-000113,new test,new test  ,9990.00,8880.00,,,,11/19/2017 11:49:17 PM,,,100,new test,
+

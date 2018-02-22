@@ -191,6 +191,7 @@
     <Compile Include="Models\CompanyModel.cs" />
     <Compile Include="Models\CustomerGroupModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\DashBoardModel.cs" />
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\DesignationModel.cs" />
     <Compile Include="Models\EmailSettingsModel.cs" />
@@ -346,7 +347,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>False</AutoAssignPort>
-          <DevelopmentServerPort>1596</DevelopmentServerPort>
+          <DevelopmentServerPort>1593</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1593/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

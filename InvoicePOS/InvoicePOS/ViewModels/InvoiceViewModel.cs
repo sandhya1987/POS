@@ -177,6 +177,8 @@ namespace InvoicePOS.ViewModels
 
             }
             GetInvoice(comp);
+            ChartTile = "Pending Invoices";
+            ChartYAxis = "Invoice Amount";
         }
         public async void CusEmailNo()
         {
@@ -1731,8 +1733,9 @@ namespace InvoicePOS.ViewModels
 
             }
         }
+
+
         #region GetInvoice
-        GetInvoiceModel[] datainvoice = null;
         public List<GetInvoiceModel> _ListGrid { get; set; }
         public List<GetInvoiceModel> ListGrid
         {
@@ -1856,7 +1859,39 @@ namespace InvoicePOS.ViewModels
                 throw;
             }
         }
+
+        private string _ChartTile;
+        public string ChartTile
+        {
+            get
+            {
+                return _ChartTile;
+            }
+            set
+            {
+                this._ChartTile = value;
+                OnPropertyChanged("ChartTile");
+            }
+        }
+
+        private string _ChartYAxis;
+        public string ChartYAxis
+        {
+            get
+            {
+                return _ChartYAxis;
+            }
+            set
+            {
+                this._ChartYAxis = value;
+                OnPropertyChanged("ChartYAxis");
+            }
+        }
+
+
         List<GetInvoiceModel> _ListGrid_Invoice = new List<GetInvoiceModel>();
+        GetInvoiceModel[] datainvoice = null;
+
         public async Task<ObservableCollection<GetInvoiceModel>> GetInvoice(int comp)
         {
             try
@@ -1871,6 +1906,7 @@ namespace InvoicePOS.ViewModels
                 {
                     datainvoice = JsonConvert.DeserializeObject<GetInvoiceModel[]>(await response.Content.ReadAsStringAsync());
                     int x = 0;
+                    //_tmpChart.Clear();
                     for (int i = 0; i < datainvoice.Length; i++)
                     {
                         x++;
@@ -1900,6 +1936,7 @@ namespace InvoicePOS.ViewModels
                             TOTAL_AMOUNT = datainvoice[i].TOTAL_AMOUNT,
                             TOTAL_TAX = datainvoice[i].TOTAL_TAX,
                         });
+                         
                     }
 
                     if (SEARCH_CUS != "" && SEARCH_CUS != null)
@@ -1908,11 +1945,7 @@ namespace InvoicePOS.ViewModels
                         var item1 = (from m in _ListGrid_Invoice where m.INVOICE_NO.Contains(SEARCH_CUS) select m).ToList();
                         _ListGrid_Invoice = item1;
                     }
-                    //if (IS_InACTIVESearch == true)
-                    //{
-                    //var InActiveSupp = (from m in _ListGrid_Invoice where m.IS_ACTIVE == true select m).ToList();
-                    //_ListGrid_Invoice = InActiveSupp;
-                    //}
+                    
                     ListGrid = _ListGrid_Invoice;
                 }
 
@@ -2208,6 +2241,8 @@ namespace InvoicePOS.ViewModels
                             TOTAL_AMOUNT = datainvoice[i].TOTAL_AMOUNT,
                             TOTAL_TAX = datainvoice[i].TOTAL_TAX,
                         });
+
+                      
                     }
                     ListGrid1 = _ListGrid_Invoice1;
                 }

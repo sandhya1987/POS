@@ -4149,6 +4149,9 @@ namespace InvoicePOS.ViewModels
             return true;
         }
 
+
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)

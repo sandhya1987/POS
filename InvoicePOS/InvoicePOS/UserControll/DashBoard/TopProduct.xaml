@@ -1,0 +1,28 @@
+﻿<Window x:Class="InvoicePOS.UserControll.Dashboard.TopProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        
+        Title="TopProduct" Height="511" Width="819">
+    <Grid>
+
+        <my:Chart  Name="AreaChart1" Title="Top Product" Margin="18,37,0,231" HorizontalAlignment="Left" Width="372">
+            <my:PieSeries DependentValuePath="Value"
+            IndependentValueBinding="{Binding Path=Key}" ItemsSource="{Binding Path=Value}" 
+            IsSelectionEnabled="True" />
+
+        </my:Chart>
+        <my:Chart  Name="LineChart1" Title="Top Product" 
+            VerticalAlignment="Top" Margin="404,36,36,0" Height="214">
+            <my:LineSeries  DependentValuePath="Value" 
+            IndependentValueBinding="{Binding Path=Key}" ItemsSource="{Binding Path=Value}" 
+            IsSelectionEnabled="True"/>
+        </my:Chart>
+        <my:Chart  Name="BarChart1" Title="Top Product" Margin="225,254,275,6">
+            <my:BarSeries  DependentValuePath="Value" 
+            IndependentValueBinding="{Binding Path=Key}" ItemsSource="{Binding Path=Value}" 
+            IsSelectionEnabled="True"/>
+        </my:Chart>
+        <!--<Button Height="50" Width="50" Click="Button_Click_1"/>-->
+    </Grid>
+</Window>

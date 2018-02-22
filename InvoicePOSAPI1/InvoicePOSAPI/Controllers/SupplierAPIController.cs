@@ -231,5 +231,34 @@ namespace InvoicePOSAPI.Controllers
             };
             return Request.CreateResponse(HttpStatusCode.OK, value);
         }
+
+        [HttpGet]
+        public HttpResponseMessage GetTopVendors(int id)
+        {
+
+            var str1 = (from x in
+                            (from T1 in db.TBL_PO
+                             where T1.COMPANY_ID == id
+                             group new { T1 } by new { T1.SUPPLIER_ID } into g
+                             select new
+                             {
+                                 SUPPLIER_ID = g.Key.SUPPLIER_ID,
+                                 TOTAL_PURCHASE = g.Sum(b => b.T1.TOTAL_AMOUNT),
+                                 NO_OF_PURCHASEORDER = g.Count()
+                             })
+                             join SU in db.TBL_SUPPLIER on x.SUPPLIER_ID equals SU.SUPPLIER_CODE
+                            select new
+                            {
+                                SUPPLIER_CODE = SU.SUPPLIER_CODE,
+                                SUPPLIER_NAME = SU.SUPPLIER_NAME,
+                                TOTAL_NO_OF_PURCHASEORDER = x.NO_OF_PURCHASEORDER,
+                                TOTAL_PURCHASE = x.TOTAL_PURCHASE
+                            }).OrderByDescending(p => p.TOTAL_PURCHASE);
+                        
+
+            return Request.CreateResponse(HttpStatusCode.OK, str1);
+
+
+        }
     }
 }

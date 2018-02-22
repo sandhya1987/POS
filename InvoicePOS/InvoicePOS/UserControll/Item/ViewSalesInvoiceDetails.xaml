@@ -45,7 +45,7 @@
                 <DataGridTextColumn    Header="Sl No :" Binding="{Binding SLNO}" Width="200" />
                 <DataGridTextColumn    Header="Barcode :" Binding="{Binding BARCODE}" Width="250"/>
                 <DataGridTextColumn    Header="Item Name :" Binding="{Binding ITEM_NAME}" Width="250"/>
-                <DataGridTextColumn    Header="Basic Price :" Binding="{Binding FORMATTED_PURCHASE_UNIT}" Width="250"/>
+                <DataGridTextColumn    Header="Basic Price :" Binding="{Binding PURCHASE_UNIT}" Width="250"/>
                 <DataGridTextColumn    Header="Unit Tax Amount :" Binding="{Binding FORMATTED_TaxValue}" Width="250"/>
                 <DataGridTextColumn    Header="Tax Type :" Binding="{Binding TaxName}" Width="250"/>
                 <DataGridTextColumn    Header="Tax Percent :" Binding="{Binding TaxValue}" Width="250"/>

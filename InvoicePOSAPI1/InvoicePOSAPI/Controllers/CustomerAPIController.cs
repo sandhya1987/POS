@@ -444,5 +444,35 @@ namespace InvoicePOSAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, "success");
         }
 
+
+        [HttpGet]
+        public HttpResponseMessage GetTopCustomers(int id)
+        {
+            
+            var str1 = (from x in
+                            (from T1 in db.TBL_INVOICE_PAY
+                             group new { T1 } by new { T1.CUSTOMER_ID } into g
+                             select new
+                             {
+                                 CUSTOMER_ID = g.Key.CUSTOMER_ID,
+                                 TOTAL_PURCHASE = g.Sum(b => b.T1.TOTAL_AMOUNT),
+                                 NO_OF_INVOICE = g.Count()
+                             })
+                        join CU in db.TBL_CUSTOMER on x.CUSTOMER_ID equals CU.CUSTOMER_ID
+                        select new
+                        {
+                            CUSTOMER_ID = x.CUSTOMER_ID,
+                            CUSTOMER_CODE = CU.CUSTOMER_NUMBER,
+                            CUSTOMER_NAME = CU.FIRST_NAME + " " + CU.LAST_NAME,
+                            TOTAL_NO_OF_INVOICE = x.NO_OF_INVOICE,
+                            TOTAL_PURCHASE = x.TOTAL_PURCHASE
+                        }).OrderByDescending(p => p.TOTAL_PURCHASE);
+
+
+            return Request.CreateResponse(HttpStatusCode.OK, str1);
+
+
+        }
+
     }
 }

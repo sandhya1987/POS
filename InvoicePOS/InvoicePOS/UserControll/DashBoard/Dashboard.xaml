@@ -1,27 +1,445 @@
 ﻿<UserControl x:Class="InvoicePOS.UserControll.DashBoard.Dashboard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Width="1050" Height="920">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="1*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,100,0,0">
-            <ComboBox Height="30" Width="200">
-                <ComboBoxItem IsSelected="True">Pending Invoices</ComboBoxItem>
-                <ComboBoxItem >Pending Payment</ComboBoxItem>
-                <ComboBoxItem>Top Product</ComboBoxItem>
-                <ComboBoxItem>Top Customer</ComboBoxItem>
-                <ComboBoxItem>Recent Invoices</ComboBoxItem>
-                <ComboBoxItem>Top Vendor</ComboBoxItem>
-                <ComboBoxItem>Pending Purchase Order</ComboBoxItem>
-                <ComboBoxItem>Stock List</ComboBoxItem>
-            </ComboBox>
-        </Grid>
-    </Grid>
+        xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+        Width="1050" Height="600">
+    <TabControl SelectionChanged="TabControl_SelectionChanged">
+        <TabItem Header="Pending Invoices">
+
+            <DataGrid 
+                ItemsSource="{Binding Path=ListPendingInvoice}"
+                RowHeight="28"  
+                FontSize="12" 
+                Cursor="Hand"  
+                BorderBrush="#dddddd" 
+                BorderThickness="1" 
+                IsReadOnly="True" 
+                AutoGenerateColumns="False"     
+                Name="dataGrid1" 
+                VerticalAlignment="Top"  
+                AlternationCount="2" 
+                ColumnHeaderHeight="40" 
+                FontFamily="Verdana" 
+                Background="White" 
+                FontWeight="Normal" 
+                HorizontalGridLinesBrush="#dddddd" 
+                VerticalGridLinesBrush="#dddddd" 
+                Height="600" >
+                <DataGrid.Style>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                        <Setter Property="RowBackground" Value="#f9f9f9"/>
+                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                    </Style>
+                </DataGrid.Style>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#ffffff" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn   Width="120" Header="Date"  Binding="{Binding INVOICE_DATE}"/>
+                    <DataGridTextColumn   Width="120" Header="Invoice No."  Binding="{Binding INVOICE_NO}"/>
+                    <DataGridTextColumn   Width="200" Header="Customer Code" Binding="{Binding CUSTOMER_NUMBER}"  />
+                    <DataGridTextColumn   Width="200" Header="Customer Name" Binding="{Binding CUSTOMER_NAME}"  />
+                    <DataGridTextColumn   Width="200" Header="Total Amount" Binding="{Binding TOTAL_AMOUNT}"  />
+                    <DataGridTextColumn   Width="200" Header="Pending Amount" Binding="{Binding PENDING_AMOUNT}"  />
+                </DataGrid.Columns>
+            </DataGrid>
+        </TabItem>
+        <TabItem Header="Pending Payment">
+            <DataGrid 
+                ItemsSource="{Binding Path=ListPendingPayments}"
+                RowHeight="28"  
+                FontSize="12" 
+                Cursor="Hand"  
+                BorderBrush="#dddddd" 
+                BorderThickness="1" 
+                IsReadOnly="True" 
+                AutoGenerateColumns="False"
+                VerticalAlignment="Top"  
+                AlternationCount="2" 
+                ColumnHeaderHeight="40" 
+                FontFamily="Verdana" 
+                Background="White" 
+                FontWeight="Normal" 
+                HorizontalGridLinesBrush="#dddddd" 
+                VerticalGridLinesBrush="#dddddd" 
+                Height="600" >
+                <DataGrid.Style>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                        <Setter Property="RowBackground" Value="#f9f9f9"/>
+                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                    </Style>
+                </DataGrid.Style>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#ffffff" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn   Width="120" Header="Date"  Binding="{Binding INVOICE_DATE}"/>
+                    <DataGridTextColumn   Width="120" Header="Invoice No."  Binding="{Binding INVOICE_NO}"/>
+                    <DataGridTextColumn   Width="200" Header="Pending Amount" Binding="{Binding PENDING_AMOUNT}"  />
+                    <DataGridTextColumn   Width="200" Header="Customer Code" Binding="{Binding CUSTOMER_NUMBER}"  />
+                    <DataGridTextColumn   Width="200" Header="Customer Name" Binding="{Binding CUSTOMER_NAME}"  />
+                    <DataGridTextColumn   Width="200" Header="Total Amount" Binding="{Binding TOTAL_AMOUNT}"  />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </TabItem>
+        <TabItem Header="Top Product">
+            <DataGrid 
+                ItemsSource="{Binding Path=ListTOPProductModel}"
+                RowHeight="28"  
+                FontSize="12" 
+                Cursor="Hand"  
+                BorderBrush="#dddddd" 
+                BorderThickness="1" 
+                IsReadOnly="True" 
+                AutoGenerateColumns="False"
+                VerticalAlignment="Top"  
+                AlternationCount="2" 
+                ColumnHeaderHeight="40" 
+                FontFamily="Verdana" 
+                Background="White" 
+                FontWeight="Normal" 
+                HorizontalGridLinesBrush="#dddddd" 
+                VerticalGridLinesBrush="#dddddd" 
+                Height="600" >
+                <DataGrid.Style>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                        <Setter Property="RowBackground" Value="#f9f9f9"/>
+                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                    </Style>
+                </DataGrid.Style>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#ffffff" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn   Width="200" Header="Item Code"  Binding="{Binding ITEM_CODE}"/>
+                    <DataGridTextColumn   Width="200" Header="Item Name"  Binding="{Binding ITEM_NAME}"/>
+                    <DataGridTextColumn   Width="200" Header="Quantity Sold" Binding="{Binding QUANTITY_SOLD}"  />
+                    <DataGridTextColumn   Width="200" Header="Available Quantity" Binding="{Binding AVAILABLE_QUANTITY}"  />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </TabItem>
+        <TabItem Header="Top Customer">
+            <DataGrid 
+                ItemsSource="{Binding Path=ListTopCustomerModel}"
+                RowHeight="28"  
+                FontSize="12" 
+                Cursor="Hand"  
+                BorderBrush="#dddddd" 
+                BorderThickness="1" 
+                IsReadOnly="True" 
+                AutoGenerateColumns="False"
+                VerticalAlignment="Top"  
+                AlternationCount="2" 
+                ColumnHeaderHeight="40" 
+                FontFamily="Verdana" 
+                Background="White" 
+                FontWeight="Normal" 
+                HorizontalGridLinesBrush="#dddddd" 
+                VerticalGridLinesBrush="#dddddd" 
+                Height="600" >
+                <DataGrid.Style>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                        <Setter Property="RowBackground" Value="#f9f9f9"/>
+                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                    </Style>
+                </DataGrid.Style>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#ffffff" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn   Width="200" Header="Customer Code"  Binding="{Binding CUSTOMER_CODE}"/>
+                    <DataGridTextColumn   Width="200" Header="Customer Name"  Binding="{Binding CUSTOMER_NAME}"/>
+                    <DataGridTextColumn   Width="200" Header="Total No. of Invoices" Binding="{Binding TOTAL_NO_OF_INVOICE}"  />
+                    <DataGridTextColumn   Width="200" Header="Total Purchase" Binding="{Binding TOTAL_PURCHASE}"  />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </TabItem>
+        <TabItem Header="Recent Invoices">
+            <DataGrid 
+                ItemsSource="{Binding Path=ListDashBoardPendingInvoiceModel}"
+                RowHeight="28"  
+                FontSize="12" 
+                Cursor="Hand"  
+                BorderBrush="#dddddd" 
+                BorderThickness="1" 
+                IsReadOnly="True" 
+                AutoGenerateColumns="False"
+                VerticalAlignment="Top"  
+                AlternationCount="2" 
+                ColumnHeaderHeight="40" 
+                FontFamily="Verdana" 
+                Background="White" 
+                FontWeight="Normal" 
+                HorizontalGridLinesBrush="#dddddd" 
+                VerticalGridLinesBrush="#dddddd" 
+                Height="600" >
+                <DataGrid.Style>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                        <Setter Property="RowBackground" Value="#f9f9f9"/>
+                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                    </Style>
+                </DataGrid.Style>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#ffffff" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn   Width="100" Header="Invoice No."  Binding="{Binding INVOICE_NO}"/>
+                    <DataGridTextColumn   Width="200" Header="Invoice Date"  Binding="{Binding INVOICE_DATE}"/>
+                    <DataGridTextColumn   Width="120" Header="Customer Code" Binding="{Binding CUSTOMER_NUMBER}"  />
+                    <DataGridTextColumn   Width="200" Header="Customer Name" Binding="{Binding CUSTOMER_NAME}"  />
+                    <DataGridTextColumn   Width="200" Header="Total Amount" Binding="{Binding TOTAL_AMOUNT}"  />
+                    <DataGridTextColumn   Width="200" Header="Pending Amount" Binding="{Binding PENDING_AMOUNT}"  />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </TabItem>
+        <TabItem Header="Top Vendor">
+            <DataGrid 
+                ItemsSource="{Binding Path=ListTopVendorModel}"
+                RowHeight="28"  
+                FontSize="12" 
+                Cursor="Hand"  
+                BorderBrush="#dddddd" 
+                BorderThickness="1" 
+                IsReadOnly="True" 
+                AutoGenerateColumns="False"
+                VerticalAlignment="Top"  
+                AlternationCount="2" 
+                ColumnHeaderHeight="40" 
+                FontFamily="Verdana" 
+                Background="White" 
+                FontWeight="Normal" 
+                HorizontalGridLinesBrush="#dddddd" 
+                VerticalGridLinesBrush="#dddddd" 
+                Height="600" >
+                <DataGrid.Style>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                        <Setter Property="RowBackground" Value="#f9f9f9"/>
+                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                    </Style>
+                </DataGrid.Style>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#ffffff" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn   Width="200" Header="Supplier Code"  Binding="{Binding SUPPLIER_CODE}"/>
+                    <DataGridTextColumn   Width="200" Header="Supplier Name"  Binding="{Binding SUPPLIER_NAME}"/>
+                    <DataGridTextColumn   Width="200" Header="Total No. of Purchase Orders" Binding="{Binding TOTAL_NO_OF_PURCHASEORDER}"  />
+                    <DataGridTextColumn   Width="200" Header="Total Amount" Binding="{Binding TOTAL_PURCHASE}"  />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </TabItem>
+        <TabItem Header="Pending Purchase Order">
+            <DataGrid 
+                ItemsSource="{Binding Path=ListPendingPOModel}"
+                RowHeight="28"  
+                FontSize="12" 
+                Cursor="Hand"  
+                BorderBrush="#dddddd" 
+                BorderThickness="1" 
+                IsReadOnly="True" 
+                AutoGenerateColumns="False"
+                VerticalAlignment="Top"  
+                AlternationCount="2" 
+                ColumnHeaderHeight="40" 
+                FontFamily="Verdana" 
+                Background="White" 
+                FontWeight="Normal" 
+                HorizontalGridLinesBrush="#dddddd" 
+                VerticalGridLinesBrush="#dddddd" 
+                Height="600" >
+                <DataGrid.Style>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                        <Setter Property="RowBackground" Value="#f9f9f9"/>
+                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                    </Style>
+                </DataGrid.Style>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#ffffff" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn   Width="200" Header="PO Number"  Binding="{Binding PO_NUMBER}"/>
+                    <DataGridTextColumn   Width="200" Header="Supplier Code"  Binding="{Binding SUPPLIER_CODE}"/>
+                    <DataGridTextColumn   Width="200" Header="Supplier Name" Binding="{Binding SUPPLIER_NAME}"  />
+                    <DataGridTextColumn   Width="200" Header="PO Amount" Binding="{Binding PO_AMOUNT}"  />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </TabItem>
+        <TabItem Header="Stock List">
+            <DataGrid 
+                ItemsSource="{Binding Path=ListAvailableStockModel}"
+                RowHeight="28"  
+                FontSize="12" 
+                Cursor="Hand"  
+                BorderBrush="#dddddd" 
+                BorderThickness="1" 
+                IsReadOnly="True" 
+                AutoGenerateColumns="False" 
+                VerticalAlignment="Top"  
+                AlternationCount="2" 
+                ColumnHeaderHeight="40" 
+                FontFamily="Verdana" 
+                Background="White" 
+                FontWeight="Normal" 
+                HorizontalGridLinesBrush="#dddddd" 
+                VerticalGridLinesBrush="#dddddd" 
+                Height="600" >
+                <DataGrid.Style>
+                    <Style TargetType="DataGrid">
+                        <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
+                        <Setter Property="RowBackground" Value="#f9f9f9"/>
+                        <Setter Property="BorderBrush" Value="#dddddd"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                        <Setter Property="TextBlock.TextAlignment" Value="Center" />
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontWeight" Value="Normal"/>
+                    </Style>
+                </DataGrid.Style>
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#ffffff" />
+                                <Setter Property="FontWeight" Value="Normal" />
+                                <Setter Property="BorderBrush" Value="#dddddd"/>
+                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn   Width="220" Header="BAR Code"  Binding="{Binding BAR_CODE}"/>
+                    <DataGridTextColumn   Width="320" Header="Available Stock"  Binding="{Binding STOCK}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </TabItem>
+    </TabControl>
 </UserControl>

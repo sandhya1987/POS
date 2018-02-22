@@ -571,7 +571,6 @@
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\Customer\CustomerCommand.cs" />
     <Compile Include="ViewModels\DailySalesViewModel.cs" />
-    <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\DataCache.cs" />
     <Compile Include="ViewModels\DepartmentList.cs" />
     <Compile Include="ViewModels\DepartmentViewModel.cs" />
