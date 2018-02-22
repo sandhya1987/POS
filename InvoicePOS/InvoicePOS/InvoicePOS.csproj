@@ -164,6 +164,7 @@
     <Compile Include="Models\CurrencySettingsModel.cs" />
     <Compile Include="Models\CustomerGroupModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\DashBoardModel.cs" />
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\DesignationModel.cs" />
     <Compile Include="Models\EmailSettingsModel.cs" />
@@ -278,21 +279,6 @@
     </Compile>
     <Compile Include="UserControll\DashBoard\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControll\DashBoard\PendingInvoice.xaml.cs">
-      <DependentUpon>PendingInvoice.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControll\DashBoard\PendingPayment.xaml.cs">
-      <DependentUpon>PendingPayment.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControll\DashBoard\TopCustomer.xaml.cs">
-      <DependentUpon>TopCustomer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControll\DashBoard\TopProduct.xaml.cs">
-      <DependentUpon>TopProduct.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControll\DashBoard\TopVendor.xaml.cs">
-      <DependentUpon>TopVendor.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControll\Department\Add_department.xaml.cs">
       <DependentUpon>Add_department.xaml</DependentUpon>
@@ -571,6 +557,7 @@
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\Customer\CustomerCommand.cs" />
     <Compile Include="ViewModels\DailySalesViewModel.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\DataCache.cs" />
     <Compile Include="ViewModels\DepartmentList.cs" />
     <Compile Include="ViewModels\DepartmentViewModel.cs" />
@@ -886,26 +873,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControll\DashBoard\Dashboard.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UserControll\DashBoard\PendingInvoice.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UserControll\DashBoard\PendingPayment.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UserControll\DashBoard\TopCustomer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UserControll\DashBoard\TopProduct.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UserControll\DashBoard\TopVendor.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
