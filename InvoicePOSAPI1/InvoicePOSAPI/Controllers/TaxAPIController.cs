@@ -12,7 +12,7 @@ namespace InvoicePOSAPI.Controllers
     public class TaxAPIController : ApiController
     {
         TaxModel tx = new TaxModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         [HttpPost]
         public HttpResponseMessage TaxAdd(TaxModel _TaxModel)
         {

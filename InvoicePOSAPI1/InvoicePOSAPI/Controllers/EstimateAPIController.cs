@@ -12,7 +12,7 @@ namespace InvoicePOSAPI.Controllers
     public class EstimateAPIController : ApiController
     {
         EstimateModel _EstimateModel = new EstimateModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         [HttpGet]
         public HttpResponseMessage GetEstimate(string id)
         {

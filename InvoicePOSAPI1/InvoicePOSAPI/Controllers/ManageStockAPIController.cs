@@ -11,7 +11,7 @@ namespace InvoicePOSAPI.Controllers
 {
     public class ManageStockAPIController : ApiController
     {
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         ManageStockModel ms = new ManageStockModel();
         [HttpGet]
         public HttpResponseMessage GetManageStock(int id)

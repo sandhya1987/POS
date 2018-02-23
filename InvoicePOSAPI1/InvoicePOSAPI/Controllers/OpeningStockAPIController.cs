@@ -12,7 +12,7 @@ namespace InvoicePOSAPI.Controllers
     public class OpeningStockAPIController : ApiController
     {
         OpenIngStockModel opqnt = new OpenIngStockModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         [HttpGet]
         public HttpResponseMessage OpenIngStockEdit(int id)
         {

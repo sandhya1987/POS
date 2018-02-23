@@ -1382,7 +1382,8 @@ namespace InvoicePOS.ViewModels
             {
                 data1 = JsonConvert.DeserializeObject<SuppPaymentModel[]>(await response.Content.ReadAsStringAsync());
                 int x = 0;
-                for (int i = 0; i < data.Length; i++)
+                _ListGrid_Temp.Clear();
+                for (int i = 0; i < data1.Length; i++)
                 {
                     x++;
                     _ListGrid_Temp.Add(new SuppPaymentModel
@@ -1481,7 +1482,8 @@ namespace InvoicePOS.ViewModels
                         CONTACT_MOBILE_NO = data[i].CONTACT_MOBILE_NO,
                         CONTACT_WEBSITE = data[i].CONTACT_WEBSITE,
                         CONTACT_EMAIL = data[i].CONTACT_EMAIL,
-                        
+                        COMPANY_NAME = data[i].COMPANY_NAME,
+                        BUSINESS_LOCATION = data[i].BUSINESS_LOCATION
                     });
                 }
                 if (SEARCH_SUPPLIER != "" && SEARCH_SUPPLIER != null)

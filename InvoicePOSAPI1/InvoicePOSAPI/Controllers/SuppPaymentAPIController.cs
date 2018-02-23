@@ -12,7 +12,7 @@ namespace InvoicePOSAPI.Controllers
     public class SuppPaymentAPIController : ApiController
     {
         SuppPaymentModel im = new SuppPaymentModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         [HttpGet]
         public HttpResponseMessage GetSuppPayment(long id)
         {
@@ -60,9 +60,9 @@ namespace InvoicePOSAPI.Controllers
                            IS_PRINT_CHECK = a.IS_PRINT_CHECK,
                            //CREDIT_AMOUNT = a.CREDIT_AMOUNT.Value,
                            //DEBIT_AMOUNT = a.DEBIT_AMOUNT.Value,
-                           NARRATION_TEXT = a.NARRATION_TEXT,
-                           DOCUMENT_TYPE = a.DOCUMENT_TYPE,
-                           GST_NUMBER = a.GST_NUMBER,
+                           //NARRATION_TEXT = a.NARRATION_TEXT,
+                           //DOCUMENT_TYPE = a.DOCUMENT_TYPE,
+                           //GST_NUMBER = a.GST_NUMBER,
                            COMPANY_NAME = b.COMPANY_NAME
                        }).ToList();
             return Request.CreateResponse(HttpStatusCode.OK, str);

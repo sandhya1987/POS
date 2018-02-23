@@ -33,6 +33,8 @@
                             </DataGrid.RowStyle>
 
                             <DataGrid.Columns>
+                                <DataGridTextColumn Visibility="Hidden"  TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding BUSINESS_LOCATION}"  />
+                                <DataGridTextColumn Visibility="Hidden"  TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding COMPANY_NAME}"  />
                                 <DataGridTextColumn Visibility="Hidden"  TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding SUPPLIER_ID}"  />
                                 <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding SLNO}"  />
                                 <DataGridTextColumn    Width="75" MaxWidth="300" Header="Supplier Code" Binding="{Binding SUPPLIER_CODE}"  />

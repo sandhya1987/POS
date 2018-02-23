@@ -11,7 +11,7 @@ namespace InvoicePOSAPI.Controllers
 {
     public class CustomerAPIController : ApiController
     {
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         CustomerModel cm = new CustomerModel();
         [HttpGet]
         public HttpResponseMessage GetCustomer(int id)

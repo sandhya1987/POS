@@ -3139,9 +3139,11 @@ namespace InvoicePOS.ViewModels
                 {
                     datainvoice = JsonConvert.DeserializeObject<GetInvoiceModel[]>(await response.Content.ReadAsStringAsync());
                     int x = 0;
+                    _ListGrid_Invoice.Clear();
                     for (int i = 0; i < datainvoice.Length; i++)
                     {
                         x++;
+                        
                         _ListGrid_Invoice.Add(new GetInvoiceModel
                         {
                             INVOICE_ID = datainvoice[i].INVOICE_ID,
@@ -3174,6 +3176,7 @@ namespace InvoicePOS.ViewModels
                     }
 
                     App.Current.Properties["CustmerList"] = _ListGrid_Invoice;
+                    
                     if (ApplyDateRange_Search == true)
                     {
                         

@@ -42,5 +42,6 @@ namespace InvoicePOSDATA
         public Nullable<long> COMPANY_ID { get; set; }
         public Nullable<bool> IS_DELETE { get; set; }
         public Nullable<long> USER_ID { get; set; }
+        public Nullable<int> BUSINESS_LOCATION_ID { get; set; }
     }
 }

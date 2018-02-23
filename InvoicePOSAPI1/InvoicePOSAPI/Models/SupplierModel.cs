@@ -34,6 +34,8 @@ namespace InvoicePOSAPI.Models
         public string CONTACT_MOBILE_NO { get; set; }
         public string CONTACT_WEBSITE { get; set; }
         public string CONTACT_EMAIL { get; set; }
+        public string COMPANY_NAME { get; set; }
+        public string BUSINESS_LOCATION { get; set; }
        
     }
     public class SuppPaymentModel
