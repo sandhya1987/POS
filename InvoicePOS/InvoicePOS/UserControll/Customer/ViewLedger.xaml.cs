@@ -31,6 +31,7 @@ namespace InvoicePOS.UserControll.Customer
         public static TextBlock DebitLmt;
         public static TextBox CompanyList;
         public static TextBox BusinessList;
+        public static TextBlock CustID;
         public ViewLedger()
         {
             InitializeComponent();
@@ -58,8 +59,8 @@ namespace InvoicePOS.UserControll.Customer
             textbox5.Text = "";
             CompanyList = textbox5;
 
-            
-            
+            custId.Text = "";
+            CustID = custId;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

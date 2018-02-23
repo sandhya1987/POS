@@ -30,6 +30,7 @@ namespace InvoicePOS.Models
         public string PAN { get; set; }
         public long BUSINESS_LOCATION_ID { get; set; }
         public string BUSINESS_LOCATION { get; set; }
+        public string COMPANY_NAME { get; set; }
 
         public DateTime FROM_DATE { get; set; }
         public DateTime TO_DATE { get; set; }

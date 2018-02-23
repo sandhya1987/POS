@@ -334,7 +334,7 @@ namespace InvoicePOSAPI.Controllers
         public HttpResponseMessage GetInvoice(int id)
         {
             var str1 = db.VIEW_INVOICE;
-            var str = (from a in db.VIEW_INVOICE
+            var str = (from a in db.VIEW_INVOICE where a.CUSTOMER_ID == id
                        select new InvoiceModel
                        {
                            AVAILABLE_CREDIT_LIMIT = a.AVAILABLE_CREDIT_LIMIT,

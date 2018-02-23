@@ -164,6 +164,7 @@
     <Compile Include="Models\CurrencySettingsModel.cs" />
     <Compile Include="Models\CustomerGroupModel.cs" />
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\DashBoardModel.cs" />
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\DesignationModel.cs" />
     <Compile Include="Models\EmailSettingsModel.cs" />
@@ -571,6 +572,7 @@
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\Customer\CustomerCommand.cs" />
     <Compile Include="ViewModels\DailySalesViewModel.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
     <Compile Include="ViewModels\DataCache.cs" />
     <Compile Include="ViewModels\DepartmentList.cs" />
     <Compile Include="ViewModels\DepartmentViewModel.cs" />

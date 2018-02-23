@@ -75,7 +75,7 @@ namespace InvoicePOSAPI.Models
         public string NOTE { get; set; }
         public bool? IS_PRINT_CHECK { get; set; }
         public long COMPANY_ID { get; set; }
-
+        public string COMPANY_NAME { get; set; }
 
         public decimal CREDIT_AMOUNT { get; set; }
         public decimal DEBIT_AMOUNT { get; set; }

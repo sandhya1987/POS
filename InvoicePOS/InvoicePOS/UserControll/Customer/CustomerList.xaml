@@ -113,7 +113,7 @@
                     </DataGrid.RowStyle>
 
                     <DataGrid.Columns>
-
+                        <DataGridTextColumn Visibility="Hidden"  TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding CUSTOMER_ID}"  />
                         <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
                         <DataGridTextColumn     Width="150" MaxWidth="155" Header="Customer Code" Binding="{Binding CUSTOMER_NUMBER}"  />
                         <DataGridTextColumn   Width="200" Header="Name"  Binding="{Binding FULL_NAME}"/>
@@ -131,6 +131,8 @@
                         <DataGridTextColumn   Width="200" Header="CST no"  Binding="{Binding CST_NUMBER}"/>
                         <DataGridTextColumn   Width="200" Header="Email"  Binding="{Binding SHIPPING_EMAIL_ADDRESS}"/>
                         <DataGridTextColumn   Width="200" Header="Name For Display"  Binding="{Binding NAME}"/>
+                        <DataGridTextColumn  Visibility="Hidden" Width="200" Header="Name For Display"  Binding="{Binding BUSINESS_LOCATION}"/>
+                        <DataGridTextColumn Visibility="Hidden"  Width="200" Header="Name For Display"  Binding="{Binding COMPANY_NAME}"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <CheckBox Content="Show In Active Customer only" IsChecked="{Binding IS_InACTIVESearch,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="19" Width="205"/>

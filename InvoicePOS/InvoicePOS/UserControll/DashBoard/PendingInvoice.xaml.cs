@@ -21,15 +21,15 @@ namespace InvoicePOS.UserControll.Dashboard
     /// </summary>
     public partial class PendingInvoice : Window
     {
-        //DashboardViewModel  _DashboardViewModel = new DashboardViewModel();
+        DashboardViewModel  _DashboardViewModel = new DashboardViewModel();
         public static Chart AreaChart;
         public static Chart BarChart;
         public static Chart LineChart;
         public PendingInvoice()
         {
             InitializeComponent();
-            //_DashboardViewModel = new DashboardViewModel();
-            //this.DataContext = _DashboardViewModel;
+            _DashboardViewModel = new DashboardViewModel();
+            this.DataContext = _DashboardViewModel;
             AreaChart1 = AreaChart;
             BarChart1 = BarChart;
             LineChart1 = LineChart;

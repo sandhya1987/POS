@@ -21,15 +21,15 @@ namespace InvoicePOS.UserControll.Dashboard
     /// </summary>
     public partial class TopVendor : Window
     {
-        //DashboardViewModel _DashboardViewModel = new DashboardViewModel();
+        DashboardViewModel _DashboardViewModel = new DashboardViewModel();
         public static Chart PieChart;
         public static Chart BarChart;
         public static Chart LineChart;
         public TopVendor()
         {
             InitializeComponent();
-            //_DashboardViewModel = new DashboardViewModel();
-            //this.DataContext = _DashboardViewModel;
+            _DashboardViewModel = new DashboardViewModel();
+            this.DataContext = _DashboardViewModel;
             AreaChart1 = PieChart;
             BarChart1 = BarChart;
             LineChart1 = LineChart;

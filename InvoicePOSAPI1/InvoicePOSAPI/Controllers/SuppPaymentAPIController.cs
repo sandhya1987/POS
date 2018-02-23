@@ -14,10 +14,11 @@ namespace InvoicePOSAPI.Controllers
         SuppPaymentModel im = new SuppPaymentModel();
         NEW_POSEntities db = new NEW_POSEntities();
         [HttpGet]
-        public HttpResponseMessage GetSuppPayment(int id)
+        public HttpResponseMessage GetSuppPayment(long id)
         {
             var str = (from a in db.TBL_SUPP_PAYMENT
-                       where a.COMPANY_ID == id && a.IS_DELETE == false
+                       join b in db.TBL_COMPANY on a.COMPANY_ID equals b.COMAPNY_ID
+                       where a.SUPP_ID == id && a.IS_DELETE == false
                        select new SuppPaymentModel
                        {
                            SUPP_PAYMENT = a.SUPP_PAYMENT,
@@ -57,11 +58,12 @@ namespace InvoicePOSAPI.Controllers
                            CURRENT_PAYMENT = a.CURRENT_PAYMENT,
                            NOTE = a.NOTE,
                            IS_PRINT_CHECK = a.IS_PRINT_CHECK,
-                           CREDIT_AMOUNT = a.CREDIT_AMOUNT.Value,
-                           DEBIT_AMOUNT = a.DEBIT_AMOUNT.Value,
+                           //CREDIT_AMOUNT = a.CREDIT_AMOUNT.Value,
+                           //DEBIT_AMOUNT = a.DEBIT_AMOUNT.Value,
                            NARRATION_TEXT = a.NARRATION_TEXT,
                            DOCUMENT_TYPE = a.DOCUMENT_TYPE,
-                           GST_NUMBER = a.GST_NUMBER
+                           GST_NUMBER = a.GST_NUMBER,
+                           COMPANY_NAME = b.COMPANY_NAME
                        }).ToList();
             return Request.CreateResponse(HttpStatusCode.OK, str);
         }

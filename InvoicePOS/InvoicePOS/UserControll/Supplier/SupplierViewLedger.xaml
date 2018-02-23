@@ -70,5 +70,6 @@
         </DataGrid>
         <Button Content="Print" HorizontalAlignment="Left" Margin="500,460,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button Content="Close" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="610,460,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="suppId" Visibility="Hidden" HorizontalAlignment="Left" Margin="105,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
     </Grid>
 </Window>

@@ -1231,6 +1231,25 @@ namespace InvoicePOS.ViewModels
             }
         }
 
+        private string _COMPANY_NAME;
+        public string COMPANY_NAME
+        {
+            get
+            {
+                return SelectedCustomer.COMPANY_NAME;
+            }
+            set
+            {
+                SelectedCustomer.COMPANY_NAME = value;
+
+                if (SelectedCustomer.COMPANY_NAME != value)
+                {
+                    SelectedCustomer.COMPANY_NAME = value;
+                    OnPropertyChanged("COMPANY_NAME");
+                }
+            }
+        }
+
         private DateTime _SYSTEM_DATE;
         public DateTime SYSTEM_DATE
         {
@@ -1634,14 +1653,14 @@ namespace InvoicePOS.ViewModels
             set
             {
                 _ApplyDateRange_Search = value;
-                var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                var comp = Convert.ToInt32(App.Current.Properties["Customer_Id"].ToString());
                 if (_ApplyDateRange_Search == true)
                 {
-                    GetInvoice();
+                    GetInvoice(comp);
                 }
                 else
                 {
-                    GetInvoice();
+                    GetInvoice(comp);
                 }
                 OnPropertyChanged("ApplyDateRange_Search");
             }
@@ -1697,7 +1716,7 @@ namespace InvoicePOS.ViewModels
                         PAN = selectData[i].PAN,
                         BUSINESS_LOCATION = selectData[i].BUSINESS_LOCATION,
                         BUSINESS_LOCATION_ID = selectData[i].BUSINESS_LOCATION_ID,
-
+                        COMPANY_NAME = selectData[i].COMPANY_NAME,
 
                         OPENING_AMT = selectData[i].OPENING_AMT,
                         CURRENT_OPENING_BALANCE = selectData[i].CURRENT_OPENING_BALANCE,
@@ -2236,7 +2255,18 @@ namespace InvoicePOS.ViewModels
                 InvoicePOS.UserControll.Customer.ViewLedger.OBalance.Text = SelectedCustomer.OPENING_AMT.ToString();
                 InvoicePOS.UserControll.Customer.ViewLedger.CreditLmt.Text = SelectedCustomer.credit_Limits.ToString();
                 InvoicePOS.UserControll.Customer.ViewLedger.DebitLmt.Text = SelectedCustomer.DEFAULT_CREIT_LIMIT.ToString();
+                InvoicePOS.UserControll.Customer.ViewLedger.BusinessList.Text = SelectedCustomer.BUSINESS_LOCATION;
+                InvoicePOS.UserControll.Customer.ViewLedger.CompanyList.Text = SelectedCustomer.COMPANY_NAME;
+                InvoicePOS.UserControll.Customer.ViewLedger.CustID.Text = SelectedCustomer.CUSTOMER_ID.ToString();
             }
+            if (InvoicePOS.UserControll.Customer.ViewLedger.CustID.Text != null)
+            {
+                App.Current.Properties["Customer_Id"] = InvoicePOS.UserControll.Customer.ViewLedger.CustID.Text;
+
+            }
+            var comp = Convert.ToInt32(App.Current.Properties["Customer_Id"].ToString());
+            GetInvoice(comp);            
+            sh.DataContext = this;
             sh.Show();
         }
 
@@ -3091,7 +3121,8 @@ namespace InvoicePOS.ViewModels
         List<CustomerAutoCompleteListModel> autoCustModelList = new List<CustomerAutoCompleteListModel>();
          GetInvoiceModel[] datainvoice = null;
          List<GetInvoiceModel> _ListGrid_Invoice = new List<GetInvoiceModel>();
-        public async Task GetInvoice()
+         List<GetInvoiceModel> _ListGrid_Invoice_FilterCustomer = new List<GetInvoiceModel>();
+        public async Task GetInvoice(int id)
         {
             var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
             try
@@ -3101,7 +3132,9 @@ namespace InvoicePOS.ViewModels
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 client.Timeout = new TimeSpan(500000000000);
-                HttpResponseMessage response = client.GetAsync("api/InvoiceAPI/GetInvoice?id=" + comp + "").Result;
+                App.Current.Properties["Customer_Id"] = SelectedCustomer.CUSTOMER_ID;
+                var cust_id = Convert.ToInt32(App.Current.Properties["Customer_Id"].ToString());
+                HttpResponseMessage response = client.GetAsync("api/InvoiceAPI/GetInvoice?id=" + id + "").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     datainvoice = JsonConvert.DeserializeObject<GetInvoiceModel[]>(await response.Content.ReadAsStringAsync());
@@ -3140,24 +3173,25 @@ namespace InvoicePOS.ViewModels
                         });
                     }
 
-                    
+                    App.Current.Properties["CustmerList"] = _ListGrid_Invoice;
                     if (ApplyDateRange_Search == true)
                     {
-
+                        
                         var item1 = (from m in _ListGrid_Invoice
                                     where m.INVOICE_DATE >= FROM_DATE && m.INVOICE_DATE <= TO_DATE
                                          select m).ToList();
-                        if (item1.Count > 0)
-                        {
-                            _ListGrid_ViewLedger = item1;
-                        }
+                        _ListGrid_Invoice = item1;
+                    }
+                    else 
+                    {
+                        _ListGrid_Invoice = App.Current.Properties["CustmerList"] as List<GetInvoiceModel>;
                     }
                     //if (IS_InACTIVESearch == true)
                     //{
                     //var InActiveSupp = (from m in _ListGrid_Invoice where m.IS_ACTIVE == true select m).ToList();
                     //_ListGrid_Invoice = InActiveSupp;
                     //}
-                    ListGridViewLedger = _ListGrid_ViewLedger;
+                ListGridViewLedger = _ListGrid_Invoice;
                 }
             }
             catch (Exception ex)
@@ -3168,6 +3202,7 @@ namespace InvoicePOS.ViewModels
         }
 
         public async Task GetCustomer(long Id)
+        
         {
             try
             {
@@ -3216,7 +3251,7 @@ namespace InvoicePOS.ViewModels
                             PAN = data[i].PAN,
                             BUSINESS_LOCATION = data[i].BUSINESS_LOCATION,
                             BUSINESS_LOCATION_ID = data[i].BUSINESS_LOCATION_ID,
-
+                            COMPANY_NAME = data[i].COMPANY_NAME,
 
                             OPENING_AMT = data[i].OPENING_AMT,
                             CURRENT_OPENING_BALANCE = data[i].CURRENT_OPENING_BALANCE,

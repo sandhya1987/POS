@@ -23,8 +23,8 @@ namespace InvoicePOS.UserControll.DashBoard
         public Dashboard()
         {
             InitializeComponent();
-            //DashboardViewModel _DBVM = new DashboardViewModel();
-            //this.DataContext = _DBVM;
+            DashboardViewModel _DBVM = new DashboardViewModel();
+            this.DataContext = _DBVM;
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)

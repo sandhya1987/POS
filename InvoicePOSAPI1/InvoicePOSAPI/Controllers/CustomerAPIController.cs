@@ -22,6 +22,8 @@ namespace InvoicePOSAPI.Controllers
                        join b in db.TBL_CUSTOMER_SHIPPING_ADDRESS on a.CUSTOMER_ID equals b.CUSTOMER_ID
                        join c in db.TBL_CUSTOMER_BILLING_ADDRESS on a.CUSTOMER_ID equals c.CUSTOMER_ID
                        join d in db.TBL_OPENING_BALANCE on a.CUSTOMER_ID equals d.CUSTOMER_ID
+                       join e in db.TBL_COMPANY on a.COMPANY_ID equals e.COMAPNY_ID
+                       join f in db.TBL_BUSINESS_LOCATION on a.BUSINESS_LOCATION_ID equals f.BUSINESS_LOCATION_ID
                        where a.COMPANY_ID == id && a.IS_DELETE == false
                        select new CustomerModel
                        {
@@ -42,7 +44,7 @@ namespace InvoicePOSAPI.Controllers
                            CITY = c.CITY,
                            TIN = a.TIN_NUMBER,
                            PAN = a.PAN_NUMBER,
-                           BUSINESS_LOCATION = a.BUSINESS_LOCATION,
+                           BUSINESS_LOCATION = f.SHOP_NAME,
                            BUSINESS_LOCATION_ID = a.BUSINESS_LOCATION_ID,
                            COUNTRY = c.COUNTRY,
                            CUSTOMER_GROUP = a.CUSTOMER_GROUP,
@@ -68,7 +70,7 @@ namespace InvoicePOSAPI.Controllers
                            SHIPPING_STATE = b.STATE,
                            BAL_TYPE_VALUE = d.BAL_TYPE_VALUE,
                            CURRENT_OPENING_BALANCE = d.CURRENT_OPENING_BALANCE,
-
+                           COMPANY_NAME = e.SHOPNAME
                        }).ToList();
 
             return Request.CreateResponse(HttpStatusCode.OK, str);
