@@ -3120,6 +3120,7 @@ namespace InvoicePOS.ViewModels
         }
         List<CustomerAutoCompleteListModel> autoCustModelList = new List<CustomerAutoCompleteListModel>();
          GetInvoiceModel[] datainvoice = null;
+        CustomerModel datacust = null;
          List<GetInvoiceModel> _ListGrid_Invoice = new List<GetInvoiceModel>();
          List<GetInvoiceModel> _ListGrid_Invoice_FilterCustomer = new List<GetInvoiceModel>();
         public async Task GetInvoice(int id)
@@ -3143,7 +3144,7 @@ namespace InvoicePOS.ViewModels
                     for (int i = 0; i < datainvoice.Length; i++)
                     {
                         x++;
-                        
+
                         _ListGrid_Invoice.Add(new GetInvoiceModel
                         {
                             INVOICE_ID = datainvoice[i].INVOICE_ID,
@@ -3169,23 +3170,23 @@ namespace InvoicePOS.ViewModels
                             TAX_INCLUDED = datainvoice[i].TAX_INCLUDED,
                             TOTAL_AMOUNT = datainvoice[i].TOTAL_AMOUNT,
                             TOTAL_TAX = datainvoice[i].TOTAL_TAX,
-                            DEBIT_AMOUNT = (Convert.ToDecimal(datainvoice[i].DEBIT_AMOUNT)),
-                            CREDIT_AMOUNT = (Convert.ToDecimal(datainvoice[i].CREDIT_AMOUNT)),
+                            DEBIT_AMOUNT = (Convert.ToDecimal(datainvoice[i].RECIVED_AMOUNT)),
+                            CREDIT_AMOUNT = (Convert.ToDecimal(datainvoice[i].RETURNABLE_AMOUNT)),
                             TRANSACTION_DATE = datainvoice[i].INVOICE_DATE
                         });
                     }
 
                     App.Current.Properties["CustmerList"] = _ListGrid_Invoice;
-                    
+
                     if (ApplyDateRange_Search == true)
                     {
-                        
+
                         var item1 = (from m in _ListGrid_Invoice
-                                    where m.INVOICE_DATE >= FROM_DATE && m.INVOICE_DATE <= TO_DATE
-                                         select m).ToList();
+                                     where m.INVOICE_DATE >= FROM_DATE && m.INVOICE_DATE <= TO_DATE
+                                     select m).ToList();
                         _ListGrid_Invoice = item1;
                     }
-                    else 
+                    else
                     {
                         _ListGrid_Invoice = App.Current.Properties["CustmerList"] as List<GetInvoiceModel>;
                     }
@@ -3194,9 +3195,22 @@ namespace InvoicePOS.ViewModels
                     //var InActiveSupp = (from m in _ListGrid_Invoice where m.IS_ACTIVE == true select m).ToList();
                     //_ListGrid_Invoice = InActiveSupp;
                     //}
-                ListGridViewLedger = _ListGrid_Invoice;
+                    ListGridViewLedger = _ListGrid_Invoice;
+                    HttpClient client1 = new HttpClient();
+                    client1.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                    client1.DefaultRequestHeaders.Accept.Add(
+                        new MediaTypeWithQualityHeaderValue("application/json"));
+                    client1.Timeout = new TimeSpan(500000000000);
+                    HttpResponseMessage response1 = client.GetAsync("api/CustomerAPI/GetCustomerPaymentCalculation?id=" + id + "").Result;
+                    if (response1.IsSuccessStatusCode)
+                    {
+                        //var jsonString = response.Content.ReadAsStringAsync().Result;
+                        datacust = JsonConvert.DeserializeObject<CustomerModel>(await response1.Content.ReadAsStringAsync());
+                        InvoicePOS.UserControll.Customer.ViewLedger.CreditLmt.Text = datacust.CREDIT_AMOUNT.ToString();
+                        InvoicePOS.UserControll.Customer.ViewLedger.DebitLmt.Text = datacust.DEBIT_AMOUNT.ToString();
+                    }
                 }
-            }
+                }
             catch (Exception ex)
             {
 

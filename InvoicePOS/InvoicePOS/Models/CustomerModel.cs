@@ -74,7 +74,10 @@ namespace InvoicePOS.Models
 
         public string FIRST_NAME { get; set; }
         public decimal OPENING_BALANCE { get; set; }
-        
+
+        public DateTime TRANSACTION_DATE { get; set; }
+        public decimal CREDIT_AMOUNT { get; set; }
+        public decimal DEBIT_AMOUNT { get; set; }
 
         public long OPENING_BALANCE_ID { get; set; }
         public DateTime DATE { get; set; }

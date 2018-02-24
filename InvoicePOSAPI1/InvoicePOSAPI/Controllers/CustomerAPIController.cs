@@ -24,6 +24,7 @@ namespace InvoicePOSAPI.Controllers
                        join d in db.TBL_OPENING_BALANCE on a.CUSTOMER_ID equals d.CUSTOMER_ID
                        join e in db.TBL_COMPANY on a.COMPANY_ID equals e.COMAPNY_ID
                        join f in db.TBL_BUSINESS_LOCATION on a.BUSINESS_LOCATION_ID equals f.BUSINESS_LOCATION_ID
+                       join g in db.TBL_INVOICE_PAY on a.CUSTOMER_ID equals g.CUSTOMER_ID
                        where a.COMPANY_ID == id && a.IS_DELETE == false
                        select new CustomerModel
                        {
@@ -70,11 +71,69 @@ namespace InvoicePOSAPI.Controllers
                            SHIPPING_STATE = b.STATE,
                            BAL_TYPE_VALUE = d.BAL_TYPE_VALUE,
                            CURRENT_OPENING_BALANCE = d.CURRENT_OPENING_BALANCE,
-                           COMPANY_NAME = e.SHOPNAME
+                           COMPANY_NAME = e.SHOPNAME,
+                           CREDIT_AMOUNT = g.RETURNABLE_AMOUNT.Value,
+                           DEBIT_AMOUNT = g.RECIVED_AMOUNT.Value,
                        }).ToList();
 
             return Request.CreateResponse(HttpStatusCode.OK, str);
 
+        }
+        [HttpGet]
+        public HttpResponseMessage GetCustomerPaymentCalculation(int id)
+        {
+            var str1 = (from p in db.TBL_CUSTOMER
+                        join q in db.TBL_INVOICE_PAY on p.CUSTOMER_ID equals q.CUSTOMER_ID
+                        group q by q.CUSTOMER_ID  into grps
+                        select new CustomerModel
+                        {
+                            
+                            CREDIT_AMOUNT = grps.Sum(x => x.RETURNABLE_AMOUNT.Value),
+                            DEBIT_AMOUNT = grps.Sum(x => x.RECIVED_AMOUNT.Value),
+                            COMPANY_ID = 1,                            
+                           NAME = "",
+                           LAST_NAME = "",
+                           SEARCH_CODE = "",
+                           VAT_NUMBER = "",
+                           CST_NUMBER = "",
+                           LOYALTY_NO = "",
+                           DEFAULT_CREIT_LIMIT = false,
+                           SAMEBILLINGANDSHIPPING_ADDRESS = false,
+                           IS_ENROLLED_FOR_LOYALITY = false,
+                           CUSTOMER_ID = grps.Key.Value,
+                           BILLING_ADDRESS1 = "",
+                           BILLING_ADDRESS2 = "",
+                           CITY = "",
+                           TIN = "",
+                           PAN = "",
+                           BUSINESS_LOCATION = "",
+                           BUSINESS_LOCATION_ID = 1,
+                           COUNTRY = "",
+                           CUSTOMER_GROUP = "",
+                           CUSTOMER_NUMBER = "",
+                           EMAIL_ADDRESS = "",
+                           IS_ACTIVE = false,
+                           MOBILE_NO = "",
+                           NOTES = "",
+                           //OPENING_AMT=a.OPENING_BALANCE,
+                           OPENING_AMT = 0,
+                           POSTAL_CODE = "",
+                           REFERRED_BY = "",
+                           STATE = "",
+                           TELEPHON_NUMBER = "",
+                           SHIPPING_ADDRESS1 = "",
+                           SHIPPING_ADDRESS2 = "",
+                           SHIPPING_CITY = "",
+                           SHIPPING_COUNTRY = "",
+                           SHIPPING_EMAIL_ADDRESS = "",
+                           SHIPPING_MOBILE_NO = "",
+                           SHIPPING_TELEPHON_NUMBER = "",
+                           SHIPPING_POSTAL_CODE = "",
+                           SHIPPING_STATE = "",
+                           BAL_TYPE_VALUE = "",
+                           CURRENT_OPENING_BALANCE = 0,
+                        }).First();
+          return  Request.CreateResponse(HttpStatusCode.OK, str1);
         }
         [HttpGet]
         public HttpResponseMessage SearchCustomer(string name)

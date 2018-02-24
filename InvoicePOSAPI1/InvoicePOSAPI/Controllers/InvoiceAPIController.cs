@@ -351,8 +351,8 @@ namespace InvoicePOSAPI.Controllers
                            TOTAL_AMOUNT = a.TOTAL_AMOUNT,
                            TAX_INCLUDED = a.TAX_INCLUDED,
                            INVOICE_ID = a.INVOICE_ID,
-
-
+                           CREDIT_AMOUNT = a.RETURNABLE_AMOUNT.Value,
+                           DEBIT_AMOUNT = a.RECIVED_AMOUNT.Value,
                            PENDING_AMOUNT = a.PENDING_AMOUNT,
                            QUANTITY_TOTAL = a.QUANTITY_TOTAL,
                            RECIVED_AMOUNT = a.RECIVED_AMOUNT,

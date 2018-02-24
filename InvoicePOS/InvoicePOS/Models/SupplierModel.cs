@@ -47,7 +47,11 @@ namespace InvoicePOS.Models
         public decimal DEFAULT_CREIT_LIMIT { get; set; }
         public string BUSINESS_LOCATION { get; set; }
         public string COMPANY_NAME { get; set; }
-       
+
+        public DateTime TRANSACTION_DATE { get; set; }
+        public decimal CREDIT_AMOUNT { get; set; }
+        public decimal DEBIT_AMOUNT { get; set; }
+
         private string error = string.Empty;
         public string Error
         {

@@ -47,6 +47,10 @@ namespace InvoicePOSAPI.Models
         public decimal? OPENING_AMT { get; set; }
         public string COMPANY_NAME { get; set; }
 
+        public DateTime TRANSACTION_DATE { get; set; }
+        public decimal CREDIT_AMOUNT { get; set; }
+        public decimal DEBIT_AMOUNT { get; set; }
+
         public string IMAGE_PATH { get; set; }
         public decimal? CURRENT_OPENING_BALANCE { get; set; }
         public Nullable<bool> DEFAULT_CREIT_LIMIT { get; set; }

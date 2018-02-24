@@ -79,6 +79,7 @@ namespace InvoicePOSAPI.Models
         public long COMPANY_ID { get; set; }
         public string COMPANY_NAME { get; set; }
 
+        public DateTime TRANSACTION_DATE { get; set; }
         public decimal CREDIT_AMOUNT { get; set; }
         public decimal DEBIT_AMOUNT { get; set; }
         public string NARRATION_TEXT { get; set; }

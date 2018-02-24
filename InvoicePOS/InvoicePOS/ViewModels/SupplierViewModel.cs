@@ -1367,7 +1367,7 @@ namespace InvoicePOS.ViewModels
                 OnPropertyChanged("ApplyDateRange_Search");
             }
         }
-
+        SupplierModel datasupp = null;
         public async Task<ObservableCollection<SuppPaymentModel>> GetSupplierFilterSearch(int id)
         {
             List<SuppPaymentModel> _ListGrid_Temp = new List<SuppPaymentModel>();
@@ -1417,6 +1417,19 @@ namespace InvoicePOS.ViewModels
                     _ListGrid_Temp = App.Current.Properties["SupplerList"] as List<SuppPaymentModel>;
                 }
                 ListGridViewLedger = _ListGrid_Temp;
+                HttpClient client1 = new HttpClient();
+                client1.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client1.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client1.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response1 = client.GetAsync("api/SuppPaymentAPI/GetSuppPaymentDetailsafterpayment?id=" + id + "").Result;
+                if (response1.IsSuccessStatusCode)
+                {
+                    //var jsonString = response.Content.ReadAsStringAsync().Result;
+                    datasupp = JsonConvert.DeserializeObject<SupplierModel>(await response1.Content.ReadAsStringAsync());
+                    InvoicePOS.UserControll.Supplier.SupplierViewLedger.CreditLmt.Text = datasupp.CREDIT_AMOUNT.ToString();
+                    InvoicePOS.UserControll.Supplier.SupplierViewLedger.DebitLmt.Text = datasupp.DEBIT_AMOUNT.ToString();
+                }
             }
            
             return new ObservableCollection<SuppPaymentModel>(_ListGrid_Temp);
