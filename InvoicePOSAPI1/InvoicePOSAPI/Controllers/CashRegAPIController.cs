@@ -12,7 +12,7 @@ namespace InvoicePOSAPI.Controllers
     public class CashRegAPIController : ApiController
     {
         CashRegModel im = new CashRegModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         [HttpGet]
         public HttpResponseMessage GetAllCashReg(int id)
         {

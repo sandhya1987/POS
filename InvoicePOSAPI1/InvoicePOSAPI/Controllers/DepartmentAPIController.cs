@@ -11,7 +11,7 @@ namespace InvoicePOSAPI.Controllers
 {
     public class DepartmentAPIController : ApiController
     {
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         [HttpGet]
         public HttpResponseMessage GetDepartment(int id)
         {

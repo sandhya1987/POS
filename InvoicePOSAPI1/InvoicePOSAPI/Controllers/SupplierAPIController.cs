@@ -12,11 +12,13 @@ namespace InvoicePOSAPI.Controllers
     public class SupplierAPIController : ApiController
     {
         SupplierModel im = new SupplierModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         [HttpGet]
         public HttpResponseMessage GetSupplier(int id)
         {
             var str = (from a in db.TBL_SUPPLIER
+                       join b in db.TBL_COMPANY on a.COMPANY_ID equals b.COMAPNY_ID
+                       join c in db.TBL_BUSINESS_LOCATION on a.BUSINESS_LOCATION_ID.Value equals c.BUSINESS_LOCATION_ID
                        where a.COMPANY_ID == id && a.IS_DELETE == false
                        select new SupplierModel
                        {
@@ -46,7 +48,8 @@ namespace InvoicePOSAPI.Controllers
                            CONTACT_MOBILE_NO = a.CONTACT_MOBILE_NO,
                            CONTACT_WEBSITE = a.CONTACT_WEBSITE,
                            CONTACT_EMAIL = a.CONTACT_EMAIL,
-
+                           COMPANY_NAME = b.COMPANY_NAME,
+                           BUSINESS_LOCATION = c.SHOP_NAME
                        }).ToList();
             return Request.CreateResponse(HttpStatusCode.OK, str);
 

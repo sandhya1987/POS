@@ -13,7 +13,7 @@ namespace InvoicePOSAPI.Controllers
     public class InvoiceAPIController : ApiController
     {
         InvoiceModel Invoice = new InvoiceModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
 
 
 
@@ -334,7 +334,7 @@ namespace InvoicePOSAPI.Controllers
         public HttpResponseMessage GetInvoice(int id)
         {
             var str1 = db.VIEW_INVOICE;
-            var str = (from a in db.VIEW_INVOICE
+            var str = (from a in db.VIEW_INVOICE where a.CUSTOMER_ID == id
                        select new InvoiceModel
                        {
                            AVAILABLE_CREDIT_LIMIT = a.AVAILABLE_CREDIT_LIMIT,
@@ -351,8 +351,8 @@ namespace InvoicePOSAPI.Controllers
                            TOTAL_AMOUNT = a.TOTAL_AMOUNT,
                            TAX_INCLUDED = a.TAX_INCLUDED,
                            INVOICE_ID = a.INVOICE_ID,
-
-
+                           CREDIT_AMOUNT = a.RETURNABLE_AMOUNT.Value,
+                           DEBIT_AMOUNT = a.RECIVED_AMOUNT.Value,
                            PENDING_AMOUNT = a.PENDING_AMOUNT,
                            QUANTITY_TOTAL = a.QUANTITY_TOTAL,
                            RECIVED_AMOUNT = a.RECIVED_AMOUNT,

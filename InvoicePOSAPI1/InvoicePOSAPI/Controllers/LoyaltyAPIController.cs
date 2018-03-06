@@ -12,7 +12,7 @@ namespace InvoicePOSAPI.Controllers
     public class LoyaltyAPIController : ApiController
     {
         LoyaltyModel _LoyaltyModel = new LoyaltyModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         [HttpGet]
         public HttpResponseMessage GetLoyalty(int id)
         {

@@ -126,7 +126,21 @@ namespace InvoicePOS.ViewModels
 
             }
         }
+        private long _SUPPLIER_ID;
+        public long SUPPLIER_ID
+        {
+            get
+            {
+                return SelectedSupplier.SUPPLIER_ID;
+            }
+            set
+            {
+                SelectedSupplier.SUPPLIER_ID = value;
+                //DisplaySuppName = SelectedSupplier.SUPPLIER_ID;
+                OnPropertyChanged("SUPPLIER_ID");
 
+            }
+        }
         //private string _DisplaySuppName;//Prev Code
         //public string DisplaySuppName
         //{
@@ -579,8 +593,45 @@ namespace InvoicePOS.ViewModels
                 }
             }
         }
+        private string _BUSINESS_LOCATION;
+        public string BUSINESS_LOCATION
+        {
+            get
+            {
+                return SelectedSupplier.BUSINESS_LOCATION;
+            }
+            set
+            {
+                SelectedSupplier.BUSINESS_LOCATION = value;
 
 
+                if (SelectedSupplier.BUSINESS_LOCATION != value)
+                {
+                    SelectedSupplier.BUSINESS_LOCATION = value;
+                    OnPropertyChanged("BUSINESS_LOCATION");
+                }
+            }
+        }
+        private string _COMPANY_NAME;
+        public string COMPANY_NAME
+        {
+            get
+            {
+                return SelectedSupplier.COMPANY_NAME;
+            }
+            set
+            {
+                SelectedSupplier.COMPANY_NAME = value;
+
+
+                if (SelectedSupplier.COMPANY_NAME != value)
+                {
+                    SelectedSupplier.COMPANY_NAME = value;
+                    OnPropertyChanged("COMPANY_NAME");
+                }
+            }
+        }
+        
         private Int32 _UserId;
         public Int32 UserId
         {
@@ -1304,7 +1355,7 @@ namespace InvoicePOS.ViewModels
             set
             {
                 _ApplyDateRange_Search = value;
-                var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                var comp = Convert.ToInt32(App.Current.Properties["Supplier_Id"].ToString());
                 if (_ApplyDateRange_Search == true)
                 {
                     GetSupplierFilterSearch(comp);
@@ -1316,8 +1367,8 @@ namespace InvoicePOS.ViewModels
                 OnPropertyChanged("ApplyDateRange_Search");
             }
         }
-
-        public async Task<ObservableCollection<SuppPaymentModel>> GetSupplierFilterSearch(long CompId)
+        SupplierModel datasupp = null;
+        public async Task<ObservableCollection<SuppPaymentModel>> GetSupplierFilterSearch(int id)
         {
             List<SuppPaymentModel> _ListGrid_Temp = new List<SuppPaymentModel>();
             SupplierDataFilter = new List<SuppPaymentModel>();
@@ -1326,12 +1377,13 @@ namespace InvoicePOS.ViewModels
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
             client.Timeout = new TimeSpan(500000000000);
-            HttpResponseMessage response = client.GetAsync("api/SuppPaymentAPI/GetSuppPayment?id=" + CompId + "").Result;
+            HttpResponseMessage response = client.GetAsync("api/SuppPaymentAPI/GetSuppPayment?id=" + id + "").Result;
             if (response.IsSuccessStatusCode)
             {
                 data1 = JsonConvert.DeserializeObject<SuppPaymentModel[]>(await response.Content.ReadAsStringAsync());
                 int x = 0;
-                for (int i = 0; i < data.Length; i++)
+                _ListGrid_Temp.Clear();
+                for (int i = 0; i < data1.Length; i++)
                 {
                     x++;
                     _ListGrid_Temp.Add(new SuppPaymentModel
@@ -1343,23 +1395,43 @@ namespace InvoicePOS.ViewModels
                        DEBIT_AMOUNT = data1[i].DEBIT_AMOUNT,
                        NARRATION_TEXT = data1[i].NARRATION_TEXT,
                        DOCUMENT_TYPE = data1[i].DOCUMENT_TYPE,
-                       GST_NUMBER = data1[i].GST_NUMBER
+                       GST_NUMBER = data1[i].GST_NUMBER,
+                       TRANSACTION_DATE = data1[i].PAYMENT_DATE,
+                       BUSINESS_LOCATION = data1[i].BUSINESS_LOCATION,
+                       COMPANY_NAME = data1[i].COMPANY_NAME
                     });
                 }
-                
+                App.Current.Properties["SupplerList"] = _ListGrid_Temp;
                 if (ApplyDateRange_Search == true)
                 {
 
                     var item1 = (from m in _ListGrid_Temp
                                  where m.PAYMENT_DATE >= FROM_DATE && m.PAYMENT_DATE <= TO_DATE
                                  select m).ToList();
-                    if (item1.Count > 0)
-                    {
-                        _ListGrid_Temp = item1;
-                    }
+
+                    _ListGrid_Temp = item1;
+
+                }
+                else
+                {
+                    _ListGrid_Temp = App.Current.Properties["SupplerList"] as List<SuppPaymentModel>;
+                }
+                ListGridViewLedger = _ListGrid_Temp;
+                HttpClient client1 = new HttpClient();
+                client1.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client1.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client1.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response1 = client.GetAsync("api/SuppPaymentAPI/GetSuppPaymentDetailsafterpayment?id=" + id + "").Result;
+                if (response1.IsSuccessStatusCode)
+                {
+                    //var jsonString = response.Content.ReadAsStringAsync().Result;
+                    datasupp = JsonConvert.DeserializeObject<SupplierModel>(await response1.Content.ReadAsStringAsync());
+                    InvoicePOS.UserControll.Supplier.SupplierViewLedger.CreditLmt.Text = datasupp.CREDIT_AMOUNT.ToString();
+                    InvoicePOS.UserControll.Supplier.SupplierViewLedger.DebitLmt.Text = datasupp.DEBIT_AMOUNT.ToString();
                 }
             }
-            ListGridViewLedger = _ListGrid_Temp;
+           
             return new ObservableCollection<SuppPaymentModel>(_ListGrid_Temp);
 
         }
@@ -1423,7 +1495,8 @@ namespace InvoicePOS.ViewModels
                         CONTACT_MOBILE_NO = data[i].CONTACT_MOBILE_NO,
                         CONTACT_WEBSITE = data[i].CONTACT_WEBSITE,
                         CONTACT_EMAIL = data[i].CONTACT_EMAIL,
-                        
+                        COMPANY_NAME = data[i].COMPANY_NAME,
+                        BUSINESS_LOCATION = data[i].BUSINESS_LOCATION
                     });
                 }
                 if (SEARCH_SUPPLIER != "" && SEARCH_SUPPLIER != null)
@@ -1700,11 +1773,22 @@ namespace InvoicePOS.ViewModels
             if (SelectedSupplier != null)
             {
                 InvoicePOS.UserControll.Supplier.SupplierViewLedger.FAccount.Text = SelectedSupplier.SUPPLIER_NAME;
-                //InvoicePOS.UserControll.Customer.ViewLedger.CBalance.Text = SelectedSupplier.CLOSING_AMT.ToString();
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.CBalance.Text = SelectedSupplier.CLOSING_AMT.ToString();
                 InvoicePOS.UserControll.Supplier.SupplierViewLedger.OBalance.Text = SelectedSupplier.OPENING_BALANCE.ToString();
-                //InvoicePOS.UserControll.Customer.ViewLedger.CreditLmt.Text = SelectedSupplier.credit_Limits.ToString();
-                //InvoicePOS.UserControll.Customer.ViewLedger.DebitLmt.Text = SelectedSupplier.DEFAULT_CREIT_LIMIT.ToString();
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.CreditLmt.Text = SelectedSupplier.CREDIT_LIMITS.ToString();
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.DebitLmt.Text = SelectedSupplier.DEFAULT_CREIT_LIMIT.ToString();
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.BusinessList.Text = SelectedSupplier.BUSINESS_LOCATION;
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.CompanyList.Text = SelectedSupplier.COMPANY_NAME;
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.SuppId.Text = SelectedSupplier.SUPPLIER_ID.ToString();
             }
+            if (InvoicePOS.UserControll.Supplier.SupplierViewLedger.SuppId.Text != null)
+            {
+                App.Current.Properties["Supplier_Id"] = InvoicePOS.UserControll.Supplier.SupplierViewLedger.SuppId.Text;
+
+            }
+            var comp = Convert.ToInt32(App.Current.Properties["Supplier_Id"].ToString());
+            GetSupplierFilterSearch(comp);
+            sh.DataContext = this;
             sh.Show();
         }
         public ICommand _BusinessListSupplier { get; set; }

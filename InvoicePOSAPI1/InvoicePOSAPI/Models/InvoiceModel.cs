@@ -55,6 +55,10 @@ namespace InvoicePOSAPI.Models
         public DateTime? INVOICE_DATE { get; set; }
         public decimal? TOTAL_TAX { get; set; }
         public long INVOICE_ID { get; set; }
+
+        public DateTime TRANSACTION_DATE { get; set; }
+        public decimal CREDIT_AMOUNT { get; set; }
+        public decimal DEBIT_AMOUNT { get; set; }
         //public DateTime STARTDATE { get; set; }
         //public DateTime ENDDATE { get; set; }
     }

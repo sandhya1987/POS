@@ -11,7 +11,7 @@ namespace InvoicePOSAPI.Controllers
 {
     public class RecPayAPIController : ApiController
     {
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         RevPayModel _RecPay = new RevPayModel();
         [HttpGet]
         public HttpResponseMessage GetRecPay(int id)

@@ -19,8 +19,6 @@ namespace InvoicePOSDATA
         public string REPORT_NAME { get; set; }
         public Nullable<System.DateTime> CREATION_DATE { get; set; }
         public Nullable<bool> IS_DELETE { get; set; }
-        public Nullable<long> COMPANY_ID { get; set; }
         public string CREATED_BY { get; set; }
-        public string STATUS { get; set; }
     }
 }

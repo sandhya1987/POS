@@ -12,12 +12,13 @@ namespace InvoicePOSAPI.Controllers
     public class SuppPaymentAPIController : ApiController
     {
         SuppPaymentModel im = new SuppPaymentModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         [HttpGet]
-        public HttpResponseMessage GetSuppPayment(int id)
+        public HttpResponseMessage GetSuppPayment(long id)
         {
             var str = (from a in db.TBL_SUPP_PAYMENT
-                       where a.COMPANY_ID == id && a.IS_DELETE == false
+                       join b in db.TBL_COMPANY on a.COMPANY_ID equals b.COMAPNY_ID
+                       where a.SUPP_ID == id && a.IS_DELETE == false
                        select new SuppPaymentModel
                        {
                            SUPP_PAYMENT = a.SUPP_PAYMENT,
@@ -57,15 +58,31 @@ namespace InvoicePOSAPI.Controllers
                            CURRENT_PAYMENT = a.CURRENT_PAYMENT,
                            NOTE = a.NOTE,
                            IS_PRINT_CHECK = a.IS_PRINT_CHECK,
-                           CREDIT_AMOUNT = a.CREDIT_AMOUNT.Value,
-                           DEBIT_AMOUNT = a.DEBIT_AMOUNT.Value,
-                           NARRATION_TEXT = a.NARRATION_TEXT,
-                           DOCUMENT_TYPE = a.DOCUMENT_TYPE,
-                           GST_NUMBER = a.GST_NUMBER
+                           //CREDIT_AMOUNT = a.CREDIT_AMOUNT.Value,
+                           //DEBIT_AMOUNT = a.DEBIT_AMOUNT.Value,
+                           //NARRATION_TEXT = a.NARRATION_TEXT,
+                           //DOCUMENT_TYPE = a.DOCUMENT_TYPE,
+                           //GST_NUMBER = a.GST_NUMBER,
+                           COMPANY_NAME = b.COMPANY_NAME
                        }).ToList();
             return Request.CreateResponse(HttpStatusCode.OK, str);
         }
+        [HttpGet]
+        public HttpResponseMessage GetSupplierPaymentCalculation(int id)
+        {
+            var str1 = (from p in db.TBL_SUPPLIER
+                        join q in db.TBL_SUPP_PAYMENT on p.SUPPLIER_ID equals q.SUPP_ID
+                        group q by q.PAYMENT_DATE into grps
+                        select new SuppPaymentModel
+                        {
+                            //TRANSACTION_DATE = grps.Key.Value,
+                            CREDIT_AMOUNT = grps.Sum(x => x.PENDING_AMT.Value),
+                            DEBIT_AMOUNT = grps.Sum(x => x.TOTAL_RIE_AMT.Value),
 
+                            //TotalTax=0,
+                        }).First();
+            return Request.CreateResponse(HttpStatusCode.OK, str1);
+        }
         [HttpGet]
         public HttpResponseMessage GetSuppPaymentDetails(int id, int supid)
         {

@@ -13,7 +13,7 @@ namespace InvoicePOSAPI.Controllers
 {
     public class ReportGroupAPIController : ApiController
     {
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         ReportGroupModel _ReportGroupModel = new ReportGroupModel();
         [HttpGet]
         public HttpResponseMessage GetReportName(int id)
@@ -33,28 +33,28 @@ namespace InvoicePOSAPI.Controllers
                        }).ToList();
             return Request.CreateResponse(HttpStatusCode.OK, str);
         }
-        [HttpGet]
-        public HttpResponseMessage GetReportHirarchy(int id)
-        {
-            var str = (from a in db.VIEW_GROUP_SUBGROUP
+        //[HttpGet]
+        //public HttpResponseMessage GetReportHirarchy(int id)
+        //{
+        //    var str = (from a in db.VIEW_GROUP_SUBGROUP
                       
-                       select new ReportGroupModel
-                       {
+        //               select new ReportGroupModel
+        //               {
 
-                          DATE=System.DateTime.Now,
-                           REPORT_GRP_ID = 0,
-                           GROUP_NAME = a.GroupName,
-                           REPORT_ID = 0,
-                           REPORT_CHILD_ID=a.Child,
-                           REPORT_PARENT_ID=a.ParentId,
-                           REPORT_NAME = a.GroupName,
-                           IS_DELETE = false,
-                           CREATED_BY = 1,
-                           COMPANY_ID = 1,
+        //                  DATE=System.DateTime.Now,
+        //                   REPORT_GRP_ID = 0,
+        //                   GROUP_NAME = a.GroupName,
+        //                   REPORT_ID = 0,
+        //                   REPORT_CHILD_ID=a.Child,
+        //                   REPORT_PARENT_ID=a.ParentId,
+        //                   REPORT_NAME = a.GroupName,
+        //                   IS_DELETE = false,
+        //                   CREATED_BY = 1,
+        //                   COMPANY_ID = 1,
 
-                       }).ToList();
-            return Request.CreateResponse(HttpStatusCode.OK, str);
-        }
+        //               }).ToList();
+        //    return Request.CreateResponse(HttpStatusCode.OK, str);
+        //}
         [HttpPost]
         public HttpResponseMessage ReportGroupAdd(ReportGroupModel _ReportGroupModel)
         {

@@ -13,7 +13,7 @@ namespace InvoicePOSAPI.Controllers
 {
     public class AccessRightAPIController : ApiController
     {
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
         AccessRightsModel Model = new AccessRightsModel();
 
         public HttpResponseMessage GetDepartment(int id)

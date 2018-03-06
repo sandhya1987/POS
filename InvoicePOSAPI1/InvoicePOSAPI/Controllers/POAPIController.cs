@@ -16,7 +16,7 @@ namespace InvoicePOSAPI.Controllers
 
         POModel pom = new POModel();
         //POModel pom1 = new POModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
 
         //[HttpPost]
         //public HttpResponseMessage UpdatePOItem(ObservableCollection<POModel> SelectedItem)

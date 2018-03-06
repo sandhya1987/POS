@@ -30,6 +30,7 @@ namespace InvoicePOS.Models
         public string PAN { get; set; }
         public long BUSINESS_LOCATION_ID { get; set; }
         public string BUSINESS_LOCATION { get; set; }
+        public string COMPANY_NAME { get; set; }
 
         public DateTime FROM_DATE { get; set; }
         public DateTime TO_DATE { get; set; }
@@ -73,7 +74,10 @@ namespace InvoicePOS.Models
 
         public string FIRST_NAME { get; set; }
         public decimal OPENING_BALANCE { get; set; }
-        
+
+        public DateTime TRANSACTION_DATE { get; set; }
+        public decimal CREDIT_AMOUNT { get; set; }
+        public decimal DEBIT_AMOUNT { get; set; }
 
         public long OPENING_BALANCE_ID { get; set; }
         public DateTime DATE { get; set; }
