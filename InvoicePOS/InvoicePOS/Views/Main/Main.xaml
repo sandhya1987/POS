@@ -253,21 +253,12 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-<<<<<<< HEAD
                     <DataGridTextColumn    Header="{x:Static p:Resources.String46}" Binding="{Binding BARCODE}" Width="200" />
                     <DataGridTextColumn    Header="{x:Static p:Resources.String47}" Binding="{Binding ITEM_NAME}" Width="250"/>
                     <DataGridTextColumn    Header="{x:Static p:Resources.String48}" Binding="{Binding FORMATTED_SALES_PRICE_BEFOR_TAX_QTY}" Width="200"/>
                     <DataGridTextColumn    Header="{x:Static p:Resources.String49}"  Binding="{Binding Current_Qty,Mode=TwoWay}" Width="90"/>
                     <DataGridTextColumn    Header="{x:Static p:Resources.String50}" Binding="{Binding FORMATTED_Discount}" Width="100"/>
                     <DataGridTextColumn    Header="{x:Static p:Resources.String51}" Binding="{Binding FORMATTED_SALES_PRICE_WITH_DISCOUNT}" Width="150"/>
-=======
-                    <DataGridTextColumn    Header="BarCode" Binding="{Binding BARCODE}" Width="200" />
-                    <DataGridTextColumn    Header="Item Name" Binding="{Binding ITEM_NAME}" Width="250"/>
-                    <DataGridTextColumn    Header="Price without tax1" Binding="{Binding FORMATTED_SALES_PRICE_BEFOR_TAX_QTY}" Width="200"/>
-                    <DataGridTextColumn    Header="Qty"  Binding="{Binding Current_Qty,Mode=TwoWay}" Width="90"/>
-                    <DataGridTextColumn    Header="Discount" Binding="{Binding FORMATTED_Discount}" Width="100"/>
-                    <DataGridTextColumn    Header="Price with Discount" Binding="{Binding FORMATTED_SALES_PRICE_WITH_DISCOUNT}" Width="150"/>
->>>>>>> 2ea1f923d0e417f5cab6c99ac8aef1fec93036f0
                     <!--<DataGridTextColumn Visibility="Hidden"  Header="Taxt Name" Binding="{Binding TaxName}" Width="100"/>-->
                     <DataGridTextColumn   Header="{x:Static p:Resources.String52}" Binding="{Binding FORMATTED_TaxValue}" Width="100"/>
                     <DataGridTextColumn Visibility="Hidden"  Header="{x:Static p:Resources.String53}" Binding="{Binding FORMATTED_TOTAL_TAX}" Width="100"/>

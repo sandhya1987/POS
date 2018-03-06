@@ -60,5 +60,6 @@ namespace InvoicePOSDATA
         public Nullable<decimal> TOTAL_TAX { get; set; }
         public Nullable<long> BUSINESS_LOCATION_ID { get; set; }
         public string BUSINESS_LOCATION_NAME { get; set; }
+        public Nullable<decimal> SALES_RETURN_AMOUNT { get; set; }
     }
 }

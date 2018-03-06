@@ -114,7 +114,6 @@
                     </DataGrid.RowStyle>
 
                     <DataGrid.Columns>
-<<<<<<< HEAD
 
                         <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="{x:Static p:Resources.String331}" Binding="{Binding SLNO}"  />
                         <DataGridTextColumn     Width="150" MaxWidth="155" Header="{x:Static p:Resources.String490}" Binding="{Binding CUSTOMER_NUMBER}"  />
@@ -133,28 +132,6 @@
                         <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1293}"  Binding="{Binding CST_NUMBER}"/>
                         <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1217}"  Binding="{Binding SHIPPING_EMAIL_ADDRESS}"/>
                         <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String504}"  Binding="{Binding NAME}"/>
-=======
-                        <DataGridTextColumn Visibility="Hidden"  TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding CUSTOMER_ID}"  />
-                        <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
-                        <DataGridTextColumn     Width="150" MaxWidth="155" Header="Customer Code" Binding="{Binding CUSTOMER_NUMBER}"  />
-                        <DataGridTextColumn   Width="200" Header="Name"  Binding="{Binding FULL_NAME}"/>
-                        <DataGridTextColumn   Width="200" Header="Search Code"  Binding="{Binding SEARCH_CODE}"/>
-                        <DataGridTextColumn   Width="200" Header="Customer Group Name"  Binding="{Binding CUSTOMER_GROUP}"/>
-                        <DataGridTextColumn   Width="200" Header="Is Enrolled For Loyalty Points"  Binding="{Binding IS_ENROLLED_FOR_LOYALITY}"/>
-                        <DataGridTextColumn   Width="200" Header="Loyalty Number"  Binding="{Binding LOYALTY_NO}"/>
-                        <DataGridTextColumn   Width="200" Header="Mobile Number"  Binding="{Binding SHIPPING_MOBILE_NO}"/>
-                        <DataGridTextColumn   Width="200" Header="Telephone Nubmer"  Binding="{Binding SHIPPING_TELEPHON_NUMBER}"/>
-                        <DataGridTextColumn   Width="200" Header="Address 1"  Binding="{Binding SHIPPING_ADDRESS1}"/>
-                        <DataGridTextColumn   Width="200" Header="Address 2"  Binding="{Binding SHIPPING_ADDRESS2}"/>
-                        <DataGridTextColumn   Width="200" Header="City"  Binding="{Binding SHIPPING_CITY}"/>
-                        <DataGridTextColumn   Width="200" Header="State"  Binding="{Binding SHIPPING_STATE}"/>
-                        <DataGridTextColumn   Width="200" Header="VAT no"  Binding="{Binding VAT_NUMBER}"/>
-                        <DataGridTextColumn   Width="200" Header="CST no"  Binding="{Binding CST_NUMBER}"/>
-                        <DataGridTextColumn   Width="200" Header="Email"  Binding="{Binding SHIPPING_EMAIL_ADDRESS}"/>
-                        <DataGridTextColumn   Width="200" Header="Name For Display"  Binding="{Binding NAME}"/>
-                        <DataGridTextColumn  Visibility="Hidden" Width="200" Header="Name For Display"  Binding="{Binding BUSINESS_LOCATION}"/>
-                        <DataGridTextColumn Visibility="Hidden"  Width="200" Header="Name For Display"  Binding="{Binding COMPANY_NAME}"/>
->>>>>>> 2ea1f923d0e417f5cab6c99ac8aef1fec93036f0
                     </DataGrid.Columns>
                 </DataGrid>
                 <CheckBox Content="{x:Static p:Resources.String505}" IsChecked="{Binding IS_InACTIVESearch,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="19" Width="205"/>

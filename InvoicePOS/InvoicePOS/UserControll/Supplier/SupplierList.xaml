@@ -34,7 +34,6 @@
                             </DataGrid.RowStyle>
 
                             <DataGrid.Columns>
-<<<<<<< HEAD
                                 <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="{x:Static p:Resources.label186}" Binding="{Binding SLNO}"  />
                                 <DataGridTextColumn    Width="75" MaxWidth="300" Header="{x:Static p:Resources.String574}" Binding="{Binding SUPPLIER_CODE}"  />
                                 <DataGridTextColumn     Width="150" MaxWidth="155" Header="{x:Static p:Resources.String1291}" Binding="{Binding SUPPLIER_NAME}"  />
@@ -49,25 +48,6 @@
                                 <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String441}"  Binding="{Binding STATE}"/>
                                 <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1432}"  Binding="{Binding ZIP_CODE}"/>
                                 <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1296}"  Binding="{Binding OPENING_BALANCE}"/>
-=======
-                                <DataGridTextColumn Visibility="Hidden"  TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding BUSINESS_LOCATION}"  />
-                                <DataGridTextColumn Visibility="Hidden"  TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding COMPANY_NAME}"  />
-                                <DataGridTextColumn Visibility="Hidden"  TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding SUPPLIER_ID}"  />
-                                <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding SLNO}"  />
-                                <DataGridTextColumn    Width="75" MaxWidth="300" Header="Supplier Code" Binding="{Binding SUPPLIER_CODE}"  />
-                                <DataGridTextColumn     Width="150" MaxWidth="155" Header="Supplier Name" Binding="{Binding SUPPLIER_NAME}"  />
-                                <DataGridTextColumn   Width="200" Header="Search Code"  Binding="{Binding SEARCH_CODE}"/>
-                                <DataGridTextColumn   Width="200" Header="vat No"  Binding="{Binding VAT_NO}"/>
-                                <DataGridTextColumn   Width="200" Header="Cst No"  Binding="{Binding CST_NO}"/>
-                                <DataGridTextColumn   Width="200" Header="Tin No"  Binding="{Binding TIN_NO}"/>
-                                <DataGridTextColumn   Width="200" Header="Pan No"  Binding="{Binding PAN_NO}"/>
-                                <DataGridTextColumn   Width="200" Header="Adress 1"  Binding="{Binding ADDRESS_1}"/>
-                                <DataGridTextColumn   Width="200" Header="Address 2"  Binding="{Binding ADDRESS_2}"/>
-                                <DataGridTextColumn   Width="200" Header="City"  Binding="{Binding CITY}"/>
-                                <DataGridTextColumn   Width="200" Header="State"  Binding="{Binding STATE}"/>
-                                <DataGridTextColumn   Width="200" Header="Zip Code"  Binding="{Binding ZIP_CODE}"/>
-                                <DataGridTextColumn   Width="200" Header="Opening Balance"  Binding="{Binding OPENING_BALANCE}"/>
->>>>>>> 2ea1f923d0e417f5cab6c99ac8aef1fec93036f0
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>

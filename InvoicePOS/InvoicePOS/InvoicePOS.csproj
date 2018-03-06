@@ -192,16 +192,8 @@
     <Compile Include="Models\TaxManagement.cs" />
     <Compile Include="Models\UnitModel.cs" />
     <Compile Include="Models\VendorModel.cs" />
-    <Compile Include="Properties\Resources.de-DE.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.de-DE.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Resources.en-US.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.en-US.resx</DependentUpon>
-    </Compile>
+    <Compile Include="Properties\Resources.de-DE.Designer.cs" />
+    <Compile Include="Properties\Resources.en-US.Designer.cs" />
     <Compile Include="UserControll\AccessRide\AccessRide.xaml.cs">
       <DependentUpon>AccessRide.xaml</DependentUpon>
     </Compile>
@@ -1463,16 +1455,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Properties\Resources.de-DE.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.de-DE.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.en-US.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.en-US.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de-DE.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-US.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Settings.resx" />
@@ -1572,7 +1558,6 @@
     <Resource Include="Images\vendor-color.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="obj\" />
     <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
