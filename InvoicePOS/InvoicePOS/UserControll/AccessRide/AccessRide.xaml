@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="750" Width="1150">
     <Grid >
@@ -13,13 +14,13 @@
                     <Button Command="{Binding SearchItem}"    Margin="0,10,788,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="75" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding AddAccessRightsClick}"    Margin="0,11,20,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
 
@@ -52,16 +53,16 @@
                         </DataGrid.RowStyle>
 
                         <DataGrid.Columns>
-                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
-                            <DataGridTextColumn    Width="75" MaxWidth="300" Header="Emp Code" Binding="{Binding EMPLOYEE_CODE}"  />
-                            <DataGridTextColumn     Width="150" MaxWidth="155" Header="Emp Name" Binding="{Binding FIRST_NAME}"  />
-                            <DataGridTextColumn   Width="200" Header="Search Code"  Binding="{Binding SEARCH_CODE}"/>
-                            <DataGridTextColumn   Width="200" Header="Joining Date"  Binding="{Binding DATE_OF_JOIN}"/>
-                            <DataGridTextColumn   Width="200" Header="Department"  Binding="{Binding DEPARTMENT}"/>
-                            <DataGridTextColumn   Width="200" Header="Designation"  Binding="{Binding EMPLOYEE_DESIGNATION}"/>
-                            <DataGridTextColumn   Width="200" Header="Location Name"  Binding="{Binding BUSINESS_LOCATION}"/>
-                            <DataGridTextColumn   Width="200" Header="Can Have Appointment"  Binding="{Binding IS_APPROVE_ACCESS_VAI_SMS}"/>
-                            <DataGridTextColumn   Width="200" Header="Work Shift Name"  Binding="{Binding WORKING_SHIFT}"/>
+                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="{x:Static p:Resources.String331}" Binding="{Binding SLNO}"  />
+                            <DataGridTextColumn    Width="75" MaxWidth="300" Header="{x:Static p:Resources.String332}" Binding="{Binding EMPLOYEE_CODE}"  />
+                            <DataGridTextColumn     Width="150" MaxWidth="155" Header="{x:Static p:Resources.String333}" Binding="{Binding FIRST_NAME}"  />
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String334}"  Binding="{Binding SEARCH_CODE}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String335}"  Binding="{Binding DATE_OF_JOIN}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String336}"  Binding="{Binding DEPARTMENT}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String337}"  Binding="{Binding EMPLOYEE_DESIGNATION}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String338}"  Binding="{Binding BUSINESS_LOCATION}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String339}"  Binding="{Binding IS_APPROVE_ACCESS_VAI_SMS}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String340}"  Binding="{Binding WORKING_SHIFT}"/>
 
                         </DataGrid.Columns>
                     </DataGrid>

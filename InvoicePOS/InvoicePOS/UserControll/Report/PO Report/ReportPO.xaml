@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvoicePOS.UserControll.Report.PO_Report"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
         mc:Ignorable="d"
-        Title="ReportPO" Height="633.272" Width="808.647">
+        Title="{x:Static p:Resources.String1158}" Height="633.272" Width="808.647">
     <Grid Background="White" Name="grid11">
 
        
@@ -39,30 +40,30 @@
             </DataGrid.RowStyle>
 
             <DataGrid.Columns>
-                <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl No" Binding="{Binding SLNO}" FontFamily="Verdana"  TextBlock.TextAlignment="Center" />
-                <DataGridTextColumn     Width="75" MaxWidth="300" Header="PONumber" Binding="{Binding PO_NUMBER}" FontFamily="Verdana"  TextBlock.TextAlignment="Center" />
-                <DataGridTextColumn     Width="150" MaxWidth="155" Header="POStatus" Binding="{Binding BARCODE}"  />
-                <DataGridTextColumn   Width="200" Header="POType"  Binding="{Binding ITEM_NAME}"/>
-                <DataGridTextColumn   Width="200" Header="PODate"  Binding="{Binding DELIVERY_DATE}"/>
-                <DataGridTextColumn   Width="200" Header="Supplier By"  Binding="{Binding SUPPLIER}"/>
-                <DataGridTextColumn   Width="200" Header="Create By"  Binding="{Binding SALES_PRICE,StringFormat=\{0:c\}}"/>
+                <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="{x:Static p:Resources.label186}" Binding="{Binding SLNO}" FontFamily="Verdana"  TextBlock.TextAlignment="Center" />
+                <DataGridTextColumn     Width="75" MaxWidth="300" Header="{x:Static p:Resources.String1150}" Binding="{Binding PO_NUMBER}" FontFamily="Verdana"  TextBlock.TextAlignment="Center" />
+                <DataGridTextColumn     Width="150" MaxWidth="155" Header="{x:Static p:Resources.String1151}" Binding="{Binding BARCODE}"  />
+                <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1152}"  Binding="{Binding ITEM_NAME}"/>
+                <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1153}"  Binding="{Binding DELIVERY_DATE}"/>
+                <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1154}"  Binding="{Binding SUPPLIER}"/>
+                <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1155}"  Binding="{Binding SALES_PRICE,StringFormat=\{0:c\}}"/>
 
             </DataGrid.Columns>
         </DataGrid>
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" Name="textBlock1" Text="---------------------------------------------------------------" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="20" HorizontalAlignment="Center" Margin="48,33,541,0" Name="textBlock2" Text=" POS SALESPERSON RESULTS REPORT" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="10,53,0,0" Name="textBlock3" Text="---------------------------------------------------------------" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="11,76,0,0" Name="textBlock4" Text=" Sales from" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="10,10,0,0" Name="textBlock1" Text="{x:Static p:Resources.String133}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="20" HorizontalAlignment="Center" Margin="48,33,541,0" Name="textBlock2" Text="{x:Static p:Resources.String1159}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="10,53,0,0" Name="textBlock3" Text="{x:Static p:Resources.String133}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="11,76,0,0" Name="textBlock4" Text="{x:Static p:Resources.String1426}" VerticalAlignment="Top" />
 
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="10,104,0,0" Name="textBlock7" Text="Salesperson" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="17,127,0,0" Name="textBlock8" Text="Store" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="9,150,0,0" Name="textBlock9" Text=" Report run" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="88,76,0,0" Name="textBlock10" Text="05/01/2014" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="160,313,0,0" Name="textBlock13" Text="*" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="160,127,0,0" Name="textBlock14" Text="5002" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="10,104,0,0" Name="textBlock7" Text="{x:Static p:Resources.String1160}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="17,127,0,0" Name="textBlock8" Text="{x:Static p:Resources.String1161}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="9,150,0,0" Name="textBlock9" Text="{x:Static p:Resources.String1162}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="88,76,0,0" Name="textBlock10" Text="{x:Static p:Resources.String1163}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="160,313,0,0" Name="textBlock13" Text="{x:Static p:Resources.String1164}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="160,127,0,0" Name="textBlock14" Text="{x:Static p:Resources.String1165}" VerticalAlignment="Top" />
         <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="130,150,0,0" Name="textBlock15" Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat=\{0:dd/MM/yyyy hh:mm tt\}}" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="224,76,0,0" Name="textBlock16" Text="06/01/2014" VerticalAlignment="Top" />
-        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="175,76,0,0" Name="textBlock17" Text="To" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="224,76,0,0" Name="textBlock16" Text="{x:Static p:Resources.String1166}" VerticalAlignment="Top" />
+        <TextBlock FontWeight="Bold" Height="23" HorizontalAlignment="Left" Margin="175,76,0,0" Name="textBlock17" Text="{x:Static p:Resources.String1167}" VerticalAlignment="Top" />
 
     </Grid>
 </Window>

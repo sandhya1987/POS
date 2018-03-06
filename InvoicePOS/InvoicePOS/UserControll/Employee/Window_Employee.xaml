@@ -1,7 +1,8 @@
 ﻿<Window x:Class="InvoicePOS.UserControll.Employee.Window_Employee"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
-        Title="Employee List" Height="455.224" Width="803.731">
+        Title="{x:Static p:Resources.String649}" Height="455.224" Width="803.731">
     <Window.InputBindings>
         <KeyBinding Key="Enter" Command="{Binding SelectOk}"/>
         <KeyBinding Key="Escape" Command="{Binding Cancel}"/>
@@ -37,16 +38,16 @@
                             </Style>
                         </DataGrid.RowStyle>
                         <DataGrid.Columns>
-                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
-                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Emp Code" Binding="{Binding EMPLOYEE_CODE}"  />
-                            <DataGridTextColumn     Width="150" MaxWidth="155" Header="Emp Name" Binding="{Binding FIRST_NAME}"  />
-                            <DataGridTextColumn   Width="200" Header="Search Code"  Binding="{Binding SEARCH_CODE}"/>
-                            <DataGridTextColumn   Width="200" Header="Joining Date"  Binding="{Binding DATE_OF_JOIN}"/>
-                            <DataGridTextColumn   Width="200" Header="Department"  Binding="{Binding DEPARTMENT}"/>
-                            <DataGridTextColumn   Width="200" Header="Designation"  Binding="{Binding EMPLOYEE_DESIGNATION}"/>
-                            <DataGridTextColumn   Width="200" Header="Location Name"  Binding="{Binding BUSINESS_LOCATION}"/>
-                            <DataGridTextColumn   Width="200" Header="Can Have Appointment"  Binding="{Binding IS_APPROVE_ACCESS_VAI_SMS}"/>
-                            <DataGridTextColumn   Width="200" Header="Work Shift Name"  Binding="{Binding WORKING_SHIFT}"/>
+                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="{x:Static p:Resources.String331}" Binding="{Binding SLNO}"  />
+                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="{x:Static p:Resources.String332}" Binding="{Binding EMPLOYEE_CODE}"  />
+                            <DataGridTextColumn     Width="150" MaxWidth="155" Header="{x:Static p:Resources.String333}" Binding="{Binding FIRST_NAME}"  />
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String334}"  Binding="{Binding SEARCH_CODE}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String335}"  Binding="{Binding DATE_OF_JOIN}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String336}"  Binding="{Binding DEPARTMENT}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String337}"  Binding="{Binding EMPLOYEE_DESIGNATION}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String338}"  Binding="{Binding BUSINESS_LOCATION}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String339}"  Binding="{Binding IS_APPROVE_ACCESS_VAI_SMS}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String340}"  Binding="{Binding WORKING_SHIFT}"/>
 
                         </DataGrid.Columns>
                     </DataGrid>
@@ -72,14 +73,14 @@
                     <Button Command="{Binding ViewEmployee}"   Margin="0,13,324,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right" Height="37"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="357,20,0,0" TextWrapping="Wrap" Text="{Binding SEARCH_EMP}" VerticalAlignment="Top" Width="120"/>
-                    <Button Content="Search" HorizontalAlignment="Left" Margin="482,21,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="{x:Static p:Resources.label183}" HorizontalAlignment="Left" Margin="482,21,0,0" VerticalAlignment="Top" Width="75"/>
                 </Grid>
-                <Button Content="Ok" Command="{Binding SelectOk}" HorizontalAlignment="Left" Margin="499,363,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
-                <Button Content="Cancel" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="579,363,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
+                <Button Content="{x:Static p:Resources.label12}" Command="{Binding SelectOk}" HorizontalAlignment="Left" Margin="499,363,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
+                <Button Content="{x:Static p:Resources.label13}" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="579,363,0,0" VerticalAlignment="Top" Width="75" Height="45"/>
 
 
             </Grid>

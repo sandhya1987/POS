@@ -23,6 +23,7 @@ using System.IO;
 using System.Windows.Xps.Packaging;
 using System.Windows.Xps;
 using Apitron.PDF.Rasterizer;
+using System.Configuration;
 
 namespace InvoicePOS.Views.Main
 {
@@ -52,6 +53,16 @@ namespace InvoicePOS.Views.Main
         private FixedDocumentSequence _document;
         public Main()
         {
+            string language = ConfigurationManager.AppSettings["Language"];
+            if (language.ToUpper() == "ENGLISH")
+            {
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+            }
+            else if (language.ToUpper() == "GERMAN")
+            {
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("de-DE");
+            }
+
             InitializeComponent();
             ViewModel = new MainViewModel();
 
@@ -198,7 +209,7 @@ namespace InvoicePOS.Views.Main
                 case "en-US":
                     dict.Source = new Uri("..\\Resources\\EnglishDictionary.xaml", UriKind.Relative);
                     break;
-                case "de-AT":
+                case "de-DE":
                     dict.Source = new Uri("..\\Resources\\GermanDictionary.xaml", UriKind.Relative);
                     break;
                 default:

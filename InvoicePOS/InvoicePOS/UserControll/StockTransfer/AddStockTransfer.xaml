@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" WindowStartupLocation="CenterScreen"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" Height="618.657" Width="1138.06">
     <Window.InputBindings>
         <KeyBinding Key="Enter" Command="{Binding CreatVisible}"/>
@@ -22,48 +23,48 @@
         </Grid>-->
                 <!--stock left section start here-->
                 <Grid >
-                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left"  Margin="10,60,0,0" TextWrapping="Wrap" Text="Select business Location :" VerticalAlignment="Top" Style="{StaticResource labeltextstock}" />
+                    <TextBlock x:Name="textBlock" HorizontalAlignment="Left"  Margin="10,60,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label3}" VerticalAlignment="Top" Style="{StaticResource labeltextstock}" />
                     <TextBox x:Name="BUSINESS_LOCATION_ID" IsReadOnly="True" Text="{Binding BUSINESS_LOCATION}" HorizontalAlignment="Left"  Margin="200.15,58.28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource labeltextstockTextbox}"/>
-                    <Button x:Name="button" Content="..." Command="{Binding Path=BusinessLocationClick}" HorizontalAlignment="Left" Height="22" Margin="419.43,58.28,0,0" VerticalAlignment="Top" Width="45"/>
-                    <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left"  Margin="10,91.008,0,0" TextWrapping="Wrap" Text="Stock Transfer Number :" VerticalAlignment="Top" Style="{StaticResource ResourceKey=labeltextstock}" />
+                    <Button x:Name="button" Content="{x:Static p:Resources.label160}" Command="{Binding Path=BusinessLocationClick}" HorizontalAlignment="Left" Height="22" Margin="419.43,58.28,0,0" VerticalAlignment="Top" Width="45"/>
+                    <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left"  Margin="10,91.008,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1266}" VerticalAlignment="Top" Style="{StaticResource ResourceKey=labeltextstock}" />
                     <TextBlock x:Name="STOCK_TRANSFER_NUMBER" Text="{Binding STOCK_TRANSFER_NUMBER}" HorizontalAlignment="Left" Height="21" Margin="200,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264">
 
                     </TextBlock>
 
-                    <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="10,114.289,0,0" TextWrapping="Wrap" Text="BarCode :" VerticalAlignment="Top" Style="{StaticResource ResourceKey=labeltextstock}" />
+                    <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="10,114.289,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String120}" VerticalAlignment="Top" Style="{StaticResource ResourceKey=labeltextstock}" />
                     <TextBox x:Name="BARCODE" IsEnabled="False" Text="{Binding SelectedStockTransfer.BARCODE,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"     Margin="200.15,112.575,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource labeltextstockTextbox}">
                         <TextBox.InputBindings>
                             <KeyBinding Key="Tab" Command="{Binding TabChangeCode}" />
                             <KeyBinding Key="Enter" Command="{Binding TabChangeCode}" />
                         </TextBox.InputBindings>
                     </TextBox>
-                    <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left"  Margin="10,143.373,0,0" TextWrapping="Wrap" Text="Item Name :" VerticalAlignment="Top" Style="{StaticResource ResourceKey=labeltextstock}" />
+                    <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left"  Margin="10,143.373,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String119}" VerticalAlignment="Top" Style="{StaticResource ResourceKey=labeltextstock}" />
                     <TextBox x:Name="ITEM_NAME" IsReadOnly="True"  Text="{Binding ITEM_NAME}" HorizontalAlignment="Left"  Margin="200.15,141.66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource labeltextstockTextbox}" TextChanged="ITEM_NAME_TextChanged"/>
-                    <Button x:Name="button_Copy1" Content="..." Command="{Binding Path=ItemListClick}" HorizontalAlignment="Left" Height="22" Margin="419.43,141.66,0,0" VerticalAlignment="Top" Width="45"/>
-                    <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left"  Margin="10,170.515,0,0" TextWrapping="Wrap" Text="Search Code :" VerticalAlignment="Top" Style="{StaticResource ResourceKey=labeltextstock}" />
+                    <Button x:Name="button_Copy1" Content="{x:Static p:Resources.label160}" Command="{Binding Path=ItemListClick}" HorizontalAlignment="Left" Height="22" Margin="419.43,141.66,0,0" VerticalAlignment="Top" Width="45"/>
+                    <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left"  Margin="10,170.515,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label129}" VerticalAlignment="Top" Style="{StaticResource ResourceKey=labeltextstock}" />
                     <TextBox x:Name="SEARCH_CODE" IsReadOnly="True" Text="{Binding SEARCH_CODE}" HorizontalAlignment="Left"  Margin="200.15,168.81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource labeltextstockTextbox}" TextChanged="SEARCH_CODE_TextChanged"/>
-                    <Button x:Name="button_Copy2" Content="..." HorizontalAlignment="Left" Command="{Binding ItemListSearchClick}" Height="22" Margin="419.43,168.81,0,0" VerticalAlignment="Top" Width="45"/>
-                    <CheckBox x:Name="checkBox" Content="Keep Focus on Last Added Item" HorizontalAlignment="Left" Height="15" Margin="158.31,202.09,0,0" VerticalAlignment="Top" Width="200"/>
-                    <CheckBox x:Name="checkBox_Copy" Content="Show Images" Height="15" Margin="378.46,202.09,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"/>
+                    <Button x:Name="button_Copy2" Content="{x:Static p:Resources.label160}" HorizontalAlignment="Left" Command="{Binding ItemListSearchClick}" Height="22" Margin="419.43,168.81,0,0" VerticalAlignment="Top" Width="45"/>
+                    <CheckBox x:Name="checkBox" Content="{x:Static p:Resources.String963}" HorizontalAlignment="Left" Height="15" Margin="158.31,202.09,0,0" VerticalAlignment="Top" Width="200"/>
+                    <CheckBox x:Name="checkBox_Copy" Content="{x:Static p:Resources.String964}" Height="15" Margin="378.46,202.09,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="85"/>
 
                 </Grid>
                 <!--stock left section end here-->
                 <Grid >
-                    <TextBlock x:Name="textBlock9" HorizontalAlignment="Right"  Margin="0,10,433,0" TextWrapping="Wrap" Text="Date :" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" />
-                    <CheckBox x:Name="checkBoxm" IsChecked="{Binding SelectedStockTransfer.IS_NEGATIVE_STOCK_MESSAGE,UpdateSourceTrigger=PropertyChanged}" Content="Do Not Show Negative Stock Warning Message" HorizontalAlignment="Right" Height="28" Margin="0,93,146,0" VerticalAlignment="Top" Width="275"/>
-                    <TextBlock x:Name="textBlock9_Copy" HorizontalAlignment="Right"  Margin="0,32,433,0" TextWrapping="Wrap" Text="From Godown :" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" />
+                    <TextBlock x:Name="textBlock9" HorizontalAlignment="Right"  Margin="0,10,433,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String852}" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" />
+                    <CheckBox x:Name="checkBoxm" IsChecked="{Binding SelectedStockTransfer.IS_NEGATIVE_STOCK_MESSAGE,UpdateSourceTrigger=PropertyChanged}" Content="{x:Static p:Resources.String1232}" HorizontalAlignment="Right" Height="28" Margin="0,93,146,0" VerticalAlignment="Top" Width="275"/>
+                    <TextBlock x:Name="textBlock9_Copy" HorizontalAlignment="Right"  Margin="0,32,433,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1233}" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" />
                     <TextBox x:Name="FROM_GODOWN_ID" IsReadOnly="True" Text="{Binding SelectedStockTransfer.FROM_GODOWN,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right"  Margin="0,32,211,0" TextWrapping="Wrap"  VerticalAlignment="Top" Style="{StaticResource labeltextstockTextbox}"/>
-                    <Button x:Name="buttonr" Content="..." Command="{Binding Path=GodownClick}" HorizontalAlignment="Right" Height="24" Margin="0,32,163,0" VerticalAlignment="Top" Width="40"/>
+                    <Button x:Name="buttonr" Content="{x:Static p:Resources.label160}" Command="{Binding Path=GodownClick}" HorizontalAlignment="Right" Height="24" Margin="0,32,163,0" VerticalAlignment="Top" Width="40"/>
                     <!--<Button x:Name="buttonadd" Content="Add All Items" HorizontalAlignment="Right" Height="26" Margin="0,95,10,0" VerticalAlignment="Top" Width="112"/>-->
-                    <TextBlock x:Name="textBlock9_Copy1" HorizontalAlignment="Right"  Margin="0,72,433,0" TextWrapping="Wrap" Text="To Godown :" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" />
+                    <TextBlock x:Name="textBlock9_Copy1" HorizontalAlignment="Right"  Margin="0,72,433,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1234}" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" />
                     <TextBox x:Name="TO_GODOWN_ID" IsReadOnly="True" Text="{Binding SelectedStockTransfer.TO_GODOWN,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right"  Margin="0,64,211,0" TextWrapping="Wrap"  VerticalAlignment="Top" Style="{StaticResource labeltextstockTextbox}"/>
-                    <Button x:Name="buttonr_Copy" Content="..." Command="{Binding Path=GodownToClick}" HorizontalAlignment="Right" Height="24" Margin="0,64,163,0" VerticalAlignment="Top" Width="40"/>
-                    <TextBlock x:Name="textBlock9_Copy2" HorizontalAlignment="Right"  Margin="0,126,433,0" TextWrapping="Wrap" Text="Received By :" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" />
+                    <Button x:Name="buttonr_Copy" Content="{x:Static p:Resources.label160}" Command="{Binding Path=GodownToClick}" HorizontalAlignment="Right" Height="24" Margin="0,64,163,0" VerticalAlignment="Top" Width="40"/>
+                    <TextBlock x:Name="textBlock9_Copy2" HorizontalAlignment="Right"  Margin="0,126,433,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1235}" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" />
                     <TextBox x:Name="RECEIVED_BY_ID" IsReadOnly="True" Text="{Binding SelectedStockTransfer.RECEIVED_BY,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right"  Margin="0,126,211,0" TextWrapping="Wrap"  VerticalAlignment="Top" Style="{StaticResource labeltextstockTextbox}"/>
-                    <Button x:Name="buttonr_Copy1" Content="..." Command="{Binding Path=SupplierListClick}" HorizontalAlignment="Right" Height="24" Margin="0,126,163,0" VerticalAlignment="Top" Width="40"/>
-                    <TextBlock x:Name="textBlock9_Copy3" HorizontalAlignment="Right"  Margin="0,163,433,0" TextWrapping="Wrap" Text="Email :" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" Height="14" Width="56" />
+                    <Button x:Name="buttonr_Copy1" Content="{x:Static p:Resources.label160}" Command="{Binding Path=SupplierListClick}" HorizontalAlignment="Right" Height="24" Margin="0,126,163,0" VerticalAlignment="Top" Width="40"/>
+                    <TextBlock x:Name="textBlock9_Copy3" HorizontalAlignment="Right"  Margin="0,163,433,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label66}" VerticalAlignment="Top" Style="{StaticResource labeltextstockright}" Height="14" Width="56" />
                     <TextBox x:Name="EMAIL" Text="{Binding SelectedStockTransfer.EMAIL,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right"  Margin="0,155,211,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource labeltextstockTextbox}"/>
-                    <CheckBox x:Name="checkBoxemail" IsChecked="{Binding IS_SEND,UpdateSourceTrigger=PropertyChanged}" Content="Send Email" HorizontalAlignment="Right" Height="22" Margin="0,155,82,0" VerticalAlignment="Top" Width="121"/>
+                    <CheckBox x:Name="checkBoxemail" IsChecked="{Binding IS_SEND,UpdateSourceTrigger=PropertyChanged}" Content="{x:Static p:Resources.String1236}" HorizontalAlignment="Right" Height="22" Margin="0,155,82,0" VerticalAlignment="Top" Width="121"/>
 
                 </Grid>
                 <Grid >
@@ -86,10 +87,10 @@
 
                         <DataGrid.Columns>
 
-                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="SL. No." Binding="{Binding SLNO}"  />
-                            <DataGridTextColumn   Width="200" IsReadOnly="True" Header="BarCode" Binding="{Binding BARCODE}"/>
-                            <DataGridTextColumn  Width="120" IsReadOnly="True" Header="Search Code" Binding="{Binding SEARCH_CODE}"/>
-                            <DataGridTextColumn  Width="160" IsReadOnly="True" Header="Item Name" Binding="{Binding ITEM_NAME}"/>
+                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="{x:Static p:Resources.label186}" Binding="{Binding SLNO}"  />
+                            <DataGridTextColumn   Width="200" IsReadOnly="True" Header="{x:Static p:Resources.String46}" Binding="{Binding BARCODE}"/>
+                            <DataGridTextColumn  Width="120" IsReadOnly="True" Header="{x:Static p:Resources.String334}" Binding="{Binding SEARCH_CODE}"/>
+                            <DataGridTextColumn  Width="160" IsReadOnly="True" Header="{x:Static p:Resources.String137}" Binding="{Binding ITEM_NAME}"/>
                             <!--<DataGridTemplateColumn Header="Transferring &#xa;Qty/Weight" >
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
@@ -98,12 +99,12 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>-->
 
-                            <DataGridTextColumn  Width="100" IsReadOnly="False"  Header="Transferring &#xa;Qty/Weight" Binding="{Binding FORMATTED_TRANS_QUANTITY}"/>
+                            <DataGridTextColumn  Width="100" IsReadOnly="False"  Header="{x:Static p:Resources.String1269}" Binding="{Binding FORMATTED_TRANS_QUANTITY}"/>
 
 
-                            <DataGridTextColumn  Width="130" IsReadOnly="True" Header="Sales &#xa;Measuring Unit" Binding="{Binding PURCHASE_UNIT}"/>
+                            <DataGridTextColumn  Width="130" IsReadOnly="True" Header="{x:Static p:Resources.String1237}" Binding="{Binding PURCHASE_UNIT}"/>
                             <!--<DataGridTextColumn Width="100" Header="TOTAL" Binding="{Binding total,StringFormat=\{0:c\}}"/>-->
-                            <DataGridTextColumn    Width="100" IsReadOnly="True" Header="Available &#xa;Quantity" Binding="{Binding FORMATTED_OPN_QNT}"/>
+                            <DataGridTextColumn    Width="100" IsReadOnly="True" Header="{x:Static p:Resources.String1238}" Binding="{Binding FORMATTED_OPN_QNT}"/>
 
                         </DataGrid.Columns>
                     </DataGrid>
@@ -119,7 +120,7 @@
 
                 </Grid>
                 <Grid >
-                    <TextBlock x:Name="textBlock2" Height="21" Margin="0,0,326,62" TextWrapping="Wrap" Text="Total Stock Quantity :" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="120"/>
+                    <TextBlock x:Name="textBlock2" Height="21" Margin="0,0,326,62" TextWrapping="Wrap" Text="{x:Static p:Resources.String1239}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="120"/>
                     <TextBox x:Name="textBox1" Text="{Binding SelectedStockTransfer.TOTAL_STOCK_QNT,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Right" Height="21" Margin="0,0,234,62" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="87"/>
                     <!--<TextBox x:Name="textBox2" HorizontalAlignment="Right" Height="27" Margin="0,0,234,88" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="175" ScrollViewer.HorizontalScrollBarVisibility="Auto"
          ScrollViewer.VerticalScrollBarVisibility="Auto"
@@ -128,12 +129,12 @@
             <Button x:Name="button3" Content="Hold &amp; Print" Height="29" Margin="0,0,438.34,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="98"/>
             <Button x:Name="button3_Copy" Content="Hold" HorizontalAlignment="Right" Height="29" Margin="0,0,331.695,10" VerticalAlignment="Bottom" Width="98"/>
             <Button x:Name="button3_Copy1" Content="Save &amp; Print" HorizontalAlignment="Right" Height="29" Margin="0,0,224.08,10" VerticalAlignment="Bottom" Width="98"/>-->
-                    <Button x:Name="SaveButton" Visibility="{Binding CreatVisible}" Command="{Binding Path=InsertStockTransfer,UpdateSourceTrigger=PropertyChanged }" Content="Save" HorizontalAlignment="Right" Height="45"  VerticalAlignment="Bottom" Width="98" Margin="0,0,257,12"/>
-                    <Button x:Name="Update" Visibility="{Binding UpdVisible}" Command="{Binding Path=UpdateStockTransfer,UpdateSourceTrigger=PropertyChanged }" Content="Update" HorizontalAlignment="Right" Height="45"  VerticalAlignment="Bottom" Width="98" Margin="0,0,154,12"/>
-                    <Button x:Name="CancelButton"  Command="{Binding Cancel}" Content="Cancel" HorizontalAlignment="Right" Height="45"  VerticalAlignment="Bottom" Width="98" Margin="0,0,51,12"/>
+                    <Button x:Name="SaveButton" Visibility="{Binding CreatVisible}" Command="{Binding Path=InsertStockTransfer,UpdateSourceTrigger=PropertyChanged }" Content="{x:Static p:Resources.label171}" HorizontalAlignment="Right" Height="45"  VerticalAlignment="Bottom" Width="98" Margin="0,0,257,12"/>
+                    <Button x:Name="Update" Visibility="{Binding UpdVisible}" Command="{Binding Path=UpdateStockTransfer,UpdateSourceTrigger=PropertyChanged }" Content="{x:Static p:Resources.label120}" HorizontalAlignment="Right" Height="45"  VerticalAlignment="Bottom" Width="98" Margin="0,0,154,12"/>
+                    <Button x:Name="CancelButton"  Command="{Binding Cancel}" Content="{x:Static p:Resources.label13}" HorizontalAlignment="Right" Height="45"  VerticalAlignment="Bottom" Width="98" Margin="0,0,51,12"/>
                     <!--<DatePicker HorizontalAlignment="Left" Margin="632,15,0,0" SelectedDate="{Binding DATE}" VerticalAlignment="Top"/>-->
                     <TextBlock HorizontalAlignment="Left"  Height="23" Margin="719,4,0,0" TextWrapping="Wrap" Text="{Binding DATE}" VerticalAlignment="Top" Width="192"/>
-                    <Button x:Name="getall" Command="{Binding getall, UpdateSourceTrigger=PropertyChanged}" Content="get all" HorizontalAlignment="Right" Height="23"  VerticalAlignment="Bottom" Width="98" Margin="0,0,51,536"/>
+                    <Button x:Name="getall" Command="{Binding getall, UpdateSourceTrigger=PropertyChanged}" Content="{x:Static p:Resources.String1242}" HorizontalAlignment="Right" Height="23"  VerticalAlignment="Bottom" Width="98" Margin="0,0,51,536"/>
 
                 </Grid>
             </Grid>

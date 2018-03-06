@@ -1,7 +1,8 @@
 ﻿<Window x:Class="InvoicePOS.UserControll.GoDown.Window_GodownList"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
-        Title="Window_GodownList" Height="398.508" Width="1067.91">
+        Title="{x:Static p:Resources.String707}" Height="398.508" Width="1067.91">
     <Window.InputBindings>
         <KeyBinding Key="Enter" Command="{Binding SelectOk}"/>
         <KeyBinding Key="Escape" Command="{Binding Cancel}"/>
@@ -12,29 +13,29 @@
                 <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="1020">
                     <Button Command="{Binding DeleteGodown}"   Margin="0,5,596,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="93" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
-                            <Label Content="Delete" DockPanel.Dock="Right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="Right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding AddGOdownClick}"   Margin="0,5,915,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="95" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding EditGodown}"   Margin="0,5,815,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="95" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ViewGod}"   Margin="0,5,715,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="95" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <TextBox HorizontalAlignment="Left" Height="35" Margin="575,5,0,0" Text="{Binding SEARCH_GODOWN}" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
-                    <Button Content="Search" Command="{Binding SearchGodown}" HorizontalAlignment="Left" Margin="759,5,0,0" VerticalAlignment="Top" Width="75" Height="35"/>
+                    <Button Content="{x:Static p:Resources.label183}" Command="{Binding SearchGodown}" HorizontalAlignment="Left" Margin="759,5,0,0" VerticalAlignment="Top" Width="75" Height="35"/>
 
                 </Grid>
                 <Grid HorizontalAlignment="Left" Height="272" Margin="10,37,0,0" VerticalAlignment="Top" Width="1044">
@@ -65,20 +66,20 @@
                         </DataGrid.RowStyle>
 
                         <DataGrid.Columns>
-                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
-                            <DataGridTextColumn    Header="Bussiness Location" Binding="{Binding BUSSINESS_LOCATION}" Width="200"/>
-                            <DataGridTextColumn    Header="GoDown Name" Binding="{Binding GODOWN_NAME}" Width="200"/>
-                            <DataGridTextColumn    Header="Is Active" Binding="{Binding IS_ACTIVE}" Width="100"/>
-                            <DataGridTextColumn    Header="Is Default GoDown" Binding="{Binding IsDefaultGoDown}" Width="200"/>
-                            <DataGridTextColumn    Header="Stock Correction" Binding="{Binding StockCorrection}" Width="200"/>
-                            <DataGridTextColumn    Header="Description" Binding="{Binding GOSOWN_DESCRIPTION}" Width="100"/>
+                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="{x:Static p:Resources.String331}" Binding="{Binding SLNO}"  />
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String819}" Binding="{Binding BUSSINESS_LOCATION}" Width="200"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String820}" Binding="{Binding GODOWN_NAME}" Width="200"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.label133}" Binding="{Binding IS_ACTIVE}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String708}" Binding="{Binding IsDefaultGoDown}" Width="200"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String709}" Binding="{Binding StockCorrection}" Width="200"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String188}" Binding="{Binding GOSOWN_DESCRIPTION}" Width="100"/>
 
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
                 <Grid Margin="0,314,0,0">
-                    <Button Content="Ok" Command="{Binding SelectOk}" HorizontalAlignment="Left" Margin="723,10,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
-                    <Button Content="Cancel" Command="{Binding CancelGodown}" HorizontalAlignment="Left" Margin="803,10,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
+                    <Button Content="{x:Static p:Resources.label12}" Command="{Binding SelectOk}" HorizontalAlignment="Left" Margin="723,10,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
+                    <Button Content="{x:Static p:Resources.label13}" Command="{Binding CancelGodown}" HorizontalAlignment="Left" Margin="803,10,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
 
                 </Grid>
             </Grid>

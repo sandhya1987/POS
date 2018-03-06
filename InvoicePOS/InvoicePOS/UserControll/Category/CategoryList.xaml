@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="900" d:DesignWidth="1050">
     <Grid Margin="0,0,0,45" >
@@ -13,31 +14,31 @@
                     <Button Command="{Binding SearchCategoryClick}"    Margin="225,7,0,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="89" HorizontalAlignment="Left"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding AddCategoryClick}"    Margin="0,10,182,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding EditCatagory}"  Margin="0,10,107,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ViewCategoryClick}"    Margin="0,11,30,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
-                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding DeleteCatagory}"  Margin="0,10,-50,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
 
@@ -85,12 +86,12 @@
                         </DataGrid.RowStyle>
 
                         <DataGrid.Columns>
-                            <DataGridTextColumn  TextBlock.Foreground="Red"   Header="Sl No" Binding="{Binding SLNO}" Width="200"/>
-                            <DataGridTextColumn    Header="Name" Binding="{Binding CATAGORY_NAME}" Width="200"/>
-                            <DataGridTextColumn    Header="Description" Binding="{Binding CATAGORY_DEC}" Width="200"/>
-                            <DataGridTextColumn    Header="Barcode Prefix" IsReadOnly="{Binding BAR_CODE_PREFIX}" Width="100"/>
-                            <DataGridTextColumn    Header="Not for Portal" Binding="{Binding IS_NOT_PROTAL}" Width="200"/>
-                            <DataGridTextColumn    Header="Display Index" Binding="{Binding DISPLAY_INDEX}" Width="200"/>
+                            <DataGridTextColumn  TextBlock.Foreground="Red"   Header="{x:Static p:Resources.label186}" Binding="{Binding SLNO}" Width="200"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.label187}" Binding="{Binding CATAGORY_NAME}" Width="200"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String188}" Binding="{Binding CATAGORY_DEC}" Width="200"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String1404}" IsReadOnly="{Binding BAR_CODE_PREFIX}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String407}" Binding="{Binding IS_NOT_PROTAL}" Width="200"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String408}" Binding="{Binding DISPLAY_INDEX}" Width="200"/>
 
                         </DataGrid.Columns>
                     </DataGrid>

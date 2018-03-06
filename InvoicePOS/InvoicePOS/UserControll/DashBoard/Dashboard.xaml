@@ -1,10 +1,11 @@
 ﻿<UserControl x:Class="InvoicePOS.UserControll.DashBoard.Dashboard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
         xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
         Width="1050" Height="600">
     <TabControl SelectionChanged="TabControl_SelectionChanged">
-        <TabItem Header="Pending Invoices">
+        <TabItem Header="{x:Static p:Resources.String554}">
 
             <DataGrid 
                 ItemsSource="{Binding Path=ListPendingInvoice}"
@@ -52,16 +53,16 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn   Width="120" Header="Date"  Binding="{Binding INVOICE_DATE}"/>
-                    <DataGridTextColumn   Width="120" Header="Invoice No."  Binding="{Binding INVOICE_NO}"/>
-                    <DataGridTextColumn   Width="200" Header="Customer Code" Binding="{Binding CUSTOMER_NUMBER}"  />
-                    <DataGridTextColumn   Width="200" Header="Customer Name" Binding="{Binding CUSTOMER_NAME}"  />
-                    <DataGridTextColumn   Width="200" Header="Total Amount" Binding="{Binding TOTAL_AMOUNT}"  />
-                    <DataGridTextColumn   Width="200" Header="Pending Amount" Binding="{Binding PENDING_AMOUNT}"  />
+                    <DataGridTextColumn   Width="120" Header="{x:Static p:Resources.String555}"  Binding="{Binding INVOICE_DATE}"/>
+                    <DataGridTextColumn   Width="120" Header="{x:Static p:Resources.String556}"  Binding="{Binding INVOICE_NO}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String557}" Binding="{Binding CUSTOMER_NUMBER}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String558}" Binding="{Binding CUSTOMER_NAME}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String559}" Binding="{Binding TOTAL_AMOUNT}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String560}" Binding="{Binding PENDING_AMOUNT}"  />
                 </DataGrid.Columns>
             </DataGrid>
         </TabItem>
-        <TabItem Header="Pending Payment">
+        <TabItem Header="{x:Static p:Resources.String561}">
             <DataGrid 
                 ItemsSource="{Binding Path=ListPendingPayments}"
                 RowHeight="28"  
@@ -107,17 +108,17 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn   Width="120" Header="Date"  Binding="{Binding INVOICE_DATE}"/>
-                    <DataGridTextColumn   Width="120" Header="Invoice No."  Binding="{Binding INVOICE_NO}"/>
-                    <DataGridTextColumn   Width="200" Header="Pending Amount" Binding="{Binding PENDING_AMOUNT}"  />
-                    <DataGridTextColumn   Width="200" Header="Customer Code" Binding="{Binding CUSTOMER_NUMBER}"  />
-                    <DataGridTextColumn   Width="200" Header="Customer Name" Binding="{Binding CUSTOMER_NAME}"  />
-                    <DataGridTextColumn   Width="200" Header="Total Amount" Binding="{Binding TOTAL_AMOUNT}"  />
+                    <DataGridTextColumn   Width="120" Header="{x:Static p:Resources.String555}"  Binding="{Binding INVOICE_DATE}"/>
+                    <DataGridTextColumn   Width="120" Header="{x:Static p:Resources.String556}"  Binding="{Binding INVOICE_NO}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String560}" Binding="{Binding PENDING_AMOUNT}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String490}" Binding="{Binding CUSTOMER_NUMBER}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String558}" Binding="{Binding CUSTOMER_NAME}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String559}" Binding="{Binding TOTAL_AMOUNT}"  />
                 </DataGrid.Columns>
             </DataGrid>
 
         </TabItem>
-        <TabItem Header="Top Product">
+        <TabItem Header="{x:Static p:Resources.String562}">
             <DataGrid 
                 ItemsSource="{Binding Path=ListTOPProductModel}"
                 RowHeight="28"  
@@ -163,15 +164,15 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn   Width="200" Header="Item Code"  Binding="{Binding ITEM_CODE}"/>
-                    <DataGridTextColumn   Width="200" Header="Item Name"  Binding="{Binding ITEM_NAME}"/>
-                    <DataGridTextColumn   Width="200" Header="Quantity Sold" Binding="{Binding QUANTITY_SOLD}"  />
-                    <DataGridTextColumn   Width="200" Header="Available Quantity" Binding="{Binding AVAILABLE_QUANTITY}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String563}"  Binding="{Binding ITEM_CODE}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String564}"  Binding="{Binding ITEM_NAME}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String565}" Binding="{Binding QUANTITY_SOLD}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String566}" Binding="{Binding AVAILABLE_QUANTITY}"  />
                 </DataGrid.Columns>
             </DataGrid>
 
         </TabItem>
-        <TabItem Header="Top Customer">
+        <TabItem Header="{x:Static p:Resources.String567}">
             <DataGrid 
                 ItemsSource="{Binding Path=ListTopCustomerModel}"
                 RowHeight="28"  
@@ -217,15 +218,15 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn   Width="200" Header="Customer Code"  Binding="{Binding CUSTOMER_CODE}"/>
-                    <DataGridTextColumn   Width="200" Header="Customer Name"  Binding="{Binding CUSTOMER_NAME}"/>
-                    <DataGridTextColumn   Width="200" Header="Total No. of Invoices" Binding="{Binding TOTAL_NO_OF_INVOICE}"  />
-                    <DataGridTextColumn   Width="200" Header="Total Purchase" Binding="{Binding TOTAL_PURCHASE}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String490}"  Binding="{Binding CUSTOMER_CODE}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String558}"  Binding="{Binding CUSTOMER_NAME}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String568}" Binding="{Binding TOTAL_NO_OF_INVOICE}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String569}" Binding="{Binding TOTAL_PURCHASE}"  />
                 </DataGrid.Columns>
             </DataGrid>
 
         </TabItem>
-        <TabItem Header="Recent Invoices">
+        <TabItem Header="{x:Static p:Resources.String570}">
             <DataGrid 
                 ItemsSource="{Binding Path=ListDashBoardPendingInvoiceModel}"
                 RowHeight="28"  
@@ -271,17 +272,17 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn   Width="100" Header="Invoice No."  Binding="{Binding INVOICE_NO}"/>
-                    <DataGridTextColumn   Width="200" Header="Invoice Date"  Binding="{Binding INVOICE_DATE}"/>
-                    <DataGridTextColumn   Width="120" Header="Customer Code" Binding="{Binding CUSTOMER_NUMBER}"  />
-                    <DataGridTextColumn   Width="200" Header="Customer Name" Binding="{Binding CUSTOMER_NAME}"  />
-                    <DataGridTextColumn   Width="200" Header="Total Amount" Binding="{Binding TOTAL_AMOUNT}"  />
-                    <DataGridTextColumn   Width="200" Header="Pending Amount" Binding="{Binding PENDING_AMOUNT}"  />
+                    <DataGridTextColumn   Width="100" Header="{x:Static p:Resources.String571}"  Binding="{Binding INVOICE_NO}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String572}"  Binding="{Binding INVOICE_DATE}"/>
+                    <DataGridTextColumn   Width="120" Header="{x:Static p:Resources.String490}" Binding="{Binding CUSTOMER_NUMBER}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String558}" Binding="{Binding CUSTOMER_NAME}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String559}" Binding="{Binding TOTAL_AMOUNT}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String560}" Binding="{Binding PENDING_AMOUNT}"  />
                 </DataGrid.Columns>
             </DataGrid>
 
         </TabItem>
-        <TabItem Header="Top Vendor">
+        <TabItem Header="{x:Static p:Resources.String573}">
             <DataGrid 
                 ItemsSource="{Binding Path=ListTopVendorModel}"
                 RowHeight="28"  
@@ -327,15 +328,15 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn   Width="200" Header="Supplier Code"  Binding="{Binding SUPPLIER_CODE}"/>
-                    <DataGridTextColumn   Width="200" Header="Supplier Name"  Binding="{Binding SUPPLIER_NAME}"/>
-                    <DataGridTextColumn   Width="200" Header="Total No. of Purchase Orders" Binding="{Binding TOTAL_NO_OF_PURCHASEORDER}"  />
-                    <DataGridTextColumn   Width="200" Header="Total Amount" Binding="{Binding TOTAL_PURCHASE}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String574}"  Binding="{Binding SUPPLIER_CODE}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String575}"  Binding="{Binding SUPPLIER_NAME}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String576}" Binding="{Binding TOTAL_NO_OF_PURCHASEORDER}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String577}" Binding="{Binding TOTAL_PURCHASE}"  />
                 </DataGrid.Columns>
             </DataGrid>
 
         </TabItem>
-        <TabItem Header="Pending Purchase Order">
+        <TabItem Header="{x:Static p:Resources.String578}">
             <DataGrid 
                 ItemsSource="{Binding Path=ListPendingPOModel}"
                 RowHeight="28"  
@@ -381,15 +382,15 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn   Width="200" Header="PO Number"  Binding="{Binding PO_NUMBER}"/>
-                    <DataGridTextColumn   Width="200" Header="Supplier Code"  Binding="{Binding SUPPLIER_CODE}"/>
-                    <DataGridTextColumn   Width="200" Header="Supplier Name" Binding="{Binding SUPPLIER_NAME}"  />
-                    <DataGridTextColumn   Width="200" Header="PO Amount" Binding="{Binding PO_AMOUNT}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String579}"  Binding="{Binding PO_NUMBER}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1290}"  Binding="{Binding SUPPLIER_CODE}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1291}" Binding="{Binding SUPPLIER_NAME}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String580}" Binding="{Binding PO_AMOUNT}"  />
                 </DataGrid.Columns>
             </DataGrid>
 
         </TabItem>
-        <TabItem Header="Stock List">
+        <TabItem Header="{x:Static p:Resources.String581}">
             <DataGrid 
                 ItemsSource="{Binding Path=ListAvailableStockModel}"
                 RowHeight="28"  
@@ -435,8 +436,8 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn   Width="220" Header="BAR Code"  Binding="{Binding BAR_CODE}"/>
-                    <DataGridTextColumn   Width="320" Header="Available Stock"  Binding="{Binding STOCK}"/>
+                    <DataGridTextColumn   Width="220" Header="{x:Static p:Resources.String582}"  Binding="{Binding BAR_CODE}"/>
+                    <DataGridTextColumn   Width="320" Header="{x:Static p:Resources.String583}"  Binding="{Binding STOCK}"/>
                 </DataGrid.Columns>
             </DataGrid>
 

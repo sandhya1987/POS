@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" Height="744.03" Width="1118.658">
     <Grid Margin="0,0,0,45" >
         <Border Background="#90000000">
@@ -12,31 +13,31 @@
                     <Button Command="{Binding SearchItem}"    Margin="0,21,821,-11" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="75" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding AddNewSalesReturnClick}"    Margin="0,21,243,-11" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding EditSalesReturn}"  Margin="0,21,168,-11" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ViewSalesReturn}"    Margin="0,21,93,-11" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
-                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding DeleteSalesReturn}"  Margin="0,21,11,-11" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
 
@@ -68,13 +69,13 @@
                         </DataGrid.RowStyle>
 
                         <DataGrid.Columns>
-                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
-                            <DataGridTextColumn   Width="75" MaxWidth="300" Header="Business Location" Binding="{Binding BUSINESS_LOCATION}"  />
-                            <DataGridTextColumn   Width="150" MaxWidth="155" Header="Sale Return No" Binding="{Binding SALES_RETURN_NO}"  />
-                            <DataGridTextColumn   Width="200" Header="Date"  Binding="{Binding RETURN_DATE}"/>
-                            <DataGridTextColumn   Width="200" Header="Invoice No"  Binding="{Binding INVOICE_NO}"/>
-                            <DataGridTextColumn   Width="200" Header="Return Amount"  Binding="{Binding FORMATTED_GRAND_TOTAL}"/>
-                            <DataGridTextColumn   Width="200" Header="Customer Name"  Binding="{Binding CUSTOMER}"/>
+                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="{x:Static p:Resources.String331}" Binding="{Binding SLNO}"  />
+                            <DataGridTextColumn   Width="75" MaxWidth="300" Header="{x:Static p:Resources.String410}" Binding="{Binding BUSINESS_LOCATION}"  />
+                            <DataGridTextColumn   Width="150" MaxWidth="155" Header="{x:Static p:Resources.String1210}" Binding="{Binding SALES_RETURN_NO}"  />
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String555}"  Binding="{Binding RETURN_DATE}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String556}"  Binding="{Binding INVOICE_NO}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String550}"  Binding="{Binding FORMATTED_GRAND_TOTAL}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String722}"  Binding="{Binding CUSTOMER}"/>
                             <!--<DataGridTextColumn   Width="200" Header="Customer Code"  Binding="{Binding PURCHASE_UNIT}"/>
                     <DataGridTextColumn   Width="200" Header="Mobile No"  Binding="{Binding MODIFIED_BY}"/>-->
 

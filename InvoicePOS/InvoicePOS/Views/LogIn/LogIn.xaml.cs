@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Configuration;
 
 namespace InvoicePOS.Views.LogIn
 {
@@ -23,6 +24,15 @@ namespace InvoicePOS.Views.LogIn
         LogInViewModel _LogInViewModel;
         public LogIn()
         {
+            string language = ConfigurationManager.AppSettings["Language"];
+            if (language.ToUpper() == "ENGLISH")
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+            }
+            else if(language.ToUpper() == "GERMAN")
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("de-DE");
+            }
             InitializeComponent();
             _LogInViewModel = new LogInViewModel();
             this.DataContext = _LogInViewModel;

@@ -1,10 +1,11 @@
 ﻿<Window x:Class="InvoicePOS.UserControll.Item.ViewPurchaseHistory"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ViewPurchaseHistory" Height="611" Width="1119">
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
+        Title="{x:Static p:Resources.String1037}" Height="611" Width="1119">
     <Grid >
-        <TextBlock HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="Item Code :" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="Item Name :" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,9,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1038}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String119}" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="105,10,0,0" TextWrapping="Wrap" Text="{Binding ITEM_ID}" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="105,31,0,0" TextWrapping="Wrap" Text="{Binding ITEM_NAME}" VerticalAlignment="Top"/>
         <DataGrid  SelectionMode="Extended"   RowHeight="35" Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1" IsReadOnly="True"   AutoGenerateColumns="False" ItemsSource="{Binding Path=ListGridPurchase ,Mode=TwoWay, AsyncState=true,  NotifyOnTargetUpdated=True,NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"   Name="dataGrid1" Margin="5,57,26,115"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" ColumnWidth="*" EnableRowVirtualization="false" EnableColumnVirtualization="false" CanUserAddRows="False" CanUserReorderColumns="False">
@@ -31,17 +32,17 @@
             </DataGrid.RowStyle>
 
             <DataGrid.Columns>
-                <DataGridTextColumn    Header="Receive Item Date :" Binding="{Binding RECEIVEITEM_ON_DATE}" Width="200" />
-                <DataGridTextColumn    Header="Receive Item Entry Number :" Binding="{Binding RECEIVEITEMENTRYNO}" Width="250"/>
-                <DataGridTextColumn    Header="Unit Price :" Binding="{Binding FORMATTED_PURCHASE_UNIT_PRICE}" Width="250"/>
-                <DataGridTextColumn    Header="Effective Rate Per Unit :" Binding="{Binding EFFECTIVE_RATE_PER_UNIT}" Width="250"/>
-                <DataGridTextColumn    Header="Supplier Name :" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String1039}" Binding="{Binding RECEIVEITEM_ON_DATE}" Width="200" />
+                <DataGridTextColumn    Header="{x:Static p:Resources.String1040}" Binding="{Binding RECEIVEITEMENTRYNO}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String1041}" Binding="{Binding FORMATTED_PURCHASE_UNIT_PRICE}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String866}" Binding="{Binding EFFECTIVE_RATE_PER_UNIT}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String1043}" Binding="{Binding SUPPLIER_NAME}" Width="250"/>
             </DataGrid.Columns>
 
         </DataGrid>
 
 
-        <Button Content="Close" Command="{Binding CloseClick}" HorizontalAlignment="Left" Margin="665,475,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="{x:Static p:Resources.label23}" Command="{Binding CloseClick}" HorizontalAlignment="Left" Margin="665,475,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

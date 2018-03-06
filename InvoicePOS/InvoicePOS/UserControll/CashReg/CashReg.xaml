@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="820" d:DesignWidth="1050">
     <Grid >
@@ -13,38 +14,38 @@
                     <Button Command="{Binding SearchItem}"    Margin="223,21,0,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="75" HorizontalAlignment="Left"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding AddCashReg}"    Margin="0,21,396,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding  EditCashReg}"  Margin="0,21,321,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                        <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ViewCashReg}"    Margin="0,21,246,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
-                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding DeleteCashReg}"  Margin="0,21,164,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                        <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
 
                     <Button Command="{Binding TransferCashReg}"    Margin="0,21,10,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="149" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Transfer CashReg" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        <Label Content="{x:Static p:Resources.String392}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
 
@@ -74,17 +75,17 @@
 
                     <DataGrid.Columns>
 
-                        <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="Sl NO" Binding="{Binding SLNO}"  />
-                        <DataGridTextColumn   Width="75" MaxWidth="300" Header="Location Name" Binding="{Binding BUSINESS_LOCATION}"  />
-                        <DataGridTextColumn     Width="150" MaxWidth="155" Header="Register Number" Binding="{Binding CASH_REG_NO}"  />
-                        <DataGridTextColumn   Width="200" Header="Register Name"  Binding="{Binding CASH_REG_NAME}"/>
-                        <DataGridTextColumn   Width="200" Header="Is main Cash Register"  Binding="{Binding IS_MAIN_CASH}"/>
-                    <DataGridTextColumn   Width="200" Header="Cash Amount"  Binding="{Binding CASH_AMOUNT}"/>
-                    <DataGridTextColumn   Width="200" Header="Is In Use"  Binding="{Binding CUSTOMER_GROUP}"/>
-                        <DataGridTextColumn   Width="200" Header="Is Adjustment Cash Register"  Binding="{Binding ISADGUSTMENT}"/>
-                        <DataGridTextColumn   Width="200" Header="Perfix"  Binding="{Binding CASH_REG_PREFIX}"/>
-                        <DataGridTextColumn   Width="200" Header="Login"  Binding="{Binding LOGIN}"/>
-                        <DataGridTextColumn   Width="200" Header="Is limited Item"  Binding="{Binding SHIPPING_MOBILE_NO}"/>
+                    <DataGridTextColumn   TextBlock.Foreground="Red"  Width="75" MaxWidth="300" Header="{x:Static p:Resources.label186}" Binding="{Binding SLNO}"  />
+                    <DataGridTextColumn   Width="75" MaxWidth="300" Header="{x:Static p:Resources.String338}" Binding="{Binding BUSINESS_LOCATION}"  />
+                    <DataGridTextColumn     Width="150" MaxWidth="155" Header="{x:Static p:Resources.String394}" Binding="{Binding CASH_REG_NO}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String395}"  Binding="{Binding CASH_REG_NAME}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String396}"  Binding="{Binding IS_MAIN_CASH}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String397}"  Binding="{Binding CASH_AMOUNT}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String398}"  Binding="{Binding CUSTOMER_GROUP}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String399}"  Binding="{Binding ISADGUSTMENT}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String400}"  Binding="{Binding CASH_REG_PREFIX}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String401}"  Binding="{Binding LOGIN}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String402}"  Binding="{Binding SHIPPING_MOBILE_NO}"/>
 
                     </DataGrid.Columns>
                 </DataGrid>

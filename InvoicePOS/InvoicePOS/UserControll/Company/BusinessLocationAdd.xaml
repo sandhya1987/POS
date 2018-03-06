@@ -2,8 +2,9 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" WindowStartupLocation="CenterScreen"
-        xmlns:number="clr-namespace:InvoicePOS.Helpers"
+             xmlns:number="clr-namespace:InvoicePOS.Helpers"
              mc:Ignorable="d" d:DesignWidth="1050" Height="694.03">
     <Window.InputBindings>
         <KeyBinding Key="Enter" Command="{Binding CreateVisible}"/>
@@ -13,25 +14,25 @@
     <Grid Margin="0,0,2,2" >
         <Border Background="#90000000">
             <Grid Background="WhiteSmoke" Margin="0,10,0,0">
-                <GroupBox Header="Business Location" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="599" Width="474"/>
+                <GroupBox Header="{x:Static p:Resources.String410}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="599" Width="474"/>
                 <Grid Grid.RowSpan="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="369.733"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <TextBlock x:Name="textBlock"  Margin="10,33.4,0,0" TextWrapping="Wrap" Text="Company Name:" VerticalAlignment="Top" RenderTransformOrigin="-3.6,-3.25"  Style="{StaticResource labeltext}" />
-                    <TextBlock x:Name="textBlock1"   Margin="10,58.326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource labeltext}"><Run Text="Shop Name"/><LineBreak/><Run Text=" ( Business location) :"/></TextBlock>
-                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left"  Margin="10,98.439,0,0" TextWrapping="Wrap" Text="Prefix for Documents :" VerticalAlignment="Top" Style="{StaticResource labeltext}"/>
-                    <TextBlock x:Name="textBlock3" HorizontalAlignment="Left"  Margin="10,124.644,0,0" TextWrapping="Wrap" Text="Start Number for all documents :" VerticalAlignment="Top" Style="{StaticResource labeltext}"/>
-                    <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="10,163.402,0,0" TextWrapping="Wrap" Text="Tin Number :" VerticalAlignment="Top" Style="{StaticResource labeltext}" d:LayoutOverrides="VerticalAlignment"/>
-                    <TextBlock x:Name="textBlock5" HorizontalAlignment="Left"  Margin="10,0,0,159.514" TextWrapping="Wrap" Text="Address line 1 :" VerticalAlignment="Bottom" Style="{StaticResource labeltext}" d:LayoutOverrides="VerticalAlignment"/>
-                    <TextBlock x:Name="textBlock6" HorizontalAlignment="Left"  Margin="10,0,0,128.82" TextWrapping="Wrap" Text="Address line 2 :" Style="{StaticResource labeltext}" VerticalAlignment="Bottom"/>
-                    <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Style="{StaticResource labeltext}" Margin="10,0,0,97.51" TextWrapping="Wrap" Text="City :" VerticalAlignment="Bottom"/>
-                    <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Margin="10,0,0,35.132" TextWrapping="Wrap" Text="Country :" Style="{StaticResource labeltext}"  VerticalAlignment="Bottom" />
-                    <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Margin="10,0,0,1.529" TextWrapping="Wrap" Text="Pin :" Style="{StaticResource labeltext}" VerticalAlignment="Bottom" />
-                    <TextBlock x:Name="textBlock11" HorizontalAlignment="Left"  Margin="10,16.577,0,0" TextWrapping="Wrap" Text="Phone Number :" Style="{StaticResource labeltext}" VerticalAlignment="Top" Grid.Row="1" />
-                    <TextBlock x:Name="textBlock12" HorizontalAlignment="Left"  Margin="10,53.219,0,0" TextWrapping="Wrap" Text="Mobile Number :" Style="{StaticResource labeltext}" VerticalAlignment="Top" Grid.Row="1" />
-                    <TextBlock x:Name="textBlock13" HorizontalAlignment="Left"  Margin="10,84.227,0,0" TextWrapping="Wrap" Text="Email :" Style="{StaticResource labeltext}" Grid.Row="1" VerticalAlignment="Top" />
+                    <TextBlock x:Name="textBlock"  Margin="10,33.4,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String411}" VerticalAlignment="Top" RenderTransformOrigin="-3.6,-3.25"  Style="{StaticResource labeltext}" />
+                    <TextBlock x:Name="textBlock1"   Margin="10,58.326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource labeltext}"><Run Text="{x:Static p:Resources.String412}"/><LineBreak/><Run Text="{x:Static p:Resources.String413}"/></TextBlock>
+                    <TextBlock x:Name="textBlock2" HorizontalAlignment="Left"  Margin="10,98.439,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String414}" VerticalAlignment="Top" Style="{StaticResource labeltext}"/>
+                    <TextBlock x:Name="textBlock3" HorizontalAlignment="Left"  Margin="10,124.644,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String415}" VerticalAlignment="Top" Style="{StaticResource labeltext}"/>
+                    <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="10,163.402,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String416}" VerticalAlignment="Top" Style="{StaticResource labeltext}" d:LayoutOverrides="VerticalAlignment"/>
+                    <TextBlock x:Name="textBlock5" HorizontalAlignment="Left"  Margin="10,0,0,159.514" TextWrapping="Wrap" Text="{x:Static p:Resources.String467}" VerticalAlignment="Bottom" Style="{StaticResource labeltext}" d:LayoutOverrides="VerticalAlignment"/>
+                    <TextBlock x:Name="textBlock6" HorizontalAlignment="Left"  Margin="10,0,0,128.82" TextWrapping="Wrap" Text="{x:Static p:Resources.String468}" Style="{StaticResource labeltext}" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Style="{StaticResource labeltext}" Margin="10,0,0,97.51" TextWrapping="Wrap" Text="{x:Static p:Resources.label61}" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="textBlock9" HorizontalAlignment="Left" Margin="10,0,0,35.132" TextWrapping="Wrap" Text="{x:Static p:Resources.label62}" Style="{StaticResource labeltext}"  VerticalAlignment="Bottom" />
+                    <TextBlock x:Name="textBlock10" HorizontalAlignment="Left" Margin="10,0,0,1.529" TextWrapping="Wrap" Text="{x:Static p:Resources.label63}" Style="{StaticResource labeltext}" VerticalAlignment="Bottom" />
+                    <TextBlock x:Name="textBlock11" HorizontalAlignment="Left"  Margin="10,16.577,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label64}" Style="{StaticResource labeltext}" VerticalAlignment="Top" Grid.Row="1" />
+                    <TextBlock x:Name="textBlock12" HorizontalAlignment="Left"  Margin="10,53.219,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label65}" Style="{StaticResource labeltext}" VerticalAlignment="Top" Grid.Row="1" />
+                    <TextBlock x:Name="textBlock13" HorizontalAlignment="Left"  Margin="10,84.227,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label66}" Style="{StaticResource labeltext}" Grid.Row="1" VerticalAlignment="Top" />
                     <!--<TextBlock x:Name="textBlock14" HorizontalAlignment="Left"  Margin="10,160.9,0,169.3" TextWrapping="Wrap" Text="Website :" Style="{StaticResource labeltext}" Grid.Row="1" d:LayoutOverrides="Height" />-->
                     <TextBox x:Name="companyname" TabIndex="1" Text="{Binding SelectedBusinessLoca.COMPANY,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Margin="155,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource numberdisplayTextbox}">
                         <Validation.ErrorTemplate>
@@ -83,50 +84,50 @@
                     </TextBox>
 
                     <TextBox x:Name="mobilenumber" number:TextBoxInteger.IsNumeric="True" TabIndex="13" Text="{Binding SelectedBusinessLoca.MOBILE_NO}" HorizontalAlignment="Left"  Margin="155,47.805,0,0" TextWrapping="Wrap" Style="{StaticResource numberdisplayTextbox}"  VerticalAlignment="Top" Grid.Row="1" />
-                    <TextBlock x:Name="textBlock15" HorizontalAlignment="Left"  Margin="10,0,0,65.566" TextWrapping="Wrap" Text="State :" Style="{StaticResource labeltext}" VerticalAlignment="Bottom"/>
+                    <TextBlock x:Name="textBlock15" HorizontalAlignment="Left"  Margin="10,0,0,65.566" TextWrapping="Wrap" Text="{x:Static p:Resources.label67}" Style="{StaticResource labeltext}" VerticalAlignment="Bottom"/>
                     <TextBox x:Name="Email" TabIndex="14" Text="{Binding SelectedBusinessLoca.EMAIL,ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  Margin="155,80.937,0,0" TextWrapping="Wrap" Style="{StaticResource numberdisplayTextbox}" Grid.Row="1" Height="22" VerticalAlignment="Top" />
-                    <TextBlock x:Name="textBlock13_Copy" HorizontalAlignment="Left"  Margin="10,119.134,0,0" TextWrapping="Wrap" Style="{StaticResource labeltext}" Grid.Row="1" VerticalAlignment="Top" ><Run Text="Website"/><Run Text=" :"/></TextBlock>
+                    <TextBlock x:Name="textBlock13_Copy" HorizontalAlignment="Left"  Margin="10,119.134,0,0" TextWrapping="Wrap" Style="{StaticResource labeltext}" Grid.Row="1" VerticalAlignment="Top" ><Run Text="{x:Static p:Resources.label68}"/><Run Text="{x:Static p:Resources.label69}"/></TextBlock>
 
                 </Grid>
                 <Grid>
-                    <Button Content="Add Image" Command="{Binding ImgLoad}" HorizontalAlignment="Left" Margin="489,155,0,0" VerticalAlignment="Top" Width="119"/>
+                    <Button Content="{x:Static p:Resources.String419}" Command="{Binding ImgLoad}" HorizontalAlignment="Left" Margin="489,155,0,0" VerticalAlignment="Top" Width="119"/>
                     
                         <Image Source="{Binding IMAGE_PATH1,Mode=TwoWay}" Stretch="Fill" Margin="509,-6,0,502" ></Image>
-                    <Button Content="Remove Image" Command="{Binding RemovedImg}" Margin="0,155,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="119"/>
+                    <Button Content="{x:Static p:Resources.String420}" Command="{Binding RemovedImg}" Margin="0,155,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="119"/>
 
 
 
                 </Grid>
-                <GroupBox Header="Document Setting" HorizontalAlignment="Left" Margin="489,184,0,0" VerticalAlignment="Top" Height="146" Width="551">
+                <GroupBox Header="{x:Static p:Resources.String421}" HorizontalAlignment="Left" Margin="489,184,0,0" VerticalAlignment="Top" Height="146" Width="551">
                     <Grid>
-                        <Label Content="Printer Setting:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95" Margin="122,0,0,0"/>
-                        <Label Content="SMS Setting:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95" Margin="134,31,0,0"/>
-                        <Label Content="Email Setting:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95" Margin="129,58,0,0"/>
-                        <Label Content="Email Template Setting:" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="135" Margin="82,87,0,0"/>
+                        <Label Content="{x:Static p:Resources.String422}" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95" Margin="122,0,0,0"/>
+                        <Label Content="{x:Static p:Resources.String423}" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95" Margin="134,31,0,0"/>
+                        <Label Content="{x:Static p:Resources.String424}" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="95" Margin="129,58,0,0"/>
+                        <Label Content="{x:Static p:Resources.String425}" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="135" Margin="82,87,0,0"/>
                         <TextBox HorizontalAlignment="Left" Height="23" Margin="244,2,0,0" TextWrapping="Wrap" Text="{Binding SelectedBusinessLoca.PRINTER_SETTING,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
                         <TextBox HorizontalAlignment="Left" Height="23" Margin="245,35,0,0" TextWrapping="Wrap" Text="{Binding SelectedBusinessLoca.SMS_SETTING,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
                         <TextBox HorizontalAlignment="Left" Height="23" Margin="244,62,0,0" TextWrapping="Wrap" Text="{Binding SelectedBusinessLoca.EMAIL_SETTING,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
                         <TextBox HorizontalAlignment="Left" Height="23" Margin="244,90,0,0" TextWrapping="Wrap" Text="{Binding SelectedBusinessLoca.EMAIL_TEMPLATE_SETTING,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                        <CheckBox Content="Enable Email" IsChecked="{Binding IS_ENABLE_EMAIL,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="14,46,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="{x:Static p:Resources.String426}" IsChecked="{Binding IS_ENABLE_EMAIL,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="14,46,0,0" VerticalAlignment="Top"/>
 
                     </Grid>
                 </GroupBox>
-                <GroupBox Header="Additional Receipt Setting" HorizontalAlignment="Left" Margin="489,341,0,0" VerticalAlignment="Top" Height="148" Width="542"/>
+                <GroupBox Header="{x:Static p:Resources.String427}" HorizontalAlignment="Left" Margin="489,341,0,0" VerticalAlignment="Top" Height="148" Width="542"/>
                 <Grid>
-                    <Label Content="Second Receipt Printer:" HorizontalAlignment="Left" Margin="621,389,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Second Receipt Print Formate:" HorizontalAlignment="Left" Margin="585,420,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Number of Second Receipt Print:" HorizontalAlignment="Left" Margin="575,450,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static p:Resources.String428}" HorizontalAlignment="Left" Margin="621,389,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static p:Resources.String429}" HorizontalAlignment="Left" Margin="585,420,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static p:Resources.String430}" HorizontalAlignment="Left" Margin="575,450,0,0" VerticalAlignment="Top"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="763,390,0,0" TextWrapping="Wrap" Text="{Binding SelectedBusinessLoca.SCEOND_RECEIPT_PRINTER,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="764,421,0,0" TextWrapping="Wrap" Text="{Binding SelectedBusinessLoca.SCEOND_RECEIPT_PRINT_FORMATE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="765,450,0,0" TextWrapping="Wrap" Text="{Binding SelectedBusinessLoca.NUMBER_OF_SECOND_RECEIPT_PRINT,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                    <CheckBox Content="Print Seconr Recept on different Printer" IsChecked="{Binding SelectedBusinessLoca.PRINT_SECONR_DIFF_PRINTER,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="516,358,0,0" VerticalAlignment="Top"/>
-                    <CheckBox Content="Ask to prient everytime" IsChecked="{Binding SelectedBusinessLoca.ASK_PRINT_EVERYTIME,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="801,358,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="{x:Static p:Resources.String431}" IsChecked="{Binding SelectedBusinessLoca.PRINT_SECONR_DIFF_PRINTER,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="516,358,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="{x:Static p:Resources.String432}" IsChecked="{Binding SelectedBusinessLoca.ASK_PRINT_EVERYTIME,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="801,358,0,0" VerticalAlignment="Top"/>
 
                 </Grid>
-                <GroupBox Header="Move Stock Setting" HorizontalAlignment="Left" Margin="489,501,0,0" VerticalAlignment="Top" Height="95" Width="542"/>
+                <GroupBox Header="{x:Static p:Resources.String433}" HorizontalAlignment="Left" Margin="489,501,0,0" VerticalAlignment="Top" Height="95" Width="542"/>
                 <Grid>
-                    <CheckBox Content="Move stock of delete invoice to a specified godown" IsChecked="{Binding SelectedBusinessLoca.IS_DELETE_INVOICE_SPECIFIED_GODOWN,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="563,521,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Godown to keep stock of deleted Invoices" HorizontalAlignment="Left" Margin="523,544,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="{x:Static p:Resources.String434}" IsChecked="{Binding SelectedBusinessLoca.IS_DELETE_INVOICE_SPECIFIED_GODOWN,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="563,521,0,0" VerticalAlignment="Top"/>
+                    <Label Content="{x:Static p:Resources.String435}" HorizontalAlignment="Left" Margin="523,544,0,0" VerticalAlignment="Top"/>
                     <TextBox HorizontalAlignment="Left" Height="23" Margin="777,548,0,0" TextWrapping="Wrap" Text="{Binding SelectedBusinessLoca.GODOWN_TO_KEEP,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="211"/>
                 </Grid>
                 <Grid Margin="0,653,0,155">
@@ -136,9 +137,9 @@
                         <ColumnDefinition Width="43*"/>
                         <ColumnDefinition Width="232*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Update" Visibility="{Binding UpdateVisible}" Command="{Binding Path=UpdateBusinessLoca,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="42,-32,0,0"  Grid.ColumnSpan="3" Grid.Column="1"/>
-                    <Button Content="Cancel" Command="{Binding Path=CancelBusinessLoca,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="47,-32,0,0" Grid.Column="3"/>
-                    <Button Content="Create" Visibility="{Binding CreateVisible}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="666,-32,0,0" Command="{Binding InsertBusinessLoca, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2" RenderTransformOrigin="-0.655,0.896"/>
+                    <Button Content="{x:Static p:Resources.label120}" Visibility="{Binding UpdateVisible}" Command="{Binding Path=UpdateBusinessLoca,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="42,-32,0,0"  Grid.ColumnSpan="3" Grid.Column="1"/>
+                    <Button Content="{x:Static p:Resources.label13}" Command="{Binding Path=CancelBusinessLoca,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="47,-32,0,0" Grid.Column="3"/>
+                    <Button Content="{x:Static p:Resources.label119}" Visibility="{Binding CreateVisible}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="666,-32,0,0" Command="{Binding InsertBusinessLoca, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2" RenderTransformOrigin="-0.655,0.896"/>
 
                 </Grid>
             </Grid>

@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" WindowStartupLocation="CenterScreen"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
         xmlns:local="clr-namespace:InvoicePOS.UserControll.Report"
         mc:Ignorable="d"
-        Title="Add Report Group" Height="400" Width="600">
+        Title="{x:Static p:Resources.String1168}" Height="400" Width="600">
     <Grid>
         <Grid HorizontalAlignment="Left" Height="349" Margin="10,10,0,0" VerticalAlignment="Top" Width="260">
             <!--<DataGrid  SelectionMode="Single" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectReportGroup}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" VerticalAlignment="Stretch"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" TextBlock.TextAlignment="Center" Margin="0,0,10,0">
@@ -65,12 +66,12 @@
             </TreeView>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="275" Margin="270,10,0,0" VerticalAlignment="Top" Width="312">
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="2,10,0,0" TextWrapping="Wrap" Text="Report Group Name" VerticalAlignment="Top" Width="110" Height="33"/>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="2,10,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1169}" VerticalAlignment="Top" Width="110" Height="33"/>
             <TextBox x:Name="textBox" Text="{Binding GROUP_NAME}" HorizontalAlignment="Left" Height="23" Margin="117,9,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="173"/>
-            <TextBlock x:Name="textBlock_Copy"  HorizontalAlignment="Left" Margin="45,48,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="67" Height="22"/>
+            <TextBlock x:Name="textBlock_Copy"  HorizontalAlignment="Left" Margin="45,48,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String188}" VerticalAlignment="Top" Width="67" Height="22"/>
             <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" Margin="117,47,0,0" TextWrapping="Wrap" Text="{Binding DESCRIPTION}" VerticalAlignment="Top" Width="173"/>
-            <Button x:Name="button" Content="Save" Command="{Binding InsertReportGroup}" HorizontalAlignment="Left" Margin="112,245,0,0" VerticalAlignment="Top" Width="75"/>
-            <Button x:Name="Cancel" Content="Cancel" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="192,245,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="button" Content="{x:Static p:Resources.label171}" Command="{Binding InsertReportGroup}" HorizontalAlignment="Left" Margin="112,245,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="Cancel" Content="{x:Static p:Resources.label13}" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="192,245,0,0" VerticalAlignment="Top" Width="75"/>
         </Grid>
 
     </Grid>

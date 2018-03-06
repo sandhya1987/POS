@@ -4,13 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InvoicePOS.Views.CashRegister"
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
         mc:Ignorable="d"
-        Title="ChangeBussinessLocationWarningMessage" Height="165.546" Width="440.336">
+        Title="{x:Static p:Resources.label28}" Height="165.546" Width="440.336">
     <Grid>
-        <Label x:Name="label" Content="There is an invoice i nprogress. Please cancel or hold current invoice." HorizontalAlignment="Left" Margin="18,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <Button x:Name="button" Content="Hold Invoice" HorizontalAlignment="Left" Margin="58,71,0,0" VerticalAlignment="Top" Width="85" Command="{Binding ChangeBussinessLocationItem}" Click="button_Click"/>
-        <Button x:Name="button_Copy" Content="Cancel Invoice" HorizontalAlignment="Left" Margin="171,71,0,0" VerticalAlignment="Top" Width="94" Command="{Binding ChangeBussinessLocationItem}"/>
-        <Button x:Name="button_Copy1" Content="Do Nothing" HorizontalAlignment="Left" Margin="289,71,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label x:Name="label" Content="{x:Static p:Resources.label29}" HorizontalAlignment="Left" Margin="18,20,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Button x:Name="button" Content="{x:Static p:Resources.label30}" HorizontalAlignment="Left" Margin="58,71,0,0" VerticalAlignment="Top" Width="85" Command="{Binding ChangeBussinessLocationItem}" Click="button_Click"/>
+        <Button x:Name="button_Copy" Content="{x:Static p:Resources.label31}" HorizontalAlignment="Left" Margin="171,71,0,0" VerticalAlignment="Top" Width="94" Command="{Binding ChangeBussinessLocationItem}"/>
+        <Button x:Name="button_Copy1" Content="{x:Static p:Resources.label32}" HorizontalAlignment="Left" Margin="289,71,0,0" VerticalAlignment="Top" Width="83"/>
 
     </Grid>
 </Window>

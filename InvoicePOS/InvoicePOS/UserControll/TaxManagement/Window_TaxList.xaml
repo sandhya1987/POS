@@ -1,7 +1,8 @@
 ﻿<Window x:Class="InvoicePOS.UserControll.TaxManagement.Window_TaxList"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
-        Title="Tax List" Height="605.225" Width="1097.761">
+        Title="{x:Static p:Resources.String1371}" Height="605.225" Width="1097.761">
     <Window.InputBindings>
         <KeyBinding Key="Enter" Command="{Binding SelectOk}"/>
         <KeyBinding Key="Escape" Command="{Binding Cancel}"/>
@@ -15,20 +16,20 @@
                         <Button Command="{Binding SearchTax}"    Margin="0,10,204,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="76" HorizontalAlignment="Right"  >
                             <DockPanel HorizontalAlignment="Stretch">
                                 <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                                <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                             </DockPanel>
                         </Button>
 
                 <Button Command="{Binding ShowTaxes}"  Margin="0,10,130,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}"  HorizontalAlignment="Right" RenderTransformOrigin="0,0.333" >
                     <DockPanel HorizontalAlignment="Stretch">
 
-                        <Label Content="   Show" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" Width="61" />
+                        <Label Content="{x:Static p:Resources.String818}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" Width="61" />
                     </DockPanel>
                 </Button>
                 <Button Command="{Binding AddTaxClick}"    Margin="0,10,52,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                             <DockPanel HorizontalAlignment="Stretch">
                                 <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                                <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                        <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                             </DockPanel>
                         </Button>
                     </Grid>
@@ -70,24 +71,24 @@
 
                             <DataGrid.Columns>
 
-                                <DataGridTextColumn    Header="Over Due Value" Binding="{Binding TAX_VALUE}" Width="100" />
-                                <DataGridTextColumn    Header="Default Value" Binding="{Binding TAX_NAME}" Width="100" />
-                                <DataGridTextColumn    Header="Display Name" Binding="{Binding IS_SEPARATE}" Width="100" />
+                        <DataGridTextColumn    Header="{x:Static p:Resources.String1367}" Binding="{Binding TAX_VALUE}" Width="100" />
+                        <DataGridTextColumn    Header="{x:Static p:Resources.String1368}" Binding="{Binding TAX_NAME}" Width="100" />
+                        <DataGridTextColumn    Header="{x:Static p:Resources.String1369}" Binding="{Binding IS_SEPARATE}" Width="100" />
 
 
                             </DataGrid.Columns>
                         </DataGrid>
                     </Grid>
                 </Grid>
-               
-                <Button Content="OK" Command="{Binding SelectOk}" HorizontalAlignment="Left" Margin="881,364,0,0" VerticalAlignment="Top" Width="75" Height="44"/>
-                <Button Content="Cancel" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="986,364,0,0" VerticalAlignment="Top" Width="75" Height="44"/>
+
+        <Button Content="{x:Static p:Resources.label12}" Command="{Binding SelectOk}" HorizontalAlignment="Left" Margin="881,364,0,0" VerticalAlignment="Top" Width="75" Height="44"/>
+        <Button Content="{x:Static p:Resources.label13}" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="986,364,0,0" VerticalAlignment="Top" Width="75" Height="44"/>
                 <Grid HorizontalAlignment="Left" Height="387" Margin="149,39,0,0" VerticalAlignment="Top" Width="438">
                     <TextBox x:Name="textBox2" Text="{Binding BtnSearchLocation}"  TextWrapping="Wrap" HorizontalAlignment="Left" Width="188" Height="30" VerticalAlignment="Top" Margin="9,35,0,0" />
                     <Button Command="{Binding SearchLocation}"     VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="76" HorizontalAlignment="Left" Margin="210,35,0,0"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
             <DataGrid ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGridBuss}" SelectedItem="{Binding Path=SelectedItem1}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1"   AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd"  TextBlock.TextAlignment="Center" Height="293" VerticalAlignment="Top" Margin="0,84,0,0" Validation.ErrorTemplate="{x:Null}">
@@ -118,18 +119,18 @@
 
                         <DataGrid.Columns>
 
-                            <DataGridTextColumn    Header="Bussiness Location" Binding="{Binding COMPANY}" Width="100"/>
-                            <DataGridTextColumn    Header="Document Prefix " Binding="{Binding SHOP_NAME}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String819}" Binding="{Binding COMPANY}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String1365}" Binding="{Binding SHOP_NAME}" Width="100"/>
                             <!--<DataGridTextColumn    Header="Document start No" IsReadOnly="{Binding IsActive}" Width="100"/>-->
-                            <DataGridTextColumn    Header="Tin No " Binding="{Binding TIN_NUMBER}" Width="100"/>
-                            <DataGridTextColumn    Header="company name" Binding="{Binding COMPANY}" Width="100"/>
-                            <DataGridTextColumn    Header="address 1" Binding="{Binding BUSS_ADDRESS_1}" Width="100"/>
-                            <DataGridTextColumn    Header="address 2" Binding="{Binding BUSS_ADDRESS_2}" Width="100"/>
-                            <DataGridTextColumn    Header="Phone No " Binding="{Binding PHONE_NO}" Width="100"/>
-                            <DataGridTextColumn    Header="Mobile No" IsReadOnly="{Binding MOBILE_NO}" Width="100"/>
-                            <DataGridTextColumn    Header="State " Binding="{Binding STATE}" Width="100"/>
-                            <DataGridTextColumn    Header="City" Binding="{Binding CITY}" Width="100"/>
-                            <DataGridTextColumn    Header="Pin" Binding="{Binding PIN}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String1294}" Binding="{Binding TIN_NUMBER}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String1366}" Binding="{Binding COMPANY}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String374}" Binding="{Binding BUSS_ADDRESS_1}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String375}" Binding="{Binding BUSS_ADDRESS_2}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String1434}" Binding="{Binding PHONE_NO}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String1435}" IsReadOnly="{Binding MOBILE_NO}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String441}" Binding="{Binding STATE}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String442}" Binding="{Binding CITY}" Width="100"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String443}" Binding="{Binding PIN}" Width="100"/>
 
                         </DataGrid.Columns>
                     </DataGrid>

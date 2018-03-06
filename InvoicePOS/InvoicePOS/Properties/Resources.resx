@@ -112,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_0" xml:space="preserve">
     <value>0</value>
@@ -383,5 +383,4925 @@
   </data>
   <data name="Variants" xml:space="preserve">
     <value>Variants</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>demopage</value>
+  </data>
+  <data name="label200" xml:space="preserve">
+    <value>LogIn</value>
+  </data>
+  <data name="label1" xml:space="preserve">
+    <value>AddNewCashTransfer</value>
+  </data>
+  <data name="label10" xml:space="preserve">
+    <value>Select Cash Register:</value>
+  </data>
+  <data name="label100" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="label101" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="label102" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="label103" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="label104" xml:space="preserve">
+    <value>Apply date to existing records</value>
+  </data>
+  <data name="label105" xml:space="preserve">
+    <value>Show warning for negative stock</value>
+  </data>
+  <data name="label106" xml:space="preserve">
+    <value>Show warning when sale price is less than purchase &amp;#xa;price</value>
+  </data>
+  <data name="label107" xml:space="preserve">
+    <value>Tax settings</value>
+  </data>
+  <data name="label108" xml:space="preserve">
+    <value>Default Tax rate</value>
+  </data>
+  <data name="label109" xml:space="preserve">
+    <value>Tax 1 Printed Description</value>
+  </data>
+  <data name="label11" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="label110" xml:space="preserve">
+    <value>Bank Details</value>
+  </data>
+  <data name="label111" xml:space="preserve">
+    <value>Bank Code :</value>
+  </data>
+  <data name="label112" xml:space="preserve">
+    <value>Bank Name :</value>
+  </data>
+  <data name="label113" xml:space="preserve">
+    <value>Bank Branch :</value>
+  </data>
+  <data name="label114" xml:space="preserve">
+    <value>Account Number :</value>
+  </data>
+  <data name="label115" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="label116" xml:space="preserve">
+    <value>Select Company logo</value>
+  </data>
+  <data name="label117" xml:space="preserve">
+    <value>Select Image</value>
+  </data>
+  <data name="label118" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="label119" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="label12" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="label120" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="label121" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="label122" xml:space="preserve">
+    <value>Add Customer</value>
+  </data>
+  <data name="label123" xml:space="preserve">
+    <value>Customer Code :</value>
+  </data>
+  <data name="label124" xml:space="preserve">
+    <value>C00001</value>
+  </data>
+  <data name="label125" xml:space="preserve">
+    <value>Define My Own Code</value>
+  </data>
+  <data name="label126" xml:space="preserve">
+    <value>Customer Details</value>
+  </data>
+  <data name="label127" xml:space="preserve">
+    <value>First name :</value>
+  </data>
+  <data name="label128" xml:space="preserve">
+    <value>Last name :</value>
+  </data>
+  <data name="label129" xml:space="preserve">
+    <value>Search Code :</value>
+  </data>
+  <data name="label13" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="label130" xml:space="preserve">
+    <value>Vat No :</value>
+  </data>
+  <data name="label131" xml:space="preserve">
+    <value>CST No :</value>
+  </data>
+  <data name="label133" xml:space="preserve">
+    <value>Is Active</value>
+  </data>
+  <data name="label134" xml:space="preserve">
+    <value>Customer Display Name</value>
+  </data>
+  <data name="label135" xml:space="preserve">
+    <value>Customer Name for Display :</value>
+  </data>
+  <data name="label136" xml:space="preserve">
+    <value>Customer Loyality</value>
+  </data>
+  <data name="label137" xml:space="preserve">
+    <value>Is Enrolled for loyality Points</value>
+  </data>
+  <data name="label138" xml:space="preserve">
+    <value>Loyalty Number :</value>
+  </data>
+  <data name="label139" xml:space="preserve">
+    <value>Auto-Generate Number</value>
+  </data>
+  <data name="label14" xml:space="preserve">
+    <value>CashRegisterAmountDetails</value>
+  </data>
+  <data name="label140" xml:space="preserve">
+    <value>Enrollment Date :</value>
+  </data>
+  <data name="label141" xml:space="preserve">
+    <value>Loyalty Points :</value>
+  </data>
+  <data name="label142" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="label143" xml:space="preserve">
+    <value>Referred By :</value>
+  </data>
+  <data name="label144" xml:space="preserve">
+    <value>Is Loyalty points to referre on Every Invoice</value>
+  </data>
+  <data name="label145" xml:space="preserve">
+    <value>Shipping Address</value>
+  </data>
+  <data name="label146" xml:space="preserve">
+    <value>Zip Code :</value>
+  </data>
+  <data name="label147" xml:space="preserve">
+    <value>Telephone Number :</value>
+  </data>
+  <data name="label148" xml:space="preserve">
+    <value>Billing Address</value>
+  </data>
+  <data name="label149" xml:space="preserve">
+    <value>Same as Shipping Address</value>
+  </data>
+  <data name="label15" xml:space="preserve">
+    <value>Bussiness Location :</value>
+  </data>
+  <data name="label150" xml:space="preserve">
+    <value>Credit Limit / FA</value>
+  </data>
+  <data name="label151" xml:space="preserve">
+    <value>Use System default Credit Limit</value>
+  </data>
+  <data name="label152" xml:space="preserve">
+    <value>Credit Limit :</value>
+  </data>
+  <data name="label153" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label154" xml:space="preserve">
+    <value>FA Balance :</value>
+  </data>
+  <data name="label155" xml:space="preserve">
+    <value>Add Customer Image</value>
+  </data>
+  <data name="label156" xml:space="preserve">
+    <value>Remove Image</value>
+  </data>
+  <data name="label157" xml:space="preserve">
+    <value>Upload Image</value>
+  </data>
+  <data name="label158" xml:space="preserve">
+    <value>Customer Group</value>
+  </data>
+  <data name="label159" xml:space="preserve">
+    <value>Customer Group :</value>
+  </data>
+  <data name="label16" xml:space="preserve">
+    <value>Cash Register Number:</value>
+  </data>
+  <data name="label160" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="label161" xml:space="preserve">
+    <value>Financial Account</value>
+  </data>
+  <data name="label162" xml:space="preserve">
+    <value>Opening Balance :</value>
+  </data>
+  <data name="label163" xml:space="preserve">
+    <value>0.00 Cr</value>
+  </data>
+  <data name="label164" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+  <data name="label165" xml:space="preserve">
+    <value>Add New Invoice</value>
+  </data>
+  <data name="label166" xml:space="preserve">
+    <value>Edit Invoice</value>
+  </data>
+  <data name="label167" xml:space="preserve">
+    <value>Recurring invoices</value>
+  </data>
+  <data name="label168" xml:space="preserve">
+    <value>Payments</value>
+  </data>
+  <data name="label169" xml:space="preserve">
+    <value>Quotes</value>
+  </data>
+  <data name="label17" xml:space="preserve">
+    <value>Current Cash :</value>
+  </data>
+  <data name="label170" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="label171" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="label172" xml:space="preserve">
+    <value>Attachment</value>
+  </data>
+  <data name="label177" xml:space="preserve">
+    <value>Customergroup</value>
+  </data>
+  <data name="label178" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="label179" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="label18" xml:space="preserve">
+    <value>Number of Cheques :</value>
+  </data>
+  <data name="label180" xml:space="preserve">
+    <value>Customergrouplist</value>
+  </data>
+  <data name="label181" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="label182" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="label183" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="label184" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="label185" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="label186" xml:space="preserve">
+    <value>Sl No</value>
+  </data>
+  <data name="label187" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="label189" xml:space="preserve">
+    <value>CustomerGroupView</value>
+  </data>
+  <data name="label19" xml:space="preserve">
+    <value>With Amount :</value>
+  </data>
+  <data name="label190" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="label191" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="label192" xml:space="preserve">
+    <value>Openingbalance</value>
+  </data>
+  <data name="label193" xml:space="preserve">
+    <value>Current Opening Balance :</value>
+  </data>
+  <data name="label194" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="label195" xml:space="preserve">
+    <value>Cr.</value>
+  </data>
+  <data name="label196" xml:space="preserve">
+    <value>Dr.</value>
+  </data>
+  <data name="label197" xml:space="preserve">
+    <value>Business Location :</value>
+  </data>
+  <data name="label198" xml:space="preserve">
+    <value>---</value>
+  </data>
+  <data name="label199" xml:space="preserve">
+    <value>Transaction Date :</value>
+  </data>
+  <data name="label2" xml:space="preserve">
+    <value>Cash Register Number :</value>
+  </data>
+  <data name="label20" xml:space="preserve">
+    <value>Number of Credit Card Slips :</value>
+  </data>
+  <data name="label2001" xml:space="preserve">
+    <value>LogIn</value>
+  </data>
+  <data name="label201" xml:space="preserve">
+    <value>User Name :</value>
+  </data>
+  <data name="label202" xml:space="preserve">
+    <value>Password :</value>
+  </data>
+  <data name="label203" xml:space="preserve">
+    <value>Change Quantity</value>
+  </data>
+  <data name="label204" xml:space="preserve">
+    <value>BarCode</value>
+  </data>
+  <data name="label205" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="label21" xml:space="preserve">
+    <value>With Amount :</value>
+  </data>
+  <data name="label22" xml:space="preserve">
+    <value>Total :</value>
+  </data>
+  <data name="label23" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="label24" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="label25" xml:space="preserve">
+    <value>ChangeBussinessLocation</value>
+  </data>
+  <data name="label26" xml:space="preserve">
+    <value>Select Location :</value>
+  </data>
+  <data name="label27" xml:space="preserve">
+    <value>Select Cash Register :</value>
+  </data>
+  <data name="label28" xml:space="preserve">
+    <value>ChangeBussinessLocationWarningMessage</value>
+  </data>
+  <data name="label29" xml:space="preserve">
+    <value>There is an invoice i nprogress. Please cancel or hold current invoice.</value>
+  </data>
+  <data name="label3" xml:space="preserve">
+    <value>Select Business Location :</value>
+  </data>
+  <data name="label30" xml:space="preserve">
+    <value>Hold Invoice</value>
+  </data>
+  <data name="label31" xml:space="preserve">
+    <value>Cancel Invoice</value>
+  </data>
+  <data name="label32" xml:space="preserve">
+    <value>Do Nothing</value>
+  </data>
+  <data name="label33" xml:space="preserve">
+    <value>WindowCashRegister</value>
+  </data>
+  <data name="label34" xml:space="preserve">
+    <value>AddCategory</value>
+  </data>
+  <data name="label35" xml:space="preserve">
+    <value>CategoryList</value>
+  </data>
+  <data name="label36" xml:space="preserve">
+    <value>ChangeItemPrice</value>
+  </data>
+  <data name="label37" xml:space="preserve">
+    <value>Code :</value>
+  </data>
+  <data name="label38" xml:space="preserve">
+    <value>Name :</value>
+  </data>
+  <data name="label39" xml:space="preserve">
+    <value>Old Price :</value>
+  </data>
+  <data name="label4" xml:space="preserve">
+    <value>From Cash Register :</value>
+  </data>
+  <data name="label40" xml:space="preserve">
+    <value>Old MRP :</value>
+  </data>
+  <data name="label41" xml:space="preserve">
+    <value>% Increase By</value>
+  </data>
+  <data name="label42" xml:space="preserve">
+    <value>% Decrease By</value>
+  </data>
+  <data name="label43" xml:space="preserve">
+    <value>Percentage :</value>
+  </data>
+  <data name="label44" xml:space="preserve">
+    <value>New Base Price :</value>
+  </data>
+  <data name="label45" xml:space="preserve">
+    <value>New Price(with tax) :</value>
+  </data>
+  <data name="label46" xml:space="preserve">
+    <value>New MRP :</value>
+  </data>
+  <data name="label47" xml:space="preserve">
+    <value>Price Change Reason :</value>
+  </data>
+  <data name="label48" xml:space="preserve">
+    <value>Percentage :</value>
+  </data>
+  <data name="label49" xml:space="preserve">
+    <value>Apply Change Permanently</value>
+  </data>
+  <data name="label5" xml:space="preserve">
+    <value>To Cash Register :</value>
+  </data>
+  <data name="label50" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="label51" xml:space="preserve">
+    <value>Add New Company</value>
+  </data>
+  <data name="label52" xml:space="preserve">
+    <value>Business Location Details</value>
+  </data>
+  <data name="label53" xml:space="preserve">
+    <value>Company Name:</value>
+  </data>
+  <data name="label54" xml:space="preserve">
+    <value>Shop Name</value>
+  </data>
+  <data name="label55" xml:space="preserve">
+    <value>( Business location) :</value>
+  </data>
+  <data name="label56" xml:space="preserve">
+    <value>Prefix for Documents :</value>
+  </data>
+  <data name="label57" xml:space="preserve">
+    <value>Start Number for all documents :</value>
+  </data>
+  <data name="label58" xml:space="preserve">
+    <value>Tin Number :</value>
+  </data>
+  <data name="label59" xml:space="preserve">
+    <value>Address line 1 :</value>
+  </data>
+  <data name="label60" xml:space="preserve">
+    <value>Address line 2 :</value>
+  </data>
+  <data name="label61" xml:space="preserve">
+    <value>City :</value>
+  </data>
+  <data name="label62" xml:space="preserve">
+    <value>Country :</value>
+  </data>
+  <data name="label63" xml:space="preserve">
+    <value>Pin :</value>
+  </data>
+  <data name="label64" xml:space="preserve">
+    <value>Phone Number :</value>
+  </data>
+  <data name="label65" xml:space="preserve">
+    <value>Mobile Number :</value>
+  </data>
+  <data name="label66" xml:space="preserve">
+    <value>Email :</value>
+  </data>
+  <data name="label67" xml:space="preserve">
+    <value>State :</value>
+  </data>
+  <data name="label68" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="label69" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="label7" xml:space="preserve">
+    <value>Transer to Cash Register</value>
+  </data>
+  <data name="label70" xml:space="preserve">
+    <value>Financial Year</value>
+  </data>
+  <data name="label71" xml:space="preserve">
+    <value>Day :</value>
+  </data>
+  <data name="label72" xml:space="preserve">
+    <value>Month :</value>
+  </data>
+  <data name="label73" xml:space="preserve">
+    <value>01</value>
+  </data>
+  <data name="label74" xml:space="preserve">
+    <value>02</value>
+  </data>
+  <data name="label75" xml:space="preserve">
+    <value>03</value>
+  </data>
+  <data name="label76" xml:space="preserve">
+    <value>04</value>
+  </data>
+  <data name="label77" xml:space="preserve">
+    <value>05</value>
+  </data>
+  <data name="label78" xml:space="preserve">
+    <value>06</value>
+  </data>
+  <data name="label79" xml:space="preserve">
+    <value>07</value>
+  </data>
+  <data name="label8" xml:space="preserve">
+    <value>CashReg</value>
+  </data>
+  <data name="label80" xml:space="preserve">
+    <value>08</value>
+  </data>
+  <data name="label81" xml:space="preserve">
+    <value>09</value>
+  </data>
+  <data name="label82" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label83" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label84" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label85" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label86" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="label87" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label88" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label89" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="label9" xml:space="preserve">
+    <value>Select Location:</value>
+  </data>
+  <data name="label90" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="label91" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="label92" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="label93" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="label94" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="label95" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="label96" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="label97" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="label98" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="label99" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="lablel6" xml:space="preserve">
+    <value>--</value>
+  </data>
+  <data name="String10" xml:space="preserve">
+    <value>Total Discount Amount :</value>
+  </data>
+  <data name="String100" xml:space="preserve">
+    <value>Use Finanace Agency</value>
+  </data>
+  <data name="String1000" xml:space="preserve">
+    <value>Receive Item Entry Number :</value>
+  </data>
+  <data name="String1001" xml:space="preserve">
+    <value>Recive Item Entry Age :</value>
+  </data>
+  <data name="String1002" xml:space="preserve">
+    <value>Is Payment By Cash:</value>
+  </data>
+  <data name="String1003" xml:space="preserve">
+    <value>Item Receive Date:</value>
+  </data>
+  <data name="String1004" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="String1005" xml:space="preserve">
+    <value>Godown Name:</value>
+  </data>
+  <data name="String1006" xml:space="preserve">
+    <value>Payment Status:</value>
+  </data>
+  <data name="String1007" xml:space="preserve">
+    <value>Grand Total:</value>
+  </data>
+  <data name="String1008" xml:space="preserve">
+    <value>Created By:</value>
+  </data>
+  <data name="String1009" xml:space="preserve">
+    <value>Show In Date Change</value>
+  </data>
+  <data name="String101" xml:space="preserve">
+    <value>Agency Name :</value>
+  </data>
+  <data name="String1010" xml:space="preserve">
+    <value>ItemSalesHistory</value>
+  </data>
+  <data name="String1011" xml:space="preserve">
+    <value>Estimate Invoice Number :</value>
+  </data>
+  <data name="String1012" xml:space="preserve">
+    <value>Estimate Date:</value>
+  </data>
+  <data name="String1013" xml:space="preserve">
+    <value>Billing Mobile Number:</value>
+  </data>
+  <data name="String1014" xml:space="preserve">
+    <value>Delivery Status:</value>
+  </data>
+  <data name="String1015" xml:space="preserve">
+    <value>Invoice Pending Amount:</value>
+  </data>
+  <data name="String1016" xml:space="preserve">
+    <value>Cash Register:</value>
+  </data>
+  <data name="String1017" xml:space="preserve">
+    <value>Invoice Reference Number:</value>
+  </data>
+  <data name="String1018" xml:space="preserve">
+    <value>Hold Invoice Note:</value>
+  </data>
+  <data name="String1019" xml:space="preserve">
+    <value>Delivery Date:</value>
+  </data>
+  <data name="String102" xml:space="preserve">
+    <value>Finanace Agency Pending Amount :</value>
+  </data>
+  <data name="String1020" xml:space="preserve">
+    <value>Delivery Time Slot:</value>
+  </data>
+  <data name="String1021" xml:space="preserve">
+    <value>Finance Agency:</value>
+  </data>
+  <data name="String1022" xml:space="preserve">
+    <value>Advanced Booking Number:</value>
+  </data>
+  <data name="String1023" xml:space="preserve">
+    <value>Advanced Booking Date:</value>
+  </data>
+  <data name="String1024" xml:space="preserve">
+    <value>Print Count:</value>
+  </data>
+  <data name="String1025" xml:space="preserve">
+    <value>INVOICE_ID:</value>
+  </data>
+  <data name="String1026" xml:space="preserve">
+    <value>Show Invoices Only :</value>
+  </data>
+  <data name="String1027" xml:space="preserve">
+    <value>Cleared</value>
+  </data>
+  <data name="String1028" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="String1029" xml:space="preserve">
+    <value>Delivered</value>
+  </data>
+  <data name="String103" xml:space="preserve">
+    <value>Total Received Amount :</value>
+  </data>
+  <data name="String1030" xml:space="preserve">
+    <value>Not Delivered</value>
+  </data>
+  <data name="String1031" xml:space="preserve">
+    <value>Web Order</value>
+  </data>
+  <data name="String1032" xml:space="preserve">
+    <value>ViewInvoice</value>
+  </data>
+  <data name="String1033" xml:space="preserve">
+    <value>Print Invoice</value>
+  </data>
+  <data name="String1034" xml:space="preserve">
+    <value>Change Customer</value>
+  </data>
+  <data name="String1035" xml:space="preserve">
+    <value>Edit Invoice</value>
+  </data>
+  <data name="String1036" xml:space="preserve">
+    <value>Delete Invoice</value>
+  </data>
+  <data name="String1037" xml:space="preserve">
+    <value>ViewPurchaseHistory</value>
+  </data>
+  <data name="String1038" xml:space="preserve">
+    <value>Item Code :</value>
+  </data>
+  <data name="String1039" xml:space="preserve">
+    <value>Receive Item Date :</value>
+  </data>
+  <data name="String104" xml:space="preserve">
+    <value>Returnable Amount :</value>
+  </data>
+  <data name="String1040" xml:space="preserve">
+    <value>Receive Item Entry Number :</value>
+  </data>
+  <data name="String1041" xml:space="preserve">
+    <value>Unit Price :</value>
+  </data>
+  <data name="String1042" xml:space="preserve">
+    <value>Effective Rate Per Unit :</value>
+  </data>
+  <data name="String1043" xml:space="preserve">
+    <value>Supplier Name :</value>
+  </data>
+  <data name="String1044" xml:space="preserve">
+    <value>ViewSalesHistory</value>
+  </data>
+  <data name="String1045" xml:space="preserve">
+    <value>Sales Price :</value>
+  </data>
+  <data name="String1046" xml:space="preserve">
+    <value>Invoice Date :</value>
+  </data>
+  <data name="String1047" xml:space="preserve">
+    <value>ViewSalesInvoiceDetails</value>
+  </data>
+  <data name="String1048" xml:space="preserve">
+    <value>Item Slaes Executive Name :</value>
+  </data>
+  <data name="String1049" xml:space="preserve">
+    <value>Item Sales Commission Amount :</value>
+  </data>
+  <data name="String105" xml:space="preserve">
+    <value>Total Commision Expense :</value>
+  </data>
+  <data name="String1050" xml:space="preserve">
+    <value>Spot Discount Amount :</value>
+  </data>
+  <data name="String1051" xml:space="preserve">
+    <value>Spot Dscount Reason :</value>
+  </data>
+  <data name="String1052" xml:space="preserve">
+    <value>Creator Name :</value>
+  </data>
+  <data name="String1053" xml:space="preserve">
+    <value>Note :</value>
+  </data>
+  <data name="String1054" xml:space="preserve">
+    <value>Item Sales Commission Amount :</value>
+  </data>
+  <data name="String1055" xml:space="preserve">
+    <value>FC Commission Amount :</value>
+  </data>
+  <data name="String1056" xml:space="preserve">
+    <value>CC Commission Amount :</value>
+  </data>
+  <data name="String1057" xml:space="preserve">
+    <value>Delivery Time Slot :</value>
+  </data>
+  <data name="String1058" xml:space="preserve">
+    <value>Delivery Date :</value>
+  </data>
+  <data name="String1059" xml:space="preserve">
+    <value>Packing Charge Amount :</value>
+  </data>
+  <data name="String106" xml:space="preserve">
+    <value>Pending Amount :</value>
+  </data>
+  <data name="String1060" xml:space="preserve">
+    <value>Freight Charge Amount :</value>
+  </data>
+  <data name="String1061" xml:space="preserve">
+    <value>Additional Tax Amount :</value>
+  </data>
+  <data name="String1062" xml:space="preserve">
+    <value>Number Of Items :</value>
+  </data>
+  <data name="String1063" xml:space="preserve">
+    <value>Quantity Total :</value>
+  </data>
+  <data name="String1064" xml:space="preserve">
+    <value>Tax Included :</value>
+  </data>
+  <data name="String1065" xml:space="preserve">
+    <value>Print as Original Invoice</value>
+  </data>
+  <data name="String1066" xml:space="preserve">
+    <value>Print Delivery Chalan</value>
+  </data>
+  <data name="String1067" xml:space="preserve">
+    <value>Receive Payment</value>
+  </data>
+  <data name="String1068" xml:space="preserve">
+    <value>View Batch Quantity</value>
+  </data>
+  <data name="String1069" xml:space="preserve">
+    <value>View Composite Tax Return</value>
+  </data>
+  <data name="String107" xml:space="preserve">
+    <value>Advanced Amount :</value>
+  </data>
+  <data name="String1070" xml:space="preserve">
+    <value>Show Tax Detail</value>
+  </data>
+  <data name="String1071" xml:space="preserve">
+    <value>Return Selected Item</value>
+  </data>
+  <data name="String1072" xml:space="preserve">
+    <value>Complete Export Invoice Item for Item Entry</value>
+  </data>
+  <data name="String1073" xml:space="preserve">
+    <value>Export Invoice Item for Item Entry</value>
+  </data>
+  <data name="String1074" xml:space="preserve">
+    <value>Invoice Delivery Details</value>
+  </data>
+  <data name="String1075" xml:space="preserve">
+    <value>Show Measuring Denomination</value>
+  </data>
+  <data name="String1076" xml:space="preserve">
+    <value>MArk as not Delivered</value>
+  </data>
+  <data name="String1077" xml:space="preserve">
+    <value>Add Selected Item Label</value>
+  </data>
+  <data name="String1078" xml:space="preserve">
+    <value>Sales Return Details</value>
+  </data>
+  <data name="String1079" xml:space="preserve">
+    <value>Customer Ledger</value>
+  </data>
+  <data name="String108" xml:space="preserve">
+    <value>Note:</value>
+  </data>
+  <data name="String1080" xml:space="preserve">
+    <value>View Batch Quantity</value>
+  </data>
+  <data name="String1081" xml:space="preserve">
+    <value>Item List</value>
+  </data>
+  <data name="String1082" xml:space="preserve">
+    <value>Opening stock</value>
+  </data>
+  <data name="String1083" xml:space="preserve">
+    <value>Quantity :</value>
+  </data>
+  <data name="String1084" xml:space="preserve">
+    <value>Warehouse :</value>
+  </data>
+  <data name="String1085" xml:space="preserve">
+    <value>Add Loyalty Settings</value>
+  </data>
+  <data name="String1086" xml:space="preserve">
+    <value>Loyalty Settings Name</value>
+  </data>
+  <data name="String1087" xml:space="preserve">
+    <value>Performance weightage</value>
+  </data>
+  <data name="String1088" xml:space="preserve">
+    <value>From Date</value>
+  </data>
+  <data name="String1089" xml:space="preserve">
+    <value>To Date</value>
+  </data>
+  <data name="String109" xml:space="preserve">
+    <value>Goods Delivered</value>
+  </data>
+  <data name="String1090" xml:space="preserve">
+    <value>Customer Group</value>
+  </data>
+  <data name="String1091" xml:space="preserve">
+    <value>Is Default Settings</value>
+  </data>
+  <data name="String1092" xml:space="preserve">
+    <value>Use for a Customer Group</value>
+  </data>
+  <data name="String1093" xml:space="preserve">
+    <value>Use For a Collection</value>
+  </data>
+  <data name="String1094" xml:space="preserve">
+    <value>Invoice amount Exceeding</value>
+  </data>
+  <data name="String1095" xml:space="preserve">
+    <value>Conversion Factor</value>
+  </data>
+  <data name="String1096" xml:space="preserve">
+    <value>Flat Points</value>
+  </data>
+  <data name="String1097" xml:space="preserve">
+    <value>Show all Loyalty Settings</value>
+  </data>
+  <data name="String1098" xml:space="preserve">
+    <value>Show inactive settings only</value>
+  </data>
+  <data name="String1099" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>demopage</value>
+  </data>
+  <data name="String110" xml:space="preserve">
+    <value>Print Delivery Challan</value>
+  </data>
+  <data name="String1100" xml:space="preserve">
+    <value>Is Default</value>
+  </data>
+  <data name="String1101" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="String1102" xml:space="preserve">
+    <value>Referal Points</value>
+  </data>
+  <data name="String1103" xml:space="preserve">
+    <value>Preference Weightage</value>
+  </data>
+  <data name="String1104" xml:space="preserve">
+    <value>LoyaltyView</value>
+  </data>
+  <data name="String1105" xml:space="preserve">
+    <value>Collection</value>
+  </data>
+  <data name="String1106" xml:space="preserve">
+    <value>LoyaltyList</value>
+  </data>
+  <data name="String1107" xml:space="preserve">
+    <value>Customer Info</value>
+  </data>
+  <data name="String1108" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="String1109" xml:space="preserve">
+    <value>Customer Email:</value>
+  </data>
+  <data name="String111" xml:space="preserve">
+    <value>Discount Percentage(%) :</value>
+  </data>
+  <data name="String1110" xml:space="preserve">
+    <value>Other Payment Amount</value>
+  </data>
+  <data name="String1111" xml:space="preserve">
+    <value>Save Returnable Amount as Cash Advance</value>
+  </data>
+  <data name="String11111" xml:space="preserve">
+    <value>Customer Contact No:</value>
+  </data>
+  <data name="String1112" xml:space="preserve">
+    <value>Is Mail Send</value>
+  </data>
+  <data name="String1113" xml:space="preserve">
+    <value>Current Payble Amount</value>
+  </data>
+  <data name="String1114" xml:space="preserve">
+    <value>Number of Days Due</value>
+  </data>
+  <data name="String1115" xml:space="preserve">
+    <value>Adjusted Amount</value>
+  </data>
+  <data name="String1116" xml:space="preserve">
+    <value>Penalty Amount</value>
+  </data>
+  <data name="String1117" xml:space="preserve">
+    <value>Actual Penalty Amount</value>
+  </data>
+  <data name="String1118" xml:space="preserve">
+    <value>Adjusted Penalty Amount</value>
+  </data>
+  <data name="String1119" xml:space="preserve">
+    <value>Adjust Balance</value>
+  </data>
+  <data name="String112" xml:space="preserve">
+    <value>Save Estimate</value>
+  </data>
+  <data name="String1120" xml:space="preserve">
+    <value>Paidable Amount</value>
+  </data>
+  <data name="String1121" xml:space="preserve">
+    <value>Select Cash Register :</value>
+  </data>
+  <data name="String1122" xml:space="preserve">
+    <value>Amount :</value>
+  </data>
+  <data name="String1123" xml:space="preserve">
+    <value>Total Selected Payble Amount</value>
+  </data>
+  <data name="String1124" xml:space="preserve">
+    <value>Total Receive Amount</value>
+  </data>
+  <data name="String1125" xml:space="preserve">
+    <value>Returnable Balance</value>
+  </data>
+  <data name="String1126" xml:space="preserve">
+    <value>Receive Payment Number</value>
+  </data>
+  <data name="String1127" xml:space="preserve">
+    <value>Receive Payment No</value>
+  </data>
+  <data name="String1128" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="String1129" xml:space="preserve">
+    <value>ViewReceivePayment</value>
+  </data>
+  <data name="String113" xml:space="preserve">
+    <value>Save &amp; Print Booking</value>
+  </data>
+  <data name="String1130" xml:space="preserve">
+    <value>Other Payment Amount</value>
+  </data>
+  <data name="String1131" xml:space="preserve">
+    <value>Customer Contact No</value>
+  </data>
+  <data name="String1132" xml:space="preserve">
+    <value>Is Mail Send</value>
+  </data>
+  <data name="String1133" xml:space="preserve">
+    <value>Current Payble Amount</value>
+  </data>
+  <data name="String1134" xml:space="preserve">
+    <value>ReceivePayment</value>
+  </data>
+  <data name="String1135" xml:space="preserve">
+    <value>Finance Agency</value>
+  </data>
+  <data name="String1136" xml:space="preserve">
+    <value>Payment Mode</value>
+  </data>
+  <data name="String1137" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="String1138" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="String1139" xml:space="preserve">
+    <value>Supplier Email</value>
+  </data>
+  <data name="String114" xml:space="preserve">
+    <value>Save &amp; Print Estimate</value>
+  </data>
+  <data name="String1140" xml:space="preserve">
+    <value>Delivery To</value>
+  </data>
+  <data name="String1141" xml:space="preserve">
+    <value>Send Emil To Supplier</value>
+  </data>
+  <data name="String1142" xml:space="preserve">
+    <value>Item Price Before TAX</value>
+  </data>
+  <data name="String1143" xml:space="preserve">
+    <value>Sub Total Before TAX</value>
+  </data>
+  <data name="String1144" xml:space="preserve">
+    <value>Tax Percent</value>
+  </data>
+  <data name="String1145" xml:space="preserve">
+    <value>Sub Total After Tax</value>
+  </data>
+  <data name="String1146" xml:space="preserve">
+    <value>Effective rate Per unit</value>
+  </data>
+  <data name="String1147" xml:space="preserve">
+    <value>Terms and Conditions</value>
+  </data>
+  <data name="String1148" xml:space="preserve">
+    <value>Quantity Calculation</value>
+  </data>
+  <data name="String1149" xml:space="preserve">
+    <value>Enter Quantity</value>
+  </data>
+  <data name="String115" xml:space="preserve">
+    <value>Save &amp; Print Invoice</value>
+  </data>
+  <data name="String1150" xml:space="preserve">
+    <value>PONumber</value>
+  </data>
+  <data name="String1151" xml:space="preserve">
+    <value>POStatus</value>
+  </data>
+  <data name="String1152" xml:space="preserve">
+    <value>POType</value>
+  </data>
+  <data name="String1153" xml:space="preserve">
+    <value>PODate</value>
+  </data>
+  <data name="String1154" xml:space="preserve">
+    <value>Supplied By</value>
+  </data>
+  <data name="String1155" xml:space="preserve">
+    <value>Created By</value>
+  </data>
+  <data name="String1156" xml:space="preserve">
+    <value>PO List</value>
+  </data>
+  <data name="String1157" xml:space="preserve">
+    <value>ReportAllItem</value>
+  </data>
+  <data name="String1158" xml:space="preserve">
+    <value>ReportPO</value>
+  </data>
+  <data name="String1159" xml:space="preserve">
+    <value>POS SALESPERSON RESULTS REPORT</value>
+  </data>
+  <data name="String116" xml:space="preserve">
+    <value>Save Booking</value>
+  </data>
+  <data name="String1160" xml:space="preserve">
+    <value>Salesperson</value>
+  </data>
+  <data name="String1161" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="String1162" xml:space="preserve">
+    <value>Report run</value>
+  </data>
+  <data name="String1163" xml:space="preserve">
+    <value>05/01/2014</value>
+  </data>
+  <data name="String1164" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="String1165" xml:space="preserve">
+    <value>5002</value>
+  </data>
+  <data name="String1166" xml:space="preserve">
+    <value>06/01/2014</value>
+  </data>
+  <data name="String1167" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="String1168" xml:space="preserve">
+    <value>Add Report Group</value>
+  </data>
+  <data name="String1169" xml:space="preserve">
+    <value>Report Group Name</value>
+  </data>
+  <data name="String117" xml:space="preserve">
+    <value>Save Invoice</value>
+  </data>
+  <data name="String1170" xml:space="preserve">
+    <value>GenerateReport</value>
+  </data>
+  <data name="String1171" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="String1172" xml:space="preserve">
+    <value>Add Report Name</value>
+  </data>
+  <data name="String1173" xml:space="preserve">
+    <value>Report Name :</value>
+  </data>
+  <data name="String1174" xml:space="preserve">
+    <value>Report Description :</value>
+  </data>
+  <data name="String1175" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="String1176" xml:space="preserve">
+    <value>Delete Group</value>
+  </data>
+  <data name="String1177" xml:space="preserve">
+    <value>New Group</value>
+  </data>
+  <data name="String1178" xml:space="preserve">
+    <value>Edit Group</value>
+  </data>
+  <data name="String1179" xml:space="preserve">
+    <value>Delete Group</value>
+  </data>
+  <data name="String118" xml:space="preserve">
+    <value>Show Stock</value>
+  </data>
+  <data name="String1180" xml:space="preserve">
+    <value>Search keyword</value>
+  </data>
+  <data name="String1181" xml:space="preserve">
+    <value>Godown</value>
+  </data>
+  <data name="String1182" xml:space="preserve">
+    <value>Invoice No</value>
+  </data>
+  <data name="String1183" xml:space="preserve">
+    <value>Sales Return No</value>
+  </data>
+  <data name="String1184" xml:space="preserve">
+    <value>Out Standing Balance</value>
+  </data>
+  <data name="String1185" xml:space="preserve">
+    <value>Sale Quantity</value>
+  </data>
+  <data name="String1186" xml:space="preserve">
+    <value>Sales Price</value>
+  </data>
+  <data name="String1187" xml:space="preserve">
+    <value>Sales Measuring Unit</value>
+  </data>
+  <data name="String1188" xml:space="preserve">
+    <value>Tax Persent</value>
+  </data>
+  <data name="String1189" xml:space="preserve">
+    <value>Invoice Id</value>
+  </data>
+  <data name="String119" xml:space="preserve">
+    <value>Item Name :</value>
+  </data>
+  <data name="String1190" xml:space="preserve">
+    <value>Sale Id</value>
+  </data>
+  <data name="String1191" xml:space="preserve">
+    <value>IssueStoreCredit</value>
+  </data>
+  <data name="String1192" xml:space="preserve">
+    <value>Return Cash</value>
+  </data>
+  <data name="String1193" xml:space="preserve">
+    <value>Issue GiftCard</value>
+  </data>
+  <data name="String1194" xml:space="preserve">
+    <value>Issue Cheque</value>
+  </data>
+  <data name="String1195" xml:space="preserve">
+    <value>BankTransfer</value>
+  </data>
+  <data name="String1196" xml:space="preserve">
+    <value>Advance Amount</value>
+  </data>
+  <data name="String1197" xml:space="preserve">
+    <value>Aditional Tax Amount</value>
+  </data>
+  <data name="String1198" xml:space="preserve">
+    <value>Freight Charge</value>
+  </data>
+  <data name="String1199" xml:space="preserve">
+    <value>Packaging Charge</value>
+  </data>
+  <data name="String12" xml:space="preserve">
+    <value>Apply Discount After Tax</value>
+  </data>
+  <data name="String120" xml:space="preserve">
+    <value>Barcode :</value>
+  </data>
+  <data name="String1200" xml:space="preserve">
+    <value>Sales Executive</value>
+  </data>
+  <data name="String1201" xml:space="preserve">
+    <value>Total Quantity</value>
+  </data>
+  <data name="String1202" xml:space="preserve">
+    <value>Total Item</value>
+  </data>
+  <data name="String1203" xml:space="preserve">
+    <value>Grand Total</value>
+  </data>
+  <data name="String1204" xml:space="preserve">
+    <value>Stand By Amount</value>
+  </data>
+  <data name="String1205" xml:space="preserve">
+    <value>Remove&amp;#xa;   Item</value>
+  </data>
+  <data name="String1206" xml:space="preserve">
+    <value>Panding Amount</value>
+  </data>
+  <data name="String1207" xml:space="preserve">
+    <value>Allow to Return without Invoice</value>
+  </data>
+  <data name="String1208" xml:space="preserve">
+    <value>slno</value>
+  </data>
+  <data name="String1209" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="String121" xml:space="preserve">
+    <value>Sales Price :</value>
+  </data>
+  <data name="String1210" xml:space="preserve">
+    <value>Sale Return No</value>
+  </data>
+  <data name="String1211" xml:space="preserve">
+    <value>Return Amount</value>
+  </data>
+  <data name="String1212" xml:space="preserve">
+    <value>SalesReturnView</value>
+  </data>
+  <data name="String1213" xml:space="preserve">
+    <value>Out Standing Balance</value>
+  </data>
+  <data name="String1214" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+  <data name="String1215" xml:space="preserve">
+    <value>Printer</value>
+  </data>
+  <data name="String1216" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="String1217" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="String1218" xml:space="preserve">
+    <value>Correction Transaction</value>
+  </data>
+  <data name="String1219" xml:space="preserve">
+    <value>Stock Transfer Transaction</value>
+  </data>
+  <data name="String122" xml:space="preserve">
+    <value>Item Name :</value>
+  </data>
+  <data name="String1220" xml:space="preserve">
+    <value>Closing Stock</value>
+  </data>
+  <data name="String1221" xml:space="preserve">
+    <value>Stock in</value>
+  </data>
+  <data name="String1222" xml:space="preserve">
+    <value>Stock Out</value>
+  </data>
+  <data name="String1223" xml:space="preserve">
+    <value>Total Transaction</value>
+  </data>
+  <data name="String1224" xml:space="preserve">
+    <value>sl</value>
+  </data>
+  <data name="String1225" xml:space="preserve">
+    <value>Stock In</value>
+  </data>
+  <data name="String1226" xml:space="preserve">
+    <value>Stock Out</value>
+  </data>
+  <data name="String1227" xml:space="preserve">
+    <value>Narration</value>
+  </data>
+  <data name="String1228" xml:space="preserve">
+    <value>Document Type</value>
+  </data>
+  <data name="String1229" xml:space="preserve">
+    <value>Document Name</value>
+  </data>
+  <data name="String123" xml:space="preserve">
+    <value>Barcode :</value>
+  </data>
+  <data name="String1230" xml:space="preserve">
+    <value>Stock Transfer Number :</value>
+  </data>
+  <data name="String1231" xml:space="preserve">
+    <value>Keep Focus on Last Added Item</value>
+  </data>
+  <data name="String1232" xml:space="preserve">
+    <value>Do Not Show Negative Stock Warning Message</value>
+  </data>
+  <data name="String1233" xml:space="preserve">
+    <value>From Godown :</value>
+  </data>
+  <data name="String1234" xml:space="preserve">
+    <value>To Godown :</value>
+  </data>
+  <data name="String1235" xml:space="preserve">
+    <value>Received By :</value>
+  </data>
+  <data name="String1236" xml:space="preserve">
+    <value>Send Email</value>
+  </data>
+  <data name="String1237" xml:space="preserve">
+    <value>Sales &amp;#xa;Measuring Unit</value>
+  </data>
+  <data name="String1238" xml:space="preserve">
+    <value>Available &amp;#xa;Quantity</value>
+  </data>
+  <data name="String1239" xml:space="preserve">
+    <value>Total Stock Quantity :</value>
+  </data>
+  <data name="String124" xml:space="preserve">
+    <value>Godown Name</value>
+  </data>
+  <data name="String1240" xml:space="preserve">
+    <value>SaveButton</value>
+  </data>
+  <data name="String1241" xml:space="preserve">
+    <value>CancelButton</value>
+  </data>
+  <data name="String1242" xml:space="preserve">
+    <value>get all</value>
+  </data>
+  <data name="String1243" xml:space="preserve">
+    <value>ChngQntTransfer</value>
+  </data>
+  <data name="String1244" xml:space="preserve">
+    <value>Transfer Quantity</value>
+  </data>
+  <data name="String1245" xml:space="preserve">
+    <value>Stock Currection</value>
+  </data>
+  <data name="String1246" xml:space="preserve">
+    <value>Show Transaction</value>
+  </data>
+  <data name="String1247" xml:space="preserve">
+    <value>Stock Details</value>
+  </data>
+  <data name="String1248" xml:space="preserve">
+    <value>Show Item</value>
+  </data>
+  <data name="String1249" xml:space="preserve">
+    <value>Stock Ledger</value>
+  </data>
+  <data name="String125" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="String1250" xml:space="preserve">
+    <value>Stock Transfer</value>
+  </data>
+  <data name="String1251" xml:space="preserve">
+    <value>Show Stocks</value>
+  </data>
+  <data name="String1252" xml:space="preserve">
+    <value>Upload Item</value>
+  </data>
+  <data name="String1253" xml:space="preserve">
+    <value>Export Item</value>
+  </data>
+  <data name="String1254" xml:space="preserve">
+    <value>Show Inactive Item Stock Only</value>
+  </data>
+  <data name="String1255" xml:space="preserve">
+    <value>Show Negetive Stock Only</value>
+  </data>
+  <data name="String1256" xml:space="preserve">
+    <value>Donot Show Zero Stock</value>
+  </data>
+  <data name="String1257" xml:space="preserve">
+    <value>Show Stock Expiring</value>
+  </data>
+  <data name="String1258" xml:space="preserve">
+    <value>Transfer request</value>
+  </data>
+  <data name="String1259" xml:space="preserve">
+    <value>From Godown</value>
+  </data>
+  <data name="String126" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="String1260" xml:space="preserve">
+    <value>To Godown</value>
+  </data>
+  <data name="String1261" xml:space="preserve">
+    <value>Employee</value>
+  </data>
+  <data name="String1262" xml:space="preserve">
+    <value>Show Only Stock Correction</value>
+  </data>
+  <data name="String1263" xml:space="preserve">
+    <value>Show Only Transfer Request</value>
+  </data>
+  <data name="String1264" xml:space="preserve">
+    <value>Show Only Stock Transfer</value>
+  </data>
+  <data name="String1265" xml:space="preserve">
+    <value>StockTransferView</value>
+  </data>
+  <data name="String1266" xml:space="preserve">
+    <value>Stock Transfer Number :</value>
+  </data>
+  <data name="String1267" xml:space="preserve">
+    <value>Keep Focus on Last Added Item</value>
+  </data>
+  <data name="String1268" xml:space="preserve">
+    <value>Show Images</value>
+  </data>
+  <data name="String1269" xml:space="preserve">
+    <value>Transferring &amp;#xa;Qty/Weight</value>
+  </data>
+  <data name="String127" xml:space="preserve">
+    <value>Sales Measuring unit</value>
+  </data>
+  <data name="String1270" xml:space="preserve">
+    <value>Sales &amp;#xa;Measuring Unit</value>
+  </data>
+  <data name="String1271" xml:space="preserve">
+    <value>Available &amp;#xa;Quantity</value>
+  </data>
+  <data name="String1272" xml:space="preserve">
+    <value>Total Stock Quantity :</value>
+  </data>
+  <data name="String1273" xml:space="preserve">
+    <value>Vender Add/Edit Page</value>
+  </data>
+  <data name="String1274" xml:space="preserve">
+    <value>Supplier Code :</value>
+  </data>
+  <data name="String1275" xml:space="preserve">
+    <value>Supplier Name :</value>
+  </data>
+  <data name="String1276" xml:space="preserve">
+    <value>Preferred Supplier</value>
+  </data>
+  <data name="String1277" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="String1278" xml:space="preserve">
+    <value>Vat No :</value>
+  </data>
+  <data name="String1279" xml:space="preserve">
+    <value>UID No :</value>
+  </data>
+  <data name="String128" xml:space="preserve">
+    <value>Tax Details</value>
+  </data>
+  <data name="String1280" xml:space="preserve">
+    <value>Payment Terms</value>
+  </data>
+  <data name="String1281" xml:space="preserve">
+    <value>Payment needs to be&amp;#xa; settled within :</value>
+  </data>
+  <data name="String1282" xml:space="preserve">
+    <value>Number of&amp;#xa;days</value>
+  </data>
+  <data name="String1283" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="String1284" xml:space="preserve">
+    <value>Financial Account</value>
+  </data>
+  <data name="String1285" xml:space="preserve">
+    <value>Opening Balance :</value>
+  </data>
+  <data name="String1286" xml:space="preserve">
+    <value>Supplier Display Name :</value>
+  </data>
+  <data name="String1287" xml:space="preserve">
+    <value>Save(F8)</value>
+  </data>
+  <data name="String1288" xml:space="preserve">
+    <value>Auto Code</value>
+  </data>
+  <data name="String1289" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="String129" xml:space="preserve">
+    <value>Tax Name :</value>
+  </data>
+  <data name="String1290" xml:space="preserve">
+    <value>Supplier Code</value>
+  </data>
+  <data name="String1291" xml:space="preserve">
+    <value>Supplier Name</value>
+  </data>
+  <data name="String1292" xml:space="preserve">
+    <value>vat No</value>
+  </data>
+  <data name="String1293" xml:space="preserve">
+    <value>Cst No</value>
+  </data>
+  <data name="String1294" xml:space="preserve">
+    <value>Tin No</value>
+  </data>
+  <data name="String1295" xml:space="preserve">
+    <value>Pan No</value>
+  </data>
+  <data name="String1296" xml:space="preserve">
+    <value>Opening Balance</value>
+  </data>
+  <data name="String1297" xml:space="preserve">
+    <value>Show In Active Vendor only</value>
+  </data>
+  <data name="String1298" xml:space="preserve">
+    <value>View Ledger</value>
+  </data>
+  <data name="String1299" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Apply Discount Before Tax</value>
+  </data>
+  <data name="String130" xml:space="preserve">
+    <value>Tax Price(%) :</value>
+  </data>
+  <data name="String1300" xml:space="preserve">
+    <value>Vender View</value>
+  </data>
+  <data name="String1301" xml:space="preserve">
+    <value>SupplierViewLedger</value>
+  </data>
+  <data name="String1302" xml:space="preserve">
+    <value>Window_SupplierList</value>
+  </data>
+  <data name="String1303" xml:space="preserve">
+    <value>SupplierPayView</value>
+  </data>
+  <data name="String1304" xml:space="preserve">
+    <value>Payment Number :</value>
+  </data>
+  <data name="String1305" xml:space="preserve">
+    <value>30/11/2016</value>
+  </data>
+  <data name="String1306" xml:space="preserve">
+    <value>Supplier Info</value>
+  </data>
+  <data name="String1307" xml:space="preserve">
+    <value>Select the Supplier :</value>
+  </data>
+  <data name="String1308" xml:space="preserve">
+    <value>Current Advance Amount :</value>
+  </data>
+  <data name="String1309" xml:space="preserve">
+    <value>Other Pending Amount :</value>
+  </data>
+  <data name="String131" xml:space="preserve">
+    <value>Total Tax :</value>
+  </data>
+  <data name="String1310" xml:space="preserve">
+    <value>Total RIE Pending Amount :</value>
+  </data>
+  <data name="String1311" xml:space="preserve">
+    <value>Supplier Email :</value>
+  </data>
+  <data name="String1312" xml:space="preserve">
+    <value>Supplier Sms :</value>
+  </data>
+  <data name="String1313" xml:space="preserve">
+    <value>Send Email To Supplier</value>
+  </data>
+  <data name="String1314" xml:space="preserve">
+    <value>Send Email To Sms</value>
+  </data>
+  <data name="String1315" xml:space="preserve">
+    <value>Show Pending Cheques</value>
+  </data>
+  <data name="String1316" xml:space="preserve">
+    <value>Receive Item Entry Info</value>
+  </data>
+  <data name="String1317" xml:space="preserve">
+    <value>Payment&amp;#xa;Due Date</value>
+  </data>
+  <data name="String1318" xml:space="preserve">
+    <value>No Of&amp;#xa;Days Due</value>
+  </data>
+  <data name="String1319" xml:space="preserve">
+    <value>Total&amp;#xa;Amount</value>
+  </data>
+  <data name="String132" xml:space="preserve">
+    <value>EstimateInvoice</value>
+  </data>
+  <data name="String1320" xml:space="preserve">
+    <value>Pending&amp;#xa;Amount</value>
+  </data>
+  <data name="String1321" xml:space="preserve">
+    <value>Adjusted&amp;#xa;Amount</value>
+  </data>
+  <data name="String1322" xml:space="preserve">
+    <value>Supp Inv&amp;#xa;Date</value>
+  </data>
+  <data name="String1323" xml:space="preserve">
+    <value>Rec Item&amp;#xa;Entry No</value>
+  </data>
+  <data name="String1324" xml:space="preserve">
+    <value>Goods Rec&amp;#xa;Date</value>
+  </data>
+  <data name="String1325" xml:space="preserve">
+    <value>Supp Inv &amp;#xa;No</value>
+  </data>
+  <data name="String1326" xml:space="preserve">
+    <value>Total Tax&amp;#xa;Amount</value>
+  </data>
+  <data name="String1327" xml:space="preserve">
+    <value>Total Of All Payment Mode :</value>
+  </data>
+  <data name="String1328" xml:space="preserve">
+    <value>Advance Amount in Current Payment :</value>
+  </data>
+  <data name="String1329" xml:space="preserve">
+    <value>Note :</value>
+  </data>
+  <data name="String133" xml:space="preserve">
+    <value>---------------------------------------------------------------</value>
+  </data>
+  <data name="String1330" xml:space="preserve">
+    <value>Cheque No :</value>
+  </data>
+  <data name="String1331" xml:space="preserve">
+    <value>Select Bank AC :</value>
+  </data>
+  <data name="String1332" xml:space="preserve">
+    <value>Select Bank Branch :</value>
+  </data>
+  <data name="String1333" xml:space="preserve">
+    <value>Cheque Date :</value>
+  </data>
+  <data name="String1334" xml:space="preserve">
+    <value>Cheque Printer :</value>
+  </data>
+  <data name="String1335" xml:space="preserve">
+    <value>Print Check</value>
+  </data>
+  <data name="String1336" xml:space="preserve">
+    <value>Select Bank Account :</value>
+  </data>
+  <data name="String1337" xml:space="preserve">
+    <value>Select Bank Branch :</value>
+  </data>
+  <data name="String1338" xml:space="preserve">
+    <value>Transfer Date :</value>
+  </data>
+  <data name="String1339" xml:space="preserve">
+    <value>Financial Account</value>
+  </data>
+  <data name="String134" xml:space="preserve">
+    <value>ESTIMATED INVOICE REPORT</value>
+  </data>
+  <data name="String1340" xml:space="preserve">
+    <value>Select Credit Financial Account :</value>
+  </data>
+  <data name="String1341" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="String1342" xml:space="preserve">
+    <value>Discount Flat</value>
+  </data>
+  <data name="String1343" xml:space="preserve">
+    <value>Discount Percent(%)</value>
+  </data>
+  <data name="String1344" xml:space="preserve">
+    <value>GroupBox</value>
+  </data>
+  <data name="String1345" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="String1346" xml:space="preserve">
+    <value>Available Amount</value>
+  </data>
+  <data name="String1347" xml:space="preserve">
+    <value>Use Amount</value>
+  </data>
+  <data name="String1348" xml:space="preserve">
+    <value>Total Pending :</value>
+  </data>
+  <data name="String1349" xml:space="preserve">
+    <value>Pending in Select Payable Amount :</value>
+  </data>
+  <data name="String135" xml:space="preserve">
+    <value>sl</value>
+  </data>
+  <data name="String1350" xml:space="preserve">
+    <value>Selected Amount :</value>
+  </data>
+  <data name="String1351" xml:space="preserve">
+    <value>Supplier Add Payment</value>
+  </data>
+  <data name="String1352" xml:space="preserve">
+    <value>Supllier Payment Number</value>
+  </data>
+  <data name="String1353" xml:space="preserve">
+    <value>30/11/2016</value>
+  </data>
+  <data name="String1354" xml:space="preserve">
+    <value>Pick&amp;#xa;Message</value>
+  </data>
+  <data name="String1355" xml:space="preserve">
+    <value>Credit Notes</value>
+  </data>
+  <data name="String1356" xml:space="preserve">
+    <value>Select ALL</value>
+  </data>
+  <data name="String1357" xml:space="preserve">
+    <value>Supp Payment No</value>
+  </data>
+  <data name="String1358" xml:space="preserve">
+    <value>Creator</value>
+  </data>
+  <data name="String1359" xml:space="preserve">
+    <value>Paid Amount</value>
+  </data>
+  <data name="String136" xml:space="preserve">
+    <value>BarCode</value>
+  </data>
+  <data name="String1360" xml:space="preserve">
+    <value>AddTax</value>
+  </data>
+  <data name="String1361" xml:space="preserve">
+    <value>Tax Name:</value>
+  </data>
+  <data name="String1362" xml:space="preserve">
+    <value>Tax Value:</value>
+  </data>
+  <data name="String1363" xml:space="preserve">
+    <value>Maintain Separate Financial Transaction for this tax</value>
+  </data>
+  <data name="String1364" xml:space="preserve">
+    <value>Help Text</value>
+  </data>
+  <data name="String1365" xml:space="preserve">
+    <value>Document Prefix</value>
+  </data>
+  <data name="String1366" xml:space="preserve">
+    <value>company name</value>
+  </data>
+  <data name="String1367" xml:space="preserve">
+    <value>Over Due Value</value>
+  </data>
+  <data name="String1368" xml:space="preserve">
+    <value>Default Value</value>
+  </data>
+  <data name="String1369" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="String137" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="String1370" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="String1371" xml:space="preserve">
+    <value>Tax List</value>
+  </data>
+  <data name="String1372" xml:space="preserve">
+    <value>Over Due Value</value>
+  </data>
+  <data name="String1373" xml:space="preserve">
+    <value>Default Value</value>
+  </data>
+  <data name="String1374" xml:space="preserve">
+    <value>Display Name</value>
+  </data>
+  <data name="String1375" xml:space="preserve">
+    <value>UnitAdd</value>
+  </data>
+  <data name="String1376" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="String1377" xml:space="preserve">
+    <value>Indexs</value>
+  </data>
+  <data name="String1378" xml:space="preserve">
+    <value>UnitView</value>
+  </data>
+  <data name="String1379" xml:space="preserve">
+    <value>Unit List</value>
+  </data>
+  <data name="String138" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="String139" xml:space="preserve">
+    <value>Measuring unit</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>Discount Percentage:</value>
+  </data>
+  <data name="String140" xml:space="preserve">
+    <value>Tax</value>
+  </data>
+  <data name="String141" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="String142" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="String143" xml:space="preserve">
+    <value>Print Datetime:</value>
+  </data>
+  <data name="String144" xml:space="preserve">
+    <value>AddUnit</value>
+  </data>
+  <data name="String145" xml:space="preserve">
+    <value>UnitList</value>
+  </data>
+  <data name="String146" xml:space="preserve">
+    <value>WelComePage</value>
+  </data>
+  <data name="String147" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="String148" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="String149" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>Item Discount</value>
+  </data>
+  <data name="String150" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="String151" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="String152" xml:space="preserve">
+    <value>PO</value>
+  </data>
+  <data name="String153" xml:space="preserve">
+    <value>Invoice</value>
+  </data>
+  <data name="String154" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="String155" xml:space="preserve">
+    <value>Retail Invoice</value>
+  </data>
+  <data name="String156" xml:space="preserve">
+    <value>Go Back To Main Screen</value>
+  </data>
+  <data name="String157" xml:space="preserve">
+    <value>Backup Database</value>
+  </data>
+  <data name="String158" xml:space="preserve">
+    <value>Restore Database</value>
+  </data>
+  <data name="String159" xml:space="preserve">
+    <value>Currency Settings</value>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>Discount Amount :</value>
+  </data>
+  <data name="String160" xml:space="preserve">
+    <value>Number Format</value>
+  </data>
+  <data name="String161" xml:space="preserve">
+    <value>Number of Decimal Places:</value>
+  </data>
+  <data name="String162" xml:space="preserve">
+    <value>##,##,##,##</value>
+  </data>
+  <data name="String163" xml:space="preserve">
+    <value>###,###,##</value>
+  </data>
+  <data name="String164" xml:space="preserve">
+    <value>Sample :</value>
+  </data>
+  <data name="String165" xml:space="preserve">
+    <value>Unit Price Format</value>
+  </data>
+  <data name="String166" xml:space="preserve">
+    <value>Number of Decimal Places in Unit Price :</value>
+  </data>
+  <data name="String167" xml:space="preserve">
+    <value>Quantity Format</value>
+  </data>
+  <data name="String168" xml:space="preserve">
+    <value>Number of Decimal Places in Quantity :</value>
+  </data>
+  <data name="String169" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>Current Item Sales Price :</value>
+  </data>
+  <data name="String170" xml:space="preserve">
+    <value>Currency Symbol with Normal Font :</value>
+  </data>
+  <data name="String171" xml:space="preserve">
+    <value>Symbol Position :</value>
+  </data>
+  <data name="String172" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="String173" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="String174" xml:space="preserve">
+    <value>Currency Symbol Font Settings :</value>
+  </data>
+  <data name="String175" xml:space="preserve">
+    <value>Change Font</value>
+  </data>
+  <data name="String176" xml:space="preserve">
+    <value>Symbol Position :</value>
+  </data>
+  <data name="String177" xml:space="preserve">
+    <value>EditEmailSettings</value>
+  </data>
+  <data name="String178" xml:space="preserve">
+    <value>Following informations will be used for sending emails form this application.</value>
+  </data>
+  <data name="String179" xml:space="preserve">
+    <value>Mail Type:</value>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>Discount Amount After Tax:</value>
+  </data>
+  <data name="String180" xml:space="preserve">
+    <value>User Information</value>
+  </data>
+  <data name="String181" xml:space="preserve">
+    <value>Your Name:</value>
+  </data>
+  <data name="String182" xml:space="preserve">
+    <value>Email Address:</value>
+  </data>
+  <data name="String183" xml:space="preserve">
+    <value>Logon Information</value>
+  </data>
+  <data name="String184" xml:space="preserve">
+    <value>User Name:</value>
+  </data>
+  <data name="String185" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="String186" xml:space="preserve">
+    <value>EMail Cc:</value>
+  </data>
+  <data name="String187" xml:space="preserve">
+    <value>EMail Bcc:</value>
+  </data>
+  <data name="String188" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="String189" xml:space="preserve">
+    <value>Using Gmail Account</value>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>New Item Total Sales Price:</value>
+  </data>
+  <data name="String190" xml:space="preserve">
+    <value>Using Other Account</value>
+  </data>
+  <data name="String191" xml:space="preserve">
+    <value>Server Information</value>
+  </data>
+  <data name="String192" xml:space="preserve">
+    <value>Outgoing mail server(SMTP):</value>
+  </data>
+  <data name="String193" xml:space="preserve">
+    <value>This server requires an encrypted connection(SSL):</value>
+  </data>
+  <data name="String194" xml:space="preserve">
+    <value>Outgoing Server Port number(SMTP):</value>
+  </data>
+  <data name="String195" xml:space="preserve">
+    <value>EmailSettingsManager</value>
+  </data>
+  <data name="String196" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="String197" xml:space="preserve">
+    <value>view</value>
+  </data>
+  <data name="String198" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="String199" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>BarCode</value>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>Discount Percentage(%) :</value>
+  </data>
+  <data name="String200" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="String201" xml:space="preserve">
+    <value>Mail Type</value>
+  </data>
+  <data name="String202" xml:space="preserve">
+    <value>From Email</value>
+  </data>
+  <data name="String203" xml:space="preserve">
+    <value>From Name</value>
+  </data>
+  <data name="String204" xml:space="preserve">
+    <value>Font Chooser</value>
+  </data>
+  <data name="String205" xml:space="preserve">
+    <value>Font:</value>
+  </data>
+  <data name="String206" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="String207" xml:space="preserve">
+    <value>Quantity :</value>
+  </data>
+  <data name="String208" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="String209" xml:space="preserve">
+    <value>Font Style:</value>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>Apply Discount After Tax</value>
+  </data>
+  <data name="String210" xml:space="preserve">
+    <value>_Size:</value>
+  </data>
+  <data name="String211" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="String212" xml:space="preserve">
+    <value>Baseline</value>
+  </data>
+  <data name="String213" xml:space="preserve">
+    <value>Strikethrough</value>
+  </data>
+  <data name="String214" xml:space="preserve">
+    <value>Overline</value>
+  </data>
+  <data name="String215" xml:space="preserve">
+    <value>Sample</value>
+  </data>
+  <data name="String216" xml:space="preserve">
+    <value>Script:</value>
+  </data>
+  <data name="String217" xml:space="preserve">
+    <value>InvoiceSettings</value>
+  </data>
+  <data name="String218" xml:space="preserve">
+    <value>Page1</value>
+  </data>
+  <data name="String219" xml:space="preserve">
+    <value>Show warning for negative stock</value>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>Apply Discount Before Tax</value>
+  </data>
+  <data name="String220" xml:space="preserve">
+    <value>Show warning when sales price is more than purchase price</value>
+  </data>
+  <data name="String221" xml:space="preserve">
+    <value>Show warning when item expiration date is earlier than today</value>
+  </data>
+  <data name="String222" xml:space="preserve">
+    <value>Always ask for quantity once item is added to the invoice</value>
+  </data>
+  <data name="String223" xml:space="preserve">
+    <value>Always ask for price change once item is added to the invoice</value>
+  </data>
+  <data name="String224" xml:space="preserve">
+    <value>Mark price down by % by default</value>
+  </data>
+  <data name="String225" xml:space="preserve">
+    <value>Ask For Print Format And Printer On Every Print.</value>
+  </data>
+  <data name="String226" xml:space="preserve">
+    <value>Ask for Email Template On Every Send Email to Customer.</value>
+  </data>
+  <data name="String227" xml:space="preserve">
+    <value>Ask For Hold Note</value>
+  </data>
+  <data name="String228" xml:space="preserve">
+    <value>Change Price On Enter Key</value>
+  </data>
+  <data name="String229" xml:space="preserve">
+    <value>Accept Search Code in Item Name</value>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>Current Item Basic Price:</value>
+  </data>
+  <data name="String230" xml:space="preserve">
+    <value>Warn when item not found in POS Main</value>
+  </data>
+  <data name="String231" xml:space="preserve">
+    <value>Number of invoices to print:</value>
+  </data>
+  <data name="String232" xml:space="preserve">
+    <value>Number of Customer Receipts to print:</value>
+  </data>
+  <data name="String233" xml:space="preserve">
+    <value>Search with Stock Settings</value>
+  </data>
+  <data name="String234" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="String235" xml:space="preserve">
+    <value>Is Customer Mandetory</value>
+  </data>
+  <data name="String236" xml:space="preserve">
+    <value>Use Customer Group Price</value>
+  </data>
+  <data name="String237" xml:space="preserve">
+    <value>Email Invoice to Customer</value>
+  </data>
+  <data name="String238" xml:space="preserve">
+    <value>Always Send Email</value>
+  </data>
+  <data name="String239" xml:space="preserve">
+    <value>SMS Invoice to Customer</value>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="String240" xml:space="preserve">
+    <value>Collect Credit Card and Food Coupon Commission Expense From Customer</value>
+  </data>
+  <data name="String241" xml:space="preserve">
+    <value>Bottom Panels</value>
+  </data>
+  <data name="String242" xml:space="preserve">
+    <value>Show Offer Details</value>
+  </data>
+  <data name="String243" xml:space="preserve">
+    <value>Show Hold Note Panel</value>
+  </data>
+  <data name="String244" xml:space="preserve">
+    <value>Show Dining Table Panel</value>
+  </data>
+  <data name="String245" xml:space="preserve">
+    <value>Mark Table as Available On Invoice Complete</value>
+  </data>
+  <data name="String246" xml:space="preserve">
+    <value>Invoice Screen Grid</value>
+  </data>
+  <data name="String247" xml:space="preserve">
+    <value>Show Measuring Unit Column</value>
+  </data>
+  <data name="String248" xml:space="preserve">
+    <value>Show Item Description In Column</value>
+  </data>
+  <data name="String249" xml:space="preserve">
+    <value>Show MRP Column</value>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="String250" xml:space="preserve">
+    <value>Show Item Images in Main Invoice Screen</value>
+  </data>
+  <data name="String251" xml:space="preserve">
+    <value>Totals</value>
+  </data>
+  <data name="String252" xml:space="preserve">
+    <value>Show Invoice Total Before Discount</value>
+  </data>
+  <data name="String253" xml:space="preserve">
+    <value>Show Basic Amount While Billing</value>
+  </data>
+  <data name="String254" xml:space="preserve">
+    <value>Add all quantity in invoice for total quantity</value>
+  </data>
+  <data name="String255" xml:space="preserve">
+    <value>Allow Invoice Or Advance Booking with Zero Grand Total</value>
+  </data>
+  <data name="String256" xml:space="preserve">
+    <value>Allow Advance Booking Document With Zero Booking Amount</value>
+  </data>
+  <data name="String257" xml:space="preserve">
+    <value>Payment Settings</value>
+  </data>
+  <data name="String258" xml:space="preserve">
+    <value>Default Payment Mode :</value>
+  </data>
+  <data name="String259" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="String26" xml:space="preserve">
+    <value>Current Item Quantity</value>
+  </data>
+  <data name="String260" xml:space="preserve">
+    <value>Card</value>
+  </data>
+  <data name="String261" xml:space="preserve">
+    <value>Cheque</value>
+  </data>
+  <data name="String262" xml:space="preserve">
+    <value>Store Credit</value>
+  </data>
+  <data name="String263" xml:space="preserve">
+    <value>Advance Amount</value>
+  </data>
+  <data name="String264" xml:space="preserve">
+    <value>Approved Pending</value>
+  </data>
+  <data name="String265" xml:space="preserve">
+    <value>Gift Card</value>
+  </data>
+  <data name="String266" xml:space="preserve">
+    <value>Bank Transfer</value>
+  </data>
+  <data name="String267" xml:space="preserve">
+    <value>Food Coupon</value>
+  </data>
+  <data name="String268" xml:space="preserve">
+    <value>Sales Return</value>
+  </data>
+  <data name="String269" xml:space="preserve">
+    <value>Exchange</value>
+  </data>
+  <data name="String27" xml:space="preserve">
+    <value>Discount Percentage:</value>
+  </data>
+  <data name="String270" xml:space="preserve">
+    <value>Show Returnable Amount PopUp</value>
+  </data>
+  <data name="String271" xml:space="preserve">
+    <value>Round Off Invoice amount to nearest :</value>
+  </data>
+  <data name="String272" xml:space="preserve">
+    <value>Apply Additional Tax</value>
+  </data>
+  <data name="String273" xml:space="preserve">
+    <value>Default Additional Tax:</value>
+  </data>
+  <data name="String274" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="String275" xml:space="preserve">
+    <value>Apply Additional Charges</value>
+  </data>
+  <data name="String276" xml:space="preserve">
+    <value>Is Use Finance Agency</value>
+  </data>
+  <data name="String277" xml:space="preserve">
+    <value>Invoice Express Pay Settings</value>
+  </data>
+  <data name="String278" xml:space="preserve">
+    <value>Show Express Pay Button</value>
+  </data>
+  <data name="String279" xml:space="preserve">
+    <value>Show Invoice Express Pay Warning</value>
+  </data>
+  <data name="String28" xml:space="preserve">
+    <value>Total Item Sales Price After Tax</value>
+  </data>
+  <data name="String280" xml:space="preserve">
+    <value>Print Invoice In Express Pay</value>
+  </data>
+  <data name="String281" xml:space="preserve">
+    <value>Default Payment Mode Of Express Pay :</value>
+  </data>
+  <data name="String282" xml:space="preserve">
+    <value>Ask for payment mode in Express Pay</value>
+  </data>
+  <data name="String283" xml:space="preserve">
+    <value>Show Express Pay Returnable Amount PopUp</value>
+  </data>
+  <data name="String284" xml:space="preserve">
+    <value>Page2</value>
+  </data>
+  <data name="String285" xml:space="preserve">
+    <value>Sales Executive</value>
+  </data>
+  <data name="String286" xml:space="preserve">
+    <value>Is Sales Executive Mandetory</value>
+  </data>
+  <data name="String287" xml:space="preserve">
+    <value>Calculate Sales Executive Commission on Grand Total with Additional Charges</value>
+  </data>
+  <data name="String288" xml:space="preserve">
+    <value>Show Invoice Item Level Sales Executive Panel</value>
+  </data>
+  <data name="String289" xml:space="preserve">
+    <value>Show Invoice Level Sales Executive Also</value>
+  </data>
+  <data name="String29" xml:space="preserve">
+    <value>Add Spot Discount for Selected Amount</value>
+  </data>
+  <data name="String290" xml:space="preserve">
+    <value>Apply Commission to Sales Invoice</value>
+  </data>
+  <data name="String291" xml:space="preserve">
+    <value>Apply Commission only for Items without Item Level Executive</value>
+  </data>
+  <data name="String292" xml:space="preserve">
+    <value>Invoice Delivery</value>
+  </data>
+  <data name="String293" xml:space="preserve">
+    <value>Ask For Invoice Delivery Information</value>
+  </data>
+  <data name="String294" xml:space="preserve">
+    <value>Label Settings</value>
+  </data>
+  <data name="String295" xml:space="preserve">
+    <value>Is Item Label Compulsory at the time of Sales Invoice and Sales Return</value>
+  </data>
+  <data name="String296" xml:space="preserve">
+    <value>Subsidy</value>
+  </data>
+  <data name="String297" xml:space="preserve">
+    <value>Offer Subsidy</value>
+  </data>
+  <data name="String298" xml:space="preserve">
+    <value>Apply All Offers on Invoice Completion on Current Terminal</value>
+  </data>
+  <data name="String299" xml:space="preserve">
+    <value>Apply All Offers on Invoice Completion on All Terminal</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="String30" xml:space="preserve">
+    <value>Reason for Discount</value>
+  </data>
+  <data name="String300" xml:space="preserve">
+    <value>Other Settings</value>
+  </data>
+  <data name="String301" xml:space="preserve">
+    <value>Max Items can be</value>
+  </data>
+  <data name="String302" xml:space="preserve">
+    <value>removed from Sales Invoice :</value>
+  </data>
+  <data name="String303" xml:space="preserve">
+    <value>Number of days to hold invoice :</value>
+  </data>
+  <data name="String304" xml:space="preserve">
+    <value>While Showing purchase price</value>
+  </data>
+  <data name="String305" xml:space="preserve">
+    <value>from Invoice screen add % Amount :</value>
+  </data>
+  <data name="String306" xml:space="preserve">
+    <value>Invoice Token Settings</value>
+  </data>
+  <data name="String307" xml:space="preserve">
+    <value>Delete Attached Tokens when Invoice is Cancelled</value>
+  </data>
+  <data name="String308" xml:space="preserve">
+    <value>Print Token on Hold Invoice</value>
+  </data>
+  <data name="String309" xml:space="preserve">
+    <value>Print Token for Removed Items</value>
+  </data>
+  <data name="String31" xml:space="preserve">
+    <value>TextBox</value>
+  </data>
+  <data name="String310" xml:space="preserve">
+    <value>Pictorial Billing Settings</value>
+  </data>
+  <data name="String311" xml:space="preserve">
+    <value>Allow to Scan or Search Item</value>
+  </data>
+  <data name="String312" xml:space="preserve">
+    <value>Manual Discount</value>
+  </data>
+  <data name="String313" xml:space="preserve">
+    <value>Use Only Manual Discount</value>
+  </data>
+  <data name="String314" xml:space="preserve">
+    <value>Add Every Invoice Item as a New Line Item</value>
+  </data>
+  <data name="String315" xml:space="preserve">
+    <value>Sample App</value>
+  </data>
+  <data name="String316" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="String317" xml:space="preserve">
+    <value>Randomize Grid Data</value>
+  </data>
+  <data name="String318" xml:space="preserve">
+    <value>Name (string)</value>
+  </data>
+  <data name="String319" xml:space="preserve">
+    <value>Age (int)</value>
+  </data>
+  <data name="String32" xml:space="preserve">
+    <value>ExPress Pay</value>
+  </data>
+  <data name="String320" xml:space="preserve">
+    <value>Age 16</value>
+  </data>
+  <data name="String321" xml:space="preserve">
+    <value>IsMarried (bool)</value>
+  </data>
+  <data name="String322" xml:space="preserve">
+    <value>Height (double)</value>
+  </data>
+  <data name="String323" xml:space="preserve">
+    <value>BirthDate (DateTime)</value>
+  </data>
+  <data name="String324" xml:space="preserve">
+    <value>FavoriteColor (SolidColorBrush)</value>
+  </data>
+  <data name="String325" xml:space="preserve">
+    <value>can execute command?</value>
+  </data>
+  <data name="String326" xml:space="preserve">
+    <value>(made with</value>
+  </data>
+  <data name="String327" xml:space="preserve">
+    <value>WPF MVVM project template</value>
+  </data>
+  <data name="String328" xml:space="preserve">
+    <value>)</value>
+  </data>
+  <data name="String329" xml:space="preserve">
+    <value>PrinterSettings</value>
+  </data>
+  <data name="String33" xml:space="preserve">
+    <value>Quick Details</value>
+  </data>
+  <data name="String330" xml:space="preserve">
+    <value>Choose Printer:</value>
+  </data>
+  <data name="String331" xml:space="preserve">
+    <value>Sl.No</value>
+  </data>
+  <data name="String332" xml:space="preserve">
+    <value>Emp Code</value>
+  </data>
+  <data name="String333" xml:space="preserve">
+    <value>Emp Name</value>
+  </data>
+  <data name="String334" xml:space="preserve">
+    <value>Search Code</value>
+  </data>
+  <data name="String335" xml:space="preserve">
+    <value>Joining Date</value>
+  </data>
+  <data name="String336" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="String337" xml:space="preserve">
+    <value>Designation</value>
+  </data>
+  <data name="String338" xml:space="preserve">
+    <value>Location Name</value>
+  </data>
+  <data name="String339" xml:space="preserve">
+    <value>Can Have Appointment</value>
+  </data>
+  <data name="String34" xml:space="preserve">
+    <value>Number :</value>
+  </data>
+  <data name="String340" xml:space="preserve">
+    <value>Work Shift Name</value>
+  </data>
+  <data name="String341" xml:space="preserve">
+    <value>AccessRightList</value>
+  </data>
+  <data name="String342" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="String343" xml:space="preserve">
+    <value>VERIFICATION</value>
+  </data>
+  <data name="String344" xml:space="preserve">
+    <value>NOTIFICATION</value>
+  </data>
+  <data name="String345" xml:space="preserve">
+    <value>MESSAGE</value>
+  </data>
+  <data name="String346" xml:space="preserve">
+    <value>APPROVE</value>
+  </data>
+  <data name="String347" xml:space="preserve">
+    <value>MAILBACK</value>
+  </data>
+  <data name="String348" xml:space="preserve">
+    <value>EXPT_TO_EXCEL</value>
+  </data>
+  <data name="String349" xml:space="preserve">
+    <value>IMORT_TO_EXCEL</value>
+  </data>
+  <data name="String35" xml:space="preserve">
+    <value>Total Before Round off :</value>
+  </data>
+  <data name="String350" xml:space="preserve">
+    <value>AddAccount</value>
+  </data>
+  <data name="String351" xml:space="preserve">
+    <value>Bank Branch:</value>
+  </data>
+  <data name="String352" xml:space="preserve">
+    <value>Account Number:</value>
+  </data>
+  <data name="String353" xml:space="preserve">
+    <value>Account Description:</value>
+  </data>
+  <data name="String354" xml:space="preserve">
+    <value>Account Search Code:</value>
+  </data>
+  <data name="String355" xml:space="preserve">
+    <value>Cheque Printing Format:</value>
+  </data>
+  <data name="String356" xml:space="preserve">
+    <value>AddBank</value>
+  </data>
+  <data name="String357" xml:space="preserve">
+    <value>Bank Account</value>
+  </data>
+  <data name="String358" xml:space="preserve">
+    <value>Bank Code:</value>
+  </data>
+  <data name="String359" xml:space="preserve">
+    <value>Bank Name:</value>
+  </data>
+  <data name="String36" xml:space="preserve">
+    <value>Round off Amount :</value>
+  </data>
+  <data name="String360" xml:space="preserve">
+    <value>IFCE Code:</value>
+  </data>
+  <data name="String361" xml:space="preserve">
+    <value>Address Line1:</value>
+  </data>
+  <data name="String362" xml:space="preserve">
+    <value>Address Line2:</value>
+  </data>
+  <data name="String363" xml:space="preserve">
+    <value>City:</value>
+  </data>
+  <data name="String364" xml:space="preserve">
+    <value>State:</value>
+  </data>
+  <data name="String365" xml:space="preserve">
+    <value>Country:</value>
+  </data>
+  <data name="String366" xml:space="preserve">
+    <value>Pin Code:</value>
+  </data>
+  <data name="String367" xml:space="preserve">
+    <value>Phone Number:</value>
+  </data>
+  <data name="String368" xml:space="preserve">
+    <value>Mobile Number:</value>
+  </data>
+  <data name="String369" xml:space="preserve">
+    <value>Fax Number:</value>
+  </data>
+  <data name="String37" xml:space="preserve">
+    <value>Final Amount :</value>
+  </data>
+  <data name="String370" xml:space="preserve">
+    <value>E mail:</value>
+  </data>
+  <data name="String371" xml:space="preserve">
+    <value>Web Site:</value>
+  </data>
+  <data name="String372" xml:space="preserve">
+    <value>Add Bank</value>
+  </data>
+  <data name="String373" xml:space="preserve">
+    <value>Add Account</value>
+  </data>
+  <data name="String374" xml:space="preserve">
+    <value>Address 1</value>
+  </data>
+  <data name="String375" xml:space="preserve">
+    <value>Address 2</value>
+  </data>
+  <data name="String376" xml:space="preserve">
+    <value>city</value>
+  </data>
+  <data name="String377" xml:space="preserve">
+    <value>state</value>
+  </data>
+  <data name="String378" xml:space="preserve">
+    <value>Account Created Date</value>
+  </data>
+  <data name="String379" xml:space="preserve">
+    <value>Branch Name</value>
+  </data>
+  <data name="String38" xml:space="preserve">
+    <value>Received Amount :</value>
+  </data>
+  <data name="String380" xml:space="preserve">
+    <value>Bank Account No</value>
+  </data>
+  <data name="String381" xml:space="preserve">
+    <value>Search Code</value>
+  </data>
+  <data name="String382" xml:space="preserve">
+    <value>Window_Bank_AccountList</value>
+  </data>
+  <data name="String383" xml:space="preserve">
+    <value>Add Bank</value>
+  </data>
+  <data name="String384" xml:space="preserve">
+    <value>Business Location :</value>
+  </data>
+  <data name="String385" xml:space="preserve">
+    <value>Cash Register Number :</value>
+  </data>
+  <data name="String386" xml:space="preserve">
+    <value>Cash Register Name :</value>
+  </data>
+  <data name="String387" xml:space="preserve">
+    <value>Cash Register Prefix :</value>
+  </data>
+  <data name="String388" xml:space="preserve">
+    <value>Associate Cash Register with this Login</value>
+  </data>
+  <data name="String389" xml:space="preserve">
+    <value>For Login :</value>
+  </data>
+  <data name="String39" xml:space="preserve">
+    <value>Returnable Balance :</value>
+  </data>
+  <data name="String390" xml:space="preserve">
+    <value>Is Main Cash Register</value>
+  </data>
+  <data name="String391" xml:space="preserve">
+    <value>Is Adjustment Cash Register</value>
+  </data>
+  <data name="String392" xml:space="preserve">
+    <value>Transfer CashReg</value>
+  </data>
+  <data name="String393" xml:space="preserve">
+    <value>Location Name</value>
+  </data>
+  <data name="String394" xml:space="preserve">
+    <value>Register Number</value>
+  </data>
+  <data name="String395" xml:space="preserve">
+    <value>Register Name</value>
+  </data>
+  <data name="String396" xml:space="preserve">
+    <value>Is main Cash Register</value>
+  </data>
+  <data name="String397" xml:space="preserve">
+    <value>Cash Amount</value>
+  </data>
+  <data name="String398" xml:space="preserve">
+    <value>Is In Use</value>
+  </data>
+  <data name="String399" xml:space="preserve">
+    <value>Is Adjustment Cash Register</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="String40" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="String400" xml:space="preserve">
+    <value>Perfix</value>
+  </data>
+  <data name="String401" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="String402" xml:space="preserve">
+    <value>Is limited Item</value>
+  </data>
+  <data name="String403" xml:space="preserve">
+    <value>Window_CashRegList</value>
+  </data>
+  <data name="String404" xml:space="preserve">
+    <value>CatagoryView</value>
+  </data>
+  <data name="String405" xml:space="preserve">
+    <value>Bar code Prefix</value>
+  </data>
+  <data name="String406" xml:space="preserve">
+    <value>e Shop Display Index</value>
+  </data>
+  <data name="String407" xml:space="preserve">
+    <value>Not For Portal</value>
+  </data>
+  <data name="String408" xml:space="preserve">
+    <value>Display Index</value>
+  </data>
+  <data name="String409" xml:space="preserve">
+    <value>Category List</value>
+  </data>
+  <data name="String41" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="String410" xml:space="preserve">
+    <value>Business Location</value>
+  </data>
+  <data name="String411" xml:space="preserve">
+    <value>Company Name:</value>
+  </data>
+  <data name="String412" xml:space="preserve">
+    <value>Shop Name</value>
+  </data>
+  <data name="String413" xml:space="preserve">
+    <value>( Business location) :</value>
+  </data>
+  <data name="String414" xml:space="preserve">
+    <value>Prefix for Documents :</value>
+  </data>
+  <data name="String415" xml:space="preserve">
+    <value>Start Number for all documents :</value>
+  </data>
+  <data name="String416" xml:space="preserve">
+    <value>Tin Number :</value>
+  </data>
+  <data name="String417" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="String418" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="String419" xml:space="preserve">
+    <value>Add Image</value>
+  </data>
+  <data name="String42" xml:space="preserve">
+    <value>ogin:</value>
+  </data>
+  <data name="String420" xml:space="preserve">
+    <value>Remove Image</value>
+  </data>
+  <data name="String421" xml:space="preserve">
+    <value>Document Setting</value>
+  </data>
+  <data name="String422" xml:space="preserve">
+    <value>Printer Setting:</value>
+  </data>
+  <data name="String423" xml:space="preserve">
+    <value>SMS Setting:</value>
+  </data>
+  <data name="String424" xml:space="preserve">
+    <value>Email Setting:</value>
+  </data>
+  <data name="String425" xml:space="preserve">
+    <value>Email Template Setting:</value>
+  </data>
+  <data name="String426" xml:space="preserve">
+    <value>Enable Email</value>
+  </data>
+  <data name="String427" xml:space="preserve">
+    <value>Additional Receipt Setting</value>
+  </data>
+  <data name="String428" xml:space="preserve">
+    <value>Second Receipt Printer:</value>
+  </data>
+  <data name="String429" xml:space="preserve">
+    <value>Second Receipt Print Formate:</value>
+  </data>
+  <data name="String43" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="String430" xml:space="preserve">
+    <value>Number of Second Receipt Print:</value>
+  </data>
+  <data name="String431" xml:space="preserve">
+    <value>Print Seconr Recept on different Printer</value>
+  </data>
+  <data name="String432" xml:space="preserve">
+    <value>Ask to prient everytime</value>
+  </data>
+  <data name="String433" xml:space="preserve">
+    <value>Move Stock Setting</value>
+  </data>
+  <data name="String434" xml:space="preserve">
+    <value>Move stock of delete invoice to a specified godown</value>
+  </data>
+  <data name="String435" xml:space="preserve">
+    <value>Godown to keep stock of deleted Invoices</value>
+  </data>
+  <data name="String436" xml:space="preserve">
+    <value>Company Name</value>
+  </data>
+  <data name="String437" xml:space="preserve">
+    <value>Shop Name</value>
+  </data>
+  <data name="String438" xml:space="preserve">
+    <value>Tin</value>
+  </data>
+  <data name="String439" xml:space="preserve">
+    <value>Address 1</value>
+  </data>
+  <data name="String44" xml:space="preserve">
+    <value>Cash Register:</value>
+  </data>
+  <data name="String440" xml:space="preserve">
+    <value>Address 2</value>
+  </data>
+  <data name="String441" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="String442" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="String443" xml:space="preserve">
+    <value>Pin</value>
+  </data>
+  <data name="String444" xml:space="preserve">
+    <value>Mobile Number</value>
+  </data>
+  <data name="String445" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="String446" xml:space="preserve">
+    <value>Business Location List</value>
+  </data>
+  <data name="String447" xml:space="preserve">
+    <value>Define Own Code</value>
+  </data>
+  <data name="String448" xml:space="preserve">
+    <value>Auto Code</value>
+  </data>
+  <data name="String449" xml:space="preserve">
+    <value>Customer Details</value>
+  </data>
+  <data name="String45" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="String450" xml:space="preserve">
+    <value>First name :</value>
+  </data>
+  <data name="String451" xml:space="preserve">
+    <value>Last name :</value>
+  </data>
+  <data name="String452" xml:space="preserve">
+    <value>Search Code :</value>
+  </data>
+  <data name="String453" xml:space="preserve">
+    <value>Is Active</value>
+  </data>
+  <data name="String454" xml:space="preserve">
+    <value>Customer Name for Display :</value>
+  </data>
+  <data name="String455" xml:space="preserve">
+    <value>VAT No :</value>
+  </data>
+  <data name="String456" xml:space="preserve">
+    <value>CST :</value>
+  </data>
+  <data name="String457" xml:space="preserve">
+    <value>Customer Loyalty</value>
+  </data>
+  <data name="String458" xml:space="preserve">
+    <value>Is Enrolled for Loyalty Points</value>
+  </data>
+  <data name="String459" xml:space="preserve">
+    <value>Loyalty Number :</value>
+  </data>
+  <data name="String46" xml:space="preserve">
+    <value>BarCode</value>
+  </data>
+  <data name="String460" xml:space="preserve">
+    <value>Auto-Generate Number</value>
+  </data>
+  <data name="String461" xml:space="preserve">
+    <value>My-Define Number</value>
+  </data>
+  <data name="String462" xml:space="preserve">
+    <value>Enrollment Date :</value>
+  </data>
+  <data name="String463" xml:space="preserve">
+    <value>Loyalty Points :</value>
+  </data>
+  <data name="String464" xml:space="preserve">
+    <value>Referred By :</value>
+  </data>
+  <data name="String465" xml:space="preserve">
+    <value>Is Loyalty points to referre on Every Invoice</value>
+  </data>
+  <data name="String466" xml:space="preserve">
+    <value>Shipping Address</value>
+  </data>
+  <data name="String467" xml:space="preserve">
+    <value>Address line 1 :</value>
+  </data>
+  <data name="String468" xml:space="preserve">
+    <value>Address line 2 :</value>
+  </data>
+  <data name="String469" xml:space="preserve">
+    <value>Billing Address</value>
+  </data>
+  <data name="String47" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="String470" xml:space="preserve">
+    <value>Same as Shipping Address</value>
+  </data>
+  <data name="String471" xml:space="preserve">
+    <value>Credit Limit / FA</value>
+  </data>
+  <data name="String472" xml:space="preserve">
+    <value>Use System default Credit Limit</value>
+  </data>
+  <data name="String473" xml:space="preserve">
+    <value>FA Balance :</value>
+  </data>
+  <data name="String474" xml:space="preserve">
+    <value>Add Customer Image</value>
+  </data>
+  <data name="String475" xml:space="preserve">
+    <value>Upload Image</value>
+  </data>
+  <data name="String476" xml:space="preserve">
+    <value>Customer Group</value>
+  </data>
+  <data name="String477" xml:space="preserve">
+    <value>Customer Group :</value>
+  </data>
+  <data name="String478" xml:space="preserve">
+    <value>Financial Account</value>
+  </data>
+  <data name="String479" xml:space="preserve">
+    <value>Opening Balance :</value>
+  </data>
+  <data name="String48" xml:space="preserve">
+    <value>Price without tax</value>
+  </data>
+  <data name="String480" xml:space="preserve">
+    <value>Invoices</value>
+  </data>
+  <data name="String481" xml:space="preserve">
+    <value>Recurring invoices</value>
+  </data>
+  <data name="String482" xml:space="preserve">
+    <value>Payments</value>
+  </data>
+  <data name="String483" xml:space="preserve">
+    <value>Quotes</value>
+  </data>
+  <data name="String484" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="String485" xml:space="preserve">
+    <value>Advanced Search</value>
+  </data>
+  <data name="String486" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="String487" xml:space="preserve">
+    <value>And</value>
+  </data>
+  <data name="String488" xml:space="preserve">
+    <value>Comparison Operator :</value>
+  </data>
+  <data name="String489" xml:space="preserve">
+    <value>Column To Search</value>
+  </data>
+  <data name="String49" xml:space="preserve">
+    <value>Qty</value>
+  </data>
+  <data name="String490" xml:space="preserve">
+    <value>Customer Code</value>
+  </data>
+  <data name="String491" xml:space="preserve">
+    <value>CurrentOpeningBalanceDetails</value>
+  </data>
+  <data name="String492" xml:space="preserve">
+    <value>Excel</value>
+  </data>
+  <data name="String493" xml:space="preserve">
+    <value>Recv Payment</value>
+  </data>
+  <data name="String494" xml:space="preserve">
+    <value>Customer FA Account</value>
+  </data>
+  <data name="String495" xml:space="preserve">
+    <value>&gt;</value>
+  </data>
+  <data name="String496" xml:space="preserve">
+    <value>Upload Items</value>
+  </data>
+  <data name="String497" xml:space="preserve">
+    <value>Import Items</value>
+  </data>
+  <data name="String498" xml:space="preserve">
+    <value>View Ledger</value>
+  </data>
+  <data name="String499" xml:space="preserve">
+    <value>Customer Group Name</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>Add Spot Discount for Total Invoice Bill Amount</value>
+  </data>
+  <data name="String50" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="String500" xml:space="preserve">
+    <value>Is Enrolled For Loyalty Points</value>
+  </data>
+  <data name="String501" xml:space="preserve">
+    <value>Loyalty Number</value>
+  </data>
+  <data name="String502" xml:space="preserve">
+    <value>VAT no</value>
+  </data>
+  <data name="String503" xml:space="preserve">
+    <value>CST no</value>
+  </data>
+  <data name="String504" xml:space="preserve">
+    <value>Name For Display</value>
+  </data>
+  <data name="String505" xml:space="preserve">
+    <value>Show In Active Customer only</value>
+  </data>
+  <data name="String506" xml:space="preserve">
+    <value>Show Active Customer only</value>
+  </data>
+  <data name="String507" xml:space="preserve">
+    <value>ImportDataForCustomer</value>
+  </data>
+  <data name="String508" xml:space="preserve">
+    <value>Select File :</value>
+  </data>
+  <data name="String509" xml:space="preserve">
+    <value>Start Import</value>
+  </data>
+  <data name="String51" xml:space="preserve">
+    <value>Price with Discount</value>
+  </data>
+  <data name="String510" xml:space="preserve">
+    <value>ImportExcel</value>
+  </data>
+  <data name="String511" xml:space="preserve">
+    <value>Download Blank Excel Sheet</value>
+  </data>
+  <data name="String512" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="String513" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="String514" xml:space="preserve">
+    <value>Customer View</value>
+  </data>
+  <data name="String515" xml:space="preserve">
+    <value>ViewLedger</value>
+  </data>
+  <data name="String516" xml:space="preserve">
+    <value>Select Company :</value>
+  </data>
+  <data name="String517" xml:space="preserve">
+    <value>Select Business Location :</value>
+  </data>
+  <data name="String518" xml:space="preserve">
+    <value>Select Financial Account :</value>
+  </data>
+  <data name="String519" xml:space="preserve">
+    <value>From :</value>
+  </data>
+  <data name="String52" xml:space="preserve">
+    <value>Tax Price(%)</value>
+  </data>
+  <data name="String520" xml:space="preserve">
+    <value>Opening Balance :</value>
+  </data>
+  <data name="String521" xml:space="preserve">
+    <value>Credit Total :</value>
+  </data>
+  <data name="String522" xml:space="preserve">
+    <value>Debit Total :</value>
+  </data>
+  <data name="String523" xml:space="preserve">
+    <value>Net Total :</value>
+  </data>
+  <data name="String524" xml:space="preserve">
+    <value>Cr.</value>
+  </data>
+  <data name="String525" xml:space="preserve">
+    <value>Db.</value>
+  </data>
+  <data name="String526" xml:space="preserve">
+    <value>To :</value>
+  </data>
+  <data name="String527" xml:space="preserve">
+    <value>View Details</value>
+  </data>
+  <data name="String528" xml:space="preserve">
+    <value>Apply Time Range</value>
+  </data>
+  <data name="String529" xml:space="preserve">
+    <value>closing Balance :</value>
+  </data>
+  <data name="String53" xml:space="preserve">
+    <value>Total Tax</value>
+  </data>
+  <data name="String530" xml:space="preserve">
+    <value>Transaction Date</value>
+  </data>
+  <data name="String531" xml:space="preserve">
+    <value>Credit Amount</value>
+  </data>
+  <data name="String532" xml:space="preserve">
+    <value>Debit Amount</value>
+  </data>
+  <data name="String533" xml:space="preserve">
+    <value>Narration Text</value>
+  </data>
+  <data name="String534" xml:space="preserve">
+    <value>Document Type</value>
+  </data>
+  <data name="String535" xml:space="preserve">
+    <value>GST Number</value>
+  </data>
+  <data name="String536" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="String537" xml:space="preserve">
+    <value>CustomerList</value>
+  </data>
+  <data name="String538" xml:space="preserve">
+    <value>Time Range</value>
+  </data>
+  <data name="String539" xml:space="preserve">
+    <value>From:</value>
+  </data>
+  <data name="String54" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="String540" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="String541" xml:space="preserve">
+    <value>View Details</value>
+  </data>
+  <data name="String542" xml:space="preserve">
+    <value>Total Amount:</value>
+  </data>
+  <data name="String543" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="String544" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="String545" xml:space="preserve">
+    <value>Search Code</value>
+  </data>
+  <data name="String546" xml:space="preserve">
+    <value>Catagory</value>
+  </data>
+  <data name="String547" xml:space="preserve">
+    <value>Sales Qnt.</value>
+  </data>
+  <data name="String548" xml:space="preserve">
+    <value>Sales Amount</value>
+  </data>
+  <data name="String549" xml:space="preserve">
+    <value>Return Qnt.</value>
+  </data>
+  <data name="String55" xml:space="preserve">
+    <value>PayNow</value>
+  </data>
+  <data name="String550" xml:space="preserve">
+    <value>Return Amount</value>
+  </data>
+  <data name="String551" xml:space="preserve">
+    <value>Total Amount</value>
+  </data>
+  <data name="String552" xml:space="preserve">
+    <value>Total Qnt.</value>
+  </data>
+  <data name="String553" xml:space="preserve">
+    <value>Total Record:</value>
+  </data>
+  <data name="String554" xml:space="preserve">
+    <value>Pending Invoices</value>
+  </data>
+  <data name="String555" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="String556" xml:space="preserve">
+    <value>Invoice No.</value>
+  </data>
+  <data name="String557" xml:space="preserve">
+    <value>Customer Code</value>
+  </data>
+  <data name="String558" xml:space="preserve">
+    <value>Customer Name</value>
+  </data>
+  <data name="String559" xml:space="preserve">
+    <value>Total Amount</value>
+  </data>
+  <data name="String56" xml:space="preserve">
+    <value>Invoice Number:</value>
+  </data>
+  <data name="String560" xml:space="preserve">
+    <value>Pending Amount</value>
+  </data>
+  <data name="String561" xml:space="preserve">
+    <value>Pending Payment</value>
+  </data>
+  <data name="String562" xml:space="preserve">
+    <value>Top Product</value>
+  </data>
+  <data name="String563" xml:space="preserve">
+    <value>Item Code</value>
+  </data>
+  <data name="String564" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="String565" xml:space="preserve">
+    <value>Quantity Sold</value>
+  </data>
+  <data name="String566" xml:space="preserve">
+    <value>Available Quantity</value>
+  </data>
+  <data name="String567" xml:space="preserve">
+    <value>Top Customer</value>
+  </data>
+  <data name="String568" xml:space="preserve">
+    <value>Total No. of Invoices</value>
+  </data>
+  <data name="String569" xml:space="preserve">
+    <value>Total Purchase</value>
+  </data>
+  <data name="String57" xml:space="preserve">
+    <value>Invoice Date:</value>
+  </data>
+  <data name="String570" xml:space="preserve">
+    <value>Recent Invoices</value>
+  </data>
+  <data name="String571" xml:space="preserve">
+    <value>Invoice No.</value>
+  </data>
+  <data name="String572" xml:space="preserve">
+    <value>Invoice Date</value>
+  </data>
+  <data name="String573" xml:space="preserve">
+    <value>Top Vendor</value>
+  </data>
+  <data name="String574" xml:space="preserve">
+    <value>Supplier Code</value>
+  </data>
+  <data name="String575" xml:space="preserve">
+    <value>Supplier Name</value>
+  </data>
+  <data name="String576" xml:space="preserve">
+    <value>Total No. of Purchase Orders</value>
+  </data>
+  <data name="String577" xml:space="preserve">
+    <value>Total Amount</value>
+  </data>
+  <data name="String578" xml:space="preserve">
+    <value>Pending Purchase Order</value>
+  </data>
+  <data name="String579" xml:space="preserve">
+    <value>PO Number</value>
+  </data>
+  <data name="String58" xml:space="preserve">
+    <value>Business Location:</value>
+  </data>
+  <data name="String580" xml:space="preserve">
+    <value>PO Amount</value>
+  </data>
+  <data name="String581" xml:space="preserve">
+    <value>Stock List</value>
+  </data>
+  <data name="String582" xml:space="preserve">
+    <value>BAR Code</value>
+  </data>
+  <data name="String583" xml:space="preserve">
+    <value>Available Stock</value>
+  </data>
+  <data name="String584" xml:space="preserve">
+    <value>Add_department</value>
+  </data>
+  <data name="String585" xml:space="preserve">
+    <value>Department :</value>
+  </data>
+  <data name="String586" xml:space="preserve">
+    <value>Sort Index :</value>
+  </data>
+  <data name="String587" xml:space="preserve">
+    <value>Add Photo</value>
+  </data>
+  <data name="String588" xml:space="preserve">
+    <value>Remove Photo</value>
+  </data>
+  <data name="String589" xml:space="preserve">
+    <value>sl</value>
+  </data>
+  <data name="String59" xml:space="preserve">
+    <value>Customer Info</value>
+  </data>
+  <data name="String590" xml:space="preserve">
+    <value>Sort Index</value>
+  </data>
+  <data name="String591" xml:space="preserve">
+    <value>DepartmentView</value>
+  </data>
+  <data name="String592" xml:space="preserve">
+    <value>Add Designation</value>
+  </data>
+  <data name="String593" xml:space="preserve">
+    <value>Designation :</value>
+  </data>
+  <data name="String594" xml:space="preserve">
+    <value>Indexs</value>
+  </data>
+  <data name="String595" xml:space="preserve">
+    <value>Designation View</value>
+  </data>
+  <data name="String596" xml:space="preserve">
+    <value>Designation</value>
+  </data>
+  <data name="String597" xml:space="preserve">
+    <value>Emp Code</value>
+  </data>
+  <data name="String598" xml:space="preserve">
+    <value>Emp Name</value>
+  </data>
+  <data name="String599" xml:space="preserve">
+    <value>Joining Date</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>Invoice Amount</value>
+  </data>
+  <data name="String60" xml:space="preserve">
+    <value>Customer :</value>
+  </data>
+  <data name="String600" xml:space="preserve">
+    <value>Location Name</value>
+  </data>
+  <data name="String601" xml:space="preserve">
+    <value>Can Have Appointment</value>
+  </data>
+  <data name="String602" xml:space="preserve">
+    <value>Work Shift Name</value>
+  </data>
+  <data name="String603" xml:space="preserve">
+    <value>Employee Code :</value>
+  </data>
+  <data name="String604" xml:space="preserve">
+    <value>First Name :</value>
+  </data>
+  <data name="String605" xml:space="preserve">
+    <value>Middle Name :</value>
+  </data>
+  <data name="String606" xml:space="preserve">
+    <value>DOB :</value>
+  </data>
+  <data name="String607" xml:space="preserve">
+    <value>Marital Status :</value>
+  </data>
+  <data name="String608" xml:space="preserve">
+    <value>Gender :</value>
+  </data>
+  <data name="String609" xml:space="preserve">
+    <value>Date Of Join :</value>
+  </data>
+  <data name="String61" xml:space="preserve">
+    <value>Available Credit Limit :</value>
+  </data>
+  <data name="String610" xml:space="preserve">
+    <value>Employee Designation :</value>
+  </data>
+  <data name="String611" xml:space="preserve">
+    <value>Married</value>
+  </data>
+  <data name="String612" xml:space="preserve">
+    <value>UnMarried</value>
+  </data>
+  <data name="String613" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="String614" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="String615" xml:space="preserve">
+    <value>Can request report vai SMS</value>
+  </data>
+  <data name="String616" xml:space="preserve">
+    <value>Can approved accesse request vai SMS</value>
+  </data>
+  <data name="String617" xml:space="preserve">
+    <value>not An Employee</value>
+  </data>
+  <data name="String618" xml:space="preserve">
+    <value>Can have appointment</value>
+  </data>
+  <data name="String619" xml:space="preserve">
+    <value>can be attached to invoice appointment</value>
+  </data>
+  <data name="String62" xml:space="preserve">
+    <value>Sales Executive :</value>
+  </data>
+  <data name="String620" xml:space="preserve">
+    <value>Zip :</value>
+  </data>
+  <data name="String621" xml:space="preserve">
+    <value>Mobile :</value>
+  </data>
+  <data name="String622" xml:space="preserve">
+    <value>FAX :</value>
+  </data>
+  <data name="String623" xml:space="preserve">
+    <value>Website :</value>
+  </data>
+  <data name="String624" xml:space="preserve">
+    <value>Working Shift :</value>
+  </data>
+  <data name="String625" xml:space="preserve">
+    <value>Sales Commission percent :</value>
+  </data>
+  <data name="String626" xml:space="preserve">
+    <value>Commission quick position :</value>
+  </data>
+  <data name="String627" xml:space="preserve">
+    <value>Maximun Sport Discount :</value>
+  </data>
+  <data name="String628" xml:space="preserve">
+    <value>EmployeeView</value>
+  </data>
+  <data name="String629" xml:space="preserve">
+    <value>Employee Code</value>
+  </data>
+  <data name="String63" xml:space="preserve">
+    <value>Customer Email :</value>
+  </data>
+  <data name="String630" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="String631" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="String632" xml:space="preserve">
+    <value>DOB</value>
+  </data>
+  <data name="String633" xml:space="preserve">
+    <value>Marital Status</value>
+  </data>
+  <data name="String634" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="String635" xml:space="preserve">
+    <value>Date Of Join</value>
+  </data>
+  <data name="String636" xml:space="preserve">
+    <value>business Location</value>
+  </data>
+  <data name="String637" xml:space="preserve">
+    <value>Employee Designation</value>
+  </data>
+  <data name="String638" xml:space="preserve">
+    <value>Can request report via SMS</value>
+  </data>
+  <data name="String639" xml:space="preserve">
+    <value>Can approved accesse request via SMS</value>
+  </data>
+  <data name="String64" xml:space="preserve">
+    <value>Customer Mobile No :</value>
+  </data>
+  <data name="String640" xml:space="preserve">
+    <value>not An Employee</value>
+  </data>
+  <data name="String641" xml:space="preserve">
+    <value>Can have appointment</value>
+  </data>
+  <data name="String642" xml:space="preserve">
+    <value>can be attached to invoice appointment</value>
+  </data>
+  <data name="String643" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="String644" xml:space="preserve">
+    <value>Working Shipt</value>
+  </data>
+  <data name="String645" xml:space="preserve">
+    <value>Sales Commission percent</value>
+  </data>
+  <data name="String646" xml:space="preserve">
+    <value>Commission quick position</value>
+  </data>
+  <data name="String647" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="String648" xml:space="preserve">
+    <value>Maximun Sport Discount</value>
+  </data>
+  <data name="String649" xml:space="preserve">
+    <value>Employee List</value>
+  </data>
+  <data name="String65" xml:space="preserve">
+    <value>Send Email To Customer</value>
+  </data>
+  <data name="String650" xml:space="preserve">
+    <value>Reopen</value>
+  </data>
+  <data name="String651" xml:space="preserve">
+    <value>Estimate Number</value>
+  </data>
+  <data name="String652" xml:space="preserve">
+    <value>Estimate Date</value>
+  </data>
+  <data name="String653" xml:space="preserve">
+    <value>Grand Total</value>
+  </data>
+  <data name="String654" xml:space="preserve">
+    <value>Tax Grand Total</value>
+  </data>
+  <data name="String655" xml:space="preserve">
+    <value>Total Item Qty</value>
+  </data>
+  <data name="String656" xml:space="preserve">
+    <value>Customer Name</value>
+  </data>
+  <data name="String657" xml:space="preserve">
+    <value>Invoice Note</value>
+  </data>
+  <data name="String658" xml:space="preserve">
+    <value>Hold Note</value>
+  </data>
+  <data name="String659" xml:space="preserve">
+    <value>Invoice Status</value>
+  </data>
+  <data name="String66" xml:space="preserve">
+    <value>Send SMS To Customer</value>
+  </data>
+  <data name="String660" xml:space="preserve">
+    <value>Employee Login</value>
+  </data>
+  <data name="String661" xml:space="preserve">
+    <value>Cash Register</value>
+  </data>
+  <data name="String662" xml:space="preserve">
+    <value>Sales Executive Name</value>
+  </data>
+  <data name="String663" xml:space="preserve">
+    <value>Delivery Date</value>
+  </data>
+  <data name="String664" xml:space="preserve">
+    <value>Delivery Time Slot</value>
+  </data>
+  <data name="String665" xml:space="preserve">
+    <value>Customer Comment</value>
+  </data>
+  <data name="String666" xml:space="preserve">
+    <value>Print Count</value>
+  </data>
+  <data name="String667" xml:space="preserve">
+    <value>Invoice Number</value>
+  </data>
+  <data name="String668" xml:space="preserve">
+    <value>Invoice Reference Number</value>
+  </data>
+  <data name="String669" xml:space="preserve">
+    <value>Invoice Date</value>
+  </data>
+  <data name="String67" xml:space="preserve">
+    <value>Invoice Info</value>
+  </data>
+  <data name="String670" xml:space="preserve">
+    <value>ViewEstimate</value>
+  </data>
+  <data name="String671" xml:space="preserve">
+    <value>Estimate Number :</value>
+  </data>
+  <data name="String672" xml:space="preserve">
+    <value>Invoice Number :</value>
+  </data>
+  <data name="String673" xml:space="preserve">
+    <value>Payment Status :</value>
+  </data>
+  <data name="String674" xml:space="preserve">
+    <value>ABD Number :</value>
+  </data>
+  <data name="String675" xml:space="preserve">
+    <value>Loyalty Points Given :</value>
+  </data>
+  <data name="String676" xml:space="preserve">
+    <value>Reference Number :</value>
+  </data>
+  <data name="String677" xml:space="preserve">
+    <value>Goods Delivered :</value>
+  </data>
+  <data name="String678" xml:space="preserve">
+    <value>Sms Invoice :</value>
+  </data>
+  <data name="String679" xml:space="preserve">
+    <value>Payment Type :</value>
+  </data>
+  <data name="String68" xml:space="preserve">
+    <value>Total Before Round off :</value>
+  </data>
+  <data name="String680" xml:space="preserve">
+    <value>Payment Cleared Date :</value>
+  </data>
+  <data name="String681" xml:space="preserve">
+    <value>Cash Register :</value>
+  </data>
+  <data name="String682" xml:space="preserve">
+    <value>Email Invoice :</value>
+  </data>
+  <data name="String683" xml:space="preserve">
+    <value>Estimate No</value>
+  </data>
+  <data name="String684" xml:space="preserve">
+    <value>Barcode</value>
+  </data>
+  <data name="String685" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="String686" xml:space="preserve">
+    <value>Estimate Date</value>
+  </data>
+  <data name="String687" xml:space="preserve">
+    <value>TaxType</value>
+  </data>
+  <data name="String688" xml:space="preserve">
+    <value>Tax Percent</value>
+  </data>
+  <data name="String689" xml:space="preserve">
+    <value>Unit price</value>
+  </data>
+  <data name="String69" xml:space="preserve">
+    <value>Round off Amount :</value>
+  </data>
+  <data name="String690" xml:space="preserve">
+    <value>Qty/Weight</value>
+  </data>
+  <data name="String691" xml:space="preserve">
+    <value>Measuring Unit</value>
+  </data>
+  <data name="String692" xml:space="preserve">
+    <value>Discount Amount</value>
+  </data>
+  <data name="String693" xml:space="preserve">
+    <value>Spot Discount Reason</value>
+  </data>
+  <data name="String694" xml:space="preserve">
+    <value>Total Tax Amount</value>
+  </data>
+  <data name="String695" xml:space="preserve">
+    <value>Tax Included :</value>
+  </data>
+  <data name="String696" xml:space="preserve">
+    <value>Discount Amount :</value>
+  </data>
+  <data name="String697" xml:space="preserve">
+    <value>Number Of ITems :</value>
+  </data>
+  <data name="String698" xml:space="preserve">
+    <value>Quantity Total :</value>
+  </data>
+  <data name="String699" xml:space="preserve">
+    <value>Total :</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>Discount Amount :</value>
+  </data>
+  <data name="String70" xml:space="preserve">
+    <value>Total :</value>
+  </data>
+  <data name="String700" xml:space="preserve">
+    <value>Round Off Amount :</value>
+  </data>
+  <data name="String701" xml:space="preserve">
+    <value>Print as Invoice</value>
+  </data>
+  <data name="String702" xml:space="preserve">
+    <value>AddGoDown</value>
+  </data>
+  <data name="String703" xml:space="preserve">
+    <value>GoDown Name</value>
+  </data>
+  <data name="String704" xml:space="preserve">
+    <value>Is Active</value>
+  </data>
+  <data name="String705" xml:space="preserve">
+    <value>GoDown Name</value>
+  </data>
+  <data name="String706" xml:space="preserve">
+    <value>ViewGoDown</value>
+  </data>
+  <data name="String707" xml:space="preserve">
+    <value>Window_GodownList</value>
+  </data>
+  <data name="String708" xml:space="preserve">
+    <value>Is Default GoDown</value>
+  </data>
+  <data name="String709" xml:space="preserve">
+    <value>Stock Correction</value>
+  </data>
+  <data name="String71" xml:space="preserve">
+    <value>Quantity Total :</value>
+  </data>
+  <data name="String710" xml:space="preserve">
+    <value>From Date:</value>
+  </data>
+  <data name="String711" xml:space="preserve">
+    <value>To Date:</value>
+  </data>
+  <data name="String712" xml:space="preserve">
+    <value>Apply Date</value>
+  </data>
+  <data name="String713" xml:space="preserve">
+    <value>Export Item</value>
+  </data>
+  <data name="String714" xml:space="preserve">
+    <value>Upload Item</value>
+  </data>
+  <data name="String715" xml:space="preserve">
+    <value>Inv Number</value>
+  </data>
+  <data name="String716" xml:space="preserve">
+    <value>Invoice Date</value>
+  </data>
+  <data name="String717" xml:space="preserve">
+    <value>Grand Total</value>
+  </data>
+  <data name="String718" xml:space="preserve">
+    <value>Tax Grand Total</value>
+  </data>
+  <data name="String719" xml:space="preserve">
+    <value>Total Item Quantity</value>
+  </data>
+  <data name="String72" xml:space="preserve">
+    <value>Number Of Item :</value>
+  </data>
+  <data name="String720" xml:space="preserve">
+    <value>Returnable Amount</value>
+  </data>
+  <data name="String721" xml:space="preserve">
+    <value>Invoice Pending Amount</value>
+  </data>
+  <data name="String722" xml:space="preserve">
+    <value>Customer Name</value>
+  </data>
+  <data name="String723" xml:space="preserve">
+    <value>Estimate Invoice Number</value>
+  </data>
+  <data name="String724" xml:space="preserve">
+    <value>Employee Login</value>
+  </data>
+  <data name="String725" xml:space="preserve">
+    <value>Cash Register</value>
+  </data>
+  <data name="String726" xml:space="preserve">
+    <value>Number Of Item</value>
+  </data>
+  <data name="String727" xml:space="preserve">
+    <value>View Invoice</value>
+  </data>
+  <data name="String728" xml:space="preserve">
+    <value>Payment Status :</value>
+  </data>
+  <data name="String729" xml:space="preserve">
+    <value>Invoice NO:</value>
+  </data>
+  <data name="String73" xml:space="preserve">
+    <value>Discount Included :</value>
+  </data>
+  <data name="String730" xml:space="preserve">
+    <value>Good Delivered:</value>
+  </data>
+  <data name="String731" xml:space="preserve">
+    <value>Loyalty Point :</value>
+  </data>
+  <data name="String732" xml:space="preserve">
+    <value>Estimate No:</value>
+  </data>
+  <data name="String733" xml:space="preserve">
+    <value>Customer Name:</value>
+  </data>
+  <data name="String734" xml:space="preserve">
+    <value>Cash Register :</value>
+  </data>
+  <data name="String735" xml:space="preserve">
+    <value>Payment Type:</value>
+  </data>
+  <data name="String736" xml:space="preserve">
+    <value>Email Invoice:</value>
+  </data>
+  <data name="String737" xml:space="preserve">
+    <value>SMS Invoice:</value>
+  </data>
+  <data name="String738" xml:space="preserve">
+    <value>Sale Quantity</value>
+  </data>
+  <data name="String739" xml:space="preserve">
+    <value>MRP</value>
+  </data>
+  <data name="String74" xml:space="preserve">
+    <value>Tax Included :</value>
+  </data>
+  <data name="String740" xml:space="preserve">
+    <value>Sales Price</value>
+  </data>
+  <data name="String741" xml:space="preserve">
+    <value>Sales Measuring Unit</value>
+  </data>
+  <data name="String742" xml:space="preserve">
+    <value>Purchase Measuring Unit</value>
+  </data>
+  <data name="String743" xml:space="preserve">
+    <value>Modified By</value>
+  </data>
+  <data name="String744" xml:space="preserve">
+    <value>Modification Date</value>
+  </data>
+  <data name="String745" xml:space="preserve">
+    <value>Category Name</value>
+  </data>
+  <data name="String746" xml:space="preserve">
+    <value>Display Index</value>
+  </data>
+  <data name="String747" xml:space="preserve">
+    <value>Item Group Name</value>
+  </data>
+  <data name="String748" xml:space="preserve">
+    <value>Name in Regional Language</value>
+  </data>
+  <data name="String749" xml:space="preserve">
+    <value>Retunable Amount :</value>
+  </data>
+  <data name="String75" xml:space="preserve">
+    <value>Tax Details :</value>
+  </data>
+  <data name="String750" xml:space="preserve">
+    <value>Tax Included :</value>
+  </data>
+  <data name="String751" xml:space="preserve">
+    <value>Discount Included :</value>
+  </data>
+  <data name="String752" xml:space="preserve">
+    <value>Rount OF Amount :</value>
+  </data>
+  <data name="String753" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="String754" xml:space="preserve">
+    <value>Quantity Total :</value>
+  </data>
+  <data name="String755" xml:space="preserve">
+    <value>Number Of Item :</value>
+  </data>
+  <data name="String756" xml:space="preserve">
+    <value>Sport Discount Reason :</value>
+  </data>
+  <data name="String757" xml:space="preserve">
+    <value>Sport Discount Amount :</value>
+  </data>
+  <data name="String758" xml:space="preserve">
+    <value>Creator Name :</value>
+  </data>
+  <data name="String759" xml:space="preserve">
+    <value>ChangeInvoiceCustomer</value>
+  </data>
+  <data name="String76" xml:space="preserve">
+    <value>Cash</value>
+  </data>
+  <data name="String760" xml:space="preserve">
+    <value>Invoice Number :</value>
+  </data>
+  <data name="String761" xml:space="preserve">
+    <value>ImportDataItem</value>
+  </data>
+  <data name="String762" xml:space="preserve">
+    <value>Start Import</value>
+  </data>
+  <data name="String763" xml:space="preserve">
+    <value>Select File :</value>
+  </data>
+  <data name="String764" xml:space="preserve">
+    <value>ImportExcel</value>
+  </data>
+  <data name="String765" xml:space="preserve">
+    <value>Download Blank Excel Sheet</value>
+  </data>
+  <data name="String766" xml:space="preserve">
+    <value>Browse</value>
+  </data>
+  <data name="String767" xml:space="preserve">
+    <value>InvoiceDeliveryDetails</value>
+  </data>
+  <data name="String768" xml:space="preserve">
+    <value>Employee :</value>
+  </data>
+  <data name="String769" xml:space="preserve">
+    <value>Invoice Delivery Date :</value>
+  </data>
+  <data name="String77" xml:space="preserve">
+    <value>Select Cash Register :</value>
+  </data>
+  <data name="String770" xml:space="preserve">
+    <value>Receiver's Name"</value>
+  </data>
+  <data name="String771" xml:space="preserve">
+    <value>Note :</value>
+  </data>
+  <data name="String772" xml:space="preserve">
+    <value>Pick Meassage</value>
+  </data>
+  <data name="String773" xml:space="preserve">
+    <value>No Delivery Details</value>
+  </data>
+  <data name="String774" xml:space="preserve">
+    <value>Item Add/Edit Page</value>
+  </data>
+  <data name="String775" xml:space="preserve">
+    <value>Add Item Image</value>
+  </data>
+  <data name="String776" xml:space="preserve">
+    <value>Opening Stock :</value>
+  </data>
+  <data name="String777" xml:space="preserve">
+    <value>Key Words :</value>
+  </data>
+  <data name="String778" xml:space="preserve">
+    <value>Display Index :</value>
+  </data>
+  <data name="String779" xml:space="preserve">
+    <value>Accessories Keywords :</value>
+  </data>
+  <data name="String78" xml:space="preserve">
+    <value>Amount :</value>
+  </data>
+  <data name="String780" xml:space="preserve">
+    <value>Item Description :</value>
+  </data>
+  <data name="String781" xml:space="preserve">
+    <value>Attachments</value>
+  </data>
+  <data name="String782" xml:space="preserve">
+    <value>Add op. Stock</value>
+  </data>
+  <data name="String783" xml:space="preserve">
+    <value>Item Details</value>
+  </data>
+  <data name="String784" xml:space="preserve">
+    <value>Bar Code:</value>
+  </data>
+  <data name="String785" xml:space="preserve">
+    <value>Auto Generate</value>
+  </data>
+  <data name="String786" xml:space="preserve">
+    <value>Define My Own</value>
+  </data>
+  <data name="String787" xml:space="preserve">
+    <value>Name :</value>
+  </data>
+  <data name="String788" xml:space="preserve">
+    <value>Item Unique Name :</value>
+  </data>
+  <data name="String789" xml:space="preserve">
+    <value>Item Group Name :</value>
+  </data>
+  <data name="String79" xml:space="preserve">
+    <value>Cheque</value>
+  </data>
+  <data name="String790" xml:space="preserve">
+    <value>Name in Regional Language :</value>
+  </data>
+  <data name="String791" xml:space="preserve">
+    <value>Category :</value>
+  </data>
+  <data name="String792" xml:space="preserve">
+    <value>Search Code :</value>
+  </data>
+  <data name="String793" xml:space="preserve">
+    <value>Tax Detail</value>
+  </data>
+  <data name="String794" xml:space="preserve">
+    <value>Tax paid While Purchasing :</value>
+  </data>
+  <data name="String795" xml:space="preserve">
+    <value>Tax collected While Selling :</value>
+  </data>
+  <data name="String796" xml:space="preserve">
+    <value>My Sales Price included Tax</value>
+  </data>
+  <data name="String797" xml:space="preserve">
+    <value>Packaging</value>
+  </data>
+  <data name="String798" xml:space="preserve">
+    <value>Purchase Measuring Unit :</value>
+  </data>
+  <data name="String799" xml:space="preserve">
+    <value>Sales measuting unit :</value>
+  </data>
+  <data name="String8" xml:space="preserve">
+    <value>Amount After Tax :</value>
+  </data>
+  <data name="String80" xml:space="preserve">
+    <value>Amount :</value>
+  </data>
+  <data name="String800" xml:space="preserve">
+    <value>1 Purchase unit is equal to :</value>
+  </data>
+  <data name="String801" xml:space="preserve">
+    <value>Sales unit</value>
+  </data>
+  <data name="String802" xml:space="preserve">
+    <value>Pricing</value>
+  </data>
+  <data name="String803" xml:space="preserve">
+    <value>Last Purchase Unit Price :</value>
+  </data>
+  <data name="String804" xml:space="preserve">
+    <value>Sales Price before tax :</value>
+  </data>
+  <data name="String805" xml:space="preserve">
+    <value>Sales Price (My MRP) :</value>
+  </data>
+  <data name="String806" xml:space="preserve">
+    <value>MRP (Printed MRP) :</value>
+  </data>
+  <data name="String807" xml:space="preserve">
+    <value>Packaging Dimension</value>
+  </data>
+  <data name="String808" xml:space="preserve">
+    <value>Weights Of Paper:</value>
+  </data>
+  <data name="String809" xml:space="preserve">
+    <value>Weights Of Plastic:</value>
+  </data>
+  <data name="String81" xml:space="preserve">
+    <value>Cheque No :</value>
+  </data>
+  <data name="String810" xml:space="preserve">
+    <value>Weights Of Foam:</value>
+  </data>
+  <data name="String811" xml:space="preserve">
+    <value>Weights Of Cardboard:</value>
+  </data>
+  <data name="String812" xml:space="preserve">
+    <value>Gram</value>
+  </data>
+  <data name="String813" xml:space="preserve">
+    <value>Item Location</value>
+  </data>
+  <data name="String814" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="String815" xml:space="preserve">
+    <value>Sort Index</value>
+  </data>
+  <data name="String816" xml:space="preserve">
+    <value>Select Location</value>
+  </data>
+  <data name="String817" xml:space="preserve">
+    <value>Select Sort index</value>
+  </data>
+  <data name="String818" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="String819" xml:space="preserve">
+    <value>Bussiness Location</value>
+  </data>
+  <data name="String82" xml:space="preserve">
+    <value>Select Bank AC :</value>
+  </data>
+  <data name="String820" xml:space="preserve">
+    <value>GoDown Name</value>
+  </data>
+  <data name="String821" xml:space="preserve">
+    <value>GoDown ID</value>
+  </data>
+  <data name="String822" xml:space="preserve">
+    <value>Is Default GoDown</value>
+  </data>
+  <data name="String823" xml:space="preserve">
+    <value>Stock Correction</value>
+  </data>
+  <data name="String824" xml:space="preserve">
+    <value>Location Name</value>
+  </data>
+  <data name="String825" xml:space="preserve">
+    <value>BarCode</value>
+  </data>
+  <data name="String826" xml:space="preserve">
+    <value>Item search</value>
+  </data>
+  <data name="String827" xml:space="preserve">
+    <value>Show Inactive Items Only</value>
+  </data>
+  <data name="String828" xml:space="preserve">
+    <value>Show Images</value>
+  </data>
+  <data name="String829" xml:space="preserve">
+    <value>!</value>
+  </data>
+  <data name="String83" xml:space="preserve">
+    <value>Select Bank Branch :</value>
+  </data>
+  <data name="String830" xml:space="preserve">
+    <value>-&gt;</value>
+  </data>
+  <data name="String831" xml:space="preserve">
+    <value>Show Active Items Only</value>
+  </data>
+  <data name="String832" xml:space="preserve">
+    <value>Excel</value>
+  </data>
+  <data name="String833" xml:space="preserve">
+    <value>Item Quantity</value>
+  </data>
+  <data name="String834" xml:space="preserve">
+    <value>View Sales History</value>
+  </data>
+  <data name="String835" xml:space="preserve">
+    <value>Purchase Sales History</value>
+  </data>
+  <data name="String836" xml:space="preserve">
+    <value>Item Sales History</value>
+  </data>
+  <data name="String837" xml:space="preserve">
+    <value>Item Purchase History</value>
+  </data>
+  <data name="String838" xml:space="preserve">
+    <value>Import Items</value>
+  </data>
+  <data name="String839" xml:space="preserve">
+    <value>Upload Items</value>
+  </data>
+  <data name="String84" xml:space="preserve">
+    <value>Cheque Date :</value>
+  </data>
+  <data name="String840" xml:space="preserve">
+    <value>NewReceivedItemEntry</value>
+  </data>
+  <data name="String841" xml:space="preserve">
+    <value>Select Business Locaion :</value>
+  </data>
+  <data name="String842" xml:space="preserve">
+    <value>Supplier Invoice Date :</value>
+  </data>
+  <data name="String843" xml:space="preserve">
+    <value>Supplier Invoice Number :</value>
+  </data>
+  <data name="String844" xml:space="preserve">
+    <value>Search :</value>
+  </data>
+  <data name="String845" xml:space="preserve">
+    <value>Filter Hierachy :</value>
+  </data>
+  <data name="String846" xml:space="preserve">
+    <value>Received Item Entry Number :</value>
+  </data>
+  <data name="String847" xml:space="preserve">
+    <value>Receive Items On Date :</value>
+  </data>
+  <data name="String848" xml:space="preserve">
+    <value>PO Number :</value>
+  </data>
+  <data name="String849" xml:space="preserve">
+    <value>Supplier :</value>
+  </data>
+  <data name="String85" xml:space="preserve">
+    <value>Cheque Printer :</value>
+  </data>
+  <data name="String850" xml:space="preserve">
+    <value>Payment Terms :</value>
+  </data>
+  <data name="String851" xml:space="preserve">
+    <value>Godown :</value>
+  </data>
+  <data name="String852" xml:space="preserve">
+    <value>Date :</value>
+  </data>
+  <data name="String853" xml:space="preserve">
+    <value>S No :</value>
+  </data>
+  <data name="String854" xml:space="preserve">
+    <value>Image :</value>
+  </data>
+  <data name="String855" xml:space="preserve">
+    <value>Received paid Qty/Weight :</value>
+  </data>
+  <data name="String856" xml:space="preserve">
+    <value>Measuring Unit :</value>
+  </data>
+  <data name="String857" xml:space="preserve">
+    <value>Item Unit Price Before Tax :</value>
+  </data>
+  <data name="String858" xml:space="preserve">
+    <value>Item Level Discount Percent :</value>
+  </data>
+  <data name="String859" xml:space="preserve">
+    <value>Invoice Level Discount Percent :</value>
+  </data>
+  <data name="String86" xml:space="preserve">
+    <value>Print Check</value>
+  </data>
+  <data name="String860" xml:space="preserve">
+    <value>Subtotal Before Tax :</value>
+  </data>
+  <data name="String861" xml:space="preserve">
+    <value>Tax Name:</value>
+  </data>
+  <data name="String862" xml:space="preserve">
+    <value>Total Tax Amount:</value>
+  </data>
+  <data name="String863" xml:space="preserve">
+    <value>Tax Percent :</value>
+  </data>
+  <data name="String864" xml:space="preserve">
+    <value>Item Unit Price After Tax :</value>
+  </data>
+  <data name="String865" xml:space="preserve">
+    <value>Sub Total After Tax :</value>
+  </data>
+  <data name="String866" xml:space="preserve">
+    <value>Effective Rate Per Unit :</value>
+  </data>
+  <data name="String867" xml:space="preserve">
+    <value>Sales Price :</value>
+  </data>
+  <data name="String868" xml:space="preserve">
+    <value>MRP :</value>
+  </data>
+  <data name="String869" xml:space="preserve">
+    <value>Sales Price Markup Percent :</value>
+  </data>
+  <data name="String87" xml:space="preserve">
+    <value>Bank Transfer</value>
+  </data>
+  <data name="String870" xml:space="preserve">
+    <value>Sales Price Margin Percent :</value>
+  </data>
+  <data name="String871" xml:space="preserve">
+    <value>Sub Total Before Tax :</value>
+  </data>
+  <data name="String872" xml:space="preserve">
+    <value>Sub Total :</value>
+  </data>
+  <data name="String873" xml:space="preserve">
+    <value>Round Off Adjustment Amount :</value>
+  </data>
+  <data name="String874" xml:space="preserve">
+    <value>TextBlock</value>
+  </data>
+  <data name="String875" xml:space="preserve">
+    <value>TextBox</value>
+  </data>
+  <data name="String876" xml:space="preserve">
+    <value>CheckBox</value>
+  </data>
+  <data name="String877" xml:space="preserve">
+    <value>RadioButton</value>
+  </data>
+  <data name="String878" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="String879" xml:space="preserve">
+    <value>Recieve Item</value>
+  </data>
+  <data name="String88" xml:space="preserve">
+    <value>Select Bank Account :</value>
+  </data>
+  <data name="String880" xml:space="preserve">
+    <value>Show Stock</value>
+  </data>
+  <data name="String881" xml:space="preserve">
+    <value>Add New Item</value>
+  </data>
+  <data name="String882" xml:space="preserve">
+    <value>Remove Item</value>
+  </data>
+  <data name="String883" xml:space="preserve">
+    <value>Apply Discount</value>
+  </data>
+  <data name="String884" xml:space="preserve">
+    <value>Select Business Location:</value>
+  </data>
+  <data name="String885" xml:space="preserve">
+    <value>Received Item Entry Number:</value>
+  </data>
+  <data name="String886" xml:space="preserve">
+    <value>Filter Hierarchy:</value>
+  </data>
+  <data name="String887" xml:space="preserve">
+    <value>By Template</value>
+  </data>
+  <data name="String888" xml:space="preserve">
+    <value>Item Name:</value>
+  </data>
+  <data name="String889" xml:space="preserve">
+    <value>Search Code:</value>
+  </data>
+  <data name="String89" xml:space="preserve">
+    <value>Select Bank Branch :</value>
+  </data>
+  <data name="String890" xml:space="preserve">
+    <value>Supplier Invoice Number:</value>
+  </data>
+  <data name="String891" xml:space="preserve">
+    <value>Supplier Invoice Date:</value>
+  </data>
+  <data name="String892" xml:space="preserve">
+    <value>Date :</value>
+  </data>
+  <data name="String893" xml:space="preserve">
+    <value>Received Item On Date :</value>
+  </data>
+  <data name="String894" xml:space="preserve">
+    <value>Receive Items with existing Purchase Order</value>
+  </data>
+  <data name="String895" xml:space="preserve">
+    <value>PO Number :</value>
+  </data>
+  <data name="String896" xml:space="preserve">
+    <value>Supplier :</value>
+  </data>
+  <data name="String897" xml:space="preserve">
+    <value>Payment Terms :</value>
+  </data>
+  <data name="String898" xml:space="preserve">
+    <value>days</value>
+  </data>
+  <data name="String899" xml:space="preserve">
+    <value>Godown :</value>
+  </data>
+  <data name="String9" xml:space="preserve">
+    <value>New Invoice Amount :</value>
+  </data>
+  <data name="String90" xml:space="preserve">
+    <value>Transfer Date :</value>
+  </data>
+  <data name="String900" xml:space="preserve">
+    <value>Quantity Calculation</value>
+  </data>
+  <data name="String901" xml:space="preserve">
+    <value>Enter Quantity</value>
+  </data>
+  <data name="String902" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="String903" xml:space="preserve">
+    <value>Paid Qty/Weight</value>
+  </data>
+  <data name="String904" xml:space="preserve">
+    <value>Received Paid Qty/Weight</value>
+  </data>
+  <data name="String905" xml:space="preserve">
+    <value>Purchase Unit</value>
+  </data>
+  <data name="String906" xml:space="preserve">
+    <value>Purchase Price Before Tax</value>
+  </data>
+  <data name="String907" xml:space="preserve">
+    <value>Sub Total After Tax</value>
+  </data>
+  <data name="String908" xml:space="preserve">
+    <value>Sub Total Before Tax</value>
+  </data>
+  <data name="String909" xml:space="preserve">
+    <value>Sales Price Markup Percent</value>
+  </data>
+  <data name="String91" xml:space="preserve">
+    <value>Financial Account</value>
+  </data>
+  <data name="String910" xml:space="preserve">
+    <value>Total Quantity</value>
+  </data>
+  <data name="String911" xml:space="preserve">
+    <value>Number Of Packages :</value>
+  </data>
+  <data name="String912" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="String913" xml:space="preserve">
+    <value>Receiving Employee :</value>
+  </data>
+  <data name="String914" xml:space="preserve">
+    <value>Note :</value>
+  </data>
+  <data name="String915" xml:space="preserve">
+    <value>Pick Message</value>
+  </data>
+  <data name="String916" xml:space="preserve">
+    <value>Discount On Total Before Tax :</value>
+  </data>
+  <data name="String917" xml:space="preserve">
+    <value>Discount Flat</value>
+  </data>
+  <data name="String918" xml:space="preserve">
+    <value>Discount Percent</value>
+  </data>
+  <data name="String919" xml:space="preserve">
+    <value>Apply Discount</value>
+  </data>
+  <data name="String92" xml:space="preserve">
+    <value>Select Credit Financial Account :</value>
+  </data>
+  <data name="String920" xml:space="preserve">
+    <value>Invoice Discount Amount :</value>
+  </data>
+  <data name="String921" xml:space="preserve">
+    <value>Current Advance With Supplier :</value>
+  </data>
+  <data name="String922" xml:space="preserve">
+    <value>0.00</value>
+  </data>
+  <data name="String923" xml:space="preserve">
+    <value>Addtional Charges :</value>
+  </data>
+  <data name="String924" xml:space="preserve">
+    <value>Apply For Effective Price</value>
+  </data>
+  <data name="String925" xml:space="preserve">
+    <value>Sub Total Before Tax :</value>
+  </data>
+  <data name="String926" xml:space="preserve">
+    <value>Total Tax Amount :</value>
+  </data>
+  <data name="String927" xml:space="preserve">
+    <value>Sub Total :</value>
+  </data>
+  <data name="String928" xml:space="preserve">
+    <value>Round Off Adjustment Amount :</value>
+  </data>
+  <data name="String929" xml:space="preserve">
+    <value>Total Amount :</value>
+  </data>
+  <data name="String93" xml:space="preserve">
+    <value>Credits Limits</value>
+  </data>
+  <data name="String930" xml:space="preserve">
+    <value>Use Supplier Advance Amount :</value>
+  </data>
+  <data name="String931" xml:space="preserve">
+    <value>Pay In Cash</value>
+  </data>
+  <data name="String932" xml:space="preserve">
+    <value>Clone</value>
+  </data>
+  <data name="String933" xml:space="preserve">
+    <value>Save In Draft</value>
+  </data>
+  <data name="String934" xml:space="preserve">
+    <value>Save &amp; Print</value>
+  </data>
+  <data name="String935" xml:space="preserve">
+    <value>ReceiveItemManager</value>
+  </data>
+  <data name="String936" xml:space="preserve">
+    <value>From Date :</value>
+  </data>
+  <data name="String937" xml:space="preserve">
+    <value>To Date :</value>
+  </data>
+  <data name="String938" xml:space="preserve">
+    <value>Basic Price :</value>
+  </data>
+  <data name="String939" xml:space="preserve">
+    <value>Unit Tax Amount :</value>
+  </data>
+  <data name="String94" xml:space="preserve">
+    <value>Advanced Amount</value>
+  </data>
+  <data name="String940" xml:space="preserve">
+    <value>Tax Type :</value>
+  </data>
+  <data name="String941" xml:space="preserve">
+    <value>Tax Percent :</value>
+  </data>
+  <data name="String942" xml:space="preserve">
+    <value>Unit Price :</value>
+  </data>
+  <data name="String943" xml:space="preserve">
+    <value>Qty/Weight :</value>
+  </data>
+  <data name="String944" xml:space="preserve">
+    <value>Measuring Unit:</value>
+  </data>
+  <data name="String945" xml:space="preserve">
+    <value>Discount Amount :</value>
+  </data>
+  <data name="String946" xml:space="preserve">
+    <value>Spot Discount Reason :</value>
+  </data>
+  <data name="String947" xml:space="preserve">
+    <value>Show In Date Range</value>
+  </data>
+  <data name="String948" xml:space="preserve">
+    <value>Show Only Pending</value>
+  </data>
+  <data name="String949" xml:space="preserve">
+    <value>Show Only Held</value>
+  </data>
+  <data name="String95" xml:space="preserve">
+    <value>Available Amount :</value>
+  </data>
+  <data name="String950" xml:space="preserve">
+    <value>Payment To Supplier</value>
+  </data>
+  <data name="String951" xml:space="preserve">
+    <value>Receive Item Entry Nubmer</value>
+  </data>
+  <data name="String952" xml:space="preserve">
+    <value>Is Payment By Cash</value>
+  </data>
+  <data name="String953" xml:space="preserve">
+    <value>Item Received Date</value>
+  </data>
+  <data name="String954" xml:space="preserve">
+    <value>Godown Name</value>
+  </data>
+  <data name="String955" xml:space="preserve">
+    <value>Supplier Name</value>
+  </data>
+  <data name="String956" xml:space="preserve">
+    <value>Total Tax Amount</value>
+  </data>
+  <data name="String957" xml:space="preserve">
+    <value>Supplier Invoice Number</value>
+  </data>
+  <data name="String958" xml:space="preserve">
+    <value>Supplier Invoice Date</value>
+  </data>
+  <data name="String959" xml:space="preserve">
+    <value>Receive Item View</value>
+  </data>
+  <data name="String96" xml:space="preserve">
+    <value>Used Amount :</value>
+  </data>
+  <data name="String960" xml:space="preserve">
+    <value>Select Business Location:</value>
+  </data>
+  <data name="String961" xml:space="preserve">
+    <value>Received Item Entry Number:</value>
+  </data>
+  <data name="String962" xml:space="preserve">
+    <value>Auto save in Draft Every 2 Minutes</value>
+  </data>
+  <data name="String963" xml:space="preserve">
+    <value>Keep Focus on Last Added Item</value>
+  </data>
+  <data name="String964" xml:space="preserve">
+    <value>Show Images</value>
+  </data>
+  <data name="String965" xml:space="preserve">
+    <value>Item Entry By Template</value>
+  </data>
+  <data name="String966" xml:space="preserve">
+    <value>Create Item If Not Exist</value>
+  </data>
+  <data name="String967" xml:space="preserve">
+    <value>Received Paid Qty/Weight</value>
+  </data>
+  <data name="String968" xml:space="preserve">
+    <value>Measuring Unit</value>
+  </data>
+  <data name="String969" xml:space="preserve">
+    <value>Item Level Discount Percent</value>
+  </data>
+  <data name="String97" xml:space="preserve">
+    <value>Approved Pending</value>
+  </data>
+  <data name="String970" xml:space="preserve">
+    <value>Invoice Level Discount Percent</value>
+  </data>
+  <data name="String971" xml:space="preserve">
+    <value>Sub Total Before Tax</value>
+  </data>
+  <data name="String972" xml:space="preserve">
+    <value>Tax Name</value>
+  </data>
+  <data name="String973" xml:space="preserve">
+    <value>Total Tax Amount</value>
+  </data>
+  <data name="String974" xml:space="preserve">
+    <value>Item Unit Price After Tax</value>
+  </data>
+  <data name="String975" xml:space="preserve">
+    <value>Sub Total After Tax</value>
+  </data>
+  <data name="String976" xml:space="preserve">
+    <value>Effective Rate Per Unit</value>
+  </data>
+  <data name="String977" xml:space="preserve">
+    <value>Sales Price</value>
+  </data>
+  <data name="String978" xml:space="preserve">
+    <value>MRP</value>
+  </data>
+  <data name="String979" xml:space="preserve">
+    <value>Sales Price Markup Percent</value>
+  </data>
+  <data name="String98" xml:space="preserve">
+    <value>Customer Pending Amount :</value>
+  </data>
+  <data name="String980" xml:space="preserve">
+    <value>Discount On Total Before Tax :</value>
+  </data>
+  <data name="String981" xml:space="preserve">
+    <value>Discount Flat</value>
+  </data>
+  <data name="String982" xml:space="preserve">
+    <value>Invoice Discount Amount :</value>
+  </data>
+  <data name="String983" xml:space="preserve">
+    <value>Current Advance With Supplier :</value>
+  </data>
+  <data name="String984" xml:space="preserve">
+    <value>Addtional Charges :</value>
+  </data>
+  <data name="String985" xml:space="preserve">
+    <value>Apply For Effective Price</value>
+  </data>
+  <data name="String986" xml:space="preserve">
+    <value>SalesReturnManager</value>
+  </data>
+  <data name="String987" xml:space="preserve">
+    <value>Show In Date Range</value>
+  </data>
+  <data name="String988" xml:space="preserve">
+    <value>Sales Return Number :</value>
+  </data>
+  <data name="String989" xml:space="preserve">
+    <value>Total Item Qty :</value>
+  </data>
+  <data name="String99" xml:space="preserve">
+    <value>Allow Customer Pending Also</value>
+  </data>
+  <data name="String990" xml:space="preserve">
+    <value>Return Amount :</value>
+  </data>
+  <data name="String991" xml:space="preserve">
+    <value>Customer Name :</value>
+  </data>
+  <data name="String992" xml:space="preserve">
+    <value>Customer Code :</value>
+  </data>
+  <data name="String993" xml:space="preserve">
+    <value>Created By :</value>
+  </data>
+  <data name="String994" xml:space="preserve">
+    <value>SelectEmployee</value>
+  </data>
+  <data name="String995" xml:space="preserve">
+    <value>Commision Quick Position</value>
+  </data>
+  <data name="String996" xml:space="preserve">
+    <value>Can Have Appointment</value>
+  </data>
+  <data name="String997" xml:space="preserve">
+    <value>Work Shift Name</value>
+  </data>
+  <data name="String998" xml:space="preserve">
+    <value>View Item</value>
+  </data>
+  <data name="String999" xml:space="preserve">
+    <value>ViewItemPurchaseHistory</value>
+  </data>
+  <data name="String1380" xml:space="preserve">
+    <value>Address :</value>
+  </data>
+  <data name="String1381" xml:space="preserve">
+    <value>Warnings</value>
+  </data>
+  <data name="String1382" xml:space="preserve">
+    <value>Invoice Number:</value>
+  </data>
+  <data name="String1383" xml:space="preserve">
+    <value>Stock</value>
+  </data>
+  <data name="String1384" xml:space="preserve">
+    <value>Sup. Pay</value>
+  </data>
+  <data name="String1385" xml:space="preserve">
+    <value>Rcv. item</value>
+  </data>
+  <data name="String1386" xml:space="preserve">
+    <value>Sale Return</value>
+  </data>
+  <data name="String1387" xml:space="preserve">
+    <value>Cash Reg</value>
+  </data>
+  <data name="String1388" xml:space="preserve">
+    <value>Paymt Rec.</value>
+  </data>
+  <data name="String1389" xml:space="preserve">
+    <value>Buss. Loc.</value>
+  </data>
+  <data name="String1390" xml:space="preserve">
+    <value>Item Loc.</value>
+  </data>
+  <data name="String1391" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="String1392" xml:space="preserve">
+    <value>DailySales</value>
+  </data>
+  <data name="String1393" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="String1394" xml:space="preserve">
+    <value>Loyalty</value>
+  </data>
+  <data name="String1395" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <data name="String1396" xml:space="preserve">
+    <value>Access Rights</value>
+  </data>
+  <data name="String1397" xml:space="preserve">
+    <value>Estimate</value>
+  </data>
+  <data name="String1398" xml:space="preserve">
+    <value>Currency Symbol with Specialized Font :</value>
+  </data>
+  <data name="String1399" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="String1400" xml:space="preserve">
+    <value>Operations</value>
+  </data>
+  <data name="String1401" xml:space="preserve">
+    <value>Offer Settings</value>
+  </data>
+  <data name="String1402" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="String1403" xml:space="preserve">
+    <value>ViewCashReg</value>
+  </data>
+  <data name="String1404" xml:space="preserve">
+    <value>Barcode Prefix</value>
+  </data>
+  <data name="String1405" xml:space="preserve">
+    <value>Telephone Nubmer</value>
+  </data>
+  <data name="String1406" xml:space="preserve">
+    <value>Department List</value>
+  </data>
+  <data name="String1407" xml:space="preserve">
+    <value>Address1 :</value>
+  </data>
+  <data name="String1408" xml:space="preserve">
+    <value>Address2 :</value>
+  </data>
+  <data name="String1409" xml:space="preserve">
+    <value>Telophone :</value>
+  </data>
+  <data name="String1410" xml:space="preserve">
+    <value>Zip</value>
+  </data>
+  <data name="String1411" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="String1412" xml:space="preserve">
+    <value>Mobile</value>
+  </data>
+  <data name="String1413" xml:space="preserve">
+    <value>FAX</value>
+  </data>
+  <data name="String1414" xml:space="preserve">
+    <value>Name in Regional Language</value>
+  </data>
+  <data name="String1415" xml:space="preserve">
+    <value>Sl No :</value>
+  </data>
+  <data name="String1416" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="String1417" xml:space="preserve">
+    <value>String1417</value>
+  </data>
+  <data name="String1418" xml:space="preserve">
+    <value>Total Item Qty:</value>
+  </data>
+  <data name="String1419" xml:space="preserve">
+    <value>Invoice Status:</value>
+  </data>
+  <data name="String1420" xml:space="preserve">
+    <value>Invoice Sales Executive Name :</value>
+  </data>
+  <data name="String1421" xml:space="preserve">
+    <value>Catagory Name</value>
+  </data>
+  <data name="String1422" xml:space="preserve">
+    <value>TabItem</value>
+  </data>
+  <data name="String1423" xml:space="preserve">
+    <value>Customer Email</value>
+  </data>
+  <data name="String1424" xml:space="preserve">
+    <value>Select For Payment</value>
+  </data>
+  <data name="String1425" xml:space="preserve">
+    <value>Select Business Location</value>
+  </data>
+  <data name="String1426" xml:space="preserve">
+    <value>Sales from</value>
+  </data>
+  <data name="String1427" xml:space="preserve">
+    <value>Round of Amount</value>
+  </data>
+  <data name="String1428" xml:space="preserve">
+    <value>Item</value>
+  </data>
+  <data name="String1429" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="String1430" xml:space="preserve">
+    <value>Address Line 1</value>
+  </data>
+  <data name="String1431" xml:space="preserve">
+    <value>Address Line 2</value>
+  </data>
+  <data name="String1432" xml:space="preserve">
+    <value>Zip Code</value>
+  </data>
+  <data name="String1433" xml:space="preserve">
+    <value>Contact Info</value>
+  </data>
+  <data name="String1434" xml:space="preserve">
+    <value>Telephone No</value>
+  </data>
+  <data name="String1435" xml:space="preserve">
+    <value>Mobile No</value>
+  </data>
+  <data name="String1436" xml:space="preserve">
+    <value>FAX</value>
+  </data>
+  <data name="String1437" xml:space="preserve">
+    <value>Supplier Display Name</value>
+  </data>
+  <data name="String1438" xml:space="preserve">
+    <value>User Field List</value>
+  </data>
+  <data name="String1439" xml:space="preserve">
+    <value>%</value>
   </data>
 </root>

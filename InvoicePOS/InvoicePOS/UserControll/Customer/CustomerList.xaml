@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" 
               d:DesignHeight="820" d:DesignWidth="980">
     <Grid Margin="0,0,0,10" >
@@ -14,43 +15,43 @@
                     <Button Command="{Binding AddCustomerClick}"    Margin="0,41,509,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ExcelClick}"    Margin="0,41,584,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Excel" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.String492}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding EditCustomer}"  Margin="0,41,432,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ViewCustomer}"    Margin="0,41,354,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
-                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding DeleteCustomer}"  Margin="0,41,270,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ReceivePaymentClick}"   Margin="0,41,155,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="110" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                            <Label Content="Recv Payment" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.String493}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding CustFAAcctClick}"   Margin="0,41,10,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="140" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                            <Label Content="Customer FA Account" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" Width="139" />
+                            <Label Content="{x:Static p:Resources.String494}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" Width="139" />
                         </DockPanel>
                     </Button>
                     <!--<Button Content="Add"  HorizontalAlignment="Right"  VerticalAlignment="Top" Width="75" Click="Button_Click_1" Margin="0,-331,141,0"/>
@@ -61,26 +62,26 @@
                     <Button Command="{Binding SearchCustomer}"    Margin="244,41,0,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="80" HorizontalAlignment="Left"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Content=">" HorizontalAlignment="Left" Margin="218,40,0,0" Command="{Binding AdvancedSearchClick}" VerticalAlignment="Top" Width="19" Height="29"/>
                     <Button Command="{Binding UploadItemClick}"   Margin="0,6,360,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="110" HorizontalAlignment="Right" Click="Button_Click_1" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                            <Label Content="Upload Items" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.String496}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ExcelImportClick}"   Margin="0,6,235,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="110" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                            <Label Content="Import Items" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.String497}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ViewLedger}"   Margin="0,6,120,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="105" HorizontalAlignment="Right" Height="30"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                            <Label Content="View Ledger" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.String498}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                 </Grid>
@@ -114,27 +115,27 @@
 
                     <DataGrid.Columns>
 
-                        <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
-                        <DataGridTextColumn     Width="150" MaxWidth="155" Header="Customer Code" Binding="{Binding CUSTOMER_NUMBER}"  />
-                        <DataGridTextColumn   Width="200" Header="Name"  Binding="{Binding FULL_NAME}"/>
-                        <DataGridTextColumn   Width="200" Header="Search Code"  Binding="{Binding SEARCH_CODE}"/>
-                        <DataGridTextColumn   Width="200" Header="Customer Group Name"  Binding="{Binding CUSTOMER_GROUP}"/>
-                        <DataGridTextColumn   Width="200" Header="Is Enrolled For Loyalty Points"  Binding="{Binding IS_ENROLLED_FOR_LOYALITY}"/>
-                        <DataGridTextColumn   Width="200" Header="Loyalty Number"  Binding="{Binding LOYALTY_NO}"/>
-                        <DataGridTextColumn   Width="200" Header="Mobile Number"  Binding="{Binding SHIPPING_MOBILE_NO}"/>
-                        <DataGridTextColumn   Width="200" Header="Telephone Nubmer"  Binding="{Binding SHIPPING_TELEPHON_NUMBER}"/>
-                        <DataGridTextColumn   Width="200" Header="Address 1"  Binding="{Binding SHIPPING_ADDRESS1}"/>
-                        <DataGridTextColumn   Width="200" Header="Address 2"  Binding="{Binding SHIPPING_ADDRESS2}"/>
-                        <DataGridTextColumn   Width="200" Header="City"  Binding="{Binding SHIPPING_CITY}"/>
-                        <DataGridTextColumn   Width="200" Header="State"  Binding="{Binding SHIPPING_STATE}"/>
-                        <DataGridTextColumn   Width="200" Header="VAT no"  Binding="{Binding VAT_NUMBER}"/>
-                        <DataGridTextColumn   Width="200" Header="CST no"  Binding="{Binding CST_NUMBER}"/>
-                        <DataGridTextColumn   Width="200" Header="Email"  Binding="{Binding SHIPPING_EMAIL_ADDRESS}"/>
-                        <DataGridTextColumn   Width="200" Header="Name For Display"  Binding="{Binding NAME}"/>
+                        <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="{x:Static p:Resources.String331}" Binding="{Binding SLNO}"  />
+                        <DataGridTextColumn     Width="150" MaxWidth="155" Header="{x:Static p:Resources.String490}" Binding="{Binding CUSTOMER_NUMBER}"  />
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.label187}"  Binding="{Binding FULL_NAME}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String334}"  Binding="{Binding SEARCH_CODE}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String499}"  Binding="{Binding CUSTOMER_GROUP}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String500}"  Binding="{Binding IS_ENROLLED_FOR_LOYALITY}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String501}"  Binding="{Binding LOYALTY_NO}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String444}"  Binding="{Binding SHIPPING_MOBILE_NO}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1405}"  Binding="{Binding SHIPPING_TELEPHON_NUMBER}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String374}"  Binding="{Binding SHIPPING_ADDRESS1}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String375}"  Binding="{Binding SHIPPING_ADDRESS2}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String376}"  Binding="{Binding SHIPPING_CITY}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String377}"  Binding="{Binding SHIPPING_STATE}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String502}"  Binding="{Binding VAT_NUMBER}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1293}"  Binding="{Binding CST_NUMBER}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1217}"  Binding="{Binding SHIPPING_EMAIL_ADDRESS}"/>
+                        <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String504}"  Binding="{Binding NAME}"/>
                     </DataGrid.Columns>
                 </DataGrid>
-                <CheckBox Content="Show In Active Customer only" IsChecked="{Binding IS_InACTIVESearch,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="19" Width="205"/>
-                <CheckBox Content="Show Active Customer only" IsChecked="{Binding IS_ACTIVESearch, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Height="19" Width="205"/>
+                <CheckBox Content="{x:Static p:Resources.String505}" IsChecked="{Binding IS_InACTIVESearch,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Height="19" Width="205"/>
+                <CheckBox Content="{x:Static p:Resources.String506}" IsChecked="{Binding IS_ACTIVESearch, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Height="19" Width="205"/>
 
 
             </Grid>

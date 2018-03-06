@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="750" d:DesignWidth="1050">
     <Grid Margin="0,0,0,45" >
@@ -20,37 +21,37 @@
                     <Button Command="{Binding SearchItem}"    Margin="0,0,766,7" VerticalAlignment="Bottom"  Style="{StaticResource ButtonImageAdd}" Width="75" HorizontalAlignment="Right" Grid.RowSpan="2"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding AddPayReceiveClick}"    Margin="0,0,194,8" VerticalAlignment="Bottom"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right" Grid.RowSpan="2"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding EditPayReceiveClick}"  Margin="0,0,119,8" VerticalAlignment="Bottom"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" Grid.RowSpan="2" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ViewPayReceiveClick}"    Margin="0,0,42,7" VerticalAlignment="Bottom"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right" Grid.RowSpan="2"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
-                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding DeletePayReceiveClick}"  Margin="0,0,-38,8" VerticalAlignment="Bottom"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" Grid.RowSpan="2" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
                     <DatePicker HorizontalAlignment="Right" Margin="0,14,518,10" Height="25" Grid.RowSpan="2"/>
                     <DatePicker HorizontalAlignment="Right" Margin="0,15,349,0" Height="25" VerticalAlignment="Top" Grid.RowSpan="2"/>
-                    <TextBlock HorizontalAlignment="Right" Margin="0,16,625,9" TextWrapping="Wrap" Text="From Date" Grid.RowSpan="2"/>
-                    <TextBlock HorizontalAlignment="Right" Margin="0,17,456,12" TextWrapping="Wrap" Text="To Date" Grid.RowSpan="2"/>
+                    <TextBlock HorizontalAlignment="Right" Margin="0,16,625,9" TextWrapping="Wrap" Text="{x:Static p:Resources.String1088}" Grid.RowSpan="2"/>
+                    <TextBlock HorizontalAlignment="Right" Margin="0,17,456,12" TextWrapping="Wrap" Text="{x:Static p:Resources.String1089}" Grid.RowSpan="2"/>
 
 
 
@@ -80,11 +81,11 @@
                         </DataGrid.RowStyle>
 
                         <DataGrid.Columns>
-                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="Sl.No" Binding="{Binding SLNO}"  />
-                            <DataGridTextColumn    Width="175" MaxWidth="300" Header="Receive Payment No" Binding="{Binding RECEIVE_PAY_NO}"  />
-                            <DataGridTextColumn     Width="150" Header="Date" Binding="{Binding Date}"  />
-                            <DataGridTextColumn   Width="150" Header="Amount"  Binding="{Binding FORMATTED_TOTAL_REC_AMT}"/>
-                            <DataGridTextColumn   Width="150" Header="Customer"  Binding="{Binding CUSTOMER}"/>
+                            <DataGridTextColumn   TextBlock.Foreground="Red"  Width="50" MaxWidth="50" Header="{x:Static p:Resources.String331}" Binding="{Binding SLNO}"  />
+                            <DataGridTextColumn    Width="175" MaxWidth="300" Header="{x:Static p:Resources.String1127}" Binding="{Binding RECEIVE_PAY_NO}"  />
+                            <DataGridTextColumn     Width="150" Header="{x:Static p:Resources.String555}" Binding="{Binding Date}"  />
+                            <DataGridTextColumn   Width="150" Header="{x:Static p:Resources.String1128}"  Binding="{Binding FORMATTED_TOTAL_REC_AMT}"/>
+                            <DataGridTextColumn   Width="150" Header="{x:Static p:Resources.String234}"  Binding="{Binding CUSTOMER}"/>
                             <!--<DataGridTextColumn   Width="150" Header="Finance Agency"  Binding="{Binding FinanceAgency}"/>
                             <DataGridTextColumn   Width="150" Header="Payment Mode"  Binding="{Binding PaymentMode}"/>
                             <DataGridTextColumn   Width="150" Header="Type"  Binding="{Binding Type}"/>-->

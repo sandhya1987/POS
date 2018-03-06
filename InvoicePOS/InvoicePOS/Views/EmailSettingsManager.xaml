@@ -1,7 +1,8 @@
 ﻿<Window x:Class="InvoicePOS.Views.EmailSettingsManager"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="EmailSettingsManager" Height="500" Width="700">
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
+        Title="{x:Static p:Resources.String195}" Height="500" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
@@ -9,11 +10,11 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel Orientation="Horizontal">
-                <Button Command="{Binding EditButtonClick}" Content="Edit" Height="30" Width="50"></Button>
-                <Button Command="{Binding ViewButtonClick}" Content="view" Height="30" Width="50"></Button>
-                <Button Command="{Binding DeleteButtonClick}" Content="Delete" Height="30" Width="50"></Button>
-                <Button Command="{Binding CopyButtonClick}" Content="Copy" Height="30" Width="50"></Button>
-                <Button Command="{Binding PasteButtonClick}" Content="Paste" Height="30" Width="50"></Button>
+                <Button Command="{Binding EditButtonClick}" Content="{x:Static p:Resources.String196}" Height="30" Width="50"></Button>
+                <Button Command="{Binding ViewButtonClick}" Content="{x:Static p:Resources.String197}" Height="30" Width="50"></Button>
+                <Button Command="{Binding DeleteButtonClick}" Content="{x:Static p:Resources.String198}" Height="30" Width="50"></Button>
+                <Button Command="{Binding CopyButtonClick}" Content="{x:Static p:Resources.String199}" Height="30" Width="50"></Button>
+                <Button Command="{Binding PasteButtonClick}" Content="{x:Static p:Resources.String200}" Height="30" Width="50"></Button>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
@@ -64,9 +65,9 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn   Width="200" Header="Mail Type"  Binding="{Binding MAIL_TYPE}"/>
-                    <DataGridTextColumn   Width="200" Header="From Email"  Binding="{Binding EMAIL}"/>
-                    <DataGridTextColumn   Width="300" Header="From Name " Binding="{Binding NAME}"  />
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String201}"  Binding="{Binding MAIL_TYPE}"/>
+                    <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String202}"  Binding="{Binding EMAIL}"/>
+                    <DataGridTextColumn   Width="300" Header="{x:Static p:Resources.String203}" Binding="{Binding NAME}"  />
                 </DataGrid.Columns>
             </DataGrid>
 

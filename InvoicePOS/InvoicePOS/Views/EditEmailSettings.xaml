@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:c="clr-namespace:System.Windows.Controls;assembly=PresentationFramework" 
         xmlns:w="clr-namespace:InvoicePOS.Helpers" 
-        Title="EditEmailSettings" Height="600" Width="500">
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
+        Title="{x:Static p:Resources.String177}" Height="600" Width="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*"></RowDefinition>
@@ -14,23 +15,23 @@
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <TextBlock Margin="10,0,0,0">Following informations will be used for sending emails form this application.</TextBlock>
-            <TextBlock Margin="20,40,0,0">Mail Type:</TextBlock>
+            <TextBlock Margin="10,0,0,0" Text="{x:Static p:Resources.String178}"></TextBlock>
+            <TextBlock Margin="20,40,0,0" Text="{x:Static p:Resources.String179}"></TextBlock>
             <TextBlock Margin="100,40,0,0" Text="{Binding SelectedEmailSettingsModel.MAIL_TYPE}"></TextBlock>
         </Grid>
-        <GroupBox Grid.Row="1" Header="User Information">
+        <GroupBox Grid.Row="1" Header="{x:Static p:Resources.String180}">
             <Grid>
-                <TextBlock Text="Your Name:" Margin="20,10,0,0"></TextBlock>
+                <TextBlock Text="{x:Static p:Resources.String181}" Margin="20,10,0,0"></TextBlock>
                 <TextBox Text="{Binding SelectedEmailSettingsModel.NAME}" Margin="100,10,0,0" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
-                <TextBlock Text="Email Address:" Margin="10,40,0,0"></TextBlock>
+                <TextBlock Text="{x:Static p:Resources.String182}" Margin="10,40,0,0"></TextBlock>
                 <TextBox Text="{Binding SelectedEmailSettingsModel.EMAIL}" Margin="100,40,0,0" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
             </Grid>
         </GroupBox>
-        <GroupBox Grid.Row="2" Header="Logon Information">
+        <GroupBox Grid.Row="2" Header="{x:Static p:Resources.String183}">
             <Grid>
-                <TextBlock Text="User Name:" Margin="20,10,0,0"></TextBlock>
+                <TextBlock Text="{x:Static p:Resources.String184}" Margin="20,10,0,0"></TextBlock>
                 <TextBox Text="{Binding SelectedEmailSettingsModel.USER_NAME}" Margin="100,10,0,0" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
-                <TextBlock Text="Password:" Margin="30,40,0,0"></TextBlock>
+                <TextBlock Text="{x:Static p:Resources.String185}" Margin="30,40,0,0"></TextBlock>
                 <c:PasswordBox 
                     PasswordChar="*" 
                     Margin="100,40,0,0" 
@@ -39,29 +40,29 @@
                     VerticalAlignment="Top" 
                     HorizontalAlignment="Left"
                      w:PasswordBoxHelper.Password="{Binding SelectedEmailSettingsModel.PASSWORD}"></c:PasswordBox>
-                <TextBlock Text="EMail Cc:" Margin="30,70,0,0"></TextBlock>
+                <TextBlock Text="{x:Static p:Resources.String186}" Margin="30,70,0,0"></TextBlock>
                 <TextBox Text="{Binding SelectedEmailSettingsModel.CC}" Margin="100,70,0,0" Height="20" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
-                <TextBlock Text="EMail Bcc:" Margin="30,100,0,0"></TextBlock>
+                <TextBlock Text="{x:Static p:Resources.String187}" Margin="30,100,0,0"></TextBlock>
                 <TextBox Text="{Binding SelectedEmailSettingsModel.BCC}" Margin="100,100,0,0" Height="20" Width="300" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
             </Grid>
         </GroupBox>
         <StackPanel Orientation="Horizontal" Grid.Row="3">
-            <RadioButton Name="UsingGmailAccount" GroupName="Radio" Margin="50,10,0,0" IsChecked="{Binding SelectedEmailSettingsModel.IS_GMAIL,Mode=TwoWay}" >Using Gmail Account</RadioButton>
-            <RadioButton Name="UsingAnotherAccount" GroupName="Radio" Margin="50,10,0,0" >Using Other Account</RadioButton>
+            <RadioButton Name="UsingGmailAccount" GroupName="Radio" Margin="50,10,0,0" IsChecked="{Binding SelectedEmailSettingsModel.IS_GMAIL,Mode=TwoWay}" Content="{x:Static p:Resources.String189}" ></RadioButton>
+            <RadioButton Name="UsingAnotherAccount" GroupName="Radio" Margin="50,10,0,0" Content="{x:Static p:Resources.String190}"></RadioButton>
         </StackPanel>
-        <GroupBox Grid.Row="4" Header="Server Information" Visibility="{Binding SelectedEmailSettingsModel.ServerInformation}">
+        <GroupBox Grid.Row="4" Header="{x:Static p:Resources.String191}" Visibility="{Binding SelectedEmailSettingsModel.ServerInformation}">
             <Grid>
-                <TextBlock Text="Outgoing mail server(SMTP):" Margin="130,10,0,0"></TextBlock>
+                <TextBlock Text="{x:Static p:Resources.String192}" Margin="130,10,0,0"></TextBlock>
                 <TextBox Text="{Binding SelectedEmailSettingsModel.SMTP_SERVER}" Margin="300,10,0,0" Height="20" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
-                <TextBlock Text="This server requires an encrypted connection(SSL):" Margin="20,40,0,0"></TextBlock>
+                <TextBlock Text="{x:Static p:Resources.String193}" Margin="20,40,0,0"></TextBlock>
                 <CheckBox IsChecked="{Binding SelectedEmailSettingsModel.IS_REQ_ENCRYPT_CONN}" Margin="300,40,0,0" Height="20" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left"></CheckBox>
-                <TextBlock Text="Outgoing Server Port number(SMTP):" Margin="90,70,0,0"></TextBlock>
+                <TextBlock Text="{x:Static p:Resources.String194}" Margin="90,70,0,0"></TextBlock>
                 <TextBox Text="{Binding SelectedEmailSettingsModel.SMTP_SERVER_PORT}" Margin="300,70,0,0" Height="20" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
             </Grid>
         </GroupBox>
         <Grid Grid.Row="5">
-            <Button  Command="{Binding Update}" Margin="300,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="Update"></Button>
-            <Button  Command="{Binding Cancel}" Margin="400,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="Cancel"></Button>
+            <Button  Command="{Binding Update}" Margin="300,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="{x:Static p:Resources.label120}"></Button>
+            <Button  Command="{Binding Cancel}" Margin="400,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="{x:Static p:Resources.label13}"></Button>
         </Grid>
     </Grid>
 </Window>

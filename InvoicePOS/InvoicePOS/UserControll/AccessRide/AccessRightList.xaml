@@ -1,8 +1,9 @@
 ﻿<Window x:Class="InvoicePOS.UserControll.AccessRide.AccessRightList"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
-        Title="AccessRightList" Height="483.523" Width="927.042">
+        Title="{x:Static p:Resources.String341}" Height="483.523" Width="927.042">
     <Grid>
         <Grid>
             <ComboBox HorizontalAlignment="Left" ItemsSource="{Binding SelectDeptModel}"  SelectedItem="{Binding DEPARTMENT_ID}" Margin="590,24,0,0" VerticalAlignment="Top" Width="120">
@@ -24,8 +25,8 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <TextBlock HorizontalAlignment="Left" Margin="511,24,0,0" TextWrapping="Wrap" Text="Department" VerticalAlignment="Top" Height="22" Width="74"/>
-            <TextBlock HorizontalAlignment="Left" Margin="715,25,0,0" TextWrapping="Wrap" Text="Designation" VerticalAlignment="Top" Height="23" Width="69"/>
+            <TextBlock HorizontalAlignment="Left" Margin="511,24,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String336}" VerticalAlignment="Top" Height="22" Width="74"/>
+            <TextBlock HorizontalAlignment="Left" Margin="715,25,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String337}" VerticalAlignment="Top" Height="23" Width="69"/>
         </Grid>
         <Grid>
             <DataGrid  SelectionMode="Single"  ItemsSource="{Binding ListGrid1, UpdateSourceTrigger=PropertyChanged}"     RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" Margin="10,78,10,0" VerticalAlignment="Top"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" TextBlock.TextAlignment="Center" Height="329">
@@ -53,8 +54,8 @@
 
                 <DataGrid.Columns>
 
-                    <DataGridTextColumn   TextBlock.Foreground="Red"  Width="150" MaxWidth="300" Header="Name" Binding="{Binding MODULE_NAME}"  />
-                    <DataGridTemplateColumn Header="Add">
+                    <DataGridTextColumn   TextBlock.Foreground="Red"  Width="150" MaxWidth="300" Header="{x:Static p:Resources.label187}" Binding="{Binding MODULE_NAME}"  />
+                    <DataGridTemplateColumn Header="{x:Static p:Resources.label181}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <CheckBox Name="chkDiscontinue" IsChecked="{Binding Path=ACTION_CREATE, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
@@ -74,7 +75,7 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTemplateColumn Header="Edit">
+                    <DataGridTemplateColumn Header="{x:Static p:Resources.String342}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <CheckBox Name="chkDiscontinue" IsChecked="{Binding Path=EDIT, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
@@ -93,7 +94,7 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTemplateColumn Header="Delete">
+                    <DataGridTemplateColumn Header="{x:Static p:Resources.label185}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <CheckBox Name="chkDiscontinue" IsChecked="{Binding Path=ACTION_DELETE, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
@@ -113,7 +114,7 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTemplateColumn Header="View">
+                    <DataGridTemplateColumn Header="{x:Static p:Resources.String1299}">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <CheckBox Name="chkDiscontinue" IsChecked="{Binding Path=ACTION_VIEW, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" >
@@ -134,13 +135,13 @@
 
 
 
-                    <DataGridTextColumn   Width="75" Header="VERIFICATION"  Binding="{Binding VERIFICATION}"/>
-                    <DataGridTextColumn   Width="75" Header="NOTIFICATION"  Binding="{Binding NOTIFICATION}"/>
-                    <DataGridTextColumn   Width="75" Header="MESSAGE"  Binding="{Binding MESSAGE}"/>
-                    <DataGridTextColumn   Width="75" Header="APPROVE"  Binding="{Binding APPROVE}"/>
-                    <DataGridTextColumn   Width="75" Header="MAILBACK"  Binding="{Binding MAILBACK}"/>
-                    <DataGridTextColumn   Width="75" Header="EXPT_TO_EXCEL"  Binding="{Binding EXPT_TO_EXCEL}"/>
-                    <DataGridTextColumn   Width="75" Header="IMORT_TO_EXCEL"  Binding="{Binding IMORT_TO_EXCEL}"/>
+                    <DataGridTextColumn   Width="75" Header="{x:Static p:Resources.String343}"  Binding="{Binding VERIFICATION}"/>
+                    <DataGridTextColumn   Width="75" Header="{x:Static p:Resources.String344}"  Binding="{Binding NOTIFICATION}"/>
+                    <DataGridTextColumn   Width="75" Header="{x:Static p:Resources.String345}"  Binding="{Binding MESSAGE}"/>
+                    <DataGridTextColumn   Width="75" Header="{x:Static p:Resources.String346}"  Binding="{Binding APPROVE}"/>
+                    <DataGridTextColumn   Width="75" Header="{x:Static p:Resources.String347}"  Binding="{Binding MAILBACK}"/>
+                    <DataGridTextColumn   Width="75" Header="{x:Static p:Resources.String348}"  Binding="{Binding EXPT_TO_EXCEL}"/>
+                    <DataGridTextColumn   Width="75" Header="{x:Static p:Resources.String349}"  Binding="{Binding IMORT_TO_EXCEL}"/>
                     <!--<DataGridCheckBoxColumn Binding="{Binding ACTION_CREATE, UpdateSourceTrigger=PropertyChanged}">
                         <DataGridCheckBoxColumn.Header>
                             <CheckBox Name="Add" ></CheckBox>
@@ -149,8 +150,8 @@
                 </DataGrid.Columns>
 
             </DataGrid>
-            <Button Content="Save" Command="{Binding InsertAccess}" HorizontalAlignment="Left" Margin="705,423,0,0" VerticalAlignment="Top" Width="54"/>
-            <Button Content="Cancel" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="764,423,0,0" VerticalAlignment="Top" Width="62"/>
+            <Button Content="{x:Static p:Resources.label171}" Command="{Binding InsertAccess}" HorizontalAlignment="Left" Margin="705,423,0,0" VerticalAlignment="Top" Width="54"/>
+            <Button Content="{x:Static p:Resources.label24}" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="764,423,0,0" VerticalAlignment="Top" Width="62"/>
             <TextBlock x:Name="EmpName" HorizontalAlignment="Left" Margin="10,23,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="79" Height="21"/>
 
         </Grid>

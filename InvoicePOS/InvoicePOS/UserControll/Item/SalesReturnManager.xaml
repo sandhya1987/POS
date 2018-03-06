@@ -1,15 +1,16 @@
 ﻿<Window x:Class="InvoicePOS.UserControll.Item.SalesReturnManager"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="SalesReturnManager" Height="541" Width="714">
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
+        Title="{x:Static p:Resources.String986}" Height="541" Width="714">
     <Grid>
         <Button Content="" HorizontalAlignment="Left" Margin="15,8,0,0" VerticalAlignment="Top" Width="35"/>
         <Button Content="" HorizontalAlignment="Left" Margin="75,8,0,0" VerticalAlignment="Top" Width="35"/>
         <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding COMP_DATE}"  Margin="105,61,0,0" VerticalAlignment="Top"/>
         <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding COMP_DATE}"  Margin="313,60,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="25,64,0,0" TextWrapping="Wrap" Text="From Date :" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="248,64,0,0" TextWrapping="Wrap" Text="To Date :" VerticalAlignment="Top"/>
-        <CheckBox Content="Show In Date Range" HorizontalAlignment="Left" Margin="462,65,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,64,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String936}" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="248,64,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String937}" VerticalAlignment="Top"/>
+        <CheckBox Content="{x:Static p:Resources.String947}" HorizontalAlignment="Left" Margin="462,65,0,0" VerticalAlignment="Top"/>
         <DataGrid  SelectionMode="Extended"   RowHeight="35" Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1" IsReadOnly="True"   AutoGenerateColumns="False" ItemsSource="{Binding Path=ListGridSalesReturn ,Mode=TwoWay, AsyncState=true,  NotifyOnTargetUpdated=True,NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"   Name="dataGrid1" Margin="15,116,16,56"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" ColumnWidth="*" EnableRowVirtualization="false" EnableColumnVirtualization="false" CanUserAddRows="False" CanUserReorderColumns="False">
             <DataGrid.Style>
                 <Style TargetType="DataGrid">
@@ -34,16 +35,16 @@
             </DataGrid.RowStyle>
 
             <DataGrid.Columns>
-                <DataGridTextColumn    Header="Business Location :" Binding="{Binding BUSINESS_LOCATION}" Width="200" />
-                <DataGridTextColumn    Header="Sales Return Number :" Binding="{Binding SALES_RETURN_NO}" Width="250"/>
-                <DataGridTextColumn    Header="Date :" Binding="{Binding RETURN_DATE}" Width="250"/>
-                <DataGridTextColumn    Header="Invoice Number :" Binding="{Binding INVOICE_NO}" Width="250"/>
-                <DataGridTextColumn    Header="Total Item Qty :" Binding="{Binding FORMATTED_TOTAL_QTY}" Width="250"/>
-                <DataGridTextColumn    Header="Return Amount :" Binding="{Binding CUSTOMER_NAME}" Width="250"/>
-                <DataGridTextColumn    Header="Customer Name :" Binding="{Binding CUSTOMER}" Width="250"/>
-                <DataGridTextColumn    Header="Customer Code :" Binding="{Binding CUSTOMER_ID}" Width="250"/>
-                <DataGridTextColumn    Header="Mobile Number :" Binding="{Binding Total}" Width="250"/>
-                <DataGridTextColumn    Header="Created By :" Binding="{Binding QUNT_TOTAL}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.label197}" Binding="{Binding BUSINESS_LOCATION}" Width="200" />
+                <DataGridTextColumn    Header="{x:Static p:Resources.String988}" Binding="{Binding SALES_RETURN_NO}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String852}" Binding="{Binding RETURN_DATE}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String672}" Binding="{Binding INVOICE_NO}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String989}" Binding="{Binding FORMATTED_TOTAL_QTY}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String990}" Binding="{Binding CUSTOMER_NAME}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String991}" Binding="{Binding CUSTOMER}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String992}" Binding="{Binding CUSTOMER_ID}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.label65}" Binding="{Binding Total}" Width="250"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String993}" Binding="{Binding QUNT_TOTAL}" Width="250"/>
                 
             </DataGrid.Columns>
 

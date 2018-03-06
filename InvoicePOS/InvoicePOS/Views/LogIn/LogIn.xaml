@@ -4,15 +4,16 @@
         xmlns:c="clr-namespace:System.Windows.Controls;assembly=PresentationFramework" 
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
         xmlns:w="clr-namespace:InvoicePOS.Helpers" 
-        Title="LogIn" Height="299.179" Width="545.523">
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
+        Title="{x:Static p:Resources.label200}" Height="299.179" Width="545.523">
     <Window.InputBindings>
         <KeyBinding Key="Enter" Command="{Binding LogInClick}"/>
         <KeyBinding Key="Escape" Command="{Binding CancelLogIn}"/>
     </Window.InputBindings>
     <Grid>
-        <TextBlock x:Name="textBlock"  Margin="100,0,0,171" TextWrapping="Wrap" Text="User Name :" FontWeight="Bold" FontSize="15" Style="{StaticResource Labeltextmain}" Height="25" VerticalAlignment="Bottom" Width="100" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="textBlock"  Margin="100,0,0,171" TextWrapping="Wrap" Text="{x:Static p:Resources.label201}" FontWeight="Bold" FontSize="15" Style="{StaticResource Labeltextmain}" Height="25" VerticalAlignment="Bottom" Width="100" HorizontalAlignment="Left"/>
         <TextBox x:Name="textBox"  Margin="215,0,0,172" Text="{Binding USERNAME,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" Style="{StaticResource numberdisplayTextboxmain}"  Height="26" VerticalAlignment="Bottom" Width="180" HorizontalAlignment="Left"/>
-        <TextBlock x:Name="textBlock1"  Margin="100,0,0,122" TextWrapping="Wrap" FontWeight="Bold" FontSize="15" Text="Password :"  Style="{StaticResource Labeltextmain}" Height="25" VerticalAlignment="Bottom" Width="100" HorizontalAlignment="Left"/>
+        <TextBlock x:Name="textBlock1"  Margin="100,0,0,122" TextWrapping="Wrap" FontWeight="Bold" FontSize="15" Text="{x:Static p:Resources.label202}"  Style="{StaticResource Labeltextmain}" Height="25" VerticalAlignment="Bottom" Width="100" HorizontalAlignment="Left"/>
         <c:PasswordBox Name="textBox1"  
                        PasswordChar="*"  
                        Margin="215,0,0,122"  
@@ -23,8 +24,8 @@
                        w:PasswordBoxHelper.Password="{Binding PASSWORD, Mode=TwoWay}">
 
         </c:PasswordBox>
-        <Button x:Name="button1_Copy"  Content="LogIn" HorizontalAlignment="Right"  Command="{Binding LogInClick}" Margin="0,0,212,69" Style="{StaticResource GreenButtonrightmainpay}" RenderTransformOrigin="0.516,0.532" Height="30" VerticalAlignment="Bottom" Width="62" FontSize="11"/>
-        <Button x:Name="button1_Copy1"  Content="Cancel" HorizontalAlignment="Right"  Command="{Binding CancelLogIn}" Margin="0,0,140,69" Style="{StaticResource GreenButtonrightmainpay}" RenderTransformOrigin="0.516,0.532" Height="30" VerticalAlignment="Bottom" Width="62" FontSize="11"/>
+        <Button x:Name="button1_Copy"  Content="{x:Static p:Resources.label200}" HorizontalAlignment="Right"  Command="{Binding LogInClick}" Margin="0,0,212,69" Style="{StaticResource GreenButtonrightmainpay}" RenderTransformOrigin="0.516,0.532" Height="30" VerticalAlignment="Bottom" Width="62" FontSize="11"/>
+        <Button x:Name="button1_Copy1"  Content="{x:Static p:Resources.label24}" HorizontalAlignment="Right"  Command="{Binding CancelLogIn}" Margin="0,0,140,69" Style="{StaticResource GreenButtonrightmainpay}" RenderTransformOrigin="0.516,0.532" Height="30" VerticalAlignment="Bottom" Width="62" FontSize="11"/>
 
     </Grid>
 </Window>
