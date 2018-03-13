@@ -6,7 +6,7 @@
         xmlns:v1="clr-namespace:InvoicePOS.UserControll.Customer"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:p="clr-namespace:InvoicePOS.Properties"
-        Title="{x:Static p:Resources.String146}" Height="729.658" Width="1055" WindowState="Maximized">
+        Title="{x:Static p:Resources.String146}" Height="729.658" Width="1200" WindowState="Maximized">
     <Window.InputBindings>
         <KeyBinding Key="Escape" Command="{Binding BackMain}"/>
     </Window.InputBindings>
@@ -171,8 +171,11 @@
             <Button x:Name="button" Content="{x:Static p:Resources.String156}" Command="{Binding Path=BackMain,UpdateSourceTrigger=PropertyChanged }" Foreground="White" Background="#2db6e2" HorizontalAlignment="Right" Height="45" Margin="0,14,191,0" VerticalAlignment="Top" Width="87" />
             <Button x:Name="button_Copy" Content="{x:Static p:Resources.String157}" HorizontalAlignment="Right" Height="45" Margin="0,14,98,0" Background="#0e6aab" Foreground="White" VerticalAlignment="Top" Width="88"/>
             <Button x:Name="button_Copy1" Content="{x:Static p:Resources.String158}" HorizontalAlignment="Right" Height="45" Background="#ff9900" Foreground="Black" Margin="0,14,7,0" VerticalAlignment="Top" Width="86"/>
-            <Button Command="{Binding LogOut}" Style="{StaticResource shutdownButton}" Margin="0,62,8,606" HorizontalAlignment="Right">
-
+            <Button Command="{Binding LogOut}" Style="{StaticResource shutdownButton}" Margin="0,62,8,606" HorizontalAlignment="Right"/>
+            <Button Margin="820,14,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="45"  BorderThickness="0" Style="{StaticResource ButtonImageMain}" Click="Synchronize" Background="Orchid">
+                <Label >
+                    <TextBlock TextWrapping="Wrap"  Foreground="White">Synchronize Database</TextBlock>
+                </Label>
             </Button>
         </Grid>
 

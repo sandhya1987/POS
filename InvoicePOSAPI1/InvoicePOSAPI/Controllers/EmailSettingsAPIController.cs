@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using InvoicePOSAPI.Models;
 using InvoicePOSDATA;
+using InvoicePOSAPI.Helpers;
 
 namespace InvoicePOSAPI.Controllers
 {
@@ -18,29 +19,47 @@ namespace InvoicePOSAPI.Controllers
         {
             try
             {
-                var str = (from a in db.TBL_EMAIL_SETTINGS
-                           where a.USER_ID == userId && a.IS_DELETE == false
-                           select new EmailSettingsModel
-                           {
-                               USER_NAME = a.USER_NAME,
-                               SMTP_SERVER_PORT = a.SMTP_SERVER_PORT,
-                               SMTP_SERVER = a.SMTP_SERVER,
-                               PASSWORD = a.PASSWORD,
-                               NAME = a.NAME,
-                               IS_REQ_ENCRYPT_CONN = a.IS_REQ_ENCRYPT_CONN,
-                               IS_GMAIL = a.IS_GMAIL,
-                               EMAIL = a.EMAIL,
-                               CC = a.CC,
-                               BCC = a.BCC,
-                               ID = a.ID,
-                               MAIL_TYPE = a.MAIL_TYPE
-                           }).ToList();
-                return Request.CreateResponse(HttpStatusCode.OK, str);
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    var str = (from a in db.TBL_EMAIL_SETTINGS
+                               where a.USER_ID == userId && a.IS_DELETE == false
+                               select new EmailSettingsModel
+                               {
+                                   USER_NAME = a.USER_NAME,
+                                   SMTP_SERVER_PORT = a.SMTP_SERVER_PORT,
+                                   SMTP_SERVER = a.SMTP_SERVER,
+                                   PASSWORD = a.PASSWORD,
+                                   NAME = a.NAME,
+                                   IS_REQ_ENCRYPT_CONN = a.IS_REQ_ENCRYPT_CONN,
+                                   IS_GMAIL = a.IS_GMAIL,
+                                   EMAIL = a.EMAIL,
+                                   CC = a.CC,
+                                   BCC = a.BCC,
+                                   ID = a.ID,
+                                   MAIL_TYPE = a.MAIL_TYPE
+                               }).ToList();
+                    return Request.CreateResponse(HttpStatusCode.OK, str);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
             }
             catch (Exception ex)
             {
-
                 throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
             }
 
 
@@ -51,52 +70,70 @@ namespace InvoicePOSAPI.Controllers
         {
             try
             {
-                var updateSettings = (from a in db.TBL_EMAIL_SETTINGS
-                           where a.ID == _EmailSettingsModel.ID && a.IS_DELETE == false
-                           select a).FirstOrDefault();
-                if (updateSettings == null)
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
                 {
-                    updateSettings = new TBL_EMAIL_SETTINGS();
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
 
-                    updateSettings.BCC = _EmailSettingsModel.BCC;
-                    updateSettings.CC = _EmailSettingsModel.CC;
-                    updateSettings.EMAIL = _EmailSettingsModel.EMAIL;
-                    updateSettings.IS_GMAIL = _EmailSettingsModel.IS_GMAIL;
-                    updateSettings.IS_REQ_ENCRYPT_CONN = _EmailSettingsModel.IS_REQ_ENCRYPT_CONN;
-                    updateSettings.NAME = _EmailSettingsModel.NAME;
-                    updateSettings.PASSWORD = _EmailSettingsModel.PASSWORD;
-                    updateSettings.SMTP_SERVER = _EmailSettingsModel.SMTP_SERVER;
-                    updateSettings.SMTP_SERVER_PORT = _EmailSettingsModel.SMTP_SERVER_PORT;
-                    updateSettings.USER_ID = _EmailSettingsModel.USER_ID;
-                    updateSettings.USER_NAME = _EmailSettingsModel.USER_NAME;
-                    updateSettings.MAIL_TYPE = _EmailSettingsModel.MAIL_TYPE;
-                    updateSettings.IS_DELETE = false;
-                    db.TBL_EMAIL_SETTINGS.Add(updateSettings);
+                if (conn)
+                {
+                    var updateSettings = (from a in db.TBL_EMAIL_SETTINGS
+                                          where a.ID == _EmailSettingsModel.ID && a.IS_DELETE == false
+                                          select a).FirstOrDefault();
+                    if (updateSettings == null)
+                    {
+                        updateSettings = new TBL_EMAIL_SETTINGS();
+
+                        updateSettings.BCC = _EmailSettingsModel.BCC;
+                        updateSettings.CC = _EmailSettingsModel.CC;
+                        updateSettings.EMAIL = _EmailSettingsModel.EMAIL;
+                        updateSettings.IS_GMAIL = _EmailSettingsModel.IS_GMAIL;
+                        updateSettings.IS_REQ_ENCRYPT_CONN = _EmailSettingsModel.IS_REQ_ENCRYPT_CONN;
+                        updateSettings.NAME = _EmailSettingsModel.NAME;
+                        updateSettings.PASSWORD = _EmailSettingsModel.PASSWORD;
+                        updateSettings.SMTP_SERVER = _EmailSettingsModel.SMTP_SERVER;
+                        updateSettings.SMTP_SERVER_PORT = _EmailSettingsModel.SMTP_SERVER_PORT;
+                        updateSettings.USER_ID = _EmailSettingsModel.USER_ID;
+                        updateSettings.USER_NAME = _EmailSettingsModel.USER_NAME;
+                        updateSettings.MAIL_TYPE = _EmailSettingsModel.MAIL_TYPE;
+                        updateSettings.IS_DELETE = false;
+                        db.TBL_EMAIL_SETTINGS.Add(updateSettings);
+                    }
+                    else
+                    {
+                        updateSettings.BCC = _EmailSettingsModel.BCC;
+                        updateSettings.CC = _EmailSettingsModel.CC;
+                        updateSettings.EMAIL = _EmailSettingsModel.EMAIL;
+                        updateSettings.IS_GMAIL = _EmailSettingsModel.IS_GMAIL;
+                        updateSettings.IS_REQ_ENCRYPT_CONN = _EmailSettingsModel.IS_REQ_ENCRYPT_CONN;
+                        updateSettings.NAME = _EmailSettingsModel.NAME;
+                        updateSettings.PASSWORD = _EmailSettingsModel.PASSWORD;
+                        updateSettings.SMTP_SERVER = _EmailSettingsModel.SMTP_SERVER;
+                        updateSettings.SMTP_SERVER_PORT = _EmailSettingsModel.SMTP_SERVER_PORT;
+                        updateSettings.USER_ID = _EmailSettingsModel.USER_ID;
+                        updateSettings.USER_NAME = _EmailSettingsModel.USER_NAME;
+                        updateSettings.MAIL_TYPE = _EmailSettingsModel.MAIL_TYPE;
+                        updateSettings.IS_DELETE = false;
+                    }
+                    db.SaveChanges();
+                    return Request.CreateResponse(HttpStatusCode.OK, "OK");
                 }
                 else
                 {
-                    updateSettings.BCC = _EmailSettingsModel.BCC;
-                    updateSettings.CC = _EmailSettingsModel.CC;
-                    updateSettings.EMAIL = _EmailSettingsModel.EMAIL;
-                    updateSettings.IS_GMAIL = _EmailSettingsModel.IS_GMAIL;
-                    updateSettings.IS_REQ_ENCRYPT_CONN = _EmailSettingsModel.IS_REQ_ENCRYPT_CONN;
-                    updateSettings.NAME = _EmailSettingsModel.NAME;
-                    updateSettings.PASSWORD = _EmailSettingsModel.PASSWORD;
-                    updateSettings.SMTP_SERVER = _EmailSettingsModel.SMTP_SERVER;
-                    updateSettings.SMTP_SERVER_PORT = _EmailSettingsModel.SMTP_SERVER_PORT;
-                    updateSettings.USER_ID = _EmailSettingsModel.USER_ID;
-                    updateSettings.USER_NAME = _EmailSettingsModel.USER_NAME;
-                    updateSettings.MAIL_TYPE = _EmailSettingsModel.MAIL_TYPE;
-                    updateSettings.IS_DELETE = false;
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
                 }
-                db.SaveChanges();
-                return Request.CreateResponse(HttpStatusCode.OK, "OK");
             }
             catch (Exception ex)
             {
-
                 throw;
-            };
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
 
 
         }
@@ -106,22 +143,40 @@ namespace InvoicePOSAPI.Controllers
         {
             try
             {
-                var updateSettings = (from a in db.TBL_EMAIL_SETTINGS
-                                      where a.ID == _EmailSettingsModel.ID && a.IS_DELETE == false
-                                      select a).FirstOrDefault();
-                if (updateSettings != null)
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
                 {
-                   
-                    updateSettings.IS_DELETE = true;
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
                 }
-                db.SaveChanges();
-                return Request.CreateResponse(HttpStatusCode.OK, "OK");
+
+                if (conn)
+                {
+                    var updateSettings = (from a in db.TBL_EMAIL_SETTINGS
+                                          where a.ID == _EmailSettingsModel.ID && a.IS_DELETE == false
+                                          select a).FirstOrDefault();
+                    if (updateSettings != null)
+                    {
+
+                        updateSettings.IS_DELETE = true;
+                    }
+                    db.SaveChanges();
+                    return Request.CreateResponse(HttpStatusCode.OK, "OK");
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
             }
             catch (Exception ex)
             {
-
                 throw;
-            };
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
 
 
         }

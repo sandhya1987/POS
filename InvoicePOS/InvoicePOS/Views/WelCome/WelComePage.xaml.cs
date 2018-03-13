@@ -25,6 +25,8 @@ using InvoicePOS.UserControll.Cash_Reg;
 using InvoicePOS.UserControll.Supplier;
 using InvoicePOS.UserControll.SalesReturn;
 using InvoicePOS.UserControll.Payment;
+using InvoicePOS.Views.Main;
+using System.Threading;
 
 namespace InvoicePOS.Views.WelCome
 {
@@ -64,6 +66,7 @@ namespace InvoicePOS.Views.WelCome
         public static Button EstimateReff;
         public static Button SettingsReff;
         public static Button DashboardReff;
+        private Thread t = null;
 
         public WelComePage()
         {
@@ -100,6 +103,38 @@ namespace InvoicePOS.Views.WelCome
             EstimateReff = Estimate;
             SettingsReff = Settings;
             DashboardReff = Dashboard;
+        }
+
+
+        private void Synchronize(object sender, RoutedEventArgs e)
+        {
+            CreateNewThread();
+        }
+
+        public void CreateNewThread()
+        {
+            t = ((App)Application.Current).SyncThread;
+            ProgressBarWindow pbw;
+            if ((t == null) || (!t.IsAlive))
+            {
+                t = new Thread(delegate()
+                {
+                    pbw = new ProgressBarWindow();
+                    pbw.Closing += OnProgressBarWindowClosed;
+                    pbw.Show();
+                    System.Windows.Threading.Dispatcher.Run();
+                });
+                t.SetApartmentState(ApartmentState.STA);
+                t.IsBackground = true;
+                t.Start();
+                ((App)Application.Current).SyncThread = t;
+            }
+
+        }
+
+        void OnProgressBarWindowClosed(object sender, EventArgs e)
+        {
+            System.Windows.Threading.Dispatcher.FromThread(t).InvokeShutdown();
         }
 
         #region IMainWindow Members

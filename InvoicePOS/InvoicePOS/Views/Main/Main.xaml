@@ -9,7 +9,8 @@
         xmlns:local="clr-namespace:InvoicePOS.Views" 
         xmlns:localn="clr-namespace:InvoicePOS.Views.Autocomplete"
         xmlns:p="clr-namespace:InvoicePOS.Properties"
-        Title="{x:Static p:Resources.String40}" Height="735" Width="1424" WindowState="Maximized">
+        Title="{x:Static p:Resources.String40}" Height="735" Width="1425" WindowState="Maximized"
+        Closing="On_Close">
     <Grid x:Name="GridEstimate">
         <Grid Margin="0,0,0,630">
             <Rectangle Fill="#dcdcdc" Height="105" Stroke="#dcdcdc" VerticalAlignment="Top" Margin="0,-25,10,-5"/>
@@ -126,8 +127,6 @@
                     </Label>
                 </DockPanel>
             </Button>
-
-
         </Grid>
         <Grid Margin="0,80,542,496">
             <Rectangle Fill="#f5f5f5" Height="125" Margin="10,5,0,-1" Stroke="#dadada" VerticalAlignment="Top" HorizontalAlignment="Left" Width="580"/>
@@ -139,8 +138,7 @@
             <TextBlock x:Name="textBlock14" HorizontalAlignment="Left" Height="20" Margin="397,102,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="129"/>
             <Image HorizontalAlignment="Left" Height="108" Source="{Binding IMAGE_PATH1}" Name="ImgSource" VerticalAlignment="Top" Width="156" Margin="14,10,0,0"/>
             <TextBlock x:Name="textBlock3" Text="{Binding BusinessLocName}" HorizontalAlignment="Left" Margin="499,24,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
-            <TextBlock x:Name="textBlock21" Text="{Binding BusinessAddress}" HorizontalAlignment="Left" Margin="500,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-
+            <TextBlock x:Name="textBlock21" Text="{Binding BusinessAddress}" HorizontalAlignment="Left" Margin="500,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>            
         </Grid>
         <Grid Margin="605,71,0,487">
             <Grid.ColumnDefinitions>

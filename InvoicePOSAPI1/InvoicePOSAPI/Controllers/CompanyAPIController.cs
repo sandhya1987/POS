@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
+using InvoicePOSAPI.Helpers;
 
 namespace InvoicePOSAPI.Controllers
 {
@@ -27,56 +28,73 @@ namespace InvoicePOSAPI.Controllers
             //CompanyModel model = new CompanyModel();
             try
             {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
 
-            var str = (from a in db.TBL_COMPANY
-                       join b in db.TBL_BANK on a.COMAPNY_ID equals b.COMPANY_ID
-                       join c in db.TBL_BANK_ACCOUNT on b.BANK_ID equals c.BANK_ID
-                       select new CompanyModel
-                       {
-                           NAME = a.COMPANY_NAME,
-                           COMPANY_ID = a.COMAPNY_ID,
-                           ADDRESS_1 = a.ADDRESS_1,
-                           ADDRESS_2 = a.ADDRESS_2,
-                           EMAIL = a.EMAIL,
-                           MOBILE_NUMBER = a.MOBILE_NUMBER,
-                           PHONE_NUMBER = a.PHONE_NUMBER,
-                           PIN = a.PIN,
-                           DEFAULT_TAX_RATE = a.DEFAULT_TAX_RATE,
-                           IS_WARNED_FOR_LESS_SALES_PRICE = a.IS_WARNED_FOR_LESS_SALES_PRICE,
-                           IS_WARNED_FOR_NEGATIVE_STOCK = a.IS_WARNED_FOR_NEGATIVE_STOCK,
-                           FIRST_DAY_OF_FINANCIAL_YEAR = a.FIRST_DAY_OF_FINANCIAL_YEAR,
-                           FIRST_MONTH_OF_FINANCIAL_YEAR = a.FIRST_MONTH_OF_FINANCIAL_YEAR,
-                           BANK_ID = a.BANK_ID,
-                           BANK_ADDRESS_2 = b.ADDRESS_2,
-                           BANK_ADDRESS_1 = b.ADDRESS_1,
-                           ACCOUNT_NUMBER=c.ACCOUNT_NUMBER,
-                           BANK_CITY = b.CITY,
-                           BANK_CODE = b.BANK_CODE,
-                           BANK_NAME = b.BANK_NAME,
-                           BANK_PHONE_NUMBER = b.PHONE_NUMBER,
-                           BANK_PIN_CODE = b.PIN_CODE,
-                           BANK_STATE = b.STATE,
-                           CITY = b.CITY,
-                           PREFIX = a.PREFIX,
-                           PREFIX_NUM = a.PREFIX_NUM,
-                           SHOPNAME = a.SHOPNAME,
-                           STATE = b.STATE,
-                           TAX_PRINTED_DESCRIPTION = a.TAX_PRINTED_DESCRIPTION,
-                           TIN_NUMBER = a.TIN_NUMBER,
-                           WEBSITE = a.WEBSITE,
-                           IFSC_CODE = b.IFSC_CODE,
-                           IMAGE_PATH=a.IMAGE_PATH,
+                if (conn)
+                {
+                    var str = (from a in db.TBL_COMPANY
+                               join b in db.TBL_BANK on a.COMAPNY_ID equals b.COMPANY_ID
+                               join c in db.TBL_BANK_ACCOUNT on b.BANK_ID equals c.BANK_ID
+                               select new CompanyModel
+                               {
+                                   NAME = a.COMPANY_NAME,
+                                   COMPANY_ID = a.COMAPNY_ID,
+                                   ADDRESS_1 = a.ADDRESS_1,
+                                   ADDRESS_2 = a.ADDRESS_2,
+                                   EMAIL = a.EMAIL,
+                                   MOBILE_NUMBER = a.MOBILE_NUMBER,
+                                   PHONE_NUMBER = a.PHONE_NUMBER,
+                                   PIN = a.PIN,
+                                   DEFAULT_TAX_RATE = a.DEFAULT_TAX_RATE,
+                                   IS_WARNED_FOR_LESS_SALES_PRICE = a.IS_WARNED_FOR_LESS_SALES_PRICE,
+                                   IS_WARNED_FOR_NEGATIVE_STOCK = a.IS_WARNED_FOR_NEGATIVE_STOCK,
+                                   FIRST_DAY_OF_FINANCIAL_YEAR = a.FIRST_DAY_OF_FINANCIAL_YEAR,
+                                   FIRST_MONTH_OF_FINANCIAL_YEAR = a.FIRST_MONTH_OF_FINANCIAL_YEAR,
+                                   BANK_ID = a.BANK_ID,
+                                   BANK_ADDRESS_2 = b.ADDRESS_2,
+                                   BANK_ADDRESS_1 = b.ADDRESS_1,
+                                   ACCOUNT_NUMBER = c.ACCOUNT_NUMBER,
+                                   BANK_CITY = b.CITY,
+                                   BANK_CODE = b.BANK_CODE,
+                                   BANK_NAME = b.BANK_NAME,
+                                   BANK_PHONE_NUMBER = b.PHONE_NUMBER,
+                                   BANK_PIN_CODE = b.PIN_CODE,
+                                   BANK_STATE = b.STATE,
+                                   CITY = b.CITY,
+                                   PREFIX = a.PREFIX,
+                                   PREFIX_NUM = a.PREFIX_NUM,
+                                   SHOPNAME = a.SHOPNAME,
+                                   STATE = b.STATE,
+                                   TAX_PRINTED_DESCRIPTION = a.TAX_PRINTED_DESCRIPTION,
+                                   TIN_NUMBER = a.TIN_NUMBER,
+                                   WEBSITE = a.WEBSITE,
+                                   IFSC_CODE = b.IFSC_CODE,
+                                   IMAGE_PATH = a.IMAGE_PATH,
 
 
-                       }).ToList();
+                               }).ToList();
 
-            return Request.CreateResponse(HttpStatusCode.OK, str);
+                    return Request.CreateResponse(HttpStatusCode.OK, str);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
 
             }
             catch (Exception ex)
             {
-
                 throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
             }
 
         }
