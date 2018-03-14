@@ -59,7 +59,8 @@ namespace InvoicePOS.ViewModels
             //SelectInv1 = new GetInvoiceModel1();
             var datagrid = App.Current.Properties["DataGridL"] as ObservableCollection<ItemModel>;
             SelectInvoice.SelectedItem = datagrid;
-            var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            var comp = 1;
             //NUMBER_OF_ITEM = Convert.ToInt32(App.Current.Properties["TotalProduct"]);
             //QUANTITY_TOTAL = Convert.ToInt32(App.Current.Properties["TotalQnt"]);
             //BEFORE_ROUNDOFF = Convert.ToDecimal(App.Current.Properties["TotalAmount"]);
@@ -180,6 +181,130 @@ namespace InvoicePOS.ViewModels
             ChartTile = "Pending Invoices";
             ChartYAxis = "Invoice Amount";
         }
+
+        public List<GetInvoiceModel> _ListGridSalesReturn { get; set; }
+        public List<GetInvoiceModel> ListGridSalesReturn
+        {
+            get
+            {
+                return _ListGridSalesReturn;
+            }
+            set
+            {
+                this._ListGridSalesReturn = value;
+                OnPropertyChanged("ListGridSalesReturn");
+            }
+        }
+
+
+
+        public List<GetInvoiceModel> _ListGridItemWeightSold { get; set; }
+        public List<GetInvoiceModel> ListGridItemWeightSold
+        {
+            get
+            {
+                return _ListGridItemWeightSold;
+            }
+            set
+            {
+                this._ListGridItemWeightSold = value;
+                OnPropertyChanged("ListGridItemWeightSold");
+            }
+        }
+
+
+        private DateTime _FROM_DATE = DateTime.Now;
+        public DateTime FROM_DATE
+        {
+            get
+            {
+                return _FROM_DATE;
+            }
+            set
+            {
+                _FROM_DATE = value;
+                string str = _FROM_DATE.ToString("yyyy-MM-dd HH:mm");
+                string str1 = _FROM_DATE.ToString();
+                DateTime dt = DateTime.ParseExact(str, "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+
+                if (_FROM_DATE != value)
+                {
+                    _FROM_DATE = value;
+
+                    OnPropertyChanged("FROM_DATE");
+                }
+
+            }
+        }
+        private DateTime _TO_DATE = DateTime.Now;
+        public DateTime TO_DATE
+        {
+            get
+            {
+                return _TO_DATE;
+            }
+            set
+            {
+                if (_TO_DATE != value)
+                {
+                    _TO_DATE = value;
+                    OnPropertyChanged("TO_DATE");
+                }
+
+            }
+        }
+
+        public bool _ApplyDateRange_Search;
+        public bool ApplyDateRange_Search
+        {
+            get
+            {
+                return _ApplyDateRange_Search;
+            }
+            set
+            {
+                _ApplyDateRange_Search = value;
+                //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                var comp = 1;
+                if (_ApplyDateRange_Search == true)
+                {
+                    GetInvoice(comp);
+                }
+                else
+                {
+                    GetInvoice(comp);
+                }
+                OnPropertyChanged("ApplyDateRange_Search");
+            }
+        }
+
+
+
+        public bool _ApplyDateRange_WtSld;
+        public bool ApplyDateRange_WtSld
+        {
+            get
+            {
+                return _ApplyDateRange_WtSld;
+            }
+            set
+            {
+                _ApplyDateRange_WtSld = value;
+                //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                var comp = 1;
+                if (_ApplyDateRange_WtSld == true)
+                {
+                    GetItemWeightSold(comp);
+                }
+                else
+                {
+                    GetItemWeightSold(comp);
+                }
+                OnPropertyChanged("ApplyDateRange_WtSld");
+            }
+        }
+
+
         public async void CusEmailNo()
         {
             int a = Convert.ToInt32(App.Current.Properties["SelectCustId"]);
@@ -900,6 +1025,93 @@ namespace InvoicePOS.ViewModels
             }
         }
 
+
+        private decimal _TOTAL_INVOICE_AMOUNT;
+        public decimal TOTAL_INVOICE_AMOUNT
+        {
+            get
+            {
+                return SelectInvoice.TOTAL_INVOICE_AMOUNT;
+            }
+            set
+            {
+                SelectInvoice.TOTAL_INVOICE_AMOUNT = value;
+                OnPropertyChanged("TOTAL_INVOICE_AMOUNT");
+            }
+        }
+
+
+        private decimal _TOTAL_PRODUCT1;
+        public decimal TOTAL_PRODUCT1
+        {
+            get
+            {
+                return SelectInvoice.TOTAL_PRODUCT1;
+            }
+            set
+            {
+                SelectInvoice.TOTAL_PRODUCT1 = value;
+                OnPropertyChanged("TOTAL_PRODUCT1");
+            }
+        }
+
+        private decimal _TOTAL_PRODUCT2;
+        public decimal TOTAL_PRODUCT2
+        {
+            get
+            {
+                return SelectInvoice.TOTAL_PRODUCT2;
+            }
+            set
+            {
+                SelectInvoice.TOTAL_PRODUCT2 = value;
+                OnPropertyChanged("TOTAL_PRODUCT2");
+            }
+        }
+
+        private decimal _TOTAL_PRODUCT3;
+        public decimal TOTAL_PRODUCT3
+        {
+            get
+            {
+                return SelectInvoice.TOTAL_PRODUCT3;
+            }
+            set
+            {
+                SelectInvoice.TOTAL_PRODUCT3 = value;
+                OnPropertyChanged("TOTAL_PRODUCT3");
+            }
+        }
+
+        private decimal _TOTAL_PRODUCT4;
+        public decimal TOTAL_PRODUCT4
+        {
+            get
+            {
+                return SelectInvoice.TOTAL_PRODUCT4;
+            }
+            set
+            {
+                SelectInvoice.TOTAL_PRODUCT4 = value;
+                OnPropertyChanged("TOTAL_PRODUCT4");
+            }
+        }
+
+        private decimal _TOTAL_SALERETURN;
+        public decimal TOTAL_SALERETURN
+        {
+            get
+            {
+                return SelectInvoice.TOTAL_SALERETURN;
+            }
+            set
+            {
+                SelectInvoice.TOTAL_SALERETURN = value;
+                OnPropertyChanged("TOTAL_SALERETURN");
+            }
+        }
+
+        
         private int _QUANTITY_TOTAL;
         public int QUANTITY_TOTAL
         {
@@ -1892,6 +2104,9 @@ namespace InvoicePOS.ViewModels
         List<GetInvoiceModel> _ListGrid_Invoice = new List<GetInvoiceModel>();
         GetInvoiceModel[] datainvoice = null;
 
+        List<GetInvoiceModel> _ListGrid_SalesReturn = new List<GetInvoiceModel>();
+        
+
         public async Task<ObservableCollection<GetInvoiceModel>> GetInvoice(int comp)
         {
             try
@@ -1907,9 +2122,15 @@ namespace InvoicePOS.ViewModels
                     datainvoice = JsonConvert.DeserializeObject<GetInvoiceModel[]>(await response.Content.ReadAsStringAsync());
                     int x = 0;
                     //_tmpChart.Clear();
+                    _ListGrid_Invoice.Clear();
                     for (int i = 0; i < datainvoice.Length; i++)
                     {
+                        
                         x++;
+                        //if (datainvoice[i].SALES_RETURN_AMOUNT == null)
+                        //{
+                        //    TOTAL_SALERETURN = 0;
+                        //}
                         _ListGrid_Invoice.Add(new GetInvoiceModel
                         {
                             INVOICE_ID = datainvoice[i].INVOICE_ID,
@@ -1935,6 +2156,17 @@ namespace InvoicePOS.ViewModels
                             TAX_INCLUDED = datainvoice[i].TAX_INCLUDED,
                             TOTAL_AMOUNT = datainvoice[i].TOTAL_AMOUNT,
                             TOTAL_TAX = datainvoice[i].TOTAL_TAX,
+                            TOT_AMT = datainvoice[i].TOT_AMT,
+                            //if(datainvoice[i].SALES_RETURN_AMOUNT==null)
+                            //    TOTAL_SALERETURN=0,
+                            //else
+
+
+
+                            SALES_RETURN_AMOUNT = datainvoice[i].SALES_RETURN_AMOUNT,
+                            //if(TOTAL_SALERETURN==null)
+
+                            //    TOTAL_SALERETURN=0;
                         });
                          
                     }
@@ -1945,8 +2177,61 @@ namespace InvoicePOS.ViewModels
                         var item1 = (from m in _ListGrid_Invoice where m.INVOICE_NO.Contains(SEARCH_CUS) select m).ToList();
                         _ListGrid_Invoice = item1;
                     }
+
+
+
+                    if (ApplyDateRange_Search == true)
+                    {
+                        _ListGrid_SalesReturn.Clear();
+                       // _ListGrid_Invoice.Clear();
+                        var item1 = (from m in _ListGrid_Invoice
+                                     where m.INVOICE_DATE >= FROM_DATE && m.INVOICE_DATE <= TO_DATE && (m.SALES_RETURN_AMOUNT != null || m.SALES_RETURN_AMOUNT!=0)
+                                     select m).ToList();
+                        if (item1.Count > 0)
+                        {
+                            _ListGrid_SalesReturn = item1;
+                        }
+                    }
+                    //if (IS_InACTIVESearch == true)
+                    //{
+                    //var InActiveSupp = (from m in _ListGrid_Invoice where m.IS_ACTIVE == true select m).ToList();
+                    //_ListGrid_Invoice = InActiveSupp;
+                    //}
+
+                    TOTAL_INVOICE_AMOUNT = 0;
+                    TOTAL_SALERETURN = 0;
+                    if (_ListGrid_SalesReturn.Count != 0)
+                    {
+                        for (int i = 0; i < _ListGrid_SalesReturn.Count; i++)
+                        {
+                            TOTAL_INVOICE_AMOUNT = Convert.ToDecimal(_ListGrid_SalesReturn[i].TOT_AMT + TOTAL_INVOICE_AMOUNT);
+                            //App.Current.Properties["CurrentGrosAmount1"] = TOTAL_AMOUNT;
+                            TOTAL_SALERETURN = Convert.ToDecimal(_ListGrid_SalesReturn[i].SALES_RETURN_AMOUNT + TOTAL_SALERETURN);
+
+                        }
+                        TOTAL_SALERETURN = Math.Round(TOTAL_SALERETURN, 2);
+                        //PO_Summery_Report.TotTax.Text = TOTAL_TAX.ToString();
+                        //PO_Summery_Report.TotAmt.Text = TOTAL_AMOUNT.ToString();
+                    }
+
+                    ListGridSalesReturn = _ListGrid_SalesReturn;
+
                     
                     ListGrid = _ListGrid_Invoice;
+
+                    if (ApplyDateRange_WtSld == true)
+                    {
+                        _ListGrid_SalesReturn.Clear();
+                        // _ListGrid_Invoice.Clear();
+                        var item1 = (from m in _ListGrid_Invoice
+                                     where m.INVOICE_DATE >= FROM_DATE && m.INVOICE_DATE <= TO_DATE
+                                     select m).ToList();
+                        if (item1.Count > 0)
+                        {
+                            _ListGrid_SalesReturn = item1;
+                        }
+                    }
+
                 }
 
             }
@@ -1954,6 +2239,129 @@ namespace InvoicePOS.ViewModels
             {
             }
             return new ObservableCollection<GetInvoiceModel>(_ListGrid_Invoice);
+        }
+
+        List<GetInvoiceModel> _ListGrid_ItemWeightSold = new List<GetInvoiceModel>();
+        List<GetInvoiceModel> _ListGrid_Inv = new List<GetInvoiceModel>();
+        GetInvoiceModel[] datainv = null;
+        public async Task<ObservableCollection<GetInvoiceModel>> GetItemWeightSold(int comp)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response = client.GetAsync("api/InvoiceAPI/GetItemWtSld?id=" + comp + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    datainvoice = JsonConvert.DeserializeObject<GetInvoiceModel[]>(await response.Content.ReadAsStringAsync());
+                    int x = 0;
+                    //_tmpChart.Clear();
+                    _ListGrid_Invoice.Clear();
+                    for (int i = 0; i < datainvoice.Length; i++)
+                    {
+
+                        x++;
+                        //if (datainvoice[i].SALES_RETURN_AMOUNT == null)
+                        //{
+                        //    TOTAL_SALERETURN = 0;
+                        //}
+                        _ListGrid_Invoice.Add(new GetInvoiceModel
+                        {
+                            INVOICE_ID = datainvoice[i].INVOICE_ID,
+                            AVAILABLE_CREDIT_LIMIT = datainvoice[i].AVAILABLE_CREDIT_LIMIT,
+                            BEFORE_ROUNDOFF = datainvoice[i].BEFORE_ROUNDOFF,
+                            COMMISION_EXPENSE = datainvoice[i].COMMISION_EXPENSE,
+                            CUSTOMER = datainvoice[i].CUSTOMER,
+                            CUSTOMER_EMAIL = datainvoice[i].CUSTOMER_EMAIL,
+
+                            CUSTOMER_ID = datainvoice[i].CUSTOMER_ID,
+
+                            CUSTOMER_MOBILE_NO = datainvoice[i].CUSTOMER_MOBILE_NO,
+                            //INVOICE_NO = datainv[i].INVOICE_NO,
+                            ITEM_ID = datainvoice[i].ITEM_ID,
+                            NOTE = datainvoice[i].NOTE,
+                            NUMBER_OF_ITEM = datainvoice[i].NUMBER_OF_ITEM,
+                            PENDING_AMOUNT = datainvoice[i].PENDING_AMOUNT,
+                            QUANTITY_TOTAL = datainvoice[i].QUANTITY_TOTAL,
+                            RECIVED_AMOUNT = datainvoice[i].RECIVED_AMOUNT,
+                            RETURNABLE_AMOUNT = datainvoice[i].RETURNABLE_AMOUNT,
+                            ROUNDOFF_AMOUNT = datainvoice[i].ROUNDOFF_AMOUNT,
+                            SALES_EXECUTIVE = datainvoice[i].SALES_EXECUTIVE,
+                            SALES_EXECUTIVE_ID = datainvoice[i].SALES_EXECUTIVE_ID,
+                            INVOICE_DATE = datainvoice[i].INVOICE_DATE,
+                            TAX_INCLUDED = datainvoice[i].TAX_INCLUDED,
+                            TOTAL_AMOUNT = datainvoice[i].TOTAL_AMOUNT,
+                            //TOTAL_TAX = datainv[i].TOTAL_TAX,
+                            //DISCOUNT_INCLUDED = datainv[i].DISCOUNT_INCLUDED,
+                            TOT_AMT = datainvoice[i].TOT_AMT,
+
+
+                            SALES_RETURN_AMOUNT = datainvoice[i].SALES_RETURN_AMOUNT,
+
+
+
+                            INVOICE_NO = datainvoice[i].INVOICE_NO,
+                            WEIGHT_OF_PAPER = datainvoice[i].WEIGHT_OF_PAPER,
+                            WEIGHT_OF_PLASTIC = datainvoice[i].WEIGHT_OF_PLASTIC,
+                            WEIGHT_OF_FOAM = datainvoice[i].WEIGHT_OF_FOAM,
+                            WEIGHT_OF_CARDBOARD = datainvoice[i].WEIGHT_OF_CARDBOARD,
+                            SALE_QTY = datainvoice[i].SALE_QTY,
+                            //INVDT = datainv[i].INVOICE_DATE,
+                            
+                        });
+
+                    }
+
+                   
+
+
+                    if (ApplyDateRange_WtSld == true)
+                    {
+                        _ListGrid_ItemWeightSold.Clear();
+                        // _ListGrid_Invoice.Clear();
+                        var item1 = (from m in _ListGrid_Invoice
+                                     where m.INVOICE_DATE >= FROM_DATE && m.INVOICE_DATE <= TO_DATE
+                                     select m).ToList();
+                        if (item1.Count > 0)
+                        {
+                            _ListGrid_ItemWeightSold = item1;
+                        }
+                    }
+
+                    TOTAL_PRODUCT1= 0;
+                    TOTAL_PRODUCT2 = 0;
+                    TOTAL_PRODUCT3 = 0;
+                    TOTAL_PRODUCT4 = 0;
+
+                    if (_ListGrid_ItemWeightSold.Count != 0)
+                    {
+                        for (int i = 0; i < _ListGrid_ItemWeightSold.Count; i++)
+                        {
+                            _ListGrid_ItemWeightSold[i].TOTAL_PRODUCT1 = Convert.ToDecimal(_ListGrid_ItemWeightSold[i].WEIGHT_OF_PAPER * _ListGrid_ItemWeightSold[i].SALE_QTY);
+                            TOTAL_PRODUCT1 = Convert.ToDecimal(_ListGrid_ItemWeightSold[i].TOTAL_PRODUCT1 + TOTAL_PRODUCT1);
+                            _ListGrid_ItemWeightSold[i].TOTAL_PRODUCT2 = Convert.ToDecimal(_ListGrid_ItemWeightSold[i].WEIGHT_OF_PLASTIC * _ListGrid_ItemWeightSold[i].SALE_QTY);
+                            TOTAL_PRODUCT2 = Convert.ToDecimal(_ListGrid_ItemWeightSold[i].TOTAL_PRODUCT2 + TOTAL_PRODUCT2);
+                            _ListGrid_ItemWeightSold[i].TOTAL_PRODUCT3 = Convert.ToDecimal(_ListGrid_ItemWeightSold[i].WEIGHT_OF_FOAM * _ListGrid_ItemWeightSold[i].SALE_QTY);
+                            TOTAL_PRODUCT3 = Convert.ToDecimal(_ListGrid_ItemWeightSold[i].TOTAL_PRODUCT3 + TOTAL_PRODUCT3);
+                            _ListGrid_ItemWeightSold[i].TOTAL_PRODUCT4 = Convert.ToDecimal(_ListGrid_ItemWeightSold[i].WEIGHT_OF_CARDBOARD * _ListGrid_ItemWeightSold[i].SALE_QTY);
+                            TOTAL_PRODUCT4 = Convert.ToDecimal(_ListGrid_ItemWeightSold[i].TOTAL_PRODUCT4 + TOTAL_PRODUCT4);
+
+                        }
+                        //TOTAL_SALERETURN = Math.Round(TOTAL_SALERETURN, 2);
+                       
+                    }
+
+                    ListGridItemWeightSold = _ListGrid_ItemWeightSold;
+                }
+
+            }
+            catch (Exception ex)
+            {
+            }
+            return new ObservableCollection<GetInvoiceModel>(_ListGrid_Inv);
         }
         #endregion
 

@@ -32,7 +32,7 @@ namespace InvoicePOS.ViewModels
         CashRegModel[] data = null;
 
         ObservableCollection<CashRegModel> _ListGrid_Temp = new ObservableCollection<CashRegModel>();
-        
+
         public CashRegViewModel()
         {
             var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
@@ -48,14 +48,35 @@ namespace InvoicePOS.ViewModels
             {
                 SelectedItem = App.Current.Properties["CashRegView"] as CashRegModel;
                 App.Current.Properties["Action"] = "";
-               // GetCashReg(comp);
+                // GetCashReg(comp);
             }
+            else if (App.Current.Properties["Action"].ToString() == "ViewTransferCash")
+            {
+                SelectedItem = App.Current.Properties["TransferCashView"] as CashRegModel;
+                App.Current.Properties["Action"] = "";
+                // GetCashReg(comp);
+            }
+
+            else if (App.Current.Properties["Action"].ToString() == "ViewTransactionCash")
+            {
+                SelectedItem = App.Current.Properties["TranscationCashView"] as CashRegModel;
+                App.Current.Properties["Action"] = "";
+                // GetCashReg(comp);
+            }
+
             else
             {
                 UpdVisible = "Collapsed";
                 CreatVisible = "Visible";
                 SelectedItem = new CashRegModel();
+                //IS_TRANSFER_CASH_REGISTER = true;
+                TRANSFER_DATE = System.DateTime.Now;
+                GetTransferNo();
+                isenable = true;
+                _isenable = true;
                 GetCashReg(comp);
+                GetTransferedCash(comp);
+                //GetViewCashTranscation(comp);
             }
         }
         public string Error
@@ -79,6 +100,119 @@ namespace InvoicePOS.ViewModels
                 }
             }
         }
+
+        private bool _IS_TRANSFER__CASH_REGISTER;
+        public bool IS_TRANSFER_CASH_REGISTER
+        {
+            get
+            {
+                return SelectedItem.IS_TRANSFER_CASH_REGISTER;
+            }
+            set
+            {
+                SelectedItem.IS_TRANSFER_CASH_REGISTER = value;
+                if (SelectedItem.IS_TRANSFER_CASH_REGISTER != value)
+                {
+                    SelectedItem.IS_TRANSFER_CASH_REGISTER = value;
+                    OnPropertyChanged("IS_TRANSFER_CASH_REGISTER");
+                }
+            }
+        }
+
+
+        private long _FROM_TRAN_CASH_REGISTER_ID;
+        public long FROM_TRAN_CASH_REGISTER_ID
+        {
+            get
+            {
+                return SelectedItem.FROM_TRAN_CASH_REGISTER_ID;
+            }
+            set
+            {
+                SelectedItem.FROM_TRAN_CASH_REGISTER_ID = value;
+                if (SelectedItem.FROM_TRAN_CASH_REGISTER_ID != value)
+                {
+                    SelectedItem.FROM_TRAN_CASH_REGISTER_ID = value;
+                    OnPropertyChanged("FROM_TRAN_CASH_REGISTER_ID");
+                }
+            }
+        }
+
+
+        private string _FROM_TRAN_CASH_REGISTER;
+        public string FROM_TRAN_CASH_REGISTER
+        {
+            get
+            {
+                return SelectedItem.FROM_TRAN_CASH_REGISTER;
+            }
+            set
+            {
+                SelectedItem.FROM_TRAN_CASH_REGISTER = value;
+                if (SelectedItem.FROM_TRAN_CASH_REGISTER != value)
+                {
+                    SelectedItem.FROM_TRAN_CASH_REGISTER = value;
+                    OnPropertyChanged("FROM_TRAN_CASH_REGISTER");
+                }
+            }
+        }
+
+        private long _TO_TRAN_CASH_REGISTER_ID;
+        public long TO_TRAN_CASH_REGISTER_ID
+        {
+            get
+            {
+                return SelectedItem.TO_TRAN_CASH_REGISTER_ID;
+            }
+            set
+            {
+                SelectedItem.TO_TRAN_CASH_REGISTER_ID = value;
+                if (SelectedItem.TO_TRAN_CASH_REGISTER_ID != value)
+                {
+                    SelectedItem.TO_TRAN_CASH_REGISTER_ID = value;
+                    OnPropertyChanged("TO_TRAN_CASH_REGISTER_ID");
+                }
+            }
+        }
+
+        private string _TO_TRAN_CASH_REGISTER;
+        public string TO_TRAN_CASH_REGISTER
+        {
+            get
+            {
+                return SelectedItem.TO_TRAN_CASH_REGISTER;
+            }
+            set
+            {
+                SelectedItem.TO_TRAN_CASH_REGISTER = value;
+                if (SelectedItem.TO_TRAN_CASH_REGISTER != value)
+                {
+                    SelectedItem.TO_TRAN_CASH_REGISTER = value;
+                    OnPropertyChanged("TO_TRAN_CASH_REGISTER");
+                }
+            }
+        }
+
+        private long _BUSINESS_LOCATION_ID;
+        public long BUSINESS_LOCATION_ID
+        {
+            get
+            {
+                return SelectedItem.BUSINESS_LOCATION_ID;
+            }
+            set
+            {
+                SelectedItem.BUSINESS_LOCATION_ID = value;
+
+                if (SelectedItem.BUSINESS_LOCATION_ID != value)
+                {
+                    SelectedItem.BUSINESS_LOCATION_ID = value;
+                    OnPropertyChanged("BUSINESS_LOCATION_ID");
+                }
+            }
+        }
+
+
         private string _BUSINESS_LOCATION;
         public string BUSINESS_LOCATION
         {
@@ -94,6 +228,27 @@ namespace InvoicePOS.ViewModels
                 {
                     SelectedItem.BUSINESS_LOCATION = value;
                     OnPropertyChanged("BUSINESS_LOCATION");
+                }
+            }
+        }
+
+        private DateTime _TRANSFER_DATE;
+        public DateTime TRANSFER_DATE
+        {
+            get
+            {
+                return SelectedItem.TRANSFER_DATE;
+            }
+            set
+            {
+                SelectedItem.TRANSFER_DATE = value;
+
+
+
+                if (SelectedItem.TRANSFER_DATE != value)
+                {
+                    SelectedItem.TRANSFER_DATE = System.DateTime.Now;
+                    OnPropertyChanged("TRANSFER_DATE");
                 }
             }
         }
@@ -115,6 +270,26 @@ namespace InvoicePOS.ViewModels
                 }
             }
         }
+
+        private string _STATUS;
+        public string STATUS
+        {
+            get
+            {
+                return SelectedItem.STATUS;
+            }
+            set
+            {
+                SelectedItem.STATUS = value;
+
+                if (SelectedItem.STATUS != value)
+                {
+                    SelectedItem.STATUS = value;
+                    OnPropertyChanged("STATUS");
+                }
+            }
+        }
+
 
         //private decimal _CASH_AMOUNT;
         //public decimal? CASH_AMOUNT
@@ -146,14 +321,91 @@ namespace InvoicePOS.ViewModels
             {
                 //if (SelectedItem != null)
                 //{
-                    _CASH_AMOUNT = value;
+                _CASH_AMOUNT = value;
                 //}
                 //else
                 //    MessageBox.Show("Please Select Item");
-                    OnPropertyChanged("CASH_AMOUNT");
+                OnPropertyChanged("CASH_AMOUNT");
 
             }
         }
+
+
+
+        //private decimal _CURRENT_REMAIN;
+        //public decimal CURRENT_REMAIN
+        //{
+        //    get
+        //    {
+        //        return CURRENT_REMAIN;
+        //    }
+        //    set
+        //    {
+        //        //if (SelectedItem != null)
+        //        //{
+        //        CURRENT_REMAIN = 
+        //        //}
+        //        //else
+        //        //    MessageBox.Show("Please Select Item");
+        //        OnPropertyChanged("CURRENT_REMAIN");
+
+        //    }
+        //}
+
+
+        private decimal _CURRENT_REMAIN;
+        public decimal CURRENT_REMAIN
+        {
+            get
+            {
+                return SelectedItem.CURRENT_REMAIN;
+            }
+            set
+            {
+                //SelectedItem.CURRENT_REMAIN = value;
+
+                //if (SelectedItem.CURRENT_REMAIN != value)
+                //{
+                SelectedItem.CURRENT_REMAIN = value;
+                OnPropertyChanged("CURRENT_REMAIN");
+                //}
+            }
+        }
+
+
+        private decimal _SUBMITTED_CASH;
+        public decimal SUBMITTED_CASH
+        {
+            get
+            {
+                return SelectedItem.SUBMITTED_CASH;
+            }
+            set
+            {
+
+                SelectedItem.SUBMITTED_CASH = value;
+
+                OnPropertyChanged("SUBMITTED_CASH");
+
+            }
+        }
+
+        //private string _STATUS;
+        //public string STATUS
+        //{
+        //    get
+        //    {
+        //        return SelectedItem.STATUS;
+        //    }
+        //    set
+        //    {
+
+        //        SelectedItem.STATUS = value;
+
+        //        OnPropertyChanged("STATUS");
+
+        //    }
+        //}
 
         //private int? _TOTAL_QTY;
         //public int? TOTAL_QTY
@@ -211,6 +463,49 @@ namespace InvoicePOS.ViewModels
                 }
             }
         }
+
+        private decimal _CURRENT_CASH;
+        public decimal CURRENT_CASH
+        {
+            get
+            {
+                return SelectedItem.CURRENT_CASH;
+            }
+            set
+            {
+                SelectedItem.CURRENT_CASH = value;
+                OnPropertyChanged("CURRENT_CASH");
+
+            }
+        }
+
+        private decimal _CASH_TO_TRANSFER;
+        public decimal CASH_TO_TRANSFER
+        {
+            get
+            {
+                return SelectedItem.CASH_TO_TRANSFER;
+            }
+            set
+            {
+                SelectedItem.CASH_TO_TRANSFER = value;
+                //if (CURRENT_CASH >= CASH_TO_TRANSFER)
+                //{
+                //    CURRENT_REMAIN = CURRENT_CASH - CASH_TO_TRANSFER;
+                //    CASH_TO_TRANSFER = CASH_TO_TRANSFER;
+                //}
+                //else
+                //{
+                //    MessageBox.Show("There is no more cash in This Cash Register's Drawer to transfer..");
+                //    CASH_TO_TRANSFER = 0;
+
+                //}
+
+                OnPropertyChanged("CASH_TO_TRANSFER");
+
+            }
+        }
+
         private string _LOGIN;
         public string LOGIN
         {
@@ -229,6 +524,26 @@ namespace InvoicePOS.ViewModels
                 }
             }
         }
+
+        private string _TRANSFER_CODE;
+        public string TRANSFER_CODE
+        {
+            get
+            {
+                return SelectedItem.TRANSFER_CODE;
+            }
+            set
+            {
+                SelectedItem.TRANSFER_CODE = value;
+
+                if (SelectedItem.TRANSFER_CODE != value)
+                {
+                    SelectedItem.TRANSFER_CODE = value;
+                    OnPropertyChanged("TRANSFER_CODE");
+                }
+            }
+        }
+
         private bool _ISADGUSTMENT;
         public bool ISADGUSTMENT
         {
@@ -308,7 +623,7 @@ namespace InvoicePOS.ViewModels
         }
         public async void Insert_CashReg()
         {
-            if (SelectedItem.BUSINESS_LOCATION == null || SelectedItem.BUSINESS_LOCATION=="")
+            if (SelectedItem.BUSINESS_LOCATION == null || SelectedItem.BUSINESS_LOCATION == "")
             {
                 MessageBox.Show("BUSINESS LOCATION is missing");
                 return;
@@ -402,11 +717,59 @@ namespace InvoicePOS.ViewModels
             }
 
         }
+        public async Task<ObservableCollection<CashRegModel>> GetTransferedCash(int comp)
+        {
+            try
+            {
+                // CashRegData = new List<CashRegModel>();
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response = client.GetAsync("api/CashRegAPI/GetAllTransferedCash?id=" + comp + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    data = JsonConvert.DeserializeObject<CashRegModel[]>(await response.Content.ReadAsStringAsync());
+                    _ListGrid_Temp.Clear();
+                    int x = 0;
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        x++;
+                        _ListGrid_Temp.Add(new CashRegModel
+                        {
+                            SLNO = x,
+                            BUSINESS_LOCATION = data[i].BUSINESS_LOCATION,
+                            TRANSFER_ID = data[i].TRANSFER_ID,
+                            TRANSFER_CODE = data[i].TRANSFER_CODE,
+                            FROM_TRAN_CASH_REGISTER = data[i].FROM_TRAN_CASH_REGISTER,
+                            TO_TRAN_CASH_REGISTER = data[i].TO_TRAN_CASH_REGISTER,
+                            CASH_TO_TRANSFER = data[i].CASH_TO_TRANSFER,
+                            TRANSFER_DATE = data[i].TRANSFER_DATE,
+                            IS_TRANSFER_CASH_REGISTER = data[i].IS_TRANSFER_CASH_REGISTER,
+                            STATUS = data[i].STATUS,
+
+                        });
+                    }
+
+                }
+                ListGrid = _ListGrid_Temp;
+                return new ObservableCollection<CashRegModel>(_ListGrid_Temp);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+
+
         public async Task<ObservableCollection<CashRegModel>> GetCashReg(int comp)
         {
             try
             {
-                CashRegData = new List<CashRegModel>();
+                ObservableCollection<CashRegModel> _ListGrid_Temp1 = new ObservableCollection<CashRegModel>();
+                //CashRegData = new List<CashRegModel>();
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(GlobalData.gblApiAdress);
                 client.DefaultRequestHeaders.Accept.Add(
@@ -416,13 +779,15 @@ namespace InvoicePOS.ViewModels
                 if (response.IsSuccessStatusCode)
                 {
                     data = JsonConvert.DeserializeObject<CashRegModel[]>(await response.Content.ReadAsStringAsync());
+                    _ListGrid_Temp1.Clear();
+                    //ListGrid.Clear();
                     int x = 0;
                     for (int i = 0; i < data.Length; i++)
                     {
                         x++;
-                        _ListGrid_Temp.Add(new CashRegModel
+                        _ListGrid_Temp1.Add(new CashRegModel
                         {
-                            SLNO=x,
+                            SLNO = x,
                             BUSINESS_LOCATION = data[i].BUSINESS_LOCATION,
                             CASH_REG_NAME = data[i].CASH_REG_NAME,
                             CASH_REG_NO = data[i].CASH_REG_NO,
@@ -436,8 +801,9 @@ namespace InvoicePOS.ViewModels
                     }
 
                 }
-                ListGrid = _ListGrid_Temp;
-                return new ObservableCollection<CashRegModel>(_ListGrid_Temp);
+                ListGrid1 = _ListGrid_Temp1;
+
+                return new ObservableCollection<CashRegModel>(_ListGrid_Temp1);
             }
             catch (Exception ex)
             {
@@ -483,7 +849,7 @@ namespace InvoicePOS.ViewModels
         }
         public async void Delete_CashReg()
         {
-            if (SelectedItem.CASH_REGISTERID != null && SelectedItem.CASH_REGISTERID !=0)
+            if (SelectedItem.CASH_REGISTERID != null && SelectedItem.CASH_REGISTERID != 0)
             {
                 MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure Delete this Cash Reg " + SelectedItem.CASH_REG_NO + "?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
                 if (messageBoxResult == MessageBoxResult.Yes)
@@ -579,12 +945,12 @@ namespace InvoicePOS.ViewModels
                             SelectedItem.LOGIN = data[i].LOGIN;
                         }
                         App.Current.Properties["ItemEdit"] = SelectedItem;
-                        AddCashReg _AddCashReg=new AddCashReg();
+                        AddCashReg _AddCashReg = new AddCashReg();
                         _AddCashReg.Show();
-                       //ModalService.NavigateTo(new AddCashReg(), delegate(bool returnValue) { });
+                        //ModalService.NavigateTo(new AddCashReg(), delegate(bool returnValue) { });
                     }
                 }
-                
+
             }
 
             else
@@ -652,7 +1018,388 @@ namespace InvoicePOS.ViewModels
 
             }
         }
-        
+
+
+
+        public bool _isviewmode;
+        public bool _isenable;
+        public bool IsViewMode
+        {
+            get { return _isviewmode; }
+            set
+            {
+                _isviewmode = value;
+                // Call NotifyPropertyChanged when the source property is updated.
+                NotifyPropertyChanged("IsViewMode");
+            }
+        }
+        public bool isenable
+        {
+            get { return _isenable; }
+            set
+            {
+                _isenable = value;
+                // Call NotifyPropertyChanged when the source property is updated.
+                NotifyPropertyChanged("isenable");
+            }
+        }
+
+
+        public ICommand _MyTransferCode;
+        public ICommand MyTransferCode
+        {
+            get
+            {
+                if (_MyTransferCode == null)
+                {
+                    _MyTransferCode = new DelegateCommand(MyTransfer_Code);
+                }
+                return _MyTransferCode;
+            }
+
+        }
+        public string _ButtonText;
+        public String ButtonText
+        {
+            get { return _ButtonText ?? (_ButtonText = "Define My Own"); }
+            set
+            {
+                _ButtonText = value;
+                NotifyPropertyChanged("ButtonText");
+            }
+        }
+
+        public void MyTransfer_Code()
+        {
+            if (ButtonText == "Auto Generate")
+            {
+                ButtonText = "Define My Own";
+                GetTransferNo();
+                TransferCash.TransferNoRef.Text = TRANSFER_CODE;
+                _isviewmode = true;
+                IsViewMode = true;
+            }
+            else if (ButtonText == "Define My Own")
+            {
+                ButtonText = "Auto Generate";
+                _isviewmode = false;
+                IsViewMode = false;
+                TransferCash.TransferNoRef.Text = "";
+
+            }
+
+
+        }
+
+        public async Task<string> GetTransferNo()
+        {
+
+            string uhy = "";
+            try
+            {
+                string nnnn = "";
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response = client.GetAsync("api/CashRegAPI/GetTransferNo/").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    //hy = Json.SerializeObject<int[]>(await response.Content.ReadAsStringAsync());
+                    uhy = await response.Content.ReadAsStringAsync();
+                    string dd = Convert.ToString(uhy);
+                    string aaa = dd.Substring(3, 5);
+                    int xx = Convert.ToInt32(aaa);
+                    int noo = Convert.ToInt32(xx + 1);
+                    nnnn = "T" + noo.ToString("D6");
+                    TRANSFER_CODE = nnnn;
+
+                }
+                else
+                {
+                    TRANSFER_CODE = "T000001";
+                }
+            }
+            catch (Exception ex)
+            { }
+
+            return uhy;
+        }
+
+
+        public ICommand _TransferCashReg;
+        public ICommand TransferCashReg
+        {
+            get
+            {
+                if (_TransferCashReg == null)
+                {
+                    _TransferCashReg = new DelegateCommand(Transfer_CashReg);
+                }
+                return _TransferCashReg;
+            }
+        }
+
+        public void Transfer_CashReg()
+        {
+            TransferCash _TransferCashReg = new TransferCash();
+            _TransferCashReg.Show();
+            //ModalService.NavigateTo(new AddCashReg(), delegate(bool returnValue) { });
+
+        }
+
+
+        #region Insert TransferData
+
+        public ICommand _InsertTransferData { get; set; }
+        public ICommand InsertTransferData
+        {
+
+            get
+            {
+                if (_InsertTransferData == null)
+                {
+                    //isenable = false;
+                    //_isenable = false;
+                    _InsertTransferData = new DelegateCommand(Insert_TransferData);
+                }
+                return _InsertTransferData;
+            }
+        }
+
+
+        public async void Insert_TransferData()
+        {
+            isenable = false;
+            _isenable = false;
+
+            if (SelectedItem.BUSINESS_LOCATION == null || SelectedItem.BUSINESS_LOCATION == "")
+            {
+                SelectedItem.BUSINESS_LOCATION_ID = Convert.ToInt32(App.Current.Properties["BussTransCashID"]);
+
+                MessageBox.Show("BUSINESS LOCATION is missing");
+                return;
+            }
+            if (SelectedItem.TRANSFER_CODE == null || SelectedItem.TRANSFER_CODE == "")
+            {
+                MessageBox.Show("TRANSFER_CODEis missing");
+                return;
+            }
+            else if (SelectedItem.FROM_TRAN_CASH_REGISTER == null || SelectedItem.FROM_TRAN_CASH_REGISTER == "")
+            {
+                MessageBox.Show("FROM_TRAN_CASH_REGISTER is missing");
+                return;
+            }
+
+            if (SelectedItem.TO_TRAN_CASH_REGISTER == null || SelectedItem.TO_TRAN_CASH_REGISTER == "")
+            {
+                MessageBox.Show("TO_TRAN_CASH_REGISTER is missing");
+                return;
+            }
+            else if (SelectedItem.CASH_TO_TRANSFER == null || SelectedItem.CASH_TO_TRANSFER == 0)
+            {
+                MessageBox.Show("Please Enter Amount to Transfered..");
+                return;
+            }
+            else if (SelectedItem.FROM_TRAN_CASH_REGISTER == SelectedItem.TO_TRAN_CASH_REGISTER)
+            {
+                MessageBox.Show("From Cash Register Should Not be Equal with To Cash Register..");
+                return;
+            }
+            else if (SelectedItem.CURRENT_CASH < SelectedItem.CASH_TO_TRANSFER)
+            {
+                MessageBox.Show("There Is Not Enough Moneey In This Cash Register to be Transfered..");
+                return;
+            }
+
+            else
+            {
+
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                //SelectedItem.CASH_REGISTERID_FROM = Convert.ToInt32(App.Current.Properties["CASH_REGISTERID_FROM"]);
+                //SelectedItem.CASH_REGISTERID_TO = Convert.ToInt32(App.Current.Properties["CASH_REGISTERID_TO"]);
+                SelectedItem.COMPANY_ID = 1;
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                var response = await client.PostAsJsonAsync("api/CashRegAPI/TransferCashAdd/", SelectedItem);
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Transfered Cash Details Added Successfully");
+                    //AddPO.TotTaxRef.Text = null;
+                    //AddPO.TotRef.Text = null;
+                    isenable = true;
+                    _isenable = true;
+                    Cancel_CashReg();
+                    ModalService.NavigateTo(new TransferCashList(), delegate(bool returnValue) { });
+                }
+            }
+        }
+
+        #endregion
+
+        #region View TransferData
+
+
+        public ICommand _ViewCashTransfer { get; set; }
+        public ICommand ViewCashTransfer
+        {
+            get
+            {
+                if (_ViewCashTransfer == null)
+                {
+                    _ViewCashTransfer = new DelegateCommand(ViewCash_Transfered);
+                }
+                return _ViewCashTransfer;
+            }
+        }
+
+        public async void ViewCash_Transfered()
+        {
+            if (SelectedItem.TRANSFER_ID != null && SelectedItem.TRANSFER_ID != 0)
+            {
+                App.Current.Properties["Action"] = "ViewTransferCash";
+                //ItemData = new List<ItemModel>();
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response = client.GetAsync("api/CashRegAPI/ViewTransferCash?id=" + SelectedItem.TRANSFER_ID + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+
+
+                    data = JsonConvert.DeserializeObject<CashRegModel[]>(await response.Content.ReadAsStringAsync());
+                    if (data.Length > 0)
+                    {
+                        for (int i = 0; i < data.Length; i++)
+                        {
+
+                            SelectedItem.BUSINESS_LOCATION = data[i].BUSINESS_LOCATION;
+                            //TRANSFERED_ID = data[i].TRANSFERED_ID;
+                            SelectedItem.TRANSFER_CODE = data[i].TRANSFER_CODE;
+                            SelectedItem.FROM_TRAN_CASH_REGISTER = data[i].FROM_TRAN_CASH_REGISTER;
+                            SelectedItem.TO_TRAN_CASH_REGISTER = data[i].TO_TRAN_CASH_REGISTER;
+                            //SelectedItem.CASH_TO_TRANSFER = data[i].CASH_TO_TRANSFER;
+                            SelectedItem.SUBMITTED_CASH = data[i].CASH_TO_TRANSFER;
+                            if (data[i].TRANSFER_DATE != null)
+                                SelectedItem.TRANSFER_DATE = data[i].TRANSFER_DATE;
+                            //IS_TRANSFER_CASH_REGISTER = data[i].IS_TRANSFER_CASH_REGISTER,
+                            SelectedItem.STATUS = data[i].STATUS;
+
+
+                        }
+                        App.Current.Properties["TransferCashView"] = SelectedItem;
+                        View_Transfer_Cash _view = new View_Transfer_Cash();
+                        _view.Show();
+                    }
+                }
+
+            }
+
+            else
+            {
+                MessageBox.Show("Select Cash Reg first", "Item Selection", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+
+            }
+        }
+
+        #endregion
+
+
+
+
+        #region Delete TransferCash
+        public ICommand _DeleteCashTransfer;
+        public ICommand DeleteCashTransfer
+        {
+            get
+            {
+                if (_DeleteCashTransfer == null)
+                {
+                    _DeleteCashTransfer = new DelegateCommand(DeleteCash_Transfer);
+                }
+                return _DeleteCashTransfer;
+            }
+        }
+        public async void DeleteCash_Transfer()
+        {
+            if (SelectedItem.TRANSFER_ID != null && SelectedItem.TRANSFER_ID != 0)
+            {
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure Delete this Cash Transfer Details " + SelectedItem.TRANSFER_CODE + "?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+                if (messageBoxResult == MessageBoxResult.Yes)
+                {
+
+                    var id = SelectedItem.TRANSFER_ID;
+                    HttpClient client = new HttpClient();
+                    client.DefaultRequestHeaders.Accept.Add(
+                        new MediaTypeWithQualityHeaderValue("application/json"));
+                    client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                    HttpResponseMessage response = client.GetAsync("api/CashRegAPI/DeleteTransferCash?id=" + id + "").Result;
+                    if (response.StatusCode.ToString() == "OK")
+                    {
+                        MessageBox.Show("TransferCash Detalis Deleted Successfully..");
+                        ModalService.NavigateTo(new TransferCashList(), delegate(bool returnValue) { });
+                    }
+                }
+                else
+                {
+                    Cancel_CashReg();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select Item To Delete");
+            }
+
+        }
+        #endregion
+
+
+        #region View TranscationData
+
+
+        public ICommand _ViewCashTranscation { get; set; }
+        public ICommand ViewCashTranscation
+        {
+            get
+            {
+                if (_ViewCashTranscation == null)
+                {
+                    _ViewCashTranscation = new DelegateCommand(ViewCash_Transcation);
+                }
+                return _ViewCashTranscation;
+            }
+        }
+
+        public void ViewCash_Transcation()
+        {
+            if (SelectedItem.CASH_REGISTERID != null && SelectedItem.CASH_REGISTERID != 0)
+            {
+                App.Current.Properties["Action"] = "ViewTransactionCash";
+                SelectedItem.BUSINESS_LOCATION = SelectedItem.BUSINESS_LOCATION;
+                SelectedItem.CASH_REG_NAME = SelectedItem.CASH_REG_NAME;
+                SelectedItem.CASH_REGISTERID = SelectedItem.CASH_REGISTERID;
+                App.Current.Properties["TranscationCashView"] = SelectedItem;
+                View_Transfer_Cash _view = new View_Transfer_Cash();
+                _view.Show();
+
+            }
+
+            else
+            {
+                MessageBox.Show("Select Cash Reg first", "Item Selection", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+
+            }
+        }
+
+        #endregion
+
         public ObservableCollection<CashRegModel> _ListGrid { get; set; }
         public ObservableCollection<CashRegModel> ListGrid
         {
@@ -666,6 +1413,22 @@ namespace InvoicePOS.ViewModels
                 OnPropertyChanged("ListGrid");
             }
         }
+
+        public ObservableCollection<CashRegModel> _ListGrid1 { get; set; }
+        public ObservableCollection<CashRegModel> ListGrid1
+        {
+            get
+            {
+                return _ListGrid1;
+            }
+            set
+            {
+                this._ListGrid1 = value;
+                OnPropertyChanged("ListGrid1");
+            }
+        }
+
+
         public ICommand _BusinessLocationClick;
         public ICommand BusinessLocationClick
         {
@@ -675,17 +1438,153 @@ namespace InvoicePOS.ViewModels
                 {
                     _BusinessLocationClick = new DelegateCommand(BusinessLocationList_Click);
                 }
-                return _BusinessLocationClick;
+                return _BusinessLocClick;
             }
         }
 
         public void BusinessLocationList_Click()
         {
-            App.Current.Properties["BussCashReg"]=2;
+            App.Current.Properties["BussCashReg"] = 2;
             Window_BusinessLocationList IA = new Window_BusinessLocationList();
             IA.Show();
 
         }
+
+
+
+        public ICommand _BusinessLocClick;
+        public ICommand BusinessLocClick
+        {
+            get
+            {
+                if (_BusinessLocClick == null)
+                {
+                    _BusinessLocClick = new DelegateCommand(BusinessLocList_Click);
+                }
+                return _BusinessLocClick;
+            }
+        }
+
+        public void BusinessLocList_Click()
+        {
+            App.Current.Properties["BussTransCash"] = 2;
+            Window_BusinessLocationList IA = new Window_BusinessLocationList();
+            IA.Show();
+
+        }
+
+        public ICommand _FROM_CASH_REGISTER;
+        public ICommand FROM_CASH_REGISTER
+        {
+            get
+            {
+                if (_FROM_CASH_REGISTER == null)
+                {
+                    _FROM_CASH_REGISTER = new DelegateCommand(FromCash_Register);
+                }
+                return _FROM_CASH_REGISTER;
+            }
+        }
+
+        public void FromCash_Register()
+        {
+            App.Current.Properties["TRANSFER_FROM_CASH"] = 2;
+            Window_CashRegList IA = new Window_CashRegList();
+            IA.Show();
+
+        }
+
+
+        public ICommand _TO_CASH_REGISTER;
+        public ICommand TO_CASH_REGISTER
+        {
+            get
+            {
+                if (_TO_CASH_REGISTER == null)
+                {
+                    _TO_CASH_REGISTER = new DelegateCommand(ToCash_Register);
+                }
+                return _TO_CASH_REGISTER;
+            }
+        }
+
+        public void ToCash_Register()
+        {
+            App.Current.Properties["TRANSFER_TO_CASH"] = 2;
+            Window_CashRegList IA = new Window_CashRegList();
+            IA.Show();
+
+        }
+
+
+        public ICommand _APPLY_DATE_CHANGE;
+        public ICommand APPLY_DATE_CHANGE
+        {
+            get
+            {
+                if (_APPLY_DATE_CHANGE == null)
+                {
+                    _APPLY_DATE_CHANGE = new DelegateCommand(APPLY_DATE_CHANGE_Click);
+                }
+                return _APPLY_DATE_CHANGE;
+            }
+        }
+
+        public async void APPLY_DATE_CHANGE_Click()
+        {
+
+            try
+            {
+
+                //SelectedItem.BUSINESS_LOCATION_ID = Convert.ToInt32(App.Current.Properties["BussViewTransCashID"]);
+                //var BussLoc = SelectedItem.BUSINESS_LOCATION_ID;
+
+                var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                var BussLoc = SelectedItem.BUSINESS_LOCATION;
+                var frmDt = SelectedItem.FROM_DATE;
+                var toDt = SelectedItem.TO_DATE;
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                //HttpResponseMessage response = client.GetAsync("api/ItemAPI/GetItemPurchaseList?frmDt=" + frmDt + "&toDt=" + toDt + "").Result;
+                HttpResponseMessage response = client.GetAsync("api/CashRegAPI/GetAllCashTranscation?id1=" + comp + " &id2=" + BussLoc + " &id3=" + frmDt + " &id4=" + toDt + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    data = JsonConvert.DeserializeObject<CashRegModel[]>(await response.Content.ReadAsStringAsync());
+                    int x = 0;
+                    for (int i = 0; i < data.Length; i++)
+                    {
+                        x++;
+                        _ListGrid_Temp.Add(new CashRegModel
+                        {
+                            SLNO = x,
+                            BUSINESS_LOCATION = data[i].BUSINESS_LOCATION,
+                            TRANSFER_ID = data[i].TRANSFER_ID,
+                            TRANSFER_CODE = data[i].TRANSFER_CODE,
+                            FROM_TRAN_CASH_REGISTER = data[i].FROM_TRAN_CASH_REGISTER,
+                            TO_TRAN_CASH_REGISTER = data[i].TO_TRAN_CASH_REGISTER,
+                            CASH_TO_TRANSFER = data[i].CASH_TO_TRANSFER,
+                            TRANSFER_DATE = data[i].TRANSFER_DATE,
+                            IS_TRANSFER_CASH_REGISTER = data[i].IS_TRANSFER_CASH_REGISTER,
+                            STATUS = data[i].STATUS,
+
+                        });
+                    }
+
+                }
+                ListGrid = _ListGrid_Temp;
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+        }
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)
@@ -748,7 +1647,7 @@ namespace InvoicePOS.ViewModels
             //    _selectedItem.BUSINESS_LOCATION = locList.BUSINESS_LOCATION;
 
             //}
-            if(App.Current.Properties["CASH_REG_NAME"] != null && InvoicePOS.Views.CashRegister.CashReg.CashRegName != null && Main.CashRegisterName != null)
+            if (App.Current.Properties["CASH_REG_NAME"] != null && InvoicePOS.Views.CashRegister.CashReg.CashRegName != null && Main.CashRegisterName != null)
             {
                 //InvoicePOS.Views.CashRegister.ChangeBussinessLocation.CashReg.Text = _selectedItem.CASH_REG_NAME;
                 InvoicePOS.Views.CashRegister.CashReg.CashRegName.Text = _selectedItem.CASH_REG_NAME;
@@ -762,8 +1661,35 @@ namespace InvoicePOS.ViewModels
                 //InvoicePOS.Views.CashRegister.CashReg.CashRegName.Text = _selectedItem.CASH_REG_NAME;
 
             }
-            
+
+            if (App.Current.Properties["TRANSFER_FROM_CASH"] != null)
+            {
+                TransferCash.FromCashRef.Text = _selectedItem.CASH_REG_NAME;
+                SelectedItem.FROM_TRAN_CASH_REGISTER = _selectedItem.CASH_REG_NAME;
+
+                //decimal x = _selectedItem.CASH_AMOUNT;
+                //SelectedItem.CURRENT_CASH = _selectedItem.CASH_AMOUNT;
+                decimal x = _selectedItem.CASH_AMOUNT;
+                TransferCash.TotRef.Text = x.ToString();
+                App.Current.Properties["CASH_REGISTERID_FROM"] = _selectedItem.CASH_REGISTERID;
+                //SelectedItem.CASH_REGISTERID_FROM = _selectedItem.CASH_REGISTERID;
+                //TransferCash.TotRef.Text = _selectedItem.CASH_AMOUNT;
+                //Convert.ToInt32(_selectedItem.CASH_AMOUNT);
+                App.Current.Properties["TRANSFER_FROM_CASH"] = null;
+            }
+
+            if (App.Current.Properties["TRANSFER_TO_CASH"] != null)
+            {
+                //SelectedItem.TO_CASH_REGISTER = _selectedItem.CASH_REG_NAME;
+                //SelectedItem.CASH_REGISTERID_TO = _selectedItem.CASH_REGISTERID;
+                App.Current.Properties["CASH_REGISTERID_TO"] = _selectedItem.CASH_REGISTERID;
+                TransferCash.ToCashRef.Text = _selectedItem.CASH_REG_NAME;
+                SelectedItem.TO_TRAN_CASH_REGISTER = _selectedItem.CASH_REG_NAME;
+                App.Current.Properties["TRANSFER_TO_CASH"] = null;
+            }
+
+
         }
-        
+
     }
 }

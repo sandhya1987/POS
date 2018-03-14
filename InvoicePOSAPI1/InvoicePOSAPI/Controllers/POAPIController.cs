@@ -47,6 +47,7 @@ namespace InvoicePOSAPI.Controllers
                            PO_ID = a.PO_ID,
                            PO_NUMBER1 = a.PO_NUMBER,
                            //SEARCH_CODE = a.SEARCH_CODE,
+                           SUPPLIER_NAME=a.SUPPLIER_NAME,
                            SUPPLIER = a.SUPPLIER_ID,
                            SUPPLIER_EMAIL = a.SUPPLIER_MAIL,
                            TERMS = a.TERMS,
@@ -56,8 +57,6 @@ namespace InvoicePOSAPI.Controllers
 
                            PO_STATUS = a.PO_STATUS
                            //PO_TYPE=a.PO_TYPE,
-
-
 
                        }).ToList();
             return Request.CreateResponse(HttpStatusCode.OK, str);

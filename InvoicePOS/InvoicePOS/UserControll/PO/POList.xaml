@@ -46,7 +46,7 @@
                 </Grid>
               
                     <Grid >
-                    <DataGrid  SelectionMode="Single" ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged, Path=ListGrid}" SelectedItem="{Binding Path=SelectedPO}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" Margin="17,74,0,0" VerticalAlignment="Top"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" TextBlock.TextAlignment="Center" Height="510" MouseDoubleClick="grdPO_MouseDoubleClick" >
+                    <DataGrid  SelectionMode="Single" ItemsSource="{Binding Path=ListGrid, UpdateSourceTrigger=PropertyChanged,AsyncState=true,NotifyOnSourceUpdated=True,Mode=TwoWay}" SelectedItem="{Binding Path=SelectedPO}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     Name="dataGrid1" Margin="17,74,0,0" VerticalAlignment="Top"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" TextBlock.TextAlignment="Center" Height="510" MouseDoubleClick="grdPO_MouseDoubleClick" >
                         <DataGrid.Style>
                             <Style TargetType="DataGrid">
                                 <Setter Property="AlternatingRowBackground" Value="#ffffff"/>

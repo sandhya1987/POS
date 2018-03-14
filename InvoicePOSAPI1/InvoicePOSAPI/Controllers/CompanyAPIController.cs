@@ -82,8 +82,52 @@ namespace InvoicePOSAPI.Controllers
         }
 
 
+        //[HttpGet]
+        //public HttpResponseMessage GetCompanies()
+        //{
+        //    var str = (from a in db.COMPANIES
+        //               where a.IS_DELETE == false
+        //               select new CompanyModel
+        //               {                      
+        //                   COMPANY_NAME = a.COMPANY_NAME,
+        //                   ADDRESS = a.ADDRESS,
+        //                   COUNTRY = a.COUNTRY,
+        //                   FAX = a.FAX,
+        //                   TELEPHONE = a.TELEPHONE,
+        //                   POSTCODE = a.POSTCODE,
+        //                   COMPANY_ID = a.COMPANY_ID,
+        //                   //FAX = a.FAX,
 
+        //               }).ToList();
+        //    return Request.CreateResponse(HttpStatusCode.OK, str);
+        //}
 
+        [HttpPost]
+        public HttpResponseMessage CreateCompanies(CompanyModel _CompanyModel)
+        {
+            try
+            {
+                //COMPANIES com = new COMPANIES();
+                //com.CREATION_DATE = _CompanyModel.CREATED_DATE;
+                //com.COMPANY_NAME = _CompanyModel.COMPANY_NAME;
+                //com.ADDRESS = _CompanyModel.ADDRESS;
+                //com.COUNTRY = _CompanyModel.COUNTRY;
+                //com.POSTCODE = _CompanyModel.POSTCODE;
+                //com.TELEPHONE = _CompanyModel.TELEPHONE;
+                //com.FAX = _CompanyModel.FAX;
+                //com.WEBSITE = _CompanyModel.WEBSITE;
+                //com.IS_DELETE = false;
+                //db.COMPANIES.Add(com);
+                db.SaveChanges();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return Request.CreateResponse(HttpStatusCode.OK, "success");
+        }
 
 
 
@@ -146,16 +190,6 @@ namespace InvoicePOSAPI.Controllers
             }
 
         }
-
-
-
-
-
-
-
-
-
-
 
 
 

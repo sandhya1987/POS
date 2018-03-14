@@ -57,11 +57,11 @@ namespace InvoicePOSAPI.Controllers
                            CURRENT_PAYMENT = a.CURRENT_PAYMENT,
                            NOTE = a.NOTE,
                            IS_PRINT_CHECK = a.IS_PRINT_CHECK,
-                           CREDIT_AMOUNT = a.CREDIT_AMOUNT.Value,
-                           DEBIT_AMOUNT = a.DEBIT_AMOUNT.Value,
-                           NARRATION_TEXT = a.NARRATION_TEXT,
-                           DOCUMENT_TYPE = a.DOCUMENT_TYPE,
-                           GST_NUMBER = a.GST_NUMBER
+                           //CREDIT_AMOUNT = a.CREDIT_AMOUNT.Value,
+                           //DEBIT_AMOUNT = a.DEBIT_AMOUNT.Value,
+                           //NARRATION_TEXT = a.NARRATION_TEXT,
+                           //DOCUMENT_TYPE = a.DOCUMENT_TYPE,
+                           //GST_NUMBER = a.GST_NUMBER
                        }).ToList();
             return Request.CreateResponse(HttpStatusCode.OK, str);
         }

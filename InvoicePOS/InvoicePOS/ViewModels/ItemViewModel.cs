@@ -115,6 +115,255 @@ namespace InvoicePOS.ViewModels
 
         #endregion
 
+        #region Inventory Report
+
+        public List<ItemModel> _ListGridInventory { get; set; }
+        public List<ItemModel> ListGridInventory
+        {
+            get
+            {
+                return _ListGridInventory;
+            }
+            set
+            {
+                this._ListGridInventory = value;
+                OnPropertyChanged("ListGridInventory");
+            }
+        }
+
+
+        private DateTime _FROM_DATE = DateTime.Now;
+        public DateTime FROM_DATE
+        {
+            get
+            {
+                return _FROM_DATE;
+            }
+            set
+            {
+                _FROM_DATE = value;
+                string str = _FROM_DATE.ToString("yyyy-MM-dd HH:mm");
+                string str1 = _FROM_DATE.ToString();
+                DateTime dt = DateTime.ParseExact(str, "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+
+                if (_FROM_DATE != value)
+                {
+                    _FROM_DATE = value;
+
+                    OnPropertyChanged("FROM_DATE");
+                }
+
+            }
+        }
+        private DateTime _TO_DATE_RPT = DateTime.Now;
+        public DateTime TO_DATE_RPT
+        {
+            get
+            {
+                return _TO_DATE_RPT;
+            }
+            set
+            {
+                if (_TO_DATE_RPT != value)
+                {
+                    _TO_DATE_RPT = value;
+                    OnPropertyChanged("TO_DATE_RPT");
+                }
+
+            }
+        }
+
+        public bool _ApplyDateRange_Search;
+        public bool ApplyDateRange_Search
+        {
+            get
+            {
+                return _ApplyDateRange_Search;
+            }
+            set
+            {
+                _ApplyDateRange_Search = value;
+                //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                var comp = 1;
+                if (_ApplyDateRange_Search == true)
+                {
+                    GetInventory(comp);
+                }
+                else
+                {
+                    GetInventory(comp);
+                }
+                OnPropertyChanged("ApplyDateRange_Search");
+            }
+        }
+
+        private decimal _TOTAL_PROD_PURCHASED;
+        public decimal TOTAL_PROD_PURCHASED
+        {
+            get
+            {
+                return SelectedItem.TOTAL_PROD_PURCHASED;
+            }
+            set
+            {
+                SelectedItem.TOTAL_PROD_PURCHASED = value;
+                OnPropertyChanged("TOTAL_PROD_PURCHASED");
+            }
+        }
+
+
+        private decimal _TOTAL_PROD_SOLD;
+        public decimal TOTAL_PROD_SOLD
+        {
+            get
+            {
+                return SelectedItem.TOTAL_PROD_SOLD;
+            }
+            set
+            {
+                SelectedItem.TOTAL_PROD_SOLD = value;
+                OnPropertyChanged("TOTAL_PROD_SOLD");
+            }
+        }
+
+        private decimal _TOTAL_PROD_REMAINED;
+        public decimal TOTAL_PROD_REMAINED
+        {
+            get
+            {
+                return SelectedItem.TOTAL_PROD_REMAINED;
+            }
+            set
+            {
+                SelectedItem.TOTAL_PROD_REMAINED = value;
+                OnPropertyChanged("TOTAL_PROD_REMAINED");
+            }
+        }
+
+        List<ItemModel> _ListGrid_Inventory = new List<ItemModel>();
+
+
+        public async Task<ObservableCollection<ItemModel>> GetInventory(int comp)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response = client.GetAsync("api/ItemAPI/GetInventoryDetails?id=" + comp + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    data = JsonConvert.DeserializeObject<ItemModel[]>(await response.Content.ReadAsStringAsync());
+                    int x = 0;
+                    //_tmpChart.Clear();
+                    _ListGrid_Temp.Clear();
+                    for (int i = 0; i < data.Length; i++)
+                    {
+
+                        x++;
+                        //if (datainvoice[i].SALES_RETURN_AMOUNT == null)
+                        //{
+                        //    TOTAL_SALERETURN = 0;
+                        //}
+                        _ListGrid_Temp.Add(new ItemModel
+                        {
+                            SLNO = x,
+                            IMAGE_PATH = data[i].IMAGE_PATH,
+                            SALE_QTY=data[i].SALE_QTY,
+                            ITEM_NAME = data[i].ITEM_NAME,
+                            ITEM_LOCATION = data[i].ITEM_LOCATION,
+                            ITEM_ID = data[i].ITEM_ID,
+                            BARCODE = data[i].BARCODE,
+                            ACCESSORIES_KEYWORD = data[i].ACCESSORIES_KEYWORD,
+                            CATAGORY_ID = data[i].CATAGORY_ID,
+                            ITEM_DESCRIPTION = data[i].ITEM_DESCRIPTION,
+                            ITEM_INVOICE_ID = data[i].ITEM_INVOICE_ID,
+                            ITEM_PRICE = data[i].ITEM_PRICE,
+                            ITEM_PRODUCT_ID = data[i].ITEM_PRODUCT_ID,
+                            KEYWORD = data[i].KEYWORD,
+                            MRP = data[i].MRP,
+                            PURCHASE_UNIT = data[i].PURCHASE_UNIT,
+                            PURCHASE_UNIT_PRICE = data[i].PURCHASE_UNIT_PRICE,
+                            SALES_PRICE = data[i].SALES_PRICE,
+                            SALES_UNIT = data[i].SALES_UNIT,
+                            SEARCH_CODE = data[i].SEARCH_CODE,
+                            TAX_COLLECTED = data[i].TAX_COLLECTED,
+                            TAX_PAID = data[i].TAX_PAID,
+                            ALLOW_PURCHASE_ON_ESHOP = data[i].ALLOW_PURCHASE_ON_ESHOP,
+                            CATEGORY_NAME = data[i].CATEGORY_NAME,
+                            DISPLAY_INDEX = data[i].DISPLAY_INDEX,
+                            INCLUDE_TAX = data[i].INCLUDE_TAX,
+                            ITEM_GROUP_NAME = data[i].ITEM_GROUP_NAME,
+                            ITEM_UNIQUE_NAME = data[i].ITEM_UNIQUE_NAME,
+                            OPN_QNT = data[i].OPN_QNT,
+                            REGIONAL_LANGUAGE = data[i].REGIONAL_LANGUAGE,
+                            SALES_PRICE_BEFOR_TAX = data[i].SALES_PRICE_BEFOR_TAX,
+                            MODIFICATION_DATE = data[i].MODIFICATION_DATE,
+                            IS_ACTIVE = data[i].IS_ACTIVE,
+
+                        });
+
+                    }
+
+                   
+
+
+
+                    if (ApplyDateRange_Search == true)
+                    {
+                        _ListGrid_Inventory.Clear();
+                        // _ListGrid_Invoice.Clear();
+                        var item1 = (from m in _ListGrid_Temp 
+                                     where m.MODIFICATION_DATE >= FROM_DATE && m.MODIFICATION_DATE <= TO_DATE_RPT
+                                     select m).ToList();
+                        if (item1.Count > 0)
+                        {
+                            _ListGrid_Inventory = item1;
+                        }
+                    }
+                    //if (IS_InACTIVESearch == true)
+                    //{
+                    //var InActiveSupp = (from m in _ListGrid_Invoice where m.IS_ACTIVE == true select m).ToList();
+                    //_ListGrid_Invoice = InActiveSupp;
+                    //}
+
+                    TOTAL_PROD_PURCHASED = 0;
+                    TOTAL_PROD_SOLD = 0;
+                    TOTAL_PROD_REMAINED = 0;
+                    if (_ListGrid_Inventory.Count != 0)
+                    {
+                        for (int i = 0; i < _ListGrid_Inventory.Count; i++)
+                        {
+                            TOTAL_PROD_PURCHASED = Convert.ToDecimal(_ListGrid_Inventory[i].OPN_QNT + TOTAL_PROD_PURCHASED);
+                            //App.Current.Properties["CurrentGrosAmount1"] = TOTAL_AMOUNT;
+                            TOTAL_PROD_SOLD = Convert.ToDecimal(_ListGrid_Inventory[i].SALE_QTY + TOTAL_PROD_SOLD);
+                            _ListGrid_Inventory[i].TOTAL_PROD_REMAINED = Convert.ToDecimal(_ListGrid_Inventory[i].OPN_QNT - _ListGrid_Inventory[i].SALE_QTY);
+                            TOTAL_PROD_REMAINED = Convert.ToDecimal(_ListGrid_Inventory[i].TOTAL_PROD_REMAINED + TOTAL_PROD_REMAINED);
+
+                        }
+                        //TOTAL_SALERETURN = Math.Round(TOTAL_SALERETURN, 2);
+                        //PO_Summery_Report.TotTax.Text = TOTAL_TAX.ToString();
+                        //PO_Summery_Report.TotAmt.Text = TOTAL_AMOUNT.ToString();
+                    }
+
+                    ListGridInventory = _ListGrid_Inventory;
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+            }
+            return new ObservableCollection<ItemModel>(_ListGrid_Inventory);
+        }
+
+
+
+        #endregion
+
         #region Bussiness/Godown properties
         private long _BUSINESS_LOC_ID;
         public long BUSINESS_LOC_ID
@@ -5638,100 +5887,101 @@ namespace InvoicePOS.ViewModels
             //FORM_DATE = System.DateTime.Today;
             //TO_DATE = System.DateTime.Today;
             App.Current.Properties["IMG_HideShow"] = false;
-            var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            var comp = 1;
             DATE = System.DateTime.Now;
             SelectedPO = new POrderModel();
             SelectedItem = new ItemModel();
             SelectedOpeningStock = new OpeningStockModel();
-            var Load_ModuleAccess = (((IEnumerable)App.Current.Properties["AccessModuleByUser"]).Cast<UserAccessModel>()).ToList();
-            _IMAGE_VISIBLE = "Hidden";
-            IMAGE_VISIBLE = "Hidden";
-            foreach (var item in Load_ModuleAccess)
-            {
-                if (item.MODULE_ID == 8)
-                {
-                    AddEnable = item.ACTION_CREATE;
-                    EditEnable = item.EDIT;
-                    ViewEnable = item.ACTION_VIEW;
-                    DeleteEnable = item.ACTION_DELETE;
-                }
-            }
-            IsVisibleTax = "Collapsed";
-            DEFINECODEVISIBLE = "Visible";
-            AUTOCODEVISIBLE = "Collapsed";
-            BARCODEENABLE = false;
-            App.Current.Properties["ItemDiffProperties"] = SelectedItem;
+            //var Load_ModuleAccess = (((IEnumerable)App.Current.Properties["AccessModuleByUser"]).Cast<UserAccessModel>()).ToList();
+            //_IMAGE_VISIBLE = "Hidden";
+            //IMAGE_VISIBLE = "Hidden";
+            //foreach (var item in Load_ModuleAccess)
+            //{
+            //    if (item.MODULE_ID == 8)
+            //    {
+            //        AddEnable = item.ACTION_CREATE;
+            //        EditEnable = item.EDIT;
+            //        ViewEnable = item.ACTION_VIEW;
+            //        DeleteEnable = item.ACTION_DELETE;
+            //    }
+            //}
+            //IsVisibleTax = "Collapsed";
+            //DEFINECODEVISIBLE = "Visible";
+            //AUTOCODEVISIBLE = "Collapsed";
+            //BARCODEENABLE = false;
+            //App.Current.Properties["ItemDiffProperties"] = SelectedItem;
 
-            if (App.Current.Properties["Action"].ToString() == "Edit")
-            {
+            //if (App.Current.Properties["Action"].ToString() == "Edit")
+            //{
 
-                BARCODEENABLE = true;
-                AUTOCODEVISIBLE = "Visible";
-                DEFINECODEVISIBLE = "Collapsed";
-                CreatVisible = "Collapsed";
-                UpdVisible = "Visible";
-                SelectedItem = App.Current.Properties["ItemEdit"] as ItemModel;
-                INCLUDE_TAX = SelectedItem.INCLUDE_TAX;
-                if (App.Current.Properties["Qunt"] != null && App.Current.Properties["Qunt"] != "0")
-                {
-                    OPN_QNT = Convert.ToInt32(App.Current.Properties["Qunt"]);
-                }
-                else
-                {
-                    OPN_QNT = Convert.ToInt32(SelectedItem.OPN_QNT);
-                }
+            //    BARCODEENABLE = true;
+            //    AUTOCODEVISIBLE = "Visible";
+            //    DEFINECODEVISIBLE = "Collapsed";
+            //    CreatVisible = "Collapsed";
+            //    UpdVisible = "Visible";
+            //    SelectedItem = App.Current.Properties["ItemEdit"] as ItemModel;
+            //    INCLUDE_TAX = SelectedItem.INCLUDE_TAX;
+            //    if (App.Current.Properties["Qunt"] != null && App.Current.Properties["Qunt"] != "0")
+            //    {
+            //        OPN_QNT = Convert.ToInt32(App.Current.Properties["Qunt"]);
+            //    }
+            //    else
+            //    {
+            //        OPN_QNT = Convert.ToInt32(SelectedItem.OPN_QNT);
+            //    }
 
-                DATE = Convert.ToDateTime(SelectedItem.DATE);
-                App.Current.Properties["barcode"] = SelectedItem.BARCODE;
-                App.Current.Properties["Action"] = "";
-            }
-            else if (App.Current.Properties["Action"].ToString() == "Add")
-            {
-                CreatVisible = "Visible";
-                UpdVisible = "Collapsed";
-                GetItem(comp);
-                App.Current.Properties["Action"] = "";
-
-
-            }
-            else if (App.Current.Properties["Action"].ToString() == "SalesHistory")
-            {
-                CreatVisible = "Visible";
-                UpdVisible = "Collapsed";
-                //GetItem(comp);
-                App.Current.Properties["Action"] = "";
+            //    DATE = Convert.ToDateTime(SelectedItem.DATE);
+            //    App.Current.Properties["barcode"] = SelectedItem.BARCODE;
+            //    App.Current.Properties["Action"] = "";
+            //}
+            //else if (App.Current.Properties["Action"].ToString() == "Add")
+            //{
+            //    CreatVisible = "Visible";
+            //    UpdVisible = "Collapsed";
+            //    GetItem(comp);
+            //    App.Current.Properties["Action"] = "";
 
 
-            }
-            else if (App.Current.Properties["Action"].ToString() == "View")
-            {
-                SelectedItem = App.Current.Properties["ItemView"] as ItemModel;
+            //}
+            //else if (App.Current.Properties["Action"].ToString() == "SalesHistory")
+            //{
+            //    CreatVisible = "Visible";
+            //    UpdVisible = "Collapsed";
+            //    //GetItem(comp);
+            //    App.Current.Properties["Action"] = "";
 
-                App.Current.Properties["Action"] = "";
-                // GetItem(comp);
-            }
-            else if (App.Current.Properties["Action"].ToString() == "Search")
-            {
-                SelectedItem = App.Current.Properties["ItemEdit"] as ItemModel;
-                App.Current.Properties["Action"] = "";
 
-            }
-            else if (App.Current.Properties["Action"].ToString() == "MainPageAdd")
-            {
-                SelectedItem.BARCODE = App.Current.Properties["BareCode"].ToString();
-                App.Current.Properties["Action"] = "";
-            }
-            else if (App.Current.Properties["GetItemDetails"] != null)
-            {
-                ItemModel getitem = App.Current.Properties["GetItemDetails"] as ItemModel;
-                if (App.Current.Properties["GetItemsellsDetails"] != null)
-                {
-                    ListGrid1 = App.Current.Properties["GetItemsellsDetails"] as ObservableCollection<ItemModel>;
-                    //string kj=ListGrid1[0].itemid
-                    //ViewSalesHistory.datagridref.ItemsSource = ListGrid1;
-                }
-            }
-            else
+            //}
+            //else if (App.Current.Properties["Action"].ToString() == "View")
+            //{
+            //    SelectedItem = App.Current.Properties["ItemView"] as ItemModel;
+
+            //    App.Current.Properties["Action"] = "";
+            //    // GetItem(comp);
+            //}
+            //else if (App.Current.Properties["Action"].ToString() == "Search")
+            //{
+            //    SelectedItem = App.Current.Properties["ItemEdit"] as ItemModel;
+            //    App.Current.Properties["Action"] = "";
+
+            //}
+            //else if (App.Current.Properties["Action"].ToString() == "MainPageAdd")
+            //{
+            //    SelectedItem.BARCODE = App.Current.Properties["BareCode"].ToString();
+            //    App.Current.Properties["Action"] = "";
+            //}
+            //else if (App.Current.Properties["GetItemDetails"] != null)
+            //{
+            //    ItemModel getitem = App.Current.Properties["GetItemDetails"] as ItemModel;
+            //    if (App.Current.Properties["GetItemsellsDetails"] != null)
+            //    {
+            //        ListGrid1 = App.Current.Properties["GetItemsellsDetails"] as ObservableCollection<ItemModel>;
+            //        //string kj=ListGrid1[0].itemid
+            //        //ViewSalesHistory.datagridref.ItemsSource = ListGrid1;
+            //    }
+            //}
+            //else
             {
                 //if (App.Current.Properties["ItemDiffProperties"] != null)
                 //{

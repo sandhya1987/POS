@@ -1,8 +1,5 @@
-﻿using InvoicePOS.Models;
-using InvoicePOS.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using InvoicePOS.ViewModels;
 
 namespace InvoicePOS.UserControll.Report
 {
@@ -23,28 +21,12 @@ namespace InvoicePOS.UserControll.Report
     /// </summary>
     public partial class ReportList : UserControl
     {
-        
-        ReportViewModel _ReportViewModel;
-       public static TreeView TreeViewRef;
+        ReportViewModel _RVM;
         public ReportList()
         {
             InitializeComponent();
-        _ReportViewModel = new ReportViewModel();
-            this.DataContext = _ReportViewModel;
-            List<ReportGroupModel> Children = new List<ReportGroupModel>();
-
-            Children = App.Current.Properties["ChildrenGroup"] as List<ReportGroupModel>;
-            tv.ItemsSource = Children;
-        }
-
-        private void dataGrid1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void dataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            _RVM = new ReportViewModel();
+            this.DataContext = _RVM;
         }
     }
 }

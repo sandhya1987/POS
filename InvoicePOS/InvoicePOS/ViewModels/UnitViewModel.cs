@@ -26,21 +26,22 @@ namespace InvoicePOS.ViewModels
         public UnitViewModel()
         {
             SelectedItem = new ItemModel();
-            var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
-            if (App.Current.Properties["Action"].ToString() == "Edit")
-            {
-                CreatVisible = "Collapsed";
-                UpdVisible = "Visible";
+            //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            var comp = 1;
+            //if (App.Current.Properties["Action"].ToString() == "Edit")
+            //{
+            //    CreatVisible = "Collapsed";
+            //    UpdVisible = "Visible";
                
-                SelectedUnit = App.Current.Properties["UnitEdit"] as UnitModel;
-                App.Current.Properties["Action"] = "";
-            }
-            else if (App.Current.Properties["Action"].ToString() == "View")
-            {
-                SelectedUnit = App.Current.Properties["UnitView"] as UnitModel;
-                App.Current.Properties["Action"] = "";
-            }
-            else
+            //    SelectedUnit = App.Current.Properties["UnitEdit"] as UnitModel;
+            //    App.Current.Properties["Action"] = "";
+            //}
+            //else if (App.Current.Properties["Action"].ToString() == "View")
+            //{
+            //    SelectedUnit = App.Current.Properties["UnitView"] as UnitModel;
+            //    App.Current.Properties["Action"] = "";
+            //}
+            //else
             {
                 UpdVisible = "Collapsed";
                 CreatVisible = "Visible";

@@ -29,22 +29,23 @@ namespace InvoicePOS.ViewModels
         GodownModel[] data = null;
         public GodownViewModel()
         {
-            var COMPANY_ID = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            //var COMPANY_ID = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            var COMPANY_ID = 1;
             SelectedOpeningStock = new OpeningStockModel();
-            if (App.Current.Properties["Action"] == "Edit")
-            {
-                CreatVisible = "Collapsed";
-                UpdVisible = "Visible";
-                SelectedGosown = App.Current.Properties["GodownEdit"] as GodownModel;
-                //GetGodowns(COMPANY_ID);
-                App.Current.Properties["Action"] = "";
-            }
-            else if (App.Current.Properties["Action"] == "View")
-            {
-                SelectedGosown = App.Current.Properties["GodownView"] as GodownModel;
-                App.Current.Properties["Action"] = "";
-            }
-            else
+            //if (App.Current.Properties["Action"] == "Edit")
+            //{
+            //    CreatVisible = "Collapsed";
+            //    UpdVisible = "Visible";
+            //    SelectedGosown = App.Current.Properties["GodownEdit"] as GodownModel;
+            //    //GetGodowns(COMPANY_ID);
+            //    App.Current.Properties["Action"] = "";
+            //}
+            //else if (App.Current.Properties["Action"] == "View")
+            //{
+            //    SelectedGosown = App.Current.Properties["GodownView"] as GodownModel;
+            //    App.Current.Properties["Action"] = "";
+            //}
+            //else
             {
                 UpdVisible = "Collapsed";
                 CreatVisible = "Visible";

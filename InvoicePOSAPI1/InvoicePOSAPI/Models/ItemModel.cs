@@ -112,6 +112,7 @@ namespace InvoicePOSAPI.Models
         public string PO_NUMBER { get; set; }
         public string SUPPLIER_NAME { get; set; }
         public string TERMS { get; set; }
+        public int? SALE_QTY { get; set; }
     }
 
     public class ItemListModel

@@ -101,6 +101,12 @@ namespace InvoicePOS.Models
         public string CUSTOMER_EMAIL { get; set; }
         public string CUSTOMER_MOBILE { get; set; }
         public decimal TOTAL_SUM { get; set; }
+
+        public decimal TOTAL_PROD_PURCHASED { get; set; }
+        public decimal TOTAL_PROD_SOLD { get; set; }
+        public decimal TOTAL_PROD_REMAINED { get; set; }
+        //public int? SALE_QTY { get; set; }
+
         public int TOTAL_QTY { get; set; }
         public string FORMATTED_TOTAL_QTY
         {

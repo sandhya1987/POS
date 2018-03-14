@@ -181,6 +181,7 @@
     <Compile Include="Models\Receive_ItemModel.cs" />
     <Compile Include="Models\RelayCommand.cs" />
     <Compile Include="Models\ReportGroupModel.cs" />
+    <Compile Include="Models\ReportModel.cs" />
     <Compile Include="Models\SalesModel.cs" />
     <Compile Include="Models\SimpleObject.cs" />
     <Compile Include="Models\StockLedger.cs" />
@@ -221,8 +222,20 @@
     <Compile Include="UserControll\CashReg\CashReg.xaml.cs">
       <DependentUpon>CashReg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControll\CashReg\TransferCash.xaml.cs">
+      <DependentUpon>TransferCash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControll\CashReg\TransferCashList.xaml.cs">
+      <DependentUpon>TransferCashList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControll\CashReg\ViewCashReg.xaml.cs">
       <DependentUpon>ViewCashReg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControll\CashReg\ViewCashTranscation.xaml.cs">
+      <DependentUpon>ViewCashTranscation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControll\CashReg\View_Transfer_Cash.xaml.cs">
+      <DependentUpon>View_Transfer_Cash.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControll\CashReg\Window_CashRegList.xaml.cs">
       <DependentUpon>Window_CashRegList.xaml</DependentUpon>
@@ -237,6 +250,9 @@
     <Compile Include="UserControll\Category\Window_CatagoryList.xaml.cs">
       <DependentUpon>Window_CatagoryList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControll\Company\AddCompany.xaml.cs">
+      <DependentUpon>AddCompany.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControll\Company\BusinessLocationAdd.xaml.cs">
       <DependentUpon>BusinessLocationAdd.xaml</DependentUpon>
     </Compile>
@@ -244,6 +260,15 @@
       <DependentUpon>BusinessLocationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControll\Company\BussinessLocationList.xaml.cs" />
+    <Compile Include="UserControll\Company\CompanyList.xaml.cs">
+      <DependentUpon>CompanyList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControll\Company\CompanyLogin.xaml.cs">
+      <DependentUpon>CompanyLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControll\Company\RegisterCompany.xaml.cs">
+      <DependentUpon>RegisterCompany.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControll\Company\Window_BusinessLocationList.xaml.cs">
       <DependentUpon>Window_BusinessLocationList.xaml</DependentUpon>
     </Compile>
@@ -448,23 +473,29 @@
     <Compile Include="UserControll\PO\Window_POList.xaml.cs">
       <DependentUpon>Window_POList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControll\Report\AddReportGroup.xaml.cs">
-      <DependentUpon>AddReportGroup.xaml</DependentUpon>
+    <Compile Include="UserControll\Report\Customer_Acc_Summery_Report.xaml.cs">
+      <DependentUpon>Customer_Acc_Summery_Report.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControll\Report\GenerateReport.xaml.cs">
-      <DependentUpon>GenerateReport.xaml</DependentUpon>
+    <Compile Include="UserControll\Report\Inventory_Report.xaml.cs">
+      <DependentUpon>Inventory_Report.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControll\Report\Item Report\ReportAllItem.xaml.cs">
-      <DependentUpon>ReportAllItem.xaml</DependentUpon>
+    <Compile Include="UserControll\Report\ItemWeight_SoldReport.xaml.cs">
+      <DependentUpon>ItemWeight_SoldReport.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControll\Report\PO Report\ReportPO.xaml.cs">
-      <DependentUpon>ReportPO.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UserControll\Report\ReportAdd.xaml.cs">
-      <DependentUpon>ReportAdd.xaml</DependentUpon>
+    <Compile Include="UserControll\Report\PO_Summery_Report.xaml.cs">
+      <DependentUpon>PO_Summery_Report.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControll\Report\ReportList.xaml.cs">
       <DependentUpon>ReportList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControll\Report\Sales_Invoice_Report.xaml.cs">
+      <DependentUpon>Sales_Invoice_Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControll\Report\Sales_Return_Report.xaml.cs">
+      <DependentUpon>Sales_Return_Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControll\Report\Supplier_Outstanding_Report.xaml.cs">
+      <DependentUpon>Supplier_Outstanding_Report.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControll\SalesReturn\SalesReturnAdd.xaml.cs">
       <DependentUpon>SalesReturnAdd.xaml</DependentUpon>
@@ -551,6 +582,7 @@
     <Compile Include="ViewModels\ChangeItemViewModel.cs" />
     <Compile Include="ViewModels\ChangQntViewModel.cs" />
     <Compile Include="ViewModels\ChildViewModel.cs" />
+    <Compile Include="ViewModels\Company\CompaniesViewModel.cs" />
     <Compile Include="ViewModels\Company\CompanyCommand.cs" />
     <Compile Include="ViewModels\CurrencySettingsViewModel.cs" />
     <Compile Include="ViewModels\CustomerGroupViewModel.cs" />
@@ -581,8 +613,7 @@
     <Compile Include="ViewModels\POViewModel.cs" />
     <Compile Include="ViewModels\ReceiveItemViewModel.cs" />
     <Compile Include="ViewModels\ReceivePaymentViewModel.cs" />
-    <Compile Include="ViewModels\ReportGroupViewModel.cs" />
-    <Compile Include="ViewModels\ReportViewModel.cs" />
+    <Compile Include="ViewModels\Report\ReportViewModel.cs" />
     <Compile Include="ViewModels\SalesReturnViewModel.cs" />
     <Compile Include="ViewModels\SalesViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
@@ -792,7 +823,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControll\CashReg\TransferCash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControll\CashReg\TransferCashList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControll\CashReg\ViewCashReg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControll\CashReg\ViewCashTranscation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControll\CashReg\View_Transfer_Cash.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -816,6 +863,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControll\Company\AddCompany.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControll\Company\BusinessLocationAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -827,6 +878,18 @@
     <Page Include="UserControll\Company\BussinessLocationList.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControll\Company\CompanyList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControll\Company\CompanyLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControll\Company\RegisterCompany.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControll\Company\Window_BusinessLocationList.xaml">
       <SubType>Designer</SubType>
@@ -1100,27 +1163,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControll\Report\AddReportGroup.xaml">
+    <Page Include="UserControll\Report\Customer_Acc_Summery_Report.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControll\Report\GenerateReport.xaml">
+    <Page Include="UserControll\Report\Inventory_Report.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControll\Report\Item Report\ReportAllItem.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="UserControll\Report\ItemWeight_SoldReport.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="UserControll\Report\PO Report\ReportPO.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControll\Report\ReportAdd.xaml">
+    <Page Include="UserControll\Report\PO_Summery_Report.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControll\Report\ReportList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControll\Report\Sales_Invoice_Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControll\Report\Sales_Return_Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControll\Report\Supplier_Outstanding_Report.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -3,7 +3,7 @@ using InvoicePOS.Models;
 using InvoicePOS.UserControll.Company;
 using InvoicePOS.UserControll.Item;
 using InvoicePOS.UserControll.PO;
-using InvoicePOS.UserControll.Report.PO_Report;
+//using InvoicePOS.UserControll.Report.PO_Report;
 using InvoicePOS.UserControll.Supplier;
 using Newtonsoft.Json;
 using System;
@@ -21,6 +21,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using InvoicePOS.UserControll.PO;
 using System.ComponentModel;
+using InvoicePOS.UserControll.Report;
 
 namespace InvoicePOS.ViewModels
 {
@@ -34,12 +35,15 @@ namespace InvoicePOS.ViewModels
         POrderModel[] data = null;
         //POrderModel[] data1 = null;
         List<POrderModel> _ListGrid_Temp = new List<POrderModel>();
-        List<POrderModel> _ListGrid_Temp1 = new List<POrderModel>();
+        ObservableCollection<POrderModel> _ListGrid_Temp1 = new ObservableCollection<POrderModel>();
         int x = 0;
         //ObservableCollection<ItemModel> _ListGrid_Temp1 = new ObservableCollection<ItemModel>();
         ItemModel[] data1 = null;
         public ObservableCollection<POrderModel> _ListGrid1 { get; set; }
         ObservableCollection<POrderModel> _ListGrid_PoItem = new ObservableCollection<POrderModel>();
+        List<POrderModel> _ListGrid_ViewLedger = new List<POrderModel>();
+
+        //ObservableCollection<POrderModel> ListGridViewLedger = new ObservableCollection<POrderModel>();
 
         private POrderModel _SelectedPO;
         public POrderModel SelectedPO
@@ -56,6 +60,20 @@ namespace InvoicePOS.ViewModels
             }
         }
 
+        public List<POrderModel> _ListGridViewLedger { get; set; }
+        public List<POrderModel> ListGridViewLedger
+        {
+            get
+            {
+                return _ListGridViewLedger;
+            }
+            set
+            {
+                this._ListGridViewLedger = value;
+                OnPropertyChanged("ListGridViewLedger");
+            }
+        }
+
         //public List<POrderModel> _ListGrid1 { get; set; }
         //public List<POrderModel> ListGrid1
         //{
@@ -67,6 +85,23 @@ namespace InvoicePOS.ViewModels
         //    {
         //        this._ListGrid1 = value;
         //        OnPropertyChanged("ListGridItem");
+        //    }
+        //}
+        //public ObservableCollection<POrderModel> _ListGridViewLedger { get; set; }
+        //public ObservableCollection<POrderModel> ListGridViewLedger
+        //{
+        //    get
+        //    {
+        //        return _ListGridViewLedger;
+
+        //    }
+        //    set
+        //    {
+        //        if (value != _ListGridViewLedger)
+        //        {
+        //            this._ListGridViewLedger = value;
+        //            OnPropertyChanged("ListGridViewLedger");
+        //        }
         //    }
         //}
 
@@ -84,6 +119,71 @@ namespace InvoicePOS.ViewModels
                     this._ListGrid1 = value;
                     OnPropertyChanged("ListGrid1");
                 }
+            }
+        }
+
+        private DateTime _FROM_DATE = DateTime.Now;
+        public DateTime FROM_DATE
+        {
+            get
+            {
+                return _FROM_DATE;
+            }
+            set
+            {
+                _FROM_DATE = value;
+                string str = _FROM_DATE.ToString("yyyy-MM-dd HH:mm");
+                string str1 = _FROM_DATE.ToString();
+                DateTime dt = DateTime.ParseExact(str, "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+
+                if (_FROM_DATE != value)
+                {
+                    _FROM_DATE = value;
+
+                    OnPropertyChanged("FROM_DATE");
+                }
+
+            }
+        }
+        private DateTime _TO_DATE = DateTime.Now;
+        public DateTime TO_DATE
+        {
+            get
+            {
+                return _TO_DATE;
+            }
+            set
+            {
+                if (_TO_DATE != value)
+                {
+                    _TO_DATE = value;
+                    OnPropertyChanged("TO_DATE");
+                }
+
+            }
+        }
+
+        public bool _ApplyDateRange_Search;
+        public bool ApplyDateRange_Search
+        {
+            get
+            {
+                return _ApplyDateRange_Search;
+            }
+            set
+            {
+                _ApplyDateRange_Search = value;
+                //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                var comp = 1;
+                if (_ApplyDateRange_Search == true)
+                {
+                    GetPOList(comp);
+                }
+                else
+                {
+                    GetPOList(comp);
+                }
+                OnPropertyChanged("ApplyDateRange_Search");
             }
         }
 
@@ -306,7 +406,7 @@ namespace InvoicePOS.ViewModels
 
         public async Task<ObservableCollection<POrderModel>> GetPoItem(int comp)
         {
-            ReportPO.ListGridRef = new DataGrid();
+            //ReportPO.ListGridRef = new DataGrid();
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GlobalData.gblApiAdress);
             client.DefaultRequestHeaders.Accept.Add(
@@ -612,6 +712,27 @@ namespace InvoicePOS.ViewModels
                 }
             }
         }
+
+        //private decimal _TOTAL_TAX;
+        //public decimal TOTAL_TAX
+        //{
+        //    get
+        //    {
+        //        return TOTAL_TAX;
+        //    }
+        //    set
+        //    {
+        //        TOTAL_TAX = value;
+
+
+        //        if (TOTAL_TAX != value)
+        //        {
+        //            TOTAL_TAX = value;
+        //            OnPropertyChanged("TOTAL_TAX");
+        //        }
+        //    }
+        //}
+
         private string _SearchStock;
         public string SearchStock
         {
@@ -1573,7 +1694,7 @@ namespace InvoicePOS.ViewModels
 
         public async void GetPOList(long POId)
         {
-            ReportPO.ListGridRef = new DataGrid();
+            //ReportPO.ListGridRef = new DataGrid();
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri(GlobalData.gblApiAdress);
             client.DefaultRequestHeaders.Accept.Add(
@@ -1604,6 +1725,7 @@ namespace InvoicePOS.ViewModels
                         PO_NUMBER1 = data[i].PO_NUMBER1,
                         SEARCH_CODE = data[i].SEARCH_CODE,
                         SUPPLIER = data[i].SUPPLIER,
+                        SUPPLIER_NAME = data[i].SUPPLIER_NAME,
                         SUPPLIER_EMAIL = data[i].SUPPLIER_EMAIL,
                         SUPPLIER_ID = data[i].SUPPLIER_ID,
                         TERMS = data[i].TERMS,
@@ -1623,10 +1745,46 @@ namespace InvoicePOS.ViewModels
                     _ListGrid_Temp = item1;
                 }
                 App.Current.Properties["DataGrid1"] = _ListGrid_Temp;
-                ReportPO.ListGridRef.ItemsSource = _ListGrid_Temp.ToList();
+                //ReportPO.ListGridRef.ItemsSource = _ListGrid_Temp.ToList();
+
+                if (ApplyDateRange_Search == true)
+                {
+                    _ListGrid_ViewLedger.Clear();
+                    var item1 = (from m in _ListGrid_Temp
+                                 where m.DELIVERY_DATE >= FROM_DATE && m.DELIVERY_DATE <= TO_DATE
+                                 select m).ToList();
+                    if (item1.Count > 0)
+                    {
+                        _ListGrid_ViewLedger = item1;
+                    }
+                }
+                //if (IS_InACTIVESearch == true)
+                //{
+                //var InActiveSupp = (from m in _ListGrid_Invoice where m.IS_ACTIVE == true select m).ToList();
+                //_ListGrid_Invoice = InActiveSupp;
+                //}
+
+                TOTAL_AMOUNT = 0;
+                TOTAL_TAX = 0;
+                if (_ListGrid_ViewLedger.Count != 0)
+                {
+                    for (int i = 0; i < _ListGrid_ViewLedger.Count; i++)
+                    {
+                        TOTAL_AMOUNT = Convert.ToDecimal(_ListGrid_ViewLedger[i].TOTAL_AMOUNT + TOTAL_AMOUNT);
+                        //App.Current.Properties["CurrentGrosAmount1"] = TOTAL_AMOUNT;
+                        TOTAL_TAX = Convert.ToDecimal(_ListGrid_ViewLedger[i].TOTAL_TAX + TOTAL_TAX);
+
+                    }
+                    TOTAL_TAX = Math.Round(TOTAL_TAX, 2);
+                    PO_Summery_Report.TotTax.Text = TOTAL_TAX.ToString();
+                    PO_Summery_Report.TotAmt.Text = TOTAL_AMOUNT.ToString();
+                }
+
+                ListGridViewLedger = _ListGrid_ViewLedger;
 
             }
             ListGrid = _ListGrid_Temp;
+            _ListGrid_Temp.Clear();
         }
 
         public List<POrderModel> _ListGrid { get; set; }
@@ -1677,26 +1835,27 @@ namespace InvoicePOS.ViewModels
         public POViewModel()
         {
 
-            var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            var comp = 1;
 
-            if (App.Current.Properties["Action"].ToString() == "Edit")
-            {
-                CreatVisible = "Collapsed";
-                UpdVisible = "Visible";
-                SelectedPO = App.Current.Properties["POEdit"] as POrderModel;
-                //App.Current.Properties["EditItemGrid"] = (from a in ListGrid1 where a.BAR_CODE == Select_BarCode || a.ITEM_NAME == AddPO.ItemRef.Text || a.SEARCH_CODE == AddPO.ScrRef.Text select a).FirstOrDefault();
-                App.Current.Properties["Action"] = "";
-                GetPoItem(comp);
+            //if (App.Current.Properties["Action"].ToString() == "Edit")
+            //{
+            //    CreatVisible = "Collapsed";
+            //    UpdVisible = "Visible";
+            //    SelectedPO = App.Current.Properties["POEdit"] as POrderModel;
+            //    //App.Current.Properties["EditItemGrid"] = (from a in ListGrid1 where a.BAR_CODE == Select_BarCode || a.ITEM_NAME == AddPO.ItemRef.Text || a.SEARCH_CODE == AddPO.ScrRef.Text select a).FirstOrDefault();
+            //    App.Current.Properties["Action"] = "";
+            //    GetPoItem(comp);
 
-            }
-            else if (App.Current.Properties["Action"].ToString() == "View")
-            {
-                SelectedPO = App.Current.Properties["POView"] as POrderModel;
-                App.Current.Properties["Action"] = "";
-                GetPoItem(comp);
-            }
-            else
-            {
+            //}
+            //else if (App.Current.Properties["Action"].ToString() == "View")
+            //{
+            //    SelectedPO = App.Current.Properties["POView"] as POrderModel;
+            //    App.Current.Properties["Action"] = "";
+            //    GetPoItem(comp);
+            //}
+            //else
+            //{
                 UpdVisible = "Collapsed";
                 CreatVisible = "Visible";
                 SelectedPO = new POrderModel();
@@ -1707,7 +1866,7 @@ namespace InvoicePOS.ViewModels
 
 
 
-            }
+            //}
             GetSpplierNo();
             isenable = true;
             _isenable = true;
@@ -1723,7 +1882,7 @@ namespace InvoicePOS.ViewModels
             set
             {
                 _Current_Date = value;
-                OnPropertyChanged("TOTAL_TAX");
+                OnPropertyChanged("Current_Date");
             }
 
         }

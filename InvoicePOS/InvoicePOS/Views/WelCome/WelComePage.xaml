@@ -11,17 +11,17 @@
     </Window.InputBindings>
     <Grid>
         <Grid Margin="2,0,-2,0">
-           
-               
-           
+
+
+
             <Rectangle Fill="#f6f7f9" Height="99" Stroke="#f6f7f9" VerticalAlignment="Top"/>
-            <Button Name="Dashboard" Command="{Binding Path=Dashboard,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="90" Height="90"  BorderThickness="0" Style="{StaticResource ButtonImage}">
+            <Button Name="Dashboard" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="90" Height="90"  BorderThickness="0" Style="{StaticResource ButtonImage}">
                 <DockPanel HorizontalAlignment="Stretch" >
                     <Image Source="../../Images/dashboard-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
                     <Label Content="Dashboard" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
                 </DockPanel>
             </Button>
-            <Button Name="Settings" Command="{Binding Path=Settings,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" Margin="103,6,0,0" VerticalAlignment="Top" Width="90" Height="90" Style="{StaticResource ButtonImage}">
+            <Button Name="Settings"  HorizontalAlignment="Left" Margin="103,6,0,0" VerticalAlignment="Top" Width="90" Height="90" Style="{StaticResource ButtonImage}">
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image Source="/InvoicePOS;component/Images/setting-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
                     <Label Content="Setting" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>
@@ -214,12 +214,15 @@
                         <Label Content="Cash Reg" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
                     </DockPanel>
                 </Button>
-                <Button Name="Employee1" Command="{Binding Path=EmployeeList,UpdateSourceTrigger=PropertyChanged }"   Margin="0,164,0,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
+
+                <Button Name="TransferCash"  Command="{Binding Path=TRANSFER_CASH,UpdateSourceTrigger=PropertyChanged }"   Margin="0,164,0,0"  Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"   >
                     <DockPanel HorizontalAlignment="Stretch">
-                        <Image Source="/InvoicePOS;component/Images/employee-icon.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
-                        <Label Content="Employee" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                        <Image Source="/InvoicePOS;component/Images/cash-reg2.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Transfer Cash" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
                     </DockPanel>
                 </Button>
+
+
                 <Button Name="payrecived" Command="{Binding Path=RecvPaymentClick,UpdateSourceTrigger=PropertyChanged }"  Margin="0,241,85,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
                     <DockPanel HorizontalAlignment="Stretch">
                         <Image Source="/InvoicePOS;component/Images/payment-receive.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
@@ -263,14 +266,19 @@
                     </DockPanel>
                 </Button>
 
+                <Button Name="Designation" Command="{Binding Path=DesignationList,UpdateSourceTrigger=PropertyChanged }"   Margin="0,472,0,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Image Source="/InvoicePOS;component/Images/employee-icon.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
+                        <Label Content="Designation" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                    </DockPanel>
+                </Button>
 
-
-                <Button Name="dailySales" Command="{Binding DailySales, UpdateSourceTrigger=PropertyChanged}"   Margin="0,472,0,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
+                <!--<Button Name="dailySales" Command="{Binding DailySales, UpdateSourceTrigger=PropertyChanged}"   Margin="0,472,0,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
                     <DockPanel HorizontalAlignment="Stretch">
                         <Image Source="/InvoicePOS;component/Images/daily-sales.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
                         <Label Content="DailySales" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
                     </DockPanel>
-                </Button>
+                </Button>-->
             </Grid>
             <Grid Visibility="{Binding SecondVisible}" Margin="31,54,26,0" Height="554" VerticalAlignment="Top">
                 <Button Name="Report" Command="{Binding ReportList, UpdateSourceTrigger=PropertyChanged}"   Margin="0,10,85,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85" BorderThickness="0"  Background="#f6f7f9" Foreground="#f6f7f9"  BorderBrush="{x:Null}" >
@@ -303,12 +311,13 @@
                         <Label Content="Access Rights" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
                     </DockPanel>
                 </Button>
-                <Button Name="Designation" Command="{Binding Path=DesignationList,UpdateSourceTrigger=PropertyChanged }"   Margin="0,164,0,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
+                <Button Name="Employee1" Command="{Binding Path=EmployeeList,UpdateSourceTrigger=PropertyChanged }"   Margin="0,164,0,0" Style="{StaticResource ButtonImageLeft}" Height="75" VerticalAlignment="Top" HorizontalAlignment="Right" Width="85"  >
                     <DockPanel HorizontalAlignment="Stretch">
                         <Image Source="/InvoicePOS;component/Images/employee-icon.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>
-                        <Label Content="Designation" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
+                        <Label Content="Employee" DockPanel.Dock="Bottom" FontFamily="Verdana" FontSize="11"/>
                     </DockPanel>
                 </Button>
+
                 <Button Name="Deperment" Command="{Binding Path=DepartmentClick,UpdateSourceTrigger=PropertyChanged }"  Margin="0,241,85,0" Style="{StaticResource ButtonImageLeft}" HorizontalAlignment="Right" Width="85" Height="75" VerticalAlignment="Top"  >
                     <DockPanel HorizontalAlignment="Stretch">
                         <Image Source="/InvoicePOS;component/Images/payment-receive.png" Stretch="Uniform" DockPanel.Dock="Top" Width="45" Height="45"/>

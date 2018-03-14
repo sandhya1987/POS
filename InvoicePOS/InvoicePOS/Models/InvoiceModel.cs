@@ -64,6 +64,18 @@ namespace InvoicePOS.Models
         public decimal CREDIT_AMOUNT { get; set; }
         public decimal? TOTAL_TAX { get; set; }
         public decimal? CreditsLimits { get; set; }
+        public decimal TOTAL_SALERETURN { get; set; }
+        public decimal TOTAL_INVOICE_AMOUNT { get; set; }
+        public decimal? WEIGHT_OF_PLASTIC { get; set; }
+        public decimal? WEIGHT_OF_FOAM { get; set; }
+        public decimal? WEIGHT_OF_PAPER { get; set; }
+        public decimal? WEIGHT_OF_CARDBOARD { get; set; }
+        public int? SALE_QTY { get; set; }
+        public DateTime INVDT { get; set; }
+        public decimal TOTAL_PRODUCT1 { get; set; }
+        public decimal TOTAL_PRODUCT2 { get; set; }
+        public decimal TOTAL_PRODUCT3 { get; set; }
+        public decimal TOTAL_PRODUCT4 { get; set; }
         //public string CASH_REG { get; set; }
         public ObservableCollection<ItemModel> SelectedItem { get; set; }
     }
@@ -89,6 +101,17 @@ namespace InvoicePOS.Models
         public decimal DEBIT_AMOUNT { get; set; }
         public decimal CREDIT_AMOUNT { get; set; }
         public DateTime TRANSACTION_DATE { get; set; }
+        public decimal TOT_AMT { get; set; }
+        public decimal? WEIGHT_OF_PLASTIC { get; set; }
+        public decimal? WEIGHT_OF_FOAM { get; set; }
+        public decimal? WEIGHT_OF_PAPER { get; set; }
+        public decimal? WEIGHT_OF_CARDBOARD { get; set; }
+        public int? SALE_QTY { get; set; }
+        public DateTime INVDT { get; set; }
+        public decimal TOTAL_PRODUCT1 { get; set; }
+        public decimal TOTAL_PRODUCT2 { get; set; }
+        public decimal TOTAL_PRODUCT3 { get; set; }
+        public decimal TOTAL_PRODUCT4 { get; set; }
         public string FORMATTED_TOTAL_AMOUNT
         {
             get
@@ -189,6 +212,9 @@ namespace InvoicePOS.Models
         public DateTime STARTDATE { get; set; }
         public DateTime ENDDATE { get; set; }
         public string CASH_REG { get; set; }
+        public decimal TOTAL_SALERETURN { get; set; }
+        public decimal SALES_RETURN_AMOUNT { get; set; }
+
 
     }
 

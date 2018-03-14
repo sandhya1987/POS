@@ -33,7 +33,7 @@ namespace InvoicePOS.UserControll.Cash_Reg
 
         private void grdCash_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var str = (CashRegModel)dataGrid1.SelectedItem;
+            var str = (CashRegModel)dataGrid2.SelectedItem;
             _CashRegViewModel.View_CashReg();
         } 
     }

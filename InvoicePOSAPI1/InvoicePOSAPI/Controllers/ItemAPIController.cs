@@ -176,6 +176,8 @@ namespace InvoicePOSAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, str);
         }
 
+        
+
         [HttpGet]
         public HttpResponseMessage GetAllItem(int id)
         {
@@ -255,6 +257,99 @@ namespace InvoicePOSAPI.Controllers
             //}
 
         }
+
+        [HttpGet]
+        public HttpResponseMessage GetInventoryDetails(int id)
+        {
+            
+            var str = (from b in db.TBL_ITEMS
+                       join a in db.TBL_SALE_ITEM on b.ITEM_ID equals a.SALE_ITEM_ID
+                       //join c in db.TBL_ITEMS on a.SALE_ITEM_ID equals c.ITEM_ID
+                       where b.COMPANY_ID==id && b.IS_DELETE==false
+                       select new ItemModel
+                       {
+            //var str = (from b in db.TBL_ITEMS
+            //           join a in db.TBL_SALE_ITEM on b.ITEM_ID equals a.SALE_ITEM_ID
+            //           where b.COMPANY_ID == id && b.IS_DELETE == false
+            //           group a by a.SALE_ITEM_ID into g
+            //           orderby g.Sum(a => a.SALE_QTY) descending
+                                              
+                       //select new ItemModel
+                       //{
+
+                           SLNO = 0,
+                           //SALE_QTY = g.Sum(a => a.SALE_QTY),
+                           //IMAGE_PATH = g.Key(b=>b.IMAGE_PATH),
+                           SALE_QTY=a.SALE_QTY,
+                           IMAGE_PATH=b.IMAGE_PATH,
+                           ITEM_ID = b.ITEM_ID,
+                           ITEM_NAME = b.ITEM_NAME,
+                           //ITEM_LOCATION = a.ITEM_LOCATION,
+                           ITEM_LOCATION_NAME = b.ITEM_LOCATION_NAME,
+                           ITEM_DESCRIPTION = b.ITEM_DESCRIPTION,
+                           ITEM_PRICE = b.ITEM_PRICE,
+                           ITEM_INVOICE_ID = b.ITEM_INVOICE_ID,
+                           ITEM_PRODUCT_ID = b.ITEM_PRODUCT_ID,
+                           KEYWORD = b.KEYWORD,
+                           ACCESSORIES_KEYWORD = b.ACCESSORIES_KEYWORD,
+                           BARCODE = b.BARCODE,
+                           CATAGORY_ID = b.CATAGORY_ID,
+                           CATEGORY_NAME = b.CATEGORY_NAME,
+                           SEARCH_CODE = b.SERCH_CODE,
+                           TAX_PAID = b.TAX_PAID,
+                           TAX_COLLECTED = b.TAX_COLLECTED,
+                           //BUSINESS_LOC = b.BUSSINESS_LOCATION,
+                           BUSS_LOC_ID = b.BUSS_LOC_ID,
+                           GODOWN_ID = b.GODOWN_ID,
+                           UNIT_SALES_ID = b.SALE_UNIT_ID,
+                           UNIT_PURCHAGE_ID = b.PURCHAGE_UNIT_ID,
+                           PURCHASE_UNIT = b.PURCHASE_UNIT,
+                           SALES_UNIT = b.SALES_UNIT,
+                           PURCHASE_UNIT_PRICE = b.PURCHASE_UNIT_PRICE,
+                           SALES_PRICE = b.SALES_PRICE,
+                           MRP = b.MRP,
+                           COMPANY_ID = b.COMPANY_ID,
+                           OPN_QNT = b.OPN_QNT,
+                           DISPLAY_INDEX = b.DISPLAY_INDEX,
+                           ITEM_GROUP_NAME = b.ITEM_GROUP_NAME,
+                           ITEM_UNIQUE_NAME = b.ITEM_UNIQUE_NAME,
+                           REGIONAL_LANGUAGE = b.REGIONAL_LANGUAGE,
+                           SALES_PRICE_BEFOR_TAX = b.SALES_PRICE_BEFOR_TAX,
+                           IS_DELETE = b.IS_DELETE,
+                           INCLUDE_TAX = b.INCLUDE_TAX,
+                           IS_Shortable_Item = false,
+                           IS_Purchased = false,
+                           IS_Service_Item = false,
+                           IS_For_Online_Shop = false,
+                           IS_Not_for_online_shop = false,
+                           IS_Not_For_Sell = false,
+                           ALLOW_PURCHASE_ON_ESHOP = false,
+                           IS_ACTIVE = b.IS_ACIVE,
+                           IS_Gift_Card = false,
+                           MODIFICATION_DATE = b.MODIFICATION_DATE,
+                           WEIGHT_OF_CARDBOARD = b.WEIGHT_OF_CARDBOARD,
+                           WEIGHT_OF_FOAM = b.WEIGHT_OF_FOAM,
+                           WEIGHT_OF_PLASTIC = b.WEIGHT_OF_PLASTIC,
+                           WEIGHT_OF_PAPER = b.WEIGHT_OF_PAPER,
+                           //GODOWN = c.GODOWN,
+                           DATE = System.DateTime.Now,
+                           //COMPANY_NAME = c.COMPANY_NAME,
+                           //TAX_COLLECTED_NAME = c.TAX_COLLECTED_NAME,
+                           //TAX_PAID_NAME = c.TAX_PAID_NAME,
+                           //TaxName = c.TAX_NAME,
+                           //TaxValue = c.TAX_VALUE,
+                           Total = 0,
+                       }).ToList();
+
+            return Request.CreateResponse(HttpStatusCode.OK, str);
+            //}
+            //catch
+            //{
+
+            //}
+
+        }
+
         [HttpGet]
         public HttpResponseMessage GetItemDetails(int id, int itemid)
         {

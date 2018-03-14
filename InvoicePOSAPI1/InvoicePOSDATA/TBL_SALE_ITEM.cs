@@ -16,7 +16,7 @@ namespace InvoicePOSDATA
     {
         public int SALE_ID { get; set; }
         public Nullable<int> SALE_ITEM_ID { get; set; }
-        public Nullable<int> INVOICE_ID { get; set; }
+        public Nullable<long> INVOICE_ID { get; set; }
         public Nullable<decimal> ITEM_DISCOUNT { get; set; }
         public Nullable<decimal> ITEM_TOTAL_AMOUNT { get; set; }
         public Nullable<int> SALE_QTY { get; set; }

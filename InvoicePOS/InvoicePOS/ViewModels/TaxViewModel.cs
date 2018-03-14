@@ -28,7 +28,8 @@ namespace InvoicePOS.ViewModels
             SelectedItem = new ItemModel();
             SelectedTax = new TaxManagementModel();
             SelectedItem1 = new BusinessLocationModel();
-            var COMPANY_ID = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            //var COMPANY_ID = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            var COMPANY_ID = 1;
             SelectedTax = new TaxManagementModel();
             GetBussinessList(COMPANY_ID);
             //Show_Taxes(COMPANY_ID);

@@ -171,7 +171,7 @@
     <Compile Include="Controllers\OpeningStockAPIController.cs" />
     <Compile Include="Controllers\POAPIController.cs" />
     <Compile Include="Controllers\RecPayAPIController.cs" />
-    <Compile Include="Controllers\ReportGroupAPIController.cs" />
+    <Compile Include="Controllers\ReportAPIController.cs" />
     <Compile Include="Controllers\SalesReturnAPIController.cs" />
     <Compile Include="Controllers\StocktransferAPIController.cs" />
     <Compile Include="Controllers\SupplierAPIController.cs" />
@@ -205,6 +205,7 @@
     <Compile Include="Models\OpenIngStockModel.cs" />
     <Compile Include="Models\POModel.cs" />
     <Compile Include="Models\ReportGroupModel.cs" />
+    <Compile Include="Models\ReportModel.cs" />
     <Compile Include="Models\RevPayModel.cs" />
     <Compile Include="Models\SalesReturnModel.cs" />
     <Compile Include="Models\StocktransferModel.cs" />

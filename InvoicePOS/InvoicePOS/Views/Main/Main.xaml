@@ -254,7 +254,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn    Header="BarCode" Binding="{Binding BARCODE}" Width="200" />
                     <DataGridTextColumn    Header="Item Name" Binding="{Binding ITEM_NAME}" Width="250"/>
-                    <DataGridTextColumn    Header="Price without tax1" Binding="{Binding FORMATTED_SALES_PRICE_BEFOR_TAX_QTY}" Width="200"/>
+                    <DataGridTextColumn    Header="Price without tax" Binding="{Binding FORMATTED_SALES_PRICE_BEFOR_TAX_QTY}" Width="200"/>
                     <DataGridTextColumn    Header="Qty"  Binding="{Binding Current_Qty,Mode=TwoWay}" Width="90"/>
                     <DataGridTextColumn    Header="Discount" Binding="{Binding FORMATTED_Discount}" Width="100"/>
                     <DataGridTextColumn    Header="Price with Discount" Binding="{Binding FORMATTED_SALES_PRICE_WITH_DISCOUNT}" Width="150"/>

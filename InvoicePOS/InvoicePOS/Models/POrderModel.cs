@@ -29,6 +29,7 @@ namespace InvoicePOS.Models
         public long COMPANY_ID { get; set; }
         public string DELIVER { get; set; }
         public long DELIVER_ID { get; set; }
+        public string SUPPLIER_NAME { get; set; }
         public long SUPPLIER_ID { get; set; }
         public string SUPPLIER { get; set; }
         public long BUSINESS_LOCATION_ID { get; set; }

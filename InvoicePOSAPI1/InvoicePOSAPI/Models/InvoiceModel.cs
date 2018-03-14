@@ -55,6 +55,14 @@ namespace InvoicePOSAPI.Models
         public DateTime? INVOICE_DATE { get; set; }
         public decimal? TOTAL_TAX { get; set; }
         public long INVOICE_ID { get; set; }
+        public decimal? SALES_RETURN_AMOUNT { get; set; }
+        public int? TOT_AMT { get; set; }
+        public decimal? WEIGHT_OF_PLASTIC { get; set; }
+        public decimal? WEIGHT_OF_FOAM { get; set; }
+        public decimal? WEIGHT_OF_PAPER { get; set; }
+        public decimal? WEIGHT_OF_CARDBOARD { get; set; }
+        public int? SALE_QTY { get; set; }
+       // public DateTime INVDT { get; set; }
         //public DateTime STARTDATE { get; set; }
         //public DateTime ENDDATE { get; set; }
     }

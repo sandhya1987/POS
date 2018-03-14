@@ -335,7 +335,8 @@ namespace InvoicePOSAPI.Controllers
         {
             var str1 = db.VIEW_INVOICE;
             var str = (from a in db.VIEW_INVOICE
-                       select new InvoiceModel
+                       //where a.SALES_RETURN_AMOUNT != null || a.SALES_RETURN_AMOUNT!=0
+                       select new InvoiceModel 
                        {
                            AVAILABLE_CREDIT_LIMIT = a.AVAILABLE_CREDIT_LIMIT,
                            BEFORE_ROUNDOFF = a.BEFORE_ROUNDOFF,
@@ -349,9 +350,10 @@ namespace InvoicePOSAPI.Controllers
                            NUMBER_OF_ITEM = a.NUMBER_OF_ITEM,
                            NOTE = a.NOTE,
                            TOTAL_AMOUNT = a.TOTAL_AMOUNT,
+                           TOT_AMT = a.TOTAL_AMOUNT,
                            TAX_INCLUDED = a.TAX_INCLUDED,
                            INVOICE_ID = a.INVOICE_ID,
-
+                           //INVOICE_DATE=a.INVOICE_DATE,
 
                            PENDING_AMOUNT = a.PENDING_AMOUNT,
                            QUANTITY_TOTAL = a.QUANTITY_TOTAL,
@@ -362,6 +364,69 @@ namespace InvoicePOSAPI.Controllers
                            SALES_EXECUTIVE_ID = a.SALES_EXECUTIVE_ID,
                            INVOICE_DATE = a.INVOICE_DATE,
                            TOTAL_TAX = a.TOTAL_TAX,
+                           //if(a.SALES_RETURN_AMOUNT!=null)
+
+                           SALES_RETURN_AMOUNT = a.SALES_RETURN_AMOUNT,
+
+                       }).ToList();
+            return Request.CreateResponse(HttpStatusCode.OK, str);
+        }
+
+        [HttpGet]
+        public HttpResponseMessage GetItemWtSld(int id)
+        {
+            //var str1 = db.VIEW_INVOICE;
+
+             //var str = (from b in db.TBL_PO
+             //          join a in db.TBL_ITEMS on b.ITEM_ID equals a.ITEM_ID
+             //          join c in db.TBL_ITEMS_ATTRIBUTE on a.ITEM_ID equals c.ITEM_ID
+             //          where b.COMPANY_ID == LOCATION_MODEL.COMPANY_ID && b.BUSINESS_LOCATION_ID == "1"
+             //          select new ItemModel
+             //          {
+                         
+
+            var str = (from b in db.TBL_INVOICE_PAY
+                       join a in db.TBL_SALE_ITEM on b.INVOICE_ID equals a.INVOICE_ID
+                       join c in db.TBL_ITEMS on a.SALE_ITEM_ID equals c.ITEM_ID
+                       where c.COMPANY_ID==id && c.IS_DELETE==false
+
+                       select new InvoiceModel
+                       {
+                           AVAILABLE_CREDIT_LIMIT = b.AVAILABLE_CREDIT_LIMIT,
+                           BEFORE_ROUNDOFF = b.BEFORE_ROUNDOFF,
+                           COMMISION_EXPENSE = b.COMMISION_EXPENSE,
+                           CUSTOMER = b.CUSTOMER,
+                           CUSTOMER_EMAIL = b.CUSTOMER_EMAIL,
+                           CUSTOMER_MOBILE_NO = b.CUSTOMER_MOBILE_NO,
+                           CUSTOMER_ID = b.CUSTOMER_ID,
+                           DISCOUNT_INCLUDED = b.DISCOUNT_INCLUDED,
+                           INVOICE_NO = b.INVOICE_NO,
+                           WEIGHT_OF_PAPER = c.WEIGHT_OF_PAPER,
+                           WEIGHT_OF_PLASTIC = c.WEIGHT_OF_PLASTIC,
+                           WEIGHT_OF_FOAM = c.WEIGHT_OF_FOAM,
+                           WEIGHT_OF_CARDBOARD = c.WEIGHT_OF_CARDBOARD,
+                           SALE_QTY = a.SALE_QTY,
+                           INVOICE_DATE = b.INVOICE_DATE,
+                           NUMBER_OF_ITEM = b.NUMBER_OF_ITEM,
+                           NOTE = b.NOTE,
+                           TOTAL_AMOUNT = b.TOTAL_AMOUNT,
+                           TOT_AMT = b.TOTAL_AMOUNT,
+                           TAX_INCLUDED = b.TAX_INCLUDED,
+                           INVOICE_ID = b.INVOICE_ID,
+                           //INVOICE_DATE=a.INVOICE_DATE,
+                           //CASH_AMOUNT=c.CASH_AMOUNT,
+                           PENDING_AMOUNT = b.PENDING_AMOUNT,
+                           QUANTITY_TOTAL = b.QUANTITY_TOTAL,
+                           RECIVED_AMOUNT = b.RECIVED_AMOUNT,
+                           RETURNABLE_AMOUNT = b.RETURNABLE_AMOUNT,
+                           ROUNDOFF_AMOUNT = b.ROUNDOFF_AMOUNT,
+                           SALES_EXECUTIVE = b.SALES_EXECUTIVE,
+                           SALES_EXECUTIVE_ID = b.SALES_EXECUTIVE_ID,
+
+                           //TOTAL_TAX = a.TOTAL_TAX,
+                           ////if(a.SALES_RETURN_AMOUNT!=null)
+
+                           SALES_RETURN_AMOUNT = 1,
 
                        }).ToList();
             return Request.CreateResponse(HttpStatusCode.OK, str);

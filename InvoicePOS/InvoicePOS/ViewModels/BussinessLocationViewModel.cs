@@ -1573,34 +1573,35 @@ namespace InvoicePOS.ViewModels
         public BussinessLocationViewModel()
         {
             SelectedPO = new POrderModel();
-            var COMPANY_ID = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            //var COMPANY_ID = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+            var COMPANY_ID = 1;
             SelectedOpeningStock = new OpeningStockModel();
            
-            if (App.Current.Properties["Action"] == "Edit")
-            {
-                CreateVisible = "Collapsed";
-                UpdateVisible = "Visible";
-                SelectedBusinessLoca = App.Current.Properties["BussLocEdit"] as BusinessLocationModel;
-                // GetBussinessList(COMPANY_ID);
-                App.Current.Properties["Action"] = "";
-            }
-            else if (App.Current.Properties["Action"] == "View")
-            {
-                SelectedBusinessLoca = App.Current.Properties["BussLocView"] as BusinessLocationModel;
-                // GetBussinessList(COMPANY_ID);
-                App.Current.Properties["BussLocView"] = "";
-                // App.Current.Properties["Action"] = "";
-            }
-            else if (App.Current.Properties["Action"] == "Add")
-            {
-                CreateVisible = "Visible";
-                UpdateVisible = "Collapsed";
-                SelectedBusinessLoca = new BusinessLocationModel();
-                GetBussinessList(COMPANY_ID);
-                // GetBussinessList(COMPANY_ID);
-                // App.Current.Properties["Action"] = "";
-            }
-            else
+            //if (App.Current.Properties["Action"] == "Edit")
+            //{
+            //    CreateVisible = "Collapsed";
+            //    UpdateVisible = "Visible";
+            //    SelectedBusinessLoca = App.Current.Properties["BussLocEdit"] as BusinessLocationModel;
+            //    // GetBussinessList(COMPANY_ID);
+            //    App.Current.Properties["Action"] = "";
+            //}
+            //else if (App.Current.Properties["Action"] == "View")
+            //{
+            //    SelectedBusinessLoca = App.Current.Properties["BussLocView"] as BusinessLocationModel;
+            //    // GetBussinessList(COMPANY_ID);
+            //    App.Current.Properties["BussLocView"] = "";
+            //    // App.Current.Properties["Action"] = "";
+            //}
+            //else if (App.Current.Properties["Action"] == "Add")
+            //{
+            //    CreateVisible = "Visible";
+            //    UpdateVisible = "Collapsed";
+            //    SelectedBusinessLoca = new BusinessLocationModel();
+            //    GetBussinessList(COMPANY_ID);
+            //    // GetBussinessList(COMPANY_ID);
+            //    // App.Current.Properties["Action"] = "";
+            //}
+            //else
             {
                 SelectedBusinessLoca = new BusinessLocationModel { };
                 GetBussinessList(COMPANY_ID);

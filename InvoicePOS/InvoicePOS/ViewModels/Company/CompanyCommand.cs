@@ -9,11 +9,11 @@ using System.Windows.Input;
 
 namespace InvoicePOS.ViewModels.Company
 {
-    class CompanyCommand:ICommand
+    class CompanyCommand : ICommand
     {
 
-         private readonly CompanyViewModel _CM;
-         public CompanyCommand(CompanyViewModel vm)
+        private readonly CompanyViewModel _CM;
+        public CompanyCommand(CompanyViewModel vm)
         {
             _CM = vm;
         }

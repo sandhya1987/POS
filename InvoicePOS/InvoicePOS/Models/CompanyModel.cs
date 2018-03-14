@@ -19,7 +19,7 @@ namespace InvoicePOS.Models
         
         public string NAME { get; set; }
 
-        public int COMPANY_ID { get; set; }
+        
 
         public string SHOPNAME { get; set; }
         public string PREFIX { get; set; }
@@ -29,13 +29,13 @@ namespace InvoicePOS.Models
         public string ADDRESS_2 { get; set; }
         public string CITY { get; set; }
         public string STATE { get; set; }
-        public string COUNTRY { get; set; }
+        //public string COUNTRY { get; set; }
         public string PIN { get; set; }
         public string PHONE_NUMBER { get; set; }
         public string MOBILE_NUMBER { get; set; }
 
         public string IMAGE_PATH { get; set; }
-        public string WEBSITE { get; set; }
+        //public string WEBSITE { get; set; }
         public decimal DEFAULT_TAX_RATE { get; set; }
         public bool IS_WARNED_FOR_NEGATIVE_STOCK { get; set; }
         public bool IS_WARNED_FOR_LESS_SALES_PRICE { get; set; }
@@ -56,8 +56,21 @@ namespace InvoicePOS.Models
         public string BANK_PHONE_NUMBER { get; set; }
         public string BANK_CODE { get; set; }
 
-
-        
+        public int COMPANY_ID { get; set; }
+        public DateTime CREATED_DATE { get; set; }
+        public DateTime CREATE_DATE_TIME { get; set; }
+        public string COMPANY_NAME { get; set; }
+        public string ADDRESS { get; set; }
+        public string COUNTRY { get; set; }
+        public string POSTCODE { get; set; }
+        public string TELEPHONE { get; set; }
+        public string FAX { get; set; }
+        public string WEBSITE { get; set; }
+        public string COMPANY_STATUS { get; set; }
+        public string PASSWORD { get; set; }
+        public string CONFIRM_PASSWORD { get; set; }
+        public string USER_NAME { get; set; }
+        public int SLNO { get; set; }
 
 
 
