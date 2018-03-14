@@ -1,7 +1,8 @@
 ﻿<Window x:Class="InvoicePOS.UserControll.Estimate.ViewEstimate"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ViewEstimate" Height="881" Width="1149">
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
+        Title="{x:Static p:Resources.String670}" Height="881" Width="1149">
     <Grid Margin="0,0,0,129">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -20,34 +21,34 @@
                     <ColumnDefinition Width="215*"/>
                     <ColumnDefinition Width="561*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="25" Margin="25,-41,0,0" TextWrapping="Wrap" Text="Business Location :" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="25" Margin="25,-41,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label197}" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="CUSTOMER_CODE"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="13,-41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="2" Grid.ColumnSpan="2"/>
-                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="25" Margin="25,33,0,-58" TextWrapping="Wrap" Text="Estimate Number :" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="25" Margin="25,33,0,-58" TextWrapping="Wrap" Text="{x:Static p:Resources.String671}" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock2"  Text="{Binding EstimateNo}" HorizontalAlignment="Left" Height="25" Margin="4,32,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="2"/>
-                <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="25" Margin="25,11,0,-36" TextWrapping="Wrap" Text="Invoice Number :" VerticalAlignment="Top" Width="95"/>
+                <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="25" Margin="25,11,0,-36" TextWrapping="Wrap" Text="{x:Static p:Resources.String672}" VerticalAlignment="Top" Width="95"/>
                 <TextBlock x:Name="textBlock4"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="6,7,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="1" Grid.ColumnSpan="2"/>
-                <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="25" Margin="25,-15,0,-10" TextWrapping="Wrap" Text="Payment Status :" VerticalAlignment="Top" Width="95"/>
+                <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="25" Margin="25,-15,0,-10" TextWrapping="Wrap" Text="{x:Static p:Resources.String673}" VerticalAlignment="Top" Width="95"/>
                 <TextBlock x:Name="textBlock6"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="16,-18,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="1" Grid.ColumnSpan="2"/>
-                <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Height="25" Margin="25,69,0,-94" TextWrapping="Wrap" Text="ABD Number :" VerticalAlignment="Top" Width="95"/>
+                <TextBlock x:Name="textBlock7" HorizontalAlignment="Left" Height="25" Margin="25,69,0,-94" TextWrapping="Wrap" Text="{x:Static p:Resources.String674}" VerticalAlignment="Top" Width="95"/>
                 <TextBlock x:Name="textBlock8"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="121,62,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.ColumnSpan="3"/>
-                
-                <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Height="25" Margin="152,49,0,-74" TextWrapping="Wrap" Text="Loyalty Points Given :" VerticalAlignment="Top" Width="116" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+                <TextBlock x:Name="textBlock11" HorizontalAlignment="Left" Height="25" Margin="152,49,0,-74" TextWrapping="Wrap" Text="{x:Static p:Resources.String675}" VerticalAlignment="Top" Width="116" Grid.Column="2" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock12"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="58,62,0,-87" TextWrapping="Wrap"  VerticalAlignment="Top" Width="132" Grid.Row="1" Grid.Column="3"/>
-                <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Height="25" Margin="152,68,0,-93" TextWrapping="Wrap" Text="Reference Number :" VerticalAlignment="Top" Width="111" Grid.Column="2" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock13" HorizontalAlignment="Left" Height="25" Margin="152,68,0,-93" TextWrapping="Wrap" Text="{x:Static p:Resources.String676}" VerticalAlignment="Top" Width="111" Grid.Column="2" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock14"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="40,38,0,-63" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Grid.Row="1" Grid.Column="3"/>
-                <TextBlock x:Name="textBlock15" HorizontalAlignment="Left" Height="25" Margin="152,-9,0,-16" TextWrapping="Wrap" Text="Invoice Date :" VerticalAlignment="Top" Width="95" Grid.Column="2" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock15" HorizontalAlignment="Left" Height="25" Margin="152,-9,0,-16" TextWrapping="Wrap" Text="{x:Static p:Resources.String1046}" VerticalAlignment="Top" Width="95" Grid.Column="2" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock16"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="40,-11,0,-14" TextWrapping="Wrap"  VerticalAlignment="Top" Width="140" Grid.Row="1" Grid.Column="3"/>
-                <TextBlock x:Name="textBlock17" HorizontalAlignment="Left" Height="25" Margin="152,18,0,-43" TextWrapping="Wrap" Text="Goods Delivered :" VerticalAlignment="Top" Width="95" Grid.Column="2" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock17" HorizontalAlignment="Left" Height="25" Margin="152,18,0,-43" TextWrapping="Wrap" Text="{x:Static p:Resources.String677}" VerticalAlignment="Top" Width="95" Grid.Column="2" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock18"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="40,16,0,-41" TextWrapping="Wrap"  VerticalAlignment="Top" Width="145" Grid.Row="1" Grid.Column="3"/>
-                <TextBlock x:Name="textBlock19" HorizontalAlignment="Left" Height="25" Margin="198,38,0,-63" TextWrapping="Wrap" Text="Sms Invoice :" VerticalAlignment="Top" Width="95" Grid.Column="3" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock19" HorizontalAlignment="Left" Height="25" Margin="198,38,0,-63" TextWrapping="Wrap" Text="{x:Static p:Resources.String678}" VerticalAlignment="Top" Width="95" Grid.Column="3" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock120"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="77,36,0,-61" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Row="1" Grid.Column="4"/>
-                <TextBlock x:Name="textBlock21" HorizontalAlignment="Left" Height="25" Margin="196,-15,0,-10" TextWrapping="Wrap" Text="Payment Type :" VerticalAlignment="Top" Width="95" Grid.Column="3" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock21" HorizontalAlignment="Left" Height="25" Margin="196,-15,0,-10" TextWrapping="Wrap" Text="{x:Static p:Resources.String679}" VerticalAlignment="Top" Width="95" Grid.Column="3" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock22"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="128,64,0,-89" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Row="1" Grid.Column="4"/>
-                <TextBlock x:Name="textBlock23" HorizontalAlignment="Left" Height="25" Margin="201,64,0,-89" TextWrapping="Wrap" Text="Payment Cleared Date :" VerticalAlignment="Top" Width="129" Grid.Column="3" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock23" HorizontalAlignment="Left" Height="25" Margin="201,64,0,-89" TextWrapping="Wrap" Text="{x:Static p:Resources.String680}" VerticalAlignment="Top" Width="129" Grid.Column="3" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock24"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="134,-19,0,-6" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Row="1" Grid.Column="4"/>
-                <TextBlock x:Name="textBlock25" HorizontalAlignment="Left" Height="19" Margin="195,-35,0,0" TextWrapping="Wrap" Text="Cash Register :" VerticalAlignment="Top" Width="95" Grid.Column="3" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock25" HorizontalAlignment="Left" Height="19" Margin="195,-35,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String681}" VerticalAlignment="Top" Width="95" Grid.Column="3" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock26"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="73,-39,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Row="1" Grid.Column="4"/>
-                <TextBlock x:Name="textBlock27" HorizontalAlignment="Left" Height="25" Margin="194,9,0,-34" TextWrapping="Wrap" Text="Email Invoice :" VerticalAlignment="Top" Width="95" Grid.Column="3" Grid.ColumnSpan="2"/>
+                <TextBlock x:Name="textBlock27" HorizontalAlignment="Left" Height="25" Margin="194,9,0,-34" TextWrapping="Wrap" Text="{x:Static p:Resources.String682}" VerticalAlignment="Top" Width="95" Grid.Column="3" Grid.ColumnSpan="2"/>
                 <TextBlock x:Name="textBlock28"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="89,8,0,-33" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Row="1" Grid.Column="4"/>
             </Grid>
             <Grid Margin="0,140,0,0">
@@ -79,20 +80,20 @@
                     </DataGrid.RowStyle>
 
                     <DataGrid.Columns>
-                            <DataGridTextColumn    Header="Estimate No" Binding="{Binding EstimateNo}" Width="100"/>
-                            <DataGridTextColumn    Header="Barcode" Binding="{Binding Barcode}" Width="100"/>
-                            <DataGridTextColumn    Header="Item Name" Binding="{Binding ItemName}" Width="100"/> 
-                            <DataGridTextColumn    Header="Estimate Date" Binding="{Binding EstimateDate}" Width="100"/>
-                            <DataGridTextColumn    Header="Total " Binding="{Binding TotalPrice}" Width="100"/>
-                            <DataGridTextColumn    Header="TaxType" Binding="{Binding TaxGrandTotal}" Width="100"/>
-                            <DataGridTextColumn    Header="Tax Percent" Binding="{Binding TotalItemQty}" Width="100"/>
-                            <DataGridTextColumn    Header="Unit price" Binding="{Binding CustomerName}" Width="100"/>
-                            <DataGridTextColumn    Header="Qty/Weight" Binding="{Binding InnnvoiceNote}" Width="100"/>
-                            <DataGridTextColumn    Header="Measuring Unit" Binding="{Binding HoldNote}" Width="100"/>
-                            <DataGridTextColumn    Header="Discount Amount" Binding="{Binding EmployeeLogin}" Width="100"/>
-                            <DataGridTextColumn    Header="Spot Discount Reason" Binding="{Binding CashRegister}" Width="100"/>
-                            <DataGridTextColumn    Header="Total" Binding="{Binding SalesExecutiveName}" Width="100"/>
-                            <DataGridTextColumn    Header="Total Tax Amount" Binding="{Binding DeliveryDate}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String683}" Binding="{Binding EstimateNo}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String684}" Binding="{Binding Barcode}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String685}" Binding="{Binding ItemName}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String686}" Binding="{Binding EstimateDate}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String753}" Binding="{Binding TotalPrice}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String687}" Binding="{Binding TaxGrandTotal}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String688}" Binding="{Binding TotalItemQty}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String689}" Binding="{Binding CustomerName}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String690}" Binding="{Binding InnnvoiceNote}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String691}" Binding="{Binding HoldNote}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String692}" Binding="{Binding EmployeeLogin}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String693}" Binding="{Binding CashRegister}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String54}" Binding="{Binding SalesExecutiveName}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String694}" Binding="{Binding DeliveryDate}" Width="100"/>
                         
 
                     </DataGrid.Columns>
@@ -113,21 +114,21 @@
                         <ColumnDefinition Width="215*"/>
                         <ColumnDefinition Width="561*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock x:Name="textBlock30" HorizontalAlignment="Left" Height="25" Margin="155,174,0,-168" TextWrapping="Wrap" Text="Tax Included :" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
+                    <TextBlock x:Name="textBlock30" HorizontalAlignment="Left" Height="25" Margin="155,174,0,-168" TextWrapping="Wrap" Text="{x:Static p:Resources.String695}" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
                     <TextBox x:Name="textBlock31"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="280,169,0,-163" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="4"/>
-                    <TextBlock x:Name="textBlock32" HorizontalAlignment="Left" Height="25" Margin="155,207,0,-201" TextWrapping="Wrap" Text="Discount Amount :" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
+                    <TextBlock x:Name="textBlock32" HorizontalAlignment="Left" Height="25" Margin="155,207,0,-201" TextWrapping="Wrap" Text="{x:Static p:Resources.String696}" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
                     <TextBox x:Name="textBlock33"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="280,203,0,-197" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="4"/>
-                    
-                    <TextBlock x:Name="textBlock36" HorizontalAlignment="Left" Height="25" Margin="155,325,0,-319" TextWrapping="Wrap" Text="Number Of ITems :" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
+
+                    <TextBlock x:Name="textBlock36" HorizontalAlignment="Left" Height="25" Margin="155,325,0,-319" TextWrapping="Wrap" Text="{x:Static p:Resources.String697}" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
                     <TextBox x:Name="textBlock37"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="280,325,0,-319" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="4"/>
-                    <TextBlock x:Name="textBlock38" HorizontalAlignment="Left" Height="25" Margin="155,299,0,-293" TextWrapping="Wrap" Text="Quantity Total :" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
-                    <TextBlock x:Name="textBlock39" HorizontalAlignment="Left" Height="25" Margin="155,269,0,-263" TextWrapping="Wrap" Text="Total :" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
+                    <TextBlock x:Name="textBlock38" HorizontalAlignment="Left" Height="25" Margin="155,299,0,-293" TextWrapping="Wrap" Text="{x:Static p:Resources.String698}" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
+                    <TextBlock x:Name="textBlock39" HorizontalAlignment="Left" Height="25" Margin="155,269,0,-263" TextWrapping="Wrap" Text="{x:Static p:Resources.String699}" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
                     <TextBox x:Name="textBlock40"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="280,295,0,-289" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="4"/>
-                    <TextBlock x:Name="textBlock41" HorizontalAlignment="Left" Height="25" Margin="155,238,0,-232" TextWrapping="Wrap" Text="Round Off Amount :" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
+                    <TextBlock x:Name="textBlock41" HorizontalAlignment="Left" Height="25" Margin="155,238,0,-232" TextWrapping="Wrap" Text="{x:Static p:Resources.String700}" VerticalAlignment="Top" Width="110" Grid.Column="4"/>
                     <TextBox x:Name="textBlock42"  Text="{Binding SelectedCustomer.CUSTOMER_NUMBER}" HorizontalAlignment="Left" Height="25" Margin="280,235,0,-229" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="4"/>
                     <TextBox x:Name="textBlock43"  Text="{Binding TotalPrice}" HorizontalAlignment="Left" Height="25" Margin="280,266,0,-260" TextWrapping="Wrap"  VerticalAlignment="Top" Width="205" Grid.Column="4"/>
-                    <Button Content="Print as Invoice" Grid.Column="4" HorizontalAlignment="Left" Margin="222,418,0,0" VerticalAlignment="Top" Width="130"/>
-                    <Button Content="Cancel" Grid.Column="4" HorizontalAlignment="Left" Margin="405,418,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button Content="{x:Static p:Resources.String701}" Grid.Column="4" HorizontalAlignment="Left" Margin="222,418,0,0" VerticalAlignment="Top" Width="130"/>
+                    <Button Content="{x:Static p:Resources.label13}" Grid.Column="4" HorizontalAlignment="Left" Margin="405,418,0,0" VerticalAlignment="Top" Width="75"/>
                 </Grid>
             </Grid>
         </Grid>

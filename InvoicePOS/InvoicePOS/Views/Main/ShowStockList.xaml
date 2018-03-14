@@ -3,25 +3,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" WindowStartupLocation="CenterScreen"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml"
-         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
-    xmlns:local="clr-namespace:InvoicePOS.Views" 
-    xmlns:localn="clr-namespace:InvoicePOS.Views.Autocomplete"       
-        Title="Show Stock" Height="407.068" Width="716.608">
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:local="clr-namespace:InvoicePOS.Views" 
+        xmlns:localn="clr-namespace:InvoicePOS.Views.Autocomplete" 
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
+        Title="{x:Static p:Resources.String118}" Height="407.068" Width="716.608">
     <Grid>
         <Grid Margin="0,0,375,248">
-            <TextBlock HorizontalAlignment="Left" Margin="26,24,0,0" TextWrapping="Wrap" Text="Item Name :" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="39,54,0,0" TextWrapping="Wrap" Text="Barcode :" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="26,86,0,0" TextWrapping="Wrap" Text="Sales Price :" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="26,24,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String119}" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="39,54,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String120}" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="26,86,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String121}" VerticalAlignment="Top"/>
             <TextBox Name="ItemNAme" HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="106,22,0,0" TextWrapping="Wrap" Text="{Binding ITEM_NAME,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="191"/>
             <TextBox Name="Barcood" HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="106,52,0,0" TextWrapping="Wrap" Text="{Binding BARCODE,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="191"/>
             <TextBox Name="SalePrice" HorizontalAlignment="Left" IsReadOnly="True" Height="23" Margin="106,83,0,0" TextWrapping="Wrap" Text="{Binding SALES_PRICE,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="191"/>
         </Grid>
         <Grid Margin="339,10,0,248">
-            <TextBlock HorizontalAlignment="Left" Margin="10,93,0,0" TextWrapping="Wrap" Text="Item Name :" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,93,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String122}" VerticalAlignment="Top"/>
             <!--<TextBox Name="ItemNameStock" HorizontalAlignment="Left"  Height="23" Margin="93,86,0,0" TextWrapping="Wrap" Text="{Binding ItemNameStock,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="204"/>-->
             <local:ItemNameAutoComplete x:Name="textBox2"   Margin="93,86,0,0" Height="25"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="204"/>
-            <TextBlock HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" Text="Barcode :" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String123}" VerticalAlignment="Top"/>
 
             <!--<TextBox x:Name="Select_BarCodee" Text="{Binding Select_BarCode,UpdateSourceTrigger=PropertyChanged}" Margin="143,0,4,83" TextWrapping="Wrap" VerticalAlignment="Bottom" Style="{StaticResource numberdisplayTextboxsearch}" Width="Auto"   >
                 <TextBox.InputBindings>
@@ -36,7 +37,7 @@
                     <KeyBinding Key="Enter" Command="{Binding TabChangeCode}" />
                 </TextBox.InputBindings>
             </TextBox>
-            <Button Content="--" Command="{Binding ItemClickStock}" Margin="302,86,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30"/>
+            <Button Content="{x:Static p:Resources.lablel6}" Command="{Binding ItemClickStock}" Margin="302,86,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="30"/>
 
         </Grid>
         <Grid Margin="0,129,0,33">
@@ -67,13 +68,13 @@
                 </DataGrid.RowStyle>
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn    Header="Godown Name" Binding="{Binding GODOWN}" Width="200" />
-                    <DataGridTextColumn    Header="Barcode" Binding="{Binding BARCODE}" Width="250"/>
-                    <DataGridTextColumn     Header="Quantity"  Binding="{Binding OPN_QNT,Mode=TwoWay}" Width="90"/>
-                    <DataGridTextColumn    Header="Sales Measuring unit" Binding="{Binding SALES_UNIT}" Width="150"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String1005}" Binding="{Binding GODOWN}" Width="200" />
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String125}" Binding="{Binding BARCODE}" Width="250"/>
+                    <DataGridTextColumn     Header="{x:Static p:Resources.String126}"  Binding="{Binding OPN_QNT,Mode=TwoWay}" Width="90"/>
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String127}" Binding="{Binding SALES_UNIT}" Width="150"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <Button Content="Close" Margin="0,0,0,3" Command="{Binding Cancel}" HorizontalAlignment="Right" Width="71" Height="25" VerticalAlignment="Bottom"/>
+        <Button Content="{x:Static p:Resources.label23}" Margin="0,0,0,3" Command="{Binding Cancel}" HorizontalAlignment="Right" Width="71" Height="25" VerticalAlignment="Bottom"/>
     </Grid>
 </Window>

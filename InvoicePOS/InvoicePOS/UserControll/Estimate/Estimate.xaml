@@ -3,50 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" 
               d:DesignHeight="750" d:DesignWidth="1150">
     <Grid Background="#ffffff">
         <Button Command="{Binding AddCustomerClick}"    Margin="0,10,585,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
             <DockPanel HorizontalAlignment="Stretch">
                 <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                <Label Content="Reopen" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                <Label Content="{x:Static p:Resources.String650}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
             </DockPanel>
         </Button>
         <Button Command="{Binding EditEstimate}"  Margin="0,10,510,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
             <DockPanel HorizontalAlignment="Stretch">
                 <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
             </DockPanel>
         </Button>
         <Button Command="{Binding ViewEstimate}"    Margin="0,10,434,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
             <DockPanel HorizontalAlignment="Stretch">
                 <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
-                <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
             </DockPanel>
         </Button>
         <Button Command="{Binding DeleteEstimate}"  Margin="0,10,352,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
             <DockPanel HorizontalAlignment="Stretch">
                 <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
             </DockPanel>
         </Button>
         <Button Command="{Binding RecvPaymentClick}"   Margin="0,10,252,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="95" HorizontalAlignment="Right"  >
             <DockPanel HorizontalAlignment="Stretch">
                 <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                <Label Content="Recv Payment" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                <Label Content="{x:Static p:Resources.String493}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
             </DockPanel>
         </Button>
         <Button Command="{Binding CustFAAcctClick}"   Margin="0,10,107,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="140" HorizontalAlignment="Right"  >
             <DockPanel HorizontalAlignment="Stretch">
                 <!--<Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>-->
-                <Label Content="Customer FA Account" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" Width="139" />
+                <Label Content="{x:Static p:Resources.String494}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" Width="139" />
             </DockPanel>
         </Button>
         <TextBox Height="32" Margin="0,8,821,0" TextWrapping="Wrap" Text="{Binding SEARCH_CUS}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="138"/>
         <Button Command="{Binding SearchCustomer}"    Margin="0,10,741,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="75" HorizontalAlignment="Right"  >
             <DockPanel HorizontalAlignment="Stretch">
                 <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
             </DockPanel>
         </Button>
         <DataGrid ItemsSource="{Binding ListGrid, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedEstimate}"  RowHeight="28"   Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1"  IsReadOnly="True" AutoGenerateColumns="False"     x:Name="dataGrid" Margin="1,98,0,0" VerticalAlignment="Top" Height="336"   AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" FontSize="12" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd"  TextBlock.TextAlignment="Center">
@@ -76,27 +77,27 @@
             </DataGrid.RowStyle>
 
             <DataGrid.Columns>
-                <DataGridTextColumn    Header="Business Location" Binding="{Binding BusinessLoc}" Width="50"/>
-                <DataGridTextColumn    Header="Estimate Number" Binding="{Binding EstimateID}" Width="50"/>
-                <DataGridTextColumn    Header="Estimate Number" Binding="{Binding EstimateNo}" Width="50"/>
-                <DataGridTextColumn    Header="Estimate Date" Binding="{Binding EstimateDate}" Width="50"/>
-                <DataGridTextColumn    Header="Grand Total" Binding="{Binding TotalPrice}" Width="50"/>
-                <DataGridTextColumn    Header="Tax Grand Total" Binding="{Binding TaxGrandTotal}" Width="50"/>
-                <DataGridTextColumn    Header="Total Item Qty" Binding="{Binding TotalItemQty}" Width="50"/>
-                <DataGridTextColumn    Header="Customer Name" Binding="{Binding CustomerName}" Width="50"/>
-                <DataGridTextColumn    Header="Invoice Note" Binding="{Binding InnnvoiceNote}" Width="50"/>
-                <DataGridTextColumn    Header="Hold Note" Binding="{Binding HoldNote}" Width="50"/>
-                <DataGridTextColumn    Header="Invoice Status" Binding="{Binding InvoiceStatus}" Width="50"/>
-                <DataGridTextColumn    Header="Employee Login" Binding="{Binding EmployeeLogin}" Width="50"/>
-                <DataGridTextColumn    Header="Cash Register" Binding="{Binding CashRegister}" Width="50"/>
-                <DataGridTextColumn    Header="Sales Executive Name" Binding="{Binding SalesExecutiveName}" Width="50"/>
-                <DataGridTextColumn    Header="Delivery Date" Binding="{Binding DeliveryDate}" Width="50"/>
-                <DataGridTextColumn    Header="Delivery Time Slot" Binding="{Binding DeliveryTimeSlot}" Width="50"/>
-                <DataGridTextColumn    Header="Customer Comment" Binding="{Binding CustomerComment}" Width="50"/>
-                <DataGridTextColumn    Header="Print Count" Binding="{Binding PrintCount}" Width="50"/>
-                <DataGridTextColumn    Header="Invoice Number" Binding="{Binding InvoiceNo}" Width="50"/>
-                <DataGridTextColumn    Header="Invoice Reference Number" Binding="{Binding InvoiceRefNo}" Width="50"/>
-                <DataGridTextColumn    Header="Invoice Date" Binding="{Binding InvoiceDate}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String410}" Binding="{Binding BusinessLoc}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String651}" Binding="{Binding EstimateID}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String651}" Binding="{Binding EstimateNo}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String652}" Binding="{Binding EstimateDate}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String653}" Binding="{Binding TotalPrice}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String654}" Binding="{Binding TaxGrandTotal}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String655}" Binding="{Binding TotalItemQty}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String656}" Binding="{Binding CustomerName}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String657}" Binding="{Binding InnnvoiceNote}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String658}" Binding="{Binding HoldNote}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String659}" Binding="{Binding InvoiceStatus}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String660}" Binding="{Binding EmployeeLogin}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String661}" Binding="{Binding CashRegister}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String662}" Binding="{Binding SalesExecutiveName}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String663}" Binding="{Binding DeliveryDate}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String664}" Binding="{Binding DeliveryTimeSlot}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String665}" Binding="{Binding CustomerComment}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String666}" Binding="{Binding PrintCount}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String667}" Binding="{Binding InvoiceNo}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String668}" Binding="{Binding InvoiceRefNo}" Width="50"/>
+                <DataGridTextColumn    Header="{x:Static p:Resources.String669}" Binding="{Binding InvoiceDate}" Width="50"/>
                 <!--<DataGridTextColumn    Header="IsCreated In Disconnected Mode" Binding="{Binding TotalTax}" Width="250"/>
                 <DataGridTextColumn    Header="Date Time" Binding="{Binding EstimateDatetime}" Width="300" />
                 <DataGridTextColumn    Header="Total Item" Binding="{Binding CountItem}" Width="250"/>

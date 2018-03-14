@@ -3,42 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" Height="750" Width="1110">
     <Grid Margin="0,0,0,45" >
         <Border Background="#fff">
             <Grid Background="#ffffffff">
                 <Grid  VerticalAlignment="Top" Height="66" >
-                    <CheckBox Content="Show all Loyalty Settings" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.265,0.589"/>
-                    <CheckBox Content="Show inactive settings only" HorizontalAlignment="Left" Margin="23,31,0,0" VerticalAlignment="Top"/>
+                    <CheckBox Content="{x:Static p:Resources.String1097}" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.265,0.589"/>
+                    <CheckBox Content="{x:Static p:Resources.String1098}" HorizontalAlignment="Left" Margin="23,31,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="textBox" Text="{Binding LoyaltyText}" Margin="335,0,600,19" TextWrapping="Wrap" Height="30" VerticalAlignment="Bottom"/>
                     <Button Command="{Binding LoyaltySearch}"    Margin="0,17,520,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="75" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding LoyaltyAdd}"    Margin="0,17,242,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding EditLoyalty}"  Margin="0,17,167,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ViewLoyalty}"    Margin="0,18,90,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
-                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding DeleteLoyalty}"  Margin="0,17,10,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
 
@@ -74,14 +75,14 @@
                         </DataGrid.RowStyle>
 
                         <DataGrid.Columns>
-                            <DataGridTextColumn  TextBlock.Foreground="Red"    Width="75" MaxWidth="300" Header="Sl.No" Binding="{Binding SLNO}" FontFamily="Verdana"  TextBlock.TextAlignment="Center" />
-                            <DataGridTextColumn     Width="150" MaxWidth="255" Header="Loyalty Settings Name" Binding="{Binding SETTINGSNAME}"  />
-                            <DataGridTextColumn   Width="200" Header="Is Active"  Binding="{Binding ISACTIVE}"/>
-                            <DataGridTextColumn   Width="200" Header="Is Default"  Binding="{Binding ISDEFAULT}"/>
-                            <DataGridTextColumn   Width="200" Header="Start Date"  Binding="{Binding FROMDATE}"/>
-                            <DataGridTextColumn   Width="200" Header="End Date"  Binding="{Binding TODATE}"/>
-                            <DataGridTextColumn   Width="200" Header="Referal Points"  Binding="{Binding REFERALPOINTS}"/>
-                            <DataGridTextColumn   Width="200" Header="Preference Weightage"  Binding="{Binding PERFORMANCE}"/>
+                            <DataGridTextColumn  TextBlock.Foreground="Red"    Width="75" MaxWidth="300" Header="{x:Static p:Resources.String331}" Binding="{Binding SLNO}" FontFamily="Verdana"  TextBlock.TextAlignment="Center" />
+                            <DataGridTextColumn     Width="150" MaxWidth="255" Header="{x:Static p:Resources.String1086}" Binding="{Binding SETTINGSNAME}"  />
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String453}"  Binding="{Binding ISACTIVE}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1100}"  Binding="{Binding ISDEFAULT}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1099}"  Binding="{Binding FROMDATE}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1101}"  Binding="{Binding TODATE}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1102}"  Binding="{Binding REFERALPOINTS}"/>
+                            <DataGridTextColumn   Width="200" Header="{x:Static p:Resources.String1103}"  Binding="{Binding PERFORMANCE}"/>
 
 
                         </DataGrid.Columns>

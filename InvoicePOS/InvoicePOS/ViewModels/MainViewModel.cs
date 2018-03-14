@@ -4973,6 +4973,55 @@ namespace InvoicePOS.ViewModels
             
         }
         #endregion
+
+/*
+        #region Sync DB
+        private ICommand _SyncDB { get; set; }
+        public ICommand SyncDB
+        {
+            get
+            {
+                if (_SyncDB == null)
+                {
+                    _SyncDB = new DelegateCommand(SynchronizeDataBase);
+                }
+                return _SyncDB;
+            }
+
+        }
+
+        public async void SynchronizeDataBase()
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response = client.GetAsync("api/LogInAPI/Synchronize").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    data = JsonConvert.DeserializeObject<ItemModel[]>(await response.Content.ReadAsStringAsync());
+                }
+                if (data.Length == 0)
+                {
+
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+        #endregion
+*/
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)

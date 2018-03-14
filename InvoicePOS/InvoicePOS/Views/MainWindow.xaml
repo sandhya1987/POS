@@ -6,7 +6,8 @@
         mc:Ignorable="d"
 		xmlns:viewModels="clr-namespace:InvoicePOS.ViewModels"
         xmlns:converters="clr-namespace:InvoicePOS.Converters"
-        Title="Sample App"
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
+        Title="{x:Static p:Resources.String217}"
         WindowStartupLocation="CenterScreen"
         Height="459"
         Width="795">
@@ -19,12 +20,12 @@
                     Margin="20"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top">
-            <Button Content="Refresh"
+            <Button Content="{x:Static p:Resources.String1402}"
                     Style="{StaticResource ButtonStyle1}"
                     HorizontalAlignment="Left"
                     Command="{Binding RefreshDateCommand}" />
             <TextBlock   Text="{Binding MyDateTime}" />
-            <Button Content="Randomize Grid Data"
+            <Button Content="{x:Static p:Resources.String317}"
                     HorizontalAlignment="Left"
                     Margin="0 20 0 0"
                     Command="{Binding RefreshPersonsCommand}" />
@@ -33,11 +34,11 @@
                       CanUserAddRows="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="Name (string)" />
+                                        Header="{x:Static p:Resources.String318}" />
                     <DataGridTextColumn Binding="{Binding Age}"
                                         IsReadOnly="True"
-                                        Header="Age (int)" />
-                    <DataGridTemplateColumn Header="Age &gt; 16"
+                                        Header="{x:Static p:Resources.String319}" />
+                    <DataGridTemplateColumn Header="{x:Static p:Resources.String320}"
                                             IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -64,13 +65,13 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                     <DataGridCheckBoxColumn Binding="{Binding IsMarried, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                            Header="IsMarried (bool)" />
+                                            Header="{x:Static p:Resources.String321}" />
                     <DataGridTextColumn Binding="{Binding Height, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                        Header="Height (double)" />
+                                        Header="{x:Static p:Resources.String322}" />
                     <DataGridTextColumn Binding="{Binding BirthDate}"
                                         IsReadOnly="True"
-                                        Header="BirthDate (DateTime)" />
-                    <DataGridTemplateColumn Header="FavoriteColor (SolidColorBrush)"
+                                        Header="{x:Static p:Resources.String323}" />
+                    <DataGridTemplateColumn Header="{x:Static p:Resources.String324}"
                                             IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -81,7 +82,7 @@
                 </DataGrid.Columns>
             </DataGrid>
 
-            <Button Content="can execute command?"
+            <Button Content="{x:Static p:Resources.String325}"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
                     Margin="0 20 0 0"
@@ -90,7 +91,12 @@
 
         <TextBlock VerticalAlignment="Top"
                    HorizontalAlignment="Right"
-                   Margin="15"><Run Text="(made with " /><Hyperlink NavigateUri="http://visualstudiogallery.msdn.microsoft.com/970005b8-ee15-4295-9960-375e6ea1276c"
-                                                                    RequestNavigate="Hyperlink_RequestNavigate"><Run Text="WPF MVVM project template" /></Hyperlink><Run Text=")" /></TextBlock>
+                   Margin="15"><Run Text="{x:Static p:Resources.String326}" />
+            <Hyperlink NavigateUri="http://visualstudiogallery.msdn.microsoft.com/970005b8-ee15-4295-9960-375e6ea1276c"
+                    RequestNavigate="Hyperlink_RequestNavigate">
+                <Run Text="{x:Static p:Resources.String327}" />
+            </Hyperlink>
+            <Run Text="{x:Static p:Resources.String328}" />
+        </TextBlock>
     </Grid>
 </Window>

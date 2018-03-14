@@ -23,6 +23,10 @@ using System.IO;
 using System.Windows.Xps.Packaging;
 using System.Windows.Xps;
 using Apitron.PDF.Rasterizer;
+using System.Configuration;
+using InvoicePOS.Helpers;
+using System.ComponentModel;
+using System.Windows.Controls;
 
 namespace InvoicePOS.Views.Main
 {
@@ -50,8 +54,21 @@ namespace InvoicePOS.Views.Main
         public static TextBlock BusinessLocName;
         public static TextBlock BusinessAddress;
         private FixedDocumentSequence _document;
+        System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+        TimeSpan Interval = new TimeSpan(0, 30, 0);
+
         public Main()
         {
+            string language = ConfigurationManager.AppSettings["Language"];
+            if (language.ToUpper() == "ENGLISH")
+            {
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+            }
+            else if (language.ToUpper() == "GERMAN")
+            {
+                System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("de-DE");
+            }
+
             InitializeComponent();
             ViewModel = new MainViewModel();
 
@@ -156,7 +173,18 @@ namespace InvoicePOS.Views.Main
 
             textBlock21.Text = "";
             BusinessAddress = textBlock21;
+
+            timer.Interval = Interval;
+            timer.Tick += timer_Tick;
+            timer.Start();
+           
         }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            CreateNewThread();
+        }
+
         public ICommand _CashClick;
         public ICommand CashClick
         {
@@ -198,7 +226,7 @@ namespace InvoicePOS.Views.Main
                 case "en-US":
                     dict.Source = new Uri("..\\Resources\\EnglishDictionary.xaml", UriKind.Relative);
                     break;
-                case "de-AT":
+                case "de-DE":
                     dict.Source = new Uri("..\\Resources\\GermanDictionary.xaml", UriKind.Relative);
                     break;
                 default:
@@ -321,9 +349,41 @@ namespace InvoicePOS.Views.Main
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private Thread t = null;
+        public void CreateNewThread()
         {
+            t = ((App)Application.Current).SyncThread;
+            ProgressBarWindow pbw;
+            if ((t==null)||(!t.IsAlive))
+            {
+                t = new Thread(delegate()
+                {
+                    pbw = new ProgressBarWindow();
+                    pbw.Closing += OnProgressBarWindowClosed;
+                    pbw.Show();
+                    System.Windows.Threading.Dispatcher.Run();
+                });
+                t.SetApartmentState(ApartmentState.STA);
+                t.IsBackground = true;
+                t.Start();
+                ((App)Application.Current).SyncThread = t;
+            }
 
         }
+
+        void On_Close(object sender, CancelEventArgs e)
+        {
+            if (t != null)
+            {
+                t.Abort();
+            }
+
+        }
+
+        void OnProgressBarWindowClosed(object sender, EventArgs e)
+        {
+            System.Windows.Threading.Dispatcher.FromThread(t).InvokeShutdown();
+        }
+
     }
 }

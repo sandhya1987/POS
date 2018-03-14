@@ -6,77 +6,154 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using InvoicePOSAPI.Helpers;
 
 namespace InvoicePOSAPI.Controllers
 {
     public class TaxAPIController : ApiController
     {
         TaxModel tx = new TaxModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+
+
         [HttpPost]
         public HttpResponseMessage TaxAdd(TaxModel _TaxModel)
         {
-            if (_TaxModel.TAX_ID == null || _TaxModel.TAX_ID == 0)
+            try
             {
-                TBL_TAX tx = new TBL_TAX();
-                tx.COMPANY_ID = _TaxModel.COMPANY_ID;
-                tx.COMPANY = _TaxModel.COMPANY;
-                tx.IS_DELETE = false;
-                tx.IS_SEPARATE = _TaxModel.IS_SEPARATE;
-                tx.TAX_NAME = _TaxModel.TAX_NAME;
-                tx.TAX_VALUE = _TaxModel.TAX_VALUE;
-                db.TBL_TAX.Add(tx);
-                db.SaveChanges();
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    if (_TaxModel.TAX_ID == null || _TaxModel.TAX_ID == 0)
+                    {
+                        TBL_TAX tx = new TBL_TAX();
+                        tx.COMPANY_ID = _TaxModel.COMPANY_ID;
+                        tx.COMPANY = _TaxModel.COMPANY;
+                        tx.IS_DELETE = false;
+                        tx.IS_SEPARATE = _TaxModel.IS_SEPARATE;
+                        tx.TAX_NAME = _TaxModel.TAX_NAME;
+                        tx.TAX_VALUE = _TaxModel.TAX_VALUE;
+                        db.TBL_TAX.Add(tx);
+                        db.SaveChanges();
+                    }
+                    return Request.CreateResponse(HttpStatusCode.OK, "ok");
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
             }
-            return Request.CreateResponse(HttpStatusCode.OK, "ok");
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
         }
+
+
+
         [HttpGet]
-        //public HttpResponseMessage GetTax(int id, string id2)
-        //{
-            public HttpResponseMessage GetTax1(string id)
+        public HttpResponseMessage GetTax1(string id)
         {
-            
-            //var str = (from a in db.TBL_TAX
-            //           join b in db.TBL_BUSINESS_LOCATION on a.COMPANY equals b.COMPANY
-            //           where  a.COMPANY_ID == id && b.COMPANY==id2 && a.IS_DELETE == false
-            //           select new TaxModel
-            //           {
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
 
-            var str = (from a in db.TBL_TAX
-                       join b in db.TBL_BUSINESS_LOCATION on a.COMPANY equals b.COMPANY
-                       where a.COMPANY == id  && a.IS_DELETE == false
-                       select new TaxModel
-                       {
-                           COMPANY_ID = a.COMPANY_ID,
-                           COMPANY = a.COMPANY,
-                           IS_SEPARATE = a.IS_SEPARATE,
-                           TAX_ID = a.TAX_ID,
-                           TAX_NAME = a.TAX_NAME,
-                           TAX_VALUE = a.TAX_VALUE,
-                           IS_DELETE = a.IS_DELETE,
+                if (conn)
+                {
+                    var str = (from a in db.TBL_TAX
+                               join b in db.TBL_BUSINESS_LOCATION on a.COMPANY equals b.COMPANY
+                               where a.COMPANY == id && a.IS_DELETE == false
+                               select new TaxModel
+                               {
+                                   COMPANY_ID = a.COMPANY_ID,
+                                   COMPANY = a.COMPANY,
+                                   IS_SEPARATE = a.IS_SEPARATE,
+                                   TAX_ID = a.TAX_ID,
+                                   TAX_NAME = a.TAX_NAME,
+                                   TAX_VALUE = a.TAX_VALUE,
+                                   IS_DELETE = a.IS_DELETE,
 
-                       }).ToList();
+                               }).ToList();
 
-            return Request.CreateResponse(HttpStatusCode.OK, str);
+                    return Request.CreateResponse(HttpStatusCode.OK, str);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
         }
 
 
+
+        [HttpGet]
         public HttpResponseMessage GetTax(int id)
         {
-            var str = (from a in db.TBL_TAX
-                       where a.COMPANY_ID == id && a.IS_DELETE == false
-                       select new TaxModel
-                       {
-                           COMPANY_ID = a.COMPANY_ID,
-                           IS_SEPARATE = a.IS_SEPARATE,
-                           TAX_ID = a.TAX_ID,
-                           TAX_NAME = a.TAX_NAME,
-                           TAX_VALUE = a.TAX_VALUE,
-                           IS_DELETE = a.IS_DELETE,
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
 
-                       }).ToList();
-                       
-            return Request.CreateResponse(HttpStatusCode.OK, str);
+                if (conn)
+                {
+                    var str = (from a in db.TBL_TAX
+                               where a.COMPANY_ID == id && a.IS_DELETE == false
+                               select new TaxModel
+                               {
+                                   COMPANY_ID = a.COMPANY_ID,
+                                   IS_SEPARATE = a.IS_SEPARATE,
+                                   TAX_ID = a.TAX_ID,
+                                   TAX_NAME = a.TAX_NAME,
+                                   TAX_VALUE = a.TAX_VALUE,
+                                   IS_DELETE = a.IS_DELETE,
+
+                               }).ToList();
+
+                    return Request.CreateResponse(HttpStatusCode.OK, str);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
         }
 
 

@@ -34,6 +34,8 @@ namespace InvoicePOSAPI.Models
         public string CONTACT_MOBILE_NO { get; set; }
         public string CONTACT_WEBSITE { get; set; }
         public string CONTACT_EMAIL { get; set; }
+        public string COMPANY_NAME { get; set; }
+        public string BUSINESS_LOCATION { get; set; }
        
     }
     public class SuppPaymentModel
@@ -75,8 +77,9 @@ namespace InvoicePOSAPI.Models
         public string NOTE { get; set; }
         public bool? IS_PRINT_CHECK { get; set; }
         public long COMPANY_ID { get; set; }
+        public string COMPANY_NAME { get; set; }
 
-
+        public DateTime TRANSACTION_DATE { get; set; }
         public decimal CREDIT_AMOUNT { get; set; }
         public decimal DEBIT_AMOUNT { get; set; }
         public string NARRATION_TEXT { get; set; }

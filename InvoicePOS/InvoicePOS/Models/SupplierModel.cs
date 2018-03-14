@@ -41,6 +41,16 @@ namespace InvoicePOS.Models
         public string SEARCH_SUPPLIER { get; set; }
         public int SLNO { get; set; }
 
+        public decimal CLOSING_AMT { get; set; }
+        public decimal OPENING_AMT { get; set; }
+        public decimal CREDIT_LIMITS { get; set; }
+        public decimal DEFAULT_CREIT_LIMIT { get; set; }
+        public string BUSINESS_LOCATION { get; set; }
+        public string COMPANY_NAME { get; set; }
+
+        public DateTime TRANSACTION_DATE { get; set; }
+        public decimal CREDIT_AMOUNT { get; set; }
+        public decimal DEBIT_AMOUNT { get; set; }
 
         private string error = string.Empty;
         public string Error
@@ -196,6 +206,7 @@ namespace InvoicePOS.Models
         public string NARRATION_TEXT { get; set; }
         public string DOCUMENT_TYPE { get; set; }
         public string GST_NUMBER { get; set; }
+        public string COMPANY_NAME { get; set; }
         public string FORMATTED_TOTAL_PANDING
         {
             get

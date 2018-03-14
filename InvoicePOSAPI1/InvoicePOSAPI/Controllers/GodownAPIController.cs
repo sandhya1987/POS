@@ -6,115 +6,282 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using InvoicePOSAPI.Helpers;
 
 namespace InvoicePOSAPI.Controllers
 {
     public class GodownAPIController : ApiController
     {
         GodownModel _GodownModel = new GodownModel();
-        NEW_POSEntities db = new NEW_POSEntities();
+        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+
         [HttpGet]
         public HttpResponseMessage GetGodown(int id)
         {
-            var str = (from a in db.TBL_GODOWN
-                       where a.COMPANY_ID == id && a.IS_DELETE == false
-                       select new GodownModel
-                       {
-                           COMPANY_ID = a.COMPANY_ID,
-                           GODOWN_ID = a.GODOWN_ID,
-                           GODOWN_NAME = a.GODOWN_NAME,
-                           GOSOWN_DESCRIPTION = a.GOSOWN_DESCRIPTION,
-                           IS_ACTIVE = a.IS_ACTIVE,
-                           IS_DELETE = a.IS_DELETE,
-                           IS_DEFAULT_GODOWN = a.IS_DEFAULT_GODOWN,
-                       }).ToList();
-            return Request.CreateResponse(HttpStatusCode.OK, str);
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    var str = (from a in db.TBL_GODOWN
+                               where a.COMPANY_ID == id && a.IS_DELETE == false
+                               select new GodownModel
+                               {
+                                   COMPANY_ID = a.COMPANY_ID,
+                                   GODOWN_ID = a.GODOWN_ID,
+                                   GODOWN_NAME = a.GODOWN_NAME,
+                                   GOSOWN_DESCRIPTION = a.GOSOWN_DESCRIPTION,
+                                   IS_ACTIVE = a.IS_ACTIVE,
+                                   IS_DELETE = a.IS_DELETE,
+                                   IS_DEFAULT_GODOWN = a.IS_DEFAULT_GODOWN,
+                               }).ToList();
+                    return Request.CreateResponse(HttpStatusCode.OK, str);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
         }
+
         [HttpGet]
         public HttpResponseMessage GodownEdit(int id)
         {
-            var str = (from a in db.TBL_GODOWN
-                       where a.GODOWN_ID == id
-                       select new GodownModel
-                       {
-                           COMPANY_ID = a.COMPANY_ID,
-                           GODOWN_ID = a.GODOWN_ID,
-                           GODOWN_NAME = a.GODOWN_NAME,
-                           GOSOWN_DESCRIPTION = a.GOSOWN_DESCRIPTION,
-                           IS_ACTIVE = a.IS_ACTIVE,
-                           IS_DELETE = a.IS_DELETE,
-                           IS_DEFAULT_GODOWN = a.IS_DEFAULT_GODOWN,
-                       }).ToList();
-            return Request.CreateResponse(HttpStatusCode.OK, str);
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    var str = (from a in db.TBL_GODOWN
+                               where a.GODOWN_ID == id
+                               select new GodownModel
+                               {
+                                   COMPANY_ID = a.COMPANY_ID,
+                                   GODOWN_ID = a.GODOWN_ID,
+                                   GODOWN_NAME = a.GODOWN_NAME,
+                                   GOSOWN_DESCRIPTION = a.GOSOWN_DESCRIPTION,
+                                   IS_ACTIVE = a.IS_ACTIVE,
+                                   IS_DELETE = a.IS_DELETE,
+                                   IS_DEFAULT_GODOWN = a.IS_DEFAULT_GODOWN,
+                               }).ToList();
+                    return Request.CreateResponse(HttpStatusCode.OK, str);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
         }
+
+
         [HttpGet]
         public HttpResponseMessage GodownSearch(string name)
         {
-            var str = (from a in db.TBL_GODOWN
-                       where a.GODOWN_NAME.Contains("" + name + "") && a.IS_DELETE == false
-                       select new GodownModel
-                       {
-                           COMPANY_ID = a.COMPANY_ID,
-                           GODOWN_ID = a.GODOWN_ID,
-                           GODOWN_NAME = a.GODOWN_NAME,
-                           GOSOWN_DESCRIPTION = a.GOSOWN_DESCRIPTION,
-                           IS_ACTIVE = a.IS_ACTIVE,
-                           IS_DELETE = a.IS_DELETE,
-                           IS_DEFAULT_GODOWN = a.IS_DEFAULT_GODOWN,
-                       }).ToList();
-            return Request.CreateResponse(HttpStatusCode.OK, str);
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    var str = (from a in db.TBL_GODOWN
+                               where a.GODOWN_NAME.Contains("" + name + "") && a.IS_DELETE == false
+                               select new GodownModel
+                               {
+                                   COMPANY_ID = a.COMPANY_ID,
+                                   GODOWN_ID = a.GODOWN_ID,
+                                   GODOWN_NAME = a.GODOWN_NAME,
+                                   GOSOWN_DESCRIPTION = a.GOSOWN_DESCRIPTION,
+                                   IS_ACTIVE = a.IS_ACTIVE,
+                                   IS_DELETE = a.IS_DELETE,
+                                   IS_DEFAULT_GODOWN = a.IS_DEFAULT_GODOWN,
+                               }).ToList();
+                    return Request.CreateResponse(HttpStatusCode.OK, str);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
         }
+
+
         [HttpGet]
         public HttpResponseMessage DeleteGodown(int id)
         {
-            var str = (from a in db.TBL_GODOWN where a.GODOWN_ID == id select a).FirstOrDefault();
-            str.IS_DELETE = true;
-            db.SaveChanges();
-            return Request.CreateResponse(HttpStatusCode.OK, "ok");
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    var str = (from a in db.TBL_GODOWN where a.GODOWN_ID == id select a).FirstOrDefault();
+                    str.IS_DELETE = true;
+                    db.SaveChanges();
+                    return Request.CreateResponse(HttpStatusCode.OK, "ok");
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
         }
+
+
         [HttpPost]
         public HttpResponseMessage GodownAdd(GodownModel _GodownModel)
         {
-            if (_GodownModel.GODOWN_ID == null || _GodownModel.GODOWN_ID == 0)
+            try
             {
-                TBL_GODOWN gd = new TBL_GODOWN();
-                gd.COMPANY_ID = _GodownModel.COMPANY_ID;
-                gd.GODOWN_NAME = _GodownModel.GODOWN_NAME;
-                gd.GOSOWN_DESCRIPTION = _GodownModel.GOSOWN_DESCRIPTION;
-                gd.IS_ACTIVE = _GodownModel.IS_ACTIVE;
-                gd.IS_DELETE = false;
-                gd.IS_DEFAULT_GODOWN = false;
-                db.TBL_GODOWN.Add(gd);
-                db.SaveChanges();
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    if (_GodownModel.GODOWN_ID == null || _GodownModel.GODOWN_ID == 0)
+                    {
+                        TBL_GODOWN gd = new TBL_GODOWN();
+                        gd.COMPANY_ID = _GodownModel.COMPANY_ID;
+                        gd.GODOWN_NAME = _GodownModel.GODOWN_NAME;
+                        gd.GOSOWN_DESCRIPTION = _GodownModel.GOSOWN_DESCRIPTION;
+                        gd.IS_ACTIVE = _GodownModel.IS_ACTIVE;
+                        gd.IS_DELETE = false;
+                        gd.IS_DEFAULT_GODOWN = false;
+                        db.TBL_GODOWN.Add(gd);
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        var str = (from a in db.TBL_GODOWN where a.GODOWN_ID == _GodownModel.GODOWN_ID select a).FirstOrDefault();
+                        str.COMPANY_ID = _GodownModel.COMPANY_ID;
+                        str.GODOWN_NAME = _GodownModel.GODOWN_NAME;
+                        str.GOSOWN_DESCRIPTION = _GodownModel.GOSOWN_DESCRIPTION;
+                        str.IS_ACTIVE = _GodownModel.IS_ACTIVE;
+                        str.IS_DELETE = false;
+                        str.IS_DEFAULT_GODOWN = false;
+                        db.SaveChanges();
+                    }
+                    return Request.CreateResponse(HttpStatusCode.OK, "ok");
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                var str = (from a in db.TBL_GODOWN where a.GODOWN_ID == _GodownModel.GODOWN_ID select a).FirstOrDefault();
-                str.COMPANY_ID = _GodownModel.COMPANY_ID;
-                str.GODOWN_NAME = _GodownModel.GODOWN_NAME;
-                str.GOSOWN_DESCRIPTION = _GodownModel.GOSOWN_DESCRIPTION;
-                str.IS_ACTIVE = _GodownModel.IS_ACTIVE;
-                str.IS_DELETE = false;
-                str.IS_DEFAULT_GODOWN = false;
-                db.SaveChanges();
+                throw;
             }
-            return Request.CreateResponse(HttpStatusCode.OK, "ok");
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
         }
+
+
         [HttpGet]
         public HttpResponseMessage GetStock(int Godownid, int companyid)
         {
-            var str = (from a in db.TBL_ITEMS
-                       where a.COMPANY_ID == companyid && a.GODOWN_ID == Godownid && a.IS_DELETE == false
-                       select new ItemModel
-                       {
-                           COMPANY_ID = a.COMPANY_ID,
-                           GODOWN_ID = a.GODOWN_ID,
-                           BARCODE = a.BARCODE,
-                           OPN_QNT = a.OPN_QNT,
-                           SEARCH_CODE = a.SERCH_CODE,
-                           SALES_UNIT = a.SALES_UNIT
-                       }).ToList();
-            return Request.CreateResponse(HttpStatusCode.OK, str);
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    var str = (from a in db.TBL_ITEMS
+                               where a.COMPANY_ID == companyid && a.GODOWN_ID == Godownid && a.IS_DELETE == false
+                               select new ItemModel
+                               {
+                                   COMPANY_ID = a.COMPANY_ID,
+                                   GODOWN_ID = a.GODOWN_ID,
+                                   BARCODE = a.BARCODE,
+                                   OPN_QNT = a.OPN_QNT,
+                                   SEARCH_CODE = a.SERCH_CODE,
+                                   SALES_UNIT = a.SALES_UNIT
+                               }).ToList();
+                    return Request.CreateResponse(HttpStatusCode.OK, str);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
         }
     }
 }

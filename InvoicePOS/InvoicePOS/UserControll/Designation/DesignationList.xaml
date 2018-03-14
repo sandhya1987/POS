@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="750" d:DesignWidth="1150">
     <Grid Background="#ffffff">
@@ -11,31 +12,31 @@
             <Button Command="{Binding SearchCategoryClick}"    Margin="221,10,0,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="75" HorizontalAlignment="Left"  >
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                    <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                 </DockPanel>
             </Button>
             <Button Command="{Binding AddDesignationClick}"    Margin="0,10,247,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                    <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    <Label Content="{x:Static p:Resources.label181}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                 </DockPanel>
             </Button>
             <Button Command="{Binding EditDesignation}"  Margin="0,10,172,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                    <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                    <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                 </DockPanel>
             </Button>
             <Button Command="{Binding ViewDesignation}"    Margin="0,11,95,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
-                    <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                    <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                 </DockPanel>
             </Button>
             <Button Command="{Binding DeleteDesignation}"  Margin="0,10,15,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                    <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                    <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                 </DockPanel>
             </Button>
 
@@ -71,9 +72,9 @@
 
                 <DataGrid.Columns>
 
-                    <DataGridTextColumn x:Name="sl" TextBlock.Foreground="Red"   Header="Sl.No" Binding="{Binding SLNO}" Width="50" FontFamily="Verdana"  />
-                    <DataGridTextColumn    Header="Name" Binding="{Binding DESIGNATION_NAME}" Width="1000" />
-                    <DataGridTextColumn    Header="Indexs" Binding="{Binding SORT_INDEX}" Width="75"/>
+                    <DataGridTextColumn x:Name="sl" TextBlock.Foreground="Red"   Header="{x:Static p:Resources.String331}" Binding="{Binding SLNO}" Width="50" FontFamily="Verdana"  />
+                    <DataGridTextColumn    Header="{x:Static p:Resources.label187}" Binding="{Binding DESIGNATION_NAME}" Width="1000" />
+                    <DataGridTextColumn    Header="{x:Static p:Resources.String1377}" Binding="{Binding SORT_INDEX}" Width="75"/>
 
 
                 </DataGrid.Columns>

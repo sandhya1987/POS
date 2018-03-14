@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Threading;
 
 namespace InvoicePOS
 {
@@ -7,6 +8,6 @@ namespace InvoicePOS
     /// </summary>
     public partial class App : Application
     {
-        int i;
+        public Thread SyncThread { get; set; }
     }
 }

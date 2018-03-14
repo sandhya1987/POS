@@ -183,6 +183,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ConnectionTools.cs" />
     <Compile Include="Models\AccessRightsModel.cs" />
     <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\BusinessLocationModel.cs" />

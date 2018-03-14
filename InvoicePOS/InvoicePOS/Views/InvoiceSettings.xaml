@@ -1,278 +1,280 @@
 ﻿<Window x:Class="InvoicePOS.Views.InvoiceSettings"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="InvoiceSettings" Height="750" Width="850">
+        xmlns:p="clr-namespace:InvoicePOS.Properties"
+        Title="{x:Static p:Resources.String217}" Height="750" Width="850">
     <Grid>
         <Grid>
             <TabControl>
-            <TabItem Header="Page1">
+                <TabItem Header="{x:Static p:Resources.String218}">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="75*"></ColumnDefinition>
                         <ColumnDefinition Width="379*"/>
                         <ColumnDefinition Width="378*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <GroupBox Grid.Column="0" Height="95" Header="Warnings" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+                        <GroupBox Grid.Column="0" Height="95" Header="{x:Static p:Resources.String1381}" VerticalAlignment="Top" Grid.ColumnSpan="2" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#9110BF"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding Warning1}" Margin="5,5,0,0" Style="{StaticResource violetCheckbox}" Content="Show warning for negative stock"></CheckBox>
-                                <CheckBox  IsChecked="{Binding Warning2}" Margin="5,30,0,0" Style="{StaticResource violetCheckbox}" Content="Show warning when sales price is more than purchase price"></CheckBox>
-                                <CheckBox IsChecked="{Binding Warning3}" Margin="5,55,0,0" Style="{StaticResource violetCheckbox}" Content="Show warning when item expiration date is earlier than today"></CheckBox>
+                                <CheckBox IsChecked="{Binding Warning1}" Margin="5,5,0,0" Style="{StaticResource violetCheckbox}" Content="{x:Static p:Resources.String219}"></CheckBox>
+                                <CheckBox  IsChecked="{Binding Warning2}" Margin="5,30,0,0" Style="{StaticResource violetCheckbox}" Content="{x:Static p:Resources.String220}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Warning3}" Margin="5,55,0,0" Style="{StaticResource violetCheckbox}" Content="{x:Static p:Resources.String221}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,95,0,0" Grid.Column="0" Height="280" Header="Operations" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+                        <GroupBox Margin="0,95,0,0" Grid.Column="0" Height="280" Header="{x:Static p:Resources.String1400}" VerticalAlignment="Top" Grid.ColumnSpan="2" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#BF7A10"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding Operations1}" Margin="5,5,0,0" Style="{StaticResource yellowCheckbox}" Content="Always ask for quantity once item is added to the invoice"></CheckBox>
-                                <CheckBox IsChecked="{Binding Operations2}" Margin="5,30,0,0" Style="{StaticResource yellowCheckbox}" Content="Always ask for price change once item is added to the invoice" Checked="Operation2Checked" Unchecked="Operation2UnChecked"></CheckBox>
-                                <CheckBox IsChecked="{Binding Operations3}" Name="Operation3" Margin="50,55,0,0" Style="{StaticResource yellowCheckbox}" IsEnabled="False" Content="Mark price down by % by default"></CheckBox>
+                                <CheckBox IsChecked="{Binding Operations1}" Margin="5,5,0,0" Style="{StaticResource yellowCheckbox}" Content="{x:Static p:Resources.String222}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Operations2}" Margin="5,30,0,0" Style="{StaticResource yellowCheckbox}" Content="{x:Static p:Resources.String223}" Checked="Operation2Checked" Unchecked="Operation2UnChecked"></CheckBox>
+                                <CheckBox IsChecked="{Binding Operations3}" Name="Operation3" Margin="50,55,0,0" Style="{StaticResource yellowCheckbox}" IsEnabled="False" Content="{x:Static p:Resources.String224}"></CheckBox>
                                 <CheckBox IsChecked="{Binding Operations4}" Margin="5,80,0,0" Style="{StaticResource yellowCheckbox}" >
-                                <TextBlock  TextWrapping="Wrap">
-                                    Ask For Print Format And Printer On Every Print.<LineBreak/>Ask for Email Template On Every Send Email to Customer.
-                                </TextBlock>
-                            </CheckBox>
-                                <CheckBox IsChecked="{Binding Operations5}" Margin="5,115,0,0" Style="{StaticResource yellowCheckbox}" Content="Ask For Hold Note"></CheckBox>
-                                <CheckBox IsChecked="{Binding Operations6}" Margin="5,140,0,0" Style="{StaticResource yellowCheckbox}" Content="Change Price On Enter Key"></CheckBox>
-                                <CheckBox IsChecked="{Binding Operations7}" Margin="5,165,0,0" Style="{StaticResource yellowCheckbox}" Content="Accept Search Code in Item Name"></CheckBox>
-                                <CheckBox IsChecked="{Binding Operations8}" Margin="5,190,0,0" Style="{StaticResource yellowCheckbox}" Content="Warn when item not found in POS Main"></CheckBox>
-                            <TextBlock Margin="5,215,0,0" Style="{StaticResource yellowTextBlock}" Text="Number of invoices to print:"></TextBlock>
+                                    <StackPanel >
+                                        <TextBlock  TextWrapping="Wrap" Text="{x:Static p:Resources.String225}"></TextBlock>
+                                        <TextBlock Text="{x:Static p:Resources.String226}"></TextBlock>
+                                    </StackPanel>
+                                </CheckBox>
+                                <CheckBox IsChecked="{Binding Operations5}" Margin="5,115,0,0" Style="{StaticResource yellowCheckbox}" Content="{x:Static p:Resources.String227}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Operations6}" Margin="5,140,0,0" Style="{StaticResource yellowCheckbox}" Content="{x:Static p:Resources.String228}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Operations7}" Margin="5,165,0,0" Style="{StaticResource yellowCheckbox}" Content="{x:Static p:Resources.String229}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Operations8}" Margin="5,190,0,0" Style="{StaticResource yellowCheckbox}" Content="{x:Static p:Resources.String230}"></CheckBox>
+                                <TextBlock Margin="5,215,0,0" Style="{StaticResource yellowTextBlock}" Text="{x:Static p:Resources.String231}"></TextBlock>
                                 <TextBox Text="{Binding Operations9}" Margin="160,215,0,0" Height="20" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" PreviewTextInput="OnNumberFormatDecimalPlaceKeyDown"></TextBox>
-                            <TextBlock Margin="5,240,0,0" Style="{StaticResource yellowTextBlock}" Text="Number of Customer Receipts to print:"></TextBlock>
+                                <TextBlock Margin="5,240,0,0" Style="{StaticResource yellowTextBlock}" Text="{x:Static p:Resources.String232}"></TextBlock>
                                 <TextBox  Text="{Binding Operations10}" Margin="220,240,0,0" Height="20" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" PreviewTextInput="OnNumberFormatDecimalPlaceKeyDown"></TextBox>
                             <TextBlock Margin="280,240,0,0" Style="{StaticResource yellowTextBlock}">
-                                <Hyperlink>Search with Stock Settings</Hyperlink>
+                                <Hyperlink><TextBlock Text="{x:Static p:Resources.String233}"></TextBlock></Hyperlink>
                             </TextBlock>
 
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,370,0,0" Height="145" Grid.Column="0" VerticalAlignment="Top" Header="Customer" Grid.ColumnSpan="2">
+                        <GroupBox Margin="0,370,0,0" Height="145" Grid.Column="0" VerticalAlignment="Top" Header="{x:Static p:Resources.String234}" Grid.ColumnSpan="2">
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#C45F5A"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding Customer1}" Margin="5,5,0,0" Style="{StaticResource brownCheckbox}" Content="Is Customer Mandetory"></CheckBox>
-                                <CheckBox IsChecked="{Binding Customer2}" Margin="5,30,0,0" Style="{StaticResource brownCheckbox}" Content="Use Customer Group Price"></CheckBox>
-                                <CheckBox IsChecked="{Binding Customer3}" Margin="5,55,0,0" Style="{StaticResource brownCheckbox}" Content="Email Invoice to Customer"></CheckBox>
-                                <CheckBox IsChecked="{Binding Customer4}" Margin="180,55,0,0" Style="{StaticResource brownCheckbox}" Content="Always Send Email"></CheckBox>
-                                <CheckBox IsChecked="{Binding Customer5}" Margin="5,80,0,0" Style="{StaticResource brownCheckbox}" Content="SMS Invoice to Customer"></CheckBox>
-                                <CheckBox IsChecked="{Binding Customer6}" Margin="5,105,0,0" Style="{StaticResource brownCheckbox}" Content="Collect Credit Card and Food Coupon Commission Expense From Customer"></CheckBox>
+                                <CheckBox IsChecked="{Binding Customer1}" Margin="5,5,0,0" Style="{StaticResource brownCheckbox}" Content="{x:Static p:Resources.String235}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Customer2}" Margin="5,30,0,0" Style="{StaticResource brownCheckbox}" Content="{x:Static p:Resources.String236}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Customer3}" Margin="5,55,0,0" Style="{StaticResource brownCheckbox}" Content="{x:Static p:Resources.String237}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Customer4}" Margin="180,55,0,0" Style="{StaticResource brownCheckbox}" Content="{x:Static p:Resources.String238}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Customer5}" Margin="5,80,0,0" Style="{StaticResource brownCheckbox}" Content="{x:Static p:Resources.String239}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Customer6}" Margin="5,105,0,0" Style="{StaticResource brownCheckbox}" Content="{x:Static p:Resources.String240}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,520,0,0" Height="125" Grid.Column="0" VerticalAlignment="Top" Header="Bottom Panels" Grid.ColumnSpan="2">
+                        <GroupBox Margin="0,520,0,0" Height="125" Grid.Column="0" VerticalAlignment="Top" Header="{x:Static p:Resources.String241}" Grid.ColumnSpan="2">
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#27D3ED"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding BottomPanels1}" Margin="5,5,0,0" Style="{StaticResource cyanCheckbox}" Content="Show Offer Details"></CheckBox>
-                                <CheckBox IsChecked="{Binding BottomPanels2}" Margin="5,30,0,0" Style="{StaticResource cyanCheckbox}" Content="Show Hold Note Panel"></CheckBox>
-                                <CheckBox IsChecked="{Binding BottomPanels3}" Margin="5,55,0,0" Style="{StaticResource cyanCheckbox}" Content="Show Dining Table Panel"></CheckBox>
-                                <CheckBox IsChecked="{Binding BottomPanels4}" Margin="25,80,0,0" Style="{StaticResource cyanCheckbox}" Content="Mark Table as Available On Invoice Complete"></CheckBox>
+                                <CheckBox IsChecked="{Binding BottomPanels1}" Margin="5,5,0,0" Style="{StaticResource cyanCheckbox}" Content="{x:Static p:Resources.String242}"></CheckBox>
+                                <CheckBox IsChecked="{Binding BottomPanels2}" Margin="5,30,0,0" Style="{StaticResource cyanCheckbox}" Content="{x:Static p:Resources.String243}"></CheckBox>
+                                <CheckBox IsChecked="{Binding BottomPanels3}" Margin="5,55,0,0" Style="{StaticResource cyanCheckbox}" Content="{x:Static p:Resources.String244}"></CheckBox>
+                                <CheckBox IsChecked="{Binding BottomPanels4}" Margin="25,80,0,0" Style="{StaticResource cyanCheckbox}" Content="{x:Static p:Resources.String245}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="5,0,0,0" Height="125" Grid.Column="2" VerticalAlignment="Top" Header="Invoice Screen Grid">
+                        <GroupBox Margin="5,0,0,0" Height="125" Grid.Column="2" VerticalAlignment="Top" Header="{x:Static p:Resources.String246}">
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#6638B6"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding InvoiceScreenGrid1}" Margin="5,5,0,0" Style="{StaticResource purpleCheckbox}" Content="Show Measuring Unit Column" ></CheckBox>
-                                <CheckBox IsChecked="{Binding InvoiceScreenGrid2}" Margin="5,30,0,0" Style="{StaticResource purpleCheckbox}" Content="Show Item Description In Column"></CheckBox>
-                                <CheckBox IsChecked="{Binding InvoiceScreenGrid3}" Margin="5,55,0,0" Style="{StaticResource purpleCheckbox}" Content="Show MRP Column"></CheckBox>
-                                <CheckBox IsChecked="{Binding InvoiceScreenGrid4}" Margin="5,80,0,0" Style="{StaticResource purpleCheckbox}" Content="Show Item Images in Main Invoice Screen"></CheckBox>
+                                <CheckBox IsChecked="{Binding InvoiceScreenGrid1}" Margin="5,5,0,0" Style="{StaticResource purpleCheckbox}" Content="{x:Static p:Resources.String247}" ></CheckBox>
+                                <CheckBox IsChecked="{Binding InvoiceScreenGrid2}" Margin="5,30,0,0" Style="{StaticResource purpleCheckbox}" Content="{x:Static p:Resources.String248}"></CheckBox>
+                                <CheckBox IsChecked="{Binding InvoiceScreenGrid3}" Margin="5,55,0,0" Style="{StaticResource purpleCheckbox}" Content="{x:Static p:Resources.String249}"></CheckBox>
+                                <CheckBox IsChecked="{Binding InvoiceScreenGrid4}" Margin="5,80,0,0" Style="{StaticResource purpleCheckbox}" Content="{x:Static p:Resources.String250}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="5,125,0,0" Height="150" Grid.Column="2" VerticalAlignment="Top" Header="Totals">
+                        <GroupBox Margin="5,125,0,0" Height="150" Grid.Column="2" VerticalAlignment="Top" Header="{x:Static p:Resources.String251}">
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#387DB6"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding Totals1}" Margin="5,5,0,0" Style="{StaticResource blueCheckbox}" Content="Show Invoice Total Before Discount"></CheckBox>
-                                <CheckBox IsChecked="{Binding Totals2}" Margin="5,30,0,0" Style="{StaticResource blueCheckbox}" Content="Show Basic Amount While Billing"></CheckBox>
-                                <CheckBox IsChecked="{Binding Totals3}" Margin="5,55,0,0" Style="{StaticResource blueCheckbox}" Content="Add all quantity in invoice for total quantity"></CheckBox>
-                                <CheckBox IsChecked="{Binding Totals4}" Margin="5,80,0,0" Style="{StaticResource blueCheckbox}" Content="Allow Invoice Or Advance Booking with Zero Grand Total"></CheckBox>
-                                <CheckBox IsChecked="{Binding Totals5}" Margin="5,105,0,0" Style="{StaticResource blueCheckbox}" Content="Allow Advance Booking Document With Zero Booking Amount"></CheckBox>
+                                <CheckBox IsChecked="{Binding Totals1}" Margin="5,5,0,0" Style="{StaticResource blueCheckbox}" Content="{x:Static p:Resources.String252}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Totals2}" Margin="5,30,0,0" Style="{StaticResource blueCheckbox}" Content="{x:Static p:Resources.String253}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Totals3}" Margin="5,55,0,0" Style="{StaticResource blueCheckbox}" Content="{x:Static p:Resources.String254}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Totals4}" Margin="5,80,0,0" Style="{StaticResource blueCheckbox}" Content="{x:Static p:Resources.String255}"></CheckBox>
+                                <CheckBox IsChecked="{Binding Totals5}" Margin="5,105,0,0" Style="{StaticResource blueCheckbox}" Content="{x:Static p:Resources.String256}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="5,275,0,0" Height="200" Grid.Column="2" VerticalAlignment="Top" Header="Payment Settings">
+                        <GroupBox Margin="5,275,0,0" Height="200" Grid.Column="2" VerticalAlignment="Top" Header="{x:Static p:Resources.String257}">
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#486C1C"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                            <TextBlock Margin="5,5,0,0" Style="{StaticResource DarkGreenTextBlock}" Text="Default Payment Mode :"></TextBlock>
+                                <TextBlock Margin="5,5,0,0" Style="{StaticResource DarkGreenTextBlock}" Text="{x:Static p:Resources.String258}"></TextBlock>
                                 <ComboBox Margin="150,5,0,0" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left" SelectedValue="{Binding PaymentSettings1}" SelectedValuePath="Content">
-                                    <ComboBoxItem>Cash</ComboBoxItem>
-                                    <ComboBoxItem>Card</ComboBoxItem>
-                                    <ComboBoxItem>Cheque</ComboBoxItem>
-                                    <ComboBoxItem>Store Credit</ComboBoxItem>
-                                    <ComboBoxItem>Advance Amount</ComboBoxItem>
-                                    <ComboBoxItem>Approved Pending</ComboBoxItem>
-                                    <ComboBoxItem>Gift Card</ComboBoxItem>
-                                    <ComboBoxItem>Bank Transfer</ComboBoxItem>
-                                    <ComboBoxItem>Food Coupon</ComboBoxItem>
-                                    <ComboBoxItem>Sales Return</ComboBoxItem>
-                                    <ComboBoxItem>Exchange</ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String259}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String260}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String261}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String262}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String263}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String264}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String265}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String266}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String267}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String268}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String269}"></ComboBoxItem>
                                 </ComboBox>
-                                <CheckBox IsChecked="{Binding PaymentSettings2}" Margin="5,30,0,0" Style="{StaticResource DarkGreenCheckbox}" Content="Show Returnable Amount PopUp"></CheckBox>
-                                <TextBlock Margin="5,55,0,0" Style="{StaticResource DarkGreenTextBlock}" Text="Round Off Invoice amount to nearest :"></TextBlock>
+                                <CheckBox IsChecked="{Binding PaymentSettings2}" Margin="5,30,0,0" Style="{StaticResource DarkGreenCheckbox}" Content="{x:Static p:Resources.String270}"></CheckBox>
+                                <TextBlock Margin="5,55,0,0" Style="{StaticResource DarkGreenTextBlock}" Text="{x:Static p:Resources.String271}"></TextBlock>
                                 <TextBox Text="{Binding PaymentSettings3}"  Margin="210,55,0,0" Height="20" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
-                                <CheckBox IsChecked="{Binding PaymentSettings4}" Margin="5,80,0,0" Style="{StaticResource DarkGreenCheckbox}" Content="Apply Additional Tax"></CheckBox>
-                                <TextBlock Margin="70,105,0,0"  Style="{StaticResource DarkGreenTextBlock}" Text="Default Additional Tax:"></TextBlock>
+                                <CheckBox IsChecked="{Binding PaymentSettings4}" Margin="5,80,0,0" Style="{StaticResource DarkGreenCheckbox}" Content="{x:Static p:Resources.String272}"></CheckBox>
+                                <TextBlock Margin="70,105,0,0"  Style="{StaticResource DarkGreenTextBlock}" Text="{x:Static p:Resources.String273}"></TextBlock>
                                 <TextBox  Text="{Binding PaymentSettings5}"  Margin="200,105,0,0" Height="20" Width="120" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
-                                <Button  Margin="325,105,0,0" Height="20" Width="30" VerticalAlignment="Top" HorizontalAlignment="Left" Content="..."></Button>
-                                <CheckBox IsChecked="{Binding PaymentSettings6}" Margin="5,130,0,0" Style="{StaticResource DarkGreenCheckbox}" Content="Apply Additional Charges"></CheckBox>
-                                <CheckBox IsChecked="{Binding PaymentSettings7}" Margin="5,155,0,0" Style="{StaticResource DarkGreenCheckbox}" Content="Is Use Finance Agency"></CheckBox>
+                                <Button  Margin="325,105,0,0" Height="20" Width="30" VerticalAlignment="Top" HorizontalAlignment="Left" Content="{x:Static p:Resources.String274}"></Button>
+                                <CheckBox IsChecked="{Binding PaymentSettings6}" Margin="5,130,0,0" Style="{StaticResource DarkGreenCheckbox}" Content="{x:Static p:Resources.String275}"></CheckBox>
+                                <CheckBox IsChecked="{Binding PaymentSettings7}" Margin="5,155,0,0" Style="{StaticResource DarkGreenCheckbox}" Content="{x:Static p:Resources.String276}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="5,475,0,0" Height="170" Grid.Column="2" VerticalAlignment="Top" Header="Invoice Express Pay Settings">
+                        <GroupBox Margin="5,475,0,0" Height="170" Grid.Column="2" VerticalAlignment="Top" Header="{x:Static p:Resources.String277}">
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#A6C409"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding ExpressPaymentSettings1}" Margin="5,5,0,0" Style="{StaticResource LightGreenCheckbox}" Content="Show Express Pay Button"></CheckBox>
-                                <CheckBox IsChecked="{Binding ExpressPaymentSettings2}" Margin="5,30,0,0" Style="{StaticResource LightGreenCheckbox}" Content="Show Invoice Express Pay Warning"></CheckBox>
-                                <CheckBox IsChecked="{Binding ExpressPaymentSettings3}" Margin="5,55,0,0" Style="{StaticResource LightGreenCheckbox}" Content="Print Invoice In Express Pay"></CheckBox>
-                            <TextBlock Margin="5,80,0,0" Style="{StaticResource LightGreenTextBlock}" Text="Default Payment Mode Of Express Pay :"></TextBlock>
+                                <CheckBox IsChecked="{Binding ExpressPaymentSettings1}" Margin="5,5,0,0" Style="{StaticResource LightGreenCheckbox}" Content="{x:Static p:Resources.String278}"></CheckBox>
+                                <CheckBox IsChecked="{Binding ExpressPaymentSettings2}" Margin="5,30,0,0" Style="{StaticResource LightGreenCheckbox}" Content="{x:Static p:Resources.String279}"></CheckBox>
+                                <CheckBox IsChecked="{Binding ExpressPaymentSettings3}" Margin="5,55,0,0" Style="{StaticResource LightGreenCheckbox}" Content="{x:Static p:Resources.String280}"></CheckBox>
+                                <TextBlock Margin="5,80,0,0" Style="{StaticResource LightGreenTextBlock}" Text="{x:Static p:Resources.String281}"></TextBlock>
                                 <ComboBox Margin="230,80,0,0" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" SelectedValue="{Binding ExpressPaymentSettings4}" SelectedValuePath="Content">
-                                    <ComboBoxItem>Cash</ComboBoxItem>
-                                    <ComboBoxItem>Card</ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String76}"></ComboBoxItem>
+                                    <ComboBoxItem Content="{x:Static p:Resources.String260}"></ComboBoxItem>
                                 </ComboBox>
-                                <CheckBox IsChecked="{Binding ExpressPaymentSettings5}" Margin="5,105,0,0" Style="{StaticResource LightGreenCheckbox}" Content="Ask for payment mode in Express Pay "></CheckBox>
-                                <CheckBox IsChecked="{Binding ExpressPaymentSettings6}" Margin="5,130,0,0" Style="{StaticResource LightGreenCheckbox}" Content="Show Express Pay Returnable Amount PopUp "></CheckBox>
+                                <CheckBox IsChecked="{Binding ExpressPaymentSettings5}" Margin="5,105,0,0" Style="{StaticResource LightGreenCheckbox}" Content="{x:Static p:Resources.String282}"></CheckBox>
+                                <CheckBox IsChecked="{Binding ExpressPaymentSettings6}" Margin="5,130,0,0" Style="{StaticResource LightGreenCheckbox}" Content="{x:Static p:Resources.String283}"></CheckBox>
 
                         </Grid>
                     </GroupBox>
                 </Grid>
             </TabItem>
-            <TabItem Header="Page2">
+            <TabItem Header="Page2" Height="23" VerticalAlignment="Top">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="6*"></ColumnDefinition>
                         <ColumnDefinition Width="5*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <GroupBox Grid.Column="0" Height="170" Header="Sales Executive" VerticalAlignment="Top" >
+                        <GroupBox Grid.Column="0" Height="170" Header="{x:Static p:Resources.String285}" VerticalAlignment="Top" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#067F4D"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding SalesExecutive1}" Margin="5,5,0,0" Style="{StaticResource GreenCheckbox}" Content="Is Sales Executive Mandetory"></CheckBox>
-                                <CheckBox IsChecked="{Binding SalesExecutive2}" Margin="5,30,0,0" Style="{StaticResource GreenCheckbox}" Content="Calculate Sales Executive Commission on Grand Total with Additional Charges"></CheckBox>
-                                <CheckBox IsChecked="{Binding SalesExecutive3}" Name="SalesEx3" Margin="5,55,0,0" Style="{StaticResource GreenCheckbox}" Content="Show Invoice Item Level Sales Executive Panel" Checked="SalesEx3_Checked" Unchecked="SalesEx3_UnChecked"></CheckBox>
-                                <CheckBox IsChecked="{Binding SalesExecutive4}" Name="SalesEx4" IsEnabled="False" Margin="25,80,0,0" Style="{StaticResource GreenCheckbox}" Content="Show Invoice Level Sales Executive Also" Checked="SalesEx4_Checked" Unchecked="SalesEx4_UnChecked"></CheckBox>
-                                <CheckBox IsChecked="{Binding SalesExecutive5}" Name="SalesEx5" IsEnabled="False" Margin="50,105,0,0" Style="{StaticResource GreenCheckbox}" Content="Apply Commission to Sales Invoice" Checked="SalesEx5_Checked" Unchecked="SalesEx5_UnChecked"></CheckBox>
-                                <CheckBox IsChecked="{Binding SalesExecutive6}" Name="SalesEx6" IsEnabled="False" Margin="50,130,0,0" Style="{StaticResource GreenCheckbox}" Content="Apply Commission only for Items without Item Level Executive" Checked="SalesEx6_Checked" Unchecked="SalesEx6_UnChecked"></CheckBox>
+                                <CheckBox IsChecked="{Binding SalesExecutive1}" Margin="5,5,0,0" Style="{StaticResource GreenCheckbox}" Content="{x:Static p:Resources.String286}"></CheckBox>
+                                <CheckBox IsChecked="{Binding SalesExecutive2}" Margin="5,30,0,0" Style="{StaticResource GreenCheckbox}" Content="{x:Static p:Resources.String287}"></CheckBox>
+                                <CheckBox IsChecked="{Binding SalesExecutive3}" Name="SalesEx3" Margin="5,55,0,0" Style="{StaticResource GreenCheckbox}" Content="{x:Static p:Resources.String288}" Checked="SalesEx3_Checked" Unchecked="SalesEx3_UnChecked"></CheckBox>
+                                <CheckBox IsChecked="{Binding SalesExecutive4}" Name="SalesEx4" IsEnabled="False" Margin="25,80,0,0" Style="{StaticResource GreenCheckbox}" Content="{x:Static p:Resources.String289}" Checked="SalesEx4_Checked" Unchecked="SalesEx4_UnChecked"></CheckBox>
+                                <CheckBox IsChecked="{Binding SalesExecutive5}" Name="SalesEx5" IsEnabled="False" Margin="50,105,0,0" Style="{StaticResource GreenCheckbox}" Content="{x:Static p:Resources.String290}" Checked="SalesEx5_Checked" Unchecked="SalesEx5_UnChecked"></CheckBox>
+                                <CheckBox IsChecked="{Binding SalesExecutive6}" Name="SalesEx6" IsEnabled="False" Margin="50,130,0,0" Style="{StaticResource GreenCheckbox}" Content="{x:Static p:Resources.String291}" Checked="SalesEx6_Checked" Unchecked="SalesEx6_UnChecked"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,170,0,0" Grid.Column="0" Height="50" Header="Invoice Delivery" VerticalAlignment="Top" >
+                        <GroupBox Margin="0,170,0,0" Grid.Column="0" Height="50" Header="{x:Static p:Resources.String292}" VerticalAlignment="Top" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#A6C409"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding InvoiceDelivery1}" Margin="5,5,0,0" Style="{StaticResource LightGreenCheckbox}" Content="Ask For Invoice Delivery Information"></CheckBox>                            
+                                <CheckBox IsChecked="{Binding InvoiceDelivery1}" Margin="5,5,0,0" Style="{StaticResource LightGreenCheckbox}" Content="{x:Static p:Resources.String293}"></CheckBox>                            
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,220,0,0" Grid.Column="0" Height="50" Header="Label Settings" VerticalAlignment="Top" >
+                        <GroupBox Margin="0,220,0,0" Grid.Column="0" Height="50" Header="{x:Static p:Resources.String294}" VerticalAlignment="Top" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#9110BF"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding LabelSettings1}" Margin="5,5,0,0" Style="{StaticResource violetCheckbox}" Content="Is Item Label Compulsory at the time of Sales Invoice and Sales Return"></CheckBox>
+                                <CheckBox IsChecked="{Binding LabelSettings1}" Margin="5,5,0,0" Style="{StaticResource violetCheckbox}" Content="{x:Static p:Resources.String295}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,270,0,0" Grid.Column="0" Height="50" Header="Subsidy" VerticalAlignment="Top" >
+                        <GroupBox Margin="0,270,0,0" Grid.Column="0" Height="50" Header="{x:Static p:Resources.String296}" VerticalAlignment="Top" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#D83E55"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding Subsidy1}" Margin="5,5,0,0" Style="{StaticResource RedCheckbox}" Content="Offer Subsidy"></CheckBox>
+                                <CheckBox IsChecked="{Binding Subsidy1}" Margin="5,5,0,0" Style="{StaticResource RedCheckbox}" Content="{x:Static p:Resources.String297}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,320,0,0" Grid.Column="0" Height="75" Header="Offer Settings" VerticalAlignment="Top" >
+                        <GroupBox Margin="0,320,0,0" Grid.Column="0" Height="75" Header="{x:Static p:Resources.String1401}" VerticalAlignment="Top" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="Blue"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding OfferSettings1}" Margin="5,5,0,0" Style="{StaticResource royalBlueCheckbox}" Content="Apply All Offers on Invoice Completion on Current Terminal"></CheckBox>
-                                <CheckBox IsChecked="{Binding OfferSettings2}" Margin="5,30,0,0" Style="{StaticResource royalBlueCheckbox}" Content="Apply All Offers on Invoice Completion on All Terminal"></CheckBox>
+                                <CheckBox IsChecked="{Binding OfferSettings1}" Margin="5,5,0,0" Style="{StaticResource royalBlueCheckbox}" Content="{x:Static p:Resources.String298}"></CheckBox>
+                                <CheckBox IsChecked="{Binding OfferSettings2}" Margin="5,30,0,0" Style="{StaticResource royalBlueCheckbox}" Content="{x:Static p:Resources.String299}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Grid.Column="1" Height="140" Header="Other Settings" VerticalAlignment="Top" >
+                        <GroupBox Grid.Column="1" Height="140" Header="{x:Static p:Resources.String300}" VerticalAlignment="Top" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#387DB6"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                            <TextBlock Margin="5,5,0,0" Text="Max Items can be" Style="{StaticResource blueTextBlock}"></TextBlock>
-                            <TextBlock Margin="5,20,0,0" Text="removed from Sales Invoice :" Style="{StaticResource blueTextBlock}"></TextBlock>
+                                <TextBlock Margin="5,5,0,0" Text="{x:Static p:Resources.String301}" Style="{StaticResource blueTextBlock}"></TextBlock>
+                                <TextBlock Margin="5,20,0,0" Text="{x:Static p:Resources.String302}" Style="{StaticResource blueTextBlock}"></TextBlock>
                                 <TextBox Text="{Binding OtherSettings1}" Margin="180,15,0,0" Height="20" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" PreviewTextInput="OnNumberFormatDecimalPlaceKeyDown"></TextBox>
-                            <TextBlock Margin="5,45,0,0" Text="Number of days to hold invoice :" Style="{StaticResource blueTextBlock}"></TextBlock>
+                                <TextBlock Margin="5,45,0,0" Text="{x:Static p:Resources.String303}" Style="{StaticResource blueTextBlock}"></TextBlock>
                                 <TextBox Text="{Binding OtherSettings2}" Margin="180,40,0,0" Height="20" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" PreviewTextInput="OnNumberFormatDecimalPlaceKeyDown"></TextBox>
-                            <TextBlock Margin="235,45,0,0" Text="days" Style="{StaticResource blueTextBlock}"></TextBlock>
-                            <TextBlock Margin="5,70,0,0" Text="While Showing purchase price" Style="{StaticResource blueTextBlock}"></TextBlock>
-                            <TextBlock Margin="5,85,0,0" Text="from Invoice screen add % Amount :" Style="{StaticResource blueTextBlock}"></TextBlock>
+                                <TextBlock Margin="235,45,0,0" Text="{x:Static p:Resources.String898}" Style="{StaticResource blueTextBlock}"></TextBlock>
+                                <TextBlock Margin="5,70,0,0" Text="{x:Static p:Resources.String304}" Style="{StaticResource blueTextBlock}"></TextBlock>
+                                <TextBlock Margin="5,85,0,0" Text="{x:Static p:Resources.String305}" Style="{StaticResource blueTextBlock}"></TextBlock>
                                 <TextBox Text="{Binding OtherSettings3}" Margin="200,80,0,0" Height="20" Width="50" VerticalAlignment="Top" HorizontalAlignment="Left" PreviewTextInput="OnNumberFormatDecimalPlaceKeyDown"></TextBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,140,0,0" Grid.Column="1" Height="100" Header="Invoice Token Settings" VerticalAlignment="Top" >
+                        <GroupBox Margin="0,140,0,0" Grid.Column="1" Height="100" Header="{x:Static p:Resources.String306}" VerticalAlignment="Top" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#F08252"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding InvoiceTokenSettings1}" Margin="5,10,0,0" Style="{StaticResource peachCheckbox}" Content="Delete Attached Tokens when Invoice is Cancelled"></CheckBox>
-                                <CheckBox IsChecked="{Binding InvoiceTokenSettings2}" Margin="5,35,0,0" Style="{StaticResource peachCheckbox}" Content="Print Token on Hold Invoice"></CheckBox>
-                                <CheckBox IsChecked="{Binding InvoiceTokenSettings3}" Margin="5,60,0,0" Style="{StaticResource peachCheckbox}" Content="Print Token for Removed Items"></CheckBox>
+                                <CheckBox IsChecked="{Binding InvoiceTokenSettings1}" Margin="5,10,0,0" Style="{StaticResource peachCheckbox}" Content="{x:Static p:Resources.String307}"></CheckBox>
+                                <CheckBox IsChecked="{Binding InvoiceTokenSettings2}" Margin="5,35,0,0" Style="{StaticResource peachCheckbox}" Content="{x:Static p:Resources.String308}"></CheckBox>
+                                <CheckBox IsChecked="{Binding InvoiceTokenSettings3}" Margin="5,60,0,0" Style="{StaticResource peachCheckbox}" Content="{x:Static p:Resources.String309}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,240,0,0" Grid.Column="1" Height="50" Header="Pictorial Billing Settings" VerticalAlignment="Top" >
+                        <GroupBox Margin="0,240,0,0" Grid.Column="1" Height="50" Header="{x:Static p:Resources.String310}" VerticalAlignment="Top" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="#C45F5A"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding PictorialBillingSettings1}" Margin="5,10,0,0" Style="{StaticResource brownCheckbox}" Content="Allow to Scan or Search Item"></CheckBox>
+                                <CheckBox IsChecked="{Binding PictorialBillingSettings1}" Margin="5,10,0,0" Style="{StaticResource brownCheckbox}" Content="{x:Static p:Resources.String311}"></CheckBox>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Margin="0,290,0,0" Grid.Column="1" Height="75" Header="Manual Discount" VerticalAlignment="Top" >
+                        <GroupBox Margin="0,290,0,0" Grid.Column="1" Height="75" Header="{x:Static p:Resources.String312}" VerticalAlignment="Top" >
                         <GroupBox.Style>
                             <Style TargetType="GroupBox">
                                 <Setter Property="Foreground" Value="Black"/>
                             </Style>
                         </GroupBox.Style>
                         <Grid>
-                                <CheckBox IsChecked="{Binding ManualDiscount1}" Margin="5,10,0,0" Style="{StaticResource blackCheckbox}" Content="Use Only Manual Discount"></CheckBox>
-                                <CheckBox IsChecked="{Binding ManualDiscount2}" Margin="25,35,0,0" Style="{StaticResource blackCheckbox}" Content="Add Every Invoice Item as a New Line Item"></CheckBox>
+                                <CheckBox IsChecked="{Binding ManualDiscount1}" Margin="5,10,0,0" Style="{StaticResource blackCheckbox}" Content="{x:Static p:Resources.String313}"></CheckBox>
+                                <CheckBox IsChecked="{Binding ManualDiscount2}" Margin="25,35,0,0" Style="{StaticResource blackCheckbox}" Content="{x:Static p:Resources.String314}"></CheckBox>
 
                         </Grid>
                     </GroupBox>
@@ -281,8 +283,8 @@
         </TabControl>
         </Grid>
         <Grid Margin="0,660,0,0" Height="50" Width="850" VerticalAlignment="Top" HorizontalAlignment="Left">
-            <Button Margin="650,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="Apply" Command="{Binding Apply}"></Button>
-            <Button Margin="740,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="Cancel" Command="{Binding Cancel}"></Button>
+            <Button Margin="650,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="{x:Static p:Resources.String1399}" Command="{Binding Apply}"></Button>
+            <Button Margin="740,10,0,0" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource SettingsButton}" Content="{x:Static p:Resources.label13}" Command="{Binding Cancel}"></Button>
         </Grid>
     </Grid>
 </Window>

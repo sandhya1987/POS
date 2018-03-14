@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:p="clr-namespace:InvoicePOS.Properties"
              mc:Ignorable="d" Height="630" Width="1170">
     <Grid >
         <Border Background="#90000000" Margin="0,0,10,10">
@@ -12,37 +13,37 @@
                     <Button Command="{Binding SearchCategoryClick}"    Margin="220,10,0,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="89" HorizontalAlignment="Left"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/search-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="19" Height="21"/>
-                            <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label183}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding BankAdd}"    Margin="0,11,180,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="96" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Add Bank" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.String383}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding BankAccountAdd}"    Margin="0,11,281,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="110" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
-                            <Label Content="Add Account" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.String373}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding EditBank}"  Margin="0,10,105,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label182}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding ViewBank}"    Margin="0,11,28,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
-                            <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
+                            <Label Content="{x:Static p:Resources.label184}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                         </DockPanel>
                     </Button>
                     <Button Command="{Binding DeleteBank}"  Margin="0,10,-52,0" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
-                            <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                            <Label Content="{x:Static p:Resources.label185}" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                         </DockPanel>
                     </Button>
 
@@ -81,12 +82,12 @@
                         </DataGrid.RowStyle>
 
                         <DataGrid.Columns>
-                            <DataGridTextColumn    Header="Sl No" Binding="{Binding SLNO}" Width="130"/>
-                            <DataGridTextColumn    Header="Address 1" Binding="{Binding ADDRESS_1}" Width="130"/>
-                            <DataGridTextColumn    Header="Address 2" Binding="{Binding ADDRESS_2}" Width="130"/>
-                            <DataGridTextColumn    Header="city" Binding="{Binding CITY}" Width="130"/>
-                            <DataGridTextColumn    Header="state" Binding="{Binding STATE}" Width="100"/>
-                            <DataGridTextColumn    Header="Account Created Date" Binding="{Binding BankName}" Width="150"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.label186}" Binding="{Binding SLNO}" Width="130"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String374}" Binding="{Binding ADDRESS_1}" Width="130"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String375}" Binding="{Binding ADDRESS_2}" Width="130"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String376}" Binding="{Binding CITY}" Width="130"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String377}" Binding="{Binding STATE}" Width="100"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String378}" Binding="{Binding BankName}" Width="150"/>
                             <!--<DataGridTextColumn    Header="Bank Code" Binding="{Binding BankName}" Width="150"/>-->
                             <!--<DataGridTextColumn    Header="Bank ID" Binding="{Binding BANK_ID}" Width="150"/>
                             <DataGridTextColumn    Header="pin" Binding="{Binding PIN_CODE}" Width="150"/>-->
@@ -121,10 +122,10 @@
                         </DataGrid.RowStyle>
 
                         <DataGrid.Columns>
-                            <DataGridTextColumn    Header="Sl No" Binding="{Binding SLNO}" Width="130"/>
-                            <DataGridTextColumn    Header="Branch Name" Binding="{Binding BRANCH_NAME}" Width="130"/>
-                            <DataGridTextColumn    Header="Bank Account No" Binding="{Binding ACCOUNT_NUMBER}" Width="130"/>
-                            <DataGridTextColumn    Header="Search Code" Binding="{Binding ACCOUNT_SEARCH_CODE}" Width="130"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.label186}" Binding="{Binding SLNO}" Width="130"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String379}" Binding="{Binding BRANCH_NAME}" Width="130"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String380}" Binding="{Binding ACCOUNT_NUMBER}" Width="130"/>
+                            <DataGridTextColumn    Header="{x:Static p:Resources.String381}" Binding="{Binding ACCOUNT_SEARCH_CODE}" Width="130"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
