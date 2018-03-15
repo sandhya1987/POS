@@ -1536,9 +1536,6 @@ namespace InvoicePOS.ViewModels
             try
             {
 
-                //SelectedItem.BUSINESS_LOCATION_ID = Convert.ToInt32(App.Current.Properties["BussViewTransCashID"]);
-                //var BussLoc = SelectedItem.BUSINESS_LOCATION_ID;
-
                 var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
                 var BussLoc = SelectedItem.BUSINESS_LOCATION;
                 var frmDt = SelectedItem.FROM_DATE;
