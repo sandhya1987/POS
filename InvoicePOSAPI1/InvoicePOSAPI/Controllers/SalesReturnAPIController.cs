@@ -13,7 +13,9 @@ namespace InvoicePOSAPI.Controllers
 {
     public class SalesReturnAPIController : ApiController
     {
-        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        //NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        NEW_POSEntities db = new NEW_POSEntities();
+
         SalesReturnModel cm = new SalesReturnModel();
 
 

@@ -12,8 +12,9 @@ namespace InvoicePOSAPI.Controllers
 {
     public class LogInAPIController : ApiController
     {
-        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
-        
+        //NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+
+        NEW_POSEntities db = new NEW_POSEntities();
 
         public HttpResponseMessage GetUser(string id, string password)
         {

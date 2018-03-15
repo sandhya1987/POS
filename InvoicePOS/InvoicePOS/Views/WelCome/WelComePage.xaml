@@ -173,6 +173,11 @@
             <Button Command="{Binding LogOut}" Style="{StaticResource shutdownButton}" Margin="0,62,8,606" HorizontalAlignment="Right">
 
             </Button>
+            <Button Margin="820,14,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="45"  BorderThickness="0" Style="{StaticResource ButtonImageMain}" Click="Synchronize" Background="Orchid">
+                <Label >
+                    <TextBlock TextWrapping="Wrap"  Foreground="White">Synchronize Database</TextBlock>
+                </Label>
+            </Button>
         </Grid>
 
         <Grid Margin="815,90,0,0">

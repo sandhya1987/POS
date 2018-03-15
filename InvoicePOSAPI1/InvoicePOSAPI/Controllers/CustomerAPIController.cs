@@ -12,7 +12,8 @@ namespace InvoicePOSAPI.Controllers
 {
     public class CustomerAPIController : ApiController
     {
-        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        //NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        NEW_POSEntities db = new NEW_POSEntities();
         CustomerModel cm = new CustomerModel();
 
 

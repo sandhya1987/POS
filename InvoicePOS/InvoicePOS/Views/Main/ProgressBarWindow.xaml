@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Database Synchronization" Height="100" Width="300" WindowStyle="None" ContentRendered="Window_ContentRendered">
     <Grid>
-        <TextBlock >Synchronizating Database..........</TextBlock>
+        <TextBlock >Synchronizing Database..........</TextBlock>
         <ProgressBar Name="ProgressBar" Height="30" Width="250" Value="{Binding Progress, NotifyOnSourceUpdated=True}"></ProgressBar>
         <TextBlock Name="Status" VerticalAlignment="Bottom" Height="20"></TextBlock>
     </Grid>

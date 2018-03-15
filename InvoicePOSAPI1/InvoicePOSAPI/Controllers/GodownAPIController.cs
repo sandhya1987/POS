@@ -13,7 +13,8 @@ namespace InvoicePOSAPI.Controllers
     public class GodownAPIController : ApiController
     {
         GodownModel _GodownModel = new GodownModel();
-        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        //NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        NEW_POSEntities db = new NEW_POSEntities();
 
         [HttpGet]
         public HttpResponseMessage GetGodown(int id)

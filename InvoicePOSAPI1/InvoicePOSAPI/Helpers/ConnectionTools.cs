@@ -76,7 +76,7 @@ namespace InvoicePOSAPI.Helpers
                                             initialCatalog: "NEW_POS_DB",
                                             userId: "makrov",
                                             password: "Qsefthuk786",
-                                            dataSource: @"32.209.147.13");
+                                            dataSource: @"34.209.147.13");
         }
     }
 

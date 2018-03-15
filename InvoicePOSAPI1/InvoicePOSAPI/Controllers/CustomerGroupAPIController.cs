@@ -13,7 +13,8 @@ namespace InvoicePOSAPI.Controllers
     public class CustomerGroupAPIController : ApiController
     {
         CustomerGroupModel emp = new CustomerGroupModel();
-        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        //NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        NEW_POSEntities db = new NEW_POSEntities();
 
 
         [HttpGet]

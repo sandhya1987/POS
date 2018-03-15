@@ -14,7 +14,9 @@ namespace InvoicePOSAPI.Controllers
     {
 
 
-        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        //NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+
+        NEW_POSEntities db = new NEW_POSEntities();
         StocktransferModel cm = new StocktransferModel();
 
 

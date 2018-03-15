@@ -27,7 +27,6 @@ namespace InvoicePOS.ViewModels
         {
             SelectedItem = new ItemModel();
             var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
-            var comp = 1;
             if (App.Current.Properties["Action"].ToString() == "Edit")
             {
                 CreatVisible = "Collapsed";

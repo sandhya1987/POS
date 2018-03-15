@@ -182,7 +182,8 @@ namespace InvoicePOS.Views.Main
 
         void timer_Tick(object sender, EventArgs e)
         {
-            CreateNewThread();
+            //temporarily commented out
+            //CreateNewThread();
         }
 
         public ICommand _CashClick;

@@ -13,8 +13,8 @@ namespace InvoicePOSAPI.Controllers
     public class SupplierAPIController : ApiController
     {
         SupplierModel im = new SupplierModel();
-        NEW_POS_DBEntities db = new NEW_POS_DBEntities();
-
+        //NEW_POS_DBEntities db = new NEW_POS_DBEntities();
+        NEW_POSEntities db = new NEW_POSEntities();
 
         [HttpGet]
         public HttpResponseMessage GetSupplier(int id)
