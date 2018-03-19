@@ -69,7 +69,7 @@ namespace InvoicePOS.ViewModels
                 UpdVisible = "Collapsed";
                 CreatVisible = "Visible";
                 SelectedItem = new CashRegModel();
-                //IS_TRANSFER_CASH_REGISTER = true;
+                IS_TRANSFER_CASH_REGISTER = true;
                 TRANSFER_DATE = System.DateTime.Now;
                 GetTransferNo();
                 isenable = true;
@@ -1171,13 +1171,13 @@ namespace InvoicePOS.ViewModels
 
         public async void Insert_TransferData()
         {
-            isenable = false;
-            _isenable = false;
+           
+            SelectedItem.BUSINESS_LOCATION = TransferCash.BussRef.Text;
+            SelectedItem.BUSINESS_LOCATION_ID = Convert.ToInt32(App.Current.Properties["BussTransCashID"]);
 
             if (SelectedItem.BUSINESS_LOCATION == null || SelectedItem.BUSINESS_LOCATION == "")
             {
-                SelectedItem.BUSINESS_LOCATION_ID = Convert.ToInt32(App.Current.Properties["BussTransCashID"]);
-
+                              
                 MessageBox.Show("BUSINESS LOCATION is missing");
                 return;
             }
@@ -1215,12 +1215,14 @@ namespace InvoicePOS.ViewModels
 
             else
             {
+                isenable = false;
+                _isenable = false;
 
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(GlobalData.gblApiAdress);
-                //SelectedItem.CASH_REGISTERID_FROM = Convert.ToInt32(App.Current.Properties["CASH_REGISTERID_FROM"]);
-                //SelectedItem.CASH_REGISTERID_TO = Convert.ToInt32(App.Current.Properties["CASH_REGISTERID_TO"]);
-                SelectedItem.COMPANY_ID = 1;
+                SelectedItem.CASH_REGISTERID_FROM = Convert.ToInt32(App.Current.Properties["CASH_REGISTERID_FROM"]);
+                SelectedItem.CASH_REGISTERID_TO = Convert.ToInt32(App.Current.Properties["CASH_REGISTERID_TO"]);
+                //SelectedItem.COMPANY_ID = 1;
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 client.Timeout = new TimeSpan(500000000000);
@@ -1516,27 +1518,83 @@ namespace InvoicePOS.ViewModels
 
         }
 
-
-        public ICommand _APPLY_DATE_CHANGE;
-        public ICommand APPLY_DATE_CHANGE
+        public bool _ApplyDateRange;
+        public bool ApplyDateRange
         {
             get
             {
-                if (_APPLY_DATE_CHANGE == null)
+                return _ApplyDateRange;
+            }
+            set
+            {
+                _ApplyDateRange = value;
+                //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                var comp = 1;
+                if (_ApplyDateRange == true)
                 {
-                    _APPLY_DATE_CHANGE = new DelegateCommand(APPLY_DATE_CHANGE_Click);
+                    GetAllCashTranscation(comp);
                 }
-                return _APPLY_DATE_CHANGE;
+                else
+                {
+                    GetAllCashTranscation(comp);
+                }
+                OnPropertyChanged("ApplyDateRange");
             }
         }
 
-        public async void APPLY_DATE_CHANGE_Click()
+        private DateTime _FROM_DATE = DateTime.Now;
+        public DateTime FROM_DATE
         {
+            get
+            {
+                return _FROM_DATE;
+            }
+            set
+            {
+                _FROM_DATE = value;
+                string str = _FROM_DATE.ToString("yyyy-MM-dd HH:mm");
+                string str1 = _FROM_DATE.ToString();
+                DateTime dt = DateTime.ParseExact(str, "yyyy-MM-dd HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+
+                if (_FROM_DATE != value)
+                {
+                    _FROM_DATE = value;
+
+                    OnPropertyChanged("FROM_DATE");
+                }
+
+            }
+        }
+        private DateTime _TO_DATE = DateTime.Now;
+        public DateTime TO_DATE
+        {
+            get
+            {
+                return _TO_DATE;
+            }
+            set
+            {
+                if (_TO_DATE != value)
+                {
+                    _TO_DATE = value;
+                    OnPropertyChanged("TO_DATE");
+                }
+
+            }
+        }
+
+
+        //public async void GetAllCashTranscation()
+        //{
+        List<CashRegModel> _ListGrid_CashTransc = new List<CashRegModel>();
+        List<CashRegModel> ListGridViewTransc = new List<CashRegModel>();
+        public async Task<ObservableCollection<CashRegModel>> GetAllCashTranscation(int comp)
+              {
 
             try
             {
 
-                var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                //var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
                 var BussLoc = SelectedItem.BUSINESS_LOCATION;
                 var frmDt = SelectedItem.FROM_DATE;
                 var toDt = SelectedItem.TO_DATE;
@@ -1545,8 +1603,9 @@ namespace InvoicePOS.ViewModels
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 client.Timeout = new TimeSpan(500000000000);
-                //HttpResponseMessage response = client.GetAsync("api/ItemAPI/GetItemPurchaseList?frmDt=" + frmDt + "&toDt=" + toDt + "").Result;
-                HttpResponseMessage response = client.GetAsync("api/CashRegAPI/GetAllCashTranscation?id1=" + comp + " &id2=" + BussLoc + " &id3=" + frmDt + " &id4=" + toDt + "").Result;
+                
+               // HttpResponseMessage response = client.GetAsync("api/CashRegAPI/GetAllCashTranscation?id1=" + comp + " &id2=" + BussLoc + " &id3=" + frmDt + " &id4=" + toDt + "").Result;
+                HttpResponseMessage response = client.GetAsync("api/CashRegAPI/GetAllCashTranscations?id=" + comp + "").Result;
                 if (response.IsSuccessStatusCode)
                 {
                     data = JsonConvert.DeserializeObject<CashRegModel[]>(await response.Content.ReadAsStringAsync());
@@ -1570,14 +1629,30 @@ namespace InvoicePOS.ViewModels
                         });
                     }
 
+
+                    if (ApplyDateRange == true)
+                    {
+                        _ListGrid_CashTransc.Clear();
+                         var item1 = (from m in _ListGrid_Temp
+                                      where m.TRANSFER_DATE >= FROM_DATE && m.TRANSFER_DATE <= TO_DATE
+                                     select m).ToList();
+                        if (item1.Count > 0)
+                        {
+                            _ListGrid_CashTransc = item1;
+                        }
+                    }
+                    ListGridViewTransc = _ListGrid_CashTransc;
+
+
                 }
-                ListGrid = _ListGrid_Temp;
+               // ListGrid = _ListGrid_Temp;
 
             }
             catch (Exception ex)
             {
                 throw;
             }
+            return new ObservableCollection<CashRegModel>(_ListGrid_CashTransc);
 
         }
 
@@ -1669,7 +1744,7 @@ namespace InvoicePOS.ViewModels
                 decimal x = _selectedItem.CASH_AMOUNT;
                 TransferCash.TotRef.Text = x.ToString();
                 App.Current.Properties["CASH_REGISTERID_FROM"] = _selectedItem.CASH_REGISTERID;
-                //SelectedItem.CASH_REGISTERID_FROM = _selectedItem.CASH_REGISTERID;
+                SelectedItem.CASH_REGISTERID_FROM = _selectedItem.CASH_REGISTERID;
                 //TransferCash.TotRef.Text = _selectedItem.CASH_AMOUNT;
                 //Convert.ToInt32(_selectedItem.CASH_AMOUNT);
                 App.Current.Properties["TRANSFER_FROM_CASH"] = null;
@@ -1678,7 +1753,7 @@ namespace InvoicePOS.ViewModels
             if (App.Current.Properties["TRANSFER_TO_CASH"] != null)
             {
                 //SelectedItem.TO_CASH_REGISTER = _selectedItem.CASH_REG_NAME;
-                //SelectedItem.CASH_REGISTERID_TO = _selectedItem.CASH_REGISTERID;
+                SelectedItem.CASH_REGISTERID_TO = _selectedItem.CASH_REGISTERID;
                 App.Current.Properties["CASH_REGISTERID_TO"] = _selectedItem.CASH_REGISTERID;
                 TransferCash.ToCashRef.Text = _selectedItem.CASH_REG_NAME;
                 SelectedItem.TO_TRAN_CASH_REGISTER = _selectedItem.CASH_REG_NAME;

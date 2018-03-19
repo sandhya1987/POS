@@ -26,130 +26,66 @@ namespace InvoicePOSDATA
         }
     
         public DbSet<AUTHORIZATION> AUTHORIZATIONs { get; set; }
-        public DbSet<AUTHORIZATION_tracking> AUTHORIZATION_tracking { get; set; }
         public DbSet<MODULE> MODULEs { get; set; }
-        public DbSet<MODULE_tracking> MODULE_tracking { get; set; }
-        public DbSet<schema_info> schema_info { get; set; }
-        public DbSet<scope_config> scope_config { get; set; }
-        public DbSet<scope_info> scope_info { get; set; }
         public DbSet<TBL_AUTO_GENERATE_CODE> TBL_AUTO_GENERATE_CODE { get; set; }
         public DbSet<TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER> TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER { get; set; }
-        public DbSet<TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER_tracking> TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER_tracking { get; set; }
         public DbSet<TBL_AUTO_GENERATE_CODE_FOR_LOYALTY> TBL_AUTO_GENERATE_CODE_FOR_LOYALTY { get; set; }
-        public DbSet<TBL_AUTO_GENERATE_CODE_FOR_LOYALTY_tracking> TBL_AUTO_GENERATE_CODE_FOR_LOYALTY_tracking { get; set; }
         public DbSet<TBL_AUTO_GENERATE_CODE_FOR_PRODUCT> TBL_AUTO_GENERATE_CODE_FOR_PRODUCT { get; set; }
-        public DbSet<TBL_AUTO_GENERATE_CODE_FOR_PRODUCT_tracking> TBL_AUTO_GENERATE_CODE_FOR_PRODUCT_tracking { get; set; }
-        public DbSet<TBL_AUTO_GENERATE_CODE_tracking> TBL_AUTO_GENERATE_CODE_tracking { get; set; }
         public DbSet<TBL_AUTO_GENERATE_INVOICE_NO> TBL_AUTO_GENERATE_INVOICE_NO { get; set; }
-        public DbSet<TBL_AUTO_GENERATE_INVOICE_NO_tracking> TBL_AUTO_GENERATE_INVOICE_NO_tracking { get; set; }
         public DbSet<TBL_BANK> TBL_BANK { get; set; }
         public DbSet<TBL_BANK_ACCOUNT> TBL_BANK_ACCOUNT { get; set; }
-        public DbSet<TBL_BANK_ACCOUNT_tracking> TBL_BANK_ACCOUNT_tracking { get; set; }
-        public DbSet<TBL_BANK_tracking> TBL_BANK_tracking { get; set; }
         public DbSet<TBL_BUSINESS_LOCATION> TBL_BUSINESS_LOCATION { get; set; }
-        public DbSet<TBL_BUSINESS_LOCATION_tracking> TBL_BUSINESS_LOCATION_tracking { get; set; }
         public DbSet<TBL_CASH_REG> TBL_CASH_REG { get; set; }
-        public DbSet<TBL_CASH_REG_tracking> TBL_CASH_REG_tracking { get; set; }
         public DbSet<TBL_CATAGORY> TBL_CATAGORY { get; set; }
-        public DbSet<TBL_CATAGORY_tracking> TBL_CATAGORY_tracking { get; set; }
         public DbSet<TBL_CHEQUE> TBL_CHEQUE { get; set; }
-        public DbSet<TBL_CHEQUE_tracking> TBL_CHEQUE_tracking { get; set; }
         public DbSet<TBL_COMPANY> TBL_COMPANY { get; set; }
-        public DbSet<TBL_COMPANY_tracking> TBL_COMPANY_tracking { get; set; }
         public DbSet<TBL_CUSTOMER> TBL_CUSTOMER { get; set; }
         public DbSet<TBL_CUSTOMER_BILLING_ADDRESS> TBL_CUSTOMER_BILLING_ADDRESS { get; set; }
-        public DbSet<TBL_CUSTOMER_BILLING_ADDRESS_tracking> TBL_CUSTOMER_BILLING_ADDRESS_tracking { get; set; }
         public DbSet<TBL_CUSTOMER_GROUP> TBL_CUSTOMER_GROUP { get; set; }
-        public DbSet<TBL_CUSTOMER_GROUP_tracking> TBL_CUSTOMER_GROUP_tracking { get; set; }
         public DbSet<TBL_CUSTOMER_SHIPPING_ADDRESS> TBL_CUSTOMER_SHIPPING_ADDRESS { get; set; }
-        public DbSet<TBL_CUSTOMER_SHIPPING_ADDRESS_tracking> TBL_CUSTOMER_SHIPPING_ADDRESS_tracking { get; set; }
-        public DbSet<TBL_CUSTOMER_tracking> TBL_CUSTOMER_tracking { get; set; }
         public DbSet<TBL_DEPARTMENT> TBL_DEPARTMENT { get; set; }
-        public DbSet<TBL_DEPARTMENT_tracking> TBL_DEPARTMENT_tracking { get; set; }
         public DbSet<TBL_DESIGNATION> TBL_DESIGNATION { get; set; }
-        public DbSet<TBL_DESIGNATION_tracking> TBL_DESIGNATION_tracking { get; set; }
         public DbSet<TBL_EMAIL_SETTINGS> TBL_EMAIL_SETTINGS { get; set; }
-        public DbSet<TBL_EMAIL_SETTINGS_tracking> TBL_EMAIL_SETTINGS_tracking { get; set; }
         public DbSet<TBL_EMPLOYEE> TBL_EMPLOYEE { get; set; }
-        public DbSet<TBL_EMPLOYEE_tracking> TBL_EMPLOYEE_tracking { get; set; }
         public DbSet<TBL_ESTIMATE1> TBL_ESTIMATE1 { get; set; }
-        public DbSet<TBL_ESTIMATE1_tracking> TBL_ESTIMATE1_tracking { get; set; }
         public DbSet<TBL_FINANCIAL> TBL_FINANCIAL { get; set; }
-        public DbSet<TBL_FINANCIAL_tracking> TBL_FINANCIAL_tracking { get; set; }
         public DbSet<TBL_GODOWN> TBL_GODOWN { get; set; }
-        public DbSet<TBL_GODOWN_tracking> TBL_GODOWN_tracking { get; set; }
         public DbSet<TBL_HOLD_INVOICE> TBL_HOLD_INVOICE { get; set; }
-        public DbSet<TBL_HOLD_INVOICE_tracking> TBL_HOLD_INVOICE_tracking { get; set; }
         public DbSet<TBL_INVOICE> TBL_INVOICE { get; set; }
         public DbSet<TBL_INVOICE_PAY> TBL_INVOICE_PAY { get; set; }
-        public DbSet<TBL_INVOICE_PAY_tracking> TBL_INVOICE_PAY_tracking { get; set; }
-        public DbSet<TBL_INVOICE_tracking> TBL_INVOICE_tracking { get; set; }
         public DbSet<TBL_ITEM_LOCATION> TBL_ITEM_LOCATION { get; set; }
-        public DbSet<TBL_ITEM_LOCATION_tracking> TBL_ITEM_LOCATION_tracking { get; set; }
         public DbSet<TBL_ITEMS> TBL_ITEMS { get; set; }
         public DbSet<TBL_ITEMS_ATTRIBUTE> TBL_ITEMS_ATTRIBUTE { get; set; }
-        public DbSet<TBL_ITEMS_ATTRIBUTE_tracking> TBL_ITEMS_ATTRIBUTE_tracking { get; set; }
-        public DbSet<TBL_ITEMS_tracking> TBL_ITEMS_tracking { get; set; }
         public DbSet<TBL_LOYALTY> TBL_LOYALTY { get; set; }
         public DbSet<TBL_LOYALTY_Exceedings> TBL_LOYALTY_Exceedings { get; set; }
-        public DbSet<TBL_LOYALTY_Exceedings_tracking> TBL_LOYALTY_Exceedings_tracking { get; set; }
-        public DbSet<TBL_LOYALTY_tracking> TBL_LOYALTY_tracking { get; set; }
         public DbSet<TBL_NEWCASHREGISTER> TBL_NEWCASHREGISTER { get; set; }
-        public DbSet<TBL_NEWCASHREGISTER_tracking> TBL_NEWCASHREGISTER_tracking { get; set; }
         public DbSet<TBL_OPENING_BALANCE> TBL_OPENING_BALANCE { get; set; }
-        public DbSet<TBL_OPENING_BALANCE_tracking> TBL_OPENING_BALANCE_tracking { get; set; }
         public DbSet<TBL_OPENING_STOCK> TBL_OPENING_STOCK { get; set; }
-        public DbSet<TBL_OPENING_STOCK_tracking> TBL_OPENING_STOCK_tracking { get; set; }
         public DbSet<TBL_ORDER> TBL_ORDER { get; set; }
-        public DbSet<TBL_ORDER_tracking> TBL_ORDER_tracking { get; set; }
         public DbSet<TBL_PAYMENT> TBL_PAYMENT { get; set; }
-        public DbSet<TBL_PAYMENT_tracking> TBL_PAYMENT_tracking { get; set; }
         public DbSet<TBL_PO> TBL_PO { get; set; }
         public DbSet<TBL_PO_ITEMS> TBL_PO_ITEMS { get; set; }
-        public DbSet<TBL_PO_ITEMS_tracking> TBL_PO_ITEMS_tracking { get; set; }
         public DbSet<TBL_PO_PAYMENT> TBL_PO_PAYMENT { get; set; }
-        public DbSet<TBL_PO_PAYMENT_tracking> TBL_PO_PAYMENT_tracking { get; set; }
-        public DbSet<TBL_PO_tracking> TBL_PO_tracking { get; set; }
         public DbSet<TBL_PURCHASE_ORDERS> TBL_PURCHASE_ORDERS { get; set; }
-        public DbSet<TBL_PURCHASE_ORDERS_tracking> TBL_PURCHASE_ORDERS_tracking { get; set; }
         public DbSet<TBL_RECEIVE_ITEM> TBL_RECEIVE_ITEM { get; set; }
         public DbSet<TBL_RECEIVE_ITEM_ITEMS> TBL_RECEIVE_ITEM_ITEMS { get; set; }
-        public DbSet<TBL_RECEIVE_ITEM_ITEMS_tracking> TBL_RECEIVE_ITEM_ITEMS_tracking { get; set; }
-        public DbSet<TBL_RECEIVE_ITEM_tracking> TBL_RECEIVE_ITEM_tracking { get; set; }
         public DbSet<TBL_RECEIVE_PAYMENT> TBL_RECEIVE_PAYMENT { get; set; }
-        public DbSet<TBL_RECEIVE_PAYMENT_tracking> TBL_RECEIVE_PAYMENT_tracking { get; set; }
         public DbSet<TBL_REPORT> TBL_REPORT { get; set; }
         public DbSet<TBL_REPORT_ADD> TBL_REPORT_ADD { get; set; }
-        public DbSet<TBL_REPORT_ADD_tracking> TBL_REPORT_ADD_tracking { get; set; }
         public DbSet<TBL_REPORT_GROUP> TBL_REPORT_GROUP { get; set; }
-        public DbSet<TBL_REPORT_GROUP_tracking> TBL_REPORT_GROUP_tracking { get; set; }
-        public DbSet<TBL_REPORT_tracking> TBL_REPORT_tracking { get; set; }
         public DbSet<TBL_SALE_ITEM> TBL_SALE_ITEM { get; set; }
-        public DbSet<TBL_SALE_ITEM_tracking> TBL_SALE_ITEM_tracking { get; set; }
         public DbSet<TBL_SALES_RETURN> TBL_SALES_RETURN { get; set; }
-        public DbSet<TBL_SALES_RETURN_tracking> TBL_SALES_RETURN_tracking { get; set; }
         public DbSet<TBL_STOCK_TRANSFER> TBL_STOCK_TRANSFER { get; set; }
-        public DbSet<TBL_STOCK_TRANSFER_tracking> TBL_STOCK_TRANSFER_tracking { get; set; }
         public DbSet<TBL_SUPP_PAYMENT> TBL_SUPP_PAYMENT { get; set; }
-        public DbSet<TBL_SUPP_PAYMENT_tracking> TBL_SUPP_PAYMENT_tracking { get; set; }
         public DbSet<TBL_SUPPLIER> TBL_SUPPLIER { get; set; }
-        public DbSet<TBL_SUPPLIER_tracking> TBL_SUPPLIER_tracking { get; set; }
         public DbSet<tbl_supppaydetails> tbl_supppaydetails { get; set; }
-        public DbSet<tbl_supppaydetails_tracking> tbl_supppaydetails_tracking { get; set; }
         public DbSet<TBL_TAX> TBL_TAX { get; set; }
-        public DbSet<TBL_TAX_tracking> TBL_TAX_tracking { get; set; }
         public DbSet<TBL_TRANSFER> TBL_TRANSFER { get; set; }
         public DbSet<TBL_TRANSFER_CASH> TBL_TRANSFER_CASH { get; set; }
-        public DbSet<TBL_TRANSFER_CASH_tracking> TBL_TRANSFER_CASH_tracking { get; set; }
-        public DbSet<TBL_TRANSFER_tracking> TBL_TRANSFER_tracking { get; set; }
         public DbSet<TBL_UNIT_MEASURING> TBL_UNIT_MEASURING { get; set; }
-        public DbSet<TBL_UNIT_MEASURING_tracking> TBL_UNIT_MEASURING_tracking { get; set; }
         public DbSet<TBL_USER> TBL_USER { get; set; }
-        public DbSet<TBL_USER_tracking> TBL_USER_tracking { get; set; }
         public DbSet<TBL_VENDORS> TBL_VENDORS { get; set; }
-        public DbSet<TBL_VENDORS_tracking> TBL_VENDORS_tracking { get; set; }
         public DbSet<tmp_invoice> tmp_invoice { get; set; }
-        public DbSet<tmp_invoice_tracking> tmp_invoice_tracking { get; set; }
         public DbSet<MODULE_RIGHTS> MODULE_RIGHTS { get; set; }
         public DbSet<VIEW_INVOICE> VIEW_INVOICE { get; set; }
         public DbSet<View_ITEM_ATTRIBUTE> View_ITEM_ATTRIBUTE { get; set; }

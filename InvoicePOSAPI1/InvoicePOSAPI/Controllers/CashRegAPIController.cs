@@ -168,30 +168,27 @@ namespace InvoicePOSAPI.Controllers
             }
         }
 
-        //[HttpGet]
-        //public HttpResponseMessage GetAllCashTranscation(int id1,string id2, DateTime id3,DateTime id4)
-        //{
-        //var str = (from b in db.TBL_INVOICE_PAY
-        //           join a in db.TBL_RECEIVE_PAYMENT on b.INVOICE_DATE equals a.DATE
-        //           join c in db.TBL_TRANSFER_CASH on a.COMPANY_ID equals c.COMPANY_ID
-        //           join d in db.TBL_NEWCASHREGISTER on c.COMPANY_ID equals d.COMPANY_ID
-        //           where a.COMPANY_ID == id1 && a.BUSINESS_LOCATION == id2 && b.INVOICE_DATE >= id3 && b.INVOICE_DATE <= id4
-        //           group b by new {a.DATE,b.INVOICE_DATE,c.TRANSFER_DATE,a.BUSINESS_LOCATION  }into g 
+        [HttpGet]
+        public HttpResponseMessage GetAllCashTranscations(int id)
+        {
+            var str = (from b in db.TBL_INVOICE_PAY
+                       join a in db.TBL_RECEIVE_PAYMENT on b.CASH_REGISTERID equals a.CASH_REGISTERID
+                       join c in db.TBL_TRANSFER_CASH on a.CASH_REGISTERID equals c.CASH_REGISTERID_FROM
+                       join d in db.TBL_NEWCASHREGISTER on c.CASH_REGISTERID_FROM equals d.CASH_REGISTERID
+                       where a.COMPANY_ID == id 
+                   
+                       select new CashRegModel
+                      {
 
-        //           select new CashRegModel
-        //          {
+                          //BUSINESS_LOCATION = a.BUSINESS_LOCATION,
+                          //TRANSFER_ID = c.TRANSFER_ID,
+                          //TRANSFER_DATE=b.INVOICE_DATE,
+                          //TRANSFER_DATE=a.DATE,
+                          
+                      }).ToList();
 
-        //              BUSINESS_LOCATION =a.BUSINESS_LOCATION,
-        //              TRANSFER_ID = c.TRANSFER_ID,
-        //              TRANSFER_CODE = a.CASH_TRANSFER_NUMBER,
-        //              FROM_TRAN_CASH_REGISTER = a.FROM_CASH_REGISTER,
-        //              TO_TRAN_CASH_REGISTER = a.TO_CASH_REGISTER,
-
-        //              STATUS = a.STATUS,
-        //          }).ToList();
-
-        //return Request.CreateResponse(HttpStatusCode.OK, str);
-        //}
+            return Request.CreateResponse(HttpStatusCode.OK, str);
+        }
 
 
         [HttpGet]
@@ -600,6 +597,9 @@ namespace InvoicePOSAPI.Controllers
                     tc.TO_CASH_REGISTER = crm.TO_TRAN_CASH_REGISTER;
                     tc.TOTAL_TRANSFERED_AMOUNT = crm.CASH_TO_TRANSFER;
                     tc.TRANSFER_DATE = crm.TRANSFER_DATE;
+                    tc.IS_TRANSFER_CASH_REGISTER = crm.IS_TRANSFER_CASH_REGISTER;
+                    tc.CASH_REGISTERID_FROM = crm.CASH_REGISTERID_FROM;
+                    tc.CASH_REGISTERID_TO = crm.CASH_REGISTERID_TO;
                     tc.STATUS = "Approved";
                     tc.IS_DELETE = false;
                     db.TBL_TRANSFER_CASH.Add(tc);
