@@ -1019,7 +1019,25 @@ namespace InvoicePOS.ViewModels
             }
         }
 
+        public ICommand _ViewCashRegTransaction;
+        public ICommand ViewCashRegTransaction
+        {
+            get
+            {
+                if (_ViewCashRegTransaction == null)
+                {
+                    _ViewCashRegTransaction = new DelegateCommand(View_CashRegTransaction);
+                }
+                return _ViewCashRegTransaction;
+            }
+        }
 
+        public void View_CashRegTransaction()
+        {
+            ViewCashTranscation _ViewCashTransaction = new ViewCashTranscation();
+
+            _ViewCashTransaction.Show();
+        }
 
         public bool _isviewmode;
         public bool _isenable;

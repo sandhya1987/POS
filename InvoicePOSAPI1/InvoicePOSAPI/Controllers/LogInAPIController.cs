@@ -60,6 +60,93 @@ namespace InvoicePOSAPI.Controllers
             }
 
         }
+
+
+        public HttpResponseMessage GetUser(string id)
+        {
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    var str = (from a in db.TBL_USER
+                               where a.ROLE == id 
+                               select new LogInModel
+                               {
+                                   COMPANY_ID = a.COMPANY_ID,
+                                   CREATED_DATE = a.CREATED_DATE,
+                                   LOGIN_TIME = a.LOGIN_TIME,
+                                   MAC_ADDRESS = a.MAC_ADDRESS,
+                                   PASSWORD = a.PASSWORD,
+                                   ROLE = a.ROLE,
+                                   USER_ID = a.USER_ID,
+                               }).FirstOrDefault();
+
+                    return Request.CreateResponse(HttpStatusCode.OK, str);
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
+
+        }
+
+        [HttpPost]
+        public HttpResponseMessage CreateUser(LogInModel _LogInModel)
+        {
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+                    TBL_USER user = new TBL_USER();
+                    user.COMPANY_ID = _LogInModel.COMPANY_ID;
+                    user.CREATED_DATE = _LogInModel.CREATED_DATE;
+                    user.EMPLOYEE_CODE = _LogInModel.EMPLOYEE_CODE;
+                    user.MAC_ADDRESS = _LogInModel.MAC_ADDRESS;
+                    user.PASSWORD = _LogInModel.PASSWORD;
+                    user.ROLE = _LogInModel.ROLE;
+                    db.TBL_USER.Add(user);
+                    db.SaveChanges();
+                    return Request.CreateResponse(HttpStatusCode.OK, "success");
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
+        }
         /*
         [HttpGet]
         public HttpResponseMessage Synchronize()

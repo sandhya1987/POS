@@ -16,31 +16,35 @@
                         <Label Content="Search" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                     </DockPanel>
                 </Button>
-                <Button Command="{Binding AddCashReg}"    Margin="0,21,396,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                <Button Command="{Binding AddCashReg}"    Margin="0,21,496,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                     <DockPanel HorizontalAlignment="Stretch">
                         <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>
                         <Label Content="Add" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                     </DockPanel>
                 </Button>
-                <Button Command="{Binding  EditCashReg}"  Margin="0,21,321,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
+                <Button Command="{Binding  EditCashReg}"  Margin="0,21,421,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageEdit}"  HorizontalAlignment="Right" >
                     <DockPanel HorizontalAlignment="Stretch">
                         <Image Source="/InvoicePOS;component/Images/edit-icon-new.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
                         <Label Content="Edit" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                     </DockPanel>
                 </Button>
-                <Button Command="{Binding ViewCashReg}"    Margin="0,21,246,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
+                <Button Command="{Binding ViewCashReg}"    Margin="0,21,346,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="70" HorizontalAlignment="Right"  >
                     <DockPanel HorizontalAlignment="Stretch">
                         <Image Source="/InvoicePOS;component/Images/view1.png" Stretch="Uniform" DockPanel.Dock="left" Width="23" Height="26"/>
                         <Label Content="View" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff" />
                     </DockPanel>
                 </Button>
-                <Button Command="{Binding DeleteCashReg}"  Margin="0,21,164,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
+                <Button Command="{Binding DeleteCashReg}"  Margin="0,21,264,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageDelete}"  HorizontalAlignment="Right" >
                     <DockPanel HorizontalAlignment="Stretch">
                         <Image Source="/InvoicePOS;component/Images/delete-icon-small.png" Stretch="Uniform" DockPanel.Dock="left" Width="20" Height="20"/>
                         <Label Content="Delete" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
                     </DockPanel>
                 </Button>
-
+                <Button Command="{Binding ViewCashRegTransaction}"  Margin="0,21,80,-10" VerticalAlignment="Top" Background="OliveDrab"   HorizontalAlignment="Right" >
+                    <DockPanel HorizontalAlignment="Stretch">
+                        <Label Content="Cash Reg Transaction" DockPanel.Dock="right" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12" Foreground="#ffffff"/>
+                    </DockPanel>
+                </Button>
                 <!--<Button Command="{Binding TransferCashReg}"    Margin="0,21,10,-10" VerticalAlignment="Top"  Style="{StaticResource ButtonImageAdd}" Width="149" HorizontalAlignment="Right"  >
                         <DockPanel HorizontalAlignment="Stretch">
                             <Image Source="/InvoicePOS;component/Images/plus-icon.png" Stretch="Uniform" DockPanel.Dock="left" Width="13" Height="13"/>

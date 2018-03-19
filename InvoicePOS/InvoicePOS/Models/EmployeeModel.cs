@@ -44,6 +44,8 @@ namespace InvoicePOS.Models
         public string COMMISSION_QUICK_POSITION { get; set; }
         public long COMPANY_ID { get; set; }
         public int SLNO { get; set; }
+        public string USER_NAME { get; set; }
+        public string PASSWORD { get; set; }
         //public bool IS_REQUEST_VAI_SMS { get; set; }
         
         private string error = string.Empty;

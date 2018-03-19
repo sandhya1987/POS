@@ -15,7 +15,7 @@
 
 
             <Rectangle Fill="#f6f7f9" Height="99" Stroke="#f6f7f9" VerticalAlignment="Top"/>
-            <Button Name="Dashboard" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="90" Height="90"  BorderThickness="0" Style="{StaticResource ButtonImage}">
+            <Button Name="Dashboard" Command="{Binding Path=Dashboard,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="90" Height="90"  BorderThickness="0" Style="{StaticResource ButtonImage}">
                 <DockPanel HorizontalAlignment="Stretch" >
                     <Image Source="../../Images/dashboard-new.png" Stretch="Uniform" DockPanel.Dock="Top" Width="57" Height="57"/>
                     <Label Content="Dashboard" DockPanel.Dock="Bottom" VerticalAlignment="Center" FontFamily="Verdana" FontSize="12"/>

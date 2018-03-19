@@ -14,5 +14,6 @@ namespace InvoicePOSAPI.Models
         public byte[] LOGIN_TIME { get; set; }
         public string MAC_ADDRESS { get; set; }
         public string ROLE { get; set; }
+        public string EMPLOYEE_CODE { get; set; }
     }
 }

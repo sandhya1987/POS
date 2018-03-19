@@ -55,9 +55,6 @@
     <Compile Include="AUTHORIZATION.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="AUTHORIZATION_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,9 +65,6 @@
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="MODULE_RIGHTS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MODULE_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="POSDATA.Context.cs">
@@ -90,43 +84,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="schema_info.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="scope_config.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="scope_info.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_AUTO_GENERATE_CODE.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_AUTO_GENERATE_CODE_FOR_CUSTOMER_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_AUTO_GENERATE_CODE_FOR_LOYALTY.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_AUTO_GENERATE_CODE_FOR_LOYALTY_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_AUTO_GENERATE_CODE_FOR_PRODUCT.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_AUTO_GENERATE_CODE_FOR_PRODUCT_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_AUTO_GENERATE_CODE_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_AUTO_GENERATE_INVOICE_NO.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_AUTO_GENERATE_INVOICE_NO_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_BANK.cs">
@@ -135,40 +105,19 @@
     <Compile Include="TBL_BANK_ACCOUNT.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_BANK_ACCOUNT_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_BANK_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_BUSINESS_LOCATION.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_BUSINESS_LOCATION_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CASH_REG.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_CASH_REG_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_CATAGORY.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_CATAGORY_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CHEQUE.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_CHEQUE_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_COMPANY.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_COMPANY_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CUSTOMER.cs">
@@ -177,70 +126,34 @@
     <Compile Include="TBL_CUSTOMER_BILLING_ADDRESS.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_CUSTOMER_BILLING_ADDRESS_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_CUSTOMER_GROUP.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_CUSTOMER_GROUP_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_CUSTOMER_SHIPPING_ADDRESS.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_CUSTOMER_SHIPPING_ADDRESS_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_CUSTOMER_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_DEPARTMENT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_DEPARTMENT_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_DESIGNATION.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_DESIGNATION_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_EMAIL_SETTINGS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_EMAIL_SETTINGS_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_EMPLOYEE.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_EMPLOYEE_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_ESTIMATE1.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_ESTIMATE1_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_FINANCIAL.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_FINANCIAL_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_GODOWN.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_GODOWN_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_HOLD_INVOICE.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_HOLD_INVOICE_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_INVOICE.cs">
@@ -249,28 +162,13 @@
     <Compile Include="TBL_INVOICE_PAY.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_INVOICE_PAY_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_INVOICE_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_ITEMS.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_ITEMS_ATTRIBUTE.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_ITEMS_ATTRIBUTE_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_ITEMS_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_ITEM_LOCATION.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_ITEM_LOCATION_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_LOYALTY.cs">
@@ -279,40 +177,19 @@
     <Compile Include="TBL_LOYALTY_Exceedings.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_LOYALTY_Exceedings_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_LOYALTY_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_NEWCASHREGISTER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_NEWCASHREGISTER_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_OPENING_BALANCE.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_OPENING_BALANCE_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_OPENING_STOCK.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_OPENING_STOCK_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_ORDER.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_ORDER_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_PAYMENT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_PAYMENT_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_PO.cs">
@@ -321,22 +198,10 @@
     <Compile Include="TBL_PO_ITEMS.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_PO_ITEMS_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_PO_PAYMENT.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_PO_PAYMENT_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_PO_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_PURCHASE_ORDERS.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_PURCHASE_ORDERS_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_RECEIVE_ITEM.cs">
@@ -345,16 +210,7 @@
     <Compile Include="TBL_RECEIVE_ITEM_ITEMS.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_RECEIVE_ITEM_ITEMS_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_RECEIVE_ITEM_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_RECEIVE_PAYMENT.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_RECEIVE_PAYMENT_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_REPORT.cs">
@@ -363,58 +219,28 @@
     <Compile Include="TBL_REPORT_ADD.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_REPORT_ADD_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_REPORT_GROUP.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_REPORT_GROUP_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_REPORT_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_SALES_RETURN.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_SALES_RETURN_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_SALE_ITEM.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_SALE_ITEM_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_STOCK_TRANSFER.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_STOCK_TRANSFER_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_SUPPLIER.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_SUPPLIER_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="tbl_supppaydetails.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="tbl_supppaydetails_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_SUPP_PAYMENT.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_SUPP_PAYMENT_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_TAX.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_TAX_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_TRANSFER.cs">
@@ -423,34 +249,16 @@
     <Compile Include="TBL_TRANSFER_CASH.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_TRANSFER_CASH_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_TRANSFER_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_UNIT_MEASURING.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TBL_UNIT_MEASURING_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_USER.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_USER_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="TBL_VENDORS.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
-    <Compile Include="TBL_VENDORS_tracking.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
     <Compile Include="tmp_invoice.cs">
-      <DependentUpon>POSDATA.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tmp_invoice_tracking.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="VIEW_INVOICE.cs">
