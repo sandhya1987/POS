@@ -31,6 +31,7 @@ namespace InvoicePOS.UserControll.Customer
         public static TextBlock DebitLmt;
         public static TextBox CompanyList;
         public static TextBox BusinessList;
+        public static TextBlock CustID;
         public ViewLedger()
         {
             InitializeComponent();
@@ -58,7 +59,8 @@ namespace InvoicePOS.UserControll.Customer
             textbox5.Text = "";
             CompanyList = textbox5;
 
-            
+            custId.Text = "";
+            CustID = custId;
             
         }
 
@@ -92,6 +94,10 @@ namespace InvoicePOS.UserControll.Customer
 
                 ((UIElement)grid).Arrange(new Rect(new Point(0, 0),
                     oldSize));
+            }
+            else
+            {
+                MessageBox.Show("Please connect your printer");
             }
         }
 

@@ -213,7 +213,7 @@ namespace InvoicePOS.Models
         public DateTime ENDDATE { get; set; }
         public string CASH_REG { get; set; }
         public decimal TOTAL_SALERETURN { get; set; }
-        public decimal SALES_RETURN_AMOUNT { get; set; }
+        public decimal? SALES_RETURN_AMOUNT { get; set; }
 
 
     }

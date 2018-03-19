@@ -486,19 +486,59 @@ namespace InvoicePOS.ViewModels
             {
                 MessageBox.Show("MAX SPOT DISCOUNT Hierarchy Should not be Blank");
             }
-            
+            else if ((UserName != null) && (Password == null))
+            {
+                MessageBox.Show("Please enter Password");
+            }
+            else if ((UserName == null) && (Password != null))
+            {
+                MessageBox.Show("Please enter User Name");
+            }
             else
             {
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+
+                 SelectedEmployee.COMPANY_ID = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                if((UserName != null) && (Password != null))
+                {
+                    HttpResponseMessage response1 = client.GetAsync("api/LogInAPI/GetUser?id=" + SelectedEmployee.USER_NAME).Result;
+                    if (response1.IsSuccessStatusCode)
+                    {
+                        LogInModel logInModel = JsonConvert.DeserializeObject<LogInModel>(await response1.Content.ReadAsStringAsync());
+
+                        if (logInModel != null)
+                        {
+                            MessageBox.Show("Login ID" + logInModel.ROLE + " is not available");
+                            return;
+                        }
+                        else
+                        {
+                            LogInModel logInModel1 = new LogInModel();
+                            logInModel1.ROLE = UserName;
+                            logInModel1.PASSWORD = Cryptography.Encrypt(Password);
+                            logInModel1.EMPLOYEE_CODE = SelectedEmployee.EMPLOYEE_CODE;
+                            logInModel1.COMPANY_ID = SelectedEmployee.COMPANY_ID;
+                            logInModel1.CREATED_DATE = DateTime.Now.Date;
+
+                            HttpResponseMessage response2 = await client.PostAsJsonAsync("api/LogInAPI/CreateUser/", logInModel1);
+                            if (response2.StatusCode.ToString() != "OK")
+                            {
+                                MessageBox.Show("LogIn Information insertion fail");
+                                return;
+                            }
+                        }
+                    }
+                }
+
                 if (App.Current.Properties["AddEmpBussLocation"] != null)
                 {
                     SelectedEmployee.BUSINESS_LOCATION = App.Current.Properties["AddEmpBussLocation"].ToString();
                 }
-                HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
-                SelectedEmployee.COMPANY_ID = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
-                client.DefaultRequestHeaders.Accept.Add(
-                    new MediaTypeWithQualityHeaderValue("application/json"));
-                client.Timeout = new TimeSpan(500000000000);
+
                 var response = await client.PostAsJsonAsync("api/EmployeeAPI/EmployeeAdd/", SelectedEmployee);
                 if (response.StatusCode.ToString() == "OK")
                 {
@@ -510,6 +550,8 @@ namespace InvoicePOS.ViewModels
             }
 
         }
+
+
         public ICommand _UpdateEmployee { get; set; }
         public ICommand UpdateEmployee
         {
@@ -1491,7 +1533,7 @@ namespace InvoicePOS.ViewModels
             }
             //Cancel_Emp();
         }
-
+        
         public ICommand _AddDesignationClick { get; set; }
         public ICommand AddDesignationClick
         {
@@ -1534,7 +1576,73 @@ namespace InvoicePOS.ViewModels
 
         }
 
+        //Login section
+        private string _UserName;
+        public string UserName
+        {
+            get { return _UserName; }
+            set
+            {
+                if (_UserName != value)
+                {
+                    _UserName = value;
+                    OnPropertyChanged("UserName");
+                }
 
+            }
+        }
+
+        private string _Password;
+        public string Password
+        {
+            get { return _Password; }
+            set
+            {
+                if (_Password != value)
+                {
+                    _Password = value;
+                    OnPropertyChanged("Password");
+                }
+
+            }
+        }
+
+        public ICommand _CheckInID { get; set; }
+        public ICommand CheckInID
+        {
+            get
+            {
+                if (_CheckInID == null)
+                {
+                    _CheckInID = new DelegateCommand(CheckInID_Click);
+                }
+                return _CheckInID;
+            }
+        }
+
+        public async void CheckInID_Click()
+        {
+            LogInModel logInModel;
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            client.Timeout = new TimeSpan(500000000000);
+            HttpResponseMessage response = client.GetAsync("api/LogInAPI/GetUser?id=" + UserName ).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                logInModel = JsonConvert.DeserializeObject<LogInModel>(await response.Content.ReadAsStringAsync());
+                if (logInModel != null)
+                {
+                    MessageBox.Show("This User ID already exists.");
+                }
+                else
+                {
+                    MessageBox.Show("This User ID is available.");
+                }
+            }
+        }
+        //LogIn section
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)

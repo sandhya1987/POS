@@ -72,5 +72,6 @@
         </DataGrid>
         <Button Content="{x:Static p:Resources.String536}" HorizontalAlignment="Left" Margin="500,460,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button Content="{x:Static p:Resources.label23}" Command="{Binding Cancel}" HorizontalAlignment="Left" Margin="610,460,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="custId" Visibility="Hidden" HorizontalAlignment="Left" Margin="95,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
     </Grid>
 </Window>

@@ -6,91 +6,131 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  WindowStartupLocation="CenterScreen"
              xmlns:number="clr-namespace:InvoicePOS.Helpers"
              xmlns:p="clr-namespace:InvoicePOS.Properties"
-             mc:Ignorable="d" Height="469.402" Width="957.463">
+             xmlns:c="clr-namespace:System.Windows.Controls;assembly=PresentationFramework" 
+             xmlns:w="clr-namespace:InvoicePOS.Helpers" 
+             mc:Ignorable="d" Height="600.402" Width="957.463">
     <Window.InputBindings>
         <KeyBinding Key="Enter" Command="{Binding CreatVisible}"/>
         <KeyBinding Key="Enter" Command="{Binding UpdVisible}"/>
         <KeyBinding Key="Escape" Command="{Binding Cancel}"/>
     </Window.InputBindings>
-
-    <Grid Margin="0,0,2,-5" >
-        <Border Background="#90000000" Margin="0,0,10,10">
-            <Grid Background="#ffffff" Margin="10,0,-10,15">
-                <!--<Button Content="Button"  Command="{Binding Path=InsertEmployee,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" Margin="834,11,0,0" VerticalAlignment="Top" Width="75"/>-->
-                <TextBox HorizontalAlignment="Left"  Text="{Binding SelectedEmployee.EMPLOYEE_CODE}" Height="23" Margin="164,7,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="71,10,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String603}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="97,41,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String604}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="85,69,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String605}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="88,129,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String792}" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="164,68,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.MIDDLE_NAME}" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="164,38,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.FIRST_NAME,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="130,156,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String606}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="81,185,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String607}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="115,218,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String608}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="89,249,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String609}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="60,274,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label197}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="95,302,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String585}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="36,330,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String610}" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="164,126,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.SEARCH_CODE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <DatePicker HorizontalAlignment="Left" x:Name="dtpick"  Margin="164,152,0,0" VerticalAlignment="Top" SelectedDate="{Binding SelectedEmployee.DOB}" />
+    <!--<Border Background="#90000000" Margin="0,0,10,10">-->
+        <Grid  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Margin="0,0,2,-5" Grid.Row="0">
+                    <Grid Background="#ffffff" Margin="10,0,-10,15">
+                        <!--<Button Content="Button"  Command="{Binding Path=InsertEmployee,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" Margin="834,11,0,0" VerticalAlignment="Top" Width="75"/>-->
+                        <TextBox HorizontalAlignment="Left"  Text="{Binding SelectedEmployee.EMPLOYEE_CODE}" Height="23" Margin="164,7,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="71,10,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String603}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="97,41,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String604}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="85,69,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String605}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="88,129,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String792}" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="164,68,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.MIDDLE_NAME}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="164,38,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.FIRST_NAME,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="130,156,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String606}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="81,185,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String607}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="115,218,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String608}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="89,249,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String609}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="60,274,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label197}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="95,302,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String585}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="36,330,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String610}" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="164,126,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.SEARCH_CODE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <DatePicker HorizontalAlignment="Left" x:Name="dtpick"  Margin="164,152,0,0" VerticalAlignment="Top" SelectedDate="{Binding SelectedEmployee.DOB}" />
                   
               
-                <!--<DatePicker HorizontalAlignment="Left" Margin="166,245,0,0" VerticalAlignment="Top"  SelectedDate="{Binding DATE_OF_JOIN}"/>-->
-                <DatePicker HorizontalAlignment="Left" x:Name="dtpick1" SelectedDate="{Binding SelectedEmployee.DATE_OF_JOIN}"  Margin="164,245,0,0" VerticalAlignment="Top"  />
-                <ComboBox HorizontalAlignment="Left" Margin="164,185,0,0" Text="{Binding Path=MARITAL_STATUS}"  ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120">
-                    <ComboBoxItem Content="{x:Static p:Resources.String611}"/>
-                    <ComboBoxItem Content="{x:Static p:Resources.String612}"/>
-               </ComboBox>
-                <ComboBox HorizontalAlignment="Left" Margin="164,212,0,0" Text="{Binding Path=GENDER}"  ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120">
-                    <ComboBoxItem Content="{x:Static p:Resources.String613}"/>
-                    <ComboBoxItem Content="{x:Static p:Resources.String614}"/>
-                </ComboBox>
-                <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="164,274,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.BUSINESS_LOCATION}" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="Dep" HorizontalAlignment="Left" Height="23" Margin="164,302,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.DEPARTMENT,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBox x:Name="Deg" HorizontalAlignment="Left" Height="23" Margin="164,330,0,0" TextWrapping="Wrap" Text="{Binding SelectedEmployee.EMPLOYEE_DESIGNATION,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <CheckBox Content="{x:Static p:Resources.String615}" IsChecked="{Binding IS_REQUEST_VAI_SMS,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="346,234,0,0" VerticalAlignment="Top"/>
-                <CheckBox Content="{x:Static p:Resources.String616}" IsChecked="{Binding IS_APPROVE_ACCESS_VAI_SMS,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="346,254,0,0" VerticalAlignment="Top"/>
-                <CheckBox Content="{x:Static p:Resources.String617}" HorizontalAlignment="Left" IsChecked="{Binding IS_NOT_AN_EMPLOYEE,UpdateSourceTrigger=PropertyChanged}" Margin="346,275,0,0" VerticalAlignment="Top"/>
-                <CheckBox Content="{x:Static p:Resources.String618}" HorizontalAlignment="Left" IsChecked="{Binding IS_APPOINTMENT,UpdateSourceTrigger=PropertyChanged}" Margin="346,295,0,0" VerticalAlignment="Top"/>
-                <CheckBox Content="{x:Static p:Resources.String619}" HorizontalAlignment="Left" IsChecked="{Binding SelectedEmployee.IS_ATTACHED_INVOICE,UpdateSourceTrigger=PropertyChanged}" Margin="346,312,0,0" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="390,17,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.ADDRESS_1,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="390,52,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.ADDRESS_2,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="390,119,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.CITY,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="390,84,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.STATE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="329,17,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1407}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="329,52,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1408}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="358,119,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label61}" VerticalAlignment="Top" RenderTransformOrigin="6.66,1.522"/>
-                <TextBlock HorizontalAlignment="Left" Margin="347,83,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label67}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"> </TextBlock>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="390,152,0,0" TextWrapping="Wrap"  Text="{Binding PIN_NO,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="361,152,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String620}" VerticalAlignment="Top" RenderTransformOrigin="2.155,0.416"/>
-                <TextBox HorizontalAlignment="Left" number:TextBoxInteger.IsNumeric="True" Height="23" Margin="625,24,0,0" TextWrapping="Wrap"  Text="{Binding TELEPHONE_NO}" VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="550,31,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1409}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="568,59,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String621}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="585,93,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String622}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="358,185,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label66}" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="391,180,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.EMAIL}" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" number:TextBoxInteger.IsNumeric="True" Height="23" Margin="625,58,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.MOBILE_NO}" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="625,86,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.FAX_NO}" VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="560,123,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String623}" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="624,121,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.WEBSITE}" VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="530,150,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String624}" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="626,150,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.WORKING_SHIFT}" VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="602,212,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String625}" VerticalAlignment="Top"/>
-                <TextBlock HorizontalAlignment="Left" Margin="602,245,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String626}" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="164,99,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.LAST_NAME,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="98,102,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label128}" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="774,212,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.SALES_PERCENT,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="774,245,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.COMMISSION_QUICK_POSITION,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="774,275,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.MAX_SPOT_DISCOUNT,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-                <TextBlock HorizontalAlignment="Left" Margin="614,274,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String627}" VerticalAlignment="Top"/>
-                <Button Content="{x:Static p:Resources.label171}"  Visibility="{Binding CreatVisible}" Command="{Binding Path=InsertEmployee,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" Margin="669,367,0,0" VerticalAlignment="Top" Width="75" Height="53"/>
-                <Button Content="{x:Static p:Resources.label120}" Visibility="{Binding UpdVisible}" Command="{Binding UpdateEmployee, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="759,367,0,0" VerticalAlignment="Top" Width="75" Height="53"/>
-                <Button Content="{x:Static p:Resources.label13}"   Command="{Binding Cancel, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="843,367,0,0" VerticalAlignment="Top" Width="75" Height="53"/>
-                <Button Content="{x:Static p:Resources.lablel6}" Command="{Binding AddDepartmentClick}" HorizontalAlignment="Left" Margin="284,303,0,0" VerticalAlignment="Top" Width="20"/>
-                <Button Content="{x:Static p:Resources.lablel6}" Command="{Binding AddDesignationClick}" HorizontalAlignment="Left" Margin="284,331,0,0" VerticalAlignment="Top" Width="20"/>
-                <Button Content="{x:Static p:Resources.lablel6}" Command="{Binding BusinessLocationClick}" HorizontalAlignment="Left" Margin="284,274,0,0" VerticalAlignment="Top" Width="20"/>
+                        <!--<DatePicker HorizontalAlignment="Left" Margin="166,245,0,0" VerticalAlignment="Top"  SelectedDate="{Binding DATE_OF_JOIN}"/>-->
+                        <DatePicker HorizontalAlignment="Left" x:Name="dtpick1" SelectedDate="{Binding SelectedEmployee.DATE_OF_JOIN}"  Margin="164,245,0,0" VerticalAlignment="Top"  />
+                        <ComboBox HorizontalAlignment="Left" Margin="164,185,0,0" Text="{Binding Path=MARITAL_STATUS}"  ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120">
+                            <ComboBoxItem Content="{x:Static p:Resources.String611}"/>
+                            <ComboBoxItem Content="{x:Static p:Resources.String612}"/>
+                       </ComboBox>
+                        <ComboBox HorizontalAlignment="Left" Margin="164,212,0,0" Text="{Binding Path=GENDER}"  ItemsSource="{Binding UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120">
+                            <ComboBoxItem Content="{x:Static p:Resources.String613}"/>
+                            <ComboBoxItem Content="{x:Static p:Resources.String614}"/>
+                        </ComboBox>
+                        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="164,274,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.BUSINESS_LOCATION}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="Dep" HorizontalAlignment="Left" Height="23" Margin="164,302,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.DEPARTMENT,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox x:Name="Deg" HorizontalAlignment="Left" Height="23" Margin="164,330,0,0" TextWrapping="Wrap" Text="{Binding SelectedEmployee.EMPLOYEE_DESIGNATION,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <CheckBox Content="{x:Static p:Resources.String615}" IsChecked="{Binding IS_REQUEST_VAI_SMS,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="346,234,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="{x:Static p:Resources.String616}" IsChecked="{Binding IS_APPROVE_ACCESS_VAI_SMS,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="346,254,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="{x:Static p:Resources.String617}" HorizontalAlignment="Left" IsChecked="{Binding IS_NOT_AN_EMPLOYEE,UpdateSourceTrigger=PropertyChanged}" Margin="346,275,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="{x:Static p:Resources.String618}" HorizontalAlignment="Left" IsChecked="{Binding IS_APPOINTMENT,UpdateSourceTrigger=PropertyChanged}" Margin="346,295,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="{x:Static p:Resources.String619}" HorizontalAlignment="Left" IsChecked="{Binding SelectedEmployee.IS_ATTACHED_INVOICE,UpdateSourceTrigger=PropertyChanged}" Margin="346,312,0,0" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="390,17,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.ADDRESS_1,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="390,52,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.ADDRESS_2,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="390,119,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.CITY,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="390,84,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.STATE,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="329,17,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1407}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="329,52,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1408}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="358,119,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label61}" VerticalAlignment="Top" RenderTransformOrigin="6.66,1.522"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="347,83,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label67}" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"> </TextBlock>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="390,152,0,0" TextWrapping="Wrap"  Text="{Binding PIN_NO,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="361,152,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String620}" VerticalAlignment="Top" RenderTransformOrigin="2.155,0.416"/>
+                        <TextBox HorizontalAlignment="Left" number:TextBoxInteger.IsNumeric="True" Height="23" Margin="625,24,0,0" TextWrapping="Wrap"  Text="{Binding TELEPHONE_NO}" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="550,31,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String1409}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="568,59,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String621}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="585,93,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String622}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="358,185,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label66}" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="391,180,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.EMAIL}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" number:TextBoxInteger.IsNumeric="True" Height="23" Margin="625,58,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.MOBILE_NO}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="625,86,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.FAX_NO}" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="560,123,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String623}" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="624,121,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.WEBSITE}" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="530,150,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String624}" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="626,150,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.WORKING_SHIFT}" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="602,212,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String625}" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="602,245,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String626}" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="164,99,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.LAST_NAME,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="98,102,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.label128}" VerticalAlignment="Top"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="774,212,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.SALES_PERCENT,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="774,245,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.COMMISSION_QUICK_POSITION,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBox HorizontalAlignment="Left" Height="23" Margin="774,275,0,0" TextWrapping="Wrap"  Text="{Binding SelectedEmployee.MAX_SPOT_DISCOUNT,  ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="614,274,0,0" TextWrapping="Wrap" Text="{x:Static p:Resources.String627}" VerticalAlignment="Top"/>
+                        <Button Content="{x:Static p:Resources.lablel6}" Command="{Binding AddDepartmentClick}" HorizontalAlignment="Left" Margin="284,303,0,0" VerticalAlignment="Top" Width="20"/>
+                        <Button Content="{x:Static p:Resources.lablel6}" Command="{Binding AddDesignationClick}" HorizontalAlignment="Left" Margin="284,331,0,0" VerticalAlignment="Top" Width="20"/>
+                        <Button Content="{x:Static p:Resources.lablel6}" Command="{Binding BusinessLocationClick}" HorizontalAlignment="Left" Margin="284,274,0,0" VerticalAlignment="Top" Width="20"/>
 
+                    </Grid>
             </Grid>
-        </Border>
-    </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <GroupBox Header="Login Details">
+                        <Grid>
+                            <TextBlock Text="User Name :" Margin="50,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20"></TextBlock>
+                            <TextBox Text="{Binding UserName}" Margin="130,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="150"></TextBox>
+                            <Button Command="{Binding CheckInID}" Margin="300,10,0,0" Content="Check ID" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="80"></Button>
+                            <TextBlock Text="Password :" Margin="60,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20"></TextBlock>
+                            <!--<TextBox  Text="{Binding Password}" Margin="130,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="150"></TextBox>-->
+                            <c:PasswordBox Name="textBox1"  
+                                   PasswordChar="*"  
+                                   Margin="130,40,0,0"  
+                                   Height="20" 
+                                   VerticalAlignment="Top" 
+                                   Width="150" 
+                                   HorizontalAlignment="Left"
+                                   w:PasswordBoxHelper.Password="{Binding Password,Mode=TwoWay}">
+                            </c:PasswordBox>
+                            <CheckBox Content="Is Active" Margin="130,70,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"></CheckBox>
+                            <CheckBox  Margin="130,90,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300">
+                                <TextBlock Text="Can not Login without Administrator Permission(Need Active Session)" TextWrapping="Wrap"></TextBlock>
+                            </CheckBox>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Button Content="{x:Static p:Resources.label171}"  Visibility="{Binding CreatVisible}" Command="{Binding Path=InsertEmployee,UpdateSourceTrigger=PropertyChanged }" HorizontalAlignment="Left" Margin="600,5,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
+                <Button Content="{x:Static p:Resources.label120}" Visibility="{Binding UpdVisible}" Command="{Binding UpdateEmployee, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="700,5,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
+                <Button Content="{x:Static p:Resources.label13}"   Command="{Binding Cancel, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="800,5,0,0" VerticalAlignment="Top" Width="75" Height="33"/>
+            </Grid>
+        </Grid>
+    <!--</Border>-->
 </Window>
