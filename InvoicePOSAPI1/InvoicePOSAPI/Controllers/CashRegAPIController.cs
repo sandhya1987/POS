@@ -175,11 +175,11 @@ namespace InvoicePOSAPI.Controllers
                        join a in db.TBL_RECEIVE_PAYMENT on b.CASH_REGISTERID equals a.CASH_REGISTERID
                        join c in db.TBL_TRANSFER_CASH on a.CASH_REGISTERID equals c.CASH_REGISTERID_FROM
                        join d in db.TBL_NEWCASHREGISTER on c.CASH_REGISTERID_FROM equals d.CASH_REGISTERID
-                       where a.COMPANY_ID == id 
+                       where a.COMPANY_ID == id && a.IS_DELETE==false
                    
                        select new CashRegModel
                       {
-
+                          
                           //BUSINESS_LOCATION = a.BUSINESS_LOCATION,
                           //TRANSFER_ID = c.TRANSFER_ID,
                           //TRANSFER_DATE=b.INVOICE_DATE,

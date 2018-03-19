@@ -1241,6 +1241,7 @@ namespace InvoicePOS.ViewModels
                 SelectedItem.CASH_REGISTERID_FROM = Convert.ToInt32(App.Current.Properties["CASH_REGISTERID_FROM"]);
                 SelectedItem.CASH_REGISTERID_TO = Convert.ToInt32(App.Current.Properties["CASH_REGISTERID_TO"]);
                 //SelectedItem.COMPANY_ID = 1;
+                SelectedItem.COMPANY_ID = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 client.Timeout = new TimeSpan(500000000000);
