@@ -2257,13 +2257,13 @@ namespace InvoicePOS.ViewModels
                 InvoicePOS.UserControll.Customer.ViewLedger.DebitLmt.Text = SelectedCustomer.DEFAULT_CREIT_LIMIT.ToString();
                 InvoicePOS.UserControll.Customer.ViewLedger.BusinessList.Text = SelectedCustomer.BUSINESS_LOCATION;
                 InvoicePOS.UserControll.Customer.ViewLedger.CompanyList.Text = SelectedCustomer.COMPANY_NAME;
-                //InvoicePOS.UserControll.Customer.ViewLedger.CustID.Text = SelectedCustomer.CUSTOMER_ID.ToString();
+                InvoicePOS.UserControll.Customer.ViewLedger.CustID.Text = SelectedCustomer.CUSTOMER_ID.ToString();
             }
-            /*if (InvoicePOS.UserControll.Customer.ViewLedger.CustID.Text != null)
+            if (InvoicePOS.UserControll.Customer.ViewLedger.CustID.Text != null)
             {
                 App.Current.Properties["Customer_Id"] = InvoicePOS.UserControll.Customer.ViewLedger.CustID.Text;
 
-            }*/
+            }
             var comp = Convert.ToInt32(App.Current.Properties["Customer_Id"].ToString());
             GetInvoice(comp);            
             sh.DataContext = this;
@@ -3171,7 +3171,7 @@ namespace InvoicePOS.ViewModels
                             TOTAL_AMOUNT = datainvoice[i].TOTAL_AMOUNT,
                             TOTAL_TAX = datainvoice[i].TOTAL_TAX,
                             DEBIT_AMOUNT = (Convert.ToDecimal(datainvoice[i].RECIVED_AMOUNT)),
-                            CREDIT_AMOUNT = (Convert.ToDecimal(datainvoice[i].RETURNABLE_AMOUNT)),
+                            CREDIT_AMOUNT = (Convert.ToDecimal(datainvoice[i].PENDING_AMOUNT)),
                             TRANSACTION_DATE = datainvoice[i].INVOICE_DATE
                         });
                     }

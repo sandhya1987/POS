@@ -475,6 +475,7 @@ namespace InvoicePOSAPI.Controllers
                 {
                     var str1 = db.VIEW_INVOICE;
                     var str = (from a in db.VIEW_INVOICE
+                               where a.CUSTOMER_ID == id
                                //where a.SALES_RETURN_AMOUNT != null || a.SALES_RETURN_AMOUNT!=0
                                select new InvoiceModel
                                {
@@ -506,7 +507,7 @@ namespace InvoicePOSAPI.Controllers
                                    TOTAL_TAX = a.TOTAL_TAX,
                                    //if(a.SALES_RETURN_AMOUNT!=null)
 
-                                   SALES_RETURN_AMOUNT = a.SALES_RETURN_AMOUNT,
+                                   SALES_RETURN_AMOUNT = a.SALES_RETURN_AMOUNT.Value,
 
                                }).ToList();
                     return Request.CreateResponse(HttpStatusCode.OK, str);

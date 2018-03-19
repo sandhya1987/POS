@@ -29,6 +29,7 @@ namespace InvoicePOS.UserControll.Supplier
         public static TextBlock DebitLmt;
         public static TextBox CompanyList;
         public static TextBox BusinessList;
+        public static TextBlock SuppId;
         public SupplierViewLedger()
         {
             InitializeComponent();
@@ -54,6 +55,9 @@ namespace InvoicePOS.UserControll.Supplier
 
             textbox5.Text = "";
             CompanyList = textbox5;
+
+            suppId.Text = "";
+            SuppId = suppId;
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -86,6 +90,11 @@ namespace InvoicePOS.UserControll.Supplier
                 ((UIElement)grid).Arrange(new Rect(new Point(0, 0),
                     oldSize));
             }
+            else 
+            {
+                MessageBox.Show("Please connect your printer");
+            }
+
         }
     }
 }

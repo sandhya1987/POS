@@ -1779,13 +1779,13 @@ namespace InvoicePOS.ViewModels
                 InvoicePOS.UserControll.Supplier.SupplierViewLedger.DebitLmt.Text = SelectedSupplier.DEFAULT_CREIT_LIMIT.ToString();
                 InvoicePOS.UserControll.Supplier.SupplierViewLedger.BusinessList.Text = SelectedSupplier.BUSINESS_LOCATION;
                 InvoicePOS.UserControll.Supplier.SupplierViewLedger.CompanyList.Text = SelectedSupplier.COMPANY_NAME;
-                //InvoicePOS.UserControll.Supplier.SupplierViewLedger.SuppId.Text = SelectedSupplier.SUPPLIER_ID.ToString();
+                InvoicePOS.UserControll.Supplier.SupplierViewLedger.SuppId.Text = SelectedSupplier.SUPPLIER_ID.ToString();
             }
-            /*if (InvoicePOS.UserControll.Supplier.SupplierViewLedger.SuppId.Text != null)
+            if (InvoicePOS.UserControll.Supplier.SupplierViewLedger.SuppId.Text != null)
             {
                 App.Current.Properties["Supplier_Id"] = InvoicePOS.UserControll.Supplier.SupplierViewLedger.SuppId.Text;
 
-            }*/
+            }
             var comp = Convert.ToInt32(App.Current.Properties["Supplier_Id"].ToString());
             GetSupplierFilterSearch(comp);
             sh.DataContext = this;

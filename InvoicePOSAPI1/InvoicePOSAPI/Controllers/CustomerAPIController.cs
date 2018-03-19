@@ -126,12 +126,13 @@ namespace InvoicePOSAPI.Controllers
                 if (conn)
                 {
                     var str1 = (from p in db.TBL_CUSTOMER
-                                join q in db.TBL_INVOICE_PAY on p.CUSTOMER_ID equals q.CUSTOMER_ID
-                                group q by q.CUSTOMER_ID into grps
+                                join q in db.TBL_INVOICE_PAY on p.CUSTOMER_ID equals q.CUSTOMER_ID 
+                                where q.CUSTOMER_ID == id
+                                group q by q.CUSTOMER_ID into grps                                
                                 select new CustomerModel
                                 {
 
-                                    CREDIT_AMOUNT = grps.Sum(x => x.RETURNABLE_AMOUNT.Value),
+                                    CREDIT_AMOUNT = grps.Sum(x => x.PENDING_AMOUNT.Value),
                                     DEBIT_AMOUNT = grps.Sum(x => x.RECIVED_AMOUNT.Value),
                                     COMPANY_ID = 1,
                                     NAME = "",
