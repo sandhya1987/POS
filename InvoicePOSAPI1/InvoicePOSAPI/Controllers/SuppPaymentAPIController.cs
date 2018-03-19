@@ -32,7 +32,7 @@ namespace InvoicePOSAPI.Controllers
                 if (conn)
                 {
                     var str = (from a in db.TBL_SUPP_PAYMENT
-                               where a.COMPANY_ID == id && a.IS_DELETE == false
+                               where a.SUPP_ID == id && a.IS_DELETE == false
                                select new SuppPaymentModel
                                {
                                    SUPP_PAYMENT = a.SUPP_PAYMENT,
@@ -190,7 +190,7 @@ namespace InvoicePOSAPI.Controllers
 
 
         [HttpGet]
-        public HttpResponseMessage GetSuppPaymentDetailsafterpayment(int supid)
+        public HttpResponseMessage GetSuppPaymentDetailsafterpayment(int id)
         {
             try
             {
@@ -204,16 +204,18 @@ namespace InvoicePOSAPI.Controllers
 
                 if (conn)
                 {
-                    var str = (from a in db.tbl_supppaydetails
-
-                               where a.Supp_ID == supid
+                    var str = (from b in db.TBL_SUPPLIER
+                               join a in db.TBL_SUPP_PAYMENT on b.SUPPLIER_ID equals a.SUPP_ID
+                               where a.SUPP_ID == id
+                               group a by a.SUPP_ID into grps
                                select new SuppPaymentModel
                                {
+                                   CREDIT_AMOUNT = grps.Sum(x => x.PENDING_AMT.Value),
+                                   DEBIT_AMOUNT = grps.Sum(x => x.CURRENT_PAYMENT.Value),
 
-
-                                   PENDING_AMT = a.pendingamoun,
-                                   ROUND_OFF_ADJUSTMENTAMT = a.adjustedamount,
-                                   TOTAL_AMT = a.totalamount,
+                                   //PENDING_AMT = a.pendingamoun,
+                                   //ROUND_OFF_ADJUSTMENTAMT = a.adjustedamount,
+                                   //TOTAL_AMT = a.totalamount,
 
                                    SUPP_PAYMENT = 1,
                                    SUPP = "11",
