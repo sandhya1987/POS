@@ -32,5 +32,25 @@ namespace InvoicePOS.UserControll.CashReg
             //BussRef = txtbusloc;
         }
 
+        public void FormDateChanged(object sender, EventArgs e)
+        {
+            CashRegViewModel viewModel = (CashRegViewModel)DataContext;
+            if (viewModel._APPLY_DATE_CHANGE != null)
+            {
+                if (viewModel._APPLY_DATE_CHANGE.CanExecute(showInDateRange.IsChecked))
+                    viewModel._APPLY_DATE_CHANGE.Execute(showInDateRange.IsChecked);
+            }
+
+        }
+
+        public void ToDateChanged(object sender, EventArgs e)
+        {
+            CashRegViewModel viewModel = (CashRegViewModel)DataContext;
+            if (viewModel._APPLY_DATE_CHANGE != null)
+            {
+                if (viewModel._APPLY_DATE_CHANGE.CanExecute(showInDateRange.IsChecked))
+                    viewModel._APPLY_DATE_CHANGE.Execute(showInDateRange.IsChecked);
+            }
+        }
     }
 }

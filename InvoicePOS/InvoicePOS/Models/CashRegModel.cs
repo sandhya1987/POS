@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InvoicePOS.Models
 {
-    public class CashRegModel : IDataErrorInfo
+    public class CashRegModel : IDataErrorInfo, INotifyPropertyChanged
     {
         public long CASH_REGISTERID { get; set; }
         // public long BUSINESS_LOCATION_ID { get; set; }
@@ -38,8 +38,35 @@ namespace InvoicePOS.Models
         public decimal SUBMITTED_CASH { get; set; }
         public decimal CURRENT_REMAIN { get; set; }
         public string STATUS { get; set; }
-        public DateTime FROM_DATE { get; set; }
-        public DateTime TO_DATE { get; set; }
+        private DateTime _FROM_DATE;
+        public DateTime FROM_DATE
+        {
+            get { return _FROM_DATE; }
+            set
+            {
+                if (_FROM_DATE != value)
+                {
+                    _FROM_DATE = value;
+
+                    NotifyPropertyChanged("FROM_DATE");
+                }
+            }
+        }
+        public DateTime _TO_DATE;
+        public DateTime TO_DATE
+        {
+            get { return _TO_DATE; }
+            set
+            {
+                if (_TO_DATE != value)
+                {
+                    _TO_DATE = value;
+
+                    NotifyPropertyChanged("TO_DATE");
+                }
+            }
+        }
+
         public decimal CREDIT_TOTAL { get; set; }
         public decimal DEBIT_TOTAL { get; set; }
         public decimal NET_TOTAL { get; set; }
@@ -101,5 +128,12 @@ namespace InvoicePOS.Models
             }
         }
 
+        private void RaisePropertyChanged(string property)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
+            }
+        }
     }
 }

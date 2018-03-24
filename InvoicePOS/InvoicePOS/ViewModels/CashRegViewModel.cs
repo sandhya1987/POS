@@ -98,6 +98,7 @@ namespace InvoicePOS.ViewModels
                     App.Current.Properties["CASH_REG_NAME"] = SelectedItem.CASH_REG_NAME;
                     App.Current.Properties["CASH_REG_NAME_BUSINESS"] = SelectedItem.CASH_REG_NAME;
                     OnPropertyChanged("SelectedItem");
+                    NotifyPropertyChanged("SelectedItem");
                 }
             }
         }
