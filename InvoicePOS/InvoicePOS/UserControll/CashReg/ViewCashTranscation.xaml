@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ViewCashTranscation" Height="526" Width="909">
+        Title="ViewCashTranscation" Height="626" Width="1109">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="15,107,0,0" TextWrapping="Wrap" Text="From Date :" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="132,142,0,0" TextWrapping="Wrap" Text="{Binding OPENING_BALANCE}" VerticalAlignment="Top"/>
@@ -12,7 +12,7 @@
         <DatePicker x:Name="frmDate"
     HorizontalAlignment="Left"
     SelectedDate="{Binding
-        Path=FROM_DATE,
+        Path=SelectedItem.FROM_DATE,
         Mode=TwoWay, 
         TargetNullValue={x:Static System:DateTime.Now}}"
     Margin="94,101,0,0" 
@@ -22,13 +22,13 @@
         <DatePicker x:Name="toDate"
     HorizontalAlignment="Left"
     SelectedDate="{Binding
-        Path=TO_DATE,
+        Path=SelectedItem.TO_DATE,
         Mode=TwoWay, 
         TargetNullValue={x:Static System:DateTime.Now}}"
     Margin="315,100,0,0" 
     VerticalAlignment="Top" 
     Width="120" />
-        <DataGrid  SelectionMode="Extended"   RowHeight="35" Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1" IsReadOnly="True"   AutoGenerateColumns="False" ItemsSource="{Binding Path=ListGridItemPurchase ,Mode=TwoWay, AsyncState=true,  NotifyOnTargetUpdated=True,NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"   Name="dataGrid1" Margin="5,173,1,-1"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" ColumnWidth="*" EnableRowVirtualization="false" EnableColumnVirtualization="false" CanUserAddRows="False" CanUserReorderColumns="False">
+        <DataGrid  SelectionMode="Extended"   RowHeight="35" Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1" IsReadOnly="True"   AutoGenerateColumns="False" ItemsSource="{Binding Path=ListGridTransaction ,Mode=TwoWay, AsyncState=true,  NotifyOnTargetUpdated=True,NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"   Name="dataGrid1" Margin="5,173,1,-1"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" ColumnWidth="*" EnableRowVirtualization="false" EnableColumnVirtualization="false" CanUserAddRows="False" CanUserReorderColumns="False">
             <DataGrid.Style>
                 <Style TargetType="DataGrid">
                     <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
@@ -52,13 +52,13 @@
             </DataGrid.RowStyle>
 
             <DataGrid.Columns>
-                <DataGridTextColumn    Header="Transcation Date:" Binding="{Binding BUSINESS_LOC}" Width="120" />
-                <DataGridTextColumn    Header="Transcation Type:" Binding="{Binding BUSINESS_LOC}" Width="120" />
-                <DataGridTextColumn    Header="Currency Type:" Binding="{Binding RECEIVE_ITEM_ENTRY_NO}" Width="120"/>
-                <DataGridTextColumn    Header="Credit Amount:" Binding="{Binding RECEIVE_ITEM_ENTRY_DATE}" Width="120"/>
-                <DataGridTextColumn    Header="Debit Amount:" Binding="{Binding SUPPLIER_NAME}" Width="120"/>
-                <DataGridTextColumn    Header="Creator:" Binding="{Binding SUPPLIER_NAME}" Width="120"/>
-                <DataGridTextColumn    Header="Naration Text:" Binding="{Binding SUPPLIER_NAME}" Width="120"/>
+                <DataGridTextColumn    Header="Transcation Date:" Binding="{Binding TRANSACTION_DATE}" Width="120" />
+                <DataGridTextColumn    Header="Transcation Type:" Binding="{Binding TRANSACTION_TYPE}" Width="120" />
+                <DataGridTextColumn    Header="Currency Type:" Binding="{Binding CURRENCY_TYPE}" Width="120"/>
+                <DataGridTextColumn    Header="Credit Amount:" Binding="{Binding CREDIT_AMOUNT}" Width="120"/>
+                <DataGridTextColumn    Header="Debit Amount:" Binding="{Binding DEBIT_AMOUNT}" Width="120"/>
+                <DataGridTextColumn    Header="Creator:" Binding="{Binding CREATOR}" Width="120"/>
+                <DataGridTextColumn    Header="Naration Text:" Binding="{Binding NARRATION_TEXT}" Width="370"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Command="{Binding APPLY_DATE_CHANGE}" Content="--" HorizontalAlignment="Left" Margin="449,105,0,0" VerticalAlignment="Top" Width="22" Height="17"/>
@@ -69,14 +69,14 @@
         <Label Content="Debit Total :" HorizontalAlignment="Left" Margin="432,36,0,0" VerticalAlignment="Top"/>
         <Label Content="Net Total :" HorizontalAlignment="Left" Margin="440,62,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="textBoxbus" Text="{Binding selectedItem.BUSINESS_LOCATION, ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="173,43,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtbusloc" Text="{Binding selectedItem.BUSINESS_LOCATION, ValidatesOnDataErrors=True,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="173,16,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxbus" Text="{Binding SelectedItem.CASH_REG_NAME,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="173,43,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtbusloc" Text="{Binding SelectedItem.BUSINESS_LOCATION, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="173,16,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
         <!--<Button Content="Button" HorizontalAlignment="Left" Margin="430,15,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="360,15,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="295,15,0,0" VerticalAlignment="Top" Width="45" Height="30"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="230,15,0,0" VerticalAlignment="Top" Width="45" Height="30"/>-->
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="579,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="579,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="579,38,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="579,15,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.CREDIT_TOTAL}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="579,62,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.NET_TOTAL}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="579,38,0,0" TextWrapping="Wrap" Text="{Binding SelectedItem.DEBIT_TOTAL}" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

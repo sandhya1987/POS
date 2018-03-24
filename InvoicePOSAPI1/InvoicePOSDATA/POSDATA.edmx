@@ -19,6 +19,7 @@
           <EntitySet Name="TBL_CASH_REG" EntityType="NEW_POS_DBModel.Store.TBL_CASH_REG" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_CATAGORY" EntityType="NEW_POS_DBModel.Store.TBL_CATAGORY" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_CHEQUE" EntityType="NEW_POS_DBModel.Store.TBL_CHEQUE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TBL_COMPANIES" EntityType="NEW_POS_DBModel.Store.TBL_COMPANIES" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_COMPANY" EntityType="NEW_POS_DBModel.Store.TBL_COMPANY" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_CUSTOMER" EntityType="NEW_POS_DBModel.Store.TBL_CUSTOMER" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_CUSTOMER_BILLING_ADDRESS" EntityType="NEW_POS_DBModel.Store.TBL_CUSTOMER_BILLING_ADDRESS" store:Type="Tables" Schema="dbo" />
@@ -51,6 +52,7 @@
           <EntitySet Name="TBL_RECEIVE_ITEM" EntityType="NEW_POS_DBModel.Store.TBL_RECEIVE_ITEM" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_RECEIVE_ITEM_ITEMS" EntityType="NEW_POS_DBModel.Store.TBL_RECEIVE_ITEM_ITEMS" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_RECEIVE_PAYMENT" EntityType="NEW_POS_DBModel.Store.TBL_RECEIVE_PAYMENT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TBL_REGISTER_COMPANIES" EntityType="NEW_POS_DBModel.Store.TBL_REGISTER_COMPANIES" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_REPORT" EntityType="NEW_POS_DBModel.Store.TBL_REPORT" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_REPORT_ADD" EntityType="NEW_POS_DBModel.Store.TBL_REPORT_ADD" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="TBL_REPORT_GROUP" EntityType="NEW_POS_DBModel.Store.TBL_REPORT_GROUP" store:Type="Tables" Schema="dbo" />
@@ -416,6 +418,23 @@
           <Property Name="CHEQUE_BANK_AC" Type="bigint" />
           <Property Name="CHAEQE_BANK_AC_ID" Type="bigint" />
           <Property Name="USER_ID" Type="bigint" />
+        </EntityType>
+        <EntityType Name="TBL_COMPANIES">
+          <Key>
+            <PropertyRef Name="COMPANY_ID" />
+          </Key>
+          <Property Name="COMPANY_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CREATION_DATE" Type="datetime" />
+          <Property Name="COMPANY_NAME" Type="nvarchar" MaxLength="200" />
+          <Property Name="ADDRESS" Type="nvarchar" MaxLength="200" />
+          <Property Name="COUNTRY" Type="nvarchar" MaxLength="50" />
+          <Property Name="POSTCODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="TELEPHONE" Type="nvarchar" MaxLength="50" />
+          <Property Name="FAX" Type="nvarchar" MaxLength="50" />
+          <Property Name="WEBSITE" Type="nvarchar" MaxLength="200" />
+          <Property Name="START_YEAR" Type="nvarchar" MaxLength="200" />
+          <Property Name="IS_DELETE" Type="bit" />
+          <Property Name="COMPANY_STATUS" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TBL_COMPANY">
           <Key>
@@ -1113,6 +1132,17 @@
           <Property Name="USER_ID" Type="bigint" />
           <Property Name="CASH_REGISTERID" Type="bigint" />
         </EntityType>
+        <EntityType Name="TBL_REGISTER_COMPANIES">
+          <Key>
+            <PropertyRef Name="REGISTER_ID" />
+          </Key>
+          <Property Name="REGISTER_ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="COMPANY_ID" Type="bigint" />
+          <Property Name="USER_NAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="PASSWORD" Type="nvarchar" MaxLength="50" />
+          <Property Name="REGISTERED_DATE" Type="datetime" />
+          <Property Name="IS_DELETE" Type="bit" />
+        </EntityType>
         <EntityType Name="TBL_REPORT">
           <Key>
             <PropertyRef Name="REPORT_ID" />
@@ -1361,11 +1391,14 @@
           <Property Name="BUSINESS_LOC" Type="nvarchar" MaxLength="100" />
           <Property Name="FROM_CASH_REGISTER" Type="nvarchar" MaxLength="50" />
           <Property Name="TO_CASH_REGISTER" Type="nvarchar" MaxLength="50" />
+          <Property Name="CASH_REGISTERID_FROM" Type="bigint" />
+          <Property Name="CASH_REGISTERID_TO" Type="bigint" />
           <Property Name="TOTAL_TRANSFERED_AMOUNT" Type="decimal" Scale="2" />
           <Property Name="TRANSFER_DATE" Type="datetime" />
           <Property Name="IS_TRANSFER_CASH_REGISTER" Type="bit" />
           <Property Name="IS_DELETE" Type="bit" />
           <Property Name="STATUS" Type="nvarchar" MaxLength="50" />
+          <Property Name="CREATOR" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TBL_UNIT_MEASURING">
           <Key>
@@ -1625,6 +1658,7 @@
           <EntitySet Name="TBL_CASH_REG" EntityType="NEW_POS_DBModel.TBL_CASH_REG" />
           <EntitySet Name="TBL_CATAGORY" EntityType="NEW_POS_DBModel.TBL_CATAGORY" />
           <EntitySet Name="TBL_CHEQUE" EntityType="NEW_POS_DBModel.TBL_CHEQUE" />
+          <EntitySet Name="TBL_COMPANIES" EntityType="NEW_POS_DBModel.TBL_COMPANIES" />
           <EntitySet Name="TBL_COMPANY" EntityType="NEW_POS_DBModel.TBL_COMPANY" />
           <EntitySet Name="TBL_CUSTOMER" EntityType="NEW_POS_DBModel.TBL_CUSTOMER" />
           <EntitySet Name="TBL_CUSTOMER_BILLING_ADDRESS" EntityType="NEW_POS_DBModel.TBL_CUSTOMER_BILLING_ADDRESS" />
@@ -1657,6 +1691,7 @@
           <EntitySet Name="TBL_RECEIVE_ITEM" EntityType="NEW_POS_DBModel.TBL_RECEIVE_ITEM" />
           <EntitySet Name="TBL_RECEIVE_ITEM_ITEMS" EntityType="NEW_POS_DBModel.TBL_RECEIVE_ITEM_ITEMS" />
           <EntitySet Name="TBL_RECEIVE_PAYMENT" EntityType="NEW_POS_DBModel.TBL_RECEIVE_PAYMENT" />
+          <EntitySet Name="TBL_REGISTER_COMPANIES" EntityType="NEW_POS_DBModel.TBL_REGISTER_COMPANIES" />
           <EntitySet Name="TBL_REPORT" EntityType="NEW_POS_DBModel.TBL_REPORT" />
           <EntitySet Name="TBL_REPORT_ADD" EntityType="NEW_POS_DBModel.TBL_REPORT_ADD" />
           <EntitySet Name="TBL_REPORT_GROUP" EntityType="NEW_POS_DBModel.TBL_REPORT_GROUP" />
@@ -1872,6 +1907,23 @@
           <Property Name="CHEQUE_BANK_AC" Type="Int64" />
           <Property Name="CHAEQE_BANK_AC_ID" Type="Int64" />
           <Property Name="USER_ID" Type="Int64" />
+        </EntityType>
+        <EntityType Name="TBL_COMPANIES">
+          <Key>
+            <PropertyRef Name="COMPANY_ID" />
+          </Key>
+          <Property Name="COMPANY_ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CREATION_DATE" Type="DateTime" Precision="3" />
+          <Property Name="COMPANY_NAME" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="ADDRESS" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="COUNTRY" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="POSTCODE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TELEPHONE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FAX" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="WEBSITE" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="START_YEAR" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="IS_DELETE" Type="Boolean" />
+          <Property Name="COMPANY_STATUS" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="TBL_COMPANY">
           <Key>
@@ -2569,6 +2621,17 @@
           <Property Name="USER_ID" Type="Int64" />
           <Property Name="CASH_REGISTERID" Type="Int64" />
         </EntityType>
+        <EntityType Name="TBL_REGISTER_COMPANIES">
+          <Key>
+            <PropertyRef Name="REGISTER_ID" />
+          </Key>
+          <Property Name="REGISTER_ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="COMPANY_ID" Type="Int64" />
+          <Property Name="USER_NAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="REGISTERED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="IS_DELETE" Type="Boolean" />
+        </EntityType>
         <EntityType Name="TBL_REPORT">
           <Key>
             <PropertyRef Name="REPORT_ID" />
@@ -2817,11 +2880,14 @@
           <Property Name="BUSINESS_LOC" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="FROM_CASH_REGISTER" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="TO_CASH_REGISTER" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CASH_REGISTERID_FROM" Type="Int64" />
+          <Property Name="CASH_REGISTERID_TO" Type="Int64" />
           <Property Name="TOTAL_TRANSFERED_AMOUNT" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="TRANSFER_DATE" Type="DateTime" Precision="3" />
           <Property Name="IS_TRANSFER_CASH_REGISTER" Type="Boolean" />
           <Property Name="IS_DELETE" Type="Boolean" />
           <Property Name="STATUS" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CREATOR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="TBL_UNIT_MEASURING">
           <Key>
@@ -3261,6 +3327,24 @@
                 <ScalarProperty Name="CHEQUE_BANK_AC" ColumnName="CHEQUE_BANK_AC" />
                 <ScalarProperty Name="CHAEQE_BANK_AC_ID" ColumnName="CHAEQE_BANK_AC_ID" />
                 <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_COMPANIES">
+            <EntityTypeMapping TypeName="NEW_POS_DBModel.TBL_COMPANIES">
+              <MappingFragment StoreEntitySet="TBL_COMPANIES">
+                <ScalarProperty Name="COMPANY_ID" ColumnName="COMPANY_ID" />
+                <ScalarProperty Name="CREATION_DATE" ColumnName="CREATION_DATE" />
+                <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="COUNTRY" ColumnName="COUNTRY" />
+                <ScalarProperty Name="POSTCODE" ColumnName="POSTCODE" />
+                <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="WEBSITE" ColumnName="WEBSITE" />
+                <ScalarProperty Name="START_YEAR" ColumnName="START_YEAR" />
+                <ScalarProperty Name="IS_DELETE" ColumnName="IS_DELETE" />
+                <ScalarProperty Name="COMPANY_STATUS" ColumnName="COMPANY_STATUS" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -3992,6 +4076,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TBL_REGISTER_COMPANIES">
+            <EntityTypeMapping TypeName="NEW_POS_DBModel.TBL_REGISTER_COMPANIES">
+              <MappingFragment StoreEntitySet="TBL_REGISTER_COMPANIES">
+                <ScalarProperty Name="REGISTER_ID" ColumnName="REGISTER_ID" />
+                <ScalarProperty Name="COMPANY_ID" ColumnName="COMPANY_ID" />
+                <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="REGISTERED_DATE" ColumnName="REGISTERED_DATE" />
+                <ScalarProperty Name="IS_DELETE" ColumnName="IS_DELETE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TBL_REPORT">
             <EntityTypeMapping TypeName="NEW_POS_DBModel.TBL_REPORT">
               <MappingFragment StoreEntitySet="TBL_REPORT">
@@ -4250,11 +4346,14 @@
                 <ScalarProperty Name="BUSINESS_LOC" ColumnName="BUSINESS_LOC" />
                 <ScalarProperty Name="FROM_CASH_REGISTER" ColumnName="FROM_CASH_REGISTER" />
                 <ScalarProperty Name="TO_CASH_REGISTER" ColumnName="TO_CASH_REGISTER" />
+                <ScalarProperty Name="CASH_REGISTERID_FROM" ColumnName="CASH_REGISTERID_FROM" />
+                <ScalarProperty Name="CASH_REGISTERID_TO" ColumnName="CASH_REGISTERID_TO" />
                 <ScalarProperty Name="TOTAL_TRANSFERED_AMOUNT" ColumnName="TOTAL_TRANSFERED_AMOUNT" />
                 <ScalarProperty Name="TRANSFER_DATE" ColumnName="TRANSFER_DATE" />
                 <ScalarProperty Name="IS_TRANSFER_CASH_REGISTER" ColumnName="IS_TRANSFER_CASH_REGISTER" />
                 <ScalarProperty Name="IS_DELETE" ColumnName="IS_DELETE" />
                 <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="CREATOR" ColumnName="CREATOR" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

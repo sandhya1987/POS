@@ -25,8 +25,8 @@ namespace InvoicePOS.UserControll.CashReg
         public ViewCashTranscation()
         {
             InitializeComponent();
-            _CashRegViewModel = new CashRegViewModel();
-            this.DataContext = _CashRegViewModel;
+            //_CashRegViewModel = new CashRegViewModel();
+            //this.DataContext = _CashRegViewModel;
 
             //txtbusloc.Text = "";
             //BussRef = txtbusloc;

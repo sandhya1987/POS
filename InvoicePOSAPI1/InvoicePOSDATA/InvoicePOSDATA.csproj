@@ -117,6 +117,9 @@
     <Compile Include="TBL_CHEQUE.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
+    <Compile Include="TBL_COMPANIES.cs">
+      <DependentUpon>POSDATA.tt</DependentUpon>
+    </Compile>
     <Compile Include="TBL_COMPANY.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
@@ -211,6 +214,9 @@
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_RECEIVE_PAYMENT.cs">
+      <DependentUpon>POSDATA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBL_REGISTER_COMPANIES.cs">
       <DependentUpon>POSDATA.tt</DependentUpon>
     </Compile>
     <Compile Include="TBL_REPORT.cs">

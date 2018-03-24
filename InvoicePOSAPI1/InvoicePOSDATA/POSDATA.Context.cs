@@ -38,6 +38,7 @@ namespace InvoicePOSDATA
         public DbSet<TBL_CASH_REG> TBL_CASH_REG { get; set; }
         public DbSet<TBL_CATAGORY> TBL_CATAGORY { get; set; }
         public DbSet<TBL_CHEQUE> TBL_CHEQUE { get; set; }
+        public DbSet<TBL_COMPANIES> TBL_COMPANIES { get; set; }
         public DbSet<TBL_COMPANY> TBL_COMPANY { get; set; }
         public DbSet<TBL_CUSTOMER> TBL_CUSTOMER { get; set; }
         public DbSet<TBL_CUSTOMER_BILLING_ADDRESS> TBL_CUSTOMER_BILLING_ADDRESS { get; set; }
@@ -70,6 +71,7 @@ namespace InvoicePOSDATA
         public DbSet<TBL_RECEIVE_ITEM> TBL_RECEIVE_ITEM { get; set; }
         public DbSet<TBL_RECEIVE_ITEM_ITEMS> TBL_RECEIVE_ITEM_ITEMS { get; set; }
         public DbSet<TBL_RECEIVE_PAYMENT> TBL_RECEIVE_PAYMENT { get; set; }
+        public DbSet<TBL_REGISTER_COMPANIES> TBL_REGISTER_COMPANIES { get; set; }
         public DbSet<TBL_REPORT> TBL_REPORT { get; set; }
         public DbSet<TBL_REPORT_ADD> TBL_REPORT_ADD { get; set; }
         public DbSet<TBL_REPORT_GROUP> TBL_REPORT_GROUP { get; set; }

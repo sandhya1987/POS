@@ -1066,7 +1066,13 @@ namespace InvoicePOS.ViewModels
                 HttpResponseMessage response = client.GetAsync("api/BussLocationAPI/GetAllBusinessLo?id=" + copm + "").Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    data = JsonConvert.DeserializeObject<BusinessLocationModel[]>(await response.Content.ReadAsStringAsync());
+                    var settings = new JsonSerializerSettings
+                    {
+                        NullValueHandling = NullValueHandling.Ignore,
+                        MissingMemberHandling = MissingMemberHandling.Ignore
+                    };
+
+                    data = JsonConvert.DeserializeObject<BusinessLocationModel[]>(await response.Content.ReadAsStringAsync(), settings);
                     int x = 0;
                     for (int i = 0; i < data.Length; i++)
                     {

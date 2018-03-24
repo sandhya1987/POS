@@ -40,6 +40,9 @@ namespace InvoicePOS.Models
         public string STATUS { get; set; }
         public DateTime FROM_DATE { get; set; }
         public DateTime TO_DATE { get; set; }
+        public decimal CREDIT_TOTAL { get; set; }
+        public decimal DEBIT_TOTAL { get; set; }
+        public decimal NET_TOTAL { get; set; }
 
         private string error = string.Empty;
         public string Error

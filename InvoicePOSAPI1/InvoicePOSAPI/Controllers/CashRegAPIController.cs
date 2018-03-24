@@ -67,6 +67,9 @@ namespace InvoicePOSAPI.Controllers
                 ConnectionTools.ChangeToRemoteDB(db);
             }
         }
+
+
+
         [HttpGet]
         public HttpResponseMessage GetCashRegWithChequeNo()
         {
@@ -616,6 +619,99 @@ namespace InvoicePOSAPI.Controllers
                     db.SaveChanges();
 
                     return Request.CreateResponse(HttpStatusCode.OK, "success");
+                }
+                else
+                {
+                    return Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectionTools.ChangeToRemoteDB(db);
+            }
+        }
+
+
+
+        [HttpGet]
+        public HttpResponseMessage GetAllTransactionForCashReg(int userId,int CashRegId,int companyId)
+        {
+            try
+            {
+                bool conn = false;
+                conn = db.Database.Exists();
+                if (!conn)
+                {
+                    ConnectionTools.changeToLocalDB(db);
+                    conn = db.Database.Exists();
+                }
+
+                if (conn)
+                {
+
+                    List<CashRegTransModel> str1 = (from a in db.TBL_TRANSFER_CASH 
+                               where a.COMPANY_ID == companyId && a.IS_DELETE == false && a.CASH_REGISTERID_FROM == CashRegId
+                               select new CashRegTransModel
+                               {
+                                  TRANSACTION_DATE = a.TRANSFER_DATE,
+                                  TRANSACTION_TYPE = "Cash Transferred",
+                                  //NARRATION_TEXT =  "Cash transfer to "+ a.TO_CASH_REGISTER + " as per " + a.TRANSFER_ID,
+                                  TO_CASH_REGISTER = a.TO_CASH_REGISTER,
+                                  TRANSFER_ID = a.TRANSFER_ID,
+                                  CREATOR = a.CREATOR,
+                                  CREDIT_AMOUNT = 0.0m,
+                                  DEBIT_AMOUNT = a.TOTAL_TRANSFERED_AMOUNT,
+                                  CURRENCY_TYPE = "cash"
+                               }).ToList();
+
+                    List<CashRegTransModel> str2 = (from a in db.TBL_TRANSFER_CASH
+                                                    where a.COMPANY_ID == companyId && a.IS_DELETE == false && a.CASH_REGISTERID_TO == CashRegId
+                                                    select new CashRegTransModel
+                                                    {
+                                                        TRANSACTION_DATE = a.TRANSFER_DATE,
+                                                        TRANSACTION_TYPE = "Cash Transferred",
+                                                        //NARRATION_TEXT = "Cash transfer from " + a.FROM_CASH_REGISTER + " as per " + a.TRANSFER_ID,
+                                                        FROM_CASH_REGISTER = a.FROM_CASH_REGISTER,
+                                                        TRANSFER_ID = a.TRANSFER_ID,
+                                                        CREATOR = a.CREATOR,
+                                                        CREDIT_AMOUNT = a.TOTAL_TRANSFERED_AMOUNT,
+                                                        DEBIT_AMOUNT = 0.0m,
+                                                        CURRENCY_TYPE = "cash"
+                                                    }).ToList();
+
+                    List<CashRegTransModel> str3 = (from a in db.TBL_INVOICE_PAY
+                                                    where a.COMANY_ID == companyId && a.CASH_REGISTERID == CashRegId
+                                                    select new CashRegTransModel
+                                                    {
+                                                        TRANSACTION_TYPE = "Cash Transferred",
+                                                        //NARRATION_TEXT = "Payment to INVOICE " + a.INVOICE_NO ,
+                                                        INVOICE_NO = a.INVOICE_NO,
+                                                        CREATOR = a.SALES_EXECUTIVE,
+                                                        CREDIT_AMOUNT = 0.0m,
+                                                        DEBIT_AMOUNT = a.RECIVED_AMOUNT,
+                                                        CURRENCY_TYPE = "cash"
+                                                    }).ToList();
+
+                    List<CashRegTransModel> str4 = (from a in db.TBL_RECEIVE_PAYMENT join b in db.TBL_USER on a.USER_ID equals b.USER_ID 
+                                                    where a.COMPANY_ID == companyId && a.CASH_REGISTERID == CashRegId
+                                                    select new CashRegTransModel
+                                                    {
+                                                        TRANSACTION_DATE = a.DATE,
+                                                        TRANSACTION_TYPE = "Cash Transferred",
+                                                        NARRATION_TEXT = "Payment to recieve-payment ",
+                                                        CREATOR = b.ROLE,
+                                                        CREDIT_AMOUNT = 0.0m,
+                                                        DEBIT_AMOUNT = a.CURRENT_PAY_AMT,
+                                                        CURRENCY_TYPE = "cash"
+                                                    }).ToList();
+                    str1.AddRange(str2);
+                    str1.AddRange(str3);
+                    str1.AddRange(str4);
+                    return Request.CreateResponse(HttpStatusCode.OK, str1);
                 }
                 else
                 {

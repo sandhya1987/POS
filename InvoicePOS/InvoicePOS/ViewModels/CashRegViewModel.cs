@@ -18,6 +18,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Linq;
+
 
 namespace InvoicePOS.ViewModels
 {
@@ -1035,8 +1037,16 @@ namespace InvoicePOS.ViewModels
         public void View_CashRegTransaction()
         {
             ViewCashTranscation _ViewCashTransaction = new ViewCashTranscation();
-
-            _ViewCashTransaction.Show();
+            if ((SelectedItem == null) || (SelectedItem.CASH_REGISTERID == 0))
+            {
+                MessageBox.Show("Please select a Cash Register from the list");
+            }
+            else
+            {
+                GetCashRegisterTransaction();
+                _ViewCashTransaction.DataContext = this;
+                _ViewCashTransaction.Show();
+            }
         }
 
         public bool _isviewmode;
@@ -1446,6 +1456,22 @@ namespace InvoicePOS.ViewModels
             }
         }
 
+        ObservableCollection<CashRegTransModel> _ListGridTransaction_Temp = new ObservableCollection<CashRegTransModel>();
+
+        private ObservableCollection<CashRegTransModel> _ListGridTransaction { get; set; }
+        public ObservableCollection<CashRegTransModel> ListGridTransaction
+        {
+            get
+            {
+                return _ListGridTransaction;
+            }
+            set
+            {
+                this._ListGridTransaction = value;
+                OnPropertyChanged("ListGridTransaction");
+            }
+        }
+
 
         public ICommand _BusinessLocationClick;
         public ICommand BusinessLocationClick
@@ -1550,10 +1576,9 @@ namespace InvoicePOS.ViewModels
 
         public async void APPLY_DATE_CHANGE_Click()
         {
-
+            /*
             try
             {
-
                 var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
                 var BussLoc = SelectedItem.BUSINESS_LOCATION;
                 var frmDt = SelectedItem.FROM_DATE;
@@ -1590,15 +1615,100 @@ namespace InvoicePOS.ViewModels
 
                 }
                 ListGrid = _ListGrid_Temp;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }*/
 
+            ObservableCollection<CashRegTransModel> tmpListGridTransaction = new ObservableCollection<CashRegTransModel>();
+            var list = _ListGridTransaction_Temp.Where(p => p.TRANSACTION_DATE >= SelectedItem.FROM_DATE && p.TRANSACTION_DATE <= SelectedItem.TO_DATE);
+            list.ToList().ForEach(tmpListGridTransaction.Add);
+            ListGridTransaction = tmpListGridTransaction;
+        }
+
+
+        public async void GetCashRegisterTransaction()
+        {
+            try
+            {
+
+                var comp = Convert.ToInt32(App.Current.Properties["Company_Id"].ToString());
+                var userid = Convert.ToInt32(App.Current.Properties["User_Id"].ToString());
+                decimal credit_total = 0;
+                decimal debit_total = 0;
+                decimal net_total = 0;
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(GlobalData.gblApiAdress);
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+                client.Timeout = new TimeSpan(500000000000);
+                HttpResponseMessage response = client.GetAsync("api/CashRegAPI/GetAllTransactionForCashReg?userId=" + userid + " &CashRegId=" + SelectedItem.CASH_REGISTERID + " &companyId=" + comp + "").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    _ListGridTransaction_Temp.Clear();
+                    CashRegTransModel[] data1 = JsonConvert.DeserializeObject<CashRegTransModel[]>(await response.Content.ReadAsStringAsync());
+                    int x = 0;
+                    for (int i = 0; i < data1.Length; i++)
+                    {
+                        x++;
+                        _ListGridTransaction_Temp.Add(new CashRegTransModel
+                        {
+                            CREATOR = data1[i].CREATOR,
+                            CREDIT_AMOUNT = data1[i].CREDIT_AMOUNT,
+                            CURRENCY_TYPE = data1[i].CURRENCY_TYPE,
+                            DEBIT_AMOUNT = data1[i].DEBIT_AMOUNT,
+                            NARRATION_TEXT = data1[i].NARRATION_TEXT,
+                            TRANSACTION_DATE = data1[i].TRANSACTION_DATE,
+                            TRANSACTION_TYPE = data1[i].TRANSACTION_TYPE,
+                            TO_CASH_REGISTER = data1[i].TO_CASH_REGISTER,
+                            FROM_CASH_REGISTER = data1[i].FROM_CASH_REGISTER,
+                            INVOICE_NO = data1[i].INVOICE_NO,
+                            TRANSFER_ID = data1[i].TRANSFER_ID
+                        });
+                        credit_total = credit_total + data1[i].CREDIT_AMOUNT;
+                        debit_total = debit_total + data1[i].DEBIT_AMOUNT;
+                    }
+
+                }
+                for (int i = 0; i < _ListGridTransaction_Temp.Count; i++)
+                {
+                    if (_ListGridTransaction_Temp[i].TO_CASH_REGISTER != null)
+                    {
+                        _ListGridTransaction_Temp[i].NARRATION_TEXT = "Cash transfer to " + _ListGridTransaction_Temp[i].TO_CASH_REGISTER + " as per " + _ListGridTransaction_Temp[i].TRANSFER_ID;
+                    }
+                    else if (_ListGridTransaction_Temp[i].FROM_CASH_REGISTER != null)
+                    {
+                        _ListGridTransaction_Temp[i].NARRATION_TEXT = "Cash transfer from " + _ListGridTransaction_Temp[i].FROM_CASH_REGISTER + " as per " + _ListGridTransaction_Temp[i].TRANSFER_ID;
+                    } 
+                    else if (_ListGridTransaction_Temp[i].INVOICE_NO != null)
+                    {
+                        _ListGridTransaction_Temp[i].NARRATION_TEXT = "Payment to INVOICE " + _ListGridTransaction_Temp[i].INVOICE_NO;
+                    }
+                }
+                ListGridTransaction = _ListGridTransaction_Temp;
+
+                var max_date = (ListGridTransaction.OrderByDescending(x => x.TRANSACTION_DATE).First()).TRANSACTION_DATE;
+                var min_date = (ListGridTransaction.OrderBy(x => x.TRANSACTION_DATE).First()).TRANSACTION_DATE;
+
+                SelectedItem.CREDIT_TOTAL = credit_total;
+                SelectedItem.DEBIT_TOTAL = debit_total;
+                if (credit_total > debit_total)
+                {
+                    SelectedItem.NET_TOTAL = credit_total - debit_total;
+                }
+                else
+                {
+                    SelectedItem.NET_TOTAL = 0;
+                }
+                SelectedItem.FROM_DATE = min_date;
+                SelectedItem.TO_DATE = max_date;
             }
             catch (Exception ex)
             {
                 throw;
             }
-
         }
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 

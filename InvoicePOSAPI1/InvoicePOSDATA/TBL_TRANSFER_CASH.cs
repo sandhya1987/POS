@@ -21,10 +21,13 @@ namespace InvoicePOSDATA
         public string BUSINESS_LOC { get; set; }
         public string FROM_CASH_REGISTER { get; set; }
         public string TO_CASH_REGISTER { get; set; }
+        public Nullable<long> CASH_REGISTERID_FROM { get; set; }
+        public Nullable<long> CASH_REGISTERID_TO { get; set; }
         public Nullable<decimal> TOTAL_TRANSFERED_AMOUNT { get; set; }
         public Nullable<System.DateTime> TRANSFER_DATE { get; set; }
         public Nullable<bool> IS_TRANSFER_CASH_REGISTER { get; set; }
         public Nullable<bool> IS_DELETE { get; set; }
         public string STATUS { get; set; }
+        public string CREATOR { get; set; }
     }
 }

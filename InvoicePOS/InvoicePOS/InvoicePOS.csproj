@@ -168,6 +168,7 @@
     <Compile Include="Models\BankModel.cs" />
     <Compile Include="Models\BusinessLocationModel.cs" />
     <Compile Include="Models\CashRegModel.cs" />
+    <Compile Include="Models\CashRegTransModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\CompanyModel.cs" />
     <Compile Include="Models\CurrencySettingsModel.cs" />
@@ -1542,7 +1543,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.de-DE.resx" />
-    <EmbeddedResource Include="Properties\Resources.en-US.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -2408,7 +2408,12 @@ namespace InvoicePOS.ViewModels
                 HttpResponseMessage response = client.GetAsync("api/ItemAPI/GetAllItem?id=" + comp + "").Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    data = JsonConvert.DeserializeObject<ItemModel[]>(await response.Content.ReadAsStringAsync());
+                    var settings = new JsonSerializerSettings
+                    {
+                        NullValueHandling = NullValueHandling.Ignore,
+                        MissingMemberHandling = MissingMemberHandling.Ignore
+                    };
+                    data = JsonConvert.DeserializeObject<ItemModel[]>(await response.Content.ReadAsStringAsync(),settings);
                     int x = 0;
                     for (int i = 0; i < data.Length; i++)
                     {
