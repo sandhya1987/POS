@@ -1,4 +1,5 @@
-﻿using InvoicePOS.Helpers;
+﻿using InvoicePOS.Helper;
+using InvoicePOS.Helpers;
 using InvoicePOS.Models;
 using InvoicePOS.UserControll.Cash_Reg;
 using InvoicePOS.UserControll.CashReg;
@@ -1550,13 +1551,13 @@ namespace InvoicePOS.ViewModels
             {
                 if (_APPLY_DATE_CHANGE == null)
                 {
-                    _APPLY_DATE_CHANGE = new DelegateCommand(APPLY_DATE_CHANGE_Click);
+                    _APPLY_DATE_CHANGE = new RelayCommand<object>(APPLY_DATE_CHANGE_Click);
                 }
                 return _APPLY_DATE_CHANGE;
             }
         }
 
-        public async void APPLY_DATE_CHANGE_Click()
+        public async void APPLY_DATE_CHANGE_Click(object IsChecked)
         {
             /*
             try
@@ -1605,10 +1606,22 @@ namespace InvoicePOS.ViewModels
                 throw;
             }
             */
-            ObservableCollection<CashRegTransModel> tmpListGridTransaction = new ObservableCollection<CashRegTransModel>();
-            var list = _ListGridTransaction_Temp.Where(p => p.TRANSACTION_DATE >= SelectedItem.FROM_DATE && p.TRANSACTION_DATE <= SelectedItem.TO_DATE);
-            list.ToList().ForEach(tmpListGridTransaction.Add);
-            ListGridTransaction = tmpListGridTransaction;
+            var check = IsChecked as bool?;
+            if (check != null)
+            {
+                bool boolCheck = (bool) check;
+                if (boolCheck == true)
+                {
+                    ObservableCollection<CashRegTransModel> tmpListGridTransaction = new ObservableCollection<CashRegTransModel>();
+                    var list = _ListGridTransaction_Temp.Where(p => p.TRANSACTION_DATE >= SelectedItem.FROM_DATE && p.TRANSACTION_DATE <= SelectedItem.TO_DATE);
+                    list.ToList().ForEach(tmpListGridTransaction.Add);
+                    ListGridTransaction = tmpListGridTransaction;
+                }
+                else
+                {
+                    ListGridTransaction = _ListGridTransaction_Temp;
+                }
+            }
         }
 
 

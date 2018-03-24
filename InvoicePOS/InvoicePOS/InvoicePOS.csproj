@@ -169,6 +169,7 @@
     <Compile Include="Helpers\TypefaceListItem.cs" />
     <Compile Include="Helpers\TypographicFeatureListItem.cs" />
     <Compile Include="Helper\AsyncCommand .cs" />
+    <Compile Include="Helper\RelayCommand.cs" />
     <Compile Include="Helper\Simple.cs" />
     <Compile Include="Helper\SimpleFolderConverter.cs" />
     <Compile Include="Models\AccessRideModel.cs" />
