@@ -12,7 +12,7 @@
     </Style>
 
     <Style x:Key="numberdisplayTextboxsmall" TargetType="{x:Type TextBox}">
-         <Setter Property="Height" Value="22" />
+        <Setter Property="Height" Value="22" />
         <Setter Property="Padding" Value="4 4 4 0" />
         <Setter Property="FontFamily" Value="Verdana" />
         <Setter Property="FontSize" Value="11" />
@@ -39,8 +39,8 @@
         <Setter Property="Width" Value="130"></Setter>
         <Setter Property="Height" Value="40"></Setter>
         <Setter Property="Cursor" Value="Hand"></Setter>
-        
-        
+
+
     </Style>
 
     <Style x:Key="GrayButton" TargetType="{x:Type Button}">
@@ -65,14 +65,14 @@
         <Setter Property="Width" Value="200"></Setter>
         <Setter Property="Height" Value="40"></Setter>
         <Setter Property="Cursor" Value="Hand"></Setter>
-       
+
     </Style>
 
     <Style x:Key="GroupHead" TargetType="{x:Type GroupBox}">
         <Setter Property="FontSize" Value="12"></Setter>
         <Setter Property="FontFamily" Value="Verdana"></Setter>
         <Setter Property="FontWeight" Value="Bold"></Setter>
-        <Setter Property="Foreground" Value="#4a4a4a"> </Setter>
+        <Setter Property="Foreground" Value="#4a4a4a"></Setter>
     </Style>
 
     <Style x:Key="GroupHeadRed" TargetType="{x:Type GroupBox}">
@@ -91,7 +91,7 @@
         <Setter Property="Background" Value="#fff"></Setter>
         <Setter Property="HorizontalAlignment" Value="Right"></Setter>
         <Setter Property="VerticalAlignment" Value="Top"></Setter>
-        
+
     </Style>
 
     <Style x:Key="GreenBox" TargetType="{x:Type Rectangle}">
@@ -100,7 +100,7 @@
         <Setter Property="Width" Value="90"></Setter>
         <Setter Property="Height" Value="90"></Setter>
     </Style>
-    
+
     <Style x:Key="RedBox" TargetType="{x:Type Rectangle}">
         <Setter Property="Fill" Value="#d8457a"></Setter>
         <Setter Property="Stroke" Value="#d8457a"></Setter>
@@ -153,7 +153,7 @@
         <Setter Property="Width" Value="90"></Setter>
         <Setter Property="Height" Value="90"></Setter>
         <Setter Property="Cursor" Value="Hand"></Setter>
-       
+
 
     </Style>
 
@@ -169,7 +169,7 @@
         <Setter Property="Cursor" Value="Hand"></Setter>
 
     </Style>
-    
+
     <Style x:Key="GreenButtonrightsmall" TargetType="{x:Type Button}">
         <Setter Property="Background" Value="#1cd8a1"></Setter>
         <Setter Property="Foreground" Value="#fff"></Setter>
@@ -223,13 +223,13 @@
     </Style>
 
     <Style x:Key="numberdisplayTextboxsearch" TargetType="{x:Type TextBox}">
-    <Setter Property="Width" Value="240" />
-    <Setter Property="Height" Value="25" />
-    <Setter Property="Padding" Value="4 4 4 0" />
-    <Setter Property="FontFamily" Value="Arial" />
-    <Setter Property="FontSize" Value="12" />
-    <Setter Property="Foreground" Value="#4a4a4a" />
-    <Setter Property="BorderBrush" Value="#cccccc"/>
+        <Setter Property="Width" Value="240" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Padding" Value="4 4 4 0" />
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Foreground" Value="#4a4a4a" />
+        <Setter Property="BorderBrush" Value="#cccccc"/>
     </Style>
     <Style x:Key="numberdisplayTextboxsearchsmall" TargetType="{x:Type TextBox}">
         <Setter Property="Width" Value="80" />
@@ -277,7 +277,7 @@
         <Setter Property="Foreground" Value="#6d6c6c" />
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="FontWeight" Value="Normal"></Setter>
-        
+
     </Style>
 
     <Style x:Key="customerdisplayTextbox" TargetType="{x:Type TextBox}">
@@ -324,7 +324,7 @@
         <Setter Property="BorderBrush" Value="#cccccc"/>
     </Style>
     <Style x:Key="shippingTextboxsmall" TargetType="{x:Type TextBox}">
-         <Setter Property="Height" Value="22" />
+        <Setter Property="Height" Value="22" />
         <Setter Property="Padding" Value="4 4 4 0" />
         <Setter Property="FontFamily" Value="Verdana" />
         <Setter Property="FontSize" Value="11" />
@@ -468,7 +468,7 @@
         <Setter Property="Foreground" Value="#4a4a4a" />
         <Setter Property="BorderBrush" Value="#cccccc"/>
     </Style>
-    
+
     <Style x:Key="numberdisplayTextboxrcvitembig" TargetType="{x:Type TextBox}">
         <Setter Property="Width" Value="250" />
         <Setter Property="Height" Value="22" />
@@ -544,7 +544,7 @@
         <!-- end template -->
     </Style>
 
-    
+
 
 
 

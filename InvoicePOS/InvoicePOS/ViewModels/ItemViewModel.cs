@@ -270,38 +270,48 @@ namespace InvoicePOS.ViewModels
                         _ListGrid_Temp.Add(new ItemModel
                         {
                             SLNO = x,
-                            IMAGE_PATH = data[i].IMAGE_PATH,
-                            SALE_QTY=data[i].SALE_QTY,
-                            ITEM_NAME = data[i].ITEM_NAME,
-                            ITEM_LOCATION = data[i].ITEM_LOCATION,
+                            //IMAGE_PATH = data[i].IMAGE_PATH,
+                            //SALE_QTY=data[i].SALE_QTY,
+                            //ITEM_NAME = data[i].ITEM_NAME,
+                            //ITEM_LOCATION = data[i].ITEM_LOCATION,
+                            //ITEM_ID = data[i].ITEM_ID,
+                            //BARCODE = data[i].BARCODE,
+                            //ACCESSORIES_KEYWORD = data[i].ACCESSORIES_KEYWORD,
+                            //CATAGORY_ID = data[i].CATAGORY_ID,
+                            //ITEM_DESCRIPTION = data[i].ITEM_DESCRIPTION,
+                            //ITEM_INVOICE_ID = data[i].ITEM_INVOICE_ID,
+                            //ITEM_PRICE = data[i].ITEM_PRICE,
+                            //ITEM_PRODUCT_ID = data[i].ITEM_PRODUCT_ID,
+                            //KEYWORD = data[i].KEYWORD,
+                            //MRP = data[i].MRP,
+                            //PURCHASE_UNIT = data[i].PURCHASE_UNIT,
+                            //PURCHASE_UNIT_PRICE = data[i].PURCHASE_UNIT_PRICE,
+                            //SALES_PRICE = data[i].SALES_PRICE,
+                            //SALES_UNIT = data[i].SALES_UNIT,
+                            //SEARCH_CODE = data[i].SEARCH_CODE,
+                            //TAX_COLLECTED = data[i].TAX_COLLECTED,
+                            //TAX_PAID = data[i].TAX_PAID,
+                            //ALLOW_PURCHASE_ON_ESHOP = data[i].ALLOW_PURCHASE_ON_ESHOP,
+                            //CATEGORY_NAME = data[i].CATEGORY_NAME,
+                            //DISPLAY_INDEX = data[i].DISPLAY_INDEX,
+                            //INCLUDE_TAX = data[i].INCLUDE_TAX,
+                            //ITEM_GROUP_NAME = data[i].ITEM_GROUP_NAME,
+                            //ITEM_UNIQUE_NAME = data[i].ITEM_UNIQUE_NAME,
+                            //OPN_QNT = data[i].OPN_QNT,
+                            //REGIONAL_LANGUAGE = data[i].REGIONAL_LANGUAGE,
+                            //SALES_PRICE_BEFOR_TAX = data[i].SALES_PRICE_BEFOR_TAX,
+                            //MODIFICATION_DATE = data[i].MODIFICATION_DATE,
+                            //IS_ACTIVE = data[i].IS_ACTIVE,
+
                             ITEM_ID = data[i].ITEM_ID,
-                            BARCODE = data[i].BARCODE,
-                            ACCESSORIES_KEYWORD = data[i].ACCESSORIES_KEYWORD,
-                            CATAGORY_ID = data[i].CATAGORY_ID,
-                            ITEM_DESCRIPTION = data[i].ITEM_DESCRIPTION,
-                            ITEM_INVOICE_ID = data[i].ITEM_INVOICE_ID,
-                            ITEM_PRICE = data[i].ITEM_PRICE,
-                            ITEM_PRODUCT_ID = data[i].ITEM_PRODUCT_ID,
-                            KEYWORD = data[i].KEYWORD,
-                            MRP = data[i].MRP,
-                            PURCHASE_UNIT = data[i].PURCHASE_UNIT,
-                            PURCHASE_UNIT_PRICE = data[i].PURCHASE_UNIT_PRICE,
-                            SALES_PRICE = data[i].SALES_PRICE,
-                            SALES_UNIT = data[i].SALES_UNIT,
-                            SEARCH_CODE = data[i].SEARCH_CODE,
-                            TAX_COLLECTED = data[i].TAX_COLLECTED,
-                            TAX_PAID = data[i].TAX_PAID,
-                            ALLOW_PURCHASE_ON_ESHOP = data[i].ALLOW_PURCHASE_ON_ESHOP,
-                            CATEGORY_NAME = data[i].CATEGORY_NAME,
-                            DISPLAY_INDEX = data[i].DISPLAY_INDEX,
-                            INCLUDE_TAX = data[i].INCLUDE_TAX,
-                            ITEM_GROUP_NAME = data[i].ITEM_GROUP_NAME,
-                            ITEM_UNIQUE_NAME = data[i].ITEM_UNIQUE_NAME,
+                            QUANTITY_SOLD = data[i].QUANTITY_SOLD,
+                            ITEM_NAME = data[i].ITEM_NAME,
+                           // ITEM_CODE = data[i].ITEM_UNIQUE_NAME,
                             OPN_QNT = data[i].OPN_QNT,
-                            REGIONAL_LANGUAGE = data[i].REGIONAL_LANGUAGE,
-                            SALES_PRICE_BEFOR_TAX = data[i].SALES_PRICE_BEFOR_TAX,
                             MODIFICATION_DATE = data[i].MODIFICATION_DATE,
-                            IS_ACTIVE = data[i].IS_ACTIVE,
+                            BARCODE = data[i].BARCODE,
+                            SALES_PRICE = data[i].SALES_PRICE,
+                            PURCHASE_UNIT_PRICE = data[i].PURCHASE_UNIT_PRICE,
 
                         });
 
@@ -338,8 +348,8 @@ namespace InvoicePOS.ViewModels
                         {
                             TOTAL_PROD_PURCHASED = Convert.ToDecimal(_ListGrid_Inventory[i].OPN_QNT + TOTAL_PROD_PURCHASED);
                             //App.Current.Properties["CurrentGrosAmount1"] = TOTAL_AMOUNT;
-                            TOTAL_PROD_SOLD = Convert.ToDecimal(_ListGrid_Inventory[i].SALE_QTY + TOTAL_PROD_SOLD);
-                            _ListGrid_Inventory[i].TOTAL_PROD_REMAINED = Convert.ToDecimal(_ListGrid_Inventory[i].OPN_QNT - _ListGrid_Inventory[i].SALE_QTY);
+                            TOTAL_PROD_SOLD = Convert.ToDecimal(_ListGrid_Inventory[i].QUANTITY_SOLD + TOTAL_PROD_SOLD);
+                            _ListGrid_Inventory[i].TOTAL_PROD_REMAINED = Convert.ToDecimal(_ListGrid_Inventory[i].OPN_QNT - _ListGrid_Inventory[i].QUANTITY_SOLD);
                             TOTAL_PROD_REMAINED = Convert.ToDecimal(_ListGrid_Inventory[i].TOTAL_PROD_REMAINED + TOTAL_PROD_REMAINED);
 
                         }

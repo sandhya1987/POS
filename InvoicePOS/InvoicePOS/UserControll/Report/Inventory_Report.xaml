@@ -1,7 +1,7 @@
 ﻿<Window x:Class="InvoicePOS.UserControll.Report.Inventory_Report"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ViewLedger" Height="556" Width="930">
+        Title="InventoryReport" Height="556" Width="930">
     <Grid x:Name="SalesReturnSummery">
         <!--<TextBlock HorizontalAlignment="Left" Margin="50,30,0,0" TextWrapping="Wrap" Text="Select Company :" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="50,59,0,0" TextWrapping="Wrap" Text="Select Business Location :" VerticalAlignment="Top"/>
@@ -72,9 +72,9 @@
                 <DataGridTextColumn   Width="150" Header="BARCODE"  Binding="{Binding BARCODE}"/>
                 <DataGridTextColumn   TextBlock.Foreground="Red"  Width="150" MaxWidth="120" Header="PRODUCT MODIFICATION DATE" Binding="{Binding MODIFICATION_DATE}"  />
                 <DataGridTextColumn   Width="150" Header="PRODUCT PURCHASED"  Binding="{Binding OPN_QNT}"/>
-                <DataGridTextColumn   Width="150" Header="PRODUCT SOLD"  Binding="{Binding SALE_QTY}"/>
+                <DataGridTextColumn   Width="150" Header="PRODUCT SOLD"  Binding="{Binding QUANTITY_SOLD}"/>
                 <DataGridTextColumn   Width="150" Header="PRODUCT IN STOCK"  Binding="{Binding TOTAL_PROD_REMAINED}"/>
-                <DataGridTextColumn   Width="150" Header="PURCHASE UNIT PRICE"  Binding="{Binding PURC_PRICEHASE_UNIT}"/>
+                <DataGridTextColumn   Width="150" Header="PURCHASE UNIT PRICE"  Binding="{Binding PURCHASE_UNIT_PRICE}"/>
                 <DataGridTextColumn   Width="150" Header="SALES PRICE"  Binding="{Binding SALES_PRICE}"/>
                 
                 

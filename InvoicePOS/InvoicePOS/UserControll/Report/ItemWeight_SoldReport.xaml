@@ -1,7 +1,7 @@
 ﻿<Window x:Class="InvoicePOS.UserControll.Report.ItemWeight_SoldReport"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="ViewLedger" Height="556" Width="930">
+        Title="ItemWeightSoldReport" Height="556" Width="930">
     <Grid x:Name="SalesReturnSummery">
         <!--<TextBlock HorizontalAlignment="Left" Margin="50,30,0,0" TextWrapping="Wrap" Text="Select Company :" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="50,59,0,0" TextWrapping="Wrap" Text="Select Business Location :" VerticalAlignment="Top"/>
