@@ -1034,9 +1034,17 @@ namespace InvoicePOS.ViewModels
 
         public void View_CashRegTransaction()
         {
-            ViewCashTranscation _ViewCashTransaction = new ViewCashTranscation();
-
-            _ViewCashTransaction.Show();
+            if (SelectedItem.CASH_REGISTERID == 0)
+            {
+                MessageBox.Show("Please select a cash register");
+            }
+            else
+            {
+                ViewCashTranscation _ViewCashTransaction = new ViewCashTranscation();
+                GetCashRegisterTransaction();
+                _ViewCashTransaction.DataContext = this;
+                _ViewCashTransaction.Show();
+            }
         }
 
         public bool _isviewmode;

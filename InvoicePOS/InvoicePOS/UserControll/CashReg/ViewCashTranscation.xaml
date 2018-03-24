@@ -28,7 +28,7 @@
     Margin="315,100,0,0" 
     VerticalAlignment="Top" 
     Width="120" />
-        <DataGrid  SelectionMode="Extended"   RowHeight="35" Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1" IsReadOnly="True"   AutoGenerateColumns="False" ItemsSource="{Binding Path=ListGridViewTransc ,Mode=TwoWay, AsyncState=true,  NotifyOnTargetUpdated=True,NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"   Name="dataGrid1" Margin="5,173,1,-1"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" ColumnWidth="*" EnableRowVirtualization="false" EnableColumnVirtualization="false" CanUserAddRows="False" CanUserReorderColumns="False">
+        <DataGrid  SelectionMode="Extended"   RowHeight="35" Cursor="Hand"  BorderBrush="#dddddd" BorderThickness="1" IsReadOnly="True"   AutoGenerateColumns="False" ItemsSource="{Binding Path=ListGridTransaction ,Mode=TwoWay, AsyncState=true,  NotifyOnTargetUpdated=True,NotifyOnSourceUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"   Name="dataGrid1" Margin="5,173,1,-1"  AlternationCount="2" ColumnHeaderHeight="40" FontFamily="Verdana" Background="White" FontWeight="Normal" HorizontalContentAlignment="Center" HorizontalGridLinesBrush="#dddddd" VerticalGridLinesBrush="#dddddd" ColumnWidth="*" EnableRowVirtualization="false" EnableColumnVirtualization="false" CanUserAddRows="False" CanUserReorderColumns="False">
             <DataGrid.Style>
                 <Style TargetType="DataGrid">
                     <Setter Property="AlternatingRowBackground" Value="#ffffff"/>
@@ -62,7 +62,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <CheckBox Content="Show In Date Change" Command="{Binding APPLY_DATE_CHANGE}" HorizontalAlignment="Left" Margin="449,105,0,0" VerticalAlignment="Top"/>
+        <CheckBox Content="Show In Date Change" Command="{Binding APPLY_DATE_CHANGE}" CommandParameter="{Binding IsChecked, RelativeSource={RelativeSource Self}}" HorizontalAlignment="Left" Margin="449,105,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Business Location :" HorizontalAlignment="Left" Margin="25,16,0,0" VerticalAlignment="Top" Height="25" Width="144"/>
         <Label x:Name="label2" Content="Cash Register Name :" HorizontalAlignment="Left" Margin="12,42,0,0" VerticalAlignment="Top"/>
         <Label  Content="Credit Total :" HorizontalAlignment="Left" Margin="430,14,0,0" VerticalAlignment="Top" Height="25" Width="144"/>
